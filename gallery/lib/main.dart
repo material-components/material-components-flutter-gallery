@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'home.dart';
-import 'text_theme.dart';
+import 'theme_data.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,13 +10,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Gallery',
-      theme: ThemeData(
-        primarySwatch: Colors.purple,
-        textTheme: galleryTextTheme,
-        appBarTheme: AppBarTheme(
-          textTheme: galleryTextTheme,
-        ),
-      ),
+      themeMode: ThemeMode.system,
+      theme: GalleryThemeData.lightThemeData,
+      darkTheme: GalleryThemeData.darkThemeData,
       home: HomePage(),
     );
   }
