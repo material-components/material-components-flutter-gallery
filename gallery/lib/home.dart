@@ -39,22 +39,22 @@ class HomePage extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: ListView(
           children: [
-            Text('Gallery', style: Theme.of(context).textTheme.headline),
+            Text('Gallery', style: Theme.of(context).textTheme.display1),
             Container(
               height: 200.0,
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                children: [
-                  CarouselCard(title: 'Shrine'),
-                  CarouselCard(title: 'Rally'),
-                  CarouselCard(title: 'Crane'),
+                children: const [
+                  CarouselCard(title: 'SHRINE'),
+                  CarouselCard(title: 'RALLY'),
+                  CarouselCard(title: 'CRANE'),
                 ],
               ),
             ),
-            Text('Categories', style: Theme.of(context).textTheme.headline),
-            CategoryListItem(title: 'Material'),
-            CategoryListItem(title: 'Cupertino'),
-            CategoryListItem(title: 'Reference styles & Media'),
+            Text('Categories', style: Theme.of(context).textTheme.display1),
+            const CategoryListItem(title: 'MATERIAL'),
+            const CategoryListItem(title: 'CUPERTINO'),
+            const CategoryListItem(title: 'REFERENCE STYLES & MEDIA'),
           ],
         ),
       ),
@@ -90,7 +90,10 @@ class CarouselCard extends StatelessWidget {
             borderRadius: BorderRadius.circular(8.0),
           ),
           child: Center(
-            child: Text(title),
+            child: Text(
+              title,
+              style: Theme.of(context).textTheme.caption,
+            ),
           ),
         ),
       ),
@@ -122,7 +125,10 @@ class CategoryListItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(4.0),
           ),
           child: Center(
-            child: Text(title),
+            child: Text(
+              title,
+              style: Theme.of(context).textTheme.headline,
+            ),
           ),
         ),
       ),

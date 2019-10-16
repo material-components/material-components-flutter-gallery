@@ -5,6 +5,6 @@ import 'package:gallery/main.dart';
 void main() {
   testWidgets('Smoke test', (WidgetTester tester) async {
     await tester.pumpWidget(MyApp());
-    expect(find.text('Material'), findsOneWidget);
+    expect(find.text('MATERIAL'), findsOneWidget);
   });
 }
