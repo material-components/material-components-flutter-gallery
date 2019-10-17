@@ -13,7 +13,7 @@ class HomePage extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.color_lens),
           onPressed: () {
-            Navigator.of(context).push(
+            Navigator.of(context).push<void>(
               MaterialPageRoute(
                 fullscreenDialog: true,
                 builder: (context) => SplashPage(),
@@ -25,7 +25,7 @@ class HomePage extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.settings),
             onPressed: () {
-              Navigator.of(context).push(
+              Navigator.of(context).push<void>(
                 MaterialPageRoute(
                   fullscreenDialog: true,
                   builder: (context) => SettingsPage(),
@@ -77,7 +77,7 @@ class CarouselCard extends StatelessWidget {
       ),
       child: GestureDetector(
         onTap: () {
-          Navigator.of(context).push(
+          Navigator.of(context).push<void>(
             MaterialPageRoute(
               builder: (context) => DemoPage(),
             ),
@@ -112,7 +112,7 @@ class CategoryListItem extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: GestureDetector(
         onTap: () {
-          Navigator.of(context).push(
+          Navigator.of(context).push<void>(
             MaterialPageRoute(
               builder: (context) => DemoPage(),
             ),
