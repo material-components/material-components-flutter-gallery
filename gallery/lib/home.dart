@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'demo.dart';
 import 'settings.dart';
 import 'splash.dart';
+import 'study_placeholder.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -79,7 +80,7 @@ class CarouselCard extends StatelessWidget {
         onTap: () {
           Navigator.of(context).push<void>(
             MaterialPageRoute(
-              builder: (context) => DemoPage(),
+              builder: (context) => StudyPlaceholderPage(),
             ),
           );
         },
