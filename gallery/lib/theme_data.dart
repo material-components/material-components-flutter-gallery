@@ -20,6 +20,7 @@ class GalleryThemeData {
         brightness: colorScheme.brightness,
       ),
       canvasColor: colorScheme.background,
+      highlightColor: Colors.transparent,
     );
   }
 
