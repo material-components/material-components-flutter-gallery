@@ -20,6 +20,7 @@ class GalleryThemeData {
         brightness: colorScheme.brightness,
       ),
       canvasColor: colorScheme.background,
+      scaffoldBackgroundColor: colorScheme.background,
       highlightColor: Colors.transparent,
     );
   }
@@ -31,7 +32,7 @@ class GalleryThemeData {
     secondaryVariant: Color(0xFFFAFBFB),
     background: Color(0xFFE6EBEB),
     surface: Color(0xFFEFF3F3),
-    onBackground: _lightFillColor,
+    onBackground: Colors.white.withOpacity(0.8),
     error: _lightFillColor,
     onError: _lightFillColor,
     onPrimary: _lightFillColor,
@@ -47,7 +48,7 @@ class GalleryThemeData {
     secondaryVariant: Color(0xFF451B6F),
     background: Color(0xFF241E30),
     surface: Color(0xFF4D1F7C),
-    onBackground: _darkFillColor,
+    onBackground: Colors.white.withOpacity(0.05),
     error: _darkFillColor,
     onError: _darkFillColor,
     onPrimary: _darkFillColor,
