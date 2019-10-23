@@ -2,8 +2,11 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'home.dart';
+import 'l10n/localizations_delegate.dart';
+import 'l10n/supported_locales.dart';
 import 'theme_data.dart';
 
 void setOverrideForDesktop() {
@@ -31,6 +34,12 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: GalleryThemeData.lightThemeData,
       darkTheme: GalleryThemeData.darkThemeData,
+      localizationsDelegates: [
+        GalleryLocalizationsDelegate(),
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: supportedLocales,
       home: HomePage(),
     );
   }

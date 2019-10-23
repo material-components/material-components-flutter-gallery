@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'demo.dart';
+import 'l10n/localizations_delegate.dart';
 import 'settings.dart';
 import 'study_placeholder.dart';
 
@@ -33,43 +34,50 @@ class HomePage extends StatelessWidget {
           header(
             context,
             Theme.of(context).colorScheme.primaryVariant,
-            'Gallery',
+            GalleryLocalizations.of(context).homeHeaderGallery,
           ),
           Container(
             child: Container(
               height: 192,
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                children: const [
+                children: [
                   CarouselCard(
-                    title: 'SHRINE',
-                    subtitle: 'Basic shopping app',
+                    title: GalleryLocalizations.of(context).shrineTitle,
+                    subtitle:
+                        GalleryLocalizations.of(context).shrineDescription,
                     leadingPadding: 24,
                   ),
                   CarouselCard(
-                    title: 'RALLY',
-                    subtitle: 'Basic shopping app',
+                    title: GalleryLocalizations.of(context).rallyTitle,
+                    subtitle:
+                        GalleryLocalizations.of(context).shrineDescription,
                   ),
                   CarouselCard(
-                    title: 'CRANE',
-                    subtitle: 'Basic shopping app',
+                    title: GalleryLocalizations.of(context).craneTitle,
+                    subtitle:
+                        GalleryLocalizations.of(context).shrineDescription,
                     endPadding: 24,
                   ),
                 ],
               ),
             ),
           ),
-          header(context, Theme.of(context).colorScheme.primary, 'Categories'),
-          const CategoryListItem(
-            title: 'MATERIAL',
+          header(
+            context,
+            Theme.of(context).colorScheme.primary,
+            GalleryLocalizations.of(context).homeHeaderCategories,
+          ),
+          CategoryListItem(
+            title: GalleryLocalizations.of(context).homeCategoryMaterial,
             imageString: 'assets/icons/material/material.png',
           ),
-          const CategoryListItem(
-            title: 'CUPERTINO',
+          CategoryListItem(
+            title: GalleryLocalizations.of(context).homeCategoryCupertino,
             imageString: 'assets/icons/cupertino/cupertino.png',
           ),
-          const CategoryListItem(
-            title: 'REFERENCE STYLES & MEDIA',
+          CategoryListItem(
+            title: GalleryLocalizations.of(context).homeCategoryReference,
             imageString: 'assets/icons/reference/reference.png',
           ),
         ],

@@ -59,6 +59,7 @@ class _DemoPageState extends State<DemoPage> {
           ),
           IconButton(
             icon: Icon(Icons.library_books),
+            color: iconColor,
             onPressed: () {},
           ),
         ],

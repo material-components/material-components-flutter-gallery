@@ -1,0 +1,57 @@
+{
+  "@@last_modified": "2019-10-23T14:01:08.935262",
+  "Gallery": "Gallery",
+  "@Gallery": {
+    "description": "Header title on home screen for Gallery section.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Categories": "Categories",
+  "@Categories": {
+    "description": "Header title on home screen for Categories section.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "SHRINE": "SHRINE",
+  "@SHRINE": {
+    "description": "Study title for Shrine.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Basic shopping app": "Basic shopping app",
+  "@Basic shopping app": {
+    "description": "Study description for Shrine.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "RALLY": "RALLY",
+  "@RALLY": {
+    "description": "Study title for Rally.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "CRANE": "CRANE",
+  "@CRANE": {
+    "description": "Study title for Crane.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "MATERIAL": "MATERIAL",
+  "@MATERIAL": {
+    "description": "Category title on home screen for Material.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "CUPERTINO": "CUPERTINO",
+  "@CUPERTINO": {
+    "description": "Category title on home screen for Cupertino.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "REFERENCE STYLES & MEDIA": "REFERENCE STYLES & MEDIA",
+  "@REFERENCE STYLES & MEDIA": {
+    "description": "Category title on home screen for reference styles & media.",
+    "type": "text",
+    "placeholders": {}
+  }
+}
