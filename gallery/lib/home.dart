@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'demo.dart';
 import 'l10n/localizations_delegate.dart';
 import 'settings.dart';
+import 'studies/rally/app.dart';
 import 'study_placeholder.dart';
 
 class HomePage extends StatelessWidget {
@@ -46,18 +47,21 @@ class HomePage extends StatelessWidget {
                     title: GalleryLocalizations.of(context).shrineTitle,
                     subtitle:
                         GalleryLocalizations.of(context).shrineDescription,
+                    study: StudyPlaceholderPage(),
                     leadingPadding: 24,
                   ),
                   CarouselCard(
                     title: GalleryLocalizations.of(context).rallyTitle,
                     subtitle:
                         GalleryLocalizations.of(context).shrineDescription,
+                    study: RallyApp(),
                   ),
                   CarouselCard(
                     title: GalleryLocalizations.of(context).craneTitle,
                     subtitle:
                         GalleryLocalizations.of(context).shrineDescription,
                     endPadding: 24,
+                    study: StudyPlaceholderPage(),
                   ),
                 ],
               ),
@@ -101,6 +105,7 @@ class CarouselCard extends StatelessWidget {
       {Key key,
       this.title,
       this.subtitle,
+      this.study,
       this.leadingPadding = 0,
       this.endPadding = 0})
       : super(key: key);
@@ -109,6 +114,7 @@ class CarouselCard extends StatelessWidget {
   final String subtitle;
   final double leadingPadding;
   final double endPadding;
+  final Widget study;
 
   @override
   Widget build(BuildContext context) {
@@ -123,7 +129,7 @@ class CarouselCard extends StatelessWidget {
         onTap: () {
           Navigator.of(context).push<void>(
             MaterialPageRoute(
-              builder: (context) => StudyPlaceholderPage(),
+              builder: (context) => study,
             ),
           );
         },
