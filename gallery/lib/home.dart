@@ -211,7 +211,7 @@ class CategoryListItem extends StatelessWidget {
                   child: Text(
                     title,
                     style: Theme.of(context).textTheme.headline.apply(
-                          color: Colors.white,
+                          color: Theme.of(context).colorScheme.onSurface,
                         ),
                   ),
                 ),

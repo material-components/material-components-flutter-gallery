@@ -7,7 +7,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'home.dart';
 import 'l10n/localizations_delegate.dart';
 import 'l10n/supported_locales.dart';
-import 'theme_data.dart';
+import 'gallery_theme_data.dart';
 
 void setOverrideForDesktop() {
   if (kIsWeb) return;
