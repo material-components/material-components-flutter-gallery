@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  This file was automatically generated.
+  Please do not edit it manually.
+  It was based on gallery/lib/src/l10n/intl_messages.arb.
+-->
+<resources>
+  <string
+    name="Gallery"
+    description="Header title on home screen for Gallery section."
+    >Gallery</string>
+  <string
+    name="Categories"
+    description="Header title on home screen for Categories section."
+    >Categories</string>
+  <string
+    name="SHRINE"
+    description="Study title for Shrine."
+    >SHRINE</string>
+  <string
+    name="Basic shopping app"
+    description="Study description for Shrine."
+    >Basic shopping app</string>
+  <string
+    name="RALLY"
+    description="Study title for Rally."
+    >RALLY</string>
+  <string
+    name="CRANE"
+    description="Study title for Crane."
+    >CRANE</string>
+  <string
+    name="MATERIAL"
+    description="Category title on home screen for Material."
+    >MATERIAL</string>
+  <string
+    name="CUPERTINO"
+    description="Category title on home screen for Cupertino."
+    >CUPERTINO</string>
+  <string
+    name="REFERENCE STYLES &amp; MEDIA"
+    description="Category title on home screen for reference styles &amp; media."
+    >REFERENCE STYLES &amp; MEDIA</string>
+</resources>

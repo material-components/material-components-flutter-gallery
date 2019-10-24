@@ -9,6 +9,7 @@ import 'supported_locales.dart';
 // flutter pub run intl_translation:extract_to_arb --output-dir=lib/l10n lib/l10n/localizations_delegate.dart
 // flutter pub run intl_translation:generate_from_arb --output-dir=lib/l10n --no-use-deferred-loading lib/l10n/localizations_delegate.dart lib/l10n/intl_*.arb
 // flutter format .
+// dart ../l10n_cli/bin/main.dart
 //
 // Anytime new strings are added, please re-run the above commands.
 import 'messages_all.dart';
