@@ -119,31 +119,30 @@ class CarouselCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsetsDirectional.fromSTEB(
+      margin: EdgeInsetsDirectional.fromSTEB(
         8 + leadingPadding,
         0,
         8 + endPadding,
         0,
       ),
-      child: InkWell(
-        onTap: () {
-          Navigator.of(context).push<void>(
-            MaterialPageRoute(
-              builder: (context) => study,
-            ),
-          );
-        },
-        child: Container(
-          width: MediaQuery.of(context).size.width * .85,
+      width: MediaQuery.of(context).size.width * .85,
+      child: Material(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        clipBehavior: Clip.antiAlias,
+        child: InkWell(
+          onTap: () {
+            Navigator.of(context).push<void>(
+              MaterialPageRoute(
+                builder: (context) => study,
+              ),
+            );
+          },
           child: Stack(
             fit: StackFit.expand,
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image.asset(
-                  'assets/icons/shrine_card/shrine_card.png',
-                  fit: BoxFit.cover,
-                ),
+              Ink.image(
+                image: AssetImage('assets/icons/shrine_card/shrine_card.png'),
+                fit: BoxFit.cover,
               ),
               Positioned(
                 bottom: 16,
@@ -185,31 +184,30 @@ class CategoryListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.fromLTRB(32, 8, 32, 8),
-      child: InkWell(
-        onTap: () {
-          Navigator.push<dynamic>(
-            context,
-            MaterialPageRoute<dynamic>(builder: (context) => DemoPage()),
-          );
-        },
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            color: Theme.of(context).colorScheme.onBackground,
-          ),
+      child: Material(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        color: Theme.of(context).colorScheme.onBackground,
+        clipBehavior: Clip.antiAlias,
+        child: InkWell(
+          onTap: () {
+            Navigator.push<void>(
+              context,
+              MaterialPageRoute(builder: (context) => DemoPage()),
+            );
+          },
           child: Row(
             children: [
               Padding(
                 padding: EdgeInsets.all(8),
                 child: Image.asset(
-                  (imageString),
+                  imageString,
                   width: 64,
                   height: 64,
                 ),
               ),
               Flexible(
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(8, 0, 0, 0),
+                  padding: EdgeInsetsDirectional.only(start: 8),
                   child: Text(
                     title,
                     style: Theme.of(context).textTheme.headline.apply(
