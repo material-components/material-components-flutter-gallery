@@ -4,6 +4,7 @@ import 'demo.dart';
 import 'l10n/localizations_delegate.dart';
 import 'settings.dart';
 import 'studies/rally/app.dart';
+import 'studies/crane/app.dart';
 import 'study_placeholder.dart';
 
 class HomePage extends StatelessWidget {
@@ -58,10 +59,9 @@ class HomePage extends StatelessWidget {
                   ),
                   CarouselCard(
                     title: GalleryLocalizations.of(context).craneTitle,
-                    subtitle:
-                        GalleryLocalizations.of(context).shrineDescription,
+                    subtitle: GalleryLocalizations.of(context).craneDescription,
                     endPadding: 24,
-                    study: StudyPlaceholderPage(),
+                    study: CraneApp(),
                   ),
                 ],
               ),

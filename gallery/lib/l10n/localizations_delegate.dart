@@ -73,6 +73,14 @@ class GalleryLocalizations {
     );
   }
 
+  String get craneDescription {
+    return Intl.message(
+      'Travel app',
+      desc: 'Study description for Crane.',
+      locale: localeName,
+    );
+  }
+
   String get homeCategoryMaterial {
     return Intl.message(
       'MATERIAL',

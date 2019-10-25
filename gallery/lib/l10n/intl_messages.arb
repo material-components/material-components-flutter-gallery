@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2019-10-23T14:01:08.935262",
+  "@@last_modified": "2019-10-24T14:54:23.089640",
   "Gallery": "Gallery",
   "@Gallery": {
     "description": "Header title on home screen for Gallery section.",
@@ -33,6 +33,12 @@
   "CRANE": "CRANE",
   "@CRANE": {
     "description": "Study title for Crane.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Travel app": "Travel app",
+  "@Travel app": {
+    "description": "Study description for Crane.",
     "type": "text",
     "placeholders": {}
   },

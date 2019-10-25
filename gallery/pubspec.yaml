@@ -28,6 +28,8 @@ flutter:
     - assets/icons/shrine_card/
     - packages/rally_assets/logo.png
     - packages/rally_assets/thumb.png
+    - assets/crane/flights/
+    - assets/crane/
 
   uses-material-design: true
   fonts:
@@ -63,3 +65,14 @@ flutter:
           weight: 600
         - asset: packages/rally_assets/Eczar-Bold.ttf
           weight: 700
+    # Crane font
+    - family: Raleway
+      fonts:
+        - asset: fonts/Raleway-Light.ttf
+          weight: 300
+        - asset: fonts/Raleway-Regular.ttf
+          weight: 400
+        - asset: fonts/Raleway-Medium.ttf
+          weight: 500
+        - asset: fonts/Raleway-SemiBold.ttf
+          weight: 600

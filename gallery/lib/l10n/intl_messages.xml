@@ -30,6 +30,10 @@
     description="Study title for Crane."
     >CRANE</string>
   <string
+    name="Travel app"
+    description="Study description for Crane."
+    >Travel app</string>
+  <string
     name="MATERIAL"
     description="Category title on home screen for Material."
     >MATERIAL</string>

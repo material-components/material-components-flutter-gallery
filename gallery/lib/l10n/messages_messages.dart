@@ -31,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "RALLY": MessageLookupByLibrary.simpleMessage("RALLY"),
         "REFERENCE STYLES & MEDIA":
             MessageLookupByLibrary.simpleMessage("REFERENCE STYLES & MEDIA"),
-        "SHRINE": MessageLookupByLibrary.simpleMessage("SHRINE")
+        "SHRINE": MessageLookupByLibrary.simpleMessage("SHRINE"),
+        "Travel app": MessageLookupByLibrary.simpleMessage("Travel app")
       };
 }
