@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'home.dart';
+import 'pages/home.dart';
 import 'l10n/localizations_delegate.dart';
 import 'l10n/supported_locales.dart';
-import 'gallery_theme_data.dart';
+import 'themes/gallery_theme_data.dart';
 
 void setOverrideForDesktop() {
   if (kIsWeb) return;

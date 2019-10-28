@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../data/demos.dart';
 import 'demo.dart';
 
 class CategoryListItem extends StatefulWidget {
@@ -12,7 +13,7 @@ class CategoryListItem extends StatefulWidget {
 
   final String title;
   final String imageString;
-  final List<String> demos;
+  final List<GalleryDemo> demos;
 
   @override
   _CategoryListItemState createState() => _CategoryListItemState();
@@ -209,7 +210,7 @@ class _ExpandedCategoryDemos extends StatelessWidget {
     this.demos,
   }) : super(key: key);
 
-  final List<String> demos;
+  final List<GalleryDemo> demos;
 
   @override
   Widget build(BuildContext context) {
@@ -217,7 +218,7 @@ class _ExpandedCategoryDemos extends StatelessWidget {
       children: [
         for (final demo in demos)
           _CategoryDemoItem(
-            title: demo,
+            demo: demo,
           ),
         const SizedBox(height: 12), // Extra space below.
       ],
@@ -226,10 +227,9 @@ class _ExpandedCategoryDemos extends StatelessWidget {
 }
 
 class _CategoryDemoItem extends StatelessWidget {
-  const _CategoryDemoItem({Key key, this.title}) : super(key: key);
+  const _CategoryDemoItem({Key key, this.demo}) : super(key: key);
 
-  // TODO: Create a demo data model that contains the necessary info.
-  final String title;
+  final GalleryDemo demo;
 
   @override
   Widget build(BuildContext context) {
@@ -241,7 +241,7 @@ class _CategoryDemoItem extends StatelessWidget {
         onTap: () {
           Navigator.push<void>(
             context,
-            MaterialPageRoute(builder: (context) => DemoPage()),
+            MaterialPageRoute(builder: (context) => DemoPage(demo: demo)),
           );
         },
         child: Padding(
@@ -254,32 +254,38 @@ class _CategoryDemoItem extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Icon(
-                Icons.calendar_today,
+                demo.icon,
                 color: colorScheme.primary,
               ),
               SizedBox(width: 40),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style:
-                        textTheme.subhead.apply(color: colorScheme.onSurface),
-                  ),
-                  Text(
-                    'Description of demo',
-                    style: textTheme.overline.apply(
-                      color: colorScheme.onSurface.withOpacity(0.5),
+              Flexible(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      demo.title,
+                      style:
+                          textTheme.subhead.apply(color: colorScheme.onSurface),
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
                     ),
-                  ),
-                  SizedBox(height: 20),
-                  // TODO: This isn't appearing for some reason.
-                  Divider(
-                    thickness: 1,
-                    height: 1,
-                    color: Theme.of(context).colorScheme.background,
-                  ),
-                ],
+                    Text(
+                      demo.subtitle,
+                      style: textTheme.overline.apply(
+                        color: colorScheme.onSurface.withOpacity(0.5),
+                      ),
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                    ),
+                    SizedBox(height: 20),
+                    // TODO: This isn't appearing for some reason.
+                    Divider(
+                      thickness: 1,
+                      height: 1,
+                      color: Theme.of(context).colorScheme.background,
+                    ),
+                  ],
+                ),
               )
             ],
           ),

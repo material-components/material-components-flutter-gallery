@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../data/demos.dart';
+import '../l10n/localizations_delegate.dart';
+import '../studies/crane/app.dart';
+import '../studies/rally/app.dart';
 import 'category_list_item.dart';
-import 'l10n/localizations_delegate.dart';
 import 'settings.dart';
-import 'studies/rally/app.dart';
-import 'studies/crane/app.dart';
 import 'study_placeholder.dart';
 
 class HomePage extends StatelessWidget {
@@ -75,26 +76,17 @@ class HomePage extends StatelessWidget {
           CategoryListItem(
             title: GalleryLocalizations.of(context).homeCategoryMaterial,
             imageString: 'assets/icons/material/material.png',
-            demos: [
-              'Buttons',
-              'Dialogs',
-            ],
+            demos: materialDemos,
           ),
           CategoryListItem(
             title: GalleryLocalizations.of(context).homeCategoryCupertino,
             imageString: 'assets/icons/cupertino/cupertino.png',
-            demos: [
-              'Alerts',
-              'Navigation',
-            ],
+            demos: materialDemos,
           ),
           CategoryListItem(
             title: GalleryLocalizations.of(context).homeCategoryReference,
             imageString: 'assets/icons/reference/reference.png',
-            demos: [
-              'Colors',
-              'Typography',
-            ],
+            demos: materialDemos,
           ),
         ],
       ),
