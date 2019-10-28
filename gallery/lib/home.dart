@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'demo.dart';
+import 'category_list_item.dart';
 import 'l10n/localizations_delegate.dart';
 import 'settings.dart';
 import 'studies/rally/app.dart';
@@ -75,14 +75,26 @@ class HomePage extends StatelessWidget {
           CategoryListItem(
             title: GalleryLocalizations.of(context).homeCategoryMaterial,
             imageString: 'assets/icons/material/material.png',
+            demos: [
+              'Buttons',
+              'Dialogs',
+            ],
           ),
           CategoryListItem(
             title: GalleryLocalizations.of(context).homeCategoryCupertino,
             imageString: 'assets/icons/cupertino/cupertino.png',
+            demos: [
+              'Alerts',
+              'Navigation',
+            ],
           ),
           CategoryListItem(
             title: GalleryLocalizations.of(context).homeCategoryReference,
             imageString: 'assets/icons/reference/reference.png',
+            demos: [
+              'Colors',
+              'Typography',
+            ],
           ),
         ],
       ),
@@ -163,57 +175,6 @@ class CarouselCard extends StatelessWidget {
                           ),
                     ),
                   ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class CategoryListItem extends StatelessWidget {
-  const CategoryListItem({Key key, this.title, this.imageString})
-      : super(key: key);
-
-  final String title;
-  final String imageString;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.fromLTRB(32, 8, 32, 8),
-      child: Material(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        color: Theme.of(context).colorScheme.onBackground,
-        clipBehavior: Clip.antiAlias,
-        child: InkWell(
-          onTap: () {
-            Navigator.push<void>(
-              context,
-              MaterialPageRoute(builder: (context) => DemoPage()),
-            );
-          },
-          child: Row(
-            children: [
-              Padding(
-                padding: EdgeInsets.all(8),
-                child: Image.asset(
-                  imageString,
-                  width: 64,
-                  height: 64,
-                ),
-              ),
-              Flexible(
-                child: Padding(
-                  padding: EdgeInsetsDirectional.only(start: 8),
-                  child: Text(
-                    title,
-                    style: Theme.of(context).textTheme.headline.apply(
-                          color: Theme.of(context).colorScheme.onSurface,
-                        ),
-                  ),
                 ),
               ),
             ],
