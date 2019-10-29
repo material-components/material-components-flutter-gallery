@@ -22,12 +22,50 @@ class DemoPage extends StatefulWidget {
   _DemoPageState createState() => _DemoPageState();
 }
 
-class _DemoPageState extends State<DemoPage> {
+class _DemoPageState extends State<DemoPage>
+    with SingleTickerProviderStateMixin {
   _DemoState _state = _DemoState.normal;
   int _configIndex = 0;
 
+  static final Animatable<double> _easeInTween =
+      CurveTween(curve: Curves.easeIn);
+  static const _expandDuration = Duration(milliseconds: 200);
+  AnimationController _controller;
+  Animation<double> _sectionHeightFactor;
+
   GalleryDemoConfiguration get _currentConfig {
     return widget.demo.configurations[_configIndex];
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(duration: _expandDuration, vsync: this);
+    _sectionHeightFactor = _controller.drive(_easeInTween);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  void _handleTap(_DemoState newState) {
+    setState(() {
+      _state = _state == newState ? _DemoState.normal : newState;
+      if (_state != _DemoState.normal) {
+        _controller.forward();
+      } else {
+        _controller.reverse().then<void>((value) {
+          if (!mounted) {
+            return;
+          }
+          setState(() {
+            // Rebuild.
+          });
+        });
+      }
+    });
   }
 
   Future<void> _showDocumentation(BuildContext context) async {
@@ -56,12 +94,61 @@ class _DemoPageState extends State<DemoPage> {
     }
   }
 
+  Widget _buildBody(BuildContext context, Widget child) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.max,
+      children: [
+        ClipRect(
+          child: Align(
+            heightFactor: _sectionHeightFactor.value,
+            child: child,
+          ),
+        ),
+        Expanded(
+          child: DemoContent(buildRoute: _currentConfig.buildRoute),
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final iconColor = colorScheme.onSurface;
     final selectedIconColor = colorScheme.primary;
 
+    Widget section;
+    switch (_state) {
+      case _DemoState.options:
+        section = _DemoSectionOptions(
+          configurations: widget.demo.configurations,
+          configIndex: _configIndex,
+          onConfigChanged: (index) {
+            setState(() {
+              _configIndex = index;
+              _state = _DemoState.normal;
+            });
+          },
+        );
+        break;
+      case _DemoState.info:
+        section = _DemoSectionInfo(
+          title: _currentConfig.title,
+          description: _currentConfig.description,
+        );
+        break;
+      case _DemoState.code:
+        section = _DemoSectionCode(
+          height: 260,
+          title: 'Code for ${_currentConfig.title}',
+        );
+        break;
+      default:
+        break;
+    }
+
+    final collapsed = _state == _DemoState.normal && _controller.isDismissed;
     return Scaffold(
       appBar: AppBar(
         actions: [
@@ -71,11 +158,7 @@ class _DemoPageState extends State<DemoPage> {
               color:
                   _state == _DemoState.options ? selectedIconColor : iconColor,
               onPressed: () {
-                setState(() {
-                  _state = _state == _DemoState.options
-                      ? _DemoState.normal
-                      : _DemoState.options;
-                });
+                _handleTap(_DemoState.options);
               },
               tooltip: 'Options',
             ),
@@ -83,11 +166,7 @@ class _DemoPageState extends State<DemoPage> {
             icon: Icon(Icons.info),
             color: _state == _DemoState.info ? selectedIconColor : iconColor,
             onPressed: () {
-              setState(() {
-                _state = _state == _DemoState.info
-                    ? _DemoState.normal
-                    : _DemoState.info;
-              });
+              _handleTap(_DemoState.info);
             },
             tooltip: 'Info',
           ),
@@ -95,11 +174,7 @@ class _DemoPageState extends State<DemoPage> {
             icon: Icon(Icons.code),
             color: _state == _DemoState.code ? selectedIconColor : iconColor,
             onPressed: () {
-              setState(() {
-                _state = _state == _DemoState.code
-                    ? _DemoState.normal
-                    : _DemoState.code;
-              });
+              _handleTap(_DemoState.code);
             },
             tooltip: 'Code Sample',
           ),
@@ -116,35 +191,10 @@ class _DemoPageState extends State<DemoPage> {
       body: SafeArea(
         // TODO: Update this with animations.
         // TODO: DemoContent should not shrink but should instead slide down.
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            if (_state == _DemoState.options)
-              _DemoSectionOptions(
-                configurations: widget.demo.configurations,
-                configIndex: _configIndex,
-                onConfigChanged: (index) {
-                  setState(() {
-                    _configIndex = index;
-                    _state = _DemoState.normal;
-                  });
-                },
-              ),
-            if (_state == _DemoState.info)
-              _DemoSectionInfo(
-                title: _currentConfig.title,
-                description: _currentConfig.description,
-              ),
-            if (_state == _DemoState.code)
-              _DemoSectionCode(
-                height: 260,
-                title: 'Code for ${_currentConfig.title}',
-              ),
-            Expanded(
-              child: DemoContent(buildRoute: _currentConfig.buildRoute),
-            ),
-          ],
+        child: AnimatedBuilder(
+          animation: _controller.view,
+          builder: _buildBody,
+          child: collapsed ? null : section,
         ),
       ),
     );
