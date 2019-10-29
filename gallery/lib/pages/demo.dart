@@ -77,6 +77,7 @@ class _DemoPageState extends State<DemoPage> {
                       : _DemoState.options;
                 });
               },
+              tooltip: 'Options',
             ),
           IconButton(
             icon: Icon(Icons.info),
@@ -88,6 +89,7 @@ class _DemoPageState extends State<DemoPage> {
                     : _DemoState.info;
               });
             },
+            tooltip: 'Info',
           ),
           IconButton(
             icon: Icon(Icons.code),
@@ -99,6 +101,7 @@ class _DemoPageState extends State<DemoPage> {
                     : _DemoState.code;
               });
             },
+            tooltip: 'Code Sample',
           ),
           IconButton(
             icon: Icon(Icons.library_books),
@@ -106,6 +109,7 @@ class _DemoPageState extends State<DemoPage> {
             onPressed: () {
               _showDocumentation(context);
             },
+            tooltip: 'API Documentation',
           ),
         ],
       ),

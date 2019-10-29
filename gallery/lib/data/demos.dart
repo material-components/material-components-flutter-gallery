@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'icons.dart';
+import '../demos/material/button_demo.dart';
 import '../demos/material/dialog_demo.dart';
 import '../themes/material_demo_theme_data.dart';
 
@@ -50,7 +51,7 @@ final materialDemos = <GalleryDemo>[
             'inline with padding',
         documentationUrl:
             'https://docs.flutter.io/flutter/material/FlatButton-class.html',
-        buildRoute: (context) => TempDemoContent(title: 'Flat Button'),
+        buildRoute: (context) => ButtonDemo(type: ButtonDemoType.flat),
       ),
       GalleryDemoConfiguration(
         title: 'Raised Button',
@@ -58,7 +59,34 @@ final materialDemos = <GalleryDemo>[
             ' emphasize functions on busy or wide spaces.',
         documentationUrl:
             'https://docs.flutter.io/flutter/material/RaisedButton-class.html',
-        buildRoute: (context) => TempDemoContent(title: 'Raised Button'),
+        buildRoute: (context) => ButtonDemo(type: ButtonDemoType.raised),
+      ),
+      GalleryDemoConfiguration(
+        title: 'Outline Button',
+        description: 'Outline buttons become opaque and elevate when pressed.'
+            ' They are often paired with raised buttons to indicate an'
+            'alternative, secondary action.',
+        documentationUrl:
+            'https://docs.flutter.io/flutter/material/OutlineButton-class.html',
+        buildRoute: (context) => ButtonDemo(type: ButtonDemoType.outline),
+      ),
+      GalleryDemoConfiguration(
+        title: 'Toggle Buttons',
+        description: 'Toggle buttons can be used to group related options. To'
+            'emphasize groups of related toggle buttons, a group should share a'
+            'common container',
+        documentationUrl:
+            'https://docs.flutter.io/flutter/material/ToggleButtons-class.html',
+        buildRoute: (context) => ButtonDemo(type: ButtonDemoType.toggle),
+      ),
+      GalleryDemoConfiguration(
+        title: 'Floating Action Button',
+        description: 'A floating action button is a circular icon button that'
+            'hovers over content to promote a primary action in the'
+            'application. ',
+        documentationUrl:
+            'https://docs.flutter.io/flutter/material/FloatingActionButton-class.html',
+        buildRoute: (context) => ButtonDemo(type: ButtonDemoType.floating),
       ),
     ],
   ),
@@ -74,9 +102,7 @@ final materialDemos = <GalleryDemo>[
             ' and an optional list of actions.',
         documentationUrl:
             'https://api.flutter.dev/flutter/material/AlertDialog-class.html',
-        buildRoute: (context) => DialogDemo(
-          type: DialogDemoType.alert,
-        ),
+        buildRoute: (context) => DialogDemo(type: DialogDemoType.alert),
       ),
       GalleryDemoConfiguration(
         title: 'Alert with title',
@@ -85,9 +111,7 @@ final materialDemos = <GalleryDemo>[
             ' and an optional list of actions.',
         documentationUrl:
             'https://api.flutter.dev/flutter/material/AlertDialog-class.html',
-        buildRoute: (context) => DialogDemo(
-          type: DialogDemoType.alertTitle,
-        ),
+        buildRoute: (context) => DialogDemo(type: DialogDemoType.alertTitle),
       ),
       GalleryDemoConfiguration(
         title: 'Simple',
@@ -96,9 +120,7 @@ final materialDemos = <GalleryDemo>[
             ' above the choices.',
         documentationUrl:
             'https://api.flutter.dev/flutter/material/SimpleDialog-class.html',
-        buildRoute: (context) => DialogDemo(
-          type: DialogDemoType.simple,
-        ),
+        buildRoute: (context) => DialogDemo(type: DialogDemoType.simple),
       ),
       GalleryDemoConfiguration(
         title: 'Fullscreen',
@@ -106,9 +128,7 @@ final materialDemos = <GalleryDemo>[
             ' incoming page is a fullscreen modal dialog',
         documentationUrl:
             'https://api.flutter.dev/flutter/widgets/PageRoute/fullscreenDialog.html',
-        buildRoute: (context) => DialogDemo(
-          type: DialogDemoType.fullscreen,
-        ),
+        buildRoute: (context) => DialogDemo(type: DialogDemoType.fullscreen),
       ),
     ],
   )
