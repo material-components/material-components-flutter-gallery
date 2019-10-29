@@ -7,6 +7,10 @@ class MaterialDemoThemeData {
       color: _colorScheme.primary,
       iconTheme: IconThemeData(color: _colorScheme.onPrimary),
     ),
+    buttonTheme: ButtonThemeData(
+      textTheme: ButtonTextTheme.primary,
+      colorScheme: _colorScheme,
+    ),
     canvasColor: _colorScheme.background,
     scaffoldBackgroundColor: _colorScheme.background,
     highlightColor: Colors.transparent,

@@ -313,7 +313,7 @@ class DemoContent extends StatelessWidget {
           top: Radius.circular(10.0),
           bottom: Radius.circular(2.0),
         ),
-        child: Builder(builder: buildRoute),
+        child: DemoWrapper(child: Builder(builder: buildRoute)),
       ),
     );
   }
