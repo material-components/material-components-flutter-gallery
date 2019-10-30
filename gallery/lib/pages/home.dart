@@ -4,9 +4,9 @@ import '../data/demos.dart';
 import '../l10n/localizations_delegate.dart';
 import '../studies/crane/app.dart';
 import '../studies/rally/app.dart';
+import '../studies/shrine/app.dart';
 import 'category_list_item.dart';
 import 'settings.dart';
-import 'study_placeholder.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -49,7 +49,7 @@ class HomePage extends StatelessWidget {
                     title: GalleryLocalizations.of(context).shrineTitle,
                     subtitle:
                         GalleryLocalizations.of(context).shrineDescription,
-                    study: StudyPlaceholderPage(),
+                    study: ShrineApp(),
                     leadingPadding: 24,
                   ),
                   CarouselCard(
