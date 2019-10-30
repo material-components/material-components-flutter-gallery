@@ -81,7 +81,7 @@ class HomePage extends StatelessWidget {
           CategoryListItem(
             title: GalleryLocalizations.of(context).homeCategoryCupertino,
             imageString: 'assets/icons/cupertino/cupertino.png',
-            demos: materialDemos,
+            demos: cupertinoDemos,
           ),
           CategoryListItem(
             title: GalleryLocalizations.of(context).homeCategoryReference,

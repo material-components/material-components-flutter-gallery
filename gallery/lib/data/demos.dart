@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'icons.dart';
+import '../demos/cupertino/cupertino_button_demo.dart';
 import '../demos/material/button_demo.dart';
 import '../demos/material/dialog_demo.dart';
 import '../themes/material_demo_theme_data.dart';
@@ -37,7 +39,7 @@ class GalleryDemoConfiguration {
   final WidgetBuilder buildRoute;
 }
 
-/// TODO: Create cupertino and references demos.
+/// TODO: Create references demos.
 final materialDemos = <GalleryDemo>[
   GalleryDemo(
     title: 'Buttons',
@@ -134,6 +136,24 @@ final materialDemos = <GalleryDemo>[
   )
 ];
 
+final cupertinoDemos = <GalleryDemo>[
+  GalleryDemo(
+    title: 'Buttons',
+    icon: GalleryIcons.genericButtons,
+    subtitle: 'iOS-style buttons',
+    configurations: [
+      GalleryDemoConfiguration(
+        title: 'Buttons',
+        description: 'An iOS-style button. It takes in text and/or an icon that'
+            ' fades out and in on touch. May optionally have a background.',
+        documentationUrl:
+            'https://api.flutter.dev/flutter/cupertino/CupertinoButton-class.html',
+        buildRoute: (context) => CupertinoButtonDemo(),
+      ),
+    ],
+  ),
+];
+
 class DemoWrapper extends StatelessWidget {
   const DemoWrapper({Key key, this.child}) : super(key: key);
 
@@ -146,24 +166,10 @@ class DemoWrapper extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: MediaQuery(
         data: MediaQueryData(),
-        child: child,
-      ),
-    );
-  }
-}
-
-/// TODO: Replace with actual demos
-class TempDemoContent extends StatelessWidget {
-  const TempDemoContent({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: Center(
-        child: Text(title),
+        child: CupertinoTheme(
+          data: CupertinoThemeData(),
+          child: child,
+        ),
       ),
     );
   }

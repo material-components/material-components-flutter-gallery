@@ -307,12 +307,15 @@ class _DemoSectionCode extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return SizedBox(
       height: height,
       child: Center(
         child: Text(
           title,
-          style: Theme.of(context).textTheme.body1.apply(color: Colors.white),
+          style: theme.textTheme.body1.apply(
+            color: theme.colorScheme.onSurface,
+          ),
         ),
       ),
     );
