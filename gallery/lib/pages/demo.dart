@@ -22,12 +22,19 @@ class DemoPage extends StatefulWidget {
   _DemoPageState createState() => _DemoPageState();
 }
 
-class _DemoPageState extends State<DemoPage> {
+class _DemoPageState extends State<DemoPage>
+    with SingleTickerProviderStateMixin {
   _DemoState _state = _DemoState.normal;
   int _configIndex = 0;
 
   GalleryDemoConfiguration get _currentConfig {
     return widget.demo.configurations[_configIndex];
+  }
+
+  void _handleTap(_DemoState newState) {
+    setState(() {
+      _state = _state == newState ? _DemoState.normal : newState;
+    });
   }
 
   Future<void> _showDocumentation(BuildContext context) async {
@@ -62,88 +69,98 @@ class _DemoPageState extends State<DemoPage> {
     final iconColor = colorScheme.onSurface;
     final selectedIconColor = colorScheme.primary;
 
+    final appBar = AppBar(
+      actions: [
+        if (widget.demo.configurations.length > 1)
+          IconButton(
+            icon: Icon(Icons.tune),
+            tooltip: 'Options',
+            color: _state == _DemoState.options ? selectedIconColor : iconColor,
+            onPressed: () => _handleTap(_DemoState.options),
+          ),
+        IconButton(
+          icon: Icon(Icons.info),
+          tooltip: 'Info',
+          color: _state == _DemoState.info ? selectedIconColor : iconColor,
+          onPressed: () => _handleTap(_DemoState.info),
+        ),
+        IconButton(
+          icon: Icon(Icons.code),
+          tooltip: 'Code Sample',
+          color: _state == _DemoState.code ? selectedIconColor : iconColor,
+          onPressed: () => _handleTap(_DemoState.code),
+        ),
+        IconButton(
+          icon: Icon(Icons.library_books),
+          tooltip: 'API Documentation',
+          color: iconColor,
+          onPressed: () => _showDocumentation(context),
+        ),
+      ],
+    );
+
+    Widget section;
+    switch (_state) {
+      case _DemoState.options:
+        section = _DemoSectionOptions(
+          configurations: widget.demo.configurations,
+          configIndex: _configIndex,
+          onConfigChanged: (index) {
+            setState(() {
+              _configIndex = index;
+              _state = _DemoState.normal;
+            });
+          },
+        );
+        break;
+      case _DemoState.info:
+        section = _DemoSectionInfo(
+          title: _currentConfig.title,
+          description: _currentConfig.description,
+        );
+        break;
+      case _DemoState.code:
+        section = _DemoSectionCode(
+          height: 260,
+          title: 'Code for ${_currentConfig.title}',
+        );
+        break;
+      case _DemoState.normal:
+        section = Container();
+        break;
+    }
+
+    section = AnimatedSize(
+      vsync: this,
+      duration: Duration(milliseconds: 200),
+      alignment: Alignment.topCenter,
+      curve: Curves.easeIn,
+      child: section,
+    );
+
+    final mediaQuery = MediaQuery.of(context);
+    final bottomSafeArea = mediaQuery.padding.bottom;
+    final contentHeight = mediaQuery.size.height -
+        mediaQuery.padding.top -
+        mediaQuery.padding.bottom -
+        appBar.preferredSize.height;
+
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          if (widget.demo.configurations.length > 1)
-            IconButton(
-              icon: Icon(Icons.tune),
-              color:
-                  _state == _DemoState.options ? selectedIconColor : iconColor,
-              onPressed: () {
-                setState(() {
-                  _state = _state == _DemoState.options
-                      ? _DemoState.normal
-                      : _DemoState.options;
-                });
-              },
-              tooltip: 'Options',
-            ),
-          IconButton(
-            icon: Icon(Icons.info),
-            color: _state == _DemoState.info ? selectedIconColor : iconColor,
-            onPressed: () {
-              setState(() {
-                _state = _state == _DemoState.info
-                    ? _DemoState.normal
-                    : _DemoState.info;
-              });
-            },
-            tooltip: 'Info',
-          ),
-          IconButton(
-            icon: Icon(Icons.code),
-            color: _state == _DemoState.code ? selectedIconColor : iconColor,
-            onPressed: () {
-              setState(() {
-                _state = _state == _DemoState.code
-                    ? _DemoState.normal
-                    : _DemoState.code;
-              });
-            },
-            tooltip: 'Code Sample',
-          ),
-          IconButton(
-            icon: Icon(Icons.library_books),
-            color: iconColor,
-            onPressed: () {
-              _showDocumentation(context);
-            },
-            tooltip: 'API Documentation',
-          ),
-        ],
-      ),
+      appBar: appBar,
       body: SafeArea(
-        // TODO: Update this with animations.
-        // TODO: DemoContent should not shrink but should instead slide down.
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.max,
+        bottom: false,
+        child: ListView(
+          // Use a non-scrollable ListView to enable animation of shifting the
+          // demo offscreen.
+          physics: NeverScrollableScrollPhysics(),
           children: [
-            if (_state == _DemoState.options)
-              _DemoSectionOptions(
-                configurations: widget.demo.configurations,
-                configIndex: _configIndex,
-                onConfigChanged: (index) {
-                  setState(() {
-                    _configIndex = index;
-                    _state = _DemoState.normal;
-                  });
-                },
-              ),
-            if (_state == _DemoState.info)
-              _DemoSectionInfo(
-                title: _currentConfig.title,
-                description: _currentConfig.description,
-              ),
-            if (_state == _DemoState.code)
-              _DemoSectionCode(
-                height: 260,
-                title: 'Code for ${_currentConfig.title}',
-              ),
-            Expanded(
-              child: DemoContent(buildRoute: _currentConfig.buildRoute),
+            section,
+            DemoContent(
+              height: contentHeight,
+              buildRoute: _currentConfig.buildRoute,
             ),
+            // Fake the safe area to ensure the animation looks correct.
+            SizedBox(height: bottomSafeArea),
           ],
         ),
       ),
@@ -303,14 +320,20 @@ class _DemoSectionCode extends StatelessWidget {
 }
 
 class DemoContent extends StatelessWidget {
-  const DemoContent({Key key, @required this.buildRoute}) : super(key: key);
+  const DemoContent({
+    Key key,
+    @required this.height,
+    @required this.buildRoute,
+  }) : super(key: key);
 
+  final double height;
   final WidgetBuilder buildRoute;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
       padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16),
+      height: height,
       child: Material(
         clipBehavior: Clip.antiAlias,
         borderRadius: BorderRadius.vertical(
