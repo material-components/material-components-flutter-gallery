@@ -5,6 +5,7 @@ import 'icons.dart';
 import '../demos/cupertino/cupertino_button_demo.dart';
 import '../demos/material/button_demo.dart';
 import '../demos/material/dialog_demo.dart';
+import '../demos/reference/colors_demo.dart';
 import '../themes/material_demo_theme_data.dart';
 
 // TODO: Localize all strings.
@@ -39,7 +40,6 @@ class GalleryDemoConfiguration {
   final WidgetBuilder buildRoute;
 }
 
-/// TODO: Create references demos.
 final materialDemos = <GalleryDemo>[
   GalleryDemo(
     title: 'Buttons',
@@ -149,6 +149,24 @@ final cupertinoDemos = <GalleryDemo>[
         documentationUrl:
             'https://api.flutter.dev/flutter/cupertino/CupertinoButton-class.html',
         buildRoute: (context) => CupertinoButtonDemo(),
+      ),
+    ],
+  ),
+];
+
+final referenceDemos = <GalleryDemo>[
+  GalleryDemo(
+    title: 'Colors',
+    icon: GalleryIcons.colors,
+    subtitle: 'All of the predefined colors',
+    configurations: [
+      GalleryDemoConfiguration(
+        title: 'Colors',
+        description: 'Color and color swatch constants which represent Material'
+            ' design\'s color palette.',
+        documentationUrl:
+            'https://api.flutter.dev/flutter/material/MaterialColor-class.html',
+        buildRoute: (context) => ColorsDemo(),
       ),
     ],
   ),

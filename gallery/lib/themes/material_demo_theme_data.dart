@@ -14,6 +14,7 @@ class MaterialDemoThemeData {
     canvasColor: _colorScheme.background,
     scaffoldBackgroundColor: _colorScheme.background,
     highlightColor: Colors.transparent,
+    indicatorColor: _colorScheme.onPrimary,
   );
 
   static const _colorScheme = ColorScheme(

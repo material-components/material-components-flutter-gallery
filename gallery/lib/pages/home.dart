@@ -86,7 +86,7 @@ class HomePage extends StatelessWidget {
           CategoryListItem(
             title: GalleryLocalizations.of(context).homeCategoryReference,
             imageString: 'assets/icons/reference/reference.png',
-            demos: materialDemos,
+            demos: referenceDemos,
           ),
         ],
       ),
