@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'icons.dart';
+import '../demos/cupertino/cupertino_alert_demo.dart';
 import '../demos/cupertino/cupertino_button_demo.dart';
 import '../demos/material/button_demo.dart';
 import '../demos/material/dialog_demo.dart';
@@ -149,6 +150,71 @@ final cupertinoDemos = <GalleryDemo>[
         documentationUrl:
             'https://api.flutter.dev/flutter/cupertino/CupertinoButton-class.html',
         buildRoute: (context) => CupertinoButtonDemo(),
+      ),
+    ],
+  ),
+  GalleryDemo(
+    title: 'Alerts',
+    icon: GalleryIcons.dialogs,
+    subtitle: 'iOS-style alert dialog',
+    configurations: [
+      GalleryDemoConfiguration(
+        title: 'Alert',
+        description: 'An alert dialog informs the user about situations that'
+            ' require acknowledgement. An alert dialog has an optional title,'
+            ' optional content, and an optional list of actions. The title is'
+            ' displayed above the content and the actions are displayed below'
+            ' the content.',
+        documentationUrl:
+            'https://api.flutter.dev/flutter/cupertino/CupertinoAlertDialog-class.html',
+        buildRoute: (context) => CupertinoAlertDemo(type: AlertDemoType.alert),
+      ),
+      GalleryDemoConfiguration(
+        title: 'Alert With Title',
+        description: 'An alert dialog informs the user about situations that'
+            ' require acknowledgement. An alert dialog has an optional title,'
+            ' optional content, and an optional list of actions. The title is'
+            ' displayed above the content and the actions are displayed below'
+            ' the content.',
+        documentationUrl:
+            'https://api.flutter.dev/flutter/cupertino/CupertinoAlertDialog-class.html',
+        buildRoute: (context) =>
+            CupertinoAlertDemo(type: AlertDemoType.alertTitle),
+      ),
+      GalleryDemoConfiguration(
+        title: 'Alert With Buttons',
+        description: 'An alert dialog informs the user about situations that'
+            ' require acknowledgement. An alert dialog has an optional title,'
+            ' optional content, and an optional list of actions. The title is'
+            ' displayed above the content and the actions are displayed below'
+            ' the content.',
+        documentationUrl:
+            'https://api.flutter.dev/flutter/cupertino/CupertinoAlertDialog-class.html',
+        buildRoute: (context) =>
+            CupertinoAlertDemo(type: AlertDemoType.alertButtons),
+      ),
+      GalleryDemoConfiguration(
+        title: 'Alert Buttons Only',
+        description: 'An alert dialog informs the user about situations that'
+            ' require acknowledgement. An alert dialog has an optional title,'
+            ' optional content, and an optional list of actions. The title is'
+            ' displayed above the content and the actions are displayed below'
+            ' the content.',
+        documentationUrl:
+            'https://api.flutter.dev/flutter/cupertino/CupertinoAlertDialog-class.html',
+        buildRoute: (context) =>
+            CupertinoAlertDemo(type: AlertDemoType.alertButtonsOnly),
+      ),
+      GalleryDemoConfiguration(
+        title: 'Action Sheet',
+        description: 'An action sheet is a specific style of alert that'
+            ' presents the user with a set of two or more choices related to'
+            ' the current context. An action sheet can have a title, an'
+            ' additional message, and a list of actions.',
+        documentationUrl:
+            'https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html',
+        buildRoute: (context) =>
+            CupertinoAlertDemo(type: AlertDemoType.actionSheet),
       ),
     ],
   ),
