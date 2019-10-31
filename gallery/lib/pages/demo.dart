@@ -99,10 +99,19 @@ class _DemoPageState extends State<DemoPage>
       ],
     );
 
+    final mediaQuery = MediaQuery.of(context);
+    final bottomSafeArea = mediaQuery.padding.bottom;
+    final contentHeight = mediaQuery.size.height -
+        mediaQuery.padding.top -
+        mediaQuery.padding.bottom -
+        appBar.preferredSize.height;
+    final maxSectionHeight = contentHeight - 64;
+
     Widget section;
     switch (_state) {
       case _DemoState.options:
         section = _DemoSectionOptions(
+          maxHeight: maxSectionHeight,
           configurations: widget.demo.configurations,
           configIndex: _configIndex,
           onConfigChanged: (index) {
@@ -115,13 +124,14 @@ class _DemoPageState extends State<DemoPage>
         break;
       case _DemoState.info:
         section = _DemoSectionInfo(
+          maxHeight: maxSectionHeight,
           title: _currentConfig.title,
           description: _currentConfig.description,
         );
         break;
       case _DemoState.code:
         section = _DemoSectionCode(
-          height: 260,
+          maxHeight: maxSectionHeight,
           title: 'Code for ${_currentConfig.title}',
         );
         break;
@@ -137,13 +147,6 @@ class _DemoPageState extends State<DemoPage>
       curve: Curves.easeIn,
       child: section,
     );
-
-    final mediaQuery = MediaQuery.of(context);
-    final bottomSafeArea = mediaQuery.padding.bottom;
-    final contentHeight = mediaQuery.size.height -
-        mediaQuery.padding.top -
-        mediaQuery.padding.bottom -
-        appBar.preferredSize.height;
 
     return Scaffold(
       appBar: appBar,
@@ -171,11 +174,13 @@ class _DemoPageState extends State<DemoPage>
 class _DemoSectionOptions extends StatelessWidget {
   const _DemoSectionOptions({
     Key key,
+    this.maxHeight,
     this.configurations,
     this.configIndex,
     this.onConfigChanged,
   }) : super(key: key);
 
+  final double maxHeight;
   final List<GalleryDemoConfiguration> configurations;
   final int configIndex;
   final ValueChanged<int> onConfigChanged;
@@ -204,14 +209,22 @@ class _DemoSectionOptions extends StatelessWidget {
           height: 16,
           color: colorScheme.onSurface,
         ),
-        for (final configuration in configurations)
-          _DemoSectionOptionsItem(
-            title: configuration.title,
-            isSelected: configuration == configurations[configIndex],
-            onTap: () {
-              onConfigChanged(configurations.indexOf(configuration));
-            },
+        Container(
+          constraints: BoxConstraints(maxHeight: maxHeight),
+          child: ListView(
+            shrinkWrap: true,
+            children: [
+              for (final configuration in configurations)
+                _DemoSectionOptionsItem(
+                  title: configuration.title,
+                  isSelected: configuration == configurations[configIndex],
+                  onTap: () {
+                    onConfigChanged(configurations.indexOf(configuration));
+                  },
+                ),
+            ],
           ),
+        ),
         SizedBox(height: 12),
       ],
     );
@@ -257,10 +270,12 @@ class _DemoSectionOptionsItem extends StatelessWidget {
 class _DemoSectionInfo extends StatelessWidget {
   const _DemoSectionInfo({
     Key key,
+    this.maxHeight,
     this.title,
     this.description,
   }) : super(key: key);
 
+  final double maxHeight;
   final String title;
   final String description;
 
@@ -269,26 +284,30 @@ class _DemoSectionInfo extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
     final colorScheme = Theme.of(context).colorScheme;
 
-    return Padding(
+    return Container(
       padding: const EdgeInsetsDirectional.only(
         start: 24,
         top: 12,
         end: 24,
         bottom: 32,
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            title,
-            style: textTheme.display1.apply(color: colorScheme.onSurface),
-          ),
-          SizedBox(height: 12),
-          Text(
-            description,
-            style: textTheme.body1.apply(color: colorScheme.onSurface),
-          ),
-        ],
+      constraints: BoxConstraints(maxHeight: maxHeight),
+      child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              title,
+              style: textTheme.display1.apply(color: colorScheme.onSurface),
+            ),
+            SizedBox(height: 12),
+            Text(
+              description,
+              style: textTheme.body1.apply(color: colorScheme.onSurface),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -298,23 +317,27 @@ class _DemoSectionInfo extends StatelessWidget {
 class _DemoSectionCode extends StatelessWidget {
   const _DemoSectionCode({
     Key key,
-    this.height,
+    this.maxHeight,
     this.title,
   }) : super(key: key);
 
-  final double height;
+  final double maxHeight;
   final String title;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    return SizedBox(
-      height: height,
-      child: Center(
-        child: Text(
-          title,
-          style: theme.textTheme.body1.apply(
-            color: theme.colorScheme.onSurface,
+    return Container(
+      constraints: BoxConstraints(maxHeight: maxHeight),
+      child: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(32),
+          child: Text(
+            title,
+            style: theme.textTheme.body1.apply(
+              color: theme.colorScheme.onSurface,
+            ),
+            textAlign: TextAlign.center,
           ),
         ),
       ),
