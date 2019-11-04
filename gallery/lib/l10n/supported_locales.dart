@@ -87,6 +87,7 @@ final supportedLocales = [
   Locale('lt'),
   Locale('lv'),
   Locale('mk'),
+  Locale('ml'),
   Locale('mn'),
   Locale('mo'),
   Locale('mr'),
