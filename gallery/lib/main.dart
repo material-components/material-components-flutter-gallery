@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget {
       darkTheme: GalleryThemeData.darkThemeData,
       localizationsDelegates: [
         GalleryLocalizationsDelegate(),
+        GlobalCupertinoLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
       ],

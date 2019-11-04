@@ -14,35 +14,375 @@
     description="Header title on home screen for Categories section."
     >Categories</string>
   <string
-    name="SHRINE"
-    description="Study title for Shrine."
-    >SHRINE</string>
-  <string
     name="Basic shopping app"
     description="Study description for Shrine."
     >Basic shopping app</string>
-  <string
-    name="RALLY"
-    description="Study title for Rally."
-    >RALLY</string>
-  <string
-    name="CRANE"
-    description="Study title for Crane."
-    >CRANE</string>
   <string
     name="Travel app"
     description="Study description for Crane."
     >Travel app</string>
   <string
-    name="MATERIAL"
-    description="Category title on home screen for Material."
-    >MATERIAL</string>
-  <string
-    name="CUPERTINO"
-    description="Category title on home screen for Cupertino."
-    >CUPERTINO</string>
-  <string
     name="REFERENCE STYLES &amp; MEDIA"
     description="Category title on home screen for reference styles &amp; media."
     >REFERENCE STYLES &amp; MEDIA</string>
+  <string
+    name="Couldn&apos;t display URL:"
+    description="Error message when opening the URL for a demo."
+    >Couldn&apos;t display URL:</string>
+  <string
+    name="Options"
+    description="Tooltip for options button in a demo."
+    >Options</string>
+  <string
+    name="Info"
+    description="Tooltip for info button in a demo."
+    >Info</string>
+  <string
+    name="Code Sample"
+    description="Tooltip for code sample button in a demo."
+    >Code Sample</string>
+  <string
+    name="API Documentation"
+    description="Tooltip for API documentation button in a demo."
+    >API Documentation</string>
+  <string
+    name="Buttons"
+    description="Title for the material buttons component demo."
+    >Buttons</string>
+  <string
+    name="Flat, raised, outline, and more"
+    description="Subtitle for the material buttons component demo."
+    >Flat, raised, outline, and more</string>
+  <string
+    name="Flat Button"
+    description="Title for the flat button component demo."
+    >Flat Button</string>
+  <string
+    name="A flat button displays an ink splash on press but does not lift. Use flat buttons on toolbars, in dialogs and inline with padding"
+    description="Description for the flat button component demo."
+    >A flat button displays an ink splash on press but does not lift. Use flat buttons on toolbars, in dialogs and inline with padding</string>
+  <string
+    name="Raised Button"
+    description="Title for the raised button component demo."
+    >Raised Button</string>
+  <string
+    name="Raised buttons add dimension to mostly flat layouts. They emphasize functions on busy or wide spaces."
+    description="Description for the raised button component demo."
+    >Raised buttons add dimension to mostly flat layouts. They emphasize functions on busy or wide spaces.</string>
+  <string
+    name="Outline Button"
+    description="Title for the outline button component demo."
+    >Outline Button</string>
+  <string
+    name="Outline buttons become opaque and elevate when pressed. They are often paired with raised buttons to indicate an alternative, secondary action."
+    description="Description for the outline button component demo."
+    >Outline buttons become opaque and elevate when pressed. They are often paired with raised buttons to indicate an alternative, secondary action.</string>
+  <string
+    name="Toggle Buttons"
+    description="Title for the toggle buttons component demo."
+    >Toggle Buttons</string>
+  <string
+    name="Toggle buttons can be used to group related options. To emphasize groups of related toggle buttons, a group should share a common container"
+    description="Description for the toggle buttons component demo."
+    >Toggle buttons can be used to group related options. To emphasize groups of related toggle buttons, a group should share a common container</string>
+  <string
+    name="Floating Action Button"
+    description="Title for the floating action button component demo."
+    >Floating Action Button</string>
+  <string
+    name="A floating action button is a circular icon button that hovers over content to promote a primary action in the application."
+    description="Description for the floating action button component demo."
+    >A floating action button is a circular icon button that hovers over content to promote a primary action in the application.</string>
+  <string
+    name="Dialogs"
+    description="Title for the material buttons component demo."
+    >Dialogs</string>
+  <string
+    name="Simple, alert, and fullscreen"
+    description="Subtitle for the material dialog component demo."
+    >Simple, alert, and fullscreen</string>
+  <string
+    name="Alert"
+    description="Title for the alert dialog component demo."
+    >Alert</string>
+  <string
+    name="An alert dialog informs the user about situations that require acknowledgement. An alert dialog has an optional title and an optional list of actions."
+    description="Description for the alert dialog component demo."
+    >An alert dialog informs the user about situations that require acknowledgement. An alert dialog has an optional title and an optional list of actions.</string>
+  <string
+    name="Alert With Title"
+    description="Title for the alert dialog with title component demo."
+    >Alert With Title</string>
+  <string
+    name="Simple"
+    description="Title for the simple dialog component demo."
+    >Simple</string>
+  <string
+    name="A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices."
+    description="Description for the simple dialog component demo."
+    >A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices.</string>
+  <string
+    name="Fullscreen"
+    description="Title for the fullscreen dialog component demo."
+    >Fullscreen</string>
+  <string
+    name="The fullscreenDialog property specifies whether the incoming page is a fullscreen modal dialog"
+    description="Description for the fullscreen dialog component demo."
+    >The fullscreenDialog property specifies whether the incoming page is a fullscreen modal dialog</string>
+  <string
+    name="iOS-style buttons"
+    description="Subtitle for the cupertino buttons component demo."
+    >iOS-style buttons</string>
+  <string
+    name="An iOS-style button. It takes in text and/or an icon that fades out and in on touch. May optionally have a background."
+    description="Description for the cupertino buttons component demo."
+    >An iOS-style button. It takes in text and/or an icon that fades out and in on touch. May optionally have a background.</string>
+  <string
+    name="Alerts"
+    description="Title for the cupertino alerts component demo."
+    >Alerts</string>
+  <string
+    name="iOS-style alert dialogs"
+    description="Subtitle for the cupertino alerts component demo."
+    >iOS-style alert dialogs</string>
+  <string
+    name="An alert dialog informs the user about situations that require acknowledgement. An alert dialog has an optional title, optional content, and an optional list of actions. The title is displayed above the content and the actions are displayed below the content."
+    description="Description for the cupertino alert component demo."
+    >An alert dialog informs the user about situations that require acknowledgement. An alert dialog has an optional title, optional content, and an optional list of actions. The title is displayed above the content and the actions are displayed below the content.</string>
+  <string
+    name="Alert With Buttons"
+    description="Title for the cupertino alert with buttons component demo."
+    >Alert With Buttons</string>
+  <string
+    name="Alert Buttons Only"
+    description="Title for the cupertino alert buttons only component demo."
+    >Alert Buttons Only</string>
+  <string
+    name="Action Sheet"
+    description="Title for the cupertino action sheet component demo."
+    >Action Sheet</string>
+  <string
+    name="An action sheet is a specific style of alert that presents the user with a set of two or more choices related to the current context. An action sheet can have a title, an additional message, and a list of actions."
+    description="Description for the cupertino action sheet component demo."
+    >An action sheet is a specific style of alert that presents the user with a set of two or more choices related to the current context. An action sheet can have a title, an additional message, and a list of actions.</string>
+  <string
+    name="Colors"
+    description="Title for the colors demo."
+    >Colors</string>
+  <string
+    name="All of the predefined colors"
+    description="Subtitle for the colors demo."
+    >All of the predefined colors</string>
+  <string
+    name="Color and color swatch constants which represent Material design&apos;s color palette."
+    description="Description for the colors demo."
+    >Color and color swatch constants which represent Material design&apos;s color palette.</string>
+  <string
+    name="ENABLED"
+    description="Text for an enabled button."
+    >ENABLED</string>
+  <string
+    name="DISABLED"
+    description="Text for a disabled button."
+    >DISABLED</string>
+  <string
+    name="Create"
+    description="Tooltip text for a create button."
+    >Create</string>
+  <string
+    name="GalleryLocalizations_dialogSelectedOption"
+    description="Message displayed after an option is selected from a dialog"
+    >You selected: &quot;{value}&quot;</string>
+  <string
+    name="Discard draft?"
+    description="Alert dialog message to discard draft."
+    >Discard draft?</string>
+  <string
+    name="Use Google&apos;s location service?"
+    description="Alert dialog title to use location services."
+    >Use Google&apos;s location service?</string>
+  <string
+    name="Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running."
+    description="Alert dialog description to use location services."
+    >Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.</string>
+  <string
+    name="CANCEL"
+    description="Alert dialog cancel option."
+    >CANCEL</string>
+  <string
+    name="DISCARD"
+    description="Alert dialog discard option."
+    >DISCARD</string>
+  <string
+    name="DISAGREE"
+    description="Alert dialog disagree option."
+    >DISAGREE</string>
+  <string
+    name="AGREE"
+    description="Alert dialog agree option."
+    >AGREE</string>
+  <string
+    name="Set backup account"
+    description="Alert dialog title for setting a backup account."
+    >Set backup account</string>
+  <string
+    name="Add account"
+    description="Alert dialog option for adding an account."
+    >Add account</string>
+  <string
+    name="SHOW DIALOG"
+    description="Button text to display a dialog."
+    >SHOW DIALOG</string>
+  <string
+    name="Full Screen Dialog"
+    description="Title for full screen dialog demo."
+    >Full Screen Dialog</string>
+  <string
+    name="SAVE"
+    description="Save button for full screen dialog demo."
+    >SAVE</string>
+  <string
+    name="A full screen dialog demo"
+    description="Description for full screen dialog demo."
+    >A full screen dialog demo</string>
+  <string
+    name="Enabled"
+    description="Button text for an enabled iOS-style button."
+    >Enabled</string>
+  <string
+    name="Disabled"
+    description="Button text for a disabled iOS-style button."
+    >Disabled</string>
+  <string
+    name="With Background"
+    description="Button text for a iOS-style button with a filled background."
+    >With Background</string>
+  <string
+    name="Cancel"
+    description="iOS-style alert cancel option."
+    >Cancel</string>
+  <string
+    name="Discard"
+    description="iOS-style alert discard option."
+    >Discard</string>
+  <string
+    name="Allow &quot;Maps&quot; to access your location while you are using the app?"
+    description="iOS-style alert title for location permission."
+    >Allow &quot;Maps&quot; to access your location while you are using the app?</string>
+  <string
+    name="Your current location will be displayed on the map and used for directions, nearby search results, and estimated travel times."
+    description="iOS-style alert description for location permission."
+    >Your current location will be displayed on the map and used for directions, nearby search results, and estimated travel times.</string>
+  <string
+    name="Allow"
+    description="iOS-style alert allow option."
+    >Allow</string>
+  <string
+    name="Don&apos;t Allow"
+    description="iOS-style alert don&apos;t allow option."
+    >Don&apos;t Allow</string>
+  <string
+    name="Select Favorite Dessert"
+    description="iOS-style alert title for selecting favorite dessert."
+    >Select Favorite Dessert</string>
+  <string
+    name="Please select your favorite type of dessert from the list below. Your selection will be used to customize the suggested list of eateries in your area."
+    description="iOS-style alert description for selecting favorite dessert."
+    >Please select your favorite type of dessert from the list below. Your selection will be used to customize the suggested list of eateries in your area.</string>
+  <string
+    name="Cheesecake"
+    description="iOS-style alert cheesecake option."
+    >Cheesecake</string>
+  <string
+    name="Tiramisu"
+    description="iOS-style alert tiramisu option."
+    >Tiramisu</string>
+  <string
+    name="Apple Pie"
+    description="iOS-style alert apple pie option."
+    >Apple Pie</string>
+  <string
+    name="Chocolate Brownie"
+    description="iOS-style alert chocolate brownie option."
+    >Chocolate Brownie</string>
+  <string
+    name="Show Alert"
+    description="Button text to show iOS-style alert."
+    >Show Alert</string>
+  <string
+    name="RED"
+    description="Tab title for the color red."
+    >RED</string>
+  <string
+    name="PINK"
+    description="Tab title for the color pink."
+    >PINK</string>
+  <string
+    name="PURPLE"
+    description="Tab title for the color purple."
+    >PURPLE</string>
+  <string
+    name="DEEP PURPLE"
+    description="Tab title for the color deep purple."
+    >DEEP PURPLE</string>
+  <string
+    name="INDIGO"
+    description="Tab title for the color indigo."
+    >INDIGO</string>
+  <string
+    name="BLUE"
+    description="Tab title for the color blue."
+    >BLUE</string>
+  <string
+    name="LIGHT BLUE"
+    description="Tab title for the color light blue."
+    >LIGHT BLUE</string>
+  <string
+    name="CYAN"
+    description="Tab title for the color cyan."
+    >CYAN</string>
+  <string
+    name="TEAL"
+    description="Tab title for the color teal."
+    >TEAL</string>
+  <string
+    name="GREEN"
+    description="Tab title for the color green."
+    >GREEN</string>
+  <string
+    name="LIGHT GREEN"
+    description="Tab title for the color light green."
+    >LIGHT GREEN</string>
+  <string
+    name="LIME"
+    description="Tab title for the color lime."
+    >LIME</string>
+  <string
+    name="YELLOW"
+    description="Tab title for the color yellow."
+    >YELLOW</string>
+  <string
+    name="AMBER"
+    description="Tab title for the color amber."
+    >AMBER</string>
+  <string
+    name="ORANGE"
+    description="Tab title for the color orange."
+    >ORANGE</string>
+  <string
+    name="DEEP ORANGE"
+    description="Tab title for the color deep orange."
+    >DEEP ORANGE</string>
+  <string
+    name="BROWN"
+    description="Tab title for the color brown."
+    >BROWN</string>
+  <string
+    name="GREY"
+    description="Tab title for the color grey."
+    >GREY</string>
+  <string
+    name="BLUE GREY"
+    description="Tab title for the color blue grey."
+    >BLUE GREY</string>
 </resources>

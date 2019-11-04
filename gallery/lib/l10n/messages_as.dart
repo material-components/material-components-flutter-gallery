@@ -23,15 +23,10 @@ class MessageLookup extends MessageLookupByLibrary {
   static _notInlinedMessages(_) => <String, Function>{
         "Basic shopping app":
             MessageLookupByLibrary.simpleMessage("শ্বপিং কৰাৰ সাধাৰণ এপ্‌"),
-        "CRANE": MessageLookupByLibrary.simpleMessage("ক্ৰে’ন"),
-        "CUPERTINO": MessageLookupByLibrary.simpleMessage("কুপৰটিনো"),
         "Categories": MessageLookupByLibrary.simpleMessage("শিতানসমূহ"),
         "Gallery": MessageLookupByLibrary.simpleMessage("গেলাৰী"),
-        "MATERIAL": MessageLookupByLibrary.simpleMessage("সামগ্ৰী"),
-        "RALLY": MessageLookupByLibrary.simpleMessage("ৰেলী"),
         "REFERENCE STYLES & MEDIA":
             MessageLookupByLibrary.simpleMessage("প্ৰাসংগিক শৈলী আৰু মিডিয়া"),
-        "SHRINE": MessageLookupByLibrary.simpleMessage("মন্দিৰ"),
         "Travel app":
             MessageLookupByLibrary.simpleMessage("ভ্ৰমণ সম্পৰ্কীয় এপ্‌")
       };

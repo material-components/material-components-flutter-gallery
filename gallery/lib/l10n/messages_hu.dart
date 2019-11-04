@@ -23,15 +23,10 @@ class MessageLookup extends MessageLookupByLibrary {
   static _notInlinedMessages(_) => <String, Function>{
         "Basic shopping app":
             MessageLookupByLibrary.simpleMessage("Alap vásárlási alkalmazás"),
-        "CRANE": MessageLookupByLibrary.simpleMessage("CRANE"),
-        "CUPERTINO": MessageLookupByLibrary.simpleMessage("CUPERTINO"),
         "Categories": MessageLookupByLibrary.simpleMessage("Kategóriák"),
         "Gallery": MessageLookupByLibrary.simpleMessage("Galéria"),
-        "MATERIAL": MessageLookupByLibrary.simpleMessage("MATERIAL"),
-        "RALLY": MessageLookupByLibrary.simpleMessage("RALLY"),
         "REFERENCE STYLES & MEDIA":
             MessageLookupByLibrary.simpleMessage("REFERENCIASTÍLUSOK ÉS MÉDIA"),
-        "SHRINE": MessageLookupByLibrary.simpleMessage("SHRINE"),
         "Travel app": MessageLookupByLibrary.simpleMessage("Utazási alkalmazás")
       };
 }

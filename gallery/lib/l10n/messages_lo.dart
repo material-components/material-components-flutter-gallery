@@ -23,15 +23,10 @@ class MessageLookup extends MessageLookupByLibrary {
   static _notInlinedMessages(_) => <String, Function>{
         "Basic shopping app":
             MessageLookupByLibrary.simpleMessage("ແອັບຊື້ເຄື່ອງພື້ນຖານ"),
-        "CRANE": MessageLookupByLibrary.simpleMessage("ເຄຣນ"),
-        "CUPERTINO": MessageLookupByLibrary.simpleMessage("ຄູເປີຕິໂນ"),
         "Categories": MessageLookupByLibrary.simpleMessage("ໝວດໝູ່"),
         "Gallery": MessageLookupByLibrary.simpleMessage("ຄັງຮູບພາບ"),
-        "MATERIAL": MessageLookupByLibrary.simpleMessage("ວັດຖຸ"),
-        "RALLY": MessageLookupByLibrary.simpleMessage("ການແຂ່ງລົດ"),
         "REFERENCE STYLES & MEDIA":
             MessageLookupByLibrary.simpleMessage("ຮູບແບບການອ້າງອີງ ແລະ ສື່"),
-        "SHRINE": MessageLookupByLibrary.simpleMessage("ເທວະສະຖານ"),
         "Travel app": MessageLookupByLibrary.simpleMessage("ແອັບທ່ອງທ່ຽວ")
       };
 }

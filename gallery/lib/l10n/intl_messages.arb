@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2019-10-24T14:54:23.089640",
+  "@@last_modified": "2019-10-31T17:07:52.560352",
   "Gallery": "Gallery",
   "@Gallery": {
     "description": "Header title on home screen for Gallery section.",
@@ -12,27 +12,9 @@
     "type": "text",
     "placeholders": {}
   },
-  "SHRINE": "SHRINE",
-  "@SHRINE": {
-    "description": "Study title for Shrine.",
-    "type": "text",
-    "placeholders": {}
-  },
   "Basic shopping app": "Basic shopping app",
   "@Basic shopping app": {
     "description": "Study description for Shrine.",
-    "type": "text",
-    "placeholders": {}
-  },
-  "RALLY": "RALLY",
-  "@RALLY": {
-    "description": "Study title for Rally.",
-    "type": "text",
-    "placeholders": {}
-  },
-  "CRANE": "CRANE",
-  "@CRANE": {
-    "description": "Study title for Crane.",
     "type": "text",
     "placeholders": {}
   },
@@ -42,21 +24,553 @@
     "type": "text",
     "placeholders": {}
   },
-  "MATERIAL": "MATERIAL",
-  "@MATERIAL": {
-    "description": "Category title on home screen for Material.",
-    "type": "text",
-    "placeholders": {}
-  },
-  "CUPERTINO": "CUPERTINO",
-  "@CUPERTINO": {
-    "description": "Category title on home screen for Cupertino.",
-    "type": "text",
-    "placeholders": {}
-  },
   "REFERENCE STYLES & MEDIA": "REFERENCE STYLES & MEDIA",
   "@REFERENCE STYLES & MEDIA": {
     "description": "Category title on home screen for reference styles & media.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Couldn't display URL:": "Couldn't display URL:",
+  "@Couldn't display URL:": {
+    "description": "Error message when opening the URL for a demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Options": "Options",
+  "@Options": {
+    "description": "Tooltip for options button in a demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Info": "Info",
+  "@Info": {
+    "description": "Tooltip for info button in a demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Code Sample": "Code Sample",
+  "@Code Sample": {
+    "description": "Tooltip for code sample button in a demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "API Documentation": "API Documentation",
+  "@API Documentation": {
+    "description": "Tooltip for API documentation button in a demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Buttons": "Buttons",
+  "@Buttons": {
+    "description": "Title for the material buttons component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Flat, raised, outline, and more": "Flat, raised, outline, and more",
+  "@Flat, raised, outline, and more": {
+    "description": "Subtitle for the material buttons component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Flat Button": "Flat Button",
+  "@Flat Button": {
+    "description": "Title for the flat button component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "A flat button displays an ink splash on press but does not lift. Use flat buttons on toolbars, in dialogs and inline with padding": "A flat button displays an ink splash on press but does not lift. Use flat buttons on toolbars, in dialogs and inline with padding",
+  "@A flat button displays an ink splash on press but does not lift. Use flat buttons on toolbars, in dialogs and inline with padding": {
+    "description": "Description for the flat button component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Raised Button": "Raised Button",
+  "@Raised Button": {
+    "description": "Title for the raised button component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Raised buttons add dimension to mostly flat layouts. They emphasize functions on busy or wide spaces.": "Raised buttons add dimension to mostly flat layouts. They emphasize functions on busy or wide spaces.",
+  "@Raised buttons add dimension to mostly flat layouts. They emphasize functions on busy or wide spaces.": {
+    "description": "Description for the raised button component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Outline Button": "Outline Button",
+  "@Outline Button": {
+    "description": "Title for the outline button component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Outline buttons become opaque and elevate when pressed. They are often paired with raised buttons to indicate an alternative, secondary action.": "Outline buttons become opaque and elevate when pressed. They are often paired with raised buttons to indicate an alternative, secondary action.",
+  "@Outline buttons become opaque and elevate when pressed. They are often paired with raised buttons to indicate an alternative, secondary action.": {
+    "description": "Description for the outline button component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Toggle Buttons": "Toggle Buttons",
+  "@Toggle Buttons": {
+    "description": "Title for the toggle buttons component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Toggle buttons can be used to group related options. To emphasize groups of related toggle buttons, a group should share a common container": "Toggle buttons can be used to group related options. To emphasize groups of related toggle buttons, a group should share a common container",
+  "@Toggle buttons can be used to group related options. To emphasize groups of related toggle buttons, a group should share a common container": {
+    "description": "Description for the toggle buttons component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Floating Action Button": "Floating Action Button",
+  "@Floating Action Button": {
+    "description": "Title for the floating action button component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "A floating action button is a circular icon button that hovers over content to promote a primary action in the application.": "A floating action button is a circular icon button that hovers over content to promote a primary action in the application.",
+  "@A floating action button is a circular icon button that hovers over content to promote a primary action in the application.": {
+    "description": "Description for the floating action button component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Dialogs": "Dialogs",
+  "@Dialogs": {
+    "description": "Title for the material buttons component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Simple, alert, and fullscreen": "Simple, alert, and fullscreen",
+  "@Simple, alert, and fullscreen": {
+    "description": "Subtitle for the material dialog component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Alert": "Alert",
+  "@Alert": {
+    "description": "Title for the alert dialog component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "An alert dialog informs the user about situations that require acknowledgement. An alert dialog has an optional title and an optional list of actions.": "An alert dialog informs the user about situations that require acknowledgement. An alert dialog has an optional title and an optional list of actions.",
+  "@An alert dialog informs the user about situations that require acknowledgement. An alert dialog has an optional title and an optional list of actions.": {
+    "description": "Description for the alert dialog component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Alert With Title": "Alert With Title",
+  "@Alert With Title": {
+    "description": "Title for the alert dialog with title component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Simple": "Simple",
+  "@Simple": {
+    "description": "Title for the simple dialog component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices.": "A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices.",
+  "@A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices.": {
+    "description": "Description for the simple dialog component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Fullscreen": "Fullscreen",
+  "@Fullscreen": {
+    "description": "Title for the fullscreen dialog component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "The fullscreenDialog property specifies whether the incoming page is a fullscreen modal dialog": "The fullscreenDialog property specifies whether the incoming page is a fullscreen modal dialog",
+  "@The fullscreenDialog property specifies whether the incoming page is a fullscreen modal dialog": {
+    "description": "Description for the fullscreen dialog component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "iOS-style buttons": "iOS-style buttons",
+  "@iOS-style buttons": {
+    "description": "Subtitle for the cupertino buttons component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "An iOS-style button. It takes in text and/or an icon that fades out and in on touch. May optionally have a background.": "An iOS-style button. It takes in text and/or an icon that fades out and in on touch. May optionally have a background.",
+  "@An iOS-style button. It takes in text and/or an icon that fades out and in on touch. May optionally have a background.": {
+    "description": "Description for the cupertino buttons component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Alerts": "Alerts",
+  "@Alerts": {
+    "description": "Title for the cupertino alerts component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "iOS-style alert dialogs": "iOS-style alert dialogs",
+  "@iOS-style alert dialogs": {
+    "description": "Subtitle for the cupertino alerts component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "An alert dialog informs the user about situations that require acknowledgement. An alert dialog has an optional title, optional content, and an optional list of actions. The title is displayed above the content and the actions are displayed below the content.": "An alert dialog informs the user about situations that require acknowledgement. An alert dialog has an optional title, optional content, and an optional list of actions. The title is displayed above the content and the actions are displayed below the content.",
+  "@An alert dialog informs the user about situations that require acknowledgement. An alert dialog has an optional title, optional content, and an optional list of actions. The title is displayed above the content and the actions are displayed below the content.": {
+    "description": "Description for the cupertino alert component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Alert With Buttons": "Alert With Buttons",
+  "@Alert With Buttons": {
+    "description": "Title for the cupertino alert with buttons component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Alert Buttons Only": "Alert Buttons Only",
+  "@Alert Buttons Only": {
+    "description": "Title for the cupertino alert buttons only component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Action Sheet": "Action Sheet",
+  "@Action Sheet": {
+    "description": "Title for the cupertino action sheet component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "An action sheet is a specific style of alert that presents the user with a set of two or more choices related to the current context. An action sheet can have a title, an additional message, and a list of actions.": "An action sheet is a specific style of alert that presents the user with a set of two or more choices related to the current context. An action sheet can have a title, an additional message, and a list of actions.",
+  "@An action sheet is a specific style of alert that presents the user with a set of two or more choices related to the current context. An action sheet can have a title, an additional message, and a list of actions.": {
+    "description": "Description for the cupertino action sheet component demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Colors": "Colors",
+  "@Colors": {
+    "description": "Title for the colors demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "All of the predefined colors": "All of the predefined colors",
+  "@All of the predefined colors": {
+    "description": "Subtitle for the colors demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Color and color swatch constants which represent Material design's color palette.": "Color and color swatch constants which represent Material design's color palette.",
+  "@Color and color swatch constants which represent Material design's color palette.": {
+    "description": "Description for the colors demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ENABLED": "ENABLED",
+  "@ENABLED": {
+    "description": "Text for an enabled button.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "DISABLED": "DISABLED",
+  "@DISABLED": {
+    "description": "Text for a disabled button.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Create": "Create",
+  "@Create": {
+    "description": "Tooltip text for a create button.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "GalleryLocalizations_dialogSelectedOption": "You selected: \"{value}\"",
+  "@GalleryLocalizations_dialogSelectedOption": {
+    "description": "Message displayed after an option is selected from a dialog",
+    "type": "text",
+    "placeholders": {
+      "value": {
+        "example": "AGREE"
+      }
+    }
+  },
+  "Discard draft?": "Discard draft?",
+  "@Discard draft?": {
+    "description": "Alert dialog message to discard draft.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Use Google's location service?": "Use Google's location service?",
+  "@Use Google's location service?": {
+    "description": "Alert dialog title to use location services.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.": "Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.",
+  "@Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running.": {
+    "description": "Alert dialog description to use location services.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "CANCEL": "CANCEL",
+  "@CANCEL": {
+    "description": "Alert dialog cancel option.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "DISCARD": "DISCARD",
+  "@DISCARD": {
+    "description": "Alert dialog discard option.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "DISAGREE": "DISAGREE",
+  "@DISAGREE": {
+    "description": "Alert dialog disagree option.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "AGREE": "AGREE",
+  "@AGREE": {
+    "description": "Alert dialog agree option.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Set backup account": "Set backup account",
+  "@Set backup account": {
+    "description": "Alert dialog title for setting a backup account.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Add account": "Add account",
+  "@Add account": {
+    "description": "Alert dialog option for adding an account.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "SHOW DIALOG": "SHOW DIALOG",
+  "@SHOW DIALOG": {
+    "description": "Button text to display a dialog.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Full Screen Dialog": "Full Screen Dialog",
+  "@Full Screen Dialog": {
+    "description": "Title for full screen dialog demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "SAVE": "SAVE",
+  "@SAVE": {
+    "description": "Save button for full screen dialog demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "A full screen dialog demo": "A full screen dialog demo",
+  "@A full screen dialog demo": {
+    "description": "Description for full screen dialog demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Enabled": "Enabled",
+  "@Enabled": {
+    "description": "Button text for an enabled iOS-style button.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Disabled": "Disabled",
+  "@Disabled": {
+    "description": "Button text for a disabled iOS-style button.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "With Background": "With Background",
+  "@With Background": {
+    "description": "Button text for a iOS-style button with a filled background.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Cancel": "Cancel",
+  "@Cancel": {
+    "description": "iOS-style alert cancel option.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Discard": "Discard",
+  "@Discard": {
+    "description": "iOS-style alert discard option.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Allow \"Maps\" to access your location while you are using the app?": "Allow \"Maps\" to access your location while you are using the app?",
+  "@Allow \"Maps\" to access your location while you are using the app?": {
+    "description": "iOS-style alert title for location permission.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Your current location will be displayed on the map and used for directions, nearby search results, and estimated travel times.": "Your current location will be displayed on the map and used for directions, nearby search results, and estimated travel times.",
+  "@Your current location will be displayed on the map and used for directions, nearby search results, and estimated travel times.": {
+    "description": "iOS-style alert description for location permission.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Allow": "Allow",
+  "@Allow": {
+    "description": "iOS-style alert allow option.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Don't Allow": "Don't Allow",
+  "@Don't Allow": {
+    "description": "iOS-style alert don't allow option.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Select Favorite Dessert": "Select Favorite Dessert",
+  "@Select Favorite Dessert": {
+    "description": "iOS-style alert title for selecting favorite dessert.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Please select your favorite type of dessert from the list below. Your selection will be used to customize the suggested list of eateries in your area.": "Please select your favorite type of dessert from the list below. Your selection will be used to customize the suggested list of eateries in your area.",
+  "@Please select your favorite type of dessert from the list below. Your selection will be used to customize the suggested list of eateries in your area.": {
+    "description": "iOS-style alert description for selecting favorite dessert.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Cheesecake": "Cheesecake",
+  "@Cheesecake": {
+    "description": "iOS-style alert cheesecake option.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Tiramisu": "Tiramisu",
+  "@Tiramisu": {
+    "description": "iOS-style alert tiramisu option.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Apple Pie": "Apple Pie",
+  "@Apple Pie": {
+    "description": "iOS-style alert apple pie option.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Chocolate Brownie": "Chocolate Brownie",
+  "@Chocolate Brownie": {
+    "description": "iOS-style alert chocolate brownie option.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Show Alert": "Show Alert",
+  "@Show Alert": {
+    "description": "Button text to show iOS-style alert.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "RED": "RED",
+  "@RED": {
+    "description": "Tab title for the color red.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "PINK": "PINK",
+  "@PINK": {
+    "description": "Tab title for the color pink.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "PURPLE": "PURPLE",
+  "@PURPLE": {
+    "description": "Tab title for the color purple.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "DEEP PURPLE": "DEEP PURPLE",
+  "@DEEP PURPLE": {
+    "description": "Tab title for the color deep purple.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "INDIGO": "INDIGO",
+  "@INDIGO": {
+    "description": "Tab title for the color indigo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "BLUE": "BLUE",
+  "@BLUE": {
+    "description": "Tab title for the color blue.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "LIGHT BLUE": "LIGHT BLUE",
+  "@LIGHT BLUE": {
+    "description": "Tab title for the color light blue.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "CYAN": "CYAN",
+  "@CYAN": {
+    "description": "Tab title for the color cyan.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "TEAL": "TEAL",
+  "@TEAL": {
+    "description": "Tab title for the color teal.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "GREEN": "GREEN",
+  "@GREEN": {
+    "description": "Tab title for the color green.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "LIGHT GREEN": "LIGHT GREEN",
+  "@LIGHT GREEN": {
+    "description": "Tab title for the color light green.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "LIME": "LIME",
+  "@LIME": {
+    "description": "Tab title for the color lime.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "YELLOW": "YELLOW",
+  "@YELLOW": {
+    "description": "Tab title for the color yellow.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "AMBER": "AMBER",
+  "@AMBER": {
+    "description": "Tab title for the color amber.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "ORANGE": "ORANGE",
+  "@ORANGE": {
+    "description": "Tab title for the color orange.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "DEEP ORANGE": "DEEP ORANGE",
+  "@DEEP ORANGE": {
+    "description": "Tab title for the color deep orange.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "BROWN": "BROWN",
+  "@BROWN": {
+    "description": "Tab title for the color brown.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "GREY": "GREY",
+  "@GREY": {
+    "description": "Tab title for the color grey.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "BLUE GREY": "BLUE GREY",
+  "@BLUE GREY": {
+    "description": "Tab title for the color blue grey.",
     "type": "text",
     "placeholders": {}
   }

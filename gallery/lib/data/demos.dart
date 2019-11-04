@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'icons.dart';
 import '../demos/cupertino/cupertino_alert_demo.dart';
@@ -7,6 +8,8 @@ import '../demos/cupertino/cupertino_button_demo.dart';
 import '../demos/material/button_demo.dart';
 import '../demos/material/dialog_demo.dart';
 import '../demos/reference/colors_demo.dart';
+import '../l10n/localizations_delegate.dart';
+import '../l10n/supported_locales.dart';
 import '../themes/material_demo_theme_data.dart';
 
 // TODO: Localize all strings.
@@ -41,202 +44,190 @@ class GalleryDemoConfiguration {
   final WidgetBuilder buildRoute;
 }
 
-final materialDemos = <GalleryDemo>[
-  GalleryDemo(
-    title: 'Buttons',
-    icon: GalleryIcons.genericButtons,
-    subtitle: 'Flat, raised, outline, and more',
-    configurations: [
-      GalleryDemoConfiguration(
-        title: 'Flat Button',
-        description: 'A flat button displays an ink splash on press '
-            'but does not lift. Use flat buttons on toolbars, in dialogs and '
-            'inline with padding',
-        documentationUrl:
-            'https://docs.flutter.io/flutter/material/FlatButton-class.html',
-        buildRoute: (context) => ButtonDemo(type: ButtonDemoType.flat),
-      ),
-      GalleryDemoConfiguration(
-        title: 'Raised Button',
-        description: 'Raised buttons add dimension to mostly flat layouts. They'
-            ' emphasize functions on busy or wide spaces.',
-        documentationUrl:
-            'https://docs.flutter.io/flutter/material/RaisedButton-class.html',
-        buildRoute: (context) => ButtonDemo(type: ButtonDemoType.raised),
-      ),
-      GalleryDemoConfiguration(
-        title: 'Outline Button',
-        description: 'Outline buttons become opaque and elevate when pressed.'
-            ' They are often paired with raised buttons to indicate an'
-            'alternative, secondary action.',
-        documentationUrl:
-            'https://docs.flutter.io/flutter/material/OutlineButton-class.html',
-        buildRoute: (context) => ButtonDemo(type: ButtonDemoType.outline),
-      ),
-      GalleryDemoConfiguration(
-        title: 'Toggle Buttons',
-        description: 'Toggle buttons can be used to group related options. To'
-            'emphasize groups of related toggle buttons, a group should share a'
-            'common container',
-        documentationUrl:
-            'https://docs.flutter.io/flutter/material/ToggleButtons-class.html',
-        buildRoute: (context) => ButtonDemo(type: ButtonDemoType.toggle),
-      ),
-      GalleryDemoConfiguration(
-        title: 'Floating Action Button',
-        description: 'A floating action button is a circular icon button that'
-            'hovers over content to promote a primary action in the'
-            'application. ',
-        documentationUrl:
-            'https://docs.flutter.io/flutter/material/FloatingActionButton-class.html',
-        buildRoute: (context) => ButtonDemo(type: ButtonDemoType.floating),
-      ),
-    ],
-  ),
-  GalleryDemo(
-    title: 'Dialogs',
-    icon: GalleryIcons.dialogs,
-    subtitle: 'Simple, alert, and fullscreen',
-    configurations: [
-      GalleryDemoConfiguration(
-        title: 'Alert',
-        description: 'An alert dialog informs the user about situations that'
-            ' require acknowledgement. An alert dialog has an optional title'
-            ' and an optional list of actions.',
-        documentationUrl:
-            'https://api.flutter.dev/flutter/material/AlertDialog-class.html',
-        buildRoute: (context) => DialogDemo(type: DialogDemoType.alert),
-      ),
-      GalleryDemoConfiguration(
-        title: 'Alert with title',
-        description: 'An alert dialog informs the user about situations that'
-            ' require acknowledgement. An alert dialog has an optional title'
-            ' and an optional list of actions.',
-        documentationUrl:
-            'https://api.flutter.dev/flutter/material/AlertDialog-class.html',
-        buildRoute: (context) => DialogDemo(type: DialogDemoType.alertTitle),
-      ),
-      GalleryDemoConfiguration(
-        title: 'Simple',
-        description: 'A simple dialog offers the user a choice between several'
-            ' options. A simple dialog has an optional title that is displayed'
-            ' above the choices.',
-        documentationUrl:
-            'https://api.flutter.dev/flutter/material/SimpleDialog-class.html',
-        buildRoute: (context) => DialogDemo(type: DialogDemoType.simple),
-      ),
-      GalleryDemoConfiguration(
-        title: 'Fullscreen',
-        description: 'The fullscreenDialog property specifies whether the'
-            ' incoming page is a fullscreen modal dialog',
-        documentationUrl:
-            'https://api.flutter.dev/flutter/widgets/PageRoute/fullscreenDialog.html',
-        buildRoute: (context) => DialogDemo(type: DialogDemoType.fullscreen),
-      ),
-    ],
-  )
-];
+List<GalleryDemo> materialDemos(BuildContext context) {
+  return [
+    GalleryDemo(
+      title: GalleryLocalizations.of(context).demoButtonTitle,
+      icon: GalleryIcons.genericButtons,
+      subtitle: GalleryLocalizations.of(context).demoButtonSubtitle,
+      configurations: [
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoFlatButtonTitle,
+          description:
+              GalleryLocalizations.of(context).demoFlatButtonDescription,
+          documentationUrl:
+              'https://docs.flutter.io/flutter/material/FlatButton-class.html',
+          buildRoute: (context) => ButtonDemo(type: ButtonDemoType.flat),
+        ),
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoRaisedButtonTitle,
+          description:
+              GalleryLocalizations.of(context).demoRaisedButtonDescription,
+          documentationUrl:
+              'https://docs.flutter.io/flutter/material/RaisedButton-class.html',
+          buildRoute: (context) => ButtonDemo(type: ButtonDemoType.raised),
+        ),
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoOutlineButtonTitle,
+          description:
+              GalleryLocalizations.of(context).demoOutlineButtonDescription,
+          documentationUrl:
+              'https://docs.flutter.io/flutter/material/OutlineButton-class.html',
+          buildRoute: (context) => ButtonDemo(type: ButtonDemoType.outline),
+        ),
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoToggleButtonTitle,
+          description:
+              GalleryLocalizations.of(context).demoToggleButtonDescription,
+          documentationUrl:
+              'https://docs.flutter.io/flutter/material/ToggleButtons-class.html',
+          buildRoute: (context) => ButtonDemo(type: ButtonDemoType.toggle),
+        ),
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoFloatingButtonTitle,
+          description:
+              GalleryLocalizations.of(context).demoFloatingButtonDescription,
+          documentationUrl:
+              'https://docs.flutter.io/flutter/material/FloatingActionButton-class.html',
+          buildRoute: (context) => ButtonDemo(type: ButtonDemoType.floating),
+        ),
+      ],
+    ),
+    GalleryDemo(
+      title: GalleryLocalizations.of(context).demoDialogTitle,
+      icon: GalleryIcons.dialogs,
+      subtitle: GalleryLocalizations.of(context).demoDialogSubtitle,
+      configurations: [
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoAlertDialogTitle,
+          description:
+              GalleryLocalizations.of(context).demoAlertDialogDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/AlertDialog-class.html',
+          buildRoute: (context) => DialogDemo(type: DialogDemoType.alert),
+        ),
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoAlertTitleDialogTitle,
+          description:
+              GalleryLocalizations.of(context).demoAlertDialogDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/AlertDialog-class.html',
+          buildRoute: (context) => DialogDemo(type: DialogDemoType.alertTitle),
+        ),
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoSimpleDialogTitle,
+          description:
+              GalleryLocalizations.of(context).demoSimpleDialogDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/SimpleDialog-class.html',
+          buildRoute: (context) => DialogDemo(type: DialogDemoType.simple),
+        ),
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoFullscreenDialogTitle,
+          description:
+              GalleryLocalizations.of(context).demoFullscreenDialogDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/widgets/PageRoute/fullscreenDialog.html',
+          buildRoute: (context) => DialogDemo(type: DialogDemoType.fullscreen),
+        ),
+      ],
+    )
+  ];
+}
 
-final cupertinoDemos = <GalleryDemo>[
-  GalleryDemo(
-    title: 'Buttons',
-    icon: GalleryIcons.genericButtons,
-    subtitle: 'iOS-style buttons',
-    configurations: [
-      GalleryDemoConfiguration(
-        title: 'Buttons',
-        description: 'An iOS-style button. It takes in text and/or an icon that'
-            ' fades out and in on touch. May optionally have a background.',
-        documentationUrl:
-            'https://api.flutter.dev/flutter/cupertino/CupertinoButton-class.html',
-        buildRoute: (context) => CupertinoButtonDemo(),
-      ),
-    ],
-  ),
-  GalleryDemo(
-    title: 'Alerts',
-    icon: GalleryIcons.dialogs,
-    subtitle: 'iOS-style alert dialog',
-    configurations: [
-      GalleryDemoConfiguration(
-        title: 'Alert',
-        description: 'An alert dialog informs the user about situations that'
-            ' require acknowledgement. An alert dialog has an optional title,'
-            ' optional content, and an optional list of actions. The title is'
-            ' displayed above the content and the actions are displayed below'
-            ' the content.',
-        documentationUrl:
-            'https://api.flutter.dev/flutter/cupertino/CupertinoAlertDialog-class.html',
-        buildRoute: (context) => CupertinoAlertDemo(type: AlertDemoType.alert),
-      ),
-      GalleryDemoConfiguration(
-        title: 'Alert With Title',
-        description: 'An alert dialog informs the user about situations that'
-            ' require acknowledgement. An alert dialog has an optional title,'
-            ' optional content, and an optional list of actions. The title is'
-            ' displayed above the content and the actions are displayed below'
-            ' the content.',
-        documentationUrl:
-            'https://api.flutter.dev/flutter/cupertino/CupertinoAlertDialog-class.html',
-        buildRoute: (context) =>
-            CupertinoAlertDemo(type: AlertDemoType.alertTitle),
-      ),
-      GalleryDemoConfiguration(
-        title: 'Alert With Buttons',
-        description: 'An alert dialog informs the user about situations that'
-            ' require acknowledgement. An alert dialog has an optional title,'
-            ' optional content, and an optional list of actions. The title is'
-            ' displayed above the content and the actions are displayed below'
-            ' the content.',
-        documentationUrl:
-            'https://api.flutter.dev/flutter/cupertino/CupertinoAlertDialog-class.html',
-        buildRoute: (context) =>
-            CupertinoAlertDemo(type: AlertDemoType.alertButtons),
-      ),
-      GalleryDemoConfiguration(
-        title: 'Alert Buttons Only',
-        description: 'An alert dialog informs the user about situations that'
-            ' require acknowledgement. An alert dialog has an optional title,'
-            ' optional content, and an optional list of actions. The title is'
-            ' displayed above the content and the actions are displayed below'
-            ' the content.',
-        documentationUrl:
-            'https://api.flutter.dev/flutter/cupertino/CupertinoAlertDialog-class.html',
-        buildRoute: (context) =>
-            CupertinoAlertDemo(type: AlertDemoType.alertButtonsOnly),
-      ),
-      GalleryDemoConfiguration(
-        title: 'Action Sheet',
-        description: 'An action sheet is a specific style of alert that'
-            ' presents the user with a set of two or more choices related to'
-            ' the current context. An action sheet can have a title, an'
-            ' additional message, and a list of actions.',
-        documentationUrl:
-            'https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html',
-        buildRoute: (context) =>
-            CupertinoAlertDemo(type: AlertDemoType.actionSheet),
-      ),
-    ],
-  ),
-];
+List<GalleryDemo> cupertinoDemos(BuildContext context) {
+  return [
+    GalleryDemo(
+      title: GalleryLocalizations.of(context).demoCupertinoButtonsTitle,
+      icon: GalleryIcons.genericButtons,
+      subtitle: GalleryLocalizations.of(context).demoCupertinoButtonsSubtitle,
+      configurations: [
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoCupertinoButtonsTitle,
+          description:
+              GalleryLocalizations.of(context).demoCupertinoButtonsDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/cupertino/CupertinoButton-class.html',
+          buildRoute: (context) => CupertinoButtonDemo(),
+        ),
+      ],
+    ),
+    GalleryDemo(
+      title: GalleryLocalizations.of(context).demoCupertinoAlertsTitle,
+      icon: GalleryIcons.dialogs,
+      subtitle: GalleryLocalizations.of(context).demoCupertinoAlertsSubtitle,
+      configurations: [
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoCupertinoAlertTitle,
+          description:
+              GalleryLocalizations.of(context).demoCupertinoAlertDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/cupertino/CupertinoAlertDialog-class.html',
+          buildRoute: (context) =>
+              CupertinoAlertDemo(type: AlertDemoType.alert),
+        ),
+        GalleryDemoConfiguration(
+          title:
+              GalleryLocalizations.of(context).demoCupertinoAlertWithTitleTitle,
+          description:
+              GalleryLocalizations.of(context).demoCupertinoAlertDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/cupertino/CupertinoAlertDialog-class.html',
+          buildRoute: (context) =>
+              CupertinoAlertDemo(type: AlertDemoType.alertTitle),
+        ),
+        GalleryDemoConfiguration(
+          title:
+              GalleryLocalizations.of(context).demoCupertinoAlertButtonsTitle,
+          description:
+              GalleryLocalizations.of(context).demoCupertinoAlertDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/cupertino/CupertinoAlertDialog-class.html',
+          buildRoute: (context) =>
+              CupertinoAlertDemo(type: AlertDemoType.alertButtons),
+        ),
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context)
+              .demoCupertinoAlertButtonsOnlyTitle,
+          description:
+              GalleryLocalizations.of(context).demoCupertinoAlertDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/cupertino/CupertinoAlertDialog-class.html',
+          buildRoute: (context) =>
+              CupertinoAlertDemo(type: AlertDemoType.alertButtonsOnly),
+        ),
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoCupertinoActionSheetTitle,
+          description: GalleryLocalizations.of(context)
+              .demoCupertinoActionSheetDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html',
+          buildRoute: (context) =>
+              CupertinoAlertDemo(type: AlertDemoType.actionSheet),
+        ),
+      ],
+    ),
+  ];
+}
 
-final referenceDemos = <GalleryDemo>[
-  GalleryDemo(
-    title: 'Colors',
-    icon: GalleryIcons.colors,
-    subtitle: 'All of the predefined colors',
-    configurations: [
-      GalleryDemoConfiguration(
-        title: 'Colors',
-        description: 'Color and color swatch constants which represent Material'
-            ' design\'s color palette.',
-        documentationUrl:
-            'https://api.flutter.dev/flutter/material/MaterialColor-class.html',
-        buildRoute: (context) => ColorsDemo(),
-      ),
-    ],
-  ),
-];
+List<GalleryDemo> referenceDemos(BuildContext context) {
+  return [
+    GalleryDemo(
+      title: GalleryLocalizations.of(context).demoColorsTitle,
+      icon: GalleryIcons.colors,
+      subtitle: GalleryLocalizations.of(context).demoColorsSubtitle,
+      configurations: [
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoColorsTitle,
+          description: GalleryLocalizations.of(context).demoColorsDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/MaterialColor-class.html',
+          buildRoute: (context) => ColorsDemo(),
+        ),
+      ],
+    ),
+  ];
+}
 
 class DemoWrapper extends StatelessWidget {
   const DemoWrapper({Key key, this.child}) : super(key: key);
@@ -248,6 +239,13 @@ class DemoWrapper extends StatelessWidget {
     return MaterialApp(
       theme: MaterialDemoThemeData.themeData,
       debugShowCheckedModeBanner: false,
+      localizationsDelegates: [
+        GalleryLocalizationsDelegate(),
+        GlobalCupertinoLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ],
+      supportedLocales: supportedLocales,
       home: MediaQuery(
         data: MediaQueryData(),
         child: CupertinoTheme(

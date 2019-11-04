@@ -76,17 +76,17 @@ class HomePage extends StatelessWidget {
           CategoryListItem(
             title: GalleryLocalizations.of(context).homeCategoryMaterial,
             imageString: 'assets/icons/material/material.png',
-            demos: materialDemos,
+            demos: materialDemos(context),
           ),
           CategoryListItem(
             title: GalleryLocalizations.of(context).homeCategoryCupertino,
             imageString: 'assets/icons/cupertino/cupertino.png',
-            demos: cupertinoDemos,
+            demos: cupertinoDemos(context),
           ),
           CategoryListItem(
             title: GalleryLocalizations.of(context).homeCategoryReference,
             imageString: 'assets/icons/reference/reference.png',
-            demos: referenceDemos,
+            demos: referenceDemos(context),
           ),
         ],
       ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../l10n/localizations_delegate.dart';
+
 const double kColorItemHeight = 48;
 
 class _Palette {
@@ -19,116 +21,118 @@ class _Palette {
   final int threshold;
 }
 
-final _allPalettes = <_Palette>[
-  _Palette(
-    name: 'RED',
-    primary: Colors.red,
-    accent: Colors.redAccent,
-    threshold: 300,
-  ),
-  _Palette(
-    name: 'PINK',
-    primary: Colors.pink,
-    accent: Colors.pinkAccent,
-    threshold: 200,
-  ),
-  _Palette(
-    name: 'PURPLE',
-    primary: Colors.purple,
-    accent: Colors.purpleAccent,
-    threshold: 200,
-  ),
-  _Palette(
-    name: 'DEEP PURPLE',
-    primary: Colors.deepPurple,
-    accent: Colors.deepPurpleAccent,
-    threshold: 200,
-  ),
-  _Palette(
-    name: 'INDIGO',
-    primary: Colors.indigo,
-    accent: Colors.indigoAccent,
-    threshold: 200,
-  ),
-  _Palette(
-    name: 'BLUE',
-    primary: Colors.blue,
-    accent: Colors.blueAccent,
-    threshold: 400,
-  ),
-  _Palette(
-    name: 'LIGHT BLUE',
-    primary: Colors.lightBlue,
-    accent: Colors.lightBlueAccent,
-    threshold: 500,
-  ),
-  _Palette(
-    name: 'CYAN',
-    primary: Colors.cyan,
-    accent: Colors.cyanAccent,
-    threshold: 600,
-  ),
-  _Palette(
-    name: 'TEAL',
-    primary: Colors.teal,
-    accent: Colors.tealAccent,
-    threshold: 400,
-  ),
-  _Palette(
-      name: 'GREEN',
-      primary: Colors.green,
-      accent: Colors.greenAccent,
-      threshold: 500),
-  _Palette(
-    name: 'LIGHT GREEN',
-    primary: Colors.lightGreen,
-    accent: Colors.lightGreenAccent,
-    threshold: 600,
-  ),
-  _Palette(
-    name: 'LIME',
-    primary: Colors.lime,
-    accent: Colors.limeAccent,
-    threshold: 800,
-  ),
-  _Palette(
-    name: 'YELLOW',
-    primary: Colors.yellow,
-    accent: Colors.yellowAccent,
-  ),
-  _Palette(
-    name: 'AMBER',
-    primary: Colors.amber,
-    accent: Colors.amberAccent,
-  ),
-  _Palette(
-    name: 'ORANGE',
-    primary: Colors.orange,
-    accent: Colors.orangeAccent,
-    threshold: 700,
-  ),
-  _Palette(
-    name: 'DEEP ORANGE',
-    primary: Colors.deepOrange,
-    accent: Colors.deepOrangeAccent,
-    threshold: 400,
-  ),
-  _Palette(
-    name: 'BROWN',
-    primary: Colors.brown,
-    threshold: 200,
-  ),
-  _Palette(
-    name: 'GREY',
-    primary: Colors.grey,
-    threshold: 500,
-  ),
-  _Palette(
-    name: 'BLUE GREY',
-    primary: Colors.blueGrey,
-    threshold: 500,
-  ),
-];
+List<_Palette> _allPalettes(BuildContext context) {
+  return [
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsRed,
+      primary: Colors.red,
+      accent: Colors.redAccent,
+      threshold: 300,
+    ),
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsPink,
+      primary: Colors.pink,
+      accent: Colors.pinkAccent,
+      threshold: 200,
+    ),
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsPurple,
+      primary: Colors.purple,
+      accent: Colors.purpleAccent,
+      threshold: 200,
+    ),
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsDeepPurple,
+      primary: Colors.deepPurple,
+      accent: Colors.deepPurpleAccent,
+      threshold: 200,
+    ),
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsIndigo,
+      primary: Colors.indigo,
+      accent: Colors.indigoAccent,
+      threshold: 200,
+    ),
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsBlue,
+      primary: Colors.blue,
+      accent: Colors.blueAccent,
+      threshold: 400,
+    ),
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsLightBlue,
+      primary: Colors.lightBlue,
+      accent: Colors.lightBlueAccent,
+      threshold: 500,
+    ),
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsCyan,
+      primary: Colors.cyan,
+      accent: Colors.cyanAccent,
+      threshold: 600,
+    ),
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsTeal,
+      primary: Colors.teal,
+      accent: Colors.tealAccent,
+      threshold: 400,
+    ),
+    _Palette(
+        name: GalleryLocalizations.of(context).colorsGreen,
+        primary: Colors.green,
+        accent: Colors.greenAccent,
+        threshold: 500),
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsLightGreen,
+      primary: Colors.lightGreen,
+      accent: Colors.lightGreenAccent,
+      threshold: 600,
+    ),
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsLime,
+      primary: Colors.lime,
+      accent: Colors.limeAccent,
+      threshold: 800,
+    ),
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsYellow,
+      primary: Colors.yellow,
+      accent: Colors.yellowAccent,
+    ),
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsAmber,
+      primary: Colors.amber,
+      accent: Colors.amberAccent,
+    ),
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsOrange,
+      primary: Colors.orange,
+      accent: Colors.orangeAccent,
+      threshold: 700,
+    ),
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsDeepOrange,
+      primary: Colors.deepOrange,
+      accent: Colors.deepOrangeAccent,
+      threshold: 400,
+    ),
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsBrown,
+      primary: Colors.brown,
+      threshold: 200,
+    ),
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsGrey,
+      primary: Colors.grey,
+      threshold: 500,
+    ),
+    _Palette(
+      name: GalleryLocalizations.of(context).colorsBlueGrey,
+      primary: Colors.blueGrey,
+      threshold: 500,
+    ),
+  ];
+}
 
 class _ColorItem extends StatelessWidget {
   const _ColorItem({
@@ -228,21 +232,22 @@ class PaletteTabView extends StatelessWidget {
 class ColorsDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final palettes = _allPalettes(context);
     return DefaultTabController(
-      length: _allPalettes.length,
+      length: palettes.length,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Colors'),
+          title: Text(GalleryLocalizations.of(context).demoColorsTitle),
           bottom: TabBar(
             isScrollable: true,
             tabs: [
-              for (final palette in _allPalettes) Tab(text: palette.name),
+              for (final palette in palettes) Tab(text: palette.name),
             ],
           ),
         ),
         body: TabBarView(
           children: [
-            for (final palette in _allPalettes) PaletteTabView(colors: palette),
+            for (final palette in palettes) PaletteTabView(colors: palette),
           ],
         ),
       ),

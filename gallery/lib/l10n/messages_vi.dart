@@ -23,15 +23,10 @@ class MessageLookup extends MessageLookupByLibrary {
   static _notInlinedMessages(_) => <String, Function>{
         "Basic shopping app":
             MessageLookupByLibrary.simpleMessage("Ứng dụng mua sắm cơ bản"),
-        "CRANE": MessageLookupByLibrary.simpleMessage("CRANE"),
-        "CUPERTINO": MessageLookupByLibrary.simpleMessage("CUPERTINO"),
         "Categories": MessageLookupByLibrary.simpleMessage("Danh mục"),
         "Gallery": MessageLookupByLibrary.simpleMessage("Thư viện"),
-        "MATERIAL": MessageLookupByLibrary.simpleMessage("TÀI LIỆU"),
-        "RALLY": MessageLookupByLibrary.simpleMessage("RALLY"),
         "REFERENCE STYLES & MEDIA": MessageLookupByLibrary.simpleMessage(
             "KIỂU DÁNG VÀ NỘI DUNG NGHE NHÌN THAM KHẢO"),
-        "SHRINE": MessageLookupByLibrary.simpleMessage("SHRINE"),
         "Travel app": MessageLookupByLibrary.simpleMessage("Ứng dụng du lịch")
       };
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
+import '../../l10n/localizations_delegate.dart';
+
 enum AlertDemoType {
   alert,
   alertTitle,
@@ -23,18 +25,20 @@ class CupertinoAlertDemo extends StatefulWidget {
 class _CupertinoAlertDemoState extends State<CupertinoAlertDemo> {
   String lastSelectedValue;
 
-  String get _title {
+  String _title(BuildContext context) {
     switch (widget.type) {
       case AlertDemoType.alert:
-        return 'Alert';
+        return GalleryLocalizations.of(context).demoCupertinoAlertTitle;
       case AlertDemoType.alertTitle:
-        return 'Alert With Title';
+        return GalleryLocalizations.of(context)
+            .demoCupertinoAlertWithTitleTitle;
       case AlertDemoType.alertButtons:
-        return 'Alert With Buttons';
+        return GalleryLocalizations.of(context).demoCupertinoAlertButtonsTitle;
       case AlertDemoType.alertButtonsOnly:
-        return 'Alert Buttons Only';
+        return GalleryLocalizations.of(context)
+            .demoCupertinoAlertButtonsOnlyTitle;
       case AlertDemoType.actionSheet:
-        return 'Action Sheet';
+        return GalleryLocalizations.of(context).demoCupertinoActionSheetTitle;
     }
     return '';
   }
@@ -73,19 +77,25 @@ class _CupertinoAlertDemoState extends State<CupertinoAlertDemo> {
     _showDemoDialog(
       context: context,
       child: CupertinoAlertDialog(
-        title: const Text('Discard draft?'),
+        title: Text(GalleryLocalizations.of(context).dialogDiscardTitle),
         actions: [
           CupertinoDialogAction(
-            child: const Text('Discard'),
+            child: Text(
+              GalleryLocalizations.of(context).cupertinoAlertDiscard,
+            ),
             isDestructiveAction: true,
-            onPressed: () =>
-                Navigator.of(context, rootNavigator: true).pop('Discard'),
+            onPressed: () => Navigator.of(context, rootNavigator: true).pop(
+              GalleryLocalizations.of(context).cupertinoAlertDiscard,
+            ),
           ),
           CupertinoDialogAction(
-            child: const Text('Cancel'),
+            child: Text(
+              GalleryLocalizations.of(context).cupertinoAlertCancel,
+            ),
             isDefaultAction: true,
-            onPressed: () =>
-                Navigator.of(context, rootNavigator: true).pop('Cancel'),
+            onPressed: () => Navigator.of(context, rootNavigator: true).pop(
+              GalleryLocalizations.of(context).cupertinoAlertCancel,
+            ),
           ),
         ],
       ),
@@ -96,23 +106,28 @@ class _CupertinoAlertDemoState extends State<CupertinoAlertDemo> {
     _showDemoDialog(
       context: context,
       child: CupertinoAlertDialog(
-        title: const Text(
-          'Allow "Maps" to access your location while you are using the app?',
+        title: Text(
+          GalleryLocalizations.of(context).cupertinoAlertLocationTitle,
         ),
-        content: const Text(
-          'Your current location will be displayed on the map and used for '
-          'directions, nearby search results, and estimated travel times.',
+        content: Text(
+          GalleryLocalizations.of(context).cupertinoAlertLocationDescription,
         ),
         actions: [
           CupertinoDialogAction(
-            child: const Text('Don\'t Allow'),
-            onPressed: () =>
-                Navigator.of(context, rootNavigator: true).pop('Disallow'),
+            child: Text(
+              GalleryLocalizations.of(context).cupertinoAlertDontAllow,
+            ),
+            onPressed: () => Navigator.of(context, rootNavigator: true).pop(
+              GalleryLocalizations.of(context).cupertinoAlertDontAllow,
+            ),
           ),
           CupertinoDialogAction(
-            child: const Text('Allow'),
-            onPressed: () =>
-                Navigator.of(context, rootNavigator: true).pop('Allow'),
+            child: Text(
+              GalleryLocalizations.of(context).cupertinoAlertAllow,
+            ),
+            onPressed: () => Navigator.of(context, rootNavigator: true).pop(
+              GalleryLocalizations.of(context).cupertinoAlertAllow,
+            ),
           ),
         ],
       ),
@@ -122,12 +137,12 @@ class _CupertinoAlertDemoState extends State<CupertinoAlertDemo> {
   void _onAlertWithButtonsPress(BuildContext context) {
     _showDemoDialog(
       context: context,
-      child: const CupertinoDessertDialog(
-        title: Text('Select Favorite Dessert'),
+      child: CupertinoDessertDialog(
+        title: Text(
+          GalleryLocalizations.of(context).cupertinoAlertFavoriteDessert,
+        ),
         content: Text(
-          'Please select your favorite type of dessert from the list below.'
-          ' Your selection will be used to customize the suggested list of'
-          ' eateries in your area.',
+          GalleryLocalizations.of(context).cupertinoAlertDessertDescription,
         ),
       ),
     );
@@ -144,32 +159,46 @@ class _CupertinoAlertDemoState extends State<CupertinoAlertDemo> {
     _showDemoActionSheet(
       context: context,
       child: CupertinoActionSheet(
-        title: const Text('Favorite Dessert'),
-        message: const Text(
-          'Please select the best dessert from the options below.',
+        title: Text(
+          GalleryLocalizations.of(context).cupertinoAlertFavoriteDessert,
+        ),
+        message: Text(
+          GalleryLocalizations.of(context).cupertinoAlertDessertDescription,
         ),
         actions: [
           CupertinoActionSheetAction(
-            child: const Text('Profiteroles'),
-            onPressed: () =>
-                Navigator.of(context, rootNavigator: true).pop('Profiteroles'),
+            child: Text(
+              GalleryLocalizations.of(context).cupertinoAlertCheesecake,
+            ),
+            onPressed: () => Navigator.of(context, rootNavigator: true).pop(
+              GalleryLocalizations.of(context).cupertinoAlertCheesecake,
+            ),
           ),
           CupertinoActionSheetAction(
-            child: const Text('Cannolis'),
-            onPressed: () =>
-                Navigator.of(context, rootNavigator: true).pop('Cannolis'),
+            child: Text(
+              GalleryLocalizations.of(context).cupertinoAlertTiramisu,
+            ),
+            onPressed: () => Navigator.of(context, rootNavigator: true).pop(
+              GalleryLocalizations.of(context).cupertinoAlertTiramisu,
+            ),
           ),
           CupertinoActionSheetAction(
-            child: const Text('Trifle'),
-            onPressed: () =>
-                Navigator.of(context, rootNavigator: true).pop('Trifle'),
+            child: Text(
+              GalleryLocalizations.of(context).cupertinoAlertApplePie,
+            ),
+            onPressed: () => Navigator.of(context, rootNavigator: true).pop(
+              GalleryLocalizations.of(context).cupertinoAlertApplePie,
+            ),
           ),
         ],
         cancelButton: CupertinoActionSheetAction(
-          child: const Text('Cancel'),
+          child: Text(
+            GalleryLocalizations.of(context).cupertinoAlertCancel,
+          ),
           isDefaultAction: true,
-          onPressed: () =>
-              Navigator.of(context, rootNavigator: true).pop('Cancel'),
+          onPressed: () => Navigator.of(context, rootNavigator: true).pop(
+            GalleryLocalizations.of(context).cupertinoAlertCancel,
+          ),
         ),
       ),
     );
@@ -178,7 +207,7 @@ class _CupertinoAlertDemoState extends State<CupertinoAlertDemo> {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(middle: Text(_title)),
+      navigationBar: CupertinoNavigationBar(middle: Text(_title(context))),
       child: Builder(
         builder: (context) {
           return Column(
@@ -186,7 +215,9 @@ class _CupertinoAlertDemoState extends State<CupertinoAlertDemo> {
               Expanded(
                 child: Center(
                   child: CupertinoButton.filled(
-                    child: const Text('Show Alert'),
+                    child: Text(
+                      GalleryLocalizations.of(context).cupertinoShowAlert,
+                    ),
                     onPressed: () {
                       switch (widget.type) {
                         case AlertDemoType.alert:
@@ -213,7 +244,8 @@ class _CupertinoAlertDemoState extends State<CupertinoAlertDemo> {
                 Padding(
                   padding: const EdgeInsets.all(16),
                   child: Text(
-                    'You selected: $lastSelectedValue',
+                    GalleryLocalizations.of(context)
+                        .dialogSelectedOption(lastSelectedValue),
                     style: CupertinoTheme.of(context).textTheme.textStyle,
                     textAlign: TextAlign.center,
                   ),
@@ -240,53 +272,54 @@ class CupertinoDessertDialog extends StatelessWidget {
       content: content,
       actions: [
         CupertinoDialogAction(
-          child: const Text('Cheesecake'),
+          child: Text(
+            GalleryLocalizations.of(context).cupertinoAlertCheesecake,
+          ),
           onPressed: () {
-            Navigator.of(context, rootNavigator: true).pop('Cheesecake');
+            Navigator.of(context, rootNavigator: true).pop(
+              GalleryLocalizations.of(context).cupertinoAlertCheesecake,
+            );
           },
         ),
         CupertinoDialogAction(
-          child: const Text('Tiramisu'),
+          child: Text(
+            GalleryLocalizations.of(context).cupertinoAlertTiramisu,
+          ),
           onPressed: () {
-            Navigator.of(context, rootNavigator: true).pop('Tiramisu');
+            Navigator.of(context, rootNavigator: true).pop(
+              GalleryLocalizations.of(context).cupertinoAlertTiramisu,
+            );
           },
         ),
         CupertinoDialogAction(
-          child: const Text('Apple Pie'),
+          child: Text(
+            GalleryLocalizations.of(context).cupertinoAlertApplePie,
+          ),
           onPressed: () {
-            Navigator.of(context, rootNavigator: true).pop('Apple Pie');
+            Navigator.of(context, rootNavigator: true).pop(
+              GalleryLocalizations.of(context).cupertinoAlertApplePie,
+            );
           },
         ),
         CupertinoDialogAction(
-          child: const Text("Devil's food cake"),
+          child: Text(
+            GalleryLocalizations.of(context).cupertinoAlertChocolateBrownie,
+          ),
           onPressed: () {
-            Navigator.of(context, rootNavigator: true).pop("Devil's food cake");
+            Navigator.of(context, rootNavigator: true).pop(
+              GalleryLocalizations.of(context).cupertinoAlertChocolateBrownie,
+            );
           },
         ),
         CupertinoDialogAction(
-          child: const Text('Banana Split'),
-          onPressed: () {
-            Navigator.of(context, rootNavigator: true).pop('Banana Split');
-          },
-        ),
-        CupertinoDialogAction(
-          child: const Text('Oatmeal Cookie'),
-          onPressed: () {
-            Navigator.of(context, rootNavigator: true).pop('Oatmeal Cookies');
-          },
-        ),
-        CupertinoDialogAction(
-          child: const Text('Chocolate Brownie'),
-          onPressed: () {
-            Navigator.of(context, rootNavigator: true)
-                .pop('Chocolate Brownies');
-          },
-        ),
-        CupertinoDialogAction(
-          child: const Text('Cancel'),
+          child: Text(
+            GalleryLocalizations.of(context).cupertinoAlertCancel,
+          ),
           isDestructiveAction: true,
           onPressed: () {
-            Navigator.of(context, rootNavigator: true).pop('Cancel');
+            Navigator.of(context, rootNavigator: true).pop(
+              GalleryLocalizations.of(context).cupertinoAlertCancel,
+            );
           },
         ),
       ],

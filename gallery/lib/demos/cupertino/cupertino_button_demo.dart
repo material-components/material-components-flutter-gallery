@@ -1,31 +1,42 @@
 import 'package:flutter/cupertino.dart';
 
+import '../../l10n/localizations_delegate.dart';
+
 class CupertinoButtonDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        middle: const Text('Buttons'),
+        middle:
+            Text(GalleryLocalizations.of(context).demoCupertinoButtonsTitle),
       ),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CupertinoButton(
-              child: const Text('Enabled'),
+              child: Text(
+                GalleryLocalizations.of(context).cupertinoButtonEnabled,
+              ),
               onPressed: () {},
             ),
-            const CupertinoButton(
-              child: Text('Disabled'),
+            CupertinoButton(
+              child: Text(
+                GalleryLocalizations.of(context).cupertinoButtonDisabled,
+              ),
               onPressed: null,
             ),
             CupertinoButton.filled(
-              child: const Text('With Background'),
+              child: Text(
+                GalleryLocalizations.of(context).cupertinoButtonWithBackground,
+              ),
               onPressed: () {},
             ),
             SizedBox(height: 16),
-            const CupertinoButton.filled(
-              child: Text('Disabled'),
+            CupertinoButton.filled(
+              child: Text(
+                GalleryLocalizations.of(context).cupertinoButtonDisabled,
+              ),
               onPressed: null,
             ),
           ],

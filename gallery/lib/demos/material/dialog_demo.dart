@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../l10n/localizations_delegate.dart';
+
 enum DialogDemoType {
   alert,
   alertTitle,
@@ -7,28 +9,22 @@ enum DialogDemoType {
   fullscreen,
 }
 
-const _alertWithoutTitleText = 'Discard draft?';
-
-const _alertWithTitleText =
-    'Let Google help apps determine location. This means sending anonymous'
-    ' location data to Google, even when no apps are running.';
-
 class DialogDemo extends StatelessWidget {
   DialogDemo({Key key, @required this.type}) : super(key: key);
 
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   final DialogDemoType type;
 
-  String get _title {
+  String _title(BuildContext context) {
     switch (type) {
       case DialogDemoType.alert:
-        return 'Alert';
+        return GalleryLocalizations.of(context).demoAlertDialogTitle;
       case DialogDemoType.alertTitle:
-        return 'Alert with title';
+        return GalleryLocalizations.of(context).demoAlertTitleDialogTitle;
       case DialogDemoType.simple:
-        return 'Simple';
+        return GalleryLocalizations.of(context).demoSimpleDialogTitle;
       case DialogDemoType.fullscreen:
-        return 'Fullscreen';
+        return GalleryLocalizations.of(context).demoFullscreenDialogTitle;
     }
     return '';
   }
@@ -43,9 +39,10 @@ class DialogDemo extends StatelessWidget {
       builder: (context) => child,
     );
     // The value passed to Navigator.pop() or null.
-    if (value != null) {
+    if (value != null && value is String) {
       _scaffoldKey.currentState.showSnackBar(SnackBar(
-        content: Text('You selected: $value'),
+        content:
+            Text(GalleryLocalizations.of(context).dialogSelectedOption(value)),
       ));
     }
   }
@@ -58,12 +55,12 @@ class DialogDemo extends StatelessWidget {
       context: context,
       child: AlertDialog(
         content: Text(
-          _alertWithoutTitleText,
+          GalleryLocalizations.of(context).dialogDiscardTitle,
           style: dialogTextStyle,
         ),
         actions: [
-          _DialogButton(text: 'CANCEL'),
-          _DialogButton(text: 'DISCARD'),
+          _DialogButton(text: GalleryLocalizations.of(context).dialogCancel),
+          _DialogButton(text: GalleryLocalizations.of(context).dialogDiscard),
         ],
       ),
     );
@@ -76,14 +73,14 @@ class DialogDemo extends StatelessWidget {
     _showDemoDialog<String>(
       context: context,
       child: AlertDialog(
-        title: const Text('Use Google\'s location service?'),
+        title: Text(GalleryLocalizations.of(context).dialogLocationTitle),
         content: Text(
-          _alertWithTitleText,
+          GalleryLocalizations.of(context).dialogLocationDescription,
           style: dialogTextStyle,
         ),
         actions: [
-          _DialogButton(text: 'DISAGREE'),
-          _DialogButton(text: 'AGREE'),
+          _DialogButton(text: GalleryLocalizations.of(context).dialogDisagree),
+          _DialogButton(text: GalleryLocalizations.of(context).dialogAgree),
         ],
       ),
     );
@@ -94,7 +91,7 @@ class DialogDemo extends StatelessWidget {
     _showDemoDialog<String>(
       context: context,
       child: SimpleDialog(
-        title: const Text('Set backup account'),
+        title: Text(GalleryLocalizations.of(context).dialogSetBackup),
         children: [
           _DialogDemoItem(
             icon: Icons.account_circle,
@@ -108,7 +105,7 @@ class DialogDemo extends StatelessWidget {
           ),
           _DialogDemoItem(
             icon: Icons.add_circle,
-            text: 'add account',
+            text: GalleryLocalizations.of(context).dialogAddAccount,
             color: theme.disabledColor,
           ),
         ],
@@ -121,11 +118,11 @@ class DialogDemo extends StatelessWidget {
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        title: Text(_title),
+        title: Text(_title(context)),
       ),
       body: Center(
         child: RaisedButton(
-          child: const Text('SHOW DIALOG'),
+          child: Text(GalleryLocalizations.of(context).dialogShow),
           onPressed: () {
             switch (type) {
               case DialogDemoType.alert:
@@ -212,11 +209,11 @@ class _FullScreenDialogDemo extends StatelessWidget {
       data: MediaQueryData(),
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Full Screen Dialog'),
+          title: Text(GalleryLocalizations.of(context).dialogFullscreenTitle),
           actions: [
             FlatButton(
               child: Text(
-                'SAVE',
+                GalleryLocalizations.of(context).dialogFullscreenSave,
                 style: theme.textTheme.body1.copyWith(
                   color: theme.colorScheme.onPrimary,
                 ),
@@ -228,7 +225,9 @@ class _FullScreenDialogDemo extends StatelessWidget {
           ],
         ),
         body: Center(
-          child: Text('A full screen dialog demo'),
+          child: Text(
+            GalleryLocalizations.of(context).dialogFullscreenDescription,
+          ),
         ),
       ),
     );

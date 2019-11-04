@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../l10n/localizations_delegate.dart';
+
 enum ButtonDemoType {
   flat,
   raised,
@@ -13,18 +15,18 @@ class ButtonDemo extends StatelessWidget {
 
   final ButtonDemoType type;
 
-  String get _title {
+  String _title(BuildContext context) {
     switch (type) {
       case ButtonDemoType.flat:
-        return 'Flat Button';
+        return GalleryLocalizations.of(context).demoFlatButtonTitle;
       case ButtonDemoType.raised:
-        return 'Raised Button';
+        return GalleryLocalizations.of(context).demoRaisedButtonTitle;
       case ButtonDemoType.outline:
-        return 'Outline Button';
+        return GalleryLocalizations.of(context).demoOutlineButtonTitle;
       case ButtonDemoType.toggle:
-        return 'Toggle Buttons';
+        return GalleryLocalizations.of(context).demoToggleButtonTitle;
       case ButtonDemoType.floating:
-        return 'Floating Action Button';
+        return GalleryLocalizations.of(context).demoFloatingButtonTitle;
     }
     return '';
   }
@@ -52,7 +54,7 @@ class ButtonDemo extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(_title),
+        title: Text(_title(context)),
       ),
       body: buttons,
     );
@@ -70,11 +72,12 @@ class _FlatButtonDemo extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               FlatButton(
-                child: const Text('ENABLED'),
+                child: Text(GalleryLocalizations.of(context).buttonTextEnabled),
                 onPressed: () {},
               ),
-              const FlatButton(
-                child: Text('DISABLED'),
+              FlatButton(
+                child:
+                    Text(GalleryLocalizations.of(context).buttonTextDisabled),
                 onPressed: null,
               ),
             ],
@@ -84,12 +87,13 @@ class _FlatButtonDemo extends StatelessWidget {
             children: [
               FlatButton.icon(
                 icon: const Icon(Icons.add, size: 18),
-                label: const Text('ENABLED'),
+                label: Text(GalleryLocalizations.of(context).buttonTextEnabled),
                 onPressed: () {},
               ),
               FlatButton.icon(
                 icon: const Icon(Icons.add, size: 18),
-                label: const Text('DISABLED'),
+                label:
+                    Text(GalleryLocalizations.of(context).buttonTextDisabled),
                 onPressed: null,
               ),
             ],
@@ -111,11 +115,12 @@ class _RaisedButtonDemo extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               RaisedButton(
-                child: const Text('ENABLED'),
+                child: Text(GalleryLocalizations.of(context).buttonTextEnabled),
                 onPressed: () {},
               ),
-              const RaisedButton(
-                child: Text('DISABLED'),
+              RaisedButton(
+                child:
+                    Text(GalleryLocalizations.of(context).buttonTextDisabled),
                 onPressed: null,
               ),
             ],
@@ -125,12 +130,13 @@ class _RaisedButtonDemo extends StatelessWidget {
             children: [
               RaisedButton.icon(
                 icon: const Icon(Icons.add, size: 18),
-                label: const Text('ENABLED'),
+                label: Text(GalleryLocalizations.of(context).buttonTextEnabled),
                 onPressed: () {},
               ),
               RaisedButton.icon(
                 icon: const Icon(Icons.add, size: 18),
-                label: const Text('DISABLED'),
+                label:
+                    Text(GalleryLocalizations.of(context).buttonTextDisabled),
                 onPressed: null,
               ),
             ],
@@ -152,11 +158,12 @@ class _OutlineButtonDemo extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               OutlineButton(
-                child: const Text('ENABLED'),
+                child: Text(GalleryLocalizations.of(context).buttonTextEnabled),
                 onPressed: () {},
               ),
-              const OutlineButton(
-                child: Text('DISABLED'),
+              OutlineButton(
+                child:
+                    Text(GalleryLocalizations.of(context).buttonTextDisabled),
                 onPressed: null,
               ),
             ],
@@ -166,12 +173,13 @@ class _OutlineButtonDemo extends StatelessWidget {
             children: [
               OutlineButton.icon(
                 icon: const Icon(Icons.add, size: 18),
-                label: const Text('ENABLED'),
+                label: Text(GalleryLocalizations.of(context).buttonTextEnabled),
                 onPressed: () {},
               ),
               OutlineButton.icon(
                 icon: const Icon(Icons.add, size: 18),
-                label: const Text('DISABLED'),
+                label:
+                    Text(GalleryLocalizations.of(context).buttonTextDisabled),
                 onPressed: null,
               ),
             ],
@@ -220,12 +228,12 @@ class _FloatingActionButtonDemo extends StatelessWidget {
           FloatingActionButton(
             child: const Icon(Icons.add),
             onPressed: () {},
-            tooltip: 'Create',
+            tooltip: GalleryLocalizations.of(context).buttonTextCreate,
           ),
           SizedBox(height: 20),
           FloatingActionButton.extended(
             icon: const Icon(Icons.add),
-            label: const Text('Create'),
+            label: Text(GalleryLocalizations.of(context).buttonTextCreate),
             onPressed: () {},
           ),
         ],

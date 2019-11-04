@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../data/demos.dart';
+import '../l10n/localizations_delegate.dart';
 
 enum _DemoState {
   normal,
@@ -50,7 +51,7 @@ class _DemoPageState extends State<DemoPage>
         context: context,
         builder: (context) {
           return SimpleDialog(
-            title: const Text('Couldn\'t display URL:'),
+            title: Text(GalleryLocalizations.of(context).demoInvalidURL),
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -74,25 +75,25 @@ class _DemoPageState extends State<DemoPage>
         if (widget.demo.configurations.length > 1)
           IconButton(
             icon: Icon(Icons.tune),
-            tooltip: 'Options',
+            tooltip: GalleryLocalizations.of(context).demoOptionsTooltip,
             color: _state == _DemoState.options ? selectedIconColor : iconColor,
             onPressed: () => _handleTap(_DemoState.options),
           ),
         IconButton(
           icon: Icon(Icons.info),
-          tooltip: 'Info',
+          tooltip: GalleryLocalizations.of(context).demoInfoTooltip,
           color: _state == _DemoState.info ? selectedIconColor : iconColor,
           onPressed: () => _handleTap(_DemoState.info),
         ),
         IconButton(
           icon: Icon(Icons.code),
-          tooltip: 'Code Sample',
+          tooltip: GalleryLocalizations.of(context).demoCodeTooltip,
           color: _state == _DemoState.code ? selectedIconColor : iconColor,
           onPressed: () => _handleTap(_DemoState.code),
         ),
         IconButton(
           icon: Icon(Icons.library_books),
-          tooltip: 'API Documentation',
+          tooltip: GalleryLocalizations.of(context).demoDocumentationTooltip,
           color: iconColor,
           onPressed: () => _showDocumentation(context),
         ),
@@ -200,7 +201,7 @@ class _DemoSectionOptions extends StatelessWidget {
             end: 24,
           ),
           child: Text(
-            'Options',
+            GalleryLocalizations.of(context).demoOptionsTooltip,
             style: textTheme.display1.apply(color: colorScheme.onSurface),
           ),
         ),
