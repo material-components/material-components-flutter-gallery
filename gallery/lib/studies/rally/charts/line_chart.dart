@@ -101,7 +101,7 @@ class RallyLineChartPainter extends CustomPainter {
               e.date.millisecondsSinceEpoch <= endMillis;
         },
       ).toList();
-      lastAmount += filteredEvents.fold<double>(0, (sum, e) => sum + e.amount);
+      lastAmount += sumOf<DetailedEventData>(filteredEvents, (e) => e.amount);
       final double x = i / numDays * rect.width;
       final double y = (maxAmount - lastAmount) / maxAmount * rect.height;
       points.add(Offset(x, y));
@@ -122,12 +122,11 @@ class RallyLineChartPainter extends CustomPainter {
 
   /// Draw the X-axis increment markers at constant width intervals.
   void _drawXAxisTicks(Canvas canvas, Rect rect) {
-    final double dayTop = (rect.top + rect.bottom) / 2;
     for (int i = 0; i < numDays; i++) {
       final double x = rect.width / numDays * i;
       canvas.drawRect(
         Rect.fromPoints(
-          Offset(x, i % 7 == tickShift ? rect.top : dayTop),
+          Offset(x, i % 7 == tickShift ? rect.top : rect.center.dy),
           Offset(x, rect.bottom),
         ),
         Paint()

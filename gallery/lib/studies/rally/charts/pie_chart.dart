@@ -18,20 +18,24 @@ List<RallyPieChartSegment> buildSegmentsFromAccountItems(
     List<AccountData> items) {
   return List<RallyPieChartSegment>.generate(
     items.length,
-    (i) => RallyPieChartSegment(
-      color: RallyColors.accountColor(i),
-      value: items[i].primaryAmount,
-    ),
+    (i) {
+      return RallyPieChartSegment(
+        color: RallyColors.accountColor(i),
+        value: items[i].primaryAmount,
+      );
+    },
   );
 }
 
 List<RallyPieChartSegment> buildSegmentsFromBillItems(List<BillData> items) {
   return List<RallyPieChartSegment>.generate(
     items.length,
-    (i) => RallyPieChartSegment(
-      color: RallyColors.billColor(i),
-      value: items[i].primaryAmount,
-    ),
+    (i) {
+      return RallyPieChartSegment(
+        color: RallyColors.billColor(i),
+        value: items[i].primaryAmount,
+      );
+    },
   );
 }
 
@@ -39,10 +43,12 @@ List<RallyPieChartSegment> buildSegmentsFromBudgetItems(
     List<BudgetData> items) {
   return List<RallyPieChartSegment>.generate(
     items.length,
-    (i) => RallyPieChartSegment(
-      color: RallyColors.budgetColor(i),
-      value: items[i].primaryAmount - items[i].amountUsed,
-    ),
+    (i) {
+      return RallyPieChartSegment(
+        color: RallyColors.budgetColor(i),
+        value: items[i].primaryAmount - items[i].amountUsed,
+      );
+    },
   );
 }
 
