@@ -123,8 +123,8 @@ class _CarouselState extends State<_Carousel> {
         if (_controller.position.haveDimensions) {
           value = _controller.page - index;
         } else {
-          // Assume off screen if haveDimensions is false, unless index is 0.
-          value = -1.0 * index;
+          // If haveDimensions is false, use _currentPage to calculate value.
+          value = (_currentPage - index).toDouble();
         }
         // We want the peeking cards to be 160 in height and 0.38 helps
         // achieve that.
