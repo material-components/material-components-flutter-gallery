@@ -5,3 +5,8 @@ gradle-wrapper.jar
 /gradlew.bat
 /local.properties
 GeneratedPluginRegistrant.java
+
+# Visual Studio Code related
+*.classpath
+*.project
+/.settings/
