@@ -11,7 +11,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>gallery</string>
+	<string>Flutter Gallery</string>
 	<key>CFBundleLocalizations</key>
 	<array>
 		<string>en</string>
