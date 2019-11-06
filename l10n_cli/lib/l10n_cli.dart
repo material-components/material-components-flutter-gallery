@@ -35,8 +35,8 @@ String _escapeXml(String xml) {
 /// Processes the XML files.
 Future<void> englishArbsToXmls() async {
   await generateXmlFromArb(
-    inputArb: File('$_l10nDir/intl_messages.arb'),
-    outputXml: File('$_l10nDir/intl_messages.xml'),
+    inputArb: File('$_l10nDir/intl_en_US.arb'),
+    outputXml: File('$_l10nDir/intl_en_US.xml'),
     xmlHeader: _intlHeader,
   );
 }
@@ -73,7 +73,7 @@ Future<void> generateXmlFromArb({
     if (metaInfo.containsKey('plural')) {
       // Generate a plurals resource element formatted like this:
       // <plurals
-      //   name="name"
+      //   name="dartVariableName"
       //   description="description">
       //   <item
       //     quantity="other"
@@ -99,7 +99,7 @@ Future<void> generateXmlFromArb({
     } else if (metaInfo.containsKey('parameters')) {
       // Generate a parameterized string resource element formatted like this:
       // <string
-      //   name="string_name"
+      //   name="dartVariableName"
       //   description="string description"
       //   >string %1$s %2$s translation</string>
       // The translated string's original $vars, which must be listed in its
@@ -124,7 +124,7 @@ Future<void> generateXmlFromArb({
     } else {
       // Generate a string resource element formatted like this:
       // <string
-      //   name="string_name"
+      //   name="dartVariableName"
       //   description="string description"
       //   >string translation</string>
       final translation = translationFor(resourceId);
