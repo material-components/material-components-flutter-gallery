@@ -12,7 +12,7 @@ class VerticalFractionBar extends StatelessWidget {
       height: 32,
       width: 4,
       child: Column(
-        children: <Widget>[
+        children: [
           SizedBox(
             height: (1 - fraction) * 32,
             child: Container(

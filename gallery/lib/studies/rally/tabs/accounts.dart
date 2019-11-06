@@ -1,22 +1,87 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
+import 'package:gallery/layout/adaptive.dart';
+import 'package:gallery/studies/rally/charts/pie_chart.dart';
+import 'package:gallery/studies/rally/colors.dart';
 import 'package:gallery/studies/rally/data.dart';
 import 'package:gallery/studies/rally/finance.dart';
-import 'package:gallery/studies/rally/charts/pie_chart.dart';
 
 /// A page that shows a summary of accounts.
 class AccountsView extends StatelessWidget {
   final List<AccountData> items = DummyDataService.getAccountDataList();
+  final List<AccountDetailData> detailItems =
+      DummyDataService.getAccountDetailList();
 
   @override
   Widget build(BuildContext context) {
-    final double balanceTotal = sumAccountDataPrimaryAmount(items);
-    return FinancialEntityView(
+    final balanceTotal = sumAccountDataPrimaryAmount(items);
+    final view = FinancialEntityView(
       heroLabel: 'Total',
       heroAmount: balanceTotal,
       segments: buildSegmentsFromAccountItems(items),
       wholeAmount: balanceTotal,
       financialEntityCards: buildAccountDataListViews(items),
+    );
+    if (isDisplayDesktop(context)) {
+      return Row(
+        children: [
+          Flexible(
+            flex: 2,
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 24),
+                child: view,
+              ),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              color: RallyColors.inputBackground,
+              padding: EdgeInsetsDirectional.only(start: 24),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  for (AccountDetailData item in detailItems)
+                    _AccountDetail(title: item.title, message: item.value),
+                ],
+              ),
+            ),
+          ),
+        ],
+      );
+    } else {
+      return SingleChildScrollView(child: view);
+    }
+  }
+}
+
+class _AccountDetail extends StatelessWidget {
+  const _AccountDetail({Key key, this.message, this.title}) : super(key: key);
+
+  final String message;
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    TextTheme textTheme = Theme.of(context).textTheme;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SizedBox(height: 8),
+        Text(
+          title,
+          style:
+              textTheme.body1.copyWith(fontSize: 16, color: RallyColors.gray60),
+        ),
+        SizedBox(height: 8),
+        Text(
+          message,
+          style: textTheme.body2.copyWith(fontSize: 20),
+        ),
+        SizedBox(height: 8),
+        Container(color: RallyColors.primaryBackground, height: 1),
+      ],
     );
   }
 }

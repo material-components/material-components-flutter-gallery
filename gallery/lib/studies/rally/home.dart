@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/rally/tabs/accounts.dart';
 import 'package:gallery/studies/rally/tabs/bills.dart';
 import 'package:gallery/studies/rally/tabs/budgets.dart';
@@ -7,6 +8,8 @@ import 'package:gallery/studies/rally/tabs/overview.dart';
 import 'package:gallery/studies/rally/tabs/settings.dart';
 
 const int tabCount = 5;
+const int turnsToRotateRight = 1;
+const int turnsToRotateLeft = 3;
 
 class HomePage extends StatefulWidget {
   @override
@@ -36,61 +39,146 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
-
-    return Scaffold(
-      body: SafeArea(
-        child: Column(
-          children: <Widget>[
-            Theme(
-              // This theme effectively removes the default visual touch
-              // feedback for tapping a tab, which is replaced with a custom
-              // animation.
-              data: theme.copyWith(
-                splashColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-              ),
-              child: TabBar(
-                // Setting isScrollable to true prevents the tabs from being
-                // wrapped in [Expanded] widgets, which allows for more
-                // flexible sizes and size animations among tabs.
-                isScrollable: true,
-                labelPadding: EdgeInsets.zero,
-                tabs: _buildTabs(theme),
-                controller: _tabController,
-                // This hides the tab indicator.
-                indicatorColor: Colors.transparent,
-              ),
+    final isDesktop = isDisplayDesktop(context);
+    Widget tabBarView;
+    if (isDesktop) {
+      tabBarView = Row(
+        children: [
+          Container(
+            width: 150,
+            alignment: Alignment.topCenter,
+            padding: const EdgeInsets.symmetric(vertical: 32),
+            child: Column(
+              children: [
+                const SizedBox(height: 24),
+                SizedBox(
+                  height: 80,
+                  child: Image.asset(
+                    'logo.png',
+                    package: 'rally_assets',
+                  ),
+                ),
+                const SizedBox(height: 24),
+                // Rotate the tab bar, so the animation is vertical for desktops.
+                RotatedBox(
+                  quarterTurns: turnsToRotateRight,
+                  child: _RallyTabBar(
+                    tabs: _buildTabs(theme: theme, isVertical: true).map(
+                      (widget) {
+                        // Revert the rotation on the tabs.
+                        return RotatedBox(
+                          quarterTurns: turnsToRotateLeft,
+                          child: widget,
+                        );
+                      },
+                    ).toList(),
+                    tabController: _tabController,
+                  ),
+                ),
+              ],
             ),
-            Expanded(
+          ),
+          Expanded(
+            // Rotate the tab views so we can swipe up and down.
+            child: RotatedBox(
+              quarterTurns: turnsToRotateRight,
               child: TabBarView(
                 controller: _tabController,
-                children: _buildTabViews(),
+                children: _buildTabViews().map(
+                  (widget) {
+                    // Revert the rotation on the tab views.
+                    return RotatedBox(
+                      quarterTurns: turnsToRotateLeft,
+                      child: widget,
+                    );
+                  },
+                ).toList(),
               ),
             ),
-          ],
+          ),
+        ],
+      );
+    } else {
+      tabBarView = Column(
+        children: [
+          _RallyTabBar(
+            tabs: _buildTabs(theme: theme),
+            tabController: _tabController,
+          ),
+          Expanded(
+            child: TabBarView(
+              controller: _tabController,
+              children: _buildTabViews(),
+            ),
+          ),
+        ],
+      );
+    }
+    return Scaffold(
+      body: SafeArea(
+        // For desktop layout we do not want to have SafeArea at the top and
+        // bottom to display 100% height content on the accounts view.
+        top: !isDesktop,
+        bottom: !isDesktop,
+        child: Theme(
+          // This theme effectively removes the default visual touch
+          // feedback for tapping a tab, which is replaced with a custom
+          // animation.
+          data: theme.copyWith(
+            splashColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+          ),
+          child: tabBarView,
         ),
       ),
     );
   }
 
-  List<Widget> _buildTabs(ThemeData theme) {
-    return <Widget>[
-      _RallyTab(theme, Icons.pie_chart, 'OVERVIEW', 0, _tabController),
-      _RallyTab(theme, Icons.attach_money, 'ACCOUNTS', 1, _tabController),
-      _RallyTab(theme, Icons.money_off, 'BILLS', 2, _tabController),
-      _RallyTab(theme, Icons.table_chart, 'BUDGETS', 3, _tabController),
-      _RallyTab(theme, Icons.settings, 'SETTINGS', 4, _tabController),
+  List<Widget> _buildTabs({ThemeData theme, bool isVertical = false}) {
+    return [
+      _RallyTab(
+          theme, Icons.pie_chart, 'OVERVIEW', 0, _tabController, isVertical),
+      _RallyTab(
+          theme, Icons.attach_money, 'ACCOUNTS', 1, _tabController, isVertical),
+      _RallyTab(theme, Icons.money_off, 'BILLS', 2, _tabController, isVertical),
+      _RallyTab(
+          theme, Icons.table_chart, 'BUDGETS', 3, _tabController, isVertical),
+      _RallyTab(
+          theme, Icons.settings, 'SETTINGS', 4, _tabController, isVertical),
     ];
   }
 
   List<Widget> _buildTabViews() {
-    return <Widget>[
+    return [
       OverviewView(),
       AccountsView(),
       BillsView(),
       BudgetsView(),
       SettingsView(),
     ];
+  }
+}
+
+class _RallyTabBar extends StatelessWidget {
+  const _RallyTabBar({Key key, this.tabs, this.tabController})
+      : super(key: key);
+
+  final List<Widget> tabs;
+  final TabController tabController;
+
+  @override
+  Widget build(BuildContext context) {
+    return TabBar(
+      // Setting isScrollable to true prevents the tabs from being
+      // wrapped in [Expanded] widgets, which allows for more
+      // flexible sizes and size animations among tabs.
+      isScrollable: true,
+      labelPadding: EdgeInsets.zero,
+      tabs: tabs,
+      controller: tabController,
+      // This hides the tab indicator.
+      indicatorColor: Colors.transparent,
+    );
   }
 }
 
@@ -101,6 +189,7 @@ class _RallyTab extends StatefulWidget {
     String title,
     int tabIndex,
     TabController tabController,
+    this.isVertical,
   )   : titleText = Text(title, style: theme.textTheme.button),
         isExpanded = tabController.index == tabIndex,
         icon = Icon(iconData);
@@ -108,6 +197,7 @@ class _RallyTab extends StatefulWidget {
   final Text titleText;
   final Icon icon;
   final bool isExpanded;
+  final bool isVertical;
 
   @override
   _RallyTabState createState() => _RallyTabState();
@@ -147,6 +237,29 @@ class _RallyTabState extends State<_RallyTab>
 
   @override
   Widget build(BuildContext context) {
+    if (widget.isVertical) {
+      return Column(
+        children: [
+          const SizedBox(height: 18),
+          FadeTransition(
+            child: widget.icon,
+            opacity: _iconFadeAnimation,
+          ),
+          const SizedBox(height: 12),
+          FadeTransition(
+            child: SizeTransition(
+              child: Center(child: widget.titleText),
+              axis: Axis.vertical,
+              axisAlignment: -1,
+              sizeFactor: _titleSizeAnimation,
+            ),
+            opacity: _titleFadeAnimation,
+          ),
+          const SizedBox(height: 18),
+        ],
+      );
+    }
+
     // Calculate the width of each unexpanded tab by counting the number of
     // units and dividing it into the screen width. Each unexpanded tab is 1
     // unit, and there is always 1 expanded tab which is 1 unit + any extra
@@ -158,7 +271,7 @@ class _RallyTabState extends State<_RallyTab>
     return SizedBox(
       height: 56,
       child: Row(
-        children: <Widget>[
+        children: [
           FadeTransition(
             child: SizedBox(
               width: unitWidth,

@@ -14,6 +14,9 @@ class RallyPieChartSegment {
   final double value;
 }
 
+/// The max height and width of the [RallyPieChart].
+const kPieChartMaxSize = 500.0;
+
 List<RallyPieChartSegment> buildSegmentsFromAccountItems(
     List<AccountData> items) {
   return List<RallyPieChartSegment>.generate(
@@ -130,36 +133,41 @@ class _AnimatedRallyPieChart extends AnimatedWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextStyle labelTextStyle = Theme.of(context).textTheme.body1.copyWith(
-          fontSize: 14,
-          letterSpacing: 0.5,
-        );
+    final TextTheme textTheme = Theme.of(context).textTheme;
+    final TextStyle labelTextStyle = textTheme.body1.copyWith(
+      fontSize: 14,
+      letterSpacing: 0.5,
+    );
 
-    return DecoratedBox(
-      decoration: _RallyPieChartOutlineDecoration(
-        maxFraction: animation.value,
-        total: total,
-        segments: segments,
-      ),
-      child: SizedBox(
-        height: 300,
-        child: Center(
+    return LayoutBuilder(builder: (context, constraints) {
+      return DecoratedBox(
+        decoration: _RallyPieChartOutlineDecoration(
+          maxFraction: animation.value,
+          total: total,
+          segments: segments,
+        ),
+        child: Container(
+          height: constraints.maxHeight,
+          alignment: Alignment.center,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
+            children: [
               Text(
                 centerLabel,
                 style: labelTextStyle,
               ),
               Text(
                 usdWithSignFormat.format(centerAmount),
-                style: Theme.of(context).textTheme.headline,
+                // When the widget is larger, we increase the font size.
+                style: constraints.maxHeight >= kPieChartMaxSize
+                    ? textTheme.headline.copyWith(fontSize: 70)
+                    : textTheme.headline,
               ),
             ],
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 }
 
@@ -202,11 +210,11 @@ class _RallyPieChartOutlineBoxPainter extends BoxPainter {
         ) /
         2;
     final Rect outerRect = Rect.fromCircle(
-      center: configuration.size.center(Offset.zero),
+      center: configuration.size.center(offset),
       radius: outerRadius - strokeWidth * 3,
     );
     final Rect innerRect = Rect.fromCircle(
-      center: configuration.size.center(Offset.zero),
+      center: configuration.size.center(offset),
       radius: outerRadius - strokeWidth * 4,
     );
 

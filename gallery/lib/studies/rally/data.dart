@@ -1,3 +1,7 @@
+import 'package:flutter/material.dart';
+
+import 'package:gallery/studies/rally/formatters.dart';
+
 /// Calculates the sum of the primary amounts of a list of [AccountData].
 double sumAccountDataPrimaryAmount(List<AccountData> items) =>
     sumOf<AccountData>(items, (item) => item.primaryAmount);
@@ -32,7 +36,7 @@ class AccountData {
   /// The display name of this entity.
   final String name;
 
-  // The primary amount or value of this entity.
+  /// The primary amount or value of this entity.
   final double primaryAmount;
 
   /// The full displayable account number.
@@ -48,7 +52,7 @@ class BillData {
   /// The display name of this entity.
   final String name;
 
-  // The primary amount or value of this entity.
+  /// The primary amount or value of this entity.
   final double primaryAmount;
 
   /// The due date of this bill.
@@ -64,11 +68,22 @@ class BudgetData {
   /// The display name of this entity.
   final String name;
 
-  // The primary amount or value of this entity.
+  /// The primary amount or value of this entity.
   final double primaryAmount;
 
   /// Amount of the budget that is consumed or used.
   final double amountUsed;
+}
+
+/// A data model for an alert.
+class AlertData {
+  AlertData({this.message, this.iconData});
+
+  /// The alert message to display.
+  final String message;
+
+  /// The icon to display with the alert.
+  final IconData iconData;
 }
 
 class DetailedEventData {
@@ -81,6 +96,17 @@ class DetailedEventData {
   final String title;
   final DateTime date;
   final double amount;
+}
+
+/// A data model for account data.
+class AccountDetailData {
+  AccountDetailData({this.title, this.value});
+
+  /// The display name of this entity.
+  final String title;
+
+  /// The value of this entity.
+  final String value;
 }
 
 /// Class to return dummy data lists.
@@ -108,6 +134,35 @@ class DummyDataService {
         name: 'Vacation',
         primaryAmount: 253,
         accountNumber: '1231233456',
+      ),
+    ];
+  }
+
+  static List<AccountDetailData> getAccountDetailList() {
+    return <AccountDetailData>[
+      AccountDetailData(
+        title: 'Annual Percentage Yield',
+        value: '0.10\%',
+      ),
+      AccountDetailData(
+        title: 'Interest Rate',
+        value: usdWithSignFormat.format(1676.14),
+      ),
+      AccountDetailData(
+        title: 'Interest YTD',
+        value: usdWithSignFormat.format(81.45),
+      ),
+      AccountDetailData(
+        title: 'Interest Paid Last Year',
+        value: usdWithSignFormat.format(987.12),
+      ),
+      AccountDetailData(
+        title: 'Next Statement',
+        value: dateFormat.format(DateTime.utc(2019, 12, 25)),
+      ),
+      AccountDetailData(
+        title: 'Account Owner',
+        value: 'Philip Cao',
       ),
     ];
   }
@@ -213,6 +268,34 @@ class DummyDataService {
       'Find ATMs',
       'Help',
       'Sign out',
+    ];
+  }
+
+  static List<AlertData> getAlerts() {
+    return <AlertData>[
+      AlertData(
+        message:
+            'Heads up, you’ve used up 90% of your Shopping budget for this month.',
+        iconData: Icons.sort,
+      ),
+      AlertData(
+        message: 'You’ve spent \$120 on Restaurants this week.',
+        iconData: Icons.sort,
+      ),
+      AlertData(
+        message: 'You’ve spent \$24 in ATM fees this month',
+        iconData: Icons.credit_card,
+      ),
+      AlertData(
+        message:
+            'Good work! Your checking account is 4\% higher than last month.',
+        iconData: Icons.attach_money,
+      ),
+      AlertData(
+        message:
+            'Increase your potential tax deduction! Assign categories to 16 unassigned transactions.',
+        iconData: Icons.not_interested,
+      ),
     ];
   }
 }

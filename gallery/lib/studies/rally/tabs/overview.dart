@@ -1,7 +1,9 @@
 import 'dart:math';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/rally/colors.dart';
 import 'package:gallery/studies/rally/data.dart';
 import 'package:gallery/studies/rally/finance.dart';
@@ -21,77 +23,164 @@ class _OverviewViewState extends State<OverviewView> {
     final List<BillData> billDataList = DummyDataService.getBillDataList();
     final List<BudgetData> budgetDataList =
         DummyDataService.getBudgetDataList();
+    final List<AlertData> alerts = DummyDataService.getAlerts();
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      child: ListView(
-        children: <Widget>[
-          _AlertsView(),
-          const SizedBox(height: 16),
-          _FinancialView(
-            title: 'Accounts',
-            total: sumAccountDataPrimaryAmount(accountDataList),
-            financialItemViews: buildAccountDataListViews(accountDataList),
+    if (isDisplayDesktop(context)) {
+      return SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 24),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Flexible(
+                flex: 7,
+                child: _OverviewGrid(
+                  spacing: 24,
+                  accountDataList: accountDataList,
+                  billDataList: billDataList,
+                  budgetDataList: budgetDataList,
+                ),
+              ),
+              SizedBox(width: 24),
+              Flexible(
+                flex: 3,
+                child:
+                    Container(width: 400, child: _AlertsView(alerts: alerts)),
+              ),
+            ],
           ),
-          const SizedBox(height: 16),
-          _FinancialView(
-            title: 'Bills',
-            total: sumBillDataPrimaryAmount(billDataList),
-            financialItemViews: buildBillDataListViews(billDataList),
+        ),
+      );
+    } else {
+      return SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 12),
+          child: Column(
+            children: [
+              _AlertsView(alerts: alerts.sublist(0, 1)),
+              SizedBox(height: 12),
+              _OverviewGrid(
+                spacing: 12,
+                accountDataList: accountDataList,
+                billDataList: billDataList,
+                budgetDataList: budgetDataList,
+              ),
+            ],
           ),
-          const SizedBox(height: 16),
+        ),
+      );
+    }
+  }
+}
+
+class _OverviewGrid extends StatelessWidget {
+  const _OverviewGrid({
+    Key key,
+    @required this.spacing,
+    @required this.accountDataList,
+    @required this.billDataList,
+    @required this.budgetDataList,
+  }) : super(key: key);
+
+  final List<AccountData> accountDataList;
+  final List<BillData> billDataList;
+  final List<BudgetData> budgetDataList;
+  final double spacing;
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, constraints) {
+      final bool multipleColumns =
+          isDisplayDesktop(context) && constraints.maxWidth > 600;
+      final double boxWidth = multipleColumns
+          ? constraints.maxWidth / 2 - spacing / 2
+          : double.infinity;
+
+      return Wrap(
+        runSpacing: spacing,
+        children: [
+          Container(
+            width: boxWidth,
+            child: _FinancialView(
+              title: 'Accounts',
+              total: sumAccountDataPrimaryAmount(accountDataList),
+              financialItemViews: buildAccountDataListViews(accountDataList),
+            ),
+          ),
+          if (multipleColumns) SizedBox(width: spacing),
+          Container(
+            width: boxWidth,
+            child: _FinancialView(
+              title: 'Bills',
+              total: sumBillDataPrimaryAmount(billDataList),
+              financialItemViews: buildBillDataListViews(billDataList),
+            ),
+          ),
           _FinancialView(
             title: 'Budgets',
             total: sumBudgetDataPrimaryAmount(budgetDataList),
             financialItemViews:
                 buildBudgetDataListViews(budgetDataList, context),
           ),
-          const SizedBox(height: 16),
         ],
-      ),
-    );
+      );
+    });
   }
 }
 
 class _AlertsView extends StatelessWidget {
+  const _AlertsView({Key key, this.alerts}) : super(key: key);
+
+  final List<AlertData> alerts;
+
   @override
   Widget build(BuildContext context) {
+    final bool isDesktop = isDisplayDesktop(context);
+
     return Container(
       padding: const EdgeInsets.only(left: 16, top: 4, bottom: 4),
       color: RallyColors.cardBackground,
       child: Column(
-        children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              const Text('Alerts'),
-              FlatButton(
-                onPressed: () {},
-                child: const Text('SEE ALL'),
-                textColor: Colors.white,
-              ),
-            ],
-          ),
-          Container(color: RallyColors.primaryBackground, height: 1),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              const Expanded(
-                child: Text(
-                    'Heads up, you’ve used up 90% of your Shopping budget for this month.'),
-              ),
-              SizedBox(
-                width: 100,
-                child: Align(
-                  alignment: Alignment.topRight,
-                  child: IconButton(
+        children: [
+          Container(
+            padding: isDesktop ? EdgeInsets.symmetric(vertical: 16) : null,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text('Alerts'),
+                if (!isDesktop)
+                  FlatButton(
                     onPressed: () {},
-                    icon: Icon(Icons.sort, color: RallyColors.white60),
+                    child: const Text('SEE ALL'),
+                    textColor: Colors.white,
                   ),
-                ),
-              ),
-            ],
+              ],
+            ),
           ),
+          for (AlertData alert in alerts) ...[
+            Container(color: RallyColors.primaryBackground, height: 1),
+            Container(
+              padding: isDesktop ? EdgeInsets.symmetric(vertical: 8) : null,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Expanded(
+                    child: Text(alert.message),
+                  ),
+                  SizedBox(
+                    width: 100,
+                    child: Align(
+                      alignment: Alignment.topRight,
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: Icon(alert.iconData, color: RallyColors.white60),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ]
         ],
       ),
     );
@@ -112,7 +201,7 @@ class _FinancialView extends StatelessWidget {
       color: RallyColors.cardBackground,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
+        children: [
           Padding(
             padding: const EdgeInsets.all(16),
             child: Text(title),

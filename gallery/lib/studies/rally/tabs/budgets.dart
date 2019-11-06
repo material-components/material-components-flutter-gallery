@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 
+import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/rally/charts/pie_chart.dart';
 import 'package:gallery/studies/rally/data.dart';
 import 'package:gallery/studies/rally/finance.dart';
@@ -17,12 +18,17 @@ class _BudgetsViewState extends State<BudgetsView>
   Widget build(BuildContext context) {
     final double capTotal = sumBudgetDataPrimaryAmount(items);
     final double usedTotal = sumBudgetDataAmountUsed(items);
-    return FinancialEntityView(
-      heroLabel: 'Left',
-      heroAmount: capTotal - usedTotal,
-      segments: buildSegmentsFromBudgetItems(items),
-      wholeAmount: capTotal,
-      financialEntityCards: buildBudgetDataListViews(items, context),
+    return SingleChildScrollView(
+      child: Container(
+        padding: isDisplayDesktop(context) ? EdgeInsets.only(top: 24) : null,
+        child: FinancialEntityView(
+          heroLabel: 'Left',
+          heroAmount: capTotal - usedTotal,
+          segments: buildSegmentsFromBudgetItems(items),
+          wholeAmount: capTotal,
+          financialEntityCards: buildBudgetDataListViews(items, context),
+        ),
+      ),
     );
   }
 }

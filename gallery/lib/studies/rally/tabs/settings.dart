@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/rally/data.dart';
 import 'package:gallery/studies/rally/login.dart';
 
@@ -15,7 +16,15 @@ class _SettingsViewState extends State<SettingsView> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(children: items);
+    return SingleChildScrollView(
+      child: Container(
+        padding: isDisplayDesktop(context) ? EdgeInsets.only(top: 24) : null,
+        child: ListView(
+          shrinkWrap: true,
+          children: items,
+        ),
+      ),
+    );
   }
 }
 

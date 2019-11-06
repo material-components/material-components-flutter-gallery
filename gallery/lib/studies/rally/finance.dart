@@ -1,7 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
-import 'package:gallery/studies/rally/charts/pie_chart.dart';
 import 'package:gallery/studies/rally/charts/line_chart.dart';
+import 'package:gallery/studies/rally/charts/pie_chart.dart';
 import 'package:gallery/studies/rally/charts/vertical_fraction_bar.dart';
 import 'package:gallery/studies/rally/colors.dart';
 import 'package:gallery/studies/rally/data.dart';
@@ -25,23 +27,41 @@ class FinancialEntityView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        RallyPieChart(
-          heroLabel: heroLabel,
-          heroAmount: heroAmount,
-          wholeAmount: wholeAmount,
-          segments: segments,
-        ),
-        SizedBox(
-          height: 1,
-          child: Container(
-            color: const Color(0xA026282F),
+    return LayoutBuilder(builder: (context, constraints) {
+      return Column(
+        children: [
+          ConstrainedBox(
+            constraints: BoxConstraints(
+              // We decrease the max height to ensure the [RallyPieChart] does
+              // not take up the full height when it is smaller than
+              // [kPieChartMaxSize].
+              maxHeight:
+                  min(constraints.biggest.shortestSide * 0.9, kPieChartMaxSize),
+            ),
+            child: RallyPieChart(
+              heroLabel: heroLabel,
+              heroAmount: heroAmount,
+              wholeAmount: wholeAmount,
+              segments: segments,
+            ),
           ),
-        ),
-        ListView(shrinkWrap: true, children: financialEntityCards),
-      ],
-    );
+          const SizedBox(height: 24),
+          Container(
+            height: 1,
+            constraints: const BoxConstraints(maxWidth: kPieChartMaxSize),
+            color: RallyColors.inputBackground,
+          ),
+          Container(
+            constraints: const BoxConstraints(maxWidth: kPieChartMaxSize),
+            color: RallyColors.cardBackground,
+            child: ListView(
+              shrinkWrap: true,
+              children: financialEntityCards,
+            ),
+          ),
+        ],
+      );
+    });
   }
 }
 
@@ -77,10 +97,10 @@ class FinancialEntityCategoryView extends StatelessWidget {
       child: SizedBox(
         height: 68,
         child: Column(
-          children: <Widget>[
+          children: [
             Expanded(
               child: Row(
-                children: <Widget>[
+                children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 12, right: 12),
                     child: VerticalFractionBar(
@@ -91,7 +111,7 @@ class FinancialEntityCategoryView extends StatelessWidget {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
+                    children: [
                       Text(
                         title,
                         style: Theme.of(context)
@@ -168,13 +188,13 @@ FinancialEntityCategoryView buildFinancialEntityFromAccountData(
 
 FinancialEntityCategoryView buildFinancialEntityFromBillData(
   BillData model,
-  int billDataInex,
+  int billDataIndex,
 ) {
   return FinancialEntityCategoryView(
     suffix: const Icon(Icons.chevron_right, color: Colors.grey),
     title: model.name,
     subtitle: model.dueDate,
-    indicatorColor: RallyColors.billColor(billDataInex),
+    indicatorColor: RallyColors.billColor(billDataIndex),
     indicatorFraction: 1,
     amount: model.primaryAmount,
   );
@@ -251,7 +271,7 @@ class FinancialEntityCategoryDetailsPage extends StatelessWidget {
         ),
       ),
       body: Column(
-        children: <Widget>[
+        children: [
           SizedBox(
             height: 200,
             width: double.infinity,
@@ -285,15 +305,15 @@ class _DetailedEventCard extends StatelessWidget {
       child: SizedBox(
         height: 68,
         child: Column(
-          children: <Widget>[
+          children: [
             SizedBox(
               height: 67,
               child: Row(
-                children: <Widget>[
+                children: [
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
+                    children: [
                       Text(
                         title,
                         style: textTheme.body1.copyWith(fontSize: 16),
