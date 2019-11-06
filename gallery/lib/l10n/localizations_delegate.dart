@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import 'supported_locales.dart';
-
-// This file is generated using the intl plugin. See the README for more info.
 import 'messages_all.dart';
+import 'supported_locales.dart';
 
 class GalleryLocalizations {
   GalleryLocalizations(this.localeName);
@@ -163,6 +161,81 @@ class GalleryLocalizations {
     return Intl.message(
       'Full Screen',
       desc: 'Tooltip for Full Screen button in a demo.',
+      locale: localeName,
+    );
+  }
+
+  // Settings
+
+  String get settingsTextScaling {
+    return Intl.message(
+      'Text scaling',
+      desc: 'Title for text scaling setting.',
+      locale: localeName,
+    );
+  }
+
+  String get settingsTextDirection {
+    return Intl.message(
+      'Text direction',
+      desc: 'Title for text direction setting.',
+      locale: localeName,
+    );
+  }
+
+  String get settingsLocale {
+    return Intl.message(
+      'Locale',
+      desc: 'Title for locale setting.',
+      locale: localeName,
+    );
+  }
+
+  String get settingsPlatformMechanics {
+    return Intl.message(
+      'Platform mechanics',
+      desc: 'Title for platform mechanics (iOS/Android) setting.',
+      locale: localeName,
+    );
+  }
+
+  String get settingsDarkTheme {
+    return Intl.message(
+      'Dark theme',
+      desc: 'Title for dark theme setting.',
+      locale: localeName,
+    );
+  }
+
+  String get settingsSlowMotion {
+    return Intl.message(
+      'Slow motion',
+      desc: 'Title for slow motion setting.',
+      locale: localeName,
+    );
+  }
+
+  String get settingsAbout {
+    return Intl.message(
+      'About Flutter Gallery',
+      desc: 'Title for information button.',
+      locale: localeName,
+    );
+  }
+
+  String get settingsFeedback {
+    return Intl.message(
+      'Send feedback',
+      desc: 'Title for feedback button.',
+      locale: localeName,
+    );
+  }
+
+  String get settingsAttribution {
+    return Intl.message(
+      'Designed by TOASTER in London',
+      desc:
+          'Title for attribution (TOASTER is a proper name and should remain in English).',
       locale: localeName,
     );
   }

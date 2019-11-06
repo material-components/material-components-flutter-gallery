@@ -50,6 +50,42 @@
     description="Tooltip for Full Screen button in a demo."
     >Full Screen</string>
   <string
+    name="Text scaling"
+    description="Title for text scaling setting."
+    >Text scaling</string>
+  <string
+    name="Text direction"
+    description="Title for text direction setting."
+    >Text direction</string>
+  <string
+    name="Locale"
+    description="Title for locale setting."
+    >Locale</string>
+  <string
+    name="Platform mechanics"
+    description="Title for platform mechanics (iOS/Android) setting."
+    >Platform mechanics</string>
+  <string
+    name="Dark theme"
+    description="Title for dark theme setting."
+    >Dark theme</string>
+  <string
+    name="Slow motion"
+    description="Title for slow motion setting."
+    >Slow motion</string>
+  <string
+    name="About Flutter Gallery"
+    description="Title for information button."
+    >About Flutter Gallery</string>
+  <string
+    name="Send feedback"
+    description="Title for feedback button."
+    >Send feedback</string>
+  <string
+    name="Designed by TOASTER in London"
+    description="Title for attribution (TOASTER is a proper name and should remain in English)."
+    >Designed by TOASTER in London</string>
+  <string
     name="Buttons"
     description="Title for the material buttons component demo."
     >Buttons</string>

@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2019-11-06T15:27:30.831711",
+  "@@last_modified": "2019-11-06T15:50:09.076419",
   "Gallery": "Gallery",
   "@Gallery": {
     "description": "Header title on home screen for Gallery section.",
@@ -63,6 +63,60 @@
   "Full Screen": "Full Screen",
   "@Full Screen": {
     "description": "Tooltip for Full Screen button in a demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Text scaling": "Text scaling",
+  "@Text scaling": {
+    "description": "Title for text scaling setting.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Text direction": "Text direction",
+  "@Text direction": {
+    "description": "Title for text direction setting.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Locale": "Locale",
+  "@Locale": {
+    "description": "Title for locale setting.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Platform mechanics": "Platform mechanics",
+  "@Platform mechanics": {
+    "description": "Title for platform mechanics (iOS/Android) setting.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Dark theme": "Dark theme",
+  "@Dark theme": {
+    "description": "Title for dark theme setting.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Slow motion": "Slow motion",
+  "@Slow motion": {
+    "description": "Title for slow motion setting.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "About Flutter Gallery": "About Flutter Gallery",
+  "@About Flutter Gallery": {
+    "description": "Title for information button.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Send feedback": "Send feedback",
+  "@Send feedback": {
+    "description": "Title for feedback button.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Designed by TOASTER in London": "Designed by TOASTER in London",
+  "@Designed by TOASTER in London": {
+    "description": "Title for attribution (TOASTER is a proper name and should remain in English).",
     "type": "text",
     "placeholders": {}
   },

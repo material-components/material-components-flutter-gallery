@@ -19,6 +19,7 @@ class GalleryThemeData {
         iconTheme: IconThemeData(color: colorScheme.primary),
         brightness: colorScheme.brightness,
       ),
+      iconTheme: IconThemeData(color: colorScheme.onPrimary),
       canvasColor: colorScheme.background,
       scaffoldBackgroundColor: colorScheme.background,
       highlightColor: Colors.transparent,
