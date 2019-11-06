@@ -7,6 +7,9 @@ import '../studies/rally/app.dart';
 import '../studies/shrine/app.dart';
 import 'category_list_item.dart';
 
+const _horizontalPadding = 32.0;
+const _carouselPadding = 8.0;
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -18,34 +21,24 @@ class HomePage extends StatelessWidget {
             Theme.of(context).colorScheme.primaryVariant,
             GalleryLocalizations.of(context).homeHeaderGallery,
           ),
-          Container(
-            child: Container(
-              height: 192,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  CarouselCard(
-                    title: GalleryLocalizations.of(context).shrineTitle,
-                    subtitle:
-                        GalleryLocalizations.of(context).shrineDescription,
-                    study: ShrineApp(),
-                    leadingPadding: 24,
-                  ),
-                  CarouselCard(
-                    title: GalleryLocalizations.of(context).rallyTitle,
-                    subtitle:
-                        GalleryLocalizations.of(context).shrineDescription,
-                    study: RallyApp(),
-                  ),
-                  CarouselCard(
-                    title: GalleryLocalizations.of(context).craneTitle,
-                    subtitle: GalleryLocalizations.of(context).craneDescription,
-                    endPadding: 24,
-                    study: CraneApp(),
-                  ),
-                ],
+          _Carousel(
+            children: [
+              _CarouselCard(
+                title: GalleryLocalizations.of(context).shrineTitle,
+                subtitle: GalleryLocalizations.of(context).shrineDescription,
+                study: ShrineApp(),
               ),
-            ),
+              _CarouselCard(
+                title: GalleryLocalizations.of(context).rallyTitle,
+                subtitle: GalleryLocalizations.of(context).rallyDescription,
+                study: RallyApp(),
+              ),
+              _CarouselCard(
+                title: GalleryLocalizations.of(context).craneTitle,
+                subtitle: GalleryLocalizations.of(context).craneDescription,
+                study: CraneApp(),
+              ),
+            ],
           ),
           header(
             context,
@@ -74,7 +67,10 @@ class HomePage extends StatelessWidget {
 
   Widget header(BuildContext context, Color color, String text) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(32, 16, 32, 16),
+      padding: EdgeInsets.symmetric(
+        horizontal: _horizontalPadding,
+        vertical: 16,
+      ),
       child: Text(
         text,
         style: Theme.of(context).textTheme.display1.apply(color: color),
@@ -83,32 +79,102 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class CarouselCard extends StatelessWidget {
-  const CarouselCard(
-      {Key key,
-      this.title,
-      this.subtitle,
-      this.study,
-      this.leadingPadding = 0,
-      this.endPadding = 0})
-      : super(key: key);
+class _Carousel extends StatefulWidget {
+  const _Carousel({Key key, this.children}) : super(key: key);
+
+  final List<Widget> children;
+
+  @override
+  _CarouselState createState() => _CarouselState();
+}
+
+class _CarouselState extends State<_Carousel> {
+  PageController _controller;
+  int _currentPage = 0;
+
+  static const _carouselHeight = 200.0;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_controller == null) {
+      // The viewPortFraction is calculated as the width of the device minus the
+      // padding.
+      final width = MediaQuery.of(context).size.width;
+      final padding = (_horizontalPadding * 2) - (_carouselPadding * 2);
+      _controller = PageController(
+        initialPage: _currentPage,
+        viewportFraction: (width - padding) / width,
+      );
+    }
+  }
+
+  @override
+  dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  Widget builder(int index) {
+    return AnimatedBuilder(
+      animation: _controller,
+      builder: (context, child) {
+        double value;
+        if (_controller.position.haveDimensions) {
+          value = _controller.page - index;
+        } else {
+          // Assume off screen if haveDimensions is false, unless index is 0.
+          value = -1.0 * index;
+        }
+        // We want the peeking cards to be 160 in height and 0.38 helps
+        // achieve that.
+        value = (1 - (value.abs() * .38)).clamp(0, 1) as double;
+
+        return Center(
+          child: SizedBox(
+            height: Curves.easeOut.transform(value) * _carouselHeight,
+            child: child,
+          ),
+        );
+      },
+      child: widget.children[index],
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: _carouselHeight,
+      child: PageView.builder(
+        onPageChanged: (value) {
+          setState(() {
+            _currentPage = value;
+          });
+        },
+        controller: _controller,
+        itemCount: widget.children.length,
+        itemBuilder: (context, index) => builder(index),
+      ),
+    );
+  }
+}
+
+class _CarouselCard extends StatelessWidget {
+  const _CarouselCard({
+    Key key,
+    this.title,
+    this.subtitle,
+    this.study,
+  }) : super(key: key);
 
   final String title;
   final String subtitle;
-  final double leadingPadding;
-  final double endPadding;
   final Widget study;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsetsDirectional.fromSTEB(
-        8 + leadingPadding,
-        0,
-        8 + endPadding,
-        0,
-      ),
-      width: MediaQuery.of(context).size.width * .85,
+      margin: EdgeInsets.symmetric(horizontal: _carouselPadding),
       child: Material(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         clipBehavior: Clip.antiAlias,

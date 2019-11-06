@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2019-11-06T11:42:01.041264",
+  "@@last_modified": "2019-11-06T15:27:30.831711",
   "Gallery": "Gallery",
   "@Gallery": {
     "description": "Header title on home screen for Gallery section.",
@@ -12,14 +12,14 @@
     "type": "text",
     "placeholders": {}
   },
-  "Basic shopping app": "Basic shopping app",
-  "@Basic shopping app": {
+  "A fashionable retail app": "A fashionable retail app",
+  "@A fashionable retail app": {
     "description": "Study description for Shrine.",
     "type": "text",
     "placeholders": {}
   },
-  "Travel app": "Travel app",
-  "@Travel app": {
+  "A personalized travel app": "A personalized travel app",
+  "@A personalized travel app": {
     "description": "Study description for Crane.",
     "type": "text",
     "placeholders": {}

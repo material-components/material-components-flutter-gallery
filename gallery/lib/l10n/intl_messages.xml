@@ -14,13 +14,13 @@
     description="Header title on home screen for Categories section."
     >Categories</string>
   <string
-    name="Basic shopping app"
+    name="A fashionable retail app"
     description="Study description for Shrine."
-    >Basic shopping app</string>
+    >A fashionable retail app</string>
   <string
-    name="Travel app"
+    name="A personalized travel app"
     description="Study description for Crane."
-    >Travel app</string>
+    >A personalized travel app</string>
   <string
     name="REFERENCE STYLES &amp; MEDIA"
     description="Category title on home screen for reference styles &amp; media."

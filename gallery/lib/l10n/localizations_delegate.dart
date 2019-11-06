@@ -52,7 +52,7 @@ class GalleryLocalizations {
 
   String get shrineDescription {
     return Intl.message(
-      'Basic shopping app',
+      'A fashionable retail app',
       desc: 'Study description for Shrine.',
       locale: localeName,
     );
@@ -62,6 +62,15 @@ class GalleryLocalizations {
     return Intl.message(
       'RALLY',
       desc: 'Study title for Rally.',
+      locale: localeName,
+      skip: true,
+    );
+  }
+
+  String get rallyDescription {
+    return Intl.message(
+      'A personal finance app',
+      desc: 'Study description for Rally.',
       locale: localeName,
       skip: true,
     );
@@ -78,7 +87,7 @@ class GalleryLocalizations {
 
   String get craneDescription {
     return Intl.message(
-      'Travel app',
+      'A personalized travel app',
       desc: 'Study description for Crane.',
       locale: localeName,
     );

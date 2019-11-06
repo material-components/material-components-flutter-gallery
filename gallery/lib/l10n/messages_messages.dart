@@ -23,6 +23,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
+        "A fashionable retail app":
+            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
         "A flat button displays an ink splash on press but does not lift. Use flat buttons on toolbars, in dialogs and inline with padding":
             MessageLookupByLibrary.simpleMessage(
                 "A flat button displays an ink splash on press but does not lift. Use flat buttons on toolbars, in dialogs and inline with padding"),
@@ -31,6 +33,8 @@ class MessageLookup extends MessageLookupByLibrary {
                 "A floating action button is a circular icon button that hovers over content to promote a primary action in the application."),
         "A full screen dialog demo":
             MessageLookupByLibrary.simpleMessage("A full screen dialog demo"),
+        "A personalized travel app":
+            MessageLookupByLibrary.simpleMessage("A personalized travel app"),
         "A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices.":
             MessageLookupByLibrary.simpleMessage(
                 "A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices."),
@@ -70,8 +74,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "BLUE": MessageLookupByLibrary.simpleMessage("BLUE"),
         "BLUE GREY": MessageLookupByLibrary.simpleMessage("BLUE GREY"),
         "BROWN": MessageLookupByLibrary.simpleMessage("BROWN"),
-        "Basic shopping app":
-            MessageLookupByLibrary.simpleMessage("Basic shopping app"),
         "Buttons": MessageLookupByLibrary.simpleMessage("Buttons"),
         "CANCEL": MessageLookupByLibrary.simpleMessage("CANCEL"),
         "CYAN": MessageLookupByLibrary.simpleMessage("CYAN"),
@@ -161,7 +163,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "Toggle buttons can be used to group related options. To emphasize groups of related toggle buttons, a group should share a common container":
             MessageLookupByLibrary.simpleMessage(
                 "Toggle buttons can be used to group related options. To emphasize groups of related toggle buttons, a group should share a common container"),
-        "Travel app": MessageLookupByLibrary.simpleMessage("Travel app"),
         "Use Google\'s location service?": MessageLookupByLibrary.simpleMessage(
             "Use Google\'s location service?"),
         "With Background":

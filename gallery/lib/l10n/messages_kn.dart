@@ -21,12 +21,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
-        "Basic shopping app":
-            MessageLookupByLibrary.simpleMessage("ಬೇಸಿಕ್ ಶಾಪಿಂಗ್ ಆ್ಯಪ್"),
         "Categories": MessageLookupByLibrary.simpleMessage("ವರ್ಗಗಳು"),
         "Gallery": MessageLookupByLibrary.simpleMessage("ಗ್ಯಾಲರಿ"),
         "REFERENCE STYLES & MEDIA":
-            MessageLookupByLibrary.simpleMessage("ಉಲ್ಲೇಖ ಶೈಲಿಗಳು ಮತ್ತು ಮಾಧ್ಯಮ"),
-        "Travel app": MessageLookupByLibrary.simpleMessage("ಪ್ರಯಾಣದ ಆ್ಯಪ್")
+            MessageLookupByLibrary.simpleMessage("ಉಲ್ಲೇಖ ಶೈಲಿಗಳು ಮತ್ತು ಮಾಧ್ಯಮ")
       };
 }
