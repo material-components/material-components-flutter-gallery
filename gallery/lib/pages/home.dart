@@ -6,32 +6,11 @@ import '../studies/crane/app.dart';
 import '../studies/rally/app.dart';
 import '../studies/shrine/app.dart';
 import 'category_list_item.dart';
-import 'settings.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          Container(
-            color: Theme.of(context).colorScheme.secondaryVariant,
-            child: IconButton(
-              icon: Icon(
-                Icons.settings,
-              ),
-              onPressed: () {
-                Navigator.of(context).push<void>(
-                  MaterialPageRoute(
-                    fullscreenDialog: true,
-                    builder: (context) => SettingsPage(),
-                  ),
-                );
-              },
-            ),
-          ),
-        ],
-      ),
       body: ListView(
         children: [
           header(

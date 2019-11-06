@@ -4,10 +4,8 @@ class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Settings'),
-      ),
-      body: Center(
+      backgroundColor: Theme.of(context).colorScheme.secondaryVariant,
+      body: Container(
         child: Switch(
           value: false,
           onChanged: (value) {},
