@@ -106,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Flat, raised, outline, and more"),
         "Floating Action Button":
             MessageLookupByLibrary.simpleMessage("Floating Action Button"),
+        "Full Screen": MessageLookupByLibrary.simpleMessage("Full Screen"),
         "Full Screen Dialog":
             MessageLookupByLibrary.simpleMessage("Full Screen Dialog"),
         "Fullscreen": MessageLookupByLibrary.simpleMessage("Fullscreen"),

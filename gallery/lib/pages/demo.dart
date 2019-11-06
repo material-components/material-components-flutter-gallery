@@ -3,12 +3,14 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../data/demos.dart';
 import '../l10n/localizations_delegate.dart';
+import '../layout/adaptive.dart';
 
 enum _DemoState {
   normal,
   options,
   info,
   code,
+  fullscreen,
 }
 
 class DemoPage extends StatefulWidget {
@@ -23,8 +25,7 @@ class DemoPage extends StatefulWidget {
   _DemoPageState createState() => _DemoPageState();
 }
 
-class _DemoPageState extends State<DemoPage>
-    with SingleTickerProviderStateMixin {
+class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
   _DemoState _state = _DemoState.normal;
   int _configIndex = 0;
 
@@ -33,6 +34,11 @@ class _DemoPageState extends State<DemoPage>
   }
 
   void _handleTap(_DemoState newState) {
+    // Do not allow normal state for desktop.
+    if (_state == newState && isDisplayDesktop(context)) {
+      return;
+    }
+
     setState(() {
       _state = _state == newState ? _DemoState.normal : newState;
     });
@@ -64,8 +70,22 @@ class _DemoPageState extends State<DemoPage>
     }
   }
 
+  void _resolveState(BuildContext context) {
+    final isDesktop = isDisplayDesktop(context);
+    if (_state == _DemoState.fullscreen && !isDesktop) {
+      // Do not allow fullscreen state for mobile.
+      _state = _DemoState.normal;
+    } else if (_state == _DemoState.normal && isDesktop) {
+      // Do not allow normal state for desktop.
+      _state = _DemoState.info;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
+    bool isDesktop = isDisplayDesktop(context);
+    _resolveState(context);
+
     final colorScheme = Theme.of(context).colorScheme;
     final iconColor = colorScheme.onSurface;
     final selectedIconColor = colorScheme.primary;
@@ -97,6 +117,14 @@ class _DemoPageState extends State<DemoPage>
           color: iconColor,
           onPressed: () => _showDocumentation(context),
         ),
+        if (isDesktop)
+          IconButton(
+            icon: Icon(Icons.fullscreen),
+            tooltip: GalleryLocalizations.of(context).demoFullscreenTooltip,
+            color:
+                _state == _DemoState.fullscreen ? selectedIconColor : iconColor,
+            onPressed: () => _handleTap(_DemoState.fullscreen),
+          ),
       ],
     );
 
@@ -106,7 +134,8 @@ class _DemoPageState extends State<DemoPage>
         mediaQuery.padding.top -
         mediaQuery.padding.bottom -
         appBar.preferredSize.height;
-    final maxSectionHeight = contentHeight - 64;
+    final maxSectionHeight = isDesktop ? contentHeight : contentHeight - 64;
+    final horizontalPadding = isDesktop ? mediaQuery.size.width * 0.12 : 0.0;
 
     Widget section;
     switch (_state) {
@@ -136,22 +165,55 @@ class _DemoPageState extends State<DemoPage>
           title: 'Code for ${_currentConfig.title}',
         );
         break;
-      case _DemoState.normal:
+      default:
         section = Container();
         break;
     }
 
-    section = AnimatedSize(
-      vsync: this,
-      duration: Duration(milliseconds: 200),
-      alignment: Alignment.topCenter,
-      curve: Curves.easeIn,
-      child: section,
-    );
+    Widget body;
+    if (isDesktop) {
+      Widget demoContent = DemoContent(
+        height: contentHeight,
+        buildRoute: _currentConfig.buildRoute,
+      );
+      if (_state != _DemoState.fullscreen) {
+        demoContent = Container(
+          width: 320,
+          height: 648,
+          child: demoContent,
+        );
+      } else {
+        demoContent = Expanded(child: demoContent);
+      }
+      // If the available width is not very wide, reduce the amount of space
+      // between the demo content and the selected section.
+      final spaceBetween =
+          mediaQuery.size.width > 900 ? horizontalPadding : 48.0;
 
-    return Scaffold(
-      appBar: appBar,
-      body: SafeArea(
+      body = SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 56),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              if (_state != _DemoState.fullscreen) Expanded(child: section),
+              if (_state != _DemoState.fullscreen)
+                SizedBox(width: spaceBetween),
+              demoContent,
+            ],
+          ),
+        ),
+      );
+    } else {
+      section = AnimatedSize(
+        vsync: this,
+        duration: const Duration(milliseconds: 200),
+        alignment: Alignment.topCenter,
+        curve: Curves.easeIn,
+        child: section,
+      );
+
+      body = SafeArea(
         bottom: false,
         child: ListView(
           // Use a non-scrollable ListView to enable animation of shifting the
@@ -167,6 +229,15 @@ class _DemoPageState extends State<DemoPage>
             SizedBox(height: bottomSafeArea),
           ],
         ),
+      );
+    }
+
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
+      color: colorScheme.background,
+      child: Scaffold(
+        appBar: appBar,
+        body: body,
       ),
     );
   }

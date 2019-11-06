@@ -1,5 +1,5 @@
 {
-  "@@last_modified": "2019-10-31T17:07:52.560352",
+  "@@last_modified": "2019-11-06T11:42:01.041264",
   "Gallery": "Gallery",
   "@Gallery": {
     "description": "Header title on home screen for Gallery section.",
@@ -57,6 +57,12 @@
   "API Documentation": "API Documentation",
   "@API Documentation": {
     "description": "Tooltip for API documentation button in a demo.",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Full Screen": "Full Screen",
+  "@Full Screen": {
+    "description": "Tooltip for Full Screen button in a demo.",
     "type": "text",
     "placeholders": {}
   },

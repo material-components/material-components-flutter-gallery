@@ -46,6 +46,10 @@
     description="Tooltip for API documentation button in a demo."
     >API Documentation</string>
   <string
+    name="Full Screen"
+    description="Tooltip for Full Screen button in a demo."
+    >Full Screen</string>
+  <string
     name="Buttons"
     description="Title for the material buttons component demo."
     >Buttons</string>

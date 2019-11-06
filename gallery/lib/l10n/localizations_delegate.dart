@@ -150,6 +150,14 @@ class GalleryLocalizations {
     );
   }
 
+  String get demoFullscreenTooltip {
+    return Intl.message(
+      'Full Screen',
+      desc: 'Tooltip for Full Screen button in a demo.',
+      locale: localeName,
+    );
+  }
+
   // Material component demo list.
 
   String get demoButtonTitle {
