@@ -43,7 +43,7 @@ class AccountsView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   for (AccountDetailData item in detailItems)
-                    _AccountDetail(title: item.title, message: item.value),
+                    _AccountDetail(title: item.title, value: item.value),
                 ],
               ),
             ),
@@ -57,14 +57,14 @@ class AccountsView extends StatelessWidget {
 }
 
 class _AccountDetail extends StatelessWidget {
-  const _AccountDetail({Key key, this.message, this.title}) : super(key: key);
+  const _AccountDetail({Key key, this.value, this.title}) : super(key: key);
 
-  final String message;
+  final String value;
   final String title;
 
   @override
   Widget build(BuildContext context) {
-    TextTheme textTheme = Theme.of(context).textTheme;
+    final textTheme = Theme.of(context).textTheme;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -76,7 +76,7 @@ class _AccountDetail extends StatelessWidget {
         ),
         SizedBox(height: 8),
         Text(
-          message,
+          value,
           style: textTheme.body2.copyWith(fontSize: 20),
         ),
         SizedBox(height: 8),

@@ -53,8 +53,8 @@ class RallyLineChartPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final double ticksTop = size.height - space * 5;
-    final double labelsTop = size.height - space * 2;
+    final ticksTop = size.height - space * 5;
+    final labelsTop = size.height - space * 2;
     _drawLine(
       canvas,
       Rect.fromLTWH(0, 0, size.width, ticksTop),
@@ -86,35 +86,35 @@ class RallyLineChartPainter extends CustomPainter {
     double lastAmount = 800;
 
     // Try changing this value between 1, 7, 15, etc.
-    const int smoothing = 7;
+    const smoothing = 7;
 
     // Align the points with equal deltas (1 day) as a cumulative sum.
     int startMillis = startDate.millisecondsSinceEpoch;
-    final List<Offset> points = <Offset>[
+    final points = <Offset>[
       Offset(0, (maxAmount - lastAmount) / maxAmount * rect.height)
     ];
     for (int i = 0; i < numDays + smoothing; i++) {
-      final int endMillis = startMillis + millisInDay * 1;
-      final List<DetailedEventData> filteredEvents = events.where(
+      final endMillis = startMillis + millisInDay * 1;
+      final filteredEvents = events.where(
         (e) {
           return startMillis <= e.date.millisecondsSinceEpoch &&
               e.date.millisecondsSinceEpoch <= endMillis;
         },
       ).toList();
       lastAmount += sumOf<DetailedEventData>(filteredEvents, (e) => e.amount);
-      final double x = i / numDays * rect.width;
-      final double y = (maxAmount - lastAmount) / maxAmount * rect.height;
+      final x = i / numDays * rect.width;
+      final y = (maxAmount - lastAmount) / maxAmount * rect.height;
       points.add(Offset(x, y));
       startMillis = endMillis;
     }
 
-    final Path path = Path();
+    final path = Path();
     path.moveTo(points[0].dx, points[0].dy);
     for (int i = 1; i < points.length - smoothing; i += smoothing) {
-      final double x1 = points[i].dx;
-      final double y1 = points[i].dy;
-      final double x2 = (x1 + points[i + smoothing].dx) / 2;
-      final double y2 = (y1 + points[i + smoothing].dy) / 2;
+      final x1 = points[i].dx;
+      final y1 = points[i].dy;
+      final x2 = (x1 + points[i + smoothing].dx) / 2;
+      final y2 = (y1 + points[i + smoothing].dy) / 2;
       path.quadraticBezierTo(x1, y1, x2, y2);
     }
     canvas.drawPath(path, linePaint);
@@ -139,31 +139,31 @@ class RallyLineChartPainter extends CustomPainter {
 
   /// Set X-axis labels under the X-axis increment markers.
   void _drawXAxisLabels(Canvas canvas, Rect rect) {
-    final TextStyle selectedLabelStyle = labelStyle.copyWith(
+    final selectedLabelStyle = labelStyle.copyWith(
       fontWeight: FontWeight.w700,
     );
-    final TextStyle unselectedLabelStyle = labelStyle.copyWith(
+    final unselectedLabelStyle = labelStyle.copyWith(
       fontWeight: FontWeight.w700,
       color: RallyColors.gray25,
     );
 
-    final TextPainter leftLabel = TextPainter(
+    final leftLabel = TextPainter(
       text: TextSpan(text: 'AUGUST 2019', style: unselectedLabelStyle),
       textDirection: TextDirection.ltr,
     );
     leftLabel.layout();
     leftLabel.paint(canvas, Offset(rect.left + space / 2, rect.center.dy));
 
-    final TextPainter centerLabel = TextPainter(
+    final centerLabel = TextPainter(
       text: TextSpan(text: 'SEPTEMBER 2019', style: selectedLabelStyle),
       textDirection: TextDirection.ltr,
     );
     centerLabel.layout();
-    final double x = (rect.width - centerLabel.width) / 2;
-    final double y = rect.center.dy;
+    final x = (rect.width - centerLabel.width) / 2;
+    final y = rect.center.dy;
     centerLabel.paint(canvas, Offset(x, y));
 
-    final TextPainter rightLabel = TextPainter(
+    final rightLabel = TextPainter(
       text: TextSpan(text: 'OCTOBER 2019', style: unselectedLabelStyle),
       textDirection: TextDirection.ltr,
     );

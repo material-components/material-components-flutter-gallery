@@ -17,7 +17,7 @@ class _BillsViewState extends State<BillsView>
 
   @override
   Widget build(BuildContext context) {
-    final double dueTotal = sumBillDataPrimaryAmount(items);
+    final dueTotal = sumBillDataPrimaryAmount(items);
     return SingleChildScrollView(
       child: Container(
         padding: isDisplayDesktop(context) ? EdgeInsets.only(top: 24) : null,

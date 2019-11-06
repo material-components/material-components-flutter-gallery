@@ -133,8 +133,8 @@ class _AnimatedRallyPieChart extends AnimatedWidget {
 
   @override
   Widget build(BuildContext context) {
-    final TextTheme textTheme = Theme.of(context).textTheme;
-    final TextStyle labelTextStyle = textTheme.body1.copyWith(
+    final textTheme = Theme.of(context).textTheme;
+    final labelTextStyle = textTheme.body1.copyWith(
       fontSize: 14,
       letterSpacing: 0.5,
     );
@@ -203,17 +203,17 @@ class _RallyPieChartOutlineBoxPainter extends BoxPainter {
   void paint(Canvas canvas, Offset offset, ImageConfiguration configuration) {
     // Create two padded reacts to draw arcs in: one for colored arcs and one for
     // inner bg arc.
-    const double strokeWidth = 4;
-    final double outerRadius = min(
+    const strokeWidth = 4.0;
+    final outerRadius = min(
           configuration.size.width,
           configuration.size.height,
         ) /
         2;
-    final Rect outerRect = Rect.fromCircle(
+    final outerRect = Rect.fromCircle(
       center: configuration.size.center(offset),
       radius: outerRadius - strokeWidth * 3,
     );
-    final Rect innerRect = Rect.fromCircle(
+    final innerRect = Rect.fromCircle(
       center: configuration.size.center(offset),
       radius: outerRadius - strokeWidth * 4,
     );
@@ -222,33 +222,32 @@ class _RallyPieChartOutlineBoxPainter extends BoxPainter {
     double cumulativeSpace = 0;
     double cumulativeTotal = 0;
     for (RallyPieChartSegment segment in segments) {
-      final Paint paint = Paint()..color = segment.color;
-      final double startAngle =
-          _calculateStartAngle(cumulativeTotal, cumulativeSpace);
-      final double sweepAngle = _calculateSweepAngle(segment.value, 0);
+      final paint = Paint()..color = segment.color;
+      final startAngle = _calculateStartAngle(cumulativeTotal, cumulativeSpace);
+      final sweepAngle = _calculateSweepAngle(segment.value, 0);
       canvas.drawArc(outerRect, startAngle, sweepAngle, true, paint);
       cumulativeTotal += segment.value;
       cumulativeSpace += spaceRadians;
     }
 
     // Paint any remaining space black (e.g. budget amount remaining).
-    final double remaining = wholeAmount - cumulativeTotal;
+    final remaining = wholeAmount - cumulativeTotal;
     if (remaining > 0) {
-      final Paint paint = Paint()..color = Colors.black;
-      final double startAngle =
+      final paint = Paint()..color = Colors.black;
+      final startAngle =
           _calculateStartAngle(cumulativeTotal, spaceRadians * segments.length);
-      final double sweepAngle = _calculateSweepAngle(remaining, -spaceRadians);
+      final sweepAngle = _calculateSweepAngle(remaining, -spaceRadians);
       canvas.drawArc(outerRect, startAngle, sweepAngle, true, paint);
     }
 
     // Paint a smaller inner circle to cover the painted arcs, so they are
     // display as segments.
-    final Paint bgPaint = Paint()..color = RallyColors.primaryBackground;
+    final bgPaint = Paint()..color = RallyColors.primaryBackground;
     canvas.drawArc(innerRect, 0, 2 * pi, true, bgPaint);
   }
 
   double _calculateAngle(double amount, double offset) {
-    final double wholeMinusSpacesRadians =
+    final wholeMinusSpacesRadians =
         wholeRadians - (segments.length * spaceRadians);
     return maxFraction *
         (amount / wholeAmount * wholeMinusSpacesRadians + offset);

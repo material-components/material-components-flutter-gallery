@@ -16,8 +16,8 @@ class _BudgetsViewState extends State<BudgetsView>
 
   @override
   Widget build(BuildContext context) {
-    final double capTotal = sumBudgetDataPrimaryAmount(items);
-    final double usedTotal = sumBudgetDataAmountUsed(items);
+    final capTotal = sumBudgetDataPrimaryAmount(items);
+    final usedTotal = sumBudgetDataAmountUsed(items);
     return SingleChildScrollView(
       child: Container(
         padding: isDisplayDesktop(context) ? EdgeInsets.only(top: 24) : null,

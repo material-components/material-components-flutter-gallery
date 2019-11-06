@@ -299,7 +299,7 @@ class _DetailedEventCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TextTheme textTheme = Theme.of(context).textTheme;
+    final textTheme = Theme.of(context).textTheme;
     return FlatButton(
       onPressed: () {},
       child: SizedBox(

@@ -18,12 +18,10 @@ class OverviewView extends StatefulWidget {
 class _OverviewViewState extends State<OverviewView> {
   @override
   Widget build(BuildContext context) {
-    final List<AccountData> accountDataList =
-        DummyDataService.getAccountDataList();
-    final List<BillData> billDataList = DummyDataService.getBillDataList();
-    final List<BudgetData> budgetDataList =
-        DummyDataService.getBudgetDataList();
-    final List<AlertData> alerts = DummyDataService.getAlerts();
+    final accountDataList = DummyDataService.getAccountDataList();
+    final billDataList = DummyDataService.getBillDataList();
+    final budgetDataList = DummyDataService.getBudgetDataList();
+    final alerts = DummyDataService.getAlerts();
 
     if (isDisplayDesktop(context)) {
       return SingleChildScrollView(
@@ -90,9 +88,9 @@ class _OverviewGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      final bool multipleColumns =
+      final hasMultipleColumns =
           isDisplayDesktop(context) && constraints.maxWidth > 600;
-      final double boxWidth = multipleColumns
+      final boxWidth = hasMultipleColumns
           ? constraints.maxWidth / 2 - spacing / 2
           : double.infinity;
 
@@ -107,7 +105,7 @@ class _OverviewGrid extends StatelessWidget {
               financialItemViews: buildAccountDataListViews(accountDataList),
             ),
           ),
-          if (multipleColumns) SizedBox(width: spacing),
+          if (hasMultipleColumns) SizedBox(width: spacing),
           Container(
             width: boxWidth,
             child: _FinancialView(
@@ -135,7 +133,7 @@ class _AlertsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool isDesktop = isDisplayDesktop(context);
+    final isDesktop = isDisplayDesktop(context);
 
     return Container(
       padding: const EdgeInsets.only(left: 16, top: 4, bottom: 4),
@@ -196,7 +194,7 @@ class _FinancialView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData theme = Theme.of(context);
+    final theme = Theme.of(context);
     return Container(
       color: RallyColors.cardBackground,
       child: Column(
