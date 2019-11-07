@@ -32,8 +32,8 @@ flutter:
     - assets/icons/shrine_card/
     - packages/rally_assets/logo.png
     - packages/rally_assets/thumb.png
-    - assets/crane/flights/
     - assets/crane/
+    - assets/crane/destinations/
     - packages/shrine_images/diamond.png
     - packages/shrine_images/slanted_menu.png
     - packages/shrine_images/0-0.jpg

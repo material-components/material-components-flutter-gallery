@@ -21,7 +21,7 @@ import 'package:meta/meta.dart';
 import 'border_tab_indicator.dart';
 import 'colors.dart';
 import 'model/data.dart';
-import 'model/flight.dart';
+import 'model/destination.dart';
 
 class _FrontLayer extends StatelessWidget {
   const _FrontLayer({
@@ -68,24 +68,27 @@ class ItemCards extends StatelessWidget {
   const ItemCards({Key key, this.index}) : super(key: key);
 
   static List<Widget> _buildFlightCards({int listIndex}) {
-    final List<Flight> flightsFly = getFlights(Category.findTrips)..shuffle();
-    final List<Flight> flightsSleep = getFlights(Category.findTrips)..shuffle();
-    final List<Flight> flightsEat = getFlights(Category.findTrips)..shuffle();
+    final List<FlyDestination> flyDestinations = getFlyDestinations()
+      ..shuffle();
+    final List<SleepDestination> sleepDestinations = getSleepDestinations()
+      ..shuffle();
+    final List<EatDestination> eatDestinations = getEatDestinations()
+      ..shuffle();
 
-    List<Flight> flights;
+    List<Destination> destinations;
     switch (listIndex) {
       case 0:
-        flights = flightsFly;
+        destinations = flyDestinations;
         break;
       case 1:
-        flights = flightsSleep;
+        destinations = sleepDestinations;
         break;
       case 2:
-        flights = flightsEat;
+        destinations = eatDestinations;
         break;
     }
-    return List.generate(flights.length, (index) {
-      return _DestinationCard(flight: flights[index]);
+    return List.generate(destinations.length, (index) {
+      return _DestinationCard(destination: destinations[index]);
     }).toList();
   }
 
@@ -181,7 +184,7 @@ class _BackdropState extends State<Backdrop> with TickerProviderStateMixin {
           leading: Align(
             child: Transform.translate(
               offset: Offset(-8.0, -8.0),
-              child: Image.asset('assets/menu.png', height: 20),
+              child: Image.asset('assets/crane/menu.png', height: 20),
             ),
             alignment: Alignment.centerLeft,
           ),
@@ -293,7 +296,7 @@ class _CraneAppBarState extends State<CraneAppBar> {
               iconSize: 72.0,
               padding: EdgeInsets.all(0.0),
               icon: Image.asset(
-                'assets/menu_logo.png',
+                'assets/crane/logo.png',
                 fit: BoxFit.cover,
               ),
               onPressed: () {},
@@ -381,13 +384,13 @@ class _NavigationTabState extends State<_NavigationTab> {
 }
 
 class _DestinationCard extends StatelessWidget {
-  _DestinationCard({this.flight}) : assert(flight != null);
-  final Flight flight;
+  _DestinationCard({this.destination}) : assert(destination != null);
+  final Destination destination;
 
   @override
   Widget build(BuildContext context) {
     final imageWidget = Image.asset(
-      flight.assetName,
+      destination.assetName,
       fit: BoxFit.cover,
     );
 
@@ -405,14 +408,14 @@ class _DestinationCard extends StatelessWidget {
             ),
           ),
           title: Text(
-            flight.destination,
+            destination.destination,
             style: Theme.of(context)
                 .textTheme
                 .subhead
                 .copyWith(color: Colors.black),
           ),
           subtitle: Text(
-            flight.layover ? 'Layover' : 'Nonstop',
+            destination.subtitle,
             style:
                 Theme.of(context).textTheme.subtitle.copyWith(fontSize: 12.0),
           ),
