@@ -147,7 +147,9 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
           onConfigChanged: (index) {
             setState(() {
               _configIndex = index;
-              _state = _DemoState.normal;
+              if (!isDesktop) {
+                _state = _DemoState.normal;
+              }
             });
           },
         );
