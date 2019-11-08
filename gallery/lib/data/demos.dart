@@ -7,6 +7,7 @@ import '../demos/cupertino/cupertino_alert_demo.dart';
 import '../demos/cupertino/cupertino_button_demo.dart';
 import '../demos/material/button_demo.dart';
 import '../demos/material/dialog_demo.dart';
+import '../demos/material/text_field_demo.dart';
 import '../demos/reference/colors_demo.dart';
 import '../l10n/localizations_delegate.dart';
 import '../l10n/supported_locales.dart';
@@ -131,7 +132,22 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           buildRoute: (context) => DialogDemo(type: DialogDemoType.fullscreen),
         ),
       ],
-    )
+    ),
+    GalleryDemo(
+      title: 'Text fields', // TODO: Localize.
+      icon: GalleryIcons.textFieldsAlt,
+      subtitle: 'Single line of editable text and numbers', // TODO: Localize.
+      configurations: [
+        GalleryDemoConfiguration(
+          title: 'Text fields', // TODO: Localize.
+          description: 'Text fields allow users to enter text into a UI. They '
+              'typically appear in forms and dialogs.', // TODO: Localize.
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/TextField-class.html',
+          buildRoute: (context) => TextFieldDemo(),
+        ),
+      ],
+    ),
   ];
 }
 

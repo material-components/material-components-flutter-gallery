@@ -12,9 +12,11 @@ class MaterialDemoThemeData {
       colorScheme: _colorScheme,
     ),
     canvasColor: _colorScheme.background,
-    scaffoldBackgroundColor: _colorScheme.background,
+    cursorColor: _colorScheme.primary,
     highlightColor: Colors.transparent,
     indicatorColor: _colorScheme.onPrimary,
+    primaryColor: _colorScheme.primary,
+    scaffoldBackgroundColor: _colorScheme.background,
   );
 
   static const _colorScheme = ColorScheme(
