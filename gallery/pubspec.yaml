@@ -26,6 +26,7 @@ dev_dependencies:
 
 flutter:
   assets:
+    - assets/demos/
     - assets/icons/cupertino/
     - assets/icons/material/
     - assets/icons/reference/

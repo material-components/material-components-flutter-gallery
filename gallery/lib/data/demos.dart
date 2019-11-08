@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'icons.dart';
 import '../demos/cupertino/cupertino_alert_demo.dart';
 import '../demos/cupertino/cupertino_button_demo.dart';
+import '../demos/material/bottom_navigation_demo.dart';
 import '../demos/material/button_demo.dart';
 import '../demos/material/dialog_demo.dart';
 import '../demos/material/text_field_demo.dart';
@@ -12,6 +12,7 @@ import '../demos/reference/colors_demo.dart';
 import '../l10n/localizations_delegate.dart';
 import '../l10n/supported_locales.dart';
 import '../themes/material_demo_theme_data.dart';
+import 'icons.dart';
 
 // TODO: Localize all strings.
 
@@ -47,6 +48,37 @@ class GalleryDemoConfiguration {
 
 List<GalleryDemo> materialDemos(BuildContext context) {
   return [
+    GalleryDemo(
+      title: 'Bottom navigation',
+      icon: GalleryIcons.bottomNavigation,
+      subtitle: 'Bottom navigation with cross-fading views',
+      configurations: [
+        GalleryDemoConfiguration(
+          title: 'Bottom navigation with labels',
+          description:
+              'Bottom navigation bars display three to five destinations at the bottom of a screen. '
+              'Each destination is represented by an icon and an optional text label. When a bottom '
+              'navigation icon is tapped, the user is taken to the top-level navigation destination '
+              'associated with that icon.',
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html',
+          buildRoute: (context) =>
+              BottomNavigationDemo(type: BottomNavigationDemoType.withLabels),
+        ),
+        GalleryDemoConfiguration(
+          title: 'Bottom navigation with one label',
+          description:
+              'Bottom navigation bars display three to five destinations at the bottom of a screen. '
+              'Each destination is represented by an icon and an optional text label. When a bottom '
+              'navigation icon is tapped, the user is taken to the top-level navigation destination '
+              'associated with that icon.',
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html',
+          buildRoute: (context) => BottomNavigationDemo(
+              type: BottomNavigationDemoType.withoutLabels),
+        ),
+      ],
+    ),
     GalleryDemo(
       title: GalleryLocalizations.of(context).demoButtonTitle,
       icon: GalleryIcons.genericButtons,
