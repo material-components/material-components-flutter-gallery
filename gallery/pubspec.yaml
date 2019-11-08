@@ -29,7 +29,7 @@ flutter:
     - assets/icons/cupertino/
     - assets/icons/material/
     - assets/icons/reference/
-    - assets/icons/shrine_card/
+    - assets/studies/
     - packages/rally_assets/logo.png
     - packages/rally_assets/thumb.png
     - assets/crane/

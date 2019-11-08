@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 import '../data/demos.dart';
 import '../l10n/localizations_delegate.dart';
 import '../studies/crane/app.dart';
+import '../studies/crane/colors.dart';
 import '../studies/rally/app.dart';
+import '../studies/rally/colors.dart';
 import '../studies/shrine/app.dart';
+import '../studies/shrine/colors.dart';
+import '../studies/starter/app.dart';
 import 'category_list_item.dart';
 
 const _horizontalPadding = 32.0;
@@ -26,17 +30,34 @@ class HomePage extends StatelessWidget {
               _CarouselCard(
                 title: GalleryLocalizations.of(context).shrineTitle,
                 subtitle: GalleryLocalizations.of(context).shrineDescription,
+                asset: 'assets/studies/shrine_card.png',
+                assetDark: 'assets/studies/shrine_card_dark.png',
+                textColor: kShrineBrown900,
                 study: ShrineApp(),
               ),
               _CarouselCard(
                 title: GalleryLocalizations.of(context).rallyTitle,
                 subtitle: GalleryLocalizations.of(context).rallyDescription,
+                textColor: RallyColors.accountColors[0],
+                asset: 'assets/studies/rally_card.png',
+                assetDark: 'assets/studies/rally_card_dark.png',
                 study: RallyApp(),
               ),
               _CarouselCard(
                 title: GalleryLocalizations.of(context).craneTitle,
                 subtitle: GalleryLocalizations.of(context).craneDescription,
+                asset: 'assets/studies/crane_card.png',
+                assetDark: 'assets/studies/crane_card_dark.png',
+                textColor: kCranePurple700,
                 study: CraneApp(),
+              ),
+              _CarouselCard(
+                title: 'Baseline starter app', // TODO: Localize.
+                subtitle: 'A responsive starter layout', // TODO: Localize.
+                asset: 'assets/studies/starter_card.png',
+                assetDark: 'assets/studies/starter_card_dark.png',
+                textColor: Colors.black,
+                study: StarterApp(),
               ),
             ],
           ),
@@ -92,7 +113,7 @@ class _CarouselState extends State<_Carousel> {
   PageController _controller;
   int _currentPage = 0;
 
-  static const _carouselHeight = 200.0;
+  static const _carouselHeight = 200.0 + 2 * _carouselPadding;
 
   @override
   void didChangeDependencies() {
@@ -164,18 +185,30 @@ class _CarouselCard extends StatelessWidget {
     Key key,
     this.title,
     this.subtitle,
+    this.asset,
+    this.assetDark,
+    this.textColor,
     this.study,
   }) : super(key: key);
 
   final String title;
   final String subtitle;
+  final String asset;
+  final String assetDark;
+  final Color textColor;
   final Widget study;
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
+    final isDark = MediaQuery.platformBrightnessOf(context) == Brightness.dark;
+    final asset = isDark ? assetDark : this.asset;
+    final textColor = isDark ? Colors.white.withOpacity(0.87) : this.textColor;
+
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: _carouselPadding),
+      margin: EdgeInsets.all(_carouselPadding),
       child: Material(
+        elevation: 4,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         clipBehavior: Clip.antiAlias,
         child: InkWell(
@@ -190,7 +223,7 @@ class _CarouselCard extends StatelessWidget {
             fit: StackFit.expand,
             children: [
               Ink.image(
-                image: AssetImage('assets/icons/shrine_card/shrine_card.png'),
+                image: AssetImage(asset),
                 fit: BoxFit.cover,
               ),
               Positioned(
@@ -201,15 +234,11 @@ class _CarouselCard extends StatelessWidget {
                   children: [
                     Text(
                       title,
-                      style: Theme.of(context).textTheme.caption.apply(
-                            color: Color(0xFF3E282A),
-                          ),
+                      style: textTheme.caption.apply(color: textColor),
                     ),
                     Text(
                       subtitle,
-                      style: Theme.of(context).textTheme.overline.apply(
-                            color: Color(0xFF3E282A),
-                          ),
+                      style: textTheme.overline.apply(color: textColor),
                     ),
                   ],
                 ),

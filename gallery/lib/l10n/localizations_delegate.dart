@@ -41,7 +41,7 @@ class GalleryLocalizations {
 
   String get shrineTitle {
     return Intl.message(
-      'SHRINE',
+      'Shrine',
       desc: 'Study title for Shrine.',
       locale: localeName,
       skip: true,
@@ -58,7 +58,7 @@ class GalleryLocalizations {
 
   String get rallyTitle {
     return Intl.message(
-      'RALLY',
+      'Rally',
       desc: 'Study title for Rally.',
       locale: localeName,
       skip: true,
@@ -76,7 +76,7 @@ class GalleryLocalizations {
 
   String get craneTitle {
     return Intl.message(
-      'CRANE',
+      'Crane',
       desc: 'Study title for Crane.',
       locale: localeName,
       skip: true,
