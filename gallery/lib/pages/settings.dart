@@ -16,54 +16,59 @@ class SettingsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: colorScheme.secondaryVariant,
       body: Center(
-        child: ListView(
-          children: [
-            SettingsListItem(
-              title: GalleryLocalizations.of(context).settingsTextScaling,
-            ),
-            SettingsListItem(
-              title: GalleryLocalizations.of(context).settingsTextDirection,
-            ),
-            SettingsListItem(
-              title: GalleryLocalizations.of(context).settingsLocale,
-            ),
-            SettingsListItem(
-              title: GalleryLocalizations.of(context).settingsPlatformMechanics,
-            ),
-            SettingsListItem(
-              title: GalleryLocalizations.of(context).settingsDarkTheme,
-            ),
-            SettingsListItem(
-              title: GalleryLocalizations.of(context).settingsSlowMotion,
-              isExpandable: false,
-              // TODO: add toggle switch
-            ),
-            SizedBox(height: 16),
-            Divider(thickness: 2, height: 0, color: colorScheme.background),
-            SizedBox(height: 12),
-            _SettingsLink(
-                title: GalleryLocalizations.of(context).settingsAbout,
-                icon: Icons.info_outline,
-                onTap: () {} // TODO: open about page
-                ),
-            _SettingsLink(
-                title: GalleryLocalizations.of(context).settingsFeedback,
-                icon: Icons.feedback,
-                onTap: () {} // TODO: send feedback
-                ),
-            SizedBox(height: 12),
-            Divider(thickness: 2, height: 0, color: colorScheme.background),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 28),
-              child: Text(
-                GalleryLocalizations.of(context).settingsAttribution,
-                style: textTheme.body2.copyWith(
-                  fontSize: 12,
-                  color: colorScheme.onPrimary,
+        child: Padding(
+          padding: EdgeInsets.only(top: 16),
+          child: ListView(
+            children: [
+              SettingsListItem(
+                title: GalleryLocalizations.of(context).settingsTextScaling,
+              ),
+              SettingsListItem(
+                title: GalleryLocalizations.of(context).settingsTextDirection,
+              ),
+              SettingsListItem(
+                title: GalleryLocalizations.of(context).settingsLocale,
+              ),
+              SettingsListItem(
+                title:
+                    GalleryLocalizations.of(context).settingsPlatformMechanics,
+              ),
+              SettingsListItem(
+                title: GalleryLocalizations.of(context).settingsDarkTheme,
+              ),
+              SettingsListItem(
+                title: GalleryLocalizations.of(context).settingsSlowMotion,
+                isExpandable: false,
+                // TODO: add toggle switch
+              ),
+              SizedBox(height: 16),
+              Divider(thickness: 2, height: 0, color: colorScheme.background),
+              SizedBox(height: 12),
+              _SettingsLink(
+                  title: GalleryLocalizations.of(context).settingsAbout,
+                  icon: Icons.info_outline,
+                  onTap: () {} // TODO: open about page
+                  ),
+              _SettingsLink(
+                  title: GalleryLocalizations.of(context).settingsFeedback,
+                  icon: Icons.feedback,
+                  onTap: () {} // TODO: send feedback
+                  ),
+              SizedBox(height: 12),
+              Divider(thickness: 2, height: 0, color: colorScheme.background),
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 32, vertical: 28),
+                child: Text(
+                  GalleryLocalizations.of(context).settingsAttribution,
+                  style: textTheme.body2.copyWith(
+                    fontSize: 12,
+                    color: colorScheme.onPrimary,
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

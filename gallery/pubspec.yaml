@@ -18,6 +18,7 @@ dependencies:
   meta:
   scoped_model:
   shrine_images: ^1.1.2
+  flare_flutter: ^1.6.5
   url_launcher:
 
 dev_dependencies:
@@ -27,10 +28,11 @@ dev_dependencies:
 flutter:
   assets:
     - assets/demos/
+    - assets/studies/
     - assets/icons/cupertino/
     - assets/icons/material/
     - assets/icons/reference/
-    - assets/studies/
+    - assets/icons/settings/
     - packages/rally_assets/logo.png
     - packages/rally_assets/thumb.png
     - assets/crane/
