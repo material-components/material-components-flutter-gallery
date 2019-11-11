@@ -13,6 +13,7 @@ import '../demos/material/button_demo.dart';
 import '../demos/material/dialog_demo.dart';
 import '../demos/material/text_field_demo.dart';
 import '../demos/reference/colors_demo.dart';
+import '../demos/reference/typography_demo.dart';
 import '../l10n/localizations_delegate.dart';
 import '../l10n/supported_locales.dart';
 import '../themes/material_demo_theme_data.dart';
@@ -275,6 +276,22 @@ List<GalleryDemo> referenceDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/material/MaterialColor-class.html',
           buildRoute: (context) => ColorsDemo(),
+        ),
+      ],
+    ),
+    // TODO: Localize.
+    GalleryDemo(
+      title: 'Typography',
+      icon: GalleryIcons.customTypography,
+      subtitle: 'All of the predefined text styles',
+      configurations: [
+        GalleryDemoConfiguration(
+          title: 'Typography',
+          description:
+              'Definitions for the various typographical styles found in material design.',
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/TextTheme-class.html',
+          buildRoute: (context) => TypographyDemo(),
         ),
       ],
     ),

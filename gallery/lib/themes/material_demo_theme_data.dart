@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class MaterialDemoThemeData {
@@ -21,6 +22,12 @@ class MaterialDemoThemeData {
     indicatorColor: _colorScheme.onPrimary,
     primaryColor: _colorScheme.primary,
     scaffoldBackgroundColor: _colorScheme.background,
+    typography: Typography(
+      platform: defaultTargetPlatform,
+      englishLike: Typography.englishLike2018,
+      dense: Typography.dense2018,
+      tall: Typography.tall2018,
+    ),
   );
 
   static const _colorScheme = ColorScheme(
