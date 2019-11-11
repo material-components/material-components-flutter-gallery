@@ -14,6 +14,7 @@
 
 import 'package:flutter/material.dart';
 
+import '../../layout/adaptive.dart';
 import 'colors.dart';
 
 class HeaderFormField {
@@ -31,36 +32,59 @@ class HeaderForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        color: kCranePurple800,
-        padding: EdgeInsets.symmetric(horizontal: 24.0),
-        child: Column(
-          children: fields.map((field) {
-            return Padding(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              child: TextField(
-                controller: field.textController,
-                cursorColor: Theme.of(context).colorScheme.secondary,
-                style: Theme.of(context)
-                    .textTheme
-                    .body2
-                    .copyWith(color: Colors.white),
-                decoration: InputDecoration(
-                  prefixIcon: Icon(
-                    field.iconData,
-                    size: 24,
-                    color: Theme.of(context).iconTheme.color,
+    final isDesktop = isDisplayDesktop(context);
+
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: isDesktop ? 120 : 24),
+      child: isDesktop
+          ? Row(children: [
+              for (final field in fields)
+                Flexible(
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 16),
+                    child: _HeaderTextField(field: field),
                   ),
-                  border: OutlineInputBorder(borderSide: BorderSide.none),
-                  fillColor: kCranePurple700,
-                  filled: true,
-                  labelText: field.title,
-                  hasFloatingPlaceholder: false,
-                ),
-              ),
-            );
-          }).toList(),
+                )
+            ])
+          : Column(children: [
+              for (final field in fields)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: _HeaderTextField(field: field),
+                )
+            ]),
+    );
+  }
+}
+
+class _HeaderTextField extends StatelessWidget {
+  final HeaderFormField field;
+
+  _HeaderTextField({this.field});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      controller: field.textController,
+      cursorColor: Theme.of(context).colorScheme.secondary,
+      style: Theme.of(context).textTheme.body2.copyWith(color: Colors.white),
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(4),
+          borderSide: BorderSide(
+            width: 0,
+            style: BorderStyle.none,
+          ),
+        ),
+        contentPadding: EdgeInsets.all(16),
+        fillColor: cranePurple700,
+        filled: true,
+        hintText: field.title,
+        hasFloatingPlaceholder: false,
+        prefixIcon: Icon(
+          field.iconData,
+          size: 24,
+          color: Theme.of(context).iconTheme.color,
         ),
       ),
     );

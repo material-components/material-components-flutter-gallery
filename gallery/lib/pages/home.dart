@@ -48,7 +48,7 @@ class HomePage extends StatelessWidget {
                 subtitle: GalleryLocalizations.of(context).craneDescription,
                 asset: 'assets/studies/crane_card.png',
                 assetDark: 'assets/studies/crane_card_dark.png',
-                textColor: kCranePurple700,
+                textColor: cranePurple700,
                 study: CraneApp(),
               ),
               _CarouselCard(

@@ -41,14 +41,14 @@ class _BorderPainter extends BoxPainter {
     assert(configuration.size != null);
     final double horizontalInset = 12;
     final Rect rect = Offset(offset.dx + horizontalInset,
-            (configuration.size.height / 2) - indicatorHeight / 2) &
+            (configuration.size.height / 2) - indicatorHeight / 2 - 1) &
         Size(configuration.size.width - 2 * horizontalInset, indicatorHeight);
     final Paint paint = Paint();
     paint.color = Colors.white;
     paint.style = PaintingStyle.stroke;
     paint.strokeWidth = 2;
     canvas.drawRRect(
-      RRect.fromRectAndRadius(rect, Radius.circular(56.0)),
+      RRect.fromRectAndRadius(rect, Radius.circular(56)),
       paint,
     );
   }

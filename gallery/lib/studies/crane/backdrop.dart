@@ -18,6 +18,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:meta/meta.dart';
 
+import '../../layout/adaptive.dart';
 import 'border_tab_indicator.dart';
 import 'colors.dart';
 import 'model/data.dart';
@@ -33,28 +34,30 @@ class _FrontLayer extends StatelessWidget {
   final String title;
   final int index;
 
+  static const frontLayerBorderRadius = 16.0;
+
   @override
   Widget build(BuildContext context) {
+    final isDesktop = isDisplayDesktop(context);
+
     return PhysicalShape(
-      elevation: 16.0,
-      color: kCranePrimaryWhite,
+      elevation: 16,
+      color: cranePrimaryWhite,
       clipper: ShapeBorderClipper(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(16.0),
-            topRight: Radius.circular(16.0),
+            topLeft: Radius.circular(frontLayerBorderRadius),
+            topRight: Radius.circular(frontLayerBorderRadius),
           ),
         ),
       ),
       child: ListView(
-        padding: const EdgeInsets.all(20.0),
-        children: <Widget>[
-          Text(title,
-              style: Theme.of(context)
-                  .textTheme
-                  .subtitle
-                  .copyWith(fontSize: 12.0)),
-          SizedBox(height: 8.0),
+        padding: isDesktop
+            ? EdgeInsets.symmetric(horizontal: 120, vertical: 22)
+            : EdgeInsets.all(20),
+        children: [
+          Text(title, style: Theme.of(context).textTheme.subtitle),
+          SizedBox(height: 20),
           ItemCards(index: index),
         ],
       ),
@@ -67,34 +70,58 @@ class ItemCards extends StatelessWidget {
 
   const ItemCards({Key key, this.index}) : super(key: key);
 
-  static List<Widget> _buildFlightCards({int listIndex}) {
-    final List<FlyDestination> flyDestinations = getFlyDestinations()
-      ..shuffle();
-    final List<SleepDestination> sleepDestinations = getSleepDestinations()
-      ..shuffle();
-    final List<EatDestination> eatDestinations = getEatDestinations()
-      ..shuffle();
+  static const totalColumns = 4;
 
-    List<Destination> destinations;
-    switch (listIndex) {
-      case 0:
-        destinations = flyDestinations;
-        break;
-      case 1:
-        destinations = sleepDestinations;
-        break;
-      case 2:
-        destinations = eatDestinations;
-        break;
-    }
-    return List.generate(destinations.length, (index) {
-      return _DestinationCard(destination: destinations[index]);
-    }).toList();
+  static List<Widget> _buildFlightCards({int listIndex}) {
+    final List<Destination> destinations = [
+      if (listIndex == 0) ...getFlyDestinations(),
+      if (listIndex == 1) ...getSleepDestinations(),
+      if (listIndex == 2) ...getEatDestinations(),
+    ];
+
+    return (destinations..shuffle())
+        .map((d) => _DestinationCard(destination: d))
+        .toList();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: _buildFlightCards(listIndex: index));
+    final List<Widget> flightCards = _buildFlightCards(listIndex: index);
+    final isDesktop = isDisplayDesktop(context);
+
+    if (isDesktop) {
+      // Based on totalColumns, generate columnCounts, which lists the number
+      // of items per column. e.g. [n, n, n, ... n - 1, n - 1]
+      final fullColumns = (flightCards.length % totalColumns);
+      final incompleteColumnCount = (flightCards.length / totalColumns).floor();
+      final fullColumnCount = incompleteColumnCount + 1;
+      final columnCounts = List.filled(fullColumns, fullColumnCount) +
+          List.filled(totalColumns - fullColumns, incompleteColumnCount);
+
+      List<List<Widget>> columns = [];
+      var currentIndex = 0;
+      for (var count in columnCounts) {
+        columns.add(flightCards.sublist(currentIndex, currentIndex + count));
+        currentIndex += count;
+      }
+
+      return Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          for (var column in columns)
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(right: 16),
+                child: Column(
+                  children: column,
+                ),
+              ),
+            )
+        ],
+      );
+    } else {
+      return Column(children: flightCards);
+    }
   }
 }
 
@@ -125,11 +152,6 @@ class Backdrop extends StatefulWidget {
 }
 
 class _BackdropState extends State<Backdrop> with TickerProviderStateMixin {
-  static const List<double> _midHeights = [271.0, 206.0, 271.0];
-  static const List<double> _topHeights = [0.0, 0.0, 0.0];
-
-  List<double> _tabHeights = _midHeights;
-
   TabController _tabController;
   Animation<Offset> _flyLayerOffset;
   Animation<Offset> _sleepLayerOffset;
@@ -140,20 +162,15 @@ class _BackdropState extends State<Backdrop> with TickerProviderStateMixin {
     super.initState();
     _tabController = TabController(length: 3, vsync: this);
 
-    _flyLayerOffset =
-        Tween<Offset>(begin: Offset(0.0, 0.0), end: Offset(-1.05, 0.0))
-            .animate(_tabController.animation);
+    // Offsets to create a gap between front layers.
+    _flyLayerOffset = _tabController.animation
+        .drive(Tween<Offset>(begin: Offset(0, 0), end: Offset(-0.05, 0)));
 
-    _sleepLayerOffset = Tween<Offset>(
-      // Extra .05 leaves a gap between left and right layers.
-      begin: Offset(1.05, 0.0),
-      end: Offset(0, 0.0),
-    ).animate(_tabController.animation);
+    _sleepLayerOffset = _tabController.animation
+        .drive(Tween<Offset>(begin: Offset(0.05, 0), end: Offset(0, 0)));
 
-    _eatLayerOffset = Tween<Offset>(
-      begin: Offset(2.0, 0.0),
-      end: Offset(1.0, 0.0),
-    ).animate(_tabController.animation);
+    _eatLayerOffset = _tabController.animation
+        .drive(Tween<Offset>(begin: Offset(0.10, 0), end: Offset(0.05, 0)));
   }
 
   @override
@@ -163,76 +180,79 @@ class _BackdropState extends State<Backdrop> with TickerProviderStateMixin {
   }
 
   void _handleTabs(int tabIndex) {
-    if (_tabController.index == tabIndex) {
-      setState(() {
-        _tabHeights = _tabHeights == _topHeights ? _midHeights : _topHeights;
-      });
-    } else {
-      _tabController.animateTo(tabIndex, duration: Duration(milliseconds: 300));
-    }
+    _tabController.animateTo(tabIndex,
+        duration: const Duration(milliseconds: 300));
   }
 
   @override
   Widget build(BuildContext context) {
+    final isDesktop = isDisplayDesktop(context);
+
     return Material(
-      child: Scaffold(
-        backgroundColor: kCranePurple800,
-        appBar: AppBar(
-          brightness: Brightness.dark,
-          elevation: 0.0,
-          titleSpacing: 0.0,
-          leading: Align(
-            child: Transform.translate(
-              offset: Offset(-8.0, -8.0),
-              child: Image.asset('assets/crane/menu.png', height: 20),
+      color: cranePurple800,
+      child: Padding(
+        padding: isDesktop ? EdgeInsets.only(top: 12) : EdgeInsets.zero,
+        child: Scaffold(
+          backgroundColor: cranePurple800,
+          appBar: AppBar(
+            brightness: Brightness.dark,
+            elevation: 0,
+            titleSpacing: 0,
+            leading: Align(
+              child: Transform.translate(
+                offset: Offset(isDesktop ? 0 : -4, -8),
+                child: Image(
+                  image: AssetImage('assets/crane/menu.png'),
+                  height: 20,
+                ),
+              ),
+              alignment: Alignment.centerLeft,
             ),
-            alignment: Alignment.centerLeft,
-          ),
-          flexibleSpace: CraneAppBar(
-            tabController: _tabController,
-            tabHandler: _handleTabs,
-          ),
-        ),
-        body: Stack(
-          children: <Widget>[
-            BackLayer(
+            flexibleSpace: CraneAppBar(
               tabController: _tabController,
-              backLayers: widget.backLayer,
+              tabHandler: _handleTabs,
             ),
-            AnimatedContainer(
-              duration: Duration(milliseconds: 150),
-              margin: EdgeInsets.only(top: _tabHeights[0]),
-              child: SlideTransition(
-                position: _flyLayerOffset,
-                child: _FrontLayer(
-                  title: 'Explore Flights by Destination',
-                  index: 0,
+          ),
+          body: Stack(
+            children: [
+              BackLayer(
+                tabController: _tabController,
+                backLayers: widget.backLayer,
+              ),
+              Container(
+                margin: EdgeInsets.only(top: isDesktop ? 70 : 246),
+                child: TabBarView(
+                  controller: _tabController,
+                  children: [
+                    SlideTransition(
+                      position: _flyLayerOffset,
+                      child: _FrontLayer(
+                        // TODO: localize
+                        title: 'Explore Flights by Destination',
+                        index: 0,
+                      ),
+                    ),
+                    SlideTransition(
+                      position: _sleepLayerOffset,
+                      child: _FrontLayer(
+                        // TODO: localize
+                        title: 'Explore Properties by Destination',
+                        index: 1,
+                      ),
+                    ),
+                    SlideTransition(
+                      position: _eatLayerOffset,
+                      child: _FrontLayer(
+                        // TODO: localize
+                        title: 'Explore Restaurants by Destination',
+                        index: 2,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ),
-            AnimatedContainer(
-              duration: Duration(milliseconds: 150),
-              margin: EdgeInsets.only(top: _tabHeights[1]),
-              child: SlideTransition(
-                position: _sleepLayerOffset,
-                child: _FrontLayer(
-                  title: 'Explore Properties by Destination',
-                  index: 1,
-                ),
-              ),
-            ),
-            AnimatedContainer(
-              duration: Duration(milliseconds: 150),
-              margin: EdgeInsets.only(top: _tabHeights[2]),
-              child: SlideTransition(
-                position: _eatLayerOffset,
-                child: _FrontLayer(
-                  title: 'Explore Restaurants by Destination',
-                  index: 2,
-                ),
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -267,7 +287,7 @@ class _BackLayerState extends State<BackLayer> {
   Widget build(BuildContext context) {
     return AnimatedSwitcher(
       child: widget.backLayers[widget.tabController.index],
-      duration: Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 300),
     );
   }
 }
@@ -286,51 +306,55 @@ class CraneAppBar extends StatefulWidget {
 class _CraneAppBarState extends State<CraneAppBar> {
   @override
   Widget build(BuildContext context) {
+    final isDesktop = isDisplayDesktop(context);
+
     return SafeArea(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Container(
-            child: IconButton(
-              iconSize: 72.0,
-              padding: EdgeInsets.all(0.0),
-              icon: Image.asset(
-                'assets/crane/logo.png',
-                fit: BoxFit.cover,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: isDesktop ? 120 : 24),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/crane/logo.png',
+              fit: BoxFit.cover,
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(left: 24),
+                child: TabBar(
+                  indicator: BorderTabIndicator(isDesktop ? 28 : 32),
+                  controller: widget.tabController,
+                  labelPadding: EdgeInsets.zero,
+                  isScrollable: isDesktop, // left-align tabs on web
+                  tabs: [
+                    _NavigationTab(
+                      // TODO: localize
+                      title: 'FLY',
+                      tabHandler: widget.tabHandler,
+                      tabController: widget.tabController,
+                      index: 0,
+                    ),
+                    _NavigationTab(
+                      // TODO: localize
+                      title: 'SLEEP',
+                      tabHandler: widget.tabHandler,
+                      tabController: widget.tabController,
+                      index: 1,
+                    ),
+                    _NavigationTab(
+                      // TODO: localize
+                      title: 'EAT',
+                      tabHandler: widget.tabHandler,
+                      tabController: widget.tabController,
+                      index: 2,
+                    ),
+                  ],
+                ),
               ),
-              onPressed: () {},
             ),
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width - 72.0,
-            child: TabBar(
-              indicator: BorderTabIndicator(32.0),
-              controller: widget.tabController,
-              labelPadding: EdgeInsets.all(0.0),
-              tabs: <Widget>[
-                _NavigationTab(
-                  title: 'FLY',
-                  callBack: () => widget.tabHandler(0),
-                  tabController: widget.tabController,
-                  index: 0,
-                ),
-                _NavigationTab(
-                  title: 'SLEEP',
-                  callBack: () => widget.tabHandler(1),
-                  tabController: widget.tabController,
-                  index: 1,
-                ),
-                _NavigationTab(
-                  title: 'EAT',
-                  callBack: () => widget.tabHandler(2),
-                  tabController: widget.tabController,
-                  index: 2,
-                ),
-              ],
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
@@ -338,12 +362,12 @@ class _CraneAppBarState extends State<CraneAppBar> {
 
 class _NavigationTab extends StatefulWidget {
   final String title;
-  final Function callBack;
+  final Function tabHandler;
   final TabController tabController;
   final int index;
 
   const _NavigationTab(
-      {Key key, this.title, this.callBack, this.tabController, this.index})
+      {Key key, this.title, this.tabHandler, this.tabController, this.index})
       : super(key: key);
 
   @override
@@ -365,20 +389,18 @@ class _NavigationTabState extends State<_NavigationTab> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox.expand(
-      child: FlatButton(
-        splashColor: Colors.transparent,
-        highlightColor: Colors.transparent,
-        child: Text(
-          widget.title,
-          style: Theme.of(context).textTheme.button.copyWith(
-                color: widget.tabController.index == widget.index
-                    ? kCranePrimaryWhite
-                    : kCranePrimaryWhite.withOpacity(.6),
-              ),
-        ),
-        onPressed: () => widget.callBack(),
+    return FlatButton(
+      splashColor: Colors.transparent,
+      highlightColor: Colors.transparent,
+      child: Text(
+        widget.title,
+        style: Theme.of(context).textTheme.button.copyWith(
+              color: widget.tabController.index == widget.index
+                  ? cranePrimaryWhite
+                  : cranePrimaryWhite.withOpacity(.6),
+            ),
       ),
+      onPressed: () => widget.tabHandler(widget.index),
     );
   }
 }
@@ -394,34 +416,56 @@ class _DestinationCard extends StatelessWidget {
       fit: BoxFit.cover,
     );
 
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
-        ListTile(
-          contentPadding: EdgeInsets.only(right: 8.0),
-          leading: ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(4.0)),
-            child: SizedBox(
-              height: 60.0,
-              width: 60.0,
+    final isDesktop = isDisplayDesktop(context);
+
+    if (isDesktop) {
+      return Padding(
+        padding: const EdgeInsets.only(bottom: 40),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ClipRRect(
+              borderRadius: const BorderRadius.all(Radius.circular(4)),
               child: imageWidget,
             ),
-          ),
-          title: Text(
-            destination.destination,
-            style: Theme.of(context)
-                .textTheme
-                .subhead
-                .copyWith(color: Colors.black),
-          ),
-          subtitle: Text(
-            destination.subtitle,
-            style:
-                Theme.of(context).textTheme.subtitle.copyWith(fontSize: 12.0),
-          ),
+            Padding(
+              padding: const EdgeInsets.only(top: 20, bottom: 10),
+              child: Text(
+                destination.destination,
+                style: Theme.of(context).textTheme.subhead,
+              ),
+            ),
+            Text(
+              destination.subtitle,
+              style: Theme.of(context).textTheme.subtitle,
+            ),
+          ],
         ),
-        SizedBox(child: Divider(indent: 4.0)),
-      ],
-    );
+      );
+    } else {
+      return Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          ListTile(
+            contentPadding: EdgeInsets.only(right: 8),
+            leading: ClipRRect(
+              borderRadius: const BorderRadius.all(Radius.circular(4)),
+              child: SizedBox(
+                height: 60,
+                width: 60,
+                child: imageWidget,
+              ),
+            ),
+            title: Text(destination.destination,
+                style: Theme.of(context).textTheme.subhead),
+            subtitle: Text(
+              destination.subtitle,
+              style: Theme.of(context).textTheme.subtitle,
+            ),
+          ),
+          Divider(),
+        ],
+      );
+    }
   }
 }

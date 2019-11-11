@@ -14,17 +14,17 @@
 
 import 'package:flutter/material.dart';
 
-const kCranePurple700 = Color(0xFF720D5D);
-const kCranePurple800 = Color(0xFF5D1049);
-const kCranePurple900 = Color(0xFF4E0D3A);
+const cranePurple700 = Color(0xFF720D5D);
+const cranePurple800 = Color(0xFF5D1049);
+const cranePurple900 = Color(0xFF4E0D3A);
 
-const kCraneRed700 = Color(0xFFE30425);
+const craneRed700 = Color(0xFFE30425);
 
-const kCraneWhite60 = Color(0x99FFFFFF);
-const kCranePrimaryWhite = Color(0xFFFFFFFF);
-const kCraneErrorOrange = Color(0xFFFF9100);
+const craneWhite60 = Color(0x99FFFFFF);
+const cranePrimaryWhite = Color(0xFFFFFFFF);
+const craneErrorOrange = Color(0xFFFF9100);
 
-const kCraneAlpha = Color(0x00FFFFFF);
+const craneAlpha = Color(0x00FFFFFF);
 
-const kCraneGrey = Color(0xFF747474);
-const kCraneBlack = Color(0XFF1E252D);
+const craneGrey = Color(0xFF747474);
+const craneBlack = Color(0XFF1E252D);

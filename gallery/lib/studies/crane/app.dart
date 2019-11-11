@@ -45,7 +45,8 @@ class _CraneAppState extends State<CraneApp> {
       ),
       initialRoute: '/',
       onGenerateRoute: _getRoute,
-      theme: kCraneTheme,
+      theme: craneTheme,
+      darkTheme: craneTheme,
     );
   }
 }
