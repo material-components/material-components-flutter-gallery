@@ -9,7 +9,7 @@ const _intlHeader = '''
 <!--
   This file was automatically generated.
   Please do not edit it manually.
-  It was based on gallery/lib/src/l10n/intl_messages.arb.
+  It was based on gallery/lib/src/l10n/intl_en_US.arb.
 -->
 <resources>
 ''';

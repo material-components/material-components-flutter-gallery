@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../data/demos.dart';
-import '../l10n/localizations_delegate.dart';
+import '../l10n/gallery_localizations.dart';
 import '../layout/adaptive.dart';
 
 enum _DemoState {

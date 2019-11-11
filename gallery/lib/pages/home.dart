@@ -5,7 +5,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/demos.dart';
-import '../l10n/localizations_delegate.dart';
+import '../l10n/gallery_localizations.dart';
 import '../studies/crane/app.dart';
 import '../studies/crane/colors.dart';
 import '../studies/rally/app.dart';
@@ -17,6 +17,12 @@ import 'category_list_item.dart';
 
 const _horizontalPadding = 32.0;
 const _carouselPadding = 8.0;
+
+const String shrineTitle = 'Shrine';
+const String rallyTitle = 'Rally';
+const String craneTitle = 'Crane';
+const String homeCategoryMaterial = 'MATERIAL';
+const String homeCategoryCupertino = 'CUPERTINO';
 
 class HomePage extends StatelessWidget {
   @override
@@ -32,7 +38,7 @@ class HomePage extends StatelessWidget {
           _Carousel(
             children: [
               _CarouselCard(
-                title: GalleryLocalizations.of(context).shrineTitle,
+                title: shrineTitle,
                 subtitle: GalleryLocalizations.of(context).shrineDescription,
                 asset: 'assets/studies/shrine_card.png',
                 assetDark: 'assets/studies/shrine_card_dark.png',
@@ -40,7 +46,7 @@ class HomePage extends StatelessWidget {
                 study: ShrineApp(),
               ),
               _CarouselCard(
-                title: GalleryLocalizations.of(context).rallyTitle,
+                title: rallyTitle,
                 subtitle: GalleryLocalizations.of(context).rallyDescription,
                 textColor: RallyColors.accountColors[0],
                 asset: 'assets/studies/rally_card.png',
@@ -48,7 +54,7 @@ class HomePage extends StatelessWidget {
                 study: RallyApp(),
               ),
               _CarouselCard(
-                title: GalleryLocalizations.of(context).craneTitle,
+                title: craneTitle,
                 subtitle: GalleryLocalizations.of(context).craneDescription,
                 asset: 'assets/studies/crane_card.png',
                 assetDark: 'assets/studies/crane_card_dark.png',
@@ -71,12 +77,12 @@ class HomePage extends StatelessWidget {
             GalleryLocalizations.of(context).homeHeaderCategories,
           ),
           CategoryListItem(
-            title: GalleryLocalizations.of(context).homeCategoryMaterial,
+            title: homeCategoryMaterial,
             imageString: 'assets/icons/material/material.png',
             demos: materialDemos(context),
           ),
           CategoryListItem(
-            title: GalleryLocalizations.of(context).homeCategoryCupertino,
+            title: homeCategoryCupertino,
             imageString: 'assets/icons/cupertino/cupertino.png',
             demos: cupertinoDemos(context),
           ),

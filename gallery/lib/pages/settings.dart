@@ -4,7 +4,7 @@
 
 import 'package:flutter/material.dart';
 
-import '../l10n/localizations_delegate.dart';
+import '../l10n/gallery_localizations.dart';
 import 'settings_list_item.dart';
 
 class SettingsPage extends StatelessWidget {

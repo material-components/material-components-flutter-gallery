@@ -2,7 +2,7 @@
 <!--
   This file was automatically generated.
   Please do not edit it manually.
-  It was based on gallery/lib/src/l10n/intl_messages.arb.
+  It was based on gallery/lib/src/l10n/intl_en_US.arb.
 -->
 <resources>
   <string
@@ -17,6 +17,10 @@
     name="shrineDescription"
     description="Study description for Shrine."
     >A fashionable retail app</string>
+  <string
+    name="rallyDescription"
+    description="Study description for Rally."
+    >A personal finance app</string>
   <string
     name="craneDescription"
     description="Study description for Crane."
@@ -165,6 +169,10 @@
     name="demoFullscreenDialogTitle"
     description="Title for the fullscreen dialog component demo."
     >Fullscreen</string>
+  <string
+    name="demoFullscreenDialogDescription"
+    description="Description for the fullscreen dialog component demo."
+    >The fullscreenDialog property specifies whether the incoming page is a fullscreen modal dialog</string>
   <string
     name="demoCupertinoButtonsTitle"
     description="Description for the fullscreen dialog component demo."

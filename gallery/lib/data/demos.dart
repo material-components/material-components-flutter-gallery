@@ -4,7 +4,6 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
 import '../demos/cupertino/cupertino_alert_demo.dart';
 import '../demos/cupertino/cupertino_button_demo.dart';
@@ -14,8 +13,7 @@ import '../demos/material/dialog_demo.dart';
 import '../demos/material/text_field_demo.dart';
 import '../demos/reference/colors_demo.dart';
 import '../demos/reference/typography_demo.dart';
-import '../l10n/localizations_delegate.dart';
-import '../l10n/supported_locales.dart';
+import '../l10n/gallery_localizations.dart';
 import '../themes/material_demo_theme_data.dart';
 import 'icons.dart';
 
@@ -308,13 +306,8 @@ class DemoWrapper extends StatelessWidget {
     return MaterialApp(
       theme: MaterialDemoThemeData.themeData,
       debugShowCheckedModeBanner: false,
-      localizationsDelegates: [
-        GalleryLocalizationsDelegate(),
-        GlobalCupertinoLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ],
-      supportedLocales: supportedLocales,
+      localizationsDelegates: GalleryLocalizations.localizationsDelegates,
+      supportedLocales: GalleryLocalizations.supportedLocales,
       home: MediaQuery(
         data: MediaQueryData(),
         child: CupertinoTheme(
