@@ -8,10 +8,18 @@ behaves in the wild.
 
 ## To deploy the web application
 
-1. Install the firebase CLI.
+### Prerequisites
 
+1. Install the firebase CLI with either npm or brew.
+
+With npm:
 ```
 npm install -g firebase-tools
+```
+
+With brew:
+```
+brew install firebase-cli
 ```
 
 2. Login to firebase.
@@ -20,13 +28,15 @@ npm install -g firebase-tools
 firebase login
 ```
 
-3. Build the app. Run the following from within the `gallery` directory.
+### Deploying
+
+1. Build the app. Run the following from within the `gallery` directory.
 
 ```
 flutter build web
 ```
 
-4. Deploy the app.
+2. Deploy the app.
 
 ```
 firebase deploy
