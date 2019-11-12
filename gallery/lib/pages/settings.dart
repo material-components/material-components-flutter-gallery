@@ -6,8 +6,18 @@ import 'package:flutter/material.dart';
 
 import '../l10n/gallery_localizations.dart';
 import 'settings_list_item.dart';
+import '../data/gallery_options.dart';
 
 class SettingsPage extends StatelessWidget {
+  const SettingsPage({
+    Key key,
+    this.options,
+    this.onOptionsChanged,
+  }) : super(key: key);
+
+  final GalleryOptions options;
+  final ValueChanged<GalleryOptions> onOptionsChanged;
+
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;

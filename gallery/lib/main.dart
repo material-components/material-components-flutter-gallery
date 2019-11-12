@@ -2,11 +2,14 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart' show timeDilation;
 
+import 'data/gallery_options.dart';
 import 'l10n/gallery_localizations.dart';
 import 'pages/backdrop.dart';
 import 'pages/home.dart';
@@ -27,10 +30,57 @@ void setOverrideForDesktop() {
 
 void main() {
   setOverrideForDesktop();
-  runApp(MyApp());
+  runApp(GalleryApp());
 }
 
-class MyApp extends StatelessWidget {
+class GalleryApp extends StatefulWidget {
+  @override
+  _GalleryAppState createState() => _GalleryAppState();
+}
+
+class _GalleryAppState extends State<GalleryApp> {
+  GalleryOptions _options;
+  Timer _timeDilationTimer;
+
+  @override
+  void initState() {
+    super.initState();
+    _options = GalleryOptions(
+      themeMode: ThemeMode.system,
+      textScaleFactor: allGalleryTextScaleValues[0],
+      timeDilation: timeDilation,
+      platform: defaultTargetPlatform,
+    );
+  }
+
+  @override
+  void dispose() {
+    _timeDilationTimer?.cancel();
+    _timeDilationTimer = null;
+    super.dispose();
+  }
+
+  void _handleOptionsChanged(GalleryOptions newOptions) {
+    setState(() {
+      if (_options.timeDilation != newOptions.timeDilation) {
+        _timeDilationTimer?.cancel();
+        _timeDilationTimer = null;
+        if (newOptions.timeDilation > 1) {
+          // We delay the time dilation change long enough that the user can see
+          // that UI has started reacting and then we slam on the brakes so that
+          // they see that the time is in fact now dilated.
+          _timeDilationTimer = Timer(const Duration(milliseconds: 150), () {
+            timeDilation = newOptions.timeDilation;
+          });
+        } else {
+          timeDilation = newOptions.timeDilation;
+        }
+      }
+
+      _options = newOptions;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -41,7 +91,10 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: GalleryLocalizations.localizationsDelegates,
       supportedLocales: GalleryLocalizations.supportedLocales,
       home: Backdrop(
-        frontLayer: SettingsPage(),
+        frontLayer: SettingsPage(
+          options: _options,
+          onOptionsChanged: _handleOptionsChanged,
+        ),
         backLayer: HomePage(),
       ),
     );
