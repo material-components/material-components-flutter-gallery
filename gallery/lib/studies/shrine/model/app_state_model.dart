@@ -18,7 +18,7 @@ import 'product.dart';
 import 'products_repository.dart';
 
 double _salesTaxRate = 0.06;
-double _shippingCostPerItem = 7.0;
+double _shippingCostPerItem = 7;
 
 class AppStateModel extends Model {
   // All the available products.
@@ -59,7 +59,7 @@ class AppStateModel extends Model {
   // Returns a copy of the list of available products, filtered by category.
   List<Product> getProducts() {
     if (_availableProducts == null) {
-      return <Product>[];
+      return [];
     }
 
     if (_selectedCategory == Category.all) {

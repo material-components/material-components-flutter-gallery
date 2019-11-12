@@ -28,25 +28,25 @@ class TwoProductCardColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      const double spacerHeight = 44.0;
+      const double spacerHeight = 44;
 
       final double heightOfCards =
-          (constraints.biggest.height - spacerHeight) / 2.0;
+          (constraints.biggest.height - spacerHeight) / 2;
       final double availableHeightForImages =
-          heightOfCards - ProductCard.kTextBoxHeight;
+          heightOfCards - MobileProductCard.textBoxHeight;
       // Ensure the cards take up the available space as long as the screen is
       // sufficiently tall, otherwise fallback on a constant aspect ratio.
-      final double imageAspectRatio = availableHeightForImages >= 0.0
+      final double imageAspectRatio = availableHeightForImages >= 0
           ? constraints.biggest.width / availableHeightForImages
-          : 49.0 / 33.0;
+          : 49 / 33;
 
       return ListView(
         physics: const ClampingScrollPhysics(),
-        children: <Widget>[
+        children: [
           Padding(
-            padding: const EdgeInsetsDirectional.only(start: 28.0),
+            padding: const EdgeInsetsDirectional.only(start: 28),
             child: top != null
-                ? ProductCard(
+                ? MobileProductCard(
                     imageAspectRatio: imageAspectRatio,
                     product: top,
                   )
@@ -56,8 +56,8 @@ class TwoProductCardColumn extends StatelessWidget {
           ),
           const SizedBox(height: spacerHeight),
           Padding(
-            padding: const EdgeInsetsDirectional.only(end: 28.0),
-            child: ProductCard(
+            padding: const EdgeInsetsDirectional.only(end: 28),
+            child: MobileProductCard(
               imageAspectRatio: imageAspectRatio,
               product: bottom,
             ),
@@ -78,11 +78,11 @@ class OneProductCardColumn extends StatelessWidget {
     return ListView(
       physics: const ClampingScrollPhysics(),
       reverse: true,
-      children: <Widget>[
+      children: [
         const SizedBox(
-          height: 40.0,
+          height: 40,
         ),
-        ProductCard(
+        MobileProductCard(
           product: product,
         ),
       ],

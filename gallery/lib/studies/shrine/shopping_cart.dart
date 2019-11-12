@@ -21,7 +21,7 @@ import 'expanding_bottom_sheet.dart';
 import 'model/app_state_model.dart';
 import 'model/product.dart';
 
-const double _leftColumnWidth = 60.0;
+const _leftColumnWidth = 60.0;
 
 class ShoppingCartPage extends StatefulWidget {
   @override
@@ -48,17 +48,17 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
     final ThemeData localTheme = Theme.of(context);
 
     return Scaffold(
-      backgroundColor: kShrinePink50,
+      backgroundColor: shrinePink50,
       body: SafeArea(
         child: Container(
           child: ScopedModelDescendant<AppStateModel>(
             builder: (context, child, model) {
               return Stack(
-                children: <Widget>[
+                children: [
                   ListView(
-                    children: <Widget>[
+                    children: [
                       Row(
-                        children: <Widget>[
+                        children: [
                           SizedBox(
                             width: _leftColumnWidth,
                             child: IconButton(
@@ -72,30 +72,30 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                             style: localTheme.textTheme.subhead
                                 .copyWith(fontWeight: FontWeight.w600),
                           ),
-                          const SizedBox(width: 16.0),
+                          const SizedBox(width: 16),
                           Text('${model.totalCartQuantity} ITEMS'),
                         ],
                       ),
-                      const SizedBox(height: 16.0),
+                      const SizedBox(height: 16),
                       Column(
                         children: _createShoppingCartRows(model),
                       ),
                       ShoppingCartSummary(model: model),
-                      const SizedBox(height: 100.0),
+                      const SizedBox(height: 100),
                     ],
                   ),
                   Positioned(
-                    bottom: 16.0,
-                    left: 16.0,
-                    right: 16.0,
+                    bottom: 16,
+                    left: 16,
+                    right: 16,
                     child: RaisedButton(
                       shape: const BeveledRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                        borderRadius: BorderRadius.all(Radius.circular(7)),
                       ),
-                      color: kShrinePink100,
-                      splashColor: kShrineBrown600,
+                      color: shrinePink100,
+                      splashColor: shrineBrown600,
                       child: const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 12.0),
+                        padding: EdgeInsets.symmetric(vertical: 12),
                         child: Text('CLEAR CART'),
                       ),
                       onPressed: () {
@@ -122,7 +122,7 @@ class ShoppingCartSummary extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TextStyle smallAmountStyle =
-        Theme.of(context).textTheme.body1.copyWith(color: kShrineBrown600);
+        Theme.of(context).textTheme.body1.copyWith(color: shrineBrown600);
     final TextStyle largeAmountStyle = Theme.of(context).textTheme.display1;
     final NumberFormat formatter = NumberFormat.simpleCurrency(
       decimalDigits: 2,
@@ -130,16 +130,16 @@ class ShoppingCartSummary extends StatelessWidget {
     );
 
     return Row(
-      children: <Widget>[
+      children: [
         const SizedBox(width: _leftColumnWidth),
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.only(right: 16.0),
+            padding: const EdgeInsets.only(right: 16),
             child: Column(
-              children: <Widget>[
+              children: [
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
+                  children: [
                     const Expanded(
                       child: Text('TOTAL'),
                     ),
@@ -149,9 +149,9 @@ class ShoppingCartSummary extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 16.0),
+                const SizedBox(height: 16),
                 Row(
-                  children: <Widget>[
+                  children: [
                     const Expanded(
                       child: Text('Subtotal:'),
                     ),
@@ -161,9 +161,9 @@ class ShoppingCartSummary extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 4.0),
+                const SizedBox(height: 4),
                 Row(
-                  children: <Widget>[
+                  children: [
                     const Expanded(
                       child: Text('Shipping:'),
                     ),
@@ -173,9 +173,9 @@ class ShoppingCartSummary extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 4.0),
+                const SizedBox(height: 4),
                 Row(
-                  children: <Widget>[
+                  children: [
                     const Expanded(
                       child: Text('Tax:'),
                     ),
@@ -214,11 +214,11 @@ class ShoppingCartRow extends StatelessWidget {
     final ThemeData localTheme = Theme.of(context);
 
     return Padding(
-      padding: const EdgeInsets.only(bottom: 16.0),
+      padding: const EdgeInsets.only(bottom: 16),
       child: Row(
         key: ValueKey<int>(product.id),
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
+        children: [
           SizedBox(
             width: _leftColumnWidth,
             child: IconButton(
@@ -228,26 +228,26 @@ class ShoppingCartRow extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.only(right: 16.0),
+              padding: const EdgeInsets.only(right: 16),
               child: Column(
-                children: <Widget>[
+                children: [
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
+                    children: [
                       Image.asset(
                         product.assetName,
                         package: product.assetPackage,
                         fit: BoxFit.cover,
-                        width: 75.0,
-                        height: 75.0,
+                        width: 75,
+                        height: 75,
                       ),
-                      const SizedBox(width: 16.0),
+                      const SizedBox(width: 16),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
+                          children: [
                             Row(
-                              children: <Widget>[
+                              children: [
                                 Expanded(
                                   child: Text('Quantity: $quantity'),
                                 ),
@@ -264,10 +264,10 @@ class ShoppingCartRow extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 16.0),
+                  const SizedBox(height: 16),
                   const Divider(
-                    color: kShrineBrown900,
-                    height: 10.0,
+                    color: shrineBrown900,
+                    height: 10,
                   ),
                 ],
               ),

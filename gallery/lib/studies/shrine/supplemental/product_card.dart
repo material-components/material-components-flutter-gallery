@@ -19,14 +19,14 @@ import 'package:scoped_model/scoped_model.dart';
 import '../model/app_state_model.dart';
 import '../model/product.dart';
 
-class ProductCard extends StatelessWidget {
-  const ProductCard({this.imageAspectRatio = 33 / 49, this.product})
+class MobileProductCard extends StatelessWidget {
+  const MobileProductCard({this.imageAspectRatio = 33 / 49, this.product})
       : assert(imageAspectRatio == null || imageAspectRatio > 0);
 
   final double imageAspectRatio;
   final Product product;
 
-  static const double kTextBoxHeight = 65.0;
+  static const double textBoxHeight = 65;
 
   @override
   Widget build(BuildContext context) {
@@ -53,22 +53,22 @@ class ProductCard extends StatelessWidget {
         );
       },
       child: Stack(
-        children: <Widget>[
+        children: [
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
+            children: [
               AspectRatio(
                 aspectRatio: imageAspectRatio,
                 child: imageWidget,
               ),
               SizedBox(
-                height: kTextBoxHeight * MediaQuery.of(context).textScaleFactor,
-                width: 121.0,
+                height: textBoxHeight * MediaQuery.of(context).textScaleFactor,
+                width: 121,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
+                  children: [
                     Text(
                       product == null ? '' : product.name,
                       style: theme.textTheme.button,
@@ -76,7 +76,7 @@ class ProductCard extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
                     ),
-                    const SizedBox(height: 4.0),
+                    const SizedBox(height: 4),
                     Text(
                       product == null ? '' : formatter.format(product.price),
                       style: theme.textTheme.caption,
@@ -87,7 +87,80 @@ class ProductCard extends StatelessWidget {
             ],
           ),
           const Padding(
-            padding: EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(16),
+            child: Icon(Icons.add_shopping_cart),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class DesktopProductCard extends StatelessWidget {
+  const DesktopProductCard({@required this.product, @required this.imageWidth});
+
+  final Product product;
+  final double imageWidth;
+
+  static const double textBoxHeight = 65;
+
+  @override
+  Widget build(BuildContext context) {
+    final NumberFormat formatter = NumberFormat.simpleCurrency(
+      decimalDigits: 0,
+      locale: Localizations.localeOf(context).toString(),
+    );
+
+    final ThemeData theme = Theme.of(context);
+
+    final Image imageWidget = Image.asset(
+      product.assetName,
+      package: product.assetPackage,
+      width: imageWidth,
+    );
+
+    return ScopedModelDescendant<AppStateModel>(
+      builder: (context, child, model) {
+        return GestureDetector(
+          onTap: () {
+            model.addProductToCart(product.id);
+          },
+          child: child,
+        );
+      },
+      child: Stack(
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              imageWidget,
+              SizedBox(
+                height: textBoxHeight * MediaQuery.of(context).textScaleFactor,
+                width: 121,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      product.name,
+                      style: theme.textTheme.button,
+                      softWrap: false,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      formatter.format(product.price),
+                      style: theme.textTheme.caption,
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const Padding(
+            padding: EdgeInsets.all(16),
             child: Icon(Icons.add_shopping_cart),
           ),
         ],

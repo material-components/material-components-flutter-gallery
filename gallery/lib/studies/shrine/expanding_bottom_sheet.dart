@@ -19,30 +19,43 @@ import 'package:flutter/services.dart';
 import 'package:meta/meta.dart';
 import 'package:scoped_model/scoped_model.dart';
 
+import '../../layout/adaptive.dart';
+
 import 'colors.dart';
 import 'model/app_state_model.dart';
 import 'model/product.dart';
 import 'shopping_cart.dart';
 
 // These curves define the emphasized easing curve.
-const Cubic _kAccelerateCurve = Cubic(0.548, 0.0, 0.757, 0.464);
-const Cubic _kDecelerateCurve = Cubic(0.23, 0.94, 0.41, 1.0);
+const Cubic _accelerateCurve = Cubic(0.548, 0, 0.757, 0.464);
+const Cubic _decelerateCurve = Cubic(0.23, 0.94, 0.41, 1);
 // The time at which the accelerate and decelerate curves switch off
-const double _kPeakVelocityTime = 0.248210;
+const _peakVelocityTime = 0.248210;
 // Percent (as a decimal) of animation that should be completed at _peakVelocityTime
-const double _kPeakVelocityProgress = 0.379146;
-const double _kCartHeight = 56.0;
-// Radius of the shape on the top left of the sheet.
-const double _kCornerRadius = 24.0;
+const _peakVelocityProgress = 0.379146;
+const _cartHeight = 56.0;
+// Radius of the shape on the top left of the sheet for mobile layouts.
+const _mobileCornerRadius = 24.0;
+// Radius of the shape on the top left and bottom left of the sheet for mobile layouts.
+const _desktopCornerRadius = 12.0;
 // Width for just the cart icon and no thumbnails.
-const double _kWidthForCartIcon = 64.0;
+const _widthForCartIcon = 64.0;
+// Height of a thumbnail.
+const _thumbnailHeight = 40.0;
+// Gap between thumbnails.
+const _thumbnailGap = 16.0;
 
 class ExpandingBottomSheet extends StatefulWidget {
-  const ExpandingBottomSheet({Key key, @required this.hideController})
+  const ExpandingBottomSheet(
+      {Key key,
+      @required this.hideController,
+      @required this.expandingController})
       : assert(hideController != null),
+        assert(expandingController != null),
         super(key: key);
 
   final AnimationController hideController;
+  final AnimationController expandingController;
 
   @override
   _ExpandingBottomSheetState createState() => _ExpandingBottomSheetState();
@@ -80,19 +93,19 @@ Animation<T> _getEmphasizedEasingAnimation<T>({
   double secondWeight;
 
   if (isForward) {
-    firstCurve = _kAccelerateCurve;
-    secondCurve = _kDecelerateCurve;
-    firstWeight = _kPeakVelocityTime;
-    secondWeight = 1.0 - _kPeakVelocityTime;
+    firstCurve = _accelerateCurve;
+    secondCurve = _decelerateCurve;
+    firstWeight = _peakVelocityTime;
+    secondWeight = 1 - _peakVelocityTime;
   } else {
-    firstCurve = _kDecelerateCurve.flipped;
-    secondCurve = _kAccelerateCurve.flipped;
-    firstWeight = 1.0 - _kPeakVelocityTime;
-    secondWeight = _kPeakVelocityTime;
+    firstCurve = _decelerateCurve.flipped;
+    secondCurve = _accelerateCurve.flipped;
+    firstWeight = 1 - _peakVelocityTime;
+    secondWeight = _peakVelocityTime;
   }
 
   return TweenSequence<T>(
-    <TweenSequenceItem<T>>[
+    [
       TweenSequenceItem<T>(
         weight: firstWeight,
         tween: Tween<T>(
@@ -114,7 +127,7 @@ Animation<T> _getEmphasizedEasingAnimation<T>({
 // Calculates the value where two double Animations should be joined. Used by
 // callers of _getEmphasisedEasing<double>().
 double _getPeakPoint({double begin, double end}) {
-  return begin + (end - begin) * _kPeakVelocityProgress;
+  return begin + (end - begin) * _peakVelocityProgress;
 }
 
 class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
@@ -125,33 +138,21 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
   // The width of the Material, calculated by _widthFor() & based on the number
   // of products in the cart. 64.0 is the width when there are 0 products
   // (_kWidthForZeroProducts)
-  double _width = _kWidthForCartIcon;
+  double _width = _widthForCartIcon;
+  double _height = _cartHeight;
 
   // Controller for the opening and closing of the ExpandingBottomSheet
-  AnimationController _controller;
+  AnimationController get _controller => widget.expandingController;
 
   // Animations for the opening and closing of the ExpandingBottomSheet
   Animation<double> _widthAnimation;
   Animation<double> _heightAnimation;
   Animation<double> _thumbnailOpacityAnimation;
   Animation<double> _cartOpacityAnimation;
-  Animation<double> _shapeAnimation;
+  Animation<double> _topLeftShapeAnimation;
+  Animation<double> _bottomLeftShapeAnimation;
   Animation<Offset> _slideAnimation;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(
-      duration: const Duration(milliseconds: 500),
-      vsync: this,
-    );
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
+  Animation<double> _gapAnimation;
 
   Animation<double> _getWidthAnimation(double screenWidth) {
     if (_controller.status == AnimationStatus.forward) {
@@ -159,7 +160,7 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
       return Tween<double>(begin: _width, end: screenWidth).animate(
         CurvedAnimation(
           parent: _controller.view,
-          curve: const Interval(0.0, 0.3, curve: Curves.fastOutSlowIn),
+          curve: const Interval(0, 0.3, curve: Curves.fastOutSlowIn),
         ),
       );
     } else {
@@ -170,7 +171,7 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
         end: screenWidth,
         isForward: false,
         parent: CurvedAnimation(
-            parent: _controller.view, curve: const Interval(0.0, 0.87)),
+            parent: _controller.view, curve: const Interval(0, 0.87)),
       );
     }
   }
@@ -180,9 +181,8 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
       // Opening animation
 
       return _getEmphasizedEasingAnimation(
-        begin: _kCartHeight,
-        peak: _kCartHeight +
-            (screenHeight - _kCartHeight) * _kPeakVelocityProgress,
+        begin: _height,
+        peak: _getPeakPoint(begin: _height, end: screenHeight),
         end: screenHeight,
         isForward: true,
         parent: _controller.view,
@@ -190,34 +190,93 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
     } else {
       // Closing animation
       return Tween<double>(
-        begin: _kCartHeight,
+        begin: _height,
         end: screenHeight,
       ).animate(
         CurvedAnimation(
           parent: _controller.view,
-          curve: const Interval(0.434, 1.0, curve: Curves.linear), // not used
+          curve: const Interval(0.434, 1, curve: Curves.linear), // not used
           // only the reverseCurve will be used
-          reverseCurve:
-              Interval(0.434, 1.0, curve: Curves.fastOutSlowIn.flipped),
+          reverseCurve: Interval(0.434, 1, curve: Curves.fastOutSlowIn.flipped),
         ),
       );
     }
   }
 
-  // Animation of the cut corner. It's cut when closed and not cut when open.
-  Animation<double> _getShapeAnimation() {
+  Animation<double> _getDesktopGapAnimation(double gapHeight) {
+    final double _collapsedGapHeight = gapHeight;
+    final double _expandedGapHeight = 0;
+
     if (_controller.status == AnimationStatus.forward) {
-      return Tween<double>(begin: _kCornerRadius, end: 0.0).animate(
+      // Opening animation
+
+      return _getEmphasizedEasingAnimation(
+        begin: _collapsedGapHeight,
+        peak: _collapsedGapHeight +
+            (_expandedGapHeight - _collapsedGapHeight) * _peakVelocityProgress,
+        end: _expandedGapHeight,
+        isForward: true,
+        parent: _controller.view,
+      );
+    } else {
+      // Closing animation
+      return Tween<double>(
+        begin: _collapsedGapHeight,
+        end: _expandedGapHeight,
+      ).animate(
         CurvedAnimation(
           parent: _controller.view,
-          curve: const Interval(0.0, 0.3, curve: Curves.fastOutSlowIn),
+          curve: const Interval(0.434, 1), // not used
+          // only the reverseCurve will be used
+          reverseCurve: Interval(0.434, 1, curve: Curves.fastOutSlowIn.flipped),
+        ),
+      );
+    }
+  }
+
+  // Animation of the top-left cut corner. It's cut when closed and not cut when open.
+  Animation<double> _getShapeTopLeftAnimation(BuildContext context) {
+    final bool isDesktop = isDisplayDesktop(context);
+
+    final double cornerRadius =
+        isDesktop ? _desktopCornerRadius : _mobileCornerRadius;
+
+    if (_controller.status == AnimationStatus.forward) {
+      return Tween<double>(begin: cornerRadius, end: 0).animate(
+        CurvedAnimation(
+          parent: _controller.view,
+          curve: const Interval(0, 0.3, curve: Curves.fastOutSlowIn),
         ),
       );
     } else {
       return _getEmphasizedEasingAnimation(
-        begin: _kCornerRadius,
-        peak: _getPeakPoint(begin: _kCornerRadius, end: 0.0),
-        end: 0.0,
+        begin: cornerRadius,
+        peak: _getPeakPoint(begin: cornerRadius, end: 0),
+        end: 0,
+        isForward: false,
+        parent: _controller.view,
+      );
+    }
+  }
+
+  // Animation of the bottom-left cut corner. It's cut when closed and not cut when open.
+  Animation<double> _getShapeBottomLeftAnimation(BuildContext context) {
+    final bool isDesktop = isDisplayDesktop(context);
+
+    final double cornerRadius = isDesktop ? _desktopCornerRadius : 0;
+
+    if (_controller.status == AnimationStatus.forward) {
+      return Tween<double>(begin: cornerRadius, end: 0).animate(
+        CurvedAnimation(
+          parent: _controller.view,
+          curve: const Interval(0, 0.3, curve: Curves.fastOutSlowIn),
+        ),
+      );
+    } else {
+      return _getEmphasizedEasingAnimation(
+        begin: cornerRadius,
+        peak: _getPeakPoint(begin: cornerRadius, end: 0),
+        end: 0,
         isForward: false,
         parent: _controller.view,
       );
@@ -225,11 +284,11 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
   }
 
   Animation<double> _getThumbnailOpacityAnimation() {
-    return Tween<double>(begin: 1.0, end: 0.0).animate(
+    return Tween<double>(begin: 1, end: 0).animate(
       CurvedAnimation(
         parent: _controller.view,
         curve: _controller.status == AnimationStatus.forward
-            ? const Interval(0.0, 0.3)
+            ? const Interval(0, 0.3)
             : const Interval(0.532, 0.766),
       ),
     );
@@ -240,25 +299,22 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
       parent: _controller.view,
       curve: _controller.status == AnimationStatus.forward
           ? const Interval(0.3, 0.6)
-          : const Interval(0.766, 1.0),
+          : const Interval(0.766, 1),
     );
   }
 
   // Returns the correct width of the ExpandingBottomSheet based on the number of
   // products in the cart.
   double _widthFor(int numProducts) {
-    switch (numProducts) {
-      case 0:
-        return _kWidthForCartIcon;
-      case 1:
-        return 136.0;
-      case 2:
-        return 192.0;
-      case 3:
-        return 248.0;
-      default:
-        return 278.0;
-    }
+    final widths = <double>[_widthForCartIcon, 136, 192, 248];
+    return numProducts >= widths.length ? 278 : widths[numProducts];
+  }
+
+  // Returns the correct height of the ExpandingBottomSheet based on the number of
+  // products in the cart.
+  double _heightFor(int numProducts) {
+    final heights = <double>[_cartHeight, 120, 176, 232];
+    return numProducts >= heights.length ? 260 : heights[numProducts];
   }
 
   // Returns true if the cart is open or opening and false otherwise.
@@ -285,39 +341,73 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
   // Changes the padding between the start edge of the Material and the cart icon
   // based on the number of products in the cart (padding increases when > 0
   // products.)
-  EdgeInsetsDirectional _cartPaddingFor(int numProducts) {
+  EdgeInsetsDirectional _horizontalCartPaddingFor(int numProducts) {
     return (numProducts == 0)
-        ? const EdgeInsetsDirectional.only(start: 20.0, end: 8.0)
-        : const EdgeInsetsDirectional.only(start: 32.0, end: 8.0);
+        ? const EdgeInsetsDirectional.only(start: 20, end: 8)
+        : const EdgeInsetsDirectional.only(start: 32, end: 8);
   }
 
-  bool get _cartIsVisible => _thumbnailOpacityAnimation.value == 0.0;
+  // Changes the padding above and below the cart icon
+  // based on the number of products in the cart (padding increases when > 0
+  // products.)
+  EdgeInsets _verticalCartPaddingFor(int numProducts) {
+    return (numProducts == 0)
+        ? const EdgeInsets.only(top: 16, bottom: 16)
+        : const EdgeInsets.only(top: 16, bottom: 24);
+  }
 
-  Widget _buildThumbnails(int numProducts) {
+  bool get _cartIsVisible => _thumbnailOpacityAnimation.value == 0;
+
+  Widget _buildThumbnails(BuildContext context, int numProducts) {
+    final bool isDesktop = isDisplayDesktop(context);
+
+    Widget thumbnails;
+
+    if (isDesktop) {
+      thumbnails = Column(
+        children: [
+          AnimatedPadding(
+            padding: _verticalCartPaddingFor(numProducts),
+            child: const Icon(Icons.shopping_cart),
+            duration: const Duration(milliseconds: 225),
+          ),
+          Container(
+            width: _width,
+            height: (numProducts >= 3 ? 3 : numProducts) *
+                (_thumbnailHeight + _thumbnailGap),
+            child: ProductThumbnailRow(),
+          ),
+          ExtraProductsNumber(),
+        ],
+      );
+    } else {
+      thumbnails = Column(
+        children: [
+          Row(
+            children: [
+              AnimatedPadding(
+                padding: _horizontalCartPaddingFor(numProducts),
+                child: const Icon(Icons.shopping_cart),
+                duration: const Duration(milliseconds: 225),
+              ),
+              Container(
+                // Accounts for the overflow number
+                width: numProducts > 3 ? _width - 94 : _width - 64,
+                height: _cartHeight,
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: ProductThumbnailRow(),
+              ),
+              ExtraProductsNumber(),
+            ],
+          ),
+        ],
+      );
+    }
+
     return ExcludeSemantics(
       child: Opacity(
         opacity: _thumbnailOpacityAnimation.value,
-        child: Column(
-          children: <Widget>[
-            Row(
-              children: <Widget>[
-                AnimatedPadding(
-                  padding: _cartPaddingFor(numProducts),
-                  child: const Icon(Icons.shopping_cart),
-                  duration: const Duration(milliseconds: 225),
-                ),
-                Container(
-                  // Accounts for the overflow number
-                  width: numProducts > 3 ? _width - 94.0 : _width - 64.0,
-                  height: _kCartHeight,
-                  padding: const EdgeInsets.symmetric(vertical: 8.0),
-                  child: ProductThumbnailRow(),
-                ),
-                ExtraProductsNumber(),
-              ],
-            ),
-          ],
-        ),
+        child: thumbnails,
       ),
     );
   }
@@ -332,6 +422,8 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
   Widget _buildCart(BuildContext context, Widget child) {
     // numProducts is the number of different products in the cart (does not
     // include multiples of the same product).
+    final bool isDesktop = isDisplayDesktop(context);
+
     final AppStateModel model = ScopedModel.of<AppStateModel>(context);
     final int numProducts = model.productsInCart.keys.length;
     final int totalCartQuantity = model.totalCartQuantity;
@@ -339,31 +431,41 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
     final double screenWidth = screenSize.width;
     final double screenHeight = screenSize.height;
 
-    _width = _widthFor(numProducts);
-    _widthAnimation = _getWidthAnimation(screenWidth);
+    final double expandedCartWidth = isDesktop ? 360 : screenWidth;
+
+    _width = isDesktop ? _widthForCartIcon : _widthFor(numProducts);
+    _widthAnimation = _getWidthAnimation(expandedCartWidth);
+    _height = isDesktop ? _heightFor(numProducts) : _cartHeight;
     _heightAnimation = _getHeightAnimation(screenHeight);
-    _shapeAnimation = _getShapeAnimation();
+    _topLeftShapeAnimation = _getShapeTopLeftAnimation(context);
+    _bottomLeftShapeAnimation = _getShapeBottomLeftAnimation(context);
     _thumbnailOpacityAnimation = _getThumbnailOpacityAnimation();
     _cartOpacityAnimation = _getCartOpacityAnimation();
+    _gapAnimation =
+        isDesktop ? _getDesktopGapAnimation(116) : AlwaysStoppedAnimation(0);
 
-    return Semantics(
-      button: true,
-      value: 'Shopping cart, $totalCartQuantity items',
-      child: Container(
-        width: _widthAnimation.value,
-        height: _heightAnimation.value,
-        child: Material(
-          animationDuration: const Duration(milliseconds: 0),
-          shape: BeveledRectangleBorder(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(_shapeAnimation.value),
+    return Padding(
+      padding: EdgeInsets.only(top: _gapAnimation.value),
+      child: Semantics(
+        button: true,
+        value: 'Shopping cart, $totalCartQuantity items',
+        child: Container(
+          width: _widthAnimation.value,
+          height: _heightAnimation.value,
+          child: Material(
+            animationDuration: const Duration(milliseconds: 0),
+            shape: BeveledRectangleBorder(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(_topLeftShapeAnimation.value),
+                bottomLeft: Radius.circular(_bottomLeftShapeAnimation.value),
+              ),
             ),
+            elevation: 4,
+            color: shrinePink50,
+            child: _cartIsVisible
+                ? _buildShoppingCartPage()
+                : _buildThumbnails(context, numProducts),
           ),
-          elevation: 4.0,
-          color: kShrinePink50,
-          child: _cartIsVisible
-              ? _buildShoppingCartPage()
-              : _buildThumbnails(numProducts),
         ),
       ),
     );
@@ -371,18 +473,24 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
 
   // Builder for the hide and reveal animation when the backdrop opens and closes
   Widget _buildSlideAnimation(BuildContext context, Widget child) {
-    _slideAnimation = _getEmphasizedEasingAnimation(
-      begin: const Offset(1.0, 0.0),
-      peak: const Offset(_kPeakVelocityProgress, 0.0),
-      end: const Offset(0.0, 0.0),
-      isForward: widget.hideController.status == AnimationStatus.forward,
-      parent: widget.hideController,
-    );
+    final bool isDesktop = isDisplayDesktop(context);
 
-    return SlideTransition(
-      position: _slideAnimation,
-      child: child,
-    );
+    if (isDesktop) {
+      return child;
+    } else {
+      _slideAnimation = _getEmphasizedEasingAnimation(
+        begin: const Offset(1, 0),
+        peak: const Offset(_peakVelocityProgress, 0),
+        end: const Offset(0, 0),
+        isForward: widget.hideController.status == AnimationStatus.forward,
+        parent: widget.hideController,
+      );
+
+      return SlideTransition(
+        position: _slideAnimation,
+        child: child,
+      );
+    }
   }
 
   // Closes the cart if the cart is open, otherwise exits the app (this should
@@ -470,15 +578,15 @@ class _ProductThumbnailRowState extends State<ProductThumbnailRow> {
   Widget _buildThumbnail(
       BuildContext context, int index, Animation<double> animation) {
     final Animation<double> thumbnailSize =
-        Tween<double>(begin: 0.8, end: 1.0).animate(
+        Tween<double>(begin: 0.8, end: 1).animate(
       CurvedAnimation(
-        curve: const Interval(0.33, 1.0, curve: Curves.easeIn),
+        curve: const Interval(0.33, 1, curve: Curves.easeIn),
         parent: animation,
       ),
     );
 
     final Animation<double> opacity = CurvedAnimation(
-      curve: const Interval(0.33, 1.0, curve: Curves.linear),
+      curve: const Interval(0.33, 1, curve: Curves.linear),
       parent: animation,
     );
 
@@ -522,13 +630,15 @@ class _ProductThumbnailRowState extends State<ProductThumbnailRow> {
     }
   }
 
-  Widget _buildAnimatedList() {
+  Widget _buildAnimatedList(BuildContext context) {
+    final bool isDesktop = isDisplayDesktop(context);
+
     return AnimatedList(
       key: _listKey,
       shrinkWrap: true,
       itemBuilder: _buildThumbnail,
       initialItemCount: _list.length,
-      scrollDirection: Axis.horizontal,
+      scrollDirection: isDesktop ? Axis.vertical : Axis.horizontal,
       physics: const NeverScrollableScrollPhysics(), // Cart shouldn't scroll
     );
   }
@@ -537,7 +647,7 @@ class _ProductThumbnailRowState extends State<ProductThumbnailRow> {
   Widget build(BuildContext context) {
     _updateLists();
     return ScopedModelDescendant<AppStateModel>(
-      builder: (context, child, model) => _buildAnimatedList(),
+      builder: (context, child, model) => _buildAnimatedList(context),
     );
   }
 }
@@ -596,13 +706,15 @@ class ProductThumbnail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool isDesktop = isDisplayDesktop(context);
+
     return FadeTransition(
       opacity: opacityAnimation,
       child: ScaleTransition(
         scale: animation,
         child: Container(
-          width: 40.0,
-          height: 40.0,
+          width: 40,
+          height: 40,
           decoration: BoxDecoration(
             image: DecorationImage(
               image: ExactAssetImage(
@@ -611,9 +723,11 @@ class ProductThumbnail extends StatelessWidget {
               ),
               fit: BoxFit.cover,
             ),
-            borderRadius: const BorderRadius.all(Radius.circular(10.0)),
+            borderRadius: const BorderRadius.all(Radius.circular(10)),
           ),
-          margin: const EdgeInsets.only(left: 16.0),
+          margin: isDesktop
+              ? const EdgeInsets.only(left: 12, right: 12, bottom: 16)
+              : const EdgeInsets.only(left: 16),
         ),
       ),
     );
@@ -628,7 +742,7 @@ class _ListModel {
     Iterable<int> initialItems,
   })  : assert(listKey != null),
         assert(removedItemBuilder != null),
-        _items = initialItems?.toList() ?? <int>[];
+        _items = initialItems?.toList() ?? [];
 
   final GlobalKey<AnimatedListState> listKey;
   final Widget Function(int, BuildContext, Animation<double>)

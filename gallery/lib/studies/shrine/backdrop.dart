@@ -16,11 +16,12 @@ import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
 import 'login.dart';
+import 'category_menu_page.dart';
 
-const Cubic _kAccelerateCurve = Cubic(0.548, 0.0, 0.757, 0.464);
-const Cubic _kDecelerateCurve = Cubic(0.23, 0.94, 0.41, 1.0);
-const double _kPeakVelocityTime = 0.248210;
-const double _kPeakVelocityProgress = 0.379146;
+const Cubic _accelerateCurve = Cubic(0.548, 0, 0.757, 0.464);
+const Cubic _decelerateCurve = Cubic(0.23, 0.94, 0.41, 1);
+const _peakVelocityTime = 0.248210;
+const _peakVelocityProgress = 0.379146;
 
 class _FrontLayer extends StatelessWidget {
   const _FrontLayer({
@@ -35,18 +36,18 @@ class _FrontLayer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      elevation: 16.0,
+      elevation: 16,
       shape: const BeveledRectangleBorder(
-        borderRadius: BorderRadius.only(topLeft: Radius.circular(46.0)),
+        borderRadius: BorderRadius.only(topLeft: Radius.circular(46)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
+        children: [
           GestureDetector(
             behavior: HitTestBehavior.opaque,
             onTap: onTap,
             child: Container(
-              height: 40.0,
+              height: 40,
               alignment: AlignmentDirectional.centerStart,
             ),
           ),
@@ -80,21 +81,21 @@ class _BackdropTitle extends AnimatedWidget {
   Widget build(BuildContext context) {
     final Animation<double> animation = CurvedAnimation(
       parent: listenable,
-      curve: const Interval(0.0, 0.78),
+      curve: const Interval(0, 0.78),
     );
 
     return DefaultTextStyle(
       style: Theme.of(context).primaryTextTheme.title,
       softWrap: false,
       overflow: TextOverflow.ellipsis,
-      child: Row(children: <Widget>[
+      child: Row(children: [
         // branded icon
         SizedBox(
-          width: 72.0,
+          width: 72,
           child: IconButton(
-            padding: const EdgeInsets.only(right: 8.0),
+            padding: const EdgeInsets.only(right: 8),
             onPressed: onPress,
-            icon: Stack(children: <Widget>[
+            icon: Stack(children: [
               Opacity(
                 opacity: animation.value,
                 child: const ImageIcon(
@@ -103,7 +104,7 @@ class _BackdropTitle extends AnimatedWidget {
               FractionalTranslation(
                 translation: Tween<Offset>(
                   begin: Offset.zero,
-                  end: const Offset(1.0, 0.0),
+                  end: const Offset(1, 0),
                 ).evaluate(animation),
                 child: const ImageIcon(
                     AssetImage('packages/shrine_images/diamond.png')),
@@ -114,16 +115,16 @@ class _BackdropTitle extends AnimatedWidget {
         // Here, we do a custom cross fade between backTitle and frontTitle.
         // This makes a smooth animation between the two texts.
         Stack(
-          children: <Widget>[
+          children: [
             Opacity(
               opacity: CurvedAnimation(
                 parent: ReverseAnimation(animation),
-                curve: const Interval(0.5, 1.0),
+                curve: const Interval(0.5, 1),
               ).value,
               child: FractionalTranslation(
                 translation: Tween<Offset>(
                   begin: Offset.zero,
-                  end: const Offset(0.5, 0.0),
+                  end: const Offset(0.5, 0),
                 ).evaluate(animation),
                 child: backTitle,
               ),
@@ -131,11 +132,11 @@ class _BackdropTitle extends AnimatedWidget {
             Opacity(
               opacity: CurvedAnimation(
                 parent: animation,
-                curve: const Interval(0.5, 1.0),
+                curve: const Interval(0.5, 1),
               ).value,
               child: FractionalTranslation(
                 translation: Tween<Offset>(
-                  begin: const Offset(-0.25, 0.0),
+                  begin: const Offset(-0.25, 0),
                   end: Offset.zero,
                 ).evaluate(animation),
                 child: frontTitle,
@@ -189,12 +190,6 @@ class _BackdropState extends State<Backdrop>
     _controller = widget.controller;
   }
 
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
   bool get _frontLayerVisible {
     final AnimationStatus status = _controller.status;
     return status == AnimationStatus.completed ||
@@ -219,38 +214,38 @@ class _BackdropState extends State<Backdrop>
     Animation<double> animation; // Animation on which TweenSequence runs
 
     if (_frontLayerVisible) {
-      firstCurve = _kAccelerateCurve;
-      secondCurve = _kDecelerateCurve;
-      firstWeight = _kPeakVelocityTime;
-      secondWeight = 1.0 - _kPeakVelocityTime;
+      firstCurve = _accelerateCurve;
+      secondCurve = _decelerateCurve;
+      firstWeight = _peakVelocityTime;
+      secondWeight = 1 - _peakVelocityTime;
       animation = CurvedAnimation(
         parent: _controller.view,
-        curve: const Interval(0.0, 0.78),
+        curve: const Interval(0, 0.78),
       );
     } else {
       // These values are only used when the controller runs from t=1.0 to t=0.0
-      firstCurve = _kDecelerateCurve.flipped;
-      secondCurve = _kAccelerateCurve.flipped;
-      firstWeight = 1.0 - _kPeakVelocityTime;
-      secondWeight = _kPeakVelocityTime;
+      firstCurve = _decelerateCurve.flipped;
+      secondCurve = _accelerateCurve.flipped;
+      firstWeight = 1 - _peakVelocityTime;
+      secondWeight = _peakVelocityTime;
       animation = _controller.view;
     }
 
     return TweenSequence<RelativeRect>(
-      <TweenSequenceItem<RelativeRect>>[
+      [
         TweenSequenceItem<RelativeRect>(
           tween: RelativeRectTween(
             begin: RelativeRect.fromLTRB(
-              0.0,
+              0,
               layerTop,
-              0.0,
+              0,
               layerTop - layerSize.height,
             ),
             end: RelativeRect.fromLTRB(
-              0.0,
-              layerTop * _kPeakVelocityProgress,
-              0.0,
-              (layerTop - layerSize.height) * _kPeakVelocityProgress,
+              0,
+              layerTop * _peakVelocityProgress,
+              0,
+              (layerTop - layerSize.height) * _peakVelocityProgress,
             ),
           ).chain(CurveTween(curve: firstCurve)),
           weight: firstWeight,
@@ -258,10 +253,10 @@ class _BackdropState extends State<Backdrop>
         TweenSequenceItem<RelativeRect>(
           tween: RelativeRectTween(
             begin: RelativeRect.fromLTRB(
-              0.0,
-              layerTop * _kPeakVelocityProgress,
-              0.0,
-              (layerTop - layerSize.height) * _kPeakVelocityProgress,
+              0,
+              layerTop * _peakVelocityProgress,
+              0,
+              (layerTop - layerSize.height) * _peakVelocityProgress,
             ),
             end: RelativeRect.fill,
           ).chain(CurveTween(curve: secondCurve)),
@@ -272,7 +267,7 @@ class _BackdropState extends State<Backdrop>
   }
 
   Widget _buildStack(BuildContext context, BoxConstraints constraints) {
-    const double layerTitleHeight = 48.0;
+    const double layerTitleHeight = 48;
     final Size layerSize = constraints.biggest;
     final double layerTop = layerSize.height - layerTitleHeight;
 
@@ -280,7 +275,7 @@ class _BackdropState extends State<Backdrop>
 
     return Stack(
       key: _backdropKey,
-      children: <Widget>[
+      children: [
         widget.backLayer,
         PositionedTransition(
           rect: _layerAnimation,
@@ -297,15 +292,15 @@ class _BackdropState extends State<Backdrop>
   Widget build(BuildContext context) {
     final AppBar appBar = AppBar(
       brightness: Brightness.light,
-      elevation: 0.0,
-      titleSpacing: 0.0,
+      elevation: 0,
+      titleSpacing: 0,
       title: _BackdropTitle(
         listenable: _controller.view,
         onPress: _toggleBackdropLayerVisibility,
         frontTitle: widget.frontTitle,
         backTitle: widget.backTitle,
       ),
-      actions: <Widget>[
+      actions: [
         IconButton(
           icon: const Icon(Icons.search, semanticLabel: 'login'),
           onPressed: () {
@@ -331,6 +326,33 @@ class _BackdropState extends State<Backdrop>
       body: LayoutBuilder(
         builder: _buildStack,
       ),
+    );
+  }
+}
+
+class DesktopBackdrop extends StatelessWidget {
+  const DesktopBackdrop({
+    @required this.frontLayer,
+    @required this.backLayer,
+  });
+
+  final Widget frontLayer;
+  final Widget backLayer;
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        backLayer,
+        Padding(
+          padding: const EdgeInsets.only(left: desktopCategoryMenuPageWidth),
+          child: Material(
+            elevation: 16,
+            color: Colors.white,
+            child: frontLayer,
+          ),
+        )
+      ],
     );
   }
 }

@@ -42,7 +42,7 @@ class HomePage extends StatelessWidget {
                 subtitle: GalleryLocalizations.of(context).shrineDescription,
                 asset: 'assets/studies/shrine_card.png',
                 assetDark: 'assets/studies/shrine_card_dark.png',
-                textColor: kShrineBrown900,
+                textColor: shrineBrown900,
                 study: ShrineApp(),
               ),
               _CarouselCard(

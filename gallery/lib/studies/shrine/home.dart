@@ -15,7 +15,8 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-import 'backdrop.dart';
+import '../../layout/adaptive.dart';
+
 import 'expanding_bottom_sheet.dart';
 import 'model/app_state_model.dart';
 import 'model/product.dart';
@@ -28,9 +29,13 @@ class ProductPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool isDesktop = isDisplayDesktop(context);
+
     return ScopedModelDescendant<AppStateModel>(
         builder: (context, child, model) {
-      return AsymmetricView(products: model.getProducts());
+      return isDesktop
+          ? DesktopAsymmetricView(products: model.getProducts())
+          : MobileAsymmetricView(products: model.getProducts());
     });
   }
 }
@@ -38,19 +43,27 @@ class ProductPage extends StatelessWidget {
 class HomePage extends StatelessWidget {
   const HomePage({
     this.expandingBottomSheet,
+    this.scrim,
     this.backdrop,
     Key key,
   }) : super(key: key);
 
   final ExpandingBottomSheet expandingBottomSheet;
-  final Backdrop backdrop;
+  final Widget scrim;
+  final Widget backdrop;
 
   @override
   Widget build(BuildContext context) {
+    final bool isDesktop = isDisplayDesktop(context);
+
     return Stack(
-      children: <Widget>[
+      children: [
         backdrop,
-        Align(child: expandingBottomSheet, alignment: Alignment.bottomRight),
+        scrim,
+        Align(
+          child: expandingBottomSheet,
+          alignment: isDesktop ? Alignment.topRight : Alignment.bottomRight,
+        ),
       ],
     );
   }

@@ -26,8 +26,8 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController _passwordController = TextEditingController();
   static const ShapeDecoration _decoration = ShapeDecoration(
     shape: BeveledRectangleBorder(
-      side: BorderSide(color: kShrineBrown900, width: 0.5),
-      borderRadius: BorderRadius.all(Radius.circular(7.0)),
+      side: BorderSide(color: shrineBrown900, width: 0.5),
+      borderRadius: BorderRadius.all(Radius.circular(7)),
     ),
   );
 
@@ -35,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0.0,
+        elevation: 0,
         backgroundColor: Colors.white,
         brightness: Brightness.light,
         leading: IconButton(
@@ -51,22 +51,22 @@ class _LoginPageState extends State<LoginPage> {
       ),
       body: SafeArea(
         child: ListView(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0),
-          children: <Widget>[
-            const SizedBox(height: 80.0),
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          children: [
+            const SizedBox(height: 80),
             Column(
-              children: <Widget>[
+              children: [
                 Image.asset('packages/shrine_images/diamond.png'),
-                const SizedBox(height: 16.0),
+                const SizedBox(height: 16),
                 Text(
                   'SHRINE',
                   style: Theme.of(context).textTheme.headline,
                 ),
               ],
             ),
-            const SizedBox(height: 120.0),
+            const SizedBox(height: 120),
             PrimaryColorOverride(
-              color: kShrineBrown900,
+              color: shrineBrown900,
               child: Container(
                 decoration: _decoration,
                 child: TextField(
@@ -77,13 +77,14 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
             ),
-            const SizedBox(height: 12.0),
+            const SizedBox(height: 12),
             PrimaryColorOverride(
-              color: kShrineBrown900,
+              color: shrineBrown900,
               child: Container(
                 decoration: _decoration,
                 child: TextField(
                   controller: _passwordController,
+                  obscureText: true,
                   decoration: const InputDecoration(
                     labelText: 'Password',
                   ),
@@ -91,13 +92,13 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             Wrap(
-              children: <Widget>[
+              children: [
                 ButtonBar(
-                  children: <Widget>[
+                  children: [
                     FlatButton(
                       child: const Text('CANCEL'),
                       shape: const BeveledRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                        borderRadius: BorderRadius.all(Radius.circular(7)),
                       ),
                       onPressed: () {
                         // The login screen is immediately displayed on top of
@@ -109,9 +110,9 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     RaisedButton(
                       child: const Text('NEXT'),
-                      elevation: 8.0,
+                      elevation: 8,
                       shape: const BeveledRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(7.0)),
+                        borderRadius: BorderRadius.all(Radius.circular(7)),
                       ),
                       onPressed: () {
                         Navigator.pop(context);

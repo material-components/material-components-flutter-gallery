@@ -14,17 +14,19 @@
 
 import 'package:flutter/material.dart';
 
+import '../category_menu_page.dart';
 import '../model/product.dart';
 import 'product_columns.dart';
+import 'desktop_product_columns.dart';
 
-class AsymmetricView extends StatelessWidget {
-  const AsymmetricView({Key key, this.products}) : super(key: key);
+class MobileAsymmetricView extends StatelessWidget {
+  const MobileAsymmetricView({Key key, this.products}) : super(key: key);
 
   final List<Product> products;
 
   List<Container> _buildColumns(BuildContext context) {
     if (products == null || products.isEmpty) {
-      return const <Container>[];
+      return const [];
     }
 
     // This will return a list of columns. It will oscillate between the two
@@ -45,7 +47,7 @@ class AsymmetricView extends StatelessWidget {
           bottom: products[bottom],
           top: products.length - 1 >= bottom + 1 ? products[bottom + 1] : null,
         );
-        width += 32.0;
+        width += 32;
       } else {
         /// Odd cases
         column = OneProductCardColumn(
@@ -55,7 +57,7 @@ class AsymmetricView extends StatelessWidget {
       return Container(
         width: width,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: column,
         ),
       );
@@ -85,8 +87,73 @@ class AsymmetricView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       scrollDirection: Axis.horizontal,
-      padding: const EdgeInsets.fromLTRB(0.0, 34.0, 16.0, 44.0),
+      padding: const EdgeInsets.fromLTRB(0, 34, 16, 44),
       children: _buildColumns(context),
+      physics: const AlwaysScrollableScrollPhysics(),
+    );
+  }
+}
+
+class DesktopAsymmetricView extends StatelessWidget {
+  const DesktopAsymmetricView({Key key, this.products}) : super(key: key);
+
+  final List<Product> products;
+
+  @override
+  Widget build(BuildContext context) {
+    final Widget _gap = Container(width: 24);
+    final Widget _flex = Expanded(flex: 1, child: Container());
+
+    // Calculate number of columns
+
+    final double sidebar = desktopCategoryMenuPageWidth;
+    final double minimumBoundaryWidth = 84;
+    final double columnWidth = 186;
+    final double columnGapWidth = 24;
+    final double windowWidth = MediaQuery.of(context).size.width;
+
+    final int columnCount =
+        ((windowWidth + columnGapWidth - 2 * minimumBoundaryWidth - sidebar) /
+                (columnWidth + columnGapWidth))
+            .floor();
+
+    final List<DesktopProductCardColumn> productCardColumns =
+        List<DesktopProductCardColumn>.generate(columnCount, (currentColumn) {
+      final bool alignToRight =
+          (currentColumn % 2 == 1) || (currentColumn == columnCount - 1);
+      final bool startLarge = (currentColumn % 2 == 1);
+      return DesktopProductCardColumn(
+        columnCount: columnCount,
+        currentColumn: currentColumn,
+        alignToRight: alignToRight,
+        startLarge: startLarge,
+        products: products,
+      );
+    });
+
+    return ListView(
+      scrollDirection: Axis.vertical,
+      children: [
+        Container(height: 60),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            _flex,
+            ...List<Widget>.generate(
+              2 * columnCount - 1,
+              (generalizedColumnIndex) {
+                if (generalizedColumnIndex % 2 == 0) {
+                  return productCardColumns[generalizedColumnIndex ~/ 2];
+                } else {
+                  return _gap;
+                }
+              },
+            ),
+            _flex,
+          ],
+        ),
+        Container(height: 60),
+      ],
       physics: const AlwaysScrollableScrollPhysics(),
     );
   }

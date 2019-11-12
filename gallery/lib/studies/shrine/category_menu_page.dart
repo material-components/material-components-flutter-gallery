@@ -15,9 +15,15 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
+import '../../layout/adaptive.dart';
+
 import 'colors.dart';
 import 'model/app_state_model.dart';
 import 'model/product.dart';
+import 'login.dart';
+import 'triangle_category_indicator.dart';
+
+const desktopCategoryMenuPageWidth = 232.0;
 
 class CategoryMenuPage extends StatelessWidget {
   const CategoryMenuPage({
@@ -28,9 +34,19 @@ class CategoryMenuPage extends StatelessWidget {
   final VoidCallback onCategoryTap;
 
   Widget _buildCategory(Category category, BuildContext context) {
+    final bool isDesktop = isDisplayDesktop(context);
+
     final String categoryString =
         category.toString().replaceAll('Category.', '').toUpperCase();
     final ThemeData theme = Theme.of(context);
+
+    final TextStyle categoryTextStyle = isDesktop
+        ? theme.textTheme.body2.copyWith(fontSize: 17)
+        : theme.textTheme.body2.copyWith(fontSize: 19);
+
+    final double indicatorWidth = isDesktop ? 34 : 36.43;
+    final double indicatorHeight = isDesktop ? 28 : 30;
+
     return ScopedModelDescendant<AppStateModel>(
       builder: (context, child, model) => GestureDetector(
         onTap: () {
@@ -40,28 +56,24 @@ class CategoryMenuPage extends StatelessWidget {
           }
         },
         child: model.selectedCategory == category
-            ? Column(
-                children: <Widget>[
-                  const SizedBox(height: 16.0),
-                  Text(
+            ? CustomPaint(
+                painter:
+                    TriangleCategoryIndicator(indicatorWidth, indicatorHeight),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  child: Text(
                     categoryString,
-                    style: theme.textTheme.body2,
+                    style: categoryTextStyle,
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 14.0),
-                  Container(
-                    width: 70.0,
-                    height: 2.0,
-                    color: kShrinePink400,
-                  ),
-                ],
+                ),
               )
             : Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                padding: const EdgeInsets.symmetric(vertical: 16),
                 child: Text(
                   categoryString,
-                  style: theme.textTheme.body2
-                      .copyWith(color: kShrineBrown900.withAlpha(153)),
+                  style: categoryTextStyle.copyWith(
+                      color: shrineBrown900.withAlpha(153)),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -71,15 +83,49 @@ class CategoryMenuPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        padding: const EdgeInsets.only(top: 40.0),
-        color: kShrinePink100,
-        child: ListView(
-          children:
-              Category.values.map((c) => _buildCategory(c, context)).toList(),
+    final bool isDesktop = isDisplayDesktop(context);
+
+    if (isDesktop) {
+      return Material(
+        child: Container(
+          color: shrinePink100,
+          width: desktopCategoryMenuPageWidth,
+          child: Column(
+            children: [
+              const SizedBox(height: 64),
+              Image.asset('packages/shrine_images/diamond.png'),
+              const SizedBox(height: 16),
+              Text(
+                'SHRINE',
+                style: Theme.of(context).textTheme.headline,
+              ),
+              const Spacer(),
+              for (var c in Category.values) _buildCategory(c, context),
+              const Spacer(),
+              IconButton(
+                icon: const Icon(Icons.arrow_back, semanticLabel: 'login'),
+                onPressed: () {
+                  Navigator.push<void>(
+                    context,
+                    MaterialPageRoute<void>(builder: (context) => LoginPage()),
+                  );
+                },
+              ),
+              const SizedBox(height: 72),
+            ],
+          ),
         ),
-      ),
-    );
+      );
+    } else {
+      return Center(
+        child: Container(
+          padding: const EdgeInsets.only(top: 40),
+          color: shrinePink100,
+          child: ListView(children: [
+            for (var c in Category.values) _buildCategory(c, context)
+          ]),
+        ),
+      );
+    }
   }
 }

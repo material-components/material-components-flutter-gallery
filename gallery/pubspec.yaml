@@ -126,3 +126,13 @@ flutter:
           weight: 500
         - asset: fonts/Raleway-SemiBold.ttf
           weight: 600
+    # Shrine font
+    - family: Rubik
+      fonts:
+        - asset: fonts/Rubik-Regular.ttf
+          weight: 400
+        - asset: fonts/Rubik-Medium.ttf
+          weight: 500
+        - asset: fonts/Rubik-Bold.ttf
+          weight: 600
+
