@@ -30,13 +30,20 @@ firebase login
 
 ### Deploying
 
-1. Build the app. Run the following from within the `gallery` directory.
+1. Checkout master and pull the master branch.
+
+```
+git checkout master
+git pull origin master
+```
+
+2. Build the app. Run the following from within the `gallery` directory.
 
 ```
 flutter build web
 ```
 
-2. Deploy the app.
+3. Deploy the app.
 
 ```
 firebase deploy
