@@ -182,15 +182,7 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
         height: contentHeight,
         buildRoute: _currentConfig.buildRoute,
       );
-      if (_state != _DemoState.fullscreen) {
-        demoContent = Container(
-          width: 320,
-          height: 648,
-          child: demoContent,
-        );
-      } else {
-        demoContent = Expanded(child: demoContent);
-      }
+
       // If the available width is not very wide, reduce the amount of space
       // between the demo content and the selected section.
       final spaceBetween =
@@ -205,7 +197,7 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
               if (_state != _DemoState.fullscreen) Expanded(child: section),
               if (_state != _DemoState.fullscreen)
                 SizedBox(width: spaceBetween),
-              demoContent,
+              Expanded(child: demoContent),
             ],
           ),
         ),
