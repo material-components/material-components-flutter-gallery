@@ -29,6 +29,11 @@ dart ${YOUR_FLUTTER_PATH}/dev/tools/localization/gen_l10n.dart \
     --output-class=GalleryLocalizations
 ```
 
+Run the formattter to make the Flutter analyzer happy:
+```
+flutter format .
+```
+
 From `gallery/`, run `dart ../l10n_cli/bin/main.dart`, which will generate
 `intl_en_US.xml`. This will be used by the internal translation console to
 generate messages in the different locales.
@@ -52,3 +57,9 @@ dart ${YOUR_FLUTTER_PATH}/dev/tools/localization/gen_l10n.dart \
 ```
 
 This ensures the generated `.dart` files updated with the latest translations.
+
+Run the formattter to make the Flutter analyzer happy:
+```
+flutter format .
+```
+
