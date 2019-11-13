@@ -86,8 +86,12 @@ class _GalleryAppState extends State<GalleryApp> {
     return MaterialApp(
       title: 'Gallery',
       themeMode: _options.themeMode,
-      theme: GalleryThemeData.lightThemeData,
-      darkTheme: GalleryThemeData.darkThemeData,
+      theme: GalleryThemeData.lightThemeData.copyWith(
+        platform: _options.platform,
+      ),
+      darkTheme: GalleryThemeData.darkThemeData.copyWith(
+        platform: _options.platform,
+      ),
       localizationsDelegates: GalleryLocalizations.localizationsDelegates,
       supportedLocales: GalleryLocalizations.supportedLocales,
       home: Backdrop(

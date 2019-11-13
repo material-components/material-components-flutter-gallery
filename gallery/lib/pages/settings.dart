@@ -11,6 +11,8 @@ import '../data/gallery_options.dart';
 import '../l10n/gallery_localizations.dart';
 import 'settings_list_item.dart';
 
+// TODO: localize
+
 class SettingsPage extends StatelessWidget {
   const SettingsPage({
     Key key,
@@ -50,11 +52,15 @@ class SettingsPage extends StatelessWidget {
               options: LinkedHashMap.of({}),
               onOptionChanged: (newOption) => onOptionsChanged(options),
             ),
-            SettingsListItem<Object>(
+            SettingsListItem<TargetPlatform>(
               title: GalleryLocalizations.of(context).settingsPlatformMechanics,
-              selectedOption: null,
-              options: LinkedHashMap.of({}),
-              onOptionChanged: (newOption) => onOptionsChanged(options),
+              selectedOption: options.platform,
+              options: LinkedHashMap.of({
+                TargetPlatform.android: 'Android',
+                TargetPlatform.iOS: 'iOS',
+              }),
+              onOptionChanged: (newOption) =>
+                  onOptionsChanged(options.copyWith(platform: newOption)),
             ),
             SettingsListItem<ThemeMode>(
               title: GalleryLocalizations.of(context)
