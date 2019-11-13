@@ -4,9 +4,10 @@
 
 import 'package:flutter/material.dart';
 
+import '../constants.dart';
+import '../data/gallery_options.dart';
 import '../l10n/gallery_localizations.dart';
 import 'settings_list_item.dart';
-import '../data/gallery_options.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({
@@ -23,62 +24,59 @@ class SettingsPage extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
     final colorScheme = Theme.of(context).colorScheme;
 
-    return Scaffold(
-      backgroundColor: colorScheme.secondaryVariant,
-      body: Center(
-        child: Padding(
-          padding: EdgeInsets.only(top: 16),
-          child: ListView(
-            children: [
-              SettingsListItem(
-                title: GalleryLocalizations.of(context).settingsTextScaling,
-              ),
-              SettingsListItem(
-                title: GalleryLocalizations.of(context).settingsTextDirection,
-              ),
-              SettingsListItem(
-                title: GalleryLocalizations.of(context).settingsLocale,
-              ),
-              SettingsListItem(
-                title:
-                    GalleryLocalizations.of(context).settingsPlatformMechanics,
-              ),
-              SettingsListItem(
-                title: GalleryLocalizations.of(context).settingsDarkTheme,
-              ),
-              SettingsListItem(
-                title: GalleryLocalizations.of(context).settingsSlowMotion,
-                isExpandable: false,
-                // TODO: add toggle switch
-              ),
-              SizedBox(height: 16),
-              Divider(thickness: 2, height: 0, color: colorScheme.background),
-              SizedBox(height: 12),
-              _SettingsLink(
-                  title: GalleryLocalizations.of(context).settingsAbout,
-                  icon: Icons.info_outline,
-                  onTap: () {} // TODO: open about page
-                  ),
-              _SettingsLink(
-                  title: GalleryLocalizations.of(context).settingsFeedback,
-                  icon: Icons.feedback,
-                  onTap: () {} // TODO: send feedback
-                  ),
-              SizedBox(height: 12),
-              Divider(thickness: 2, height: 0, color: colorScheme.background),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 32, vertical: 28),
-                child: Text(
-                  GalleryLocalizations.of(context).settingsAttribution,
-                  style: textTheme.body2.copyWith(
-                    fontSize: 12,
-                    color: colorScheme.onPrimary,
-                  ),
+    return Container(
+      color: colorScheme.secondaryVariant,
+      margin: EdgeInsets.only(bottom: galleryHeaderHeight),
+      child: Center(
+        child: ListView(
+          children: [
+            SizedBox(height: 16),
+            SettingsListItem(
+              title: GalleryLocalizations.of(context).settingsTextScaling,
+            ),
+            SettingsListItem(
+              title: GalleryLocalizations.of(context).settingsTextDirection,
+            ),
+            SettingsListItem(
+              title: GalleryLocalizations.of(context).settingsLocale,
+            ),
+            SettingsListItem(
+              title: GalleryLocalizations.of(context).settingsPlatformMechanics,
+            ),
+            SettingsListItem(
+              title: GalleryLocalizations.of(context).settingsDarkTheme,
+            ),
+            SettingsListItem(
+              title: GalleryLocalizations.of(context).settingsSlowMotion,
+              isExpandable: false,
+              // TODO: add toggle switch
+            ),
+            SizedBox(height: 16),
+            Divider(thickness: 2, height: 0, color: colorScheme.background),
+            SizedBox(height: 12),
+            _SettingsLink(
+                title: GalleryLocalizations.of(context).settingsAbout,
+                icon: Icons.info_outline,
+                onTap: () {} // TODO: open about page
+                ),
+            _SettingsLink(
+                title: GalleryLocalizations.of(context).settingsFeedback,
+                icon: Icons.feedback,
+                onTap: () {} // TODO: send feedback
+                ),
+            SizedBox(height: 12),
+            Divider(thickness: 2, height: 0, color: colorScheme.background),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 28),
+              child: Text(
+                GalleryLocalizations.of(context).settingsAttribution,
+                style: textTheme.body2.copyWith(
+                  fontSize: 12,
+                  color: colorScheme.onPrimary,
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

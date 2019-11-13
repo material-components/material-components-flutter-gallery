@@ -8,6 +8,8 @@ import 'package:flare_flutter/flare_actor.dart';
 import 'package:flare_flutter/flare_controller.dart';
 import 'package:flutter/material.dart';
 
+import '../constants.dart';
+
 class Backdrop extends StatefulWidget {
   final Widget frontLayer;
   final Widget backLayer;
@@ -76,10 +78,9 @@ class _BackdropState extends State<Backdrop>
   }
 
   Animation<RelativeRect> _getPanelAnimation(BoxConstraints constraints) {
-    final double panelHeaderHeight = 64;
     final double height = constraints.biggest.height;
-    final double top = height - panelHeaderHeight;
-    final double bottom = -panelHeaderHeight;
+    final double top = height - galleryHeaderHeight;
+    final double bottom = -galleryHeaderHeight;
     return RelativeRectTween(
       begin: RelativeRect.fromLTRB(0, top, 0, bottom),
       end: RelativeRect.fromLTRB(0, 0, 0, 0),
