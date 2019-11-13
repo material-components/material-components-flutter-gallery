@@ -63,7 +63,7 @@ final _allFlyDestinations = <FlyDestination>[
   ),
   FlyDestination(
     id: 7,
-    destination: 'Mt Rushmore, ND',
+    destination: 'Mount Rushmore, South Dakota',
     stops: 1,
     duration: '5h 43m+',
   ),

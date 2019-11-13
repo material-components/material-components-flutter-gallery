@@ -65,43 +65,62 @@ class _FrontLayer extends StatelessWidget {
   }
 }
 
-class ItemCards extends StatelessWidget {
+class ItemCards extends StatefulWidget {
   final int index;
 
   const ItemCards({Key key, this.index}) : super(key: key);
 
   static const totalColumns = 4;
 
-  static List<Widget> _buildFlightCards({int listIndex}) {
+  @override
+  _ItemCardsState createState() => _ItemCardsState();
+}
+
+class _ItemCardsState extends State<ItemCards> {
+  List<Destination> flyDestinations;
+  List<Destination> sleepDestinations;
+  List<Destination> eatDestinations;
+
+  List<Widget> _buildFlightCards({int listIndex}) {
     final List<Destination> destinations = [
-      if (listIndex == 0) ...getFlyDestinations(),
-      if (listIndex == 1) ...getSleepDestinations(),
-      if (listIndex == 2) ...getEatDestinations(),
+      if (listIndex == 0) ...flyDestinations,
+      if (listIndex == 1) ...sleepDestinations,
+      if (listIndex == 2) ...eatDestinations,
     ];
 
-    return (destinations..shuffle())
-        .map((d) => _DestinationCard(destination: d))
-        .toList();
+    return destinations.map((d) => _DestinationCard(destination: d)).toList();
+  }
+
+  @override
+  void initState() {
+    flyDestinations = getFlyDestinations()..shuffle();
+    sleepDestinations = getSleepDestinations()..shuffle();
+    eatDestinations = getEatDestinations()..shuffle();
+    super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    final List<Widget> flightCards = _buildFlightCards(listIndex: index);
+    final List<Widget> destinationCards =
+        _buildFlightCards(listIndex: widget.index);
     final isDesktop = isDisplayDesktop(context);
 
     if (isDesktop) {
       // Based on totalColumns, generate columnCounts, which lists the number
       // of items per column. e.g. [n, n, n, ... n - 1, n - 1]
-      final fullColumns = (flightCards.length % totalColumns);
-      final incompleteColumnCount = (flightCards.length / totalColumns).floor();
+      final fullColumns = (destinationCards.length % ItemCards.totalColumns);
+      final incompleteColumnCount =
+          (destinationCards.length / ItemCards.totalColumns).floor();
       final fullColumnCount = incompleteColumnCount + 1;
       final columnCounts = List.filled(fullColumns, fullColumnCount) +
-          List.filled(totalColumns - fullColumns, incompleteColumnCount);
+          List.filled(
+              ItemCards.totalColumns - fullColumns, incompleteColumnCount);
 
       List<List<Widget>> columns = [];
       var currentIndex = 0;
       for (var count in columnCounts) {
-        columns.add(flightCards.sublist(currentIndex, currentIndex + count));
+        columns
+            .add(destinationCards.sublist(currentIndex, currentIndex + count));
         currentIndex += count;
       }
 
@@ -120,7 +139,7 @@ class ItemCards extends StatelessWidget {
         ],
       );
     } else {
-      return Column(children: flightCards);
+      return Column(children: destinationCards);
     }
   }
 }
@@ -222,6 +241,9 @@ class _BackdropState extends State<Backdrop> with TickerProviderStateMixin {
               Container(
                 margin: EdgeInsets.only(top: isDesktop ? 70 : 246),
                 child: TabBarView(
+                  physics: isDesktop
+                      ? NeverScrollableScrollPhysics()
+                      : null, // use default TabBarView physics
                   controller: _tabController,
                   children: [
                     SlideTransition(
