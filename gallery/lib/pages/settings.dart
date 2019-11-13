@@ -2,6 +2,8 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
@@ -30,24 +32,47 @@ class SettingsPage extends StatelessWidget {
       child: Center(
         child: ListView(
           children: [
-            SizedBox(height: 16),
-            SettingsListItem(
+            SettingsListItem<Object>(
               title: GalleryLocalizations.of(context).settingsTextScaling,
+              selectedOption: null, // TODO: use real option
+              options: LinkedHashMap.of({}),
+              onOptionChanged: (newOption) => onOptionsChanged(options),
             ),
-            SettingsListItem(
+            SettingsListItem<Object>(
               title: GalleryLocalizations.of(context).settingsTextDirection,
+              selectedOption: null,
+              options: LinkedHashMap.of({}),
+              onOptionChanged: (newOption) => onOptionsChanged(options),
             ),
-            SettingsListItem(
+            SettingsListItem<Object>(
               title: GalleryLocalizations.of(context).settingsLocale,
+              selectedOption: null,
+              options: LinkedHashMap.of({}),
+              onOptionChanged: (newOption) => onOptionsChanged(options),
             ),
-            SettingsListItem(
+            SettingsListItem<Object>(
               title: GalleryLocalizations.of(context).settingsPlatformMechanics,
+              selectedOption: null,
+              options: LinkedHashMap.of({}),
+              onOptionChanged: (newOption) => onOptionsChanged(options),
             ),
-            SettingsListItem(
-              title: GalleryLocalizations.of(context).settingsDarkTheme,
+            SettingsListItem<ThemeMode>(
+              title: GalleryLocalizations.of(context)
+                  .settingsDarkTheme, // TODO: rename to settingsDarkMode
+              selectedOption: options.themeMode,
+              options: LinkedHashMap.of({
+                ThemeMode.system: 'System',
+                ThemeMode.dark: 'Dark',
+                ThemeMode.light: 'Light',
+              }),
+              onOptionChanged: (newOption) =>
+                  onOptionsChanged(options.copyWith(themeMode: newOption)),
             ),
-            SettingsListItem(
+            SettingsListItem<Object>(
               title: GalleryLocalizations.of(context).settingsSlowMotion,
+              selectedOption: null,
+              options: LinkedHashMap.of({}),
+              onOptionChanged: (newOption) => onOptionsChanged(options),
               isExpandable: false,
               // TODO: add toggle switch
             ),

@@ -2,23 +2,31 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'dart:collection';
+
 import 'package:flutter/material.dart';
 
-class SettingsListItem extends StatefulWidget {
-  const SettingsListItem({
+class SettingsListItem<T> extends StatefulWidget {
+  SettingsListItem({
     Key key,
-    this.title,
+    @required this.title,
+    @required this.options,
+    @required this.selectedOption,
+    @required this.onOptionChanged,
     this.isExpandable = true,
   }) : super(key: key);
 
   final String title;
+  final LinkedHashMap<T, String> options;
+  final T selectedOption;
+  final ValueChanged<T> onOptionChanged;
   final bool isExpandable;
 
   @override
-  _SettingsListItemState createState() => _SettingsListItemState();
+  _SettingsListItemState createState() => _SettingsListItemState<T>();
 }
 
-class _SettingsListItemState extends State<SettingsListItem>
+class _SettingsListItemState<T> extends State<SettingsListItem<T>>
     with SingleTickerProviderStateMixin {
   static final Animatable<double> _easeInTween =
       CurveTween(curve: Curves.easeIn);
@@ -100,6 +108,7 @@ class _SettingsListItemState extends State<SettingsListItem>
           subtitleHeight: _headerSubtitleHeight,
           chevronRotation: _headerChevronRotation,
           title: widget.title,
+          subtitle: widget.options[widget.selectedOption] ?? '',
           onTap: _handleTap,
           isExpandable: widget.isExpandable,
         ),
@@ -119,11 +128,46 @@ class _SettingsListItemState extends State<SettingsListItem>
   @override
   Widget build(BuildContext context) {
     final bool closed = !_isExpanded && _controller.isDismissed;
+    final theme = Theme.of(context);
+
+    final optionsList = <Widget>[];
+    widget.options.forEach(
+      (option, optionText) => optionsList.add(
+        RadioListTile<T>(
+          value: option,
+          title: Text(
+            optionText,
+            style: theme.textTheme.body2.copyWith(
+              color: Theme.of(context).colorScheme.onSecondary,
+            ),
+          ),
+          groupValue: widget.selectedOption,
+          onChanged: (newOption) => widget.onOptionChanged(newOption),
+          activeColor: Theme.of(context).colorScheme.primary,
+          dense: true,
+        ),
+      ),
+    );
+
     return AnimatedBuilder(
       animation: _controller.view,
       builder: _buildHeaderWithChildren,
-      child:
-          closed ? null : Text('content'), // TODO: replace with actual content
+      child: closed
+          ? null
+          : Container(
+              margin: const EdgeInsetsDirectional.only(start: 24, bottom: 40),
+              decoration: BoxDecoration(
+                border: BorderDirectional(
+                  start: BorderSide(
+                    width: 2,
+                    color: theme.colorScheme.background,
+                  ),
+                ),
+              ),
+              child: Column(
+                children: optionsList,
+              ),
+            ),
     );
   }
 }
@@ -137,6 +181,7 @@ class _CategoryHeader extends StatelessWidget {
     this.subtitleHeight,
     this.chevronRotation,
     this.title,
+    this.subtitle,
     this.onTap,
     this.isExpandable,
   }) : super(key: key);
@@ -146,6 +191,7 @@ class _CategoryHeader extends StatelessWidget {
   static const height = 56.0;
   final BorderRadiusGeometry borderRadius;
   final String title;
+  final String subtitle;
   final Animation<double> subtitleHeight;
   final Animation<double> chevronRotation;
   final GestureTapCallback onTap;
@@ -184,7 +230,7 @@ class _CategoryHeader extends StatelessWidget {
                       SizeTransition(
                         sizeFactor: subtitleHeight,
                         child: Text(
-                          'System', // TODO: replace with real value
+                          subtitle,
                           style: textTheme.overline.apply(
                             color: colorScheme.primary,
                           ),
