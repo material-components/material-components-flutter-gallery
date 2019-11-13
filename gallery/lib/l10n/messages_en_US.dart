@@ -113,8 +113,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "An iOS-style button. It takes in text and/or an icon that fades out and in on touch. May optionally have a background."),
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS-style buttons"),
-        "demoCupertinoButtonsTitle": MessageLookupByLibrary.simpleMessage(
-            "The fullscreenDialog property specifies whether the incoming page is a fullscreen modal dialog"),
+        "demoCupertinoButtonsTitle":
+            MessageLookupByLibrary.simpleMessage("Buttons"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Simple, alert, and fullscreen"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dialogs"),

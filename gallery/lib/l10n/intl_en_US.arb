@@ -168,9 +168,9 @@
   "@demoFullscreenDialogDescription": {
     "description": "Description for the fullscreen dialog component demo."
   },
-  "demoCupertinoButtonsTitle": "The fullscreenDialog property specifies whether the incoming page is a fullscreen modal dialog",
+  "demoCupertinoButtonsTitle": "Buttons",
   "@demoCupertinoButtonsTitle": {
-    "description": "Description for the fullscreen dialog component demo."
+    "description": "Title for the cupertino buttons component demo."
   },
   "demoCupertinoButtonsSubtitle": "iOS-style buttons",
   "@demoCupertinoButtonsSubtitle": {

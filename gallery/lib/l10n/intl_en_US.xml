@@ -175,8 +175,8 @@
     >The fullscreenDialog property specifies whether the incoming page is a fullscreen modal dialog</string>
   <string
     name="demoCupertinoButtonsTitle"
-    description="Description for the fullscreen dialog component demo."
-    >The fullscreenDialog property specifies whether the incoming page is a fullscreen modal dialog</string>
+    description="Title for the cupertino buttons component demo."
+    >Buttons</string>
   <string
     name="demoCupertinoButtonsSubtitle"
     description="Subtitle for the cupertino buttons component demo."
