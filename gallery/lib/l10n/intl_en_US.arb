@@ -252,6 +252,179 @@
   "@demoColorsDescription": {
     "description": "Description for the colors demo."
   },
+  "demoBottomSheetTitle": "Bottom sheet",
+  "@demoBottomSheetTitle": {
+    "description": "Title for bottom sheet demo."
+  },
+  "demoBottomSheetSubtitle": "Persistent and modal bottom sheets",
+  "@demoBottomSheetSubtitle": {
+    "description": "Description for bottom sheet demo."
+  },
+  "demoBottomSheetPersistentTitle": "Persistent bottom sheet",
+  "@demoBottomSheetPersistentTitle": {
+    "description": "Title for persistent bottom sheet demo."
+  },
+  "demoBottomSheetPersistentDescription": "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app.",
+  "@demoBottomSheetPersistentDescription": {
+    "description": "Description for persistent bottom sheet demo."
+  },
+  "demoBottomSheetModalTitle": "Modal bottom sheet",
+  "@demoBottomSheetModalTitle": {
+    "description": "Title for modal bottom sheet demo."
+  },
+  "demoBottomSheetModalDescription": "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app.",
+  "@demoBottomSheetModalDescription": {
+    "description": "Description for modal bottom sheet demo."
+  },
+  "demoBottomSheetAddLabel": "Add",
+  "@demoBottomSheetAddLabel": {
+    "description": "Semantic label for add icon."
+  },
+  "demoBottomSheetButtonText": "SHOW BOTTOM SHEET",
+  "@demoBottomSheetButtonText": {
+    "description": "Button text to show bottom sheet."
+  },
+  "demoBottomSheetHeader": "Header",
+  "@demoBottomSheetHeader": {
+    "description": "Generic header placeholder."
+  },
+  "demoBottomSheetItem": "Item {value}",
+  "@demoBottomSheetItem": {
+    "description": "Generic item placeholder.",
+    "placeholders": {
+      "value": {
+        "example": "1"
+      }
+    }
+  },
+  "demoBottomTextFieldsTitle": "Text fields",
+  "@demoBottomTextFieldsTitle": {
+    "description": "Title for text fields demo."
+  },
+  "demoBottomSheetSubtitle": "Persistent and modal bottom sheets",
+  "@demoBottomSheetSubtitle": {
+    "description": "Description for bottom sheet demo."
+  },
+  "demoTextFieldTitle": "Text fields",
+  "@demoTextFieldTitle": {
+    "description": "Title for text fields demo."
+  },
+  "demoTextFieldSubtitle": "Single line of editable text and numbers",
+  "@demoTextFieldSubtitle": {
+    "description": "Description for text fields demo."
+  },
+  "demoTextFieldDescription": "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs.",
+  "@demoTextFieldDescription": {
+    "description": "Description for text fields demo."
+  },
+  "demoTextFieldShowPasswordLabel": "Show password",
+  "@demoTextFieldShowPasswordLabel": {
+    "description": "Label for show password icon."
+  },
+  "demoTextFieldHidePasswordLabel": "Hide password",
+  "@demoTextFieldHidePasswordLabel": {
+    "description": "Label for hide password icon."
+  },
+  "demoTextFieldFormErrors": "Please fix the errors in red before submitting.",
+  "@demoTextFieldFormErrors": {
+    "description": "Text that shows up on form errors."
+  },
+  "demoTextFieldNameRequired": "Name is required.",
+  "@demoTextFieldNameRequired": {
+    "description": "Shows up as submission error if name is not given in the form."
+  },
+  "demoTextFieldOnlyAlphabeticalChars": "Please enter only alphabetical characters.",
+  "@demoTextFieldOnlyAlphabeticalChars": {
+    "description": "Error that shows if non-alphabetical characters are given."
+  },
+  "demoTextFieldEnterUSPhoneNumber": "(###) ###-#### - Enter a US phone number.",
+  "@demoTextFieldEnterUSPhoneNumber": {
+    "description": "Error that shows up if non-valid non-US phone number is given."
+  },
+  "demoTextFieldEnterPassword": "Please enter a password.",
+  "@demoTextFieldEnterPassword": {
+    "description": "Error that shows up if password is not given."
+  },
+  "demoTextFieldPasswordsDoNotMatch": "The passwords don't match",
+  "@demoTextFieldPasswordsDoNotMatch": {
+    "description": "Error that shows up, if the re-typed password does not match the already given password."
+  },
+  "demoTextFieldWhatDoPeopleCallYou": "What do people call you?",
+  "@demoTextFieldWhatDoPeopleCallYou": {
+    "description": "Placeholder for name field in form."
+  },
+  "demoTextFieldNameField": "Name*",
+  "@demoTextFieldNameField": {
+    "description": "The label for a name input field that is required (hence the star)."
+  },
+  "demoTextFieldWhereCanWeReachYou": "Where can we reach you?",
+  "@demoTextFieldWhereCanWeReachYou": {
+    "description": "Placeholder for when entering a phone number in a form."
+  },
+  "demoTextFieldPhoneNumber": "Phone number*",
+  "@demoTextFieldPhoneNumber": {
+    "description": "The label for a phone number input field that is required (hence the star)."
+  },
+  "demoTextFieldYourEmailAddress": "Your email address",
+  "@demoTextFieldYourEmailAddress": {
+    "description": "The label for an email address input field."
+  },
+  "demoTextFieldEmail": "E-mail",
+  "@demoTextFieldEmail": {
+    "description": "The label for an email address input field"
+  },
+  "demoTextFieldTellUsAboutYourself": "Tell us about yourself (e.g., write down what you do or what hobbies you have)",
+  "@demoTextFieldTellUsAboutYourself": {
+    "description": "The placeholder text for biography/life story input field."
+  },
+  "demoTextFieldKeepItShort": "Keep it short, this is just a demo.",
+  "@demoTextFieldKeepItShort": {
+    "description": "Helper text for biography/life story input field."
+  },
+  "demoTextFieldLifeStory": "Life story",
+  "@demoTextFieldLifeStory": {
+    "description": "The label for for biography/life story input field."
+  },
+  "demoTextFieldSalary": "Salary",
+  "@demoTextFieldSalary": {
+    "description": "The label for salary input field."
+  },
+  "demoTextFieldUSD": "USD",
+  "@demoTextFieldUSD": {
+    "description": "US currency, used as suffix in input field for salary."
+  },
+  "demoTextFieldNoMoreThan": "No more than 8 characters.",
+  "@demoTextFieldNoMoreThan": {
+    "description": "Helper text for password input field."
+  },
+  "demoTextFieldPassword": "Password*",
+  "@demoTextFieldPassword": {
+    "description": "Label for password input field, that is required (hence the star)."
+  },
+  "demoTextFieldRetypePassword": "Re-type password*",
+  "@demoTextFieldRetypePassword": {
+    "description": "Label for repeat password input field."
+  },
+  "demoTextFieldSubmit": "SUBMIT",
+  "@demoTextFieldSubmit": {
+    "description": "The submit button text for form."
+  },
+  "demoTextFieldNameHasPhoneNumber": "{name} phone number is {phoneNumber}",
+  "@demoTextFieldNameHasPhoneNumber": {
+    "description": "Text that shows up when valid phone number and name is submitted in form.",
+    "placeholders": {
+      "name": {
+        "example": "Peter"
+      },
+      "phoneNumber": {
+        "phoneNumber": "+1 (000) 000-0000"
+      }
+    }
+  },
+  "demoTextFieldRequiredField": "* indicates required field",
+  "@demoTextFieldRequiredField": {
+    "description": "Helper text to indicate that * means that it is a required field."
+  },
   "buttonTextEnabled": "ENABLED",
   "@buttonTextEnabled": {
     "description": "Text for an enabled button."

@@ -19,9 +19,13 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en_US';
 
+  static m1(value) => "Item ${value}";
+
+  static m2(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+
   static m0(value) => "You selected: \"${value}\"";
 
-  static m1(value) => "Item ${value}";
+  static m3(value) => "Item ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -84,6 +88,26 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("Alert"),
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Alert With Title"),
+        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+        "demoBottomSheetButtonText":
+            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
+        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
+        "demoBottomSheetItem": m1,
+        "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
+            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
+        "demoBottomSheetModalTitle":
+            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+        "demoBottomSheetPersistentDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
+        "demoBottomSheetPersistentTitle":
+            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
+        "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Persistent and modal bottom sheets"),
+        "demoBottomSheetTitle":
+            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+        "demoBottomTextFieldsTitle":
+            MessageLookupByLibrary.simpleMessage("Text fields"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "Flat, raised, outline, and more"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Buttons"),
@@ -151,6 +175,57 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Simple"),
+        "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
+            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
+        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
+        "demoTextFieldEnterPassword":
+            MessageLookupByLibrary.simpleMessage("Please enter a password."),
+        "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
+            "(###) ###-#### - Enter a US phone number."),
+        "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
+            "Please fix the errors in red before submitting."),
+        "demoTextFieldHidePasswordLabel":
+            MessageLookupByLibrary.simpleMessage("Hide password"),
+        "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
+            "Keep it short, this is just a demo."),
+        "demoTextFieldLifeStory":
+            MessageLookupByLibrary.simpleMessage("Life story"),
+        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
+        "demoTextFieldNameHasPhoneNumber": m2,
+        "demoTextFieldNameRequired":
+            MessageLookupByLibrary.simpleMessage("Name is required."),
+        "demoTextFieldNoMoreThan":
+            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+        "demoTextFieldOnlyAlphabeticalChars":
+            MessageLookupByLibrary.simpleMessage(
+                "Please enter only alphabetical characters."),
+        "demoTextFieldPassword":
+            MessageLookupByLibrary.simpleMessage("Password*"),
+        "demoTextFieldPasswordsDoNotMatch":
+            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+        "demoTextFieldPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("Phone number*"),
+        "demoTextFieldRequiredField":
+            MessageLookupByLibrary.simpleMessage("* indicates required field"),
+        "demoTextFieldRetypePassword":
+            MessageLookupByLibrary.simpleMessage("Re-type password*"),
+        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+        "demoTextFieldShowPasswordLabel":
+            MessageLookupByLibrary.simpleMessage("Show password"),
+        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
+        "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Single line of editable text and numbers"),
+        "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
+            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
+        "demoTextFieldTitle":
+            MessageLookupByLibrary.simpleMessage("Text fields"),
+        "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
+        "demoTextFieldWhatDoPeopleCallYou":
+            MessageLookupByLibrary.simpleMessage("What do people call you?"),
+        "demoTextFieldWhereCanWeReachYou":
+            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
+        "demoTextFieldYourEmailAddress":
+            MessageLookupByLibrary.simpleMessage("Your email address"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Toggle buttons can be used to group related options. To emphasize groups of related toggle buttons, a group should share a common container"),
         "demoToggleButtonTitle":
@@ -211,7 +286,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m1,
+        "starterAppDrawerItem": m3,
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("BUTTON"),
         "starterAppGenericSubtitle":

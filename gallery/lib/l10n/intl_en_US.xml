@@ -258,6 +258,162 @@
     description="Description for the colors demo."
     >Color and color swatch constants which represent Material design&apos;s color palette.</string>
   <string
+    name="demoBottomSheetTitle"
+    description="Title for bottom sheet demo."
+    >Bottom sheet</string>
+  <string
+    name="demoBottomSheetSubtitle"
+    description="Description for bottom sheet demo."
+    >Persistent and modal bottom sheets</string>
+  <string
+    name="demoBottomSheetPersistentTitle"
+    description="Title for persistent bottom sheet demo."
+    >Persistent bottom sheet</string>
+  <string
+    name="demoBottomSheetPersistentDescription"
+    description="Description for persistent bottom sheet demo."
+    >A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app.</string>
+  <string
+    name="demoBottomSheetModalTitle"
+    description="Title for modal bottom sheet demo."
+    >Modal bottom sheet</string>
+  <string
+    name="demoBottomSheetModalDescription"
+    description="Description for modal bottom sheet demo."
+    >A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app.</string>
+  <string
+    name="demoBottomSheetAddLabel"
+    description="Semantic label for add icon."
+    >Add</string>
+  <string
+    name="demoBottomSheetButtonText"
+    description="Button text to show bottom sheet."
+    >SHOW BOTTOM SHEET</string>
+  <string
+    name="demoBottomSheetHeader"
+    description="Generic header placeholder."
+    >Header</string>
+  <string
+    name="demoBottomSheetItem"
+    description="Generic item placeholder."
+    >Item {value}</string>
+  <string
+    name="demoBottomTextFieldsTitle"
+    description="Title for text fields demo."
+    >Text fields</string>
+  <string
+    name="demoTextFieldTitle"
+    description="Title for text fields demo."
+    >Text fields</string>
+  <string
+    name="demoTextFieldSubtitle"
+    description="Description for text fields demo."
+    >Single line of editable text and numbers</string>
+  <string
+    name="demoTextFieldDescription"
+    description="Description for text fields demo."
+    >Text fields allow users to enter text into a UI. They typically appear in forms and dialogs.</string>
+  <string
+    name="demoTextFieldShowPasswordLabel"
+    description="Label for show password icon."
+    >Show password</string>
+  <string
+    name="demoTextFieldHidePasswordLabel"
+    description="Label for hide password icon."
+    >Hide password</string>
+  <string
+    name="demoTextFieldFormErrors"
+    description="Text that shows up on form errors."
+    >Please fix the errors in red before submitting.</string>
+  <string
+    name="demoTextFieldNameRequired"
+    description="Shows up as submission error if name is not given in the form."
+    >Name is required.</string>
+  <string
+    name="demoTextFieldOnlyAlphabeticalChars"
+    description="Error that shows if non-alphabetical characters are given."
+    >Please enter only alphabetical characters.</string>
+  <string
+    name="demoTextFieldEnterUSPhoneNumber"
+    description="Error that shows up if non-valid non-US phone number is given."
+    >(###) ###-#### - Enter a US phone number.</string>
+  <string
+    name="demoTextFieldEnterPassword"
+    description="Error that shows up if password is not given."
+    >Please enter a password.</string>
+  <string
+    name="demoTextFieldPasswordsDoNotMatch"
+    description="Error that shows up, if the re-typed password does not match the already given password."
+    >The passwords don&apos;t match</string>
+  <string
+    name="demoTextFieldWhatDoPeopleCallYou"
+    description="Placeholder for name field in form."
+    >What do people call you?</string>
+  <string
+    name="demoTextFieldNameField"
+    description="The label for a name input field that is required (hence the star)."
+    >Name*</string>
+  <string
+    name="demoTextFieldWhereCanWeReachYou"
+    description="Placeholder for when entering a phone number in a form."
+    >Where can we reach you?</string>
+  <string
+    name="demoTextFieldPhoneNumber"
+    description="The label for a phone number input field that is required (hence the star)."
+    >Phone number*</string>
+  <string
+    name="demoTextFieldYourEmailAddress"
+    description="The label for an email address input field."
+    >Your email address</string>
+  <string
+    name="demoTextFieldEmail"
+    description="The label for an email address input field"
+    >E-mail</string>
+  <string
+    name="demoTextFieldTellUsAboutYourself"
+    description="The placeholder text for biography/life story input field."
+    >Tell us about yourself (e.g., write down what you do or what hobbies you have)</string>
+  <string
+    name="demoTextFieldKeepItShort"
+    description="Helper text for biography/life story input field."
+    >Keep it short, this is just a demo.</string>
+  <string
+    name="demoTextFieldLifeStory"
+    description="The label for for biography/life story input field."
+    >Life story</string>
+  <string
+    name="demoTextFieldSalary"
+    description="The label for salary input field."
+    >Salary</string>
+  <string
+    name="demoTextFieldUSD"
+    description="US currency, used as suffix in input field for salary."
+    >USD</string>
+  <string
+    name="demoTextFieldNoMoreThan"
+    description="Helper text for password input field."
+    >No more than 8 characters.</string>
+  <string
+    name="demoTextFieldPassword"
+    description="Label for password input field, that is required (hence the star)."
+    >Password*</string>
+  <string
+    name="demoTextFieldRetypePassword"
+    description="Label for repeat password input field."
+    >Re-type password*</string>
+  <string
+    name="demoTextFieldSubmit"
+    description="The submit button text for form."
+    >SUBMIT</string>
+  <string
+    name="demoTextFieldNameHasPhoneNumber"
+    description="Text that shows up when valid phone number and name is submitted in form."
+    >{name} phone number is {phoneNumber}</string>
+  <string
+    name="demoTextFieldRequiredField"
+    description="Helper text to indicate that * means that it is a required field."
+    >* indicates required field</string>
+  <string
     name="buttonTextEnabled"
     description="Text for an enabled button."
     >ENABLED</string>

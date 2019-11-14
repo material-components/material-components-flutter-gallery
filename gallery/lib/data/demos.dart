@@ -84,26 +84,24 @@ List<GalleryDemo> materialDemos(BuildContext context) {
       ],
     ),
     GalleryDemo(
-      title: 'Bottom sheet', // TODO: Localize.
+      title: GalleryLocalizations.of(context).demoBottomSheetTitle,
       icon: GalleryIcons.bottomSheets,
-      subtitle: 'Persistent and modal bottom sheets', // TODO: Localize.
+      subtitle: GalleryLocalizations.of(context).demoBottomSheetSubtitle,
       configurations: [
         GalleryDemoConfiguration(
-          title: 'Persistent bottom sheet', // TODO: Localize.
-          description:
-              'A persistent bottom sheet shows information that supplements the primary content of '
-              'the app. A persistent bottom sheet remains visible even when the user interacts with '
-              'other parts of the app.', // TODO: Localize.
+          title:
+              GalleryLocalizations.of(context).demoBottomSheetPersistentTitle,
+          description: GalleryLocalizations.of(context)
+              .demoBottomSheetPersistentDescription,
           documentationUrl:
               'https://api.flutter.dev/flutter/material/BottomSheet-class.html',
           buildRoute: (context) =>
               BottomSheetDemo(type: BottomSheetDemoType.persistent),
         ),
         GalleryDemoConfiguration(
-          title: 'Modal bottom sheet', // TODO: Localize.
+          title: GalleryLocalizations.of(context).demoBottomSheetModalTitle,
           description:
-              'A modal bottom sheet is an alternative to a menu or a dialog and prevents the user '
-              'from interacting with the rest of the app.', // TODO: Localize.
+              GalleryLocalizations.of(context).demoBottomSheetModalDescription,
           documentationUrl:
               'https://api.flutter.dev/flutter/material/BottomSheet-class.html',
           buildRoute: (context) =>
@@ -198,14 +196,14 @@ List<GalleryDemo> materialDemos(BuildContext context) {
       ],
     ),
     GalleryDemo(
-      title: 'Text fields', // TODO: Localize.
+      title: GalleryLocalizations.of(context).demoTextFieldTitle,
       icon: GalleryIcons.textFieldsAlt,
-      subtitle: 'Single line of editable text and numbers', // TODO: Localize.
+      subtitle: GalleryLocalizations.of(context).demoTextFieldSubtitle,
       configurations: [
         GalleryDemoConfiguration(
-          title: 'Text fields', // TODO: Localize.
-          description: 'Text fields allow users to enter text into a UI. They '
-              'typically appear in forms and dialogs.', // TODO: Localize.
+          title: GalleryLocalizations.of(context).demoTextFieldTitle,
+          description:
+              GalleryLocalizations.of(context).demoTextFieldDescription,
           documentationUrl:
               'https://api.flutter.dev/flutter/material/TextField-class.html',
           buildRoute: (context) => TextFieldDemo(),

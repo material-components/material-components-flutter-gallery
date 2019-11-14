@@ -7,12 +7,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/gestures.dart' show DragStartBehavior;
 
+import '../../l10n/gallery_localizations.dart';
+
 class TextFieldDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Text fields'), // TODO: Localize.
+        title: Text(GalleryLocalizations.of(context).demoTextFieldTitle),
       ),
       body: TextFormFieldDemo(),
     );
@@ -84,8 +86,10 @@ class _PasswordFieldState extends State<PasswordField> {
           child: Icon(
             _obscureText ? Icons.visibility : Icons.visibility_off,
             semanticLabel: _obscureText
-                ? 'show password'
-                : 'hide password', // TODO: Localize.
+                ? GalleryLocalizations.of(context)
+                    .demoTextFieldShowPasswordLabel
+                : GalleryLocalizations.of(context)
+                    .demoTextFieldHidePasswordLabel,
           ),
         ),
       ),
@@ -117,18 +121,23 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo> {
     if (!form.validate()) {
       _autoValidate = true; // Start validating on every change.
       showInSnackBar(
-          'Please fix the errors in red before submitting.'); // TODO: Localize.
+        GalleryLocalizations.of(context).demoTextFieldFormErrors,
+      );
     } else {
       form.save();
-      showInSnackBar('${person.name}\'s phone number is ${person.phoneNumber}');
+      showInSnackBar(GalleryLocalizations.of(context)
+          .demoTextFieldNameHasPhoneNumber(person.name, person.phoneNumber));
     }
   }
 
   String _validateName(String value) {
-    if (value.isEmpty) return 'Name is required.'; // TODO: Localize.
+    if (value.isEmpty) {
+      return GalleryLocalizations.of(context).demoTextFieldNameRequired;
+    }
     final nameExp = RegExp(r'^[A-Za-z ]+$');
     if (!nameExp.hasMatch(value)) {
-      return 'Please enter only alphabetical characters.'; // TODO: Localize.
+      return GalleryLocalizations.of(context)
+          .demoTextFieldOnlyAlphabeticalChars;
     }
     return null;
   }
@@ -136,7 +145,7 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo> {
   String _validatePhoneNumber(String value) {
     final phoneExp = RegExp(r'^\(\d\d\d\) \d\d\d\-\d\d\d\d$');
     if (!phoneExp.hasMatch(value)) {
-      return '(###) ###-#### - Enter a US phone number.'; // TODO: Localize.
+      return GalleryLocalizations.of(context).demoTextFieldEnterUSPhoneNumber;
     }
     return null;
   }
@@ -144,10 +153,10 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo> {
   String _validatePassword(String value) {
     final passwordField = _passwordFieldKey.currentState;
     if (passwordField.value == null || passwordField.value.isEmpty) {
-      return 'Please enter a password.'; // TODO: Localize.
+      return GalleryLocalizations.of(context).demoTextFieldEnterPassword;
     }
     if (passwordField.value != value) {
-      return 'The passwords don\'t match'; // TODO: Localize.
+      return GalleryLocalizations.of(context).demoTextFieldPasswordsDoNotMatch;
     }
     return null;
   }
@@ -176,8 +185,10 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo> {
                   decoration: InputDecoration(
                     filled: true,
                     icon: Icon(Icons.person),
-                    hintText: 'What do people call you?', // TODO: Localize.
-                    labelText: 'Name*', // TODO: Localize.
+                    hintText: GalleryLocalizations.of(context)
+                        .demoTextFieldWhatDoPeopleCallYou,
+                    labelText:
+                        GalleryLocalizations.of(context).demoTextFieldNameField,
                   ),
                   onSaved: (value) {
                     person.name = value;
@@ -187,11 +198,13 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo> {
                 sizedBoxSpace,
                 TextFormField(
                   cursorColor: cursorColor,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     filled: true,
                     icon: Icon(Icons.phone),
-                    hintText: 'Where can we reach you?', // TODO: Localize.
-                    labelText: 'Phone number*', // TODO: Localize.
+                    hintText: GalleryLocalizations.of(context)
+                        .demoTextFieldWhereCanWeReachYou,
+                    labelText: GalleryLocalizations.of(context)
+                        .demoTextFieldPhoneNumber,
                     prefixText: '+1',
                   ),
                   keyboardType: TextInputType.phone,
@@ -209,11 +222,13 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo> {
                 sizedBoxSpace,
                 TextFormField(
                   cursorColor: cursorColor,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     filled: true,
                     icon: Icon(Icons.email),
-                    hintText: 'Your email address', // TODO: Localize.
-                    labelText: 'E-mail', // TODO: Localize.
+                    hintText: GalleryLocalizations.of(context)
+                        .demoTextFieldYourEmailAddress,
+                    labelText:
+                        GalleryLocalizations.of(context).demoTextFieldEmail,
                   ),
                   keyboardType: TextInputType.emailAddress,
                   onSaved: (value) {
@@ -223,14 +238,14 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo> {
                 sizedBoxSpace,
                 TextFormField(
                   cursorColor: cursorColor,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    hintText:
-                        'Tell us about yourself (e.g., write down what you do or what hobbies you have)',
-                    // TODO: Localize.
-                    helperText: 'Keep it short, this is just a demo.',
-                    // TODO: Localize.
-                    labelText: 'Life story', // TODO: Localize.
+                    hintText: GalleryLocalizations.of(context)
+                        .demoTextFieldTellUsAboutYourself,
+                    helperText: GalleryLocalizations.of(context)
+                        .demoTextFieldKeepItShort,
+                    labelText:
+                        GalleryLocalizations.of(context).demoTextFieldLifeStory,
                   ),
                   maxLines: 3,
                 ),
@@ -240,8 +255,10 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo> {
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    labelText: 'Salary', // TODO: Localize.
-                    suffixText: 'USD',
+                    labelText:
+                        GalleryLocalizations.of(context).demoTextFieldSalary,
+                    suffixText:
+                        GalleryLocalizations.of(context).demoTextFieldUSD,
                     suffixStyle: TextStyle(color: Colors.green),
                   ),
                   maxLines: 1,
@@ -249,8 +266,10 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo> {
                 sizedBoxSpace,
                 PasswordField(
                   fieldKey: _passwordFieldKey,
-                  helperText: 'No more than 8 characters.', // TODO: Localize.
-                  labelText: 'Password*', // TODO: Localize.
+                  helperText:
+                      GalleryLocalizations.of(context).demoTextFieldNoMoreThan,
+                  labelText:
+                      GalleryLocalizations.of(context).demoTextFieldPassword,
                   onFieldSubmitted: (value) {
                     setState(() {
                       person.password = value;
@@ -260,9 +279,10 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo> {
                 sizedBoxSpace,
                 TextFormField(
                   cursorColor: cursorColor,
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     filled: true,
-                    labelText: 'Re-type password*', // TODO: Localize.
+                    labelText: GalleryLocalizations.of(context)
+                        .demoTextFieldRetypePassword,
                   ),
                   maxLength: 8,
                   obscureText: true,
@@ -271,13 +291,14 @@ class TextFormFieldDemoState extends State<TextFormFieldDemo> {
                 sizedBoxSpace,
                 Center(
                   child: RaisedButton(
-                    child: const Text('SUBMIT'),
+                    child: Text(
+                        GalleryLocalizations.of(context).demoTextFieldSubmit),
                     onPressed: _handleSubmitted,
                   ),
                 ),
                 sizedBoxSpace,
                 Text(
-                  '* indicates required field', // TODO: Localize.
+                  GalleryLocalizations.of(context).demoTextFieldRequiredField,
                   style: Theme.of(context).textTheme.caption,
                 ),
                 sizedBoxSpace,

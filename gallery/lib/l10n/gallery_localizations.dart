@@ -511,6 +511,86 @@ class GalleryLocalizations {
         desc: r'Title for the alert dialog with title component demo.');
   }
 
+  String get demoBottomSheetAddLabel {
+    return Intl.message(r'Add',
+        locale: _localeName,
+        name: 'demoBottomSheetAddLabel',
+        desc: r'Semantic label for add icon.');
+  }
+
+  String get demoBottomSheetButtonText {
+    return Intl.message(r'SHOW BOTTOM SHEET',
+        locale: _localeName,
+        name: 'demoBottomSheetButtonText',
+        desc: r'Button text to show bottom sheet.');
+  }
+
+  String get demoBottomSheetHeader {
+    return Intl.message(r'Header',
+        locale: _localeName,
+        name: 'demoBottomSheetHeader',
+        desc: r'Generic header placeholder.');
+  }
+
+  String demoBottomSheetItem(Object value) {
+    return Intl.message(r'Item $value',
+        locale: _localeName,
+        name: 'demoBottomSheetItem',
+        desc: r'Generic item placeholder.',
+        args: <Object>[value]);
+  }
+
+  String get demoBottomSheetModalDescription {
+    return Intl.message(
+        r'A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app.',
+        locale: _localeName,
+        name: 'demoBottomSheetModalDescription',
+        desc: r'Description for modal bottom sheet demo.');
+  }
+
+  String get demoBottomSheetModalTitle {
+    return Intl.message(r'Modal bottom sheet',
+        locale: _localeName,
+        name: 'demoBottomSheetModalTitle',
+        desc: r'Title for modal bottom sheet demo.');
+  }
+
+  String get demoBottomSheetPersistentDescription {
+    return Intl.message(
+        r'A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app.',
+        locale: _localeName,
+        name: 'demoBottomSheetPersistentDescription',
+        desc: r'Description for persistent bottom sheet demo.');
+  }
+
+  String get demoBottomSheetPersistentTitle {
+    return Intl.message(r'Persistent bottom sheet',
+        locale: _localeName,
+        name: 'demoBottomSheetPersistentTitle',
+        desc: r'Title for persistent bottom sheet demo.');
+  }
+
+  String get demoBottomSheetSubtitle {
+    return Intl.message(r'Persistent and modal bottom sheets',
+        locale: _localeName,
+        name: 'demoBottomSheetSubtitle',
+        desc: r'Description for bottom sheet demo.');
+  }
+
+  String get demoBottomSheetTitle {
+    return Intl.message(r'Bottom sheet',
+        locale: _localeName,
+        name: 'demoBottomSheetTitle',
+        desc: r'Title for bottom sheet demo.');
+  }
+
+  String get demoBottomTextFieldsTitle {
+    return Intl.message(r'Text fields',
+        locale: _localeName,
+        name: 'demoBottomTextFieldsTitle',
+        desc: r'Title for text fields demo.');
+  }
+
   String get demoButtonSubtitle {
     return Intl.message(r'Flat, raised, outline, and more',
         locale: _localeName,
@@ -782,6 +862,213 @@ class GalleryLocalizations {
         desc: r'Title for the simple dialog component demo.');
   }
 
+  String get demoTextFieldDescription {
+    return Intl.message(
+        r'Text fields allow users to enter text into a UI. They typically appear in forms and dialogs.',
+        locale: _localeName,
+        name: 'demoTextFieldDescription',
+        desc: r'Description for text fields demo.');
+  }
+
+  String get demoTextFieldEmail {
+    return Intl.message(r'E-mail',
+        locale: _localeName,
+        name: 'demoTextFieldEmail',
+        desc: r'The label for an email address input field');
+  }
+
+  String get demoTextFieldEnterPassword {
+    return Intl.message(r'Please enter a password.',
+        locale: _localeName,
+        name: 'demoTextFieldEnterPassword',
+        desc: r'Error that shows up if password is not given.');
+  }
+
+  String get demoTextFieldEnterUSPhoneNumber {
+    return Intl.message(r'(###) ###-#### - Enter a US phone number.',
+        locale: _localeName,
+        name: 'demoTextFieldEnterUSPhoneNumber',
+        desc:
+            r'Error that shows up if non-valid non-US phone number is given.');
+  }
+
+  String get demoTextFieldFormErrors {
+    return Intl.message(r'Please fix the errors in red before submitting.',
+        locale: _localeName,
+        name: 'demoTextFieldFormErrors',
+        desc: r'Text that shows up on form errors.');
+  }
+
+  String get demoTextFieldHidePasswordLabel {
+    return Intl.message(r'Hide password',
+        locale: _localeName,
+        name: 'demoTextFieldHidePasswordLabel',
+        desc: r'Label for hide password icon.');
+  }
+
+  String get demoTextFieldKeepItShort {
+    return Intl.message(r'Keep it short, this is just a demo.',
+        locale: _localeName,
+        name: 'demoTextFieldKeepItShort',
+        desc: r'Helper text for biography/life story input field.');
+  }
+
+  String get demoTextFieldLifeStory {
+    return Intl.message(r'Life story',
+        locale: _localeName,
+        name: 'demoTextFieldLifeStory',
+        desc: r'The label for for biography/life story input field.');
+  }
+
+  String get demoTextFieldNameField {
+    return Intl.message(r'Name*',
+        locale: _localeName,
+        name: 'demoTextFieldNameField',
+        desc:
+            r'The label for a name input field that is required (hence the star).');
+  }
+
+  String demoTextFieldNameHasPhoneNumber(Object name, Object phoneNumber) {
+    return Intl.message(r'$name phone number is $phoneNumber',
+        locale: _localeName,
+        name: 'demoTextFieldNameHasPhoneNumber',
+        desc:
+            r'Text that shows up when valid phone number and name is submitted in form.',
+        args: <Object>[name, phoneNumber]);
+  }
+
+  String get demoTextFieldNameRequired {
+    return Intl.message(r'Name is required.',
+        locale: _localeName,
+        name: 'demoTextFieldNameRequired',
+        desc:
+            r'Shows up as submission error if name is not given in the form.');
+  }
+
+  String get demoTextFieldNoMoreThan {
+    return Intl.message(r'No more than 8 characters.',
+        locale: _localeName,
+        name: 'demoTextFieldNoMoreThan',
+        desc: r'Helper text for password input field.');
+  }
+
+  String get demoTextFieldOnlyAlphabeticalChars {
+    return Intl.message(r'Please enter only alphabetical characters.',
+        locale: _localeName,
+        name: 'demoTextFieldOnlyAlphabeticalChars',
+        desc: r'Error that shows if non-alphabetical characters are given.');
+  }
+
+  String get demoTextFieldPassword {
+    return Intl.message(r'Password*',
+        locale: _localeName,
+        name: 'demoTextFieldPassword',
+        desc:
+            r'Label for password input field, that is required (hence the star).');
+  }
+
+  String get demoTextFieldPasswordsDoNotMatch {
+    return Intl.message(r'The passwords don' "'" r't match',
+        locale: _localeName,
+        name: 'demoTextFieldPasswordsDoNotMatch',
+        desc:
+            r'Error that shows up, if the re-typed password does not match the already given password.');
+  }
+
+  String get demoTextFieldPhoneNumber {
+    return Intl.message(r'Phone number*',
+        locale: _localeName,
+        name: 'demoTextFieldPhoneNumber',
+        desc:
+            r'The label for a phone number input field that is required (hence the star).');
+  }
+
+  String get demoTextFieldRequiredField {
+    return Intl.message(r'* indicates required field',
+        locale: _localeName,
+        name: 'demoTextFieldRequiredField',
+        desc:
+            r'Helper text to indicate that * means that it is a required field.');
+  }
+
+  String get demoTextFieldRetypePassword {
+    return Intl.message(r'Re-type password*',
+        locale: _localeName,
+        name: 'demoTextFieldRetypePassword',
+        desc: r'Label for repeat password input field.');
+  }
+
+  String get demoTextFieldSalary {
+    return Intl.message(r'Salary',
+        locale: _localeName,
+        name: 'demoTextFieldSalary',
+        desc: r'The label for salary input field.');
+  }
+
+  String get demoTextFieldShowPasswordLabel {
+    return Intl.message(r'Show password',
+        locale: _localeName,
+        name: 'demoTextFieldShowPasswordLabel',
+        desc: r'Label for show password icon.');
+  }
+
+  String get demoTextFieldSubmit {
+    return Intl.message(r'SUBMIT',
+        locale: _localeName,
+        name: 'demoTextFieldSubmit',
+        desc: r'The submit button text for form.');
+  }
+
+  String get demoTextFieldSubtitle {
+    return Intl.message(r'Single line of editable text and numbers',
+        locale: _localeName,
+        name: 'demoTextFieldSubtitle',
+        desc: r'Description for text fields demo.');
+  }
+
+  String get demoTextFieldTellUsAboutYourself {
+    return Intl.message(
+        r'Tell us about yourself (e.g., write down what you do or what hobbies you have)',
+        locale: _localeName,
+        name: 'demoTextFieldTellUsAboutYourself',
+        desc: r'The placeholder text for biography/life story input field.');
+  }
+
+  String get demoTextFieldTitle {
+    return Intl.message(r'Text fields',
+        locale: _localeName,
+        name: 'demoTextFieldTitle',
+        desc: r'Title for text fields demo.');
+  }
+
+  String get demoTextFieldUSD {
+    return Intl.message(r'USD',
+        locale: _localeName,
+        name: 'demoTextFieldUSD',
+        desc: r'US currency, used as suffix in input field for salary.');
+  }
+
+  String get demoTextFieldWhatDoPeopleCallYou {
+    return Intl.message(r'What do people call you?',
+        locale: _localeName,
+        name: 'demoTextFieldWhatDoPeopleCallYou',
+        desc: r'Placeholder for name field in form.');
+  }
+
+  String get demoTextFieldWhereCanWeReachYou {
+    return Intl.message(r'Where can we reach you?',
+        locale: _localeName,
+        name: 'demoTextFieldWhereCanWeReachYou',
+        desc: r'Placeholder for when entering a phone number in a form.');
+  }
+
+  String get demoTextFieldYourEmailAddress {
+    return Intl.message(r'Your email address',
+        locale: _localeName,
+        name: 'demoTextFieldYourEmailAddress',
+        desc: r'The label for an email address input field.');
+  }
+
   String get demoToggleButtonDescription {
     return Intl.message(
         r'Toggle buttons can be used to group related options. To emphasize groups of related toggle buttons, a group should share a common container',
@@ -1038,13 +1325,6 @@ class GalleryLocalizations {
         desc: r'Study description for Shrine.');
   }
 
-  String get starterAppTitle {
-    return Intl.message(r'Starter app',
-        locale: _localeName,
-        name: 'starterAppTitle',
-        desc: r'The title and name for the starter app.');
-  }
-
   String get starterAppDescription {
     return Intl.message(r'A responsive starter layout',
         locale: _localeName,
@@ -1052,11 +1332,40 @@ class GalleryLocalizations {
         desc: r'The description for the starter app.');
   }
 
+  String starterAppDrawerItem(Object value) {
+    return Intl.message(r'Item $value',
+        locale: _localeName,
+        name: 'starterAppDrawerItem',
+        desc: r'Generic placeholder drawer item.',
+        args: <Object>[value]);
+  }
+
   String get starterAppGenericButton {
     return Intl.message(r'BUTTON',
         locale: _localeName,
         name: 'starterAppGenericButton',
         desc: r'Generic placeholder for button.');
+  }
+
+  String get starterAppGenericSubtitle {
+    return Intl.message(r'Subtitle',
+        locale: _localeName,
+        name: 'starterAppGenericSubtitle',
+        desc: r'Generic placeholder subtitle in drawer.');
+  }
+
+  String get starterAppGenericTitle {
+    return Intl.message(r'Title',
+        locale: _localeName,
+        name: 'starterAppGenericTitle',
+        desc: r'Generic placeholder title in app bar.');
+  }
+
+  String get starterAppTitle {
+    return Intl.message(r'Starter app',
+        locale: _localeName,
+        name: 'starterAppTitle',
+        desc: r'The title and name for the starter app.');
   }
 
   String get starterAppTooltipAdd {
@@ -1073,13 +1382,6 @@ class GalleryLocalizations {
         desc: r'Tooltip on favorite icon.');
   }
 
-  String get starterAppTooltipShare {
-    return Intl.message(r'Share',
-        locale: _localeName,
-        name: 'starterAppTooltipShare',
-        desc: r'Tooltip on share icon.');
-  }
-
   String get starterAppTooltipSearch {
     return Intl.message(r'Search',
         locale: _localeName,
@@ -1087,26 +1389,11 @@ class GalleryLocalizations {
         desc: r'Tooltip on search icon.');
   }
 
-  String get starterAppGenericTitle {
-    return Intl.message(r'Title',
+  String get starterAppTooltipShare {
+    return Intl.message(r'Share',
         locale: _localeName,
-        name: 'starterAppGenericTitle',
-        desc: r'Generic placeholder title in app bar.');
-  }
-
-  String get starterAppGenericSubtitle {
-    return Intl.message(r'Subtitle',
-        locale: _localeName,
-        name: 'starterAppGenericSubtitle',
-        desc: r'Generic placeholder subtitle in drawer.');
-  }
-
-  String starterAppDrawerItem(Object value) {
-    return Intl.message(r'Item $value',
-        locale: _localeName,
-        name: 'starterAppDrawerItem',
-        desc: r'Generic placeholder drawer item.',
-        args: <Object>[value]);
+        name: 'starterAppTooltipShare',
+        desc: r'Tooltip on share icon.');
   }
 }
 

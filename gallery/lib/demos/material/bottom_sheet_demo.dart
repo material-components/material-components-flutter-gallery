@@ -4,6 +4,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../../l10n/gallery_localizations.dart';
+
 enum BottomSheetDemoType {
   persistent,
   modal,
@@ -17,9 +19,9 @@ class BottomSheetDemo extends StatelessWidget {
   String _title(BuildContext context) {
     switch (type) {
       case BottomSheetDemoType.persistent:
-        return 'Persistent bottom sheet'; // TODO: Localize.
+        return GalleryLocalizations.of(context).demoBottomSheetPersistentTitle;
       case BottomSheetDemoType.modal:
-        return 'Modal bottom sheet'; // TODO: Localize.
+        return GalleryLocalizations.of(context).demoBottomSheetModalTitle;
     }
     return '';
   }
@@ -54,9 +56,10 @@ class BottomSheetDemo extends StatelessWidget {
             floatingActionButton: FloatingActionButton(
               onPressed: () {},
               backgroundColor: Theme.of(context).colorScheme.secondary,
-              child: const Icon(
+              child: Icon(
                 Icons.add,
-                semanticLabel: 'Add', // TODO: Localize.
+                semanticLabel:
+                    GalleryLocalizations.of(context).demoBottomSheetAddLabel,
               ),
             ),
             body: _bottomSheetDemo(context),
@@ -79,7 +82,7 @@ class _BottomSheetContent extends StatelessWidget {
             height: 70,
             child: Center(
               child: Text(
-                'Header', // TODO: Localize.
+                GalleryLocalizations.of(context).demoBottomSheetHeader,
                 textAlign: TextAlign.center,
               ),
             ),
@@ -90,7 +93,8 @@ class _BottomSheetContent extends StatelessWidget {
               itemCount: 21,
               itemBuilder: (context, index) {
                 return ListTile(
-                  title: Text('Item $index'), // TODO: Localize.
+                  title: Text(GalleryLocalizations.of(context)
+                      .demoBottomSheetItem(index)),
                 );
               },
             ),
@@ -118,7 +122,7 @@ class _ModalBottomSheetDemo extends StatelessWidget {
         onPressed: () {
           _showModalBottomSheet(context);
         },
-        child: const Text('SHOW BOTTOM SHEET'), // TODO: Localize.
+        child: Text(GalleryLocalizations.of(context).demoBottomSheetButtonText),
       ),
     );
   }
@@ -169,7 +173,7 @@ class _PersistentBottomSheetDemoState
     return Center(
       child: RaisedButton(
         onPressed: _showBottomSheetCallback,
-        child: const Text('SHOW BOTTOM SHEET'), // TODO: Localize.
+        child: Text(GalleryLocalizations.of(context).demoBottomSheetButtonText),
       ),
     );
   }
