@@ -72,35 +72,15 @@ class _FlatButtonDemo extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          ButtonBar(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              FlatButton(
-                child: Text(GalleryLocalizations.of(context).buttonTextEnabled),
-                onPressed: () {},
-              ),
-              FlatButton(
-                child:
-                    Text(GalleryLocalizations.of(context).buttonTextDisabled),
-                onPressed: null,
-              ),
-            ],
+          FlatButton(
+            child: Text(GalleryLocalizations.of(context).buttonText),
+            onPressed: () {},
           ),
-          ButtonBar(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              FlatButton.icon(
-                icon: const Icon(Icons.add, size: 18),
-                label: Text(GalleryLocalizations.of(context).buttonTextEnabled),
-                onPressed: () {},
-              ),
-              FlatButton.icon(
-                icon: const Icon(Icons.add, size: 18),
-                label:
-                    Text(GalleryLocalizations.of(context).buttonTextDisabled),
-                onPressed: null,
-              ),
-            ],
+          SizedBox(height: 12),
+          FlatButton.icon(
+            icon: const Icon(Icons.add, size: 18),
+            label: Text(GalleryLocalizations.of(context).buttonText),
+            onPressed: () {},
           ),
         ],
       ),
@@ -115,35 +95,15 @@ class _RaisedButtonDemo extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          ButtonBar(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              RaisedButton(
-                child: Text(GalleryLocalizations.of(context).buttonTextEnabled),
-                onPressed: () {},
-              ),
-              RaisedButton(
-                child:
-                    Text(GalleryLocalizations.of(context).buttonTextDisabled),
-                onPressed: null,
-              ),
-            ],
+          RaisedButton(
+            child: Text(GalleryLocalizations.of(context).buttonText),
+            onPressed: () {},
           ),
-          ButtonBar(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              RaisedButton.icon(
-                icon: const Icon(Icons.add, size: 18),
-                label: Text(GalleryLocalizations.of(context).buttonTextEnabled),
-                onPressed: () {},
-              ),
-              RaisedButton.icon(
-                icon: const Icon(Icons.add, size: 18),
-                label:
-                    Text(GalleryLocalizations.of(context).buttonTextDisabled),
-                onPressed: null,
-              ),
-            ],
+          SizedBox(height: 12),
+          RaisedButton.icon(
+            icon: const Icon(Icons.add, size: 18),
+            label: Text(GalleryLocalizations.of(context).buttonText),
+            onPressed: () {},
           ),
         ],
       ),
@@ -158,35 +118,21 @@ class _OutlineButtonDemo extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          ButtonBar(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              OutlineButton(
-                child: Text(GalleryLocalizations.of(context).buttonTextEnabled),
-                onPressed: () {},
-              ),
-              OutlineButton(
-                child:
-                    Text(GalleryLocalizations.of(context).buttonTextDisabled),
-                onPressed: null,
-              ),
-            ],
+          OutlineButton(
+            // TODO: Should update to OutlineButton follow material spec.
+            highlightedBorderColor:
+                Theme.of(context).colorScheme.onSurface.withOpacity(0.12),
+            child: Text(GalleryLocalizations.of(context).buttonText),
+            onPressed: () {},
           ),
-          ButtonBar(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              OutlineButton.icon(
-                icon: const Icon(Icons.add, size: 18),
-                label: Text(GalleryLocalizations.of(context).buttonTextEnabled),
-                onPressed: () {},
-              ),
-              OutlineButton.icon(
-                icon: const Icon(Icons.add, size: 18),
-                label:
-                    Text(GalleryLocalizations.of(context).buttonTextDisabled),
-                onPressed: null,
-              ),
-            ],
+          SizedBox(height: 12),
+          OutlineButton.icon(
+            // TODO: Should update to OutlineButton follow material spec.
+            highlightedBorderColor:
+                Theme.of(context).colorScheme.onSurface.withOpacity(0.12),
+            icon: const Icon(Icons.add, size: 18),
+            label: Text(GalleryLocalizations.of(context).buttonText),
+            onPressed: () {},
           ),
         ],
       ),

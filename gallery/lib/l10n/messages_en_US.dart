@@ -29,9 +29,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
+        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Create"),
-        "buttonTextDisabled": MessageLookupByLibrary.simpleMessage("DISABLED"),
-        "buttonTextEnabled": MessageLookupByLibrary.simpleMessage("ENABLED"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("AMBER"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("BLUE"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("BLUE GREY"),
@@ -75,10 +74,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Allow \"Maps\" to access your location while you are using the app?"),
         "cupertinoAlertTiramisu":
             MessageLookupByLibrary.simpleMessage("Tiramisu"),
-        "cupertinoButtonDisabled":
-            MessageLookupByLibrary.simpleMessage("Disabled"),
-        "cupertinoButtonEnabled":
-            MessageLookupByLibrary.simpleMessage("Enabled"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("With Background"),
         "cupertinoShowAlert":

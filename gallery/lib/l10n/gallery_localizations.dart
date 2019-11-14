@@ -213,25 +213,18 @@ class GalleryLocalizations {
     Locale('zu'),
   ];
 
+  String get buttonText {
+    return Intl.message(r'BUTTON',
+        locale: _localeName,
+        name: 'buttonText',
+        desc: r'Text for a generic button.');
+  }
+
   String get buttonTextCreate {
     return Intl.message(r'Create',
         locale: _localeName,
         name: 'buttonTextCreate',
         desc: r'Tooltip text for a create button.');
-  }
-
-  String get buttonTextDisabled {
-    return Intl.message(r'DISABLED',
-        locale: _localeName,
-        name: 'buttonTextDisabled',
-        desc: r'Text for a disabled button.');
-  }
-
-  String get buttonTextEnabled {
-    return Intl.message(r'ENABLED',
-        locale: _localeName,
-        name: 'buttonTextEnabled',
-        desc: r'Text for an enabled button.');
   }
 
   String get colorsAmber {
@@ -461,18 +454,11 @@ class GalleryLocalizations {
         desc: r'iOS-style alert tiramisu option.');
   }
 
-  String get cupertinoButtonDisabled {
-    return Intl.message(r'Disabled',
+  String get cupertinoButton {
+    return Intl.message(r'Button',
         locale: _localeName,
-        name: 'cupertinoButtonDisabled',
-        desc: r'Button text for a disabled iOS-style button.');
-  }
-
-  String get cupertinoButtonEnabled {
-    return Intl.message(r'Enabled',
-        locale: _localeName,
-        name: 'cupertinoButtonEnabled',
-        desc: r'Button text for an enabled iOS-style button.');
+        name: 'cupertinoButton',
+        desc: r'Button text for a generic iOS-style button.');
   }
 
   String get cupertinoButtonWithBackground {

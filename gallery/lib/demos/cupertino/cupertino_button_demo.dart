@@ -20,28 +20,16 @@ class CupertinoButtonDemo extends StatelessWidget {
           children: [
             CupertinoButton(
               child: Text(
-                GalleryLocalizations.of(context).cupertinoButtonEnabled,
-              ),
-              onPressed: () {},
-            ),
-            CupertinoButton(
-              child: Text(
-                GalleryLocalizations.of(context).cupertinoButtonDisabled,
-              ),
-              onPressed: null,
-            ),
-            CupertinoButton.filled(
-              child: Text(
-                GalleryLocalizations.of(context).cupertinoButtonWithBackground,
+                GalleryLocalizations.of(context).cupertinoButton,
               ),
               onPressed: () {},
             ),
             SizedBox(height: 16),
             CupertinoButton.filled(
               child: Text(
-                GalleryLocalizations.of(context).cupertinoButtonDisabled,
+                GalleryLocalizations.of(context).cupertinoButtonWithBackground,
               ),
-              onPressed: null,
+              onPressed: () {},
             ),
           ],
         ),

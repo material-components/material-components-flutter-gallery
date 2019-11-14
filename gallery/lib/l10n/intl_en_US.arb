@@ -260,6 +260,10 @@
   "@demoColorsDescription": {
     "description": "Description for the colors demo."
   },
+  "buttonText": "BUTTON",
+  "@buttonText": {
+    "description": "Text for a generic button."
+  },
   "demoBottomSheetTitle": "Bottom sheet",
   "@demoBottomSheetTitle": {
     "description": "Title for bottom sheet demo."
@@ -433,14 +437,6 @@
   "@demoTextFieldRequiredField": {
     "description": "Helper text to indicate that * means that it is a required field."
   },
-  "buttonTextEnabled": "ENABLED",
-  "@buttonTextEnabled": {
-    "description": "Text for an enabled button."
-  },
-  "buttonTextDisabled": "DISABLED",
-  "@buttonTextDisabled": {
-    "description": "Text for a disabled button."
-  },
   "buttonTextCreate": "Create",
   "@buttonTextCreate": {
     "description": "Tooltip text for a create button."
@@ -506,13 +502,9 @@
   "@dialogFullscreenDescription": {
     "description": "Description for full screen dialog demo."
   },
-  "cupertinoButtonEnabled": "Enabled",
-  "@cupertinoButtonEnabled": {
-    "description": "Button text for an enabled iOS-style button."
-  },
-  "cupertinoButtonDisabled": "Disabled",
-  "@cupertinoButtonDisabled": {
-    "description": "Button text for a disabled iOS-style button."
+  "cupertinoButton": "Button",
+  "@cupertinoButton": {
+    "description": "Button text for a generic iOS-style button."
   },
   "cupertinoButtonWithBackground": "With Background",
   "@cupertinoButtonWithBackground": {

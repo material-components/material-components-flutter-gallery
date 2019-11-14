@@ -266,6 +266,10 @@
     description="Description for the colors demo."
     >Color and color swatch constants which represent Material design&apos;s color palette.</string>
   <string
+    name="buttonText"
+    description="Text for a generic button."
+    >BUTTON</string>
+  <string
     name="demoBottomSheetTitle"
     description="Title for bottom sheet demo."
     >Bottom sheet</string>
@@ -422,14 +426,6 @@
     description="Helper text to indicate that * means that it is a required field."
     >* indicates required field</string>
   <string
-    name="buttonTextEnabled"
-    description="Text for an enabled button."
-    >ENABLED</string>
-  <string
-    name="buttonTextDisabled"
-    description="Text for a disabled button."
-    >DISABLED</string>
-  <string
     name="buttonTextCreate"
     description="Tooltip text for a create button."
     >Create</string>
@@ -490,13 +486,9 @@
     description="Description for full screen dialog demo."
     >A full screen dialog demo</string>
   <string
-    name="cupertinoButtonEnabled"
-    description="Button text for an enabled iOS-style button."
-    >Enabled</string>
-  <string
-    name="cupertinoButtonDisabled"
-    description="Button text for a disabled iOS-style button."
-    >Disabled</string>
+    name="cupertinoButton"
+    description="Button text for a generic iOS-style button."
+    >Button</string>
   <string
     name="cupertinoButtonWithBackground"
     description="Button text for a iOS-style button with a filled background."
