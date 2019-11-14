@@ -445,4 +445,44 @@
     name="colorsBlueGrey"
     description="Tab title for the color blue grey."
     >BLUE GREY</string>
+  <string
+    name="starterAppTitle"
+    description="The title and name for the starter app."
+    >Starter app</string>
+  <string
+    name="starterAppDescription"
+    description="The description for the starter app."
+    >A responsive starter layout</string>
+  <string
+    name="starterAppGenericButton"
+    description="Generic placeholder for button."
+    >BUTTON</string>
+  <string
+    name="starterAppTooltipAdd"
+    description="Tooltip on add icon."
+    >Add</string>
+  <string
+    name="starterAppTooltipFavorite"
+    description="Tooltip on favorite icon."
+    >Favorite</string>
+  <string
+    name="starterAppTooltipShare"
+    description="Tooltip on share icon."
+    >Share</string>
+  <string
+    name="starterAppTooltipSearch"
+    description="Tooltip on search icon."
+    >Search</string>
+  <string
+    name="starterAppGenericTitle"
+    description="Generic placeholder title in app bar."
+    >Title</string>
+  <string
+    name="starterAppGenericSubtitle"
+    description="Generic placeholder subtitle in drawer."
+    >Subtitle</string>
+  <string
+    name="starterAppDrawerItem"
+    description="Generic placeholder drawer item."
+    >Item {value}</string>
 </resources>

@@ -62,8 +62,9 @@ class HomePage extends StatelessWidget {
                 study: CraneApp(),
               ),
               _CarouselCard(
-                title: 'Baseline starter app', // TODO: Localize.
-                subtitle: 'A responsive starter layout', // TODO: Localize.
+                title: GalleryLocalizations.of(context).starterAppTitle,
+                subtitle:
+                    GalleryLocalizations.of(context).starterAppDescription,
                 asset: 'assets/studies/starter_card.png',
                 assetDark: 'assets/studies/starter_card_dark.png',
                 textColor: Colors.black,

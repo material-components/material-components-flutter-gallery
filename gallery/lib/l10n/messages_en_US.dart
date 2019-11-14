@@ -21,6 +21,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m0(value) => "You selected: \"${value}\"";
 
+  static m1(value) => "Item ${value}";
+
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Create"),
@@ -198,6 +200,21 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Text scaling"),
         "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
         "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app")
+            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+        "starterAppDescription":
+            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
+        "starterAppDrawerItem": m1,
+        "starterAppGenericButton":
+            MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "starterAppGenericSubtitle":
+            MessageLookupByLibrary.simpleMessage("Subtitle"),
+        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
+        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
+        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
+        "starterAppTooltipFavorite":
+            MessageLookupByLibrary.simpleMessage("Favorite"),
+        "starterAppTooltipSearch":
+            MessageLookupByLibrary.simpleMessage("Search"),
+        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
       };
 }

@@ -444,5 +444,50 @@
   "colorsBlueGrey": "BLUE GREY",
   "@colorsBlueGrey": {
     "description": "Tab title for the color blue grey."
+  },
+  "starterAppTitle": "Starter app",
+  "@starterAppTitle": {
+    "description": "The title and name for the starter app."
+  },
+  "starterAppDescription": "A responsive starter layout",
+  "@starterAppDescription": {
+    "description": "The description for the starter app."
+  },
+  "starterAppGenericButton": "BUTTON",
+  "@starterAppGenericButton": {
+    "description": "Generic placeholder for button."
+  },
+  "starterAppTooltipAdd": "Add",
+  "@starterAppTooltipAdd": {
+    "description": "Tooltip on add icon."
+  },
+  "starterAppTooltipFavorite": "Favorite",
+  "@starterAppTooltipFavorite": {
+    "description": "Tooltip on favorite icon."
+  },
+  "starterAppTooltipShare": "Share",
+  "@starterAppTooltipShare": {
+    "description": "Tooltip on share icon."
+  },
+  "starterAppTooltipSearch": "Search",
+  "@starterAppTooltipSearch": {
+    "description": "Tooltip on search icon."
+  },
+  "starterAppGenericTitle": "Title",
+  "@starterAppGenericTitle": {
+    "description": "Generic placeholder title in app bar."
+  },
+  "starterAppGenericSubtitle": "Subtitle",
+  "@starterAppGenericSubtitle": {
+    "description": "Generic placeholder subtitle in drawer."
+  },
+  "starterAppDrawerItem": "Item {value}",
+  "@starterAppDrawerItem": {
+    "description": "Generic placeholder drawer item.",
+    "placeholders": {
+      "value": {
+        "example": "1"
+      }
+    }
   }
 }

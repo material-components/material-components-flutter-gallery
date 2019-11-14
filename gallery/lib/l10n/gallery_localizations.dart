@@ -1002,6 +1002,77 @@ class GalleryLocalizations {
         name: 'shrineDescription',
         desc: r'Study description for Shrine.');
   }
+
+  String get starterAppTitle {
+    return Intl.message(r'Starter app',
+        locale: _localeName,
+        name: 'starterAppTitle',
+        desc: r'The title and name for the starter app.');
+  }
+
+  String get starterAppDescription {
+    return Intl.message(r'A responsive starter layout',
+        locale: _localeName,
+        name: 'starterAppDescription',
+        desc: r'The description for the starter app.');
+  }
+
+  String get starterAppGenericButton {
+    return Intl.message(r'BUTTON',
+        locale: _localeName,
+        name: 'starterAppGenericButton',
+        desc: r'Generic placeholder for button.');
+  }
+
+  String get starterAppTooltipAdd {
+    return Intl.message(r'Add',
+        locale: _localeName,
+        name: 'starterAppTooltipAdd',
+        desc: r'Tooltip on add icon.');
+  }
+
+  String get starterAppTooltipFavorite {
+    return Intl.message(r'Favorite',
+        locale: _localeName,
+        name: 'starterAppTooltipFavorite',
+        desc: r'Tooltip on favorite icon.');
+  }
+
+  String get starterAppTooltipShare {
+    return Intl.message(r'Share',
+        locale: _localeName,
+        name: 'starterAppTooltipShare',
+        desc: r'Tooltip on share icon.');
+  }
+
+  String get starterAppTooltipSearch {
+    return Intl.message(r'Search',
+        locale: _localeName,
+        name: 'starterAppTooltipSearch',
+        desc: r'Tooltip on search icon.');
+  }
+
+  String get starterAppGenericTitle {
+    return Intl.message(r'Title',
+        locale: _localeName,
+        name: 'starterAppGenericTitle',
+        desc: r'Generic placeholder title in app bar.');
+  }
+
+  String get starterAppGenericSubtitle {
+    return Intl.message(r'Subtitle',
+        locale: _localeName,
+        name: 'starterAppGenericSubtitle',
+        desc: r'Generic placeholder subtitle in drawer.');
+  }
+
+  String starterAppDrawerItem(Object value) {
+    return Intl.message(r'Item $value',
+        locale: _localeName,
+        name: 'starterAppDrawerItem',
+        desc: r'Generic placeholder drawer item.',
+        args: <Object>[value]);
+  }
 }
 
 class _GalleryLocalizationsDelegate
