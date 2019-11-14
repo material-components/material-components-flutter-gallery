@@ -5,6 +5,7 @@
 import 'dart:collection';
 
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../constants.dart';
 import '../data/gallery_options.dart';
@@ -91,10 +92,19 @@ class SettingsPage extends StatelessWidget {
                 onTap: () {} // TODO: open about page
                 ),
             _SettingsLink(
-                title: GalleryLocalizations.of(context).settingsFeedback,
-                icon: Icons.feedback,
-                onTap: () {} // TODO: send feedback
-                ),
+              title: GalleryLocalizations.of(context).settingsFeedback,
+              icon: Icons.feedback,
+              onTap: () async {
+                final url =
+                    'https://github.com/flutter/flutter/issues/new/choose/';
+                if (await canLaunch(url)) {
+                  await launch(
+                    url,
+                    forceSafariVC: false,
+                  );
+                }
+              },
+            ),
             SizedBox(height: 12),
             Divider(thickness: 2, height: 0, color: colorScheme.background),
             Padding(
