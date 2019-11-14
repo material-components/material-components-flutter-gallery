@@ -48,6 +48,10 @@
   "@demoFullscreenTooltip": {
     "description": "Tooltip for Full Screen button in a demo."
   },
+  "settingsTitle": "Settings",
+  "@settingsTitle": {
+    "description": "Title for the settings screen."
+  },
   "settingsTextScaling": "Text scaling",
   "@settingsTextScaling": {
     "description": "Title for text scaling setting."

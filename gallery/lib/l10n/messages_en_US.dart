@@ -196,6 +196,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Text direction"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("Text scaling"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
         "shrineDescription":
             MessageLookupByLibrary.simpleMessage("A fashionable retail app")
       };

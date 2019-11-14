@@ -9,6 +9,7 @@ import 'package:flare_flutter/flare_controller.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
+import '../l10n/gallery_localizations.dart';
 
 class Backdrop extends StatefulWidget {
   final Widget frontLayer;
@@ -102,7 +103,6 @@ class _BackdropState extends State<Backdrop>
     );
   }
 
-  // TODO: Localize
   @override
   Widget build(BuildContext context) {
     AnimationStatus controllerStatus = _controller.status;
@@ -112,7 +112,9 @@ class _BackdropState extends State<Backdrop>
         title: Padding(
           padding: EdgeInsetsDirectional.only(start: 32),
           child: Text(
-            (controllerStatus != AnimationStatus.completed) ? 'Settings' : '',
+            (controllerStatus != AnimationStatus.completed)
+                ? GalleryLocalizations.of(context).settingsTitle
+                : '',
             style: Theme.of(context).textTheme.display1.apply(
                   color: colorScheme.onPrimary,
                 ),

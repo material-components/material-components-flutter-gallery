@@ -54,6 +54,10 @@
     description="Tooltip for Full Screen button in a demo."
     >Full Screen</string>
   <string
+    name="settingsTitle"
+    description="Title for the settings screen."
+    >Settings</string>
+  <string
     name="settingsTextScaling"
     description="Title for text scaling setting."
     >Text scaling</string>

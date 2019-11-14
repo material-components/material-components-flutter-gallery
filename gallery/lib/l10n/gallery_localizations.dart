@@ -982,6 +982,13 @@ class GalleryLocalizations {
         desc: r'Title for text direction setting.');
   }
 
+  String get settingsTitle {
+    return Intl.message(r'Settings',
+        locale: _localeName,
+        name: 'settingsTitle',
+        desc: r'Title for the settings screen.');
+  }
+
   String get settingsTextScaling {
     return Intl.message(r'Text scaling',
         locale: _localeName,
