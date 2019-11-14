@@ -41,6 +41,11 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
   void _handleTap(_DemoState newState) {
     // Do not allow normal state for desktop.
     if (_state == newState && isDisplayDesktop(context)) {
+      if (_state == _DemoState.fullscreen) {
+        setState(() {
+          _state = _DemoState.info;
+        });
+      }
       return;
     }
 
