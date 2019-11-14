@@ -84,13 +84,9 @@ class SettingsPage extends StatelessWidget {
               onOptionChanged: (newOption) =>
                   onOptionsChanged(options.copyWith(themeMode: newOption)),
             ),
-            SettingsListItem<Object>(
-              title: GalleryLocalizations.of(context).settingsSlowMotion,
-              selectedOption: null,
-              options: LinkedHashMap.of({}),
-              onOptionChanged: (newOption) => onOptionsChanged(options),
-              isExpandable: false,
-              // TODO: add toggle switch
+            SlowMotionSetting(
+              options: options,
+              onOptionsChanged: onOptionsChanged,
             ),
             SizedBox(height: 16),
             Divider(thickness: 2, height: 0, color: colorScheme.background),

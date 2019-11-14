@@ -6,6 +6,64 @@ import 'dart:collection';
 
 import 'package:flutter/material.dart';
 
+import '../data/gallery_options.dart';
+import '../l10n/gallery_localizations.dart';
+
+// Common constants between SlowMotionSetting and SettingsListItem.
+const settingItemHeight = 56.0;
+final settingItemBorderRadius = BorderRadius.circular(10);
+const settingItemHeaderMargin = EdgeInsetsDirectional.fromSTEB(32, 0, 32, 8);
+const settingItemHeaderPadding = EdgeInsetsDirectional.fromSTEB(16, 10, 8, 10);
+
+class SlowMotionSetting extends StatelessWidget {
+  const SlowMotionSetting({this.options, this.onOptionsChanged});
+
+  final GalleryOptions options;
+  final ValueChanged<GalleryOptions> onOptionsChanged;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
+    return Container(
+      margin: settingItemHeaderMargin,
+      height: settingItemHeight,
+      child: Material(
+        shape: RoundedRectangleBorder(borderRadius: settingItemBorderRadius),
+        color: colorScheme.onBackground,
+        clipBehavior: Clip.antiAlias,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Padding(
+              padding: settingItemHeaderPadding,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    GalleryLocalizations.of(context).settingsSlowMotion,
+                    style: textTheme.subhead.apply(
+                      color: colorScheme.onSurface,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Switch(
+              activeColor: colorScheme.primary,
+              value: options.timeDilation != 1.0,
+              onChanged: (isOn) => onOptionsChanged(
+                options.copyWith(timeDilation: isOn ? 10.0 : 1.0),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class SettingsListItem<T> extends StatefulWidget {
   SettingsListItem({
     Key key,
@@ -13,14 +71,12 @@ class SettingsListItem<T> extends StatefulWidget {
     @required this.options,
     @required this.selectedOption,
     @required this.onOptionChanged,
-    this.isExpandable = true,
   }) : super(key: key);
 
   final String title;
   final LinkedHashMap<T, String> options;
   final T selectedOption;
   final ValueChanged<T> onOptionChanged;
-  final bool isExpandable;
 
   @override
   _SettingsListItemState createState() => _SettingsListItemState<T>();
@@ -50,11 +106,11 @@ class _SettingsListItemState<T> extends State<SettingsListItem<T>>
     _headerChevronRotation =
         Tween<double>(begin: 0, end: 0.5).animate(_controller);
     _headerMargin = EdgeInsetsGeometryTween(
-      begin: EdgeInsetsDirectional.fromSTEB(32, 0, 32, 8),
+      begin: settingItemHeaderMargin,
       end: EdgeInsets.zero,
     ).animate(_controller);
     _headerPadding = EdgeInsetsGeometryTween(
-      begin: EdgeInsetsDirectional.fromSTEB(16, 10, 8, 10),
+      begin: settingItemHeaderPadding,
       end: EdgeInsetsDirectional.fromSTEB(32, 10, 32, 10),
     ).animate(_controller);
     _headerSubtitleHeight =
@@ -64,7 +120,7 @@ class _SettingsListItemState<T> extends State<SettingsListItem<T>>
       end: EdgeInsets.zero,
     ).animate(_controller);
     _headerBorderRadius = BorderRadiusTween(
-      begin: BorderRadius.circular(10),
+      begin: settingItemBorderRadius,
       end: BorderRadius.zero,
     ).animate(_controller);
 
@@ -110,7 +166,6 @@ class _SettingsListItemState<T> extends State<SettingsListItem<T>>
           title: widget.title,
           subtitle: widget.options[widget.selectedOption] ?? '',
           onTap: _handleTap,
-          isExpandable: widget.isExpandable,
         ),
         Padding(
           padding: _childrenPadding.value,
@@ -131,6 +186,7 @@ class _SettingsListItemState<T> extends State<SettingsListItem<T>>
     final theme = Theme.of(context);
 
     final optionsList = <Widget>[];
+
     widget.options.forEach(
       (option, optionText) => optionsList.add(
         RadioListTile<T>(
@@ -183,12 +239,10 @@ class _CategoryHeader extends StatelessWidget {
     this.title,
     this.subtitle,
     this.onTap,
-    this.isExpandable,
   }) : super(key: key);
 
   final EdgeInsetsGeometry margin;
   final EdgeInsetsGeometry padding;
-  static const height = 56.0;
   final BorderRadiusGeometry borderRadius;
   final String title;
   final String subtitle;
@@ -196,21 +250,19 @@ class _CategoryHeader extends StatelessWidget {
   final Animation<double> chevronRotation;
   final GestureTapCallback onTap;
 
-  final bool isExpandable;
-
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
     return Container(
       margin: margin,
-      height: height,
+      height: settingItemHeight,
       child: Material(
         shape: RoundedRectangleBorder(borderRadius: borderRadius),
         color: colorScheme.secondary,
         clipBehavior: Clip.antiAlias,
         child: InkWell(
-          onTap: isExpandable ? onTap : () {},
+          onTap: onTap,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -226,33 +278,28 @@ class _CategoryHeader extends StatelessWidget {
                         color: colorScheme.onSurface,
                       ),
                     ),
-                    if (isExpandable)
-                      SizeTransition(
-                        sizeFactor: subtitleHeight,
-                        child: Text(
-                          subtitle,
-                          style: textTheme.overline.apply(
-                            color: colorScheme.primary,
-                          ),
+                    SizeTransition(
+                      sizeFactor: subtitleHeight,
+                      child: Text(
+                        subtitle,
+                        style: textTheme.overline.apply(
+                          color: colorScheme.primary,
                         ),
-                      )
+                      ),
+                    )
                   ],
                 ),
               ),
-              if (isExpandable)
-                Padding(
-                  padding: const EdgeInsetsDirectional.only(
-                    start: 8,
-                    end: 32,
-                  ),
-                  child: RotationTransition(
-                    turns: chevronRotation,
-                    child: Icon(
-                      Icons.arrow_drop_down,
-                      color: colorScheme.onSurface,
-                    ),
-                  ),
-                )
+              Padding(
+                padding: const EdgeInsetsDirectional.only(
+                  start: 8,
+                  end: 32,
+                ),
+                child: RotationTransition(
+                  turns: chevronRotation,
+                  child: Icon(Icons.arrow_drop_down),
+                ),
+              )
             ],
           ),
         ),
