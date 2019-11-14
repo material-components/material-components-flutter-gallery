@@ -33,6 +33,8 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    final ColorScheme colorScheme = Theme.of(context).colorScheme;
+
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -71,6 +73,7 @@ class _LoginPageState extends State<LoginPage> {
                 decoration: _decoration,
                 child: TextField(
                   controller: _usernameController,
+                  cursorColor: colorScheme.onSurface,
                   decoration: const InputDecoration(
                     labelText: 'Username',
                   ),
@@ -84,6 +87,7 @@ class _LoginPageState extends State<LoginPage> {
                 decoration: _decoration,
                 child: TextField(
                   controller: _passwordController,
+                  cursorColor: colorScheme.onSurface,
                   obscureText: true,
                   decoration: const InputDecoration(
                     labelText: 'Password',
@@ -96,7 +100,10 @@ class _LoginPageState extends State<LoginPage> {
                 ButtonBar(
                   children: [
                     FlatButton(
-                      child: const Text('CANCEL'),
+                      child: Text(
+                        'CANCEL',
+                        style: TextStyle(color: colorScheme.onSurface),
+                      ),
                       shape: const BeveledRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(7)),
                       ),
