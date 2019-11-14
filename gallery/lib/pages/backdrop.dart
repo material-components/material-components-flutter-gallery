@@ -116,7 +116,7 @@ class _BackdropState extends State<Backdrop>
                 ? GalleryLocalizations.of(context).settingsTitle
                 : '',
             style: Theme.of(context).textTheme.display1.apply(
-                  color: colorScheme.onPrimary,
+                  color: colorScheme.onSurface,
                 ),
             textAlign: TextAlign.start,
           ),

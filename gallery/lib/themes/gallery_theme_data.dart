@@ -27,6 +27,7 @@ class GalleryThemeData {
       canvasColor: colorScheme.background,
       scaffoldBackgroundColor: colorScheme.background,
       highlightColor: Colors.transparent,
+      accentColor: colorScheme.primary,
     );
   }
 
@@ -41,7 +42,7 @@ class GalleryThemeData {
     error: _lightFillColor,
     onError: _lightFillColor,
     onPrimary: _lightFillColor,
-    onSecondary: _lightFillColor,
+    onSecondary: const Color(0xFF322942),
     onSurface: const Color(0xFF241E30),
     brightness: Brightness.light,
   );

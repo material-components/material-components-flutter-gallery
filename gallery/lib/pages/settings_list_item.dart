@@ -138,7 +138,7 @@ class _SettingsListItemState<T> extends State<SettingsListItem<T>>
           title: Text(
             optionText,
             style: theme.textTheme.body2.copyWith(
-              color: Theme.of(context).colorScheme.onSecondary,
+              color: Theme.of(context).colorScheme.onPrimary,
             ),
           ),
           groupValue: widget.selectedOption,
@@ -207,7 +207,7 @@ class _CategoryHeader extends StatelessWidget {
       height: height,
       child: Material(
         shape: RoundedRectangleBorder(borderRadius: borderRadius),
-        color: colorScheme.onBackground,
+        color: colorScheme.secondary,
         clipBehavior: Clip.antiAlias,
         child: InkWell(
           onTap: isExpandable ? onTap : () {},
@@ -247,7 +247,10 @@ class _CategoryHeader extends StatelessWidget {
                   ),
                   child: RotationTransition(
                     turns: chevronRotation,
-                    child: Icon(Icons.arrow_drop_down),
+                    child: Icon(
+                      Icons.arrow_drop_down,
+                      color: colorScheme.onSurface,
+                    ),
                   ),
                 )
             ],

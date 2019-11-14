@@ -122,7 +122,7 @@ class SettingsPage extends StatelessWidget {
                 GalleryLocalizations.of(context).settingsAttribution,
                 style: textTheme.body2.copyWith(
                   fontSize: 12,
-                  color: colorScheme.onPrimary,
+                  color: colorScheme.onSecondary,
                 ),
               ),
             ),
@@ -142,7 +142,6 @@ class _SettingsLink extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final iconTheme = Theme.of(context).iconTheme;
     final textTheme = Theme.of(context).textTheme;
     final colorScheme = Theme.of(context).colorScheme;
 
@@ -152,7 +151,11 @@ class _SettingsLink extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 32),
         child: Row(
           children: [
-            Icon(icon, color: iconTheme.color.withOpacity(0.5), size: 24),
+            Icon(
+              icon,
+              color: colorScheme.onSecondary.withOpacity(0.5),
+              size: 24,
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 16,
@@ -160,7 +163,7 @@ class _SettingsLink extends StatelessWidget {
               ),
               child: Text(
                 title,
-                style: textTheme.subtitle.apply(color: colorScheme.onPrimary),
+                style: textTheme.subtitle.apply(color: colorScheme.onSecondary),
               ),
             ),
           ],

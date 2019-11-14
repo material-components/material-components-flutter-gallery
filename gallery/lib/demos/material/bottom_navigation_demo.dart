@@ -129,8 +129,8 @@ class _BottomNavigationDemoState extends State<BottomNavigationDemo>
             _navigationViews[_currentIndex].controller.forward();
           });
         },
-        selectedItemColor: colorScheme.onSecondary,
-        unselectedItemColor: colorScheme.onSecondary.withOpacity(0.38),
+        selectedItemColor: colorScheme.onPrimary,
+        unselectedItemColor: colorScheme.onPrimary.withOpacity(0.38),
         backgroundColor: colorScheme.primary,
       ),
     );
