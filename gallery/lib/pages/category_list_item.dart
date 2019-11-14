@@ -221,7 +221,7 @@ class _ExpandedCategoryDemos extends StatelessWidget {
     return Column(
       children: [
         for (final demo in demos)
-          _CategoryDemoItem(
+          CategoryDemoItem(
             demo: demo,
           ),
         const SizedBox(height: 12), // Extra space below.
@@ -230,8 +230,8 @@ class _ExpandedCategoryDemos extends StatelessWidget {
   }
 }
 
-class _CategoryDemoItem extends StatelessWidget {
-  const _CategoryDemoItem({Key key, this.demo}) : super(key: key);
+class CategoryDemoItem extends StatelessWidget {
+  const CategoryDemoItem({Key key, this.demo}) : super(key: key);
 
   final GalleryDemo demo;
 

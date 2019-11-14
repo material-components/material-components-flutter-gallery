@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 import '../data/demos.dart';
 import '../l10n/gallery_localizations.dart';
+import '../layout/adaptive.dart';
 import '../studies/crane/app.dart';
 import '../studies/crane/colors.dart';
 import '../studies/rally/app.dart';
@@ -17,6 +18,8 @@ import 'category_list_item.dart';
 
 const _horizontalPadding = 32.0;
 const _carouselPadding = 8.0;
+const _horizontalDesktopPadding = 81.0;
+const _carouselHeight = 200.0 + 2 * _carouselPadding;
 
 const String shrineTitle = 'Shrine';
 const String rallyTitle = 'Rally';
@@ -27,85 +30,238 @@ const String homeCategoryCupertino = 'CUPERTINO';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView(
-        children: [
-          header(
-            context,
-            Theme.of(context).colorScheme.primaryVariant,
-            GalleryLocalizations.of(context).homeHeaderGallery,
-          ),
-          _Carousel(
+    Widget galleryHeader() => header(
+          context,
+          Theme.of(context).colorScheme.primaryVariant,
+          GalleryLocalizations.of(context).homeHeaderGallery,
+        );
+
+    Widget settingsHeader() => header(
+          context,
+          Theme.of(context).colorScheme.primary,
+          GalleryLocalizations.of(context).homeHeaderCategories,
+        );
+
+    final carouselCards = <_CarouselCard>[
+      _CarouselCard(
+        title: shrineTitle,
+        subtitle: GalleryLocalizations.of(context).shrineDescription,
+        asset: 'assets/studies/shrine_card.png',
+        assetDark: 'assets/studies/shrine_card_dark.png',
+        textColor: shrineBrown900,
+        study: ShrineApp(),
+      ),
+      _CarouselCard(
+        title: rallyTitle,
+        subtitle: GalleryLocalizations.of(context).rallyDescription,
+        textColor: RallyColors.accountColors[0],
+        asset: 'assets/studies/rally_card.png',
+        assetDark: 'assets/studies/rally_card_dark.png',
+        study: RallyApp(),
+      ),
+      _CarouselCard(
+        title: craneTitle,
+        subtitle: GalleryLocalizations.of(context).craneDescription,
+        asset: 'assets/studies/crane_card.png',
+        assetDark: 'assets/studies/crane_card_dark.png',
+        textColor: cranePurple700,
+        study: CraneApp(),
+      ),
+      _CarouselCard(
+        title: GalleryLocalizations.of(context).starterAppTitle,
+        subtitle: GalleryLocalizations.of(context).starterAppDescription,
+        asset: 'assets/studies/starter_card.png',
+        assetDark: 'assets/studies/starter_card_dark.png',
+        textColor: Colors.black,
+        study: StarterApp(),
+      ),
+    ];
+    if (isDisplayDesktop(context)) {
+      return Scaffold(
+        body: Padding(
+          padding: EdgeInsets.symmetric(horizontal: _horizontalDesktopPadding),
+          child: ListView(
             children: [
-              _CarouselCard(
-                title: shrineTitle,
-                subtitle: GalleryLocalizations.of(context).shrineDescription,
-                asset: 'assets/studies/shrine_card.png',
-                assetDark: 'assets/studies/shrine_card_dark.png',
-                textColor: shrineBrown900,
-                study: ShrineApp(),
+              galleryHeader(),
+              Container(
+                height: _carouselHeight,
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    for (final _card in carouselCards) Flexible(child: _card),
+                  ],
+                ),
               ),
-              _CarouselCard(
-                title: rallyTitle,
-                subtitle: GalleryLocalizations.of(context).rallyDescription,
-                textColor: RallyColors.accountColors[0],
-                asset: 'assets/studies/rally_card.png',
-                assetDark: 'assets/studies/rally_card_dark.png',
-                study: RallyApp(),
-              ),
-              _CarouselCard(
-                title: craneTitle,
-                subtitle: GalleryLocalizations.of(context).craneDescription,
-                asset: 'assets/studies/crane_card.png',
-                assetDark: 'assets/studies/crane_card_dark.png',
-                textColor: cranePurple700,
-                study: CraneApp(),
-              ),
-              _CarouselCard(
-                title: GalleryLocalizations.of(context).starterAppTitle,
-                subtitle:
-                    GalleryLocalizations.of(context).starterAppDescription,
-                asset: 'assets/studies/starter_card.png',
-                assetDark: 'assets/studies/starter_card_dark.png',
-                textColor: Colors.black,
-                study: StarterApp(),
+              SizedBox(height: 32),
+              settingsHeader(),
+              Container(
+                height: 585,
+                margin: const EdgeInsetsDirectional.only(bottom: 214),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    _DesktopCategoryItem(
+                      title: homeCategoryMaterial,
+                      imageString: 'assets/icons/material/material.png',
+                      demos: materialDemos(context),
+                    ),
+                    _DesktopCategoryItem(
+                      title: homeCategoryCupertino,
+                      imageString: 'assets/icons/cupertino/cupertino.png',
+                      demos: cupertinoDemos(context),
+                    ),
+                    _DesktopCategoryItem(
+                      title: GalleryLocalizations.of(context)
+                          .homeCategoryReference,
+                      imageString: 'assets/icons/reference/reference.png',
+                      demos: referenceDemos(context),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
-          header(
-            context,
-            Theme.of(context).colorScheme.primary,
-            GalleryLocalizations.of(context).homeHeaderCategories,
-          ),
-          CategoryListItem(
-            title: homeCategoryMaterial,
-            imageString: 'assets/icons/material/material.png',
-            demos: materialDemos(context),
-          ),
-          CategoryListItem(
-            title: homeCategoryCupertino,
-            imageString: 'assets/icons/cupertino/cupertino.png',
-            demos: cupertinoDemos(context),
-          ),
-          CategoryListItem(
-            title: GalleryLocalizations.of(context).homeCategoryReference,
-            imageString: 'assets/icons/reference/reference.png',
-            demos: referenceDemos(context),
-          ),
-        ],
-      ),
-    );
+        ),
+      );
+    } else {
+      return Scaffold(
+        body: ListView(
+          children: [
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: _horizontalPadding),
+              child: galleryHeader(),
+            ),
+            _Carousel(
+              children: carouselCards,
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: _horizontalPadding),
+              child: settingsHeader(),
+            ),
+            CategoryListItem(
+              title: homeCategoryMaterial,
+              imageString: 'assets/icons/material/material.png',
+              demos: materialDemos(context),
+            ),
+            CategoryListItem(
+              title: homeCategoryCupertino,
+              imageString: 'assets/icons/cupertino/cupertino.png',
+              demos: cupertinoDemos(context),
+            ),
+            CategoryListItem(
+              title: GalleryLocalizations.of(context).homeCategoryReference,
+              imageString: 'assets/icons/reference/reference.png',
+              demos: referenceDemos(context),
+            ),
+          ],
+        ),
+      );
+    }
   }
 
   Widget header(BuildContext context, Color color, String text) {
     return Padding(
       padding: EdgeInsets.symmetric(
-        horizontal: _horizontalPadding,
         vertical: 16,
       ),
       child: Text(
         text,
-        style: Theme.of(context).textTheme.display1.apply(color: color),
+        //TODO: Have the theme handle Desktop font sizes
+        style: Theme.of(context).textTheme.display1.apply(
+              color: color,
+              fontSizeDelta: 16,
+            ),
+      ),
+    );
+  }
+}
+
+class _DesktopCategoryItem extends StatelessWidget {
+  const _DesktopCategoryItem({
+    this.title,
+    this.imageString,
+    this.demos,
+  });
+
+  final String title;
+  final String imageString;
+  final List<GalleryDemo> demos;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return Flexible(
+      child: Container(
+        margin: EdgeInsets.all(_carouselPadding),
+        child: Material(
+          borderRadius: BorderRadius.circular(10),
+          color: colorScheme.surface,
+          child: Column(
+            children: [
+              _DesktopCategoryHeader(
+                title: title,
+                imageString: imageString,
+              ),
+              Flexible(
+                child: ListView(
+                  children: [
+                    const SizedBox(height: 27),
+                    for (GalleryDemo demo in demos)
+                      CategoryDemoItem(
+                        demo: demo,
+                      ),
+                    SizedBox(height: 27),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _DesktopCategoryHeader extends StatelessWidget {
+  const _DesktopCategoryHeader({
+    this.title,
+    this.imageString,
+  });
+  final String title;
+  final String imageString;
+
+  @override
+  Widget build(BuildContext context) {
+    ColorScheme colorScheme = Theme.of(context).colorScheme;
+    return Container(
+      height: 88,
+      child: Material(
+        color: colorScheme.onBackground,
+        child: Row(
+          children: [
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Image.asset(
+                imageString,
+                width: 64,
+                height: 64,
+              ),
+            ),
+            Expanded(
+              child: Padding(
+                padding: EdgeInsetsDirectional.only(start: 8),
+                child: Text(
+                  title,
+                  style: Theme.of(context).textTheme.headline.apply(
+                        color: colorScheme.onSurface,
+                      ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -123,8 +279,6 @@ class _Carousel extends StatefulWidget {
 class _CarouselState extends State<_Carousel> {
   PageController _controller;
   int _currentPage = 0;
-
-  static const _carouselHeight = 200.0 + 2 * _carouselPadding;
 
   @override
   void didChangeDependencies() {
