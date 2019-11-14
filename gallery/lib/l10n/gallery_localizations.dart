@@ -1276,6 +1276,20 @@ class GalleryLocalizations {
         desc: r'Title for text direction setting.');
   }
 
+  String get settingsTextDirectionLTR {
+    return Intl.message(r'LTR',
+        locale: _localeName,
+        name: 'settingsTextDirectionLTR',
+        desc: r'Option label for left-to-right text direction setting.');
+  }
+
+  String get settingsTextDirectionRTL {
+    return Intl.message(r'RTL',
+        locale: _localeName,
+        name: 'settingsTextDirectionRTL',
+        desc: r'Option label for right-to-left text direction setting.');
+  }
+
   String get settingsTextScaling {
     return Intl.message(r'Text scaling',
         locale: _localeName,

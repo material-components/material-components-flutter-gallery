@@ -272,6 +272,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
         "settingsTextDirection":
             MessageLookupByLibrary.simpleMessage("Text direction"),
+        "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
+        "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("Text scaling"),
         "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),

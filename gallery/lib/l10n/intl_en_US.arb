@@ -80,6 +80,14 @@
   "@settingsTextDirection": {
     "description": "Title for text direction setting."
   },
+  "settingsTextDirectionLTR": "LTR",
+  "@settingsTextDirectionLTR": {
+    "description": "Option label for left-to-right text direction setting."
+  },
+  "settingsTextDirectionRTL": "RTL",
+  "@settingsTextDirectionRTL": {
+    "description": "Option label for right-to-left text direction setting."
+  },
   "settingsLocale": "Locale",
   "@settingsLocale": {
     "description": "Title for locale setting."

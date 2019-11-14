@@ -50,11 +50,18 @@ class SettingsPage extends StatelessWidget {
                 options.copyWith(textScaleFactor: newOption),
               ),
             ),
-            SettingsListItem<Object>(
+            SettingsListItem<TextDirection>(
               title: GalleryLocalizations.of(context).settingsTextDirection,
-              selectedOption: null,
-              options: LinkedHashMap.of({}),
-              onOptionChanged: (newOption) => onOptionsChanged(options),
+              selectedOption: options.textDirection,
+              options: LinkedHashMap.of({
+                TextDirection.ltr:
+                    GalleryLocalizations.of(context).settingsTextDirectionLTR,
+                TextDirection.rtl:
+                    GalleryLocalizations.of(context).settingsTextDirectionRTL,
+              }),
+              onOptionChanged: (newOption) => onOptionsChanged(
+                options.copyWith(textDirection: newOption),
+              ),
             ),
             SettingsListItem<Object>(
               title: GalleryLocalizations.of(context).settingsLocale,
