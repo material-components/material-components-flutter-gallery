@@ -13,19 +13,51 @@ const appBarDesktopHeight = 128.0;
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    if (isDisplayDesktop(context)) {
+    final textTheme = Theme.of(context).textTheme;
+    final isDesktop = isDisplayDesktop(context);
+    final body = SafeArea(
+      child: Padding(
+        padding: isDesktop
+            ? EdgeInsets.symmetric(horizontal: 72, vertical: 48)
+            : EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              GalleryLocalizations.of(context).starterAppGenericHeadline,
+              style: textTheme.display2.copyWith(color: Colors.black),
+            ),
+            SizedBox(height: 10),
+            Text(
+              GalleryLocalizations.of(context).starterAppGenericSubtitle,
+              style: textTheme.subhead,
+            ),
+            SizedBox(height: 48),
+            Text(
+              GalleryLocalizations.of(context).starterAppGenericBody,
+              style: textTheme.body2,
+            ),
+          ],
+        ),
+      ),
+    );
+
+    if (isDesktop) {
       return Row(
         children: [
           ListDrawer(),
           VerticalDivider(width: 1),
           Expanded(
-            child: DesktopScaffold(),
+            child: DesktopScaffold(
+              body: body,
+            ),
           ),
         ],
       );
     } else {
       return Scaffold(
         appBar: AdaptiveAppBar(),
+        body: body,
         drawer: ListDrawer(),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
@@ -41,6 +73,10 @@ class HomePage extends StatelessWidget {
 }
 
 class DesktopScaffold extends StatelessWidget {
+  const DesktopScaffold({Key key, this.body}) : super(key: key);
+
+  final Widget body;
+
   @override
   Widget build(BuildContext context) {
     final buttonHeight = 48;
@@ -52,6 +88,7 @@ class DesktopScaffold extends StatelessWidget {
       children: [
         Scaffold(
           appBar: AdaptiveAppBar(isDesktop: true),
+          body: body,
         ),
         PositionedDirectional(
           top: buttonTopPosition,

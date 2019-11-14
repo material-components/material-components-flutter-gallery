@@ -1354,6 +1354,13 @@ class GalleryLocalizations {
         args: <Object>[value]);
   }
 
+  String get starterAppGenericBody {
+    return Intl.message(r'Body',
+        locale: _localeName,
+        name: 'starterAppGenericBody',
+        desc: r'Generic placeholder for body text in drawer.');
+  }
+
   String get starterAppGenericButton {
     return Intl.message(r'BUTTON',
         locale: _localeName,
@@ -1361,18 +1368,25 @@ class GalleryLocalizations {
         desc: r'Generic placeholder for button.');
   }
 
+  String get starterAppGenericHeadline {
+    return Intl.message(r'Headline',
+        locale: _localeName,
+        name: 'starterAppGenericHeadline',
+        desc: r'Generic placeholder for headline in drawer.');
+  }
+
   String get starterAppGenericSubtitle {
     return Intl.message(r'Subtitle',
         locale: _localeName,
         name: 'starterAppGenericSubtitle',
-        desc: r'Generic placeholder subtitle in drawer.');
+        desc: r'Generic placeholder for subtitle in drawer.');
   }
 
   String get starterAppGenericTitle {
     return Intl.message(r'Title',
         locale: _localeName,
         name: 'starterAppGenericTitle',
-        desc: r'Generic placeholder title in app bar.');
+        desc: r'Generic placeholder for title in app bar.');
   }
 
   String get starterAppTitle {

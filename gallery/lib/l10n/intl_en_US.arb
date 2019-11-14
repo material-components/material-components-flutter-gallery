@@ -676,11 +676,19 @@
   },
   "starterAppGenericTitle": "Title",
   "@starterAppGenericTitle": {
-    "description": "Generic placeholder title in app bar."
+    "description": "Generic placeholder for title in app bar."
   },
   "starterAppGenericSubtitle": "Subtitle",
   "@starterAppGenericSubtitle": {
-    "description": "Generic placeholder subtitle in drawer."
+    "description": "Generic placeholder for subtitle in drawer."
+  },
+  "starterAppGenericHeadline": "Headline",
+  "@starterAppGenericHeadline": {
+    "description": "Generic placeholder for headline in drawer."
+  },
+  "starterAppGenericBody": "Body",
+  "@starterAppGenericBody": {
+    "description": "Generic placeholder for body text in drawer."
   },
   "starterAppDrawerItem": "Item {value}",
   "@starterAppDrawerItem": {

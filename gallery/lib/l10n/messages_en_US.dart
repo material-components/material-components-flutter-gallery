@@ -289,8 +289,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
         "starterAppDrawerItem": m3,
+        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "starterAppGenericHeadline":
+            MessageLookupByLibrary.simpleMessage("Headline"),
         "starterAppGenericSubtitle":
             MessageLookupByLibrary.simpleMessage("Subtitle"),
         "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),

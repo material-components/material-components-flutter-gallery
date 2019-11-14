@@ -659,12 +659,20 @@
     >Search</string>
   <string
     name="starterAppGenericTitle"
-    description="Generic placeholder title in app bar."
+    description="Generic placeholder for title in app bar."
     >Title</string>
   <string
     name="starterAppGenericSubtitle"
-    description="Generic placeholder subtitle in drawer."
+    description="Generic placeholder for subtitle in drawer."
     >Subtitle</string>
+  <string
+    name="starterAppGenericHeadline"
+    description="Generic placeholder for headline in drawer."
+    >Headline</string>
+  <string
+    name="starterAppGenericBody"
+    description="Generic placeholder for body text in drawer."
+    >Body</string>
   <string
     name="starterAppDrawerItem"
     description="Generic placeholder drawer item."
