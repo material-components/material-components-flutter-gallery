@@ -8,6 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../data/demos.dart';
 import '../l10n/gallery_localizations.dart';
 import '../layout/adaptive.dart';
+import 'splash.dart';
 
 enum _DemoState {
   normal,
@@ -230,7 +231,7 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
       );
     }
 
-    return Container(
+    Widget page = Container(
       padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
       color: colorScheme.background,
       child: Scaffold(
@@ -238,6 +239,16 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
         body: body,
       ),
     );
+
+    // Add the splash page functionality for desktop.
+    if (isDesktop) {
+      page = SplashPage(
+        isAnimated: false,
+        child: page,
+      );
+    }
+
+    return page;
   }
 }
 

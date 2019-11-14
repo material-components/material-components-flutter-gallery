@@ -33,6 +33,8 @@ flutter:
     - assets/icons/material/
     - assets/icons/reference/
     - assets/icons/settings/
+    - assets/logo/
+    - assets/splash_effects/
     - packages/rally_assets/logo.png
     - packages/rally_assets/thumb.png
     - assets/crane/

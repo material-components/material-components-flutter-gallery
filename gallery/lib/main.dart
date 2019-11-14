@@ -14,6 +14,7 @@ import 'l10n/gallery_localizations.dart';
 import 'pages/backdrop.dart';
 import 'pages/home.dart';
 import 'pages/settings.dart';
+import 'pages/splash.dart';
 import 'themes/gallery_theme_data.dart';
 
 void setOverrideForDesktop() {
@@ -94,12 +95,14 @@ class _GalleryAppState extends State<GalleryApp> {
       ),
       localizationsDelegates: GalleryLocalizations.localizationsDelegates,
       supportedLocales: GalleryLocalizations.supportedLocales,
-      home: Backdrop(
-        frontLayer: SettingsPage(
-          options: _options,
-          onOptionsChanged: _handleOptionsChanged,
+      home: SplashPage(
+        child: Backdrop(
+          frontLayer: SettingsPage(
+            options: _options,
+            onOptionsChanged: _handleOptionsChanged,
+          ),
+          backLayer: HomePage(),
         ),
-        backLayer: HomePage(),
       ),
     );
   }
