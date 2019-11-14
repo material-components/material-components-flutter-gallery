@@ -366,7 +366,7 @@ class _CarouselCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-    final isDark = MediaQuery.platformBrightnessOf(context) == Brightness.dark;
+    final isDark = Theme.of(context).colorScheme.brightness == Brightness.dark;
     final asset = isDark ? assetDark : this.asset;
     final textColor = isDark ? Colors.white.withOpacity(0.87) : this.textColor;
 
