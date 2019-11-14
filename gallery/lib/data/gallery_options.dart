@@ -4,36 +4,6 @@
 
 import 'package:flutter/material.dart';
 
-class GalleryTextScaleValue {
-  const GalleryTextScaleValue(this.scale, this.label);
-
-  final double scale;
-  final String label;
-
-  @override
-  bool operator ==(Object other) =>
-      other is GalleryTextScaleValue &&
-      scale == other.scale &&
-      label == other.label;
-
-  @override
-  int get hashCode => hashValues(scale, label);
-
-  @override
-  String toString() {
-    return '$runtimeType($label)';
-  }
-}
-
-const allGalleryTextScaleValues = <GalleryTextScaleValue>[
-  // TODO: localize
-  GalleryTextScaleValue(null, 'System Default'),
-  GalleryTextScaleValue(0.8, 'Small'),
-  GalleryTextScaleValue(1.0, 'Normal'),
-  GalleryTextScaleValue(1.3, 'Large'),
-  GalleryTextScaleValue(2.0, 'Huge'),
-];
-
 class GalleryOptions {
   GalleryOptions({
     this.themeMode,
@@ -44,14 +14,14 @@ class GalleryOptions {
   });
 
   final ThemeMode themeMode;
-  final GalleryTextScaleValue textScaleFactor;
+  final double textScaleFactor;
   final TextDirection textDirection;
   final double timeDilation;
   final TargetPlatform platform;
 
   GalleryOptions copyWith({
     ThemeMode themeMode,
-    GalleryTextScaleValue textScaleFactor,
+    double textScaleFactor,
     TextDirection textDirection,
     double timeDilation,
     TargetPlatform platform,

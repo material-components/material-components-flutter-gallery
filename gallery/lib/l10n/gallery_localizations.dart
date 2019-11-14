@@ -975,6 +975,13 @@ class GalleryLocalizations {
         desc: r'Title for slow motion setting.');
   }
 
+  String get settingsSystemDefault {
+    return Intl.message(r'System',
+        locale: _localeName,
+        name: 'settingsSystemDefault',
+        desc: r'Option label to indicate the system default will be used.');
+  }
+
   String get settingsTextDirection {
     return Intl.message(r'Text direction',
         locale: _localeName,
@@ -982,18 +989,46 @@ class GalleryLocalizations {
         desc: r'Title for text direction setting.');
   }
 
-  String get settingsTitle {
-    return Intl.message(r'Settings',
-        locale: _localeName,
-        name: 'settingsTitle',
-        desc: r'Title for the settings screen.');
-  }
-
   String get settingsTextScaling {
     return Intl.message(r'Text scaling',
         locale: _localeName,
         name: 'settingsTextScaling',
         desc: r'Title for text scaling setting.');
+  }
+
+  String get settingsTextScalingHuge {
+    return Intl.message(r'Huge',
+        locale: _localeName,
+        name: 'settingsTextScalingHuge',
+        desc: r'Option label for huge text scale setting.');
+  }
+
+  String get settingsTextScalingLarge {
+    return Intl.message(r'Large',
+        locale: _localeName,
+        name: 'settingsTextScalingLarge',
+        desc: r'Option label for large text scale setting.');
+  }
+
+  String get settingsTextScalingNormal {
+    return Intl.message(r'Normal',
+        locale: _localeName,
+        name: 'settingsTextScalingNormal',
+        desc: r'Option label for normal text scale setting.');
+  }
+
+  String get settingsTextScalingSmall {
+    return Intl.message(r'Small',
+        locale: _localeName,
+        name: 'settingsTextScalingSmall',
+        desc: r'Option label for small text scale setting.');
+  }
+
+  String get settingsTitle {
+    return Intl.message(r'Settings',
+        locale: _localeName,
+        name: 'settingsTitle',
+        desc: r'Title for the settings screen.');
   }
 
   String get shrineDescription {

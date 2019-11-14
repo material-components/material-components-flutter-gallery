@@ -58,9 +58,29 @@
     description="Title for the settings screen."
     >Settings</string>
   <string
+    name="settingsSystemDefault"
+    description="Option label to indicate the system default will be used."
+    >System</string>
+  <string
     name="settingsTextScaling"
     description="Title for text scaling setting."
     >Text scaling</string>
+  <string
+    name="settingsTextScalingSmall"
+    description="Option label for small text scale setting."
+    >Small</string>
+  <string
+    name="settingsTextScalingNormal"
+    description="Option label for normal text scale setting."
+    >Normal</string>
+  <string
+    name="settingsTextScalingLarge"
+    description="Option label for large text scale setting."
+    >Large</string>
+  <string
+    name="settingsTextScalingHuge"
+    description="Option label for huge text scale setting."
+    >Huge</string>
   <string
     name="settingsTextDirection"
     description="Title for text direction setting."

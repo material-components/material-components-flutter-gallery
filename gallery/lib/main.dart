@@ -48,7 +48,7 @@ class _GalleryAppState extends State<GalleryApp> {
     super.initState();
     _options = GalleryOptions(
       themeMode: ThemeMode.system,
-      textScaleFactor: allGalleryTextScaleValues[0],
+      textScaleFactor: 0,
       timeDilation: timeDilation,
       platform: defaultTargetPlatform,
     );
@@ -95,14 +95,25 @@ class _GalleryAppState extends State<GalleryApp> {
       ),
       localizationsDelegates: GalleryLocalizations.localizationsDelegates,
       supportedLocales: GalleryLocalizations.supportedLocales,
-      home: SplashPage(
-        child: Backdrop(
-          frontLayer: SettingsPage(
-            options: _options,
-            onOptionsChanged: _handleOptionsChanged,
-          ),
-          backLayer: HomePage(),
-        ),
+      home: Builder(
+        builder: (context) {
+          return MediaQuery(
+            data: MediaQuery.of(context).copyWith(
+              textScaleFactor: _options.textScaleFactor == 0.0
+                  ? null // Use the system text scale.
+                  : _options.textScaleFactor,
+            ),
+            child: SplashPage(
+              child: Backdrop(
+                frontLayer: SettingsPage(
+                  options: _options,
+                  onOptionsChanged: _handleOptionsChanged,
+                ),
+                backLayer: HomePage(),
+              ),
+            ),
+          );
+        },
       ),
     );
   }

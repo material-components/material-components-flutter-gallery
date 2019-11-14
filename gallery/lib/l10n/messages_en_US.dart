@@ -194,10 +194,18 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Platform mechanics"),
         "settingsSlowMotion":
             MessageLookupByLibrary.simpleMessage("Slow motion"),
+        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
         "settingsTextDirection":
             MessageLookupByLibrary.simpleMessage("Text direction"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("Text scaling"),
+        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
+        "settingsTextScalingLarge":
+            MessageLookupByLibrary.simpleMessage("Large"),
+        "settingsTextScalingNormal":
+            MessageLookupByLibrary.simpleMessage("Normal"),
+        "settingsTextScalingSmall":
+            MessageLookupByLibrary.simpleMessage("Small"),
         "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
         "shrineDescription":
             MessageLookupByLibrary.simpleMessage("A fashionable retail app"),

@@ -35,11 +35,20 @@ class SettingsPage extends StatelessWidget {
       child: Center(
         child: ListView(
           children: [
-            SettingsListItem<Object>(
+            SettingsListItem<double>(
               title: GalleryLocalizations.of(context).settingsTextScaling,
-              selectedOption: null, // TODO: use real option
-              options: LinkedHashMap.of({}),
-              onOptionChanged: (newOption) => onOptionsChanged(options),
+              selectedOption: options.textScaleFactor,
+              options: LinkedHashMap.of({
+                // Using a value of 0 to indicate the system setting.
+                0: GalleryLocalizations.of(context).settingsSystemDefault,
+                0.8: GalleryLocalizations.of(context).settingsTextScalingSmall,
+                1.0: GalleryLocalizations.of(context).settingsTextScalingNormal,
+                2.0: GalleryLocalizations.of(context).settingsTextScalingLarge,
+                3.0: GalleryLocalizations.of(context).settingsTextScalingHuge
+              }),
+              onOptionChanged: (newOption) => onOptionsChanged(
+                options.copyWith(textScaleFactor: newOption),
+              ),
             ),
             SettingsListItem<Object>(
               title: GalleryLocalizations.of(context).settingsTextDirection,

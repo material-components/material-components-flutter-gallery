@@ -52,9 +52,29 @@
   "@settingsTitle": {
     "description": "Title for the settings screen."
   },
+  "settingsSystemDefault": "System",
+  "@settingsSystemDefault": {
+    "description": "Option label to indicate the system default will be used."
+  },
   "settingsTextScaling": "Text scaling",
   "@settingsTextScaling": {
     "description": "Title for text scaling setting."
+  },
+  "settingsTextScalingSmall": "Small",
+  "@settingsTextScalingSmall": {
+    "description": "Option label for small text scale setting."
+  },
+  "settingsTextScalingNormal": "Normal",
+  "@settingsTextScalingNormal": {
+    "description": "Option label for normal text scale setting."
+  },
+  "settingsTextScalingLarge": "Large",
+  "@settingsTextScalingLarge": {
+    "description": "Option label for large text scale setting."
+  },
+  "settingsTextScalingHuge": "Huge",
+  "@settingsTextScalingHuge": {
+    "description": "Option label for huge text scale setting."
   },
   "settingsTextDirection": "Text direction",
   "@settingsTextDirection": {
