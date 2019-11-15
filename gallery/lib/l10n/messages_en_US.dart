@@ -19,16 +19,22 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en_US';
 
-  static m1(value) => "Item ${value}";
+  static m1(value) =>
+      "To see the source code for this app, please visit the ${value}.";
 
-  static m2(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m2(value) => "Item ${value}";
+
+  static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
 
   static m0(value) => "You selected: \"${value}\"";
 
-  static m3(value) => "Item ${value}";
+  static m4(value) => "Item ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
+        "aboutDialogDescription": m1,
+        "aboutFlutterSamplesRepo":
+            MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
         "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Create"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("AMBER"),
@@ -88,7 +94,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoBottomSheetButtonText":
             MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
         "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
-        "demoBottomSheetItem": m1,
+        "demoBottomSheetItem": m2,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
             "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
         "demoBottomSheetModalTitle":
@@ -187,7 +193,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Life story"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
-        "demoTextFieldNameHasPhoneNumber": m2,
+        "demoTextFieldNameHasPhoneNumber": m3,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Name is required."),
         "demoTextFieldNoMoreThan":
@@ -284,7 +290,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m3,
+        "starterAppDrawerItem": m4,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("BUTTON"),

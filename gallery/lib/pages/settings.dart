@@ -10,6 +10,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../constants.dart';
 import '../data/gallery_options.dart';
 import '../l10n/gallery_localizations.dart';
+import 'about.dart' as about;
 import 'settings_list_item.dart';
 
 // TODO: localize
@@ -99,10 +100,12 @@ class SettingsPage extends StatelessWidget {
             Divider(thickness: 2, height: 0, color: colorScheme.background),
             SizedBox(height: 12),
             _SettingsLink(
-                title: GalleryLocalizations.of(context).settingsAbout,
-                icon: Icons.info_outline,
-                onTap: () {} // TODO: open about page
-                ),
+              title: GalleryLocalizations.of(context).settingsAbout,
+              icon: Icons.info_outline,
+              onTap: () {
+                about.showAboutDialog(context: context);
+              },
+            ),
             _SettingsLink(
               title: GalleryLocalizations.of(context).settingsFeedback,
               icon: Icons.feedback,

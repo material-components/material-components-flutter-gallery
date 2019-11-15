@@ -6,6 +6,14 @@
 -->
 <resources>
   <string
+    name="aboutFlutterSamplesRepo"
+    description="Represents a link to the Flutter samples github repository."
+    >Flutter samples Github repo</string>
+  <string
+    name="aboutDialogDescription"
+    description="A description about how to view the source code for this app."
+    >To see the source code for this app, please visit the {value}.</string>
+  <string
     name="homeHeaderGallery"
     description="Header title on home screen for Gallery section."
     >Gallery</string>

@@ -213,6 +213,22 @@ class GalleryLocalizations {
     Locale('zu'),
   ];
 
+  String aboutDialogDescription(Object value) {
+    return Intl.message(
+        r'To see the source code for this app, please visit the $value.',
+        locale: _localeName,
+        name: 'aboutDialogDescription',
+        desc: r'A description about how to view the source code for this app.',
+        args: <Object>[value]);
+  }
+
+  String get aboutFlutterSamplesRepo {
+    return Intl.message(r'Flutter samples Github repo',
+        locale: _localeName,
+        name: 'aboutFlutterSamplesRepo',
+        desc: r'Represents a link to the Flutter samples github repository.');
+  }
+
   String get buttonText {
     return Intl.message(r'BUTTON',
         locale: _localeName,
