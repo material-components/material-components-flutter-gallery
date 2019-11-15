@@ -33,16 +33,34 @@ class CategoryMenuPage extends StatelessWidget {
 
   final VoidCallback onCategoryTap;
 
+  Widget _buttonText(String caption, TextStyle style) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 16),
+      child: Text(
+        caption,
+        style: style,
+        textAlign: TextAlign.center,
+      ),
+    );
+  }
+
+  Widget _divider() {
+    return Container(width: 56, height: 1, color: Color(0xFF8F716D));
+  }
+
   Widget _buildCategory(Category category, BuildContext context) {
     final bool isDesktop = isDisplayDesktop(context);
 
     final String categoryString =
         category.toString().replaceAll('Category.', '').toUpperCase();
-    final ThemeData theme = Theme.of(context);
 
-    final TextStyle categoryTextStyle = isDesktop
-        ? theme.textTheme.body2.copyWith(fontSize: 17)
-        : theme.textTheme.body2.copyWith(fontSize: 19);
+    final TextStyle selectedCategoryTextStyle = Theme.of(context)
+        .textTheme
+        .body2
+        .copyWith(fontSize: isDesktop ? 17 : 19);
+
+    final TextStyle unselectedCategoryTextStyle = selectedCategoryTextStyle
+        .copyWith(color: shrineBrown900.withOpacity(0.6));
 
     final double indicatorWidth = isDesktop ? 34 : 36.43;
     final double indicatorHeight = isDesktop ? 28 : 30;
@@ -59,24 +77,9 @@ class CategoryMenuPage extends StatelessWidget {
             ? CustomPaint(
                 painter:
                     TriangleCategoryIndicator(indicatorWidth, indicatorHeight),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 16),
-                  child: Text(
-                    categoryString,
-                    style: categoryTextStyle,
-                    textAlign: TextAlign.center,
-                  ),
-                ),
+                child: _buttonText(categoryString, selectedCategoryTextStyle),
               )
-            : Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16),
-                child: Text(
-                  categoryString,
-                  style: categoryTextStyle.copyWith(
-                      color: shrineBrown900.withAlpha(153)),
-                  textAlign: TextAlign.center,
-                ),
-              ),
+            : _buttonText(categoryString, unselectedCategoryTextStyle),
       ),
     );
   }
@@ -84,6 +87,12 @@ class CategoryMenuPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bool isDesktop = isDisplayDesktop(context);
+
+    final TextStyle logoutTextStyle =
+        Theme.of(context).textTheme.body2.copyWith(
+              fontSize: isDesktop ? 17 : 19,
+              color: shrineBrown900.withOpacity(0.6),
+            );
 
     if (isDesktop) {
       return Material(
@@ -101,15 +110,20 @@ class CategoryMenuPage extends StatelessWidget {
               ),
               const Spacer(),
               for (var c in Category.values) _buildCategory(c, context),
-              const Spacer(),
-              IconButton(
-                icon: const Icon(Icons.arrow_back, semanticLabel: 'login'),
-                onPressed: () {
+              _divider(),
+              GestureDetector(
+                onTap: () {
                   Navigator.push<void>(
                     context,
                     MaterialPageRoute<void>(builder: (context) => LoginPage()),
                   );
                 },
+                child: _buttonText("LOGOUT", logoutTextStyle),
+              ),
+              const Spacer(),
+              IconButton(
+                icon: const Icon(Icons.search, semanticLabel: 'search'),
+                onPressed: () {},
               ),
               const SizedBox(height: 72),
             ],
@@ -121,9 +135,26 @@ class CategoryMenuPage extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.only(top: 40),
           color: shrinePink100,
-          child: ListView(children: [
-            for (var c in Category.values) _buildCategory(c, context)
-          ]),
+          child: ListView(
+            children: [
+              for (var c in Category.values) _buildCategory(c, context),
+              Center(
+                child: _divider(),
+              ),
+              GestureDetector(
+                onTap: () {
+                  if (onCategoryTap != null) {
+                    onCategoryTap();
+                  }
+                  Navigator.push<void>(
+                    context,
+                    MaterialPageRoute<void>(builder: (context) => LoginPage()),
+                  );
+                },
+                child: _buttonText("LOGOUT", logoutTextStyle),
+              ),
+            ],
+          ),
         ),
       );
     }

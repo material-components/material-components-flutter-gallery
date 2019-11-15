@@ -15,7 +15,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
-import 'login.dart';
 import 'category_menu_page.dart';
 
 const Cubic _accelerateCurve = Cubic(0.548, 0, 0.757, 0.464);
@@ -302,22 +301,12 @@ class _BackdropState extends State<Backdrop>
       ),
       actions: [
         IconButton(
-          icon: const Icon(Icons.search, semanticLabel: 'login'),
-          onPressed: () {
-            Navigator.push<void>(
-              context,
-              MaterialPageRoute<void>(builder: (context) => LoginPage()),
-            );
-          },
+          icon: const Icon(Icons.search, semanticLabel: 'search'),
+          onPressed: () {},
         ),
         IconButton(
-          icon: const Icon(Icons.tune, semanticLabel: 'login'),
-          onPressed: () {
-            Navigator.push<void>(
-              context,
-              MaterialPageRoute<void>(builder: (context) => LoginPage()),
-            );
-          },
+          icon: const Icon(Icons.tune, semanticLabel: 'settings'),
+          onPressed: () {},
         ),
       ],
     );
