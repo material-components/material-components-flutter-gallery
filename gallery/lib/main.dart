@@ -17,6 +17,9 @@ import 'pages/settings.dart';
 import 'pages/splash.dart';
 import 'themes/gallery_theme_data.dart';
 
+import 'studies/rally/app.dart';
+import 'studies/shrine/app.dart';
+
 void setOverrideForDesktop() {
   if (kIsWeb) return;
 
@@ -96,29 +99,55 @@ class _GalleryAppState extends State<GalleryApp> {
       ),
       localizationsDelegates: GalleryLocalizations.localizationsDelegates,
       supportedLocales: GalleryLocalizations.supportedLocales,
-      home: Builder(
-        builder: (context) {
-          return Directionality(
-            textDirection: _options.textDirection,
-            child: MediaQuery(
-              data: MediaQuery.of(context).copyWith(
-                textScaleFactor: _options.textScaleFactor == 0.0
-                    ? null // Use the system text scale.
-                    : _options.textScaleFactor,
-              ),
-              child: SplashPage(
-                child: Backdrop(
-                  frontLayer: SettingsPage(
-                    options: _options,
-                    onOptionsChanged: _handleOptionsChanged,
+      initialRoute: '/',
+      onGenerateRoute: (RouteSettings settings) {
+        print ('settings = $settings, name = ${settings.name}');
+        if (settings.name == '/') {
+          return MaterialPageRoute(
+            settings: settings,
+            builder: (context) => Builder(
+              builder: (context) {
+                return Directionality(
+                  textDirection: _options.textDirection,
+                  child: MediaQuery(
+                    data: MediaQuery.of(context).copyWith(
+                      textScaleFactor: _options.textScaleFactor == 0.0
+                          ? null // Use the system text scale.
+                          : _options.textScaleFactor,
+                    ),
+                    child: SplashPage(
+                      child: Backdrop(
+                        frontLayer: SettingsPage(
+                          options: _options,
+                          onOptionsChanged: _handleOptionsChanged,
+                        ),
+                        backLayer: HomePage(),
+                      ),
+                    ),
                   ),
-                  backLayer: HomePage(),
-                ),
-              ),
+                );
+              },
             ),
           );
-        },
-      ),
+        } else if (settings.name.startsWith('/rally/')) {
+          return MaterialPageRoute(
+            settings: settings,
+            builder: (context) => RallyApp(),
+          );
+        } else if (settings.name.startsWith('/shrine/')) {
+          return MaterialPageRoute(
+            settings: settings,
+            builder: (context) => ShrineApp(),
+          );
+        }
+      },
+      /* routes: {
+        '/':
+        '/rally/login':
+        '/rally/home': (context) => RallyApp(),
+        '/shrine/login': (context) => ShrineApp(),
+        '/shrine/products': (context) => ShrineApp(),
+      }, */
     );
   }
 }
