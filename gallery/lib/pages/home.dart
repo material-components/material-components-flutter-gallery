@@ -15,6 +15,7 @@ import '../studies/shrine/app.dart';
 import '../studies/shrine/colors.dart';
 import '../studies/starter/app.dart';
 import 'category_list_item.dart';
+import 'settings.dart';
 
 const _horizontalPadding = 32.0;
 const _carouselPadding = 8.0;
@@ -76,6 +77,7 @@ class HomePage extends StatelessWidget {
         study: StarterApp(),
       ),
     ];
+
     if (isDisplayDesktop(context)) {
       return Scaffold(
         body: Padding(
@@ -97,7 +99,6 @@ class HomePage extends StatelessWidget {
               settingsHeader(),
               Container(
                 height: 585,
-                margin: const EdgeInsetsDirectional.only(bottom: 214),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -118,6 +119,20 @@ class HomePage extends StatelessWidget {
                       imageString: 'assets/icons/reference/reference.png',
                       demos: referenceDemos(context),
                     ),
+                  ],
+                ),
+              ),
+              Container(
+                margin: const EdgeInsetsDirectional.only(
+                  bottom: 81,
+                  top: 109,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    SettingsAbout(),
+                    SettingsFeedback(),
+                    SettingsAttribution(),
                   ],
                 ),
               ),

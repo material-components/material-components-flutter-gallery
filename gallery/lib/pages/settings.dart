@@ -10,6 +10,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../constants.dart';
 import '../data/gallery_options.dart';
 import '../l10n/gallery_localizations.dart';
+import '../layout/adaptive.dart';
 import 'about.dart' as about;
 import 'settings_list_item.dart';
 
@@ -25,7 +26,6 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textTheme = Theme.of(context).textTheme;
     final colorScheme = Theme.of(context).colorScheme;
 
     return Container(
@@ -98,44 +98,66 @@ class SettingsPage extends StatelessWidget {
               options: options,
               onOptionsChanged: onOptionsChanged,
             ),
-            SizedBox(height: 16),
-            Divider(thickness: 2, height: 0, color: colorScheme.background),
-            SizedBox(height: 12),
-            _SettingsLink(
-              title: GalleryLocalizations.of(context).settingsAbout,
-              icon: Icons.info_outline,
-              onTap: () {
-                about.showAboutDialog(context: context);
-              },
-            ),
-            _SettingsLink(
-              title: GalleryLocalizations.of(context).settingsFeedback,
-              icon: Icons.feedback,
-              onTap: () async {
-                final url =
-                    'https://github.com/flutter/flutter/issues/new/choose/';
-                if (await canLaunch(url)) {
-                  await launch(
-                    url,
-                    forceSafariVC: false,
-                  );
-                }
-              },
-            ),
-            SizedBox(height: 12),
-            Divider(thickness: 2, height: 0, color: colorScheme.background),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 28),
-              child: Text(
-                GalleryLocalizations.of(context).settingsAttribution,
-                style: textTheme.body2.copyWith(
-                  fontSize: 12,
-                  color: colorScheme.onSecondary,
-                ),
-              ),
-            ),
+            if (!isDisplayDesktop(context)) ...[
+              SizedBox(height: 16),
+              Divider(thickness: 2, height: 0, color: colorScheme.background),
+              SizedBox(height: 12),
+              SettingsAbout(),
+              SettingsFeedback(),
+              SizedBox(height: 12),
+              Divider(thickness: 2, height: 0, color: colorScheme.background),
+              SettingsAttribution(),
+            ],
           ],
         ),
+      ),
+    );
+  }
+}
+
+class SettingsAbout extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return _SettingsLink(
+      title: GalleryLocalizations.of(context).settingsAbout,
+      icon: Icons.info_outline,
+      onTap: () {
+        about.showAboutDialog(context: context);
+      },
+    );
+  }
+}
+
+class SettingsFeedback extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return _SettingsLink(
+      title: GalleryLocalizations.of(context).settingsFeedback,
+      icon: Icons.feedback,
+      onTap: () async {
+        final url = 'https://github.com/flutter/flutter/issues/new/choose/';
+        if (await canLaunch(url)) {
+          await launch(
+            url,
+            forceSafariVC: false,
+          );
+        }
+      },
+    );
+  }
+}
+
+class SettingsAttribution extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 28),
+      child: Text(
+        GalleryLocalizations.of(context).settingsAttribution,
+        style: Theme.of(context).textTheme.body2.copyWith(
+              fontSize: 12,
+              color: Theme.of(context).colorScheme.onSecondary,
+            ),
       ),
     );
   }
