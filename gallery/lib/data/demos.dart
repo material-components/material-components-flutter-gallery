@@ -18,8 +18,6 @@ import '../l10n/gallery_localizations.dart';
 import '../themes/material_demo_theme_data.dart';
 import 'icons.dart';
 
-// TODO: Localize all strings.
-
 class GalleryDemo {
   GalleryDemo({
     @required this.title,
@@ -53,29 +51,25 @@ class GalleryDemoConfiguration {
 List<GalleryDemo> materialDemos(BuildContext context) {
   return [
     GalleryDemo(
-      title: 'Bottom navigation',
+      title: GalleryLocalizations.of(context).demoBottomNavigationTitle,
       icon: GalleryIcons.bottomNavigation,
-      subtitle: 'Bottom navigation with cross-fading views',
+      subtitle: GalleryLocalizations.of(context).demoBottomNavigationSubtitle,
       configurations: [
         GalleryDemoConfiguration(
-          title: 'Bottom navigation with labels',
+          title: GalleryLocalizations.of(context)
+              .demoBottomNavigationPersistentLabels,
           description:
-              'Bottom navigation bars display three to five destinations at the bottom of a screen. '
-              'Each destination is represented by an icon and an optional text label. When a bottom '
-              'navigation icon is tapped, the user is taken to the top-level navigation destination '
-              'associated with that icon.',
+              GalleryLocalizations.of(context).demoBottomNavigationDescription,
           documentationUrl:
               'https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html',
           buildRoute: (context) =>
               BottomNavigationDemo(type: BottomNavigationDemoType.withLabels),
         ),
         GalleryDemoConfiguration(
-          title: 'Bottom navigation with one label',
+          title: GalleryLocalizations.of(context)
+              .demoBottomNavigationSelectedLabel,
           description:
-              'Bottom navigation bars display three to five destinations at the bottom of a screen. '
-              'Each destination is represented by an icon and an optional text label. When a bottom '
-              'navigation icon is tapped, the user is taken to the top-level navigation destination '
-              'associated with that icon.',
+              GalleryLocalizations.of(context).demoBottomNavigationDescription,
           documentationUrl:
               'https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html',
           buildRoute: (context) => BottomNavigationDemo(
@@ -304,16 +298,15 @@ List<GalleryDemo> referenceDemos(BuildContext context) {
         ),
       ],
     ),
-    // TODO: Localize.
     GalleryDemo(
-      title: 'Typography',
+      title: GalleryLocalizations.of(context).demoTypographyTitle,
       icon: GalleryIcons.customTypography,
-      subtitle: 'All of the predefined text styles',
+      subtitle: GalleryLocalizations.of(context).demoTypographySubtitle,
       configurations: [
         GalleryDemoConfiguration(
-          title: 'Typography',
+          title: GalleryLocalizations.of(context).demoTypographyTitle,
           description:
-              'Definitions for the various typographical styles found in material design.',
+              GalleryLocalizations.of(context).demoTypographyDescription,
           documentationUrl:
               'https://api.flutter.dev/flutter/material/TextTheme-class.html',
           buildRoute: (context) => TypographyDemo(),

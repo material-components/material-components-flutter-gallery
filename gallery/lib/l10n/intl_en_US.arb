@@ -109,9 +109,25 @@
   "@settingsPlatformMechanics": {
     "description": "Title for platform mechanics (iOS/Android) setting."
   },
-  "settingsDarkTheme": "Dark theme",
+  "settingsPlatformAndroid": "Android",
+  "@settingsPlatformAndroid": {
+    "description": "Title for Android platform setting."
+  },
+  "settingsPlatformIOS": "iOS",
+  "@settingsPlatformIOS": {
+    "description": "Title for iOS platform setting."
+  },
+  "settingsTheme": "Theme",
+  "@settingsTheme": {
+    "description": "Title for the theme setting."
+  },
+  "settingsDarkTheme": "Dark",
   "@settingsDarkTheme": {
-    "description": "Title for dark theme setting."
+    "description": "Title for the dark theme setting."
+  },
+  "settingsLightTheme": "Light",
+  "@settingsLightTheme": {
+    "description": "Title for the light theme setting."
   },
   "settingsSlowMotion": "Slow motion",
   "@settingsSlowMotion": {
@@ -128,6 +144,26 @@
   "settingsAttribution": "Designed by TOASTER in London",
   "@settingsAttribution": {
     "description": "Title for attribution (TOASTER is a proper name and should remain in English)."
+  },
+  "demoBottomNavigationTitle": "Bottom navigation",
+  "@demoBottomNavigationTitle": {
+    "description": "Title for the material bottom navigation component demo."
+  },
+  "demoBottomNavigationSubtitle": "Bottom navigation with cross-fading views",
+  "@demoBottomNavigationSubtitle": {
+    "description": "Subtitle for the material bottom navigation component demo."
+  },
+  "demoBottomNavigationPersistentLabels": "Persistent labels",
+  "@demoBottomNavigationPersistentLabels": {
+    "description": "Option title for bottom navigation with persistent labels."
+  },
+  "demoBottomNavigationSelectedLabel": "Selected label",
+  "@demoBottomNavigationSelectedLabel": {
+    "description": "Option title for bottom navigation with only a selected label."
+  },
+  "demoBottomNavigationDescription": "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon.",
+  "@demoBottomNavigationDescription": {
+    "description": "Description for the material bottom navigation component demo."
   },
   "demoButtonTitle": "Buttons",
   "@demoButtonTitle": {
@@ -269,9 +305,21 @@
   "@demoColorsSubtitle": {
     "description": "Subtitle for the colors demo."
   },
-  "demoColorsDescription": "Color and color swatch constants which represent Material design's color palette.",
+  "demoColorsDescription": "Color and color swatch constants which represent Material Design's color palette.",
   "@demoColorsDescription": {
     "description": "Description for the colors demo."
+  },
+  "demoTypographyTitle": "Typography",
+  "@demoTypographyTitle": {
+    "description": "Title for the typography demo."
+  },
+  "demoTypographySubtitle": "All of the predefined text styles",
+  "@demoTypographySubtitle": {
+    "description": "Subtitle for the typography demo."
+  },
+  "demoTypographyDescription": "Definitions for the various typographical styles found in Material Design.",
+  "@demoTypographyDescription": {
+    "description": "Description for the typography demo."
   },
   "buttonText": "BUTTON",
   "@buttonText": {
@@ -449,6 +497,35 @@
   "demoTextFieldRequiredField": "* indicates required field",
   "@demoTextFieldRequiredField": {
     "description": "Helper text to indicate that * means that it is a required field."
+  },
+  "bottomNavigationCommentsTab": "Comments",
+  "@bottomNavigationCommentsTab": {
+    "description": "Title for Comments tab of bottom navigation."
+  },
+  "bottomNavigationCalendarTab": "Calendar",
+  "@bottomNavigationCalendarTab": {
+    "description": "Title for Calendar tab of bottom navigation."
+  },
+  "bottomNavigationAccountTab": "Account",
+  "@bottomNavigationAccountTab": {
+    "description": "Title for Account tab of bottom navigation."
+  },
+  "bottomNavigationAlarmTab": "Alarm",
+  "@bottomNavigationAlarmTab": {
+    "description": "Title for Alarm tab of bottom navigation."
+  },
+  "bottomNavigationCameraTab": "Camera",
+  "@bottomNavigationCameraTab": {
+    "description": "Title for Camera tab of bottom navigation."
+  },
+  "bottomNavigationContentPlaceholder": "Placeholder for {title} tab",
+  "@bottomNavigationContentPlaceholder": {
+    "description": "Accessibility label for the content placeholder in the bottom navigation demo",
+    "placeholders": {
+      "title": {
+        "example": "Account"
+      }
+    }
   },
   "buttonTextCreate": "Create",
   "@buttonTextCreate": {

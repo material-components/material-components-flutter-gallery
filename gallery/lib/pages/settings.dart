@@ -13,8 +13,6 @@ import '../l10n/gallery_localizations.dart';
 import 'about.dart' as about;
 import 'settings_list_item.dart';
 
-// TODO: localize
-
 class SettingsPage extends StatelessWidget {
   const SettingsPage({
     Key key,
@@ -74,20 +72,24 @@ class SettingsPage extends StatelessWidget {
               title: GalleryLocalizations.of(context).settingsPlatformMechanics,
               selectedOption: options.platform,
               options: LinkedHashMap.of({
-                TargetPlatform.android: 'Android',
-                TargetPlatform.iOS: 'iOS',
+                TargetPlatform.android:
+                    GalleryLocalizations.of(context).settingsPlatformAndroid,
+                TargetPlatform.iOS:
+                    GalleryLocalizations.of(context).settingsPlatformIOS,
               }),
               onOptionChanged: (newOption) =>
                   onOptionsChanged(options.copyWith(platform: newOption)),
             ),
             SettingsListItem<ThemeMode>(
-              title: GalleryLocalizations.of(context)
-                  .settingsDarkTheme, // TODO: rename to settingsDarkMode
+              title: GalleryLocalizations.of(context).settingsTheme,
               selectedOption: options.themeMode,
               options: LinkedHashMap.of({
-                ThemeMode.system: 'System',
-                ThemeMode.dark: 'Dark',
-                ThemeMode.light: 'Light',
+                ThemeMode.system:
+                    GalleryLocalizations.of(context).settingsSystemDefault,
+                ThemeMode.dark:
+                    GalleryLocalizations.of(context).settingsDarkTheme,
+                ThemeMode.light:
+                    GalleryLocalizations.of(context).settingsLightTheme,
               }),
               onOptionChanged: (newOption) =>
                   onOptionsChanged(options.copyWith(themeMode: newOption)),

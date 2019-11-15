@@ -229,6 +229,50 @@ class GalleryLocalizations {
         desc: r'Represents a link to the Flutter samples github repository.');
   }
 
+  String get bottomNavigationAccountTab {
+    return Intl.message(r'Account',
+        locale: _localeName,
+        name: 'bottomNavigationAccountTab',
+        desc: r'Title for Account tab of bottom navigation.');
+  }
+
+  String get bottomNavigationAlarmTab {
+    return Intl.message(r'Alarm',
+        locale: _localeName,
+        name: 'bottomNavigationAlarmTab',
+        desc: r'Title for Alarm tab of bottom navigation.');
+  }
+
+  String get bottomNavigationCalendarTab {
+    return Intl.message(r'Calendar',
+        locale: _localeName,
+        name: 'bottomNavigationCalendarTab',
+        desc: r'Title for Calendar tab of bottom navigation.');
+  }
+
+  String get bottomNavigationCameraTab {
+    return Intl.message(r'Camera',
+        locale: _localeName,
+        name: 'bottomNavigationCameraTab',
+        desc: r'Title for Camera tab of bottom navigation.');
+  }
+
+  String get bottomNavigationCommentsTab {
+    return Intl.message(r'Comments',
+        locale: _localeName,
+        name: 'bottomNavigationCommentsTab',
+        desc: r'Title for Comments tab of bottom navigation.');
+  }
+
+  String bottomNavigationContentPlaceholder(Object title) {
+    return Intl.message(r'Placeholder for $title tab',
+        locale: _localeName,
+        name: 'bottomNavigationContentPlaceholder',
+        desc:
+            r'Accessibility label for the content placeholder in the bottom navigation demo',
+        args: <Object>[title]);
+  }
+
   String get buttonText {
     return Intl.message(r'BUTTON',
         locale: _localeName,
@@ -513,6 +557,44 @@ class GalleryLocalizations {
         desc: r'Title for the alert dialog with title component demo.');
   }
 
+  String get demoBottomNavigationDescription {
+    return Intl.message(
+        r'Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon.',
+        locale: _localeName,
+        name: 'demoBottomNavigationDescription',
+        desc:
+            r'Description for the material bottom navigation component demo.');
+  }
+
+  String get demoBottomNavigationPersistentLabels {
+    return Intl.message(r'Persistent labels',
+        locale: _localeName,
+        name: 'demoBottomNavigationPersistentLabels',
+        desc: r'Option title for bottom navigation with persistent labels.');
+  }
+
+  String get demoBottomNavigationSelectedLabel {
+    return Intl.message(r'Selected label',
+        locale: _localeName,
+        name: 'demoBottomNavigationSelectedLabel',
+        desc:
+            r'Option title for bottom navigation with only a selected label.');
+  }
+
+  String get demoBottomNavigationSubtitle {
+    return Intl.message(r'Bottom navigation with cross-fading views',
+        locale: _localeName,
+        name: 'demoBottomNavigationSubtitle',
+        desc: r'Subtitle for the material bottom navigation component demo.');
+  }
+
+  String get demoBottomNavigationTitle {
+    return Intl.message(r'Bottom navigation',
+        locale: _localeName,
+        name: 'demoBottomNavigationTitle',
+        desc: r'Title for the material bottom navigation component demo.');
+  }
+
   String get demoBottomSheetAddLabel {
     return Intl.message(r'Add',
         locale: _localeName,
@@ -616,7 +698,7 @@ class GalleryLocalizations {
 
   String get demoColorsDescription {
     return Intl.message(
-        r'Color and color swatch constants which represent Material design'
+        r'Color and color swatch constants which represent Material Design'
         "'"
         r's color palette.',
         locale: _localeName,
@@ -1086,6 +1168,28 @@ class GalleryLocalizations {
         desc: r'Title for the toggle buttons component demo.');
   }
 
+  String get demoTypographyDescription {
+    return Intl.message(
+        r'Definitions for the various typographical styles found in Material Design.',
+        locale: _localeName,
+        name: 'demoTypographyDescription',
+        desc: r'Description for the typography demo.');
+  }
+
+  String get demoTypographySubtitle {
+    return Intl.message(r'All of the predefined text styles',
+        locale: _localeName,
+        name: 'demoTypographySubtitle',
+        desc: r'Subtitle for the typography demo.');
+  }
+
+  String get demoTypographyTitle {
+    return Intl.message(r'Typography',
+        locale: _localeName,
+        name: 'demoTypographyTitle',
+        desc: r'Title for the typography demo.');
+  }
+
   String get dialogAddAccount {
     return Intl.message(r'Add account',
         locale: _localeName,
@@ -1230,10 +1334,10 @@ class GalleryLocalizations {
   }
 
   String get settingsDarkTheme {
-    return Intl.message(r'Dark theme',
+    return Intl.message(r'Dark',
         locale: _localeName,
         name: 'settingsDarkTheme',
-        desc: r'Title for dark theme setting.');
+        desc: r'Title for the dark theme setting.');
   }
 
   String get settingsFeedback {
@@ -1243,11 +1347,32 @@ class GalleryLocalizations {
         desc: r'Title for feedback button.');
   }
 
+  String get settingsLightTheme {
+    return Intl.message(r'Light',
+        locale: _localeName,
+        name: 'settingsLightTheme',
+        desc: r'Title for the light theme setting.');
+  }
+
   String get settingsLocale {
     return Intl.message(r'Locale',
         locale: _localeName,
         name: 'settingsLocale',
         desc: r'Title for locale setting.');
+  }
+
+  String get settingsPlatformAndroid {
+    return Intl.message(r'Android',
+        locale: _localeName,
+        name: 'settingsPlatformAndroid',
+        desc: r'Title for Android platform setting.');
+  }
+
+  String get settingsPlatformIOS {
+    return Intl.message(r'iOS',
+        locale: _localeName,
+        name: 'settingsPlatformIOS',
+        desc: r'Title for iOS platform setting.');
   }
 
   String get settingsPlatformMechanics {
@@ -1325,6 +1450,13 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'settingsTextScalingSmall',
         desc: r'Option label for small text scale setting.');
+  }
+
+  String get settingsTheme {
+    return Intl.message(r'Theme',
+        locale: _localeName,
+        name: 'settingsTheme',
+        desc: r'Title for the theme setting.');
   }
 
   String get settingsTitle {

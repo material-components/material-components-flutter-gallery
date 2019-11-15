@@ -3,7 +3,8 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-// TODO: localize all strings
+
+import '../../l10n/gallery_localizations.dart';
 
 enum BottomNavigationDemoType {
   withLabels,
@@ -27,45 +28,49 @@ class _BottomNavigationDemoState extends State<BottomNavigationDemo>
   String _title(BuildContext context) {
     switch (widget.type) {
       case BottomNavigationDemoType.withLabels:
-        return 'Bottom navigation with labels';
+        return GalleryLocalizations.of(context)
+            .demoBottomNavigationPersistentLabels;
       case BottomNavigationDemoType.withoutLabels:
-        return 'Bottom navigation with one label';
+        return GalleryLocalizations.of(context)
+            .demoBottomNavigationSelectedLabel;
     }
     return '';
   }
 
   @override
-  void initState() {
-    super.initState();
-    _navigationViews = <_NavigationIconView>[
-      _NavigationIconView(
-        icon: const Icon(Icons.add_comment),
-        title: 'Comments',
-        vsync: this,
-      ),
-      _NavigationIconView(
-        icon: const Icon(Icons.calendar_today),
-        title: 'Calendar',
-        vsync: this,
-      ),
-      _NavigationIconView(
-        icon: const Icon(Icons.account_circle),
-        title: 'Account',
-        vsync: this,
-      ),
-      _NavigationIconView(
-        icon: const Icon(Icons.alarm_on),
-        title: 'Alarm',
-        vsync: this,
-      ),
-      _NavigationIconView(
-        icon: const Icon(Icons.camera_enhance),
-        title: 'Camera',
-        vsync: this,
-      ),
-    ];
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_navigationViews == null) {
+      _navigationViews = <_NavigationIconView>[
+        _NavigationIconView(
+          icon: const Icon(Icons.add_comment),
+          title: GalleryLocalizations.of(context).bottomNavigationCommentsTab,
+          vsync: this,
+        ),
+        _NavigationIconView(
+          icon: const Icon(Icons.calendar_today),
+          title: GalleryLocalizations.of(context).bottomNavigationCalendarTab,
+          vsync: this,
+        ),
+        _NavigationIconView(
+          icon: const Icon(Icons.account_circle),
+          title: GalleryLocalizations.of(context).bottomNavigationAccountTab,
+          vsync: this,
+        ),
+        _NavigationIconView(
+          icon: const Icon(Icons.alarm_on),
+          title: GalleryLocalizations.of(context).bottomNavigationAlarmTab,
+          vsync: this,
+        ),
+        _NavigationIconView(
+          icon: const Icon(Icons.camera_enhance),
+          title: GalleryLocalizations.of(context).bottomNavigationCameraTab,
+          vsync: this,
+        ),
+      ];
 
-    _navigationViews[_currentIndex].controller.value = 1;
+      _navigationViews[_currentIndex].controller.value = 1;
+    }
   }
 
   @override
@@ -191,7 +196,8 @@ class _NavigationIconView {
                   size: 80,
                 ),
                 child: Semantics(
-                  label: 'Placeholder for $title tab',
+                  label: GalleryLocalizations.of(context)
+                      .bottomNavigationContentPlaceholder(title),
                   child: icon,
                 ),
               ),

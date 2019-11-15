@@ -4,7 +4,7 @@
 
 import 'package:flutter/material.dart';
 
-// TODO: Localize.
+import '../../l10n/gallery_localizations.dart';
 
 class _TextStyleItem extends StatelessWidget {
   const _TextStyleItem({
@@ -114,7 +114,9 @@ class TypographyDemo extends StatelessWidget {
     ];
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Typography')),
+      appBar: AppBar(
+        title: Text(GalleryLocalizations.of(context).demoTypographyTitle),
+      ),
       body: Scrollbar(child: ListView(children: styleItems)),
     );
   }
