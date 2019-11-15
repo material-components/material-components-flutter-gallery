@@ -113,10 +113,7 @@ class CategoryMenuPage extends StatelessWidget {
               _divider(),
               GestureDetector(
                 onTap: () {
-                  Navigator.push<void>(
-                    context,
-                    MaterialPageRoute<void>(builder: (context) => LoginPage()),
-                  );
+                  Navigator.pop (context);
                 },
                 child: _buttonText("LOGOUT", logoutTextStyle),
               ),
@@ -146,10 +143,7 @@ class CategoryMenuPage extends StatelessWidget {
                   if (onCategoryTap != null) {
                     onCategoryTap();
                   }
-                  Navigator.push<void>(
-                    context,
-                    MaterialPageRoute<void>(builder: (context) => LoginPage()),
-                  );
+                  Navigator.pop (context);
                 },
                 child: _buttonText("LOGOUT", logoutTextStyle),
               ),

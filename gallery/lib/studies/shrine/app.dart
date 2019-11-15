@@ -91,16 +91,19 @@ class _ShrineAppState extends State<ShrineApp> with TickerProviderStateMixin {
       model: _model,
       child: MaterialApp(
         title: 'Shrine',
-        home: HomePage(
-          backdrop: backdrop,
-          scrim: Scrim(controller: _expandingController),
-          expandingBottomSheet: ExpandingBottomSheet(
-            hideController: _controller,
-            expandingController: _expandingController,
-          ),
-        ),
         initialRoute: '/login',
-        onGenerateRoute: _getRoute,
+        // onGenerateRoute: _getRoute,
+        routes: {
+          '/login': (context) => LoginPage(),
+          '/products': (context) => HomePage(
+            backdrop: backdrop,
+            scrim: Scrim(controller: _expandingController),
+            expandingBottomSheet: ExpandingBottomSheet(
+              hideController: _controller,
+              expandingController: _expandingController,
+            ),
+          ),
+        },
         // Copy the platform from the main theme in order to support platform
         // toggling from the Gallery options menu.
         theme: _shrineTheme.copyWith(platform: Theme.of(context).platform),
