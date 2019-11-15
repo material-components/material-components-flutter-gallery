@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
       body: SafeArea(
         child: GestureDetector(
           onTap: () {
-            Navigator.pop(context);
+            Navigator.pushNamed(context, '/overview');
           },
           child: _MainView(
             usernameController: _usernameController,
