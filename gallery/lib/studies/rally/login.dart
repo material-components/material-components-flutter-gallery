@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
       body: SafeArea(
         child: GestureDetector(
           onTap: () {
-            Navigator.pop(context);
+            Navigator.pushNamed(context, '/rally/home');
           },
           child: _MainView(
             usernameController: _usernameController,
@@ -286,7 +286,7 @@ class _BorderButton extends StatelessWidget {
       ),
       textColor: Colors.white,
       onPressed: () {
-        Navigator.pop(context);
+        Navigator.pushNamed(context, '/rally/home');
       },
       child: Text(text),
     );
@@ -307,7 +307,7 @@ class _FilledButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
       ),
       onPressed: () {
-        Navigator.pop(context);
+        Navigator.pushNamed(context, '/rally/home');
       },
       child: Row(
         children: [

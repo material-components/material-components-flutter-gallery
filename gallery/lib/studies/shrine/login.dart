@@ -122,7 +122,7 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.all(Radius.circular(7)),
                       ),
                       onPressed: () {
-                        Navigator.pushNamed(context, '/products');
+                        Navigator.pushNamed(context, '/shrine/products');
                       },
                     ),
                   ],

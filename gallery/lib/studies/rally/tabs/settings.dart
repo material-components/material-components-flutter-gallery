@@ -48,10 +48,7 @@ class _SettingsItem extends StatelessWidget {
         ]),
       ),
       onPressed: () {
-        Navigator.push<void>(
-          context,
-          MaterialPageRoute<void>(builder: (context) => LoginPage()),
-        );
+        Navigator.pop(context);
       },
     );
   }

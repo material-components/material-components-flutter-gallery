@@ -91,11 +91,10 @@ class _ShrineAppState extends State<ShrineApp> with TickerProviderStateMixin {
       model: _model,
       child: MaterialApp(
         title: 'Shrine',
-        initialRoute: '/login',
-        // onGenerateRoute: _getRoute,
+        initialRoute: '/shrine/login',
         routes: {
-          '/login': (context) => LoginPage(),
-          '/products': (context) => HomePage(
+          '/shrine/login': (context) => LoginPage(),
+          '/shrine/products': (context) => HomePage(
             backdrop: backdrop,
             scrim: Scrim(controller: _expandingController),
             expandingBottomSheet: ExpandingBottomSheet(
@@ -110,18 +109,6 @@ class _ShrineAppState extends State<ShrineApp> with TickerProviderStateMixin {
       ),
     );
   }
-}
-
-Route<dynamic> _getRoute(RouteSettings settings) {
-  if (settings.name != '/login') {
-    return null;
-  }
-
-  return MaterialPageRoute<void>(
-    settings: settings,
-    builder: (context) => LoginPage(),
-    fullscreenDialog: true,
-  );
 }
 
 final ThemeData _shrineTheme = _buildShrineTheme();

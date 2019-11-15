@@ -18,10 +18,10 @@ class RallyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Rally',
       theme: _buildRallyTheme(),
-      home: HomePage(),
-      initialRoute: '/login',
+      initialRoute: '/rally/login',
       routes: <String, WidgetBuilder>{
-        '/login': (context) => LoginPage(),
+        '/rally/login': (context) => LoginPage(),
+        '/rally/home': (context) => HomePage(),
       },
     );
   }
