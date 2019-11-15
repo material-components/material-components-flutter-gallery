@@ -30,7 +30,7 @@ class SlowMotionSetting extends StatelessWidget {
       height: settingItemHeight,
       child: Material(
         shape: RoundedRectangleBorder(borderRadius: settingItemBorderRadius),
-        color: colorScheme.onBackground,
+        color: colorScheme.secondary,
         clipBehavior: Clip.antiAlias,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
