@@ -105,6 +105,9 @@ class _ShrineAppState extends State<ShrineApp> with TickerProviderStateMixin {
         // Copy the platform from the main theme in order to support platform
         // toggling from the Gallery options menu.
         theme: _shrineTheme.copyWith(platform: Theme.of(context).platform),
+        // L10n settings.
+        localizationsDelegates: GalleryLocalizations.localizationsDelegates,
+        supportedLocales: GalleryLocalizations.supportedLocales,
       ),
     );
   }
