@@ -20,7 +20,7 @@ class ProductsRepository {
   static List<Product> loadProducts(Category category) {
     List<Product> allProducts = [
       Product(
-        category: Category.accessories,
+        category: categoryAccessories,
         id: 0,
         isFeatured: true,
         name: 'Vagabond sack',
@@ -28,7 +28,7 @@ class ProductsRepository {
         price: 120,
       ),
       Product(
-        category: Category.accessories,
+        category: categoryAccessories,
         id: 1,
         isFeatured: true,
         name: 'Stella sunglasses',
@@ -36,7 +36,7 @@ class ProductsRepository {
         price: 58,
       ),
       Product(
-        category: Category.accessories,
+        category: categoryAccessories,
         id: 2,
         isFeatured: false,
         name: 'Whitney belt',
@@ -44,7 +44,7 @@ class ProductsRepository {
         price: 35,
       ),
       Product(
-        category: Category.accessories,
+        category: categoryAccessories,
         id: 3,
         isFeatured: true,
         name: 'Garden strand',
@@ -52,7 +52,7 @@ class ProductsRepository {
         price: 98,
       ),
       Product(
-        category: Category.accessories,
+        category: categoryAccessories,
         id: 4,
         isFeatured: false,
         name: 'Strut earrings',
@@ -60,7 +60,7 @@ class ProductsRepository {
         price: 34,
       ),
       Product(
-        category: Category.accessories,
+        category: categoryAccessories,
         id: 5,
         isFeatured: false,
         name: 'Varsity socks',
@@ -68,7 +68,7 @@ class ProductsRepository {
         price: 12,
       ),
       Product(
-        category: Category.accessories,
+        category: categoryAccessories,
         id: 6,
         isFeatured: false,
         name: 'Weave keyring',
@@ -76,7 +76,7 @@ class ProductsRepository {
         price: 16,
       ),
       Product(
-        category: Category.accessories,
+        category: categoryAccessories,
         id: 7,
         isFeatured: true,
         name: 'Gatsby hat',
@@ -84,7 +84,7 @@ class ProductsRepository {
         price: 40,
       ),
       Product(
-        category: Category.accessories,
+        category: categoryAccessories,
         id: 8,
         isFeatured: true,
         name: 'Shrug bag',
@@ -92,7 +92,7 @@ class ProductsRepository {
         price: 198,
       ),
       Product(
-        category: Category.home,
+        category: categoryHome,
         id: 9,
         isFeatured: true,
         name: 'Gilt desk trio',
@@ -100,7 +100,7 @@ class ProductsRepository {
         price: 58,
       ),
       Product(
-        category: Category.home,
+        category: categoryHome,
         id: 10,
         isFeatured: false,
         name: 'Copper wire rack',
@@ -108,7 +108,7 @@ class ProductsRepository {
         price: 18,
       ),
       Product(
-        category: Category.home,
+        category: categoryHome,
         id: 11,
         isFeatured: false,
         name: 'Soothe ceramic set',
@@ -116,7 +116,7 @@ class ProductsRepository {
         price: 28,
       ),
       Product(
-        category: Category.home,
+        category: categoryHome,
         id: 12,
         isFeatured: false,
         name: 'Hurrahs tea set',
@@ -124,7 +124,7 @@ class ProductsRepository {
         price: 34,
       ),
       Product(
-        category: Category.home,
+        category: categoryHome,
         id: 13,
         isFeatured: true,
         name: 'Blue stone mug',
@@ -132,7 +132,7 @@ class ProductsRepository {
         price: 18,
       ),
       Product(
-        category: Category.home,
+        category: categoryHome,
         id: 14,
         isFeatured: true,
         name: 'Rainwater tray',
@@ -140,7 +140,7 @@ class ProductsRepository {
         price: 27,
       ),
       Product(
-        category: Category.home,
+        category: categoryHome,
         id: 15,
         isFeatured: true,
         name: 'Chambray napkins',
@@ -148,7 +148,7 @@ class ProductsRepository {
         price: 16,
       ),
       Product(
-        category: Category.home,
+        category: categoryHome,
         id: 16,
         isFeatured: true,
         name: 'Succulent planters',
@@ -156,7 +156,7 @@ class ProductsRepository {
         price: 16,
       ),
       Product(
-        category: Category.home,
+        category: categoryHome,
         id: 17,
         isFeatured: false,
         name: 'Quartet table',
@@ -164,7 +164,7 @@ class ProductsRepository {
         price: 175,
       ),
       Product(
-        category: Category.home,
+        category: categoryHome,
         id: 18,
         isFeatured: true,
         name: 'Kitchen quattro',
@@ -172,7 +172,7 @@ class ProductsRepository {
         price: 129,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 19,
         isFeatured: false,
         name: 'Clay sweater',
@@ -180,7 +180,7 @@ class ProductsRepository {
         price: 48,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 20,
         isFeatured: false,
         name: 'Sea tunic',
@@ -188,7 +188,7 @@ class ProductsRepository {
         price: 45,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 21,
         isFeatured: false,
         name: 'Plaster tunic',
@@ -196,7 +196,7 @@ class ProductsRepository {
         price: 38,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 22,
         isFeatured: false,
         name: 'White pinstripe shirt',
@@ -204,7 +204,7 @@ class ProductsRepository {
         price: 70,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 23,
         isFeatured: false,
         name: 'Chambray shirt',
@@ -212,7 +212,7 @@ class ProductsRepository {
         price: 70,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 24,
         isFeatured: true,
         name: 'Seabreeze sweater',
@@ -220,7 +220,7 @@ class ProductsRepository {
         price: 60,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 25,
         isFeatured: false,
         name: 'Gentry jacket',
@@ -228,7 +228,7 @@ class ProductsRepository {
         price: 178,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 26,
         isFeatured: false,
         name: 'Navy trousers',
@@ -236,7 +236,7 @@ class ProductsRepository {
         price: 74,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 27,
         isFeatured: true,
         name: 'Walter henley (white)',
@@ -244,7 +244,7 @@ class ProductsRepository {
         price: 38,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 28,
         isFeatured: true,
         name: 'Surf and perf shirt',
@@ -252,7 +252,7 @@ class ProductsRepository {
         price: 48,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 29,
         isFeatured: true,
         name: 'Ginger scarf',
@@ -260,7 +260,7 @@ class ProductsRepository {
         price: 98,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 30,
         isFeatured: true,
         name: 'Ramona crossover',
@@ -268,7 +268,7 @@ class ProductsRepository {
         price: 68,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 31,
         isFeatured: false,
         name: 'Chambray shirt',
@@ -276,7 +276,7 @@ class ProductsRepository {
         price: 38,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 32,
         isFeatured: false,
         name: 'Classic white collar',
@@ -284,7 +284,7 @@ class ProductsRepository {
         price: 58,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 33,
         isFeatured: true,
         name: 'Cerise scallop tee',
@@ -292,7 +292,7 @@ class ProductsRepository {
         price: 42,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 34,
         isFeatured: false,
         name: 'Shoulder rolls tee',
@@ -300,7 +300,7 @@ class ProductsRepository {
         price: 27,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 35,
         isFeatured: false,
         name: 'Grey slouch tank',
@@ -308,7 +308,7 @@ class ProductsRepository {
         price: 24,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 36,
         isFeatured: false,
         name: 'Sunshirt dress',
@@ -316,7 +316,7 @@ class ProductsRepository {
         price: 58,
       ),
       Product(
-        category: Category.clothing,
+        category: categoryClothing,
         id: 37,
         isFeatured: true,
         name: 'Fine lines tee',
@@ -324,7 +324,7 @@ class ProductsRepository {
         price: 58,
       ),
     ];
-    if (category == Category.all) {
+    if (category == categoryAll) {
       return allProducts;
     } else {
       return allProducts.where((p) => p.category == category).toList();

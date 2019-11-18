@@ -15,12 +15,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 
-enum Category {
-  all,
-  accessories,
-  clothing,
-  home,
+import '../../../l10n/gallery_localizations.dart';
+
+class Category {
+  const Category({
+    @required this.internationalizedName,
+  })  : assert(internationalizedName != null);
+
+  final String Function(BuildContext) internationalizedName;
 }
+
+Category categoryAll = Category(internationalizedName: (context) => GalleryLocalizations.of(context).shrineCategoryNameAll,);
+Category categoryAccessories = Category(internationalizedName: (context) => GalleryLocalizations.of(context).shrineCategoryNameAccessories,);
+Category categoryClothing = Category(internationalizedName: (context) => GalleryLocalizations.of(context).shrineCategoryNameClothing,);
+Category categoryHome = Category(internationalizedName: (context) => GalleryLocalizations.of(context).shrineCategoryNameHome,);
 
 class Product {
   const Product({
