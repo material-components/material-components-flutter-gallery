@@ -7,6 +7,6 @@ gradle-wrapper.jar
 GeneratedPluginRegistrant.java
 
 # Visual Studio Code related
-*.classpath
-*.project
-/.settings/
+.classpath
+.project
+.settings/
