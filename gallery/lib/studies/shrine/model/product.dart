@@ -37,22 +37,26 @@ class Category {
 
 Category categoryAll = Category(
   internalName: 'All',
-  nameMaker: (context) => GalleryLocalizations.of(context).shrineCategoryNameAll,
+  nameMaker: (context) =>
+      GalleryLocalizations.of(context).shrineCategoryNameAll,
 );
 
 Category categoryAccessories = Category(
   internalName: 'Accessories',
-  nameMaker: (context) => GalleryLocalizations.of(context).shrineCategoryNameAccessories,
+  nameMaker: (context) =>
+      GalleryLocalizations.of(context).shrineCategoryNameAccessories,
 );
 
 Category categoryClothing = Category(
   internalName: 'Clothing',
-  nameMaker: (context) => GalleryLocalizations.of(context).shrineCategoryNameClothing,
+  nameMaker: (context) =>
+      GalleryLocalizations.of(context).shrineCategoryNameClothing,
 );
 
 Category categoryHome = Category(
   internalName: 'Home',
-  nameMaker: (context) => GalleryLocalizations.of(context).shrineCategoryNameHome,
+  nameMaker: (context) =>
+      GalleryLocalizations.of(context).shrineCategoryNameHome,
 );
 
 List<Category> categories = [

@@ -118,7 +118,10 @@ class CategoryMenuPage extends StatelessWidget {
                     MaterialPageRoute<void>(builder: (context) => LoginPage()),
                   );
                 },
-                child: _buttonText(GalleryLocalizations.of(context).shrineLogoutButtonCaption, logoutTextStyle),
+                child: _buttonText(
+                  GalleryLocalizations.of(context).shrineLogoutButtonCaption,
+                  logoutTextStyle,
+                ),
               ),
               const Spacer(),
               IconButton(
@@ -151,7 +154,10 @@ class CategoryMenuPage extends StatelessWidget {
                     MaterialPageRoute<void>(builder: (context) => LoginPage()),
                   );
                 },
-                child: _buttonText(GalleryLocalizations.of(context).shrineLogoutButtonCaption, logoutTextStyle),
+                child: _buttonText(
+                  GalleryLocalizations.of(context).shrineLogoutButtonCaption,
+                  logoutTextStyle,
+                ),
               ),
             ],
           ),

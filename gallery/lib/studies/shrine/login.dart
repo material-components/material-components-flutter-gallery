@@ -77,7 +77,8 @@ class _LoginPageState extends State<LoginPage> {
                   controller: _usernameController,
                   cursorColor: colorScheme.onSurface,
                   decoration: InputDecoration(
-                    labelText: GalleryLocalizations.of(context).shrineLoginUsernameLabel,
+                    labelText: GalleryLocalizations.of(context)
+                        .shrineLoginUsernameLabel,
                   ),
                 ),
               ),
@@ -92,7 +93,8 @@ class _LoginPageState extends State<LoginPage> {
                   cursorColor: colorScheme.onSurface,
                   obscureText: true,
                   decoration: InputDecoration(
-                    labelText: GalleryLocalizations.of(context).shrineLoginPasswordLabel,
+                    labelText: GalleryLocalizations.of(context)
+                        .shrineLoginPasswordLabel,
                   ),
                 ),
               ),
@@ -103,7 +105,8 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     FlatButton(
                       child: Text(
-                        GalleryLocalizations.of(context).shrineCancelButtonCaption,
+                        GalleryLocalizations.of(context)
+                            .shrineCancelButtonCaption,
                         style: TextStyle(color: colorScheme.onSurface),
                       ),
                       shape: const BeveledRectangleBorder(
@@ -118,7 +121,10 @@ class _LoginPageState extends State<LoginPage> {
                       },
                     ),
                     RaisedButton(
-                      child: Text(GalleryLocalizations.of(context).shrineNextButtonCaption),
+                      child: Text(
+                        GalleryLocalizations.of(context)
+                            .shrineNextButtonCaption,
+                      ),
                       elevation: 8,
                       shape: const BeveledRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(7)),

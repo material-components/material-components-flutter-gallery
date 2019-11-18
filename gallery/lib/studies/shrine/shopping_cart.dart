@@ -70,13 +70,15 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                             ),
                           ),
                           Text(
-                            GalleryLocalizations.of(context).shrineCartPageCaption,
+                            GalleryLocalizations.of(context)
+                                .shrineCartPageCaption,
                             style: localTheme.textTheme.subhead
                                 .copyWith(fontWeight: FontWeight.w600),
                           ),
                           const SizedBox(width: 16),
                           Text(
-                            GalleryLocalizations.of(context).shrineCartItemCount(model.totalCartQuantity),
+                            GalleryLocalizations.of(context)
+                                .shrineCartItemCount(model.totalCartQuantity),
                           ),
                         ],
                       ),
@@ -100,7 +102,10 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                       splashColor: shrineBrown600,
                       child: Padding(
                         padding: EdgeInsets.symmetric(vertical: 12),
-                        child: Text(GalleryLocalizations.of(context).shrineCartClearButtonCaption,),
+                        child: Text(
+                          GalleryLocalizations.of(context)
+                              .shrineCartClearButtonCaption,
+                        ),
                       ),
                       onPressed: () {
                         model.clearCart();
@@ -145,7 +150,9 @@ class ShoppingCartSummary extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Expanded(
-                      child: Text(GalleryLocalizations.of(context).shrineCartTotalCaption,),
+                      child: Text(
+                        GalleryLocalizations.of(context).shrineCartTotalCaption,
+                      ),
                     ),
                     Text(
                       formatter.format(model.totalCost),
@@ -157,7 +164,10 @@ class ShoppingCartSummary extends StatelessWidget {
                 Row(
                   children: [
                     Expanded(
-                      child: Text(GalleryLocalizations.of(context).shrineCartSubtotalCaption,),
+                      child: Text(
+                        GalleryLocalizations.of(context)
+                            .shrineCartSubtotalCaption,
+                      ),
                     ),
                     Text(
                       formatter.format(model.subtotalCost),
@@ -169,7 +179,10 @@ class ShoppingCartSummary extends StatelessWidget {
                 Row(
                   children: [
                     Expanded(
-                      child: Text(GalleryLocalizations.of(context).shrineCartShippingCaption,),
+                      child: Text(
+                        GalleryLocalizations.of(context)
+                            .shrineCartShippingCaption,
+                      ),
                     ),
                     Text(
                       formatter.format(model.shippingCost),
@@ -181,7 +194,9 @@ class ShoppingCartSummary extends StatelessWidget {
                 Row(
                   children: [
                     Expanded(
-                      child: Text(GalleryLocalizations.of(context).shrineCartTaxCaption,),
+                      child: Text(
+                        GalleryLocalizations.of(context).shrineCartTaxCaption,
+                      ),
                     ),
                     Text(
                       formatter.format(model.tax),
@@ -253,10 +268,15 @@ class ShoppingCartRow extends StatelessWidget {
                             Row(
                               children: [
                                 Expanded(
-                                  child: Text(GalleryLocalizations.of(context).shrineProductQuantity(quantity),),
+                                  child: Text(
+                                    GalleryLocalizations.of(context)
+                                        .shrineProductQuantity(quantity),
+                                  ),
                                 ),
                                 Text(
-                                  GalleryLocalizations.of(context).shrineProductPrice(formatter.format(product.price)),
+                                  GalleryLocalizations.of(context)
+                                      .shrineProductPrice(
+                                          formatter.format(product.price)),
                                 ),
                               ],
                             ),
