@@ -19,10 +19,36 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'da';
 
-  static m0(value) => "You selected: \"${value}\"";
+  static m0(value) =>
+      "To see the source code for this app, please visit the ${value}.";
+
+  static m1(title) => "Placeholder for ${title} tab";
+
+  static m2(value) => "Item ${value}";
+
+  static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+
+  static m4(value) => "You selected: \"${value}\"";
+
+  static m5(value) => "Item ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
+        "aboutDialogDescription": m0,
+        "aboutFlutterSamplesRepo":
+            MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
+        "bottomNavigationAccountTab":
+            MessageLookupByLibrary.simpleMessage("Account"),
+        "bottomNavigationAlarmTab":
+            MessageLookupByLibrary.simpleMessage("Alarm"),
+        "bottomNavigationCalendarTab":
+            MessageLookupByLibrary.simpleMessage("Calendar"),
+        "bottomNavigationCameraTab":
+            MessageLookupByLibrary.simpleMessage("Camera"),
+        "bottomNavigationCommentsTab":
+            MessageLookupByLibrary.simpleMessage("Comments"),
+        "bottomNavigationContentPlaceholder": m1,
+        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Create"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("AMBER"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("BLUE"),
@@ -67,6 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Allow \"Maps\" to access your location while you are using the app?"),
         "cupertinoAlertTiramisu":
             MessageLookupByLibrary.simpleMessage("Tiramisu"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("With Background"),
         "cupertinoShowAlert":
@@ -76,12 +103,42 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("Alert"),
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Alert With Title"),
+        "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
+            "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
+        "demoBottomNavigationPersistentLabels":
+            MessageLookupByLibrary.simpleMessage("Persistent labels"),
+        "demoBottomNavigationSelectedLabel":
+            MessageLookupByLibrary.simpleMessage("Selected label"),
+        "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Bottom navigation with cross-fading views"),
+        "demoBottomNavigationTitle":
+            MessageLookupByLibrary.simpleMessage("Bottom navigation"),
+        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+        "demoBottomSheetButtonText":
+            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
+        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
+        "demoBottomSheetItem": m2,
+        "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
+            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
+        "demoBottomSheetModalTitle":
+            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+        "demoBottomSheetPersistentDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
+        "demoBottomSheetPersistentTitle":
+            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
+        "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Persistent and modal bottom sheets"),
+        "demoBottomSheetTitle":
+            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+        "demoBottomTextFieldsTitle":
+            MessageLookupByLibrary.simpleMessage("Text fields"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "Flat, raised, outline, and more"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Buttons"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Code Sample"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "Color and color swatch constants which represent Material design\'s color palette."),
+            "Color and color swatch constants which represent Material Design\'s color palette."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
             "All of the predefined colors"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("Colors"),
@@ -107,19 +164,23 @@ class MessageLookup extends MessageLookupByLibrary {
             "An iOS-style button. It takes in text and/or an icon that fades out and in on touch. May optionally have a background."),
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS-style buttons"),
-        "demoCupertinoButtonsTitle": MessageLookupByLibrary.simpleMessage(
-            "The fullscreenDialog property specifies whether the incoming page is a fullscreen modal dialog"),
+        "demoCupertinoButtonsTitle":
+            MessageLookupByLibrary.simpleMessage("Buttons"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Simple, alert, and fullscreen"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dialogs"),
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API Documentation"),
+        "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
+            "A flat button displays an ink splash on press but does not lift. Use flat buttons on toolbars, in dialogs and inline with padding"),
         "demoFlatButtonTitle":
             MessageLookupByLibrary.simpleMessage("Flat Button"),
         "demoFloatingButtonDescription": MessageLookupByLibrary.simpleMessage(
             "A floating action button is a circular icon button that hovers over content to promote a primary action in the application."),
         "demoFloatingButtonTitle":
             MessageLookupByLibrary.simpleMessage("Floating Action Button"),
+        "demoFullscreenDialogDescription": MessageLookupByLibrary.simpleMessage(
+            "The fullscreenDialog property specifies whether the incoming page is a fullscreen modal dialog"),
         "demoFullscreenDialogTitle":
             MessageLookupByLibrary.simpleMessage("Fullscreen"),
         "demoFullscreenTooltip":
@@ -139,10 +200,67 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Simple"),
+        "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
+            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
+        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
+        "demoTextFieldEnterPassword":
+            MessageLookupByLibrary.simpleMessage("Please enter a password."),
+        "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
+            "(###) ###-#### - Enter a US phone number."),
+        "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
+            "Please fix the errors in red before submitting."),
+        "demoTextFieldHidePasswordLabel":
+            MessageLookupByLibrary.simpleMessage("Hide password"),
+        "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
+            "Keep it short, this is just a demo."),
+        "demoTextFieldLifeStory":
+            MessageLookupByLibrary.simpleMessage("Life story"),
+        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
+        "demoTextFieldNameHasPhoneNumber": m3,
+        "demoTextFieldNameRequired":
+            MessageLookupByLibrary.simpleMessage("Name is required."),
+        "demoTextFieldNoMoreThan":
+            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+        "demoTextFieldOnlyAlphabeticalChars":
+            MessageLookupByLibrary.simpleMessage(
+                "Please enter only alphabetical characters."),
+        "demoTextFieldPassword":
+            MessageLookupByLibrary.simpleMessage("Password*"),
+        "demoTextFieldPasswordsDoNotMatch":
+            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+        "demoTextFieldPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("Phone number*"),
+        "demoTextFieldRequiredField":
+            MessageLookupByLibrary.simpleMessage("* indicates required field"),
+        "demoTextFieldRetypePassword":
+            MessageLookupByLibrary.simpleMessage("Re-type password*"),
+        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+        "demoTextFieldShowPasswordLabel":
+            MessageLookupByLibrary.simpleMessage("Show password"),
+        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
+        "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Single line of editable text and numbers"),
+        "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
+            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
+        "demoTextFieldTitle":
+            MessageLookupByLibrary.simpleMessage("Text fields"),
+        "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
+        "demoTextFieldWhatDoPeopleCallYou":
+            MessageLookupByLibrary.simpleMessage("What do people call you?"),
+        "demoTextFieldWhereCanWeReachYou":
+            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
+        "demoTextFieldYourEmailAddress":
+            MessageLookupByLibrary.simpleMessage("Your email address"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Toggle buttons can be used to group related options. To emphasize groups of related toggle buttons, a group should share a common container"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Toggle Buttons"),
+        "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
+            "Definitions for the various typographical styles found in Material Design."),
+        "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
+            "All of the predefined text styles"),
+        "demoTypographyTitle":
+            MessageLookupByLibrary.simpleMessage("Typography"),
         "dialogAddAccount": MessageLookupByLibrary.simpleMessage("Add account"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("AGREE"),
         "dialogCancel": MessageLookupByLibrary.simpleMessage("CANCEL"),
@@ -159,7 +277,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Use Google\'s location service?"),
-        "dialogSelectedOption": m0,
+        "dialogSelectedOption": m4,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Set backup account"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("SHOW DIALOG"),
@@ -168,23 +286,59 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Categories"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Gallery"),
+        "rallyDescription":
+            MessageLookupByLibrary.simpleMessage("A personal finance app"),
         "settingsAbout":
             MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Designed by TOASTER in London"),
-        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark theme"),
+        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Send feedback"),
+        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Light"),
         "settingsLocale": MessageLookupByLibrary.simpleMessage("Locale"),
+        "settingsPlatformAndroid":
+            MessageLookupByLibrary.simpleMessage("Android"),
+        "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
             MessageLookupByLibrary.simpleMessage("Platform mechanics"),
         "settingsSlowMotion":
             MessageLookupByLibrary.simpleMessage("Slow motion"),
+        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
         "settingsTextDirection":
             MessageLookupByLibrary.simpleMessage("Text direction"),
+        "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
+        "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("Text scaling"),
+        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
+        "settingsTextScalingLarge":
+            MessageLookupByLibrary.simpleMessage("Large"),
+        "settingsTextScalingNormal":
+            MessageLookupByLibrary.simpleMessage("Normal"),
+        "settingsTextScalingSmall":
+            MessageLookupByLibrary.simpleMessage("Small"),
+        "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
         "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app")
+            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+        "starterAppDescription":
+            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
+        "starterAppDrawerItem": m5,
+        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
+        "starterAppGenericButton":
+            MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "starterAppGenericHeadline":
+            MessageLookupByLibrary.simpleMessage("Headline"),
+        "starterAppGenericSubtitle":
+            MessageLookupByLibrary.simpleMessage("Subtitle"),
+        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
+        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
+        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
+        "starterAppTooltipFavorite":
+            MessageLookupByLibrary.simpleMessage("Favorite"),
+        "starterAppTooltipSearch":
+            MessageLookupByLibrary.simpleMessage("Search"),
+        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
       };
 }

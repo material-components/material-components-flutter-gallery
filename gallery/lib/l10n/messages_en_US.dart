@@ -19,16 +19,16 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en_US';
 
-  static m1(value) =>
+  static m0(value) =>
       "To see the source code for this app, please visit the ${value}.";
 
-  static m2(title) => "Placeholder for ${title} tab";
+  static m1(title) => "Placeholder for ${title} tab";
 
-  static m3(value) => "Item ${value}";
+  static m2(value) => "Item ${value}";
 
-  static m4(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
 
-  static m0(value) => "You selected: \"${value}\"";
+  static m4(value) => "You selected: \"${value}\"";
 
   static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
 
@@ -50,7 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
-        "aboutDialogDescription": m1,
+        "aboutDialogDescription": m0,
         "aboutFlutterSamplesRepo":
             MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
         "bottomNavigationAccountTab":
@@ -63,7 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Camera"),
         "bottomNavigationCommentsTab":
             MessageLookupByLibrary.simpleMessage("Comments"),
-        "bottomNavigationContentPlaceholder": m2,
+        "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Create"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("AMBER"),
@@ -133,7 +133,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoBottomSheetButtonText":
             MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
         "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
-        "demoBottomSheetItem": m3,
+        "demoBottomSheetItem": m2,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
             "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
         "demoBottomSheetModalTitle":
@@ -232,7 +232,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Life story"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
-        "demoTextFieldNameHasPhoneNumber": m4,
+        "demoTextFieldNameHasPhoneNumber": m3,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Name is required."),
         "demoTextFieldNoMoreThan":
@@ -293,7 +293,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Use Google\'s location service?"),
-        "dialogSelectedOption": m0,
+        "dialogSelectedOption": m4,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Set backup account"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("SHOW DIALOG"),
