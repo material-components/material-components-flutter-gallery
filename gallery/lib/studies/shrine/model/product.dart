@@ -42,26 +42,26 @@ class Product {
     @required this.category,
     @required this.id,
     @required this.isFeatured,
-    @required this.debuggingName,
+    @required this.internalName,
+    @required this.nameMaker,
     @required this.price,
-    @required this.internationalizedName,
   })  : assert(category != null),
         assert(id != null),
         assert(isFeatured != null),
-        assert(debuggingName != null),
-        assert(price != null),
-        assert(internationalizedName != null);
+        assert(internalName != null),
+        assert(nameMaker != null),
+        assert(price != null);
 
   final Category category;
   final int id;
   final bool isFeatured;
-  final String debuggingName;
+  final String internalName;
+  final String Function(BuildContext) nameMaker;
   final int price;
-  final String Function(BuildContext) internationalizedName;
 
   String get assetName => '$id-0.jpg';
   String get assetPackage => 'shrine_images';
 
   @override
-  String toString() => '$debuggingName (id=$id)';
+  String toString() => '$internalName (id=$id)';
 }

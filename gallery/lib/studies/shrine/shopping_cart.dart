@@ -261,7 +261,7 @@ class ShoppingCartRow extends StatelessWidget {
                               ],
                             ),
                             Text(
-                              product.internationalizedName(context),
+                              product.nameMaker(context),
                               style: localTheme.textTheme.subhead
                                   .copyWith(fontWeight: FontWeight.w600),
                             ),

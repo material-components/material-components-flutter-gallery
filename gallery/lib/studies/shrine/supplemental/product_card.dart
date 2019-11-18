@@ -106,7 +106,7 @@ Widget _buildProductCard({
                 children: [
                   const SizedBox(height: 23),
                   Text(
-                    product == null ? '' : product.internationalizedName(context),
+                    product == null ? '' : product.nameMaker(context),
                     style: theme.textTheme.button,
                     softWrap: true,
                     textAlign: TextAlign.center,
