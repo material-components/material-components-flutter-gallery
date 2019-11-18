@@ -16,6 +16,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:scoped_model/scoped_model.dart';
 
+import '../../../layout/adaptive.dart';
+
 import '../model/app_state_model.dart';
 import '../model/product.dart';
 
@@ -30,68 +32,10 @@ class MobileProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final NumberFormat formatter = NumberFormat.simpleCurrency(
-      decimalDigits: 0,
-      locale: Localizations.localeOf(context).toString(),
-    );
-
-    final ThemeData theme = Theme.of(context);
-
-    final Image imageWidget = Image.asset(
-      product.assetName,
-      package: product.assetPackage,
-      fit: BoxFit.cover,
-    );
-
-    return ScopedModelDescendant<AppStateModel>(
-      builder: (context, child, model) {
-        return GestureDetector(
-          onTap: () {
-            model.addProductToCart(product.id);
-          },
-          child: child,
-        );
-      },
-      child: Stack(
-        children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              AspectRatio(
-                aspectRatio: imageAspectRatio,
-                child: imageWidget,
-              ),
-              SizedBox(
-                height: textBoxHeight * MediaQuery.of(context).textScaleFactor,
-                width: 121,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      product == null ? '' : product.name,
-                      style: theme.textTheme.button,
-                      softWrap: false,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 1,
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      product == null ? '' : formatter.format(product.price),
-                      style: theme.textTheme.caption,
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          const Padding(
-            padding: EdgeInsets.all(16),
-            child: Icon(Icons.add_shopping_cart),
-          ),
-        ],
-      ),
+    return _buildProductCard(
+      context: context,
+      product: product,
+      imageAspectRatio: imageAspectRatio,
     );
   }
 }
@@ -102,69 +46,86 @@ class DesktopProductCard extends StatelessWidget {
   final Product product;
   final double imageWidth;
 
-  static const double textBoxHeight = 65;
-
   @override
   Widget build(BuildContext context) {
-    final NumberFormat formatter = NumberFormat.simpleCurrency(
-      decimalDigits: 0,
-      locale: Localizations.localeOf(context).toString(),
-    );
-
-    final ThemeData theme = Theme.of(context);
-
-    final Image imageWidget = Image.asset(
-      product.assetName,
-      package: product.assetPackage,
-      width: imageWidth,
-    );
-
-    return ScopedModelDescendant<AppStateModel>(
-      builder: (context, child, model) {
-        return GestureDetector(
-          onTap: () {
-            model.addProductToCart(product.id);
-          },
-          child: child,
-        );
-      },
-      child: Stack(
-        children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              imageWidget,
-              SizedBox(
-                height: textBoxHeight * MediaQuery.of(context).textScaleFactor,
-                width: 121,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      product.name,
-                      style: theme.textTheme.button,
-                      softWrap: false,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 1,
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      formatter.format(product.price),
-                      style: theme.textTheme.caption,
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          const Padding(
-            padding: EdgeInsets.all(16),
-            child: Icon(Icons.add_shopping_cart),
-          ),
-        ],
-      ),
+    return _buildProductCard(
+      context: context,
+      product: product,
+      imageWidth: imageWidth,
     );
   }
+}
+
+Widget _buildProductCard({
+  BuildContext context,
+  Product product,
+  double imageWidth,
+  double imageAspectRatio,
+}) {
+  final bool isDesktop = isDisplayDesktop(context);
+
+  final NumberFormat formatter = NumberFormat.simpleCurrency(
+    decimalDigits: 0,
+    locale: Localizations.localeOf(context).toString(),
+  );
+
+  final ThemeData theme = Theme.of(context);
+
+  final Image imageWidget = Image.asset(
+    product.assetName,
+    package: product.assetPackage,
+    fit: isDesktop ? null : BoxFit.cover,
+    width: isDesktop ? imageWidth : null,
+  );
+
+  return ScopedModelDescendant<AppStateModel>(
+    builder: (context, child, model) {
+      return GestureDetector(
+        onTap: () {
+          model.addProductToCart(product.id);
+        },
+        child: child,
+      );
+    },
+    child: Stack(
+      children: [
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            isDesktop
+                ? imageWidget
+                : AspectRatio(
+                    aspectRatio: imageAspectRatio,
+                    child: imageWidget,
+                  ),
+            SizedBox(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const SizedBox(height: 23),
+                  Text(
+                    product == null ? '' : product.name,
+                    style: theme.textTheme.button,
+                    softWrap: true,
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    product == null ? '' : formatter.format(product.price),
+                    style: theme.textTheme.caption,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+        const Padding(
+          padding: EdgeInsets.all(16),
+          child: Icon(Icons.add_shopping_cart),
+        ),
+      ],
+    ),
+  );
 }
