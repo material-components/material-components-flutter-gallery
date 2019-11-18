@@ -14,14 +14,17 @@
 
 import 'product.dart';
 
+import '../../../l10n/gallery_localizations.dart';
+
 class ProductsRepository {
   static List<Product> loadProducts(Category category) {
-    const List<Product> allProducts = [
+    List<Product> allProducts = [
       Product(
         category: Category.accessories,
         id: 0,
         isFeatured: true,
         name: 'Vagabond sack',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductVagabondSack,
         price: 120,
       ),
       Product(
