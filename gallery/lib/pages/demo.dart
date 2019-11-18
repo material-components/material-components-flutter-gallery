@@ -39,6 +39,14 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
     return widget.demo.configurations[_configIndex];
   }
 
+  @override
+  void initState() {
+    super.initState();
+    _state = widget.demo.configurations.length > 1
+        ? _DemoState.options
+        : _DemoState.normal;
+  }
+
   void _handleTap(_DemoState newState) {
     // Do not allow normal state for desktop.
     if (_state == newState && isDisplayDesktop(context)) {
