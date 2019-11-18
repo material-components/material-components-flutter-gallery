@@ -42,20 +42,20 @@ class Product {
     @required this.category,
     @required this.id,
     @required this.isFeatured,
-    @required this.name,
+    @required this.debuggingName,
     @required this.price,
     @required this.internationalizedName,
   })  : assert(category != null),
         assert(id != null),
         assert(isFeatured != null),
-        assert(name != null),
+        assert(debuggingName != null),
         assert(price != null),
         assert(internationalizedName != null);
 
   final Category category;
   final int id;
   final bool isFeatured;
-  final String name;
+  final String debuggingName;
   final int price;
   final String Function(BuildContext) internationalizedName;
 
@@ -63,5 +63,5 @@ class Product {
   String get assetPackage => 'shrine_images';
 
   @override
-  String toString() => '$name (id=$id)';
+  String toString() => '$debuggingName (id=$id)';
 }
