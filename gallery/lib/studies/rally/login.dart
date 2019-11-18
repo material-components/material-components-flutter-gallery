@@ -30,14 +30,9 @@ class _LoginPageState extends State<LoginPage> {
         ),
       ),
       body: SafeArea(
-        child: GestureDetector(
-          onTap: () {
-            Navigator.pop(context);
-          },
-          child: _MainView(
-            usernameController: _usernameController,
-            passwordController: _passwordController,
-          ),
+        child: _MainView(
+          usernameController: _usernameController,
+          passwordController: _passwordController,
         ),
       ),
     );
@@ -60,6 +55,10 @@ class _MainView extends StatelessWidget {
 
   final TextEditingController usernameController;
   final TextEditingController passwordController;
+
+  void _login(BuildContext context) {
+    Navigator.pop(context);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +89,11 @@ class _MainView extends StatelessWidget {
         _PasswordInput(
           passwordController: passwordController,
         ),
-        _ThumbButton(),
+        _ThumbButton(
+          onTap: () {
+            _login(context);
+          },
+        ),
       ];
     }
 
@@ -228,13 +231,27 @@ class _PasswordInput extends StatelessWidget {
 }
 
 class _ThumbButton extends StatelessWidget {
+  _ThumbButton({
+    @required this.onTap,
+  });
+
+  final VoidCallback onTap;
+
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 120,
-      child: Image.asset(
-        'thumb.png',
-        package: 'rally_assets',
+    return Semantics(
+      button: true,
+      enabled: true,
+      label: 'Login',
+      child: GestureDetector(
+        onTap: onTap,
+        child: SizedBox(
+          height: 120,
+          child: Image.asset(
+            'thumb.png',
+            package: 'rally_assets',
+          ),
+        ),
       ),
     );
   }
