@@ -20,8 +20,22 @@ test:
 build-web:
 	$(FLUTTER) build web
 
+.PHONY: fetch-master
+fetch-master:
+	$(shell git fetch origin master)
+
+.PHONY: master-branch-check
+master-branch-check: fetch-master
+  ifneq ($(shell git rev-parse --abbrev-ref HEAD),master)
+		$(error Not on master branch, please checkout master)
+  endif
+  ifneq ($(shell git rev-parse HEAD),$(shell git rev-parse origin/master))
+		$(error Your master branch is not up to date with origin/master, please pull before deploying)
+  endif
+
+
 .PHONY: deploy
-deploy: build-web
+deploy: master-branch-check build-web
 	firebase deploy
 
 .PHONY: gen-l10n
