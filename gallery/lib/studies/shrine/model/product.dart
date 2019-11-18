@@ -30,6 +30,13 @@ Category categoryAccessories = Category(internationalizedName: (context) => Gall
 Category categoryClothing = Category(internationalizedName: (context) => GalleryLocalizations.of(context).shrineCategoryNameClothing,);
 Category categoryHome = Category(internationalizedName: (context) => GalleryLocalizations.of(context).shrineCategoryNameHome,);
 
+List<Category> Categories = [
+  categoryAll,
+  categoryAccessories,
+  categoryClothing,
+  categoryHome,
+];
+
 class Product {
   const Product({
     @required this.category,

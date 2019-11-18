@@ -52,8 +52,7 @@ class CategoryMenuPage extends StatelessWidget {
   Widget _buildCategory(Category category, BuildContext context) {
     final bool isDesktop = isDisplayDesktop(context);
 
-    final String categoryString =
-        category.toString().replaceAll('Category.', '').toUpperCase();
+    final String categoryString = category.internationalizedName(context);
 
     final TextStyle selectedCategoryTextStyle = Theme.of(context)
         .textTheme
@@ -110,7 +109,7 @@ class CategoryMenuPage extends StatelessWidget {
                 style: Theme.of(context).textTheme.headline,
               ),
               const Spacer(),
-              for (var c in Category.values) _buildCategory(c, context),
+              for (var c in Categories) _buildCategory(c, context),
               _divider(),
               GestureDetector(
                 onTap: () {
@@ -138,7 +137,7 @@ class CategoryMenuPage extends StatelessWidget {
           color: shrinePink100,
           child: ListView(
             children: [
-              for (var c in Category.values) _buildCategory(c, context),
+              for (var c in Categories) _buildCategory(c, context),
               Center(
                 child: _divider(),
               ),
