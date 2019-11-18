@@ -19,9 +19,9 @@ import 'category_list_item.dart';
 import 'settings.dart';
 
 const _horizontalPadding = 32.0;
-const _carouselPadding = 8.0;
+const _carouselItemMargin = 8.0;
 const _horizontalDesktopPadding = 81.0;
-const _carouselHeight = 200.0 + 2 * _carouselPadding;
+const _carouselHeight = 200.0 + 2 * _carouselItemMargin;
 
 const String shrineTitle = 'Shrine';
 const String rallyTitle = 'Rally';
@@ -80,65 +80,62 @@ class HomePage extends StatelessWidget {
     ];
 
     if (isDisplayDesktop(context)) {
+      final desktopCategoryItems = <_DesktopCategoryItem>[
+        _DesktopCategoryItem(
+          title: homeCategoryMaterial,
+          imageString: 'assets/icons/material/material.png',
+          demos: materialDemos(context),
+        ),
+        _DesktopCategoryItem(
+          title: homeCategoryCupertino,
+          imageString: 'assets/icons/cupertino/cupertino.png',
+          demos: cupertinoDemos(context),
+        ),
+        _DesktopCategoryItem(
+          title: GalleryLocalizations.of(context).homeCategoryReference,
+          imageString: 'assets/icons/reference/reference.png',
+          demos: referenceDemos(context),
+        ),
+      ];
+
       return Scaffold(
-        body: Padding(
+        body: ListView(
           padding: EdgeInsets.symmetric(horizontal: _horizontalDesktopPadding),
-          child: ListView(
-            children: [
-              galleryHeader(),
-              Container(
-                height: _carouselHeight,
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    for (final _card in carouselCards) Flexible(child: _card),
-                  ],
-                ),
+          children: [
+            galleryHeader(),
+            Container(
+              height: _carouselHeight,
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: spaceBetween(30, carouselCards),
               ),
-              SizedBox(height: 32),
-              settingsHeader(),
-              Container(
-                height: 585,
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    _DesktopCategoryItem(
-                      title: homeCategoryMaterial,
-                      imageString: 'assets/icons/material/material.png',
-                      demos: materialDemos(context),
-                    ),
-                    _DesktopCategoryItem(
-                      title: homeCategoryCupertino,
-                      imageString: 'assets/icons/cupertino/cupertino.png',
-                      demos: cupertinoDemos(context),
-                    ),
-                    _DesktopCategoryItem(
-                      title: GalleryLocalizations.of(context)
-                          .homeCategoryReference,
-                      imageString: 'assets/icons/reference/reference.png',
-                      demos: referenceDemos(context),
-                    ),
-                  ],
-                ),
+            ),
+            SizedBox(height: 32),
+            settingsHeader(),
+            Container(
+              height: 585,
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: spaceBetween(28, desktopCategoryItems),
               ),
-              Container(
-                margin: const EdgeInsetsDirectional.only(
-                  bottom: 81,
-                  top: 109,
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    SettingsAbout(),
-                    SettingsFeedback(),
-                    SettingsAttribution(),
-                  ],
-                ),
+            ),
+            Container(
+              margin: const EdgeInsetsDirectional.only(
+                bottom: 81,
+                top: 109,
               ),
-            ],
-          ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  SettingsAbout(),
+                  SettingsFeedback(),
+                  Flexible(child: SettingsAttribution()),
+                ],
+              ),
+            ),
+          ],
         ),
       );
     } else {
@@ -177,6 +174,17 @@ class HomePage extends StatelessWidget {
     }
   }
 
+  List<Widget> spaceBetween(double paddingBetween, List<Widget> children) {
+    return [
+      for (int index = 0; index < children.length; index++) ...[
+        Flexible(
+          child: children[index],
+        ),
+        if (index < children.length - 1) SizedBox(width: paddingBetween),
+      ],
+    ];
+  }
+
   Widget header(BuildContext context, Color color, String text) {
     return Padding(
       padding: EdgeInsets.symmetric(
@@ -208,33 +216,29 @@ class _DesktopCategoryItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    return Flexible(
-      child: Container(
-        margin: EdgeInsets.all(_carouselPadding),
-        child: Material(
-          borderRadius: BorderRadius.circular(10),
-          color: colorScheme.surface,
-          child: Column(
-            children: [
-              _DesktopCategoryHeader(
-                title: title,
-                imageString: imageString,
-              ),
-              Flexible(
-                child: ListView(
-                  children: [
-                    const SizedBox(height: 27),
-                    for (GalleryDemo demo in demos)
-                      CategoryDemoItem(
-                        demo: demo,
-                      ),
-                    SizedBox(height: 27),
-                  ],
-                ),
-              ),
-            ],
+    return Material(
+      borderRadius: BorderRadius.circular(10),
+      clipBehavior: Clip.antiAlias,
+      color: colorScheme.surface,
+      child: Column(
+        children: [
+          _DesktopCategoryHeader(
+            title: title,
+            imageString: imageString,
           ),
-        ),
+          Flexible(
+            child: ListView(
+              children: [
+                const SizedBox(height: 27),
+                for (GalleryDemo demo in demos)
+                  CategoryDemoItem(
+                    demo: demo,
+                  ),
+                SizedBox(height: 27),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -303,7 +307,7 @@ class _CarouselState extends State<_Carousel> {
       // The viewPortFraction is calculated as the width of the device minus the
       // padding.
       final width = MediaQuery.of(context).size.width;
-      final padding = (_horizontalPadding * 2) - (_carouselPadding * 2);
+      final padding = (_horizontalPadding * 2) - (_carouselItemMargin * 2);
       _controller = PageController(
         initialPage: _currentPage,
         viewportFraction: (width - padding) / width,
@@ -387,7 +391,8 @@ class _CarouselCard extends StatelessWidget {
     final textColor = isDark ? Colors.white.withOpacity(0.87) : this.textColor;
 
     return Container(
-      margin: EdgeInsets.all(_carouselPadding),
+      margin:
+          EdgeInsets.all(isDisplayDesktop(context) ? 0 : _carouselItemMargin),
       child: Material(
         elevation: 4,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),

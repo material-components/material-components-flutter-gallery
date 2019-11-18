@@ -151,13 +151,16 @@ class SettingsAttribution extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 28),
+      padding: EdgeInsets.symmetric(
+          horizontal: isDisplayDesktop(context) ? 16 : 32, vertical: 28),
       child: Text(
         GalleryLocalizations.of(context).settingsAttribution,
         style: Theme.of(context).textTheme.body2.copyWith(
               fontSize: 12,
               color: Theme.of(context).colorScheme.onSecondary,
             ),
+        overflow: TextOverflow.ellipsis,
+        maxLines: 1,
       ),
     );
   }
@@ -178,7 +181,8 @@ class _SettingsLink extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 32),
+        padding: EdgeInsets.symmetric(
+            horizontal: isDisplayDesktop(context) ? 16 : 32),
         child: Row(
           children: [
             Icon(
