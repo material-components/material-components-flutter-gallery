@@ -32,6 +32,7 @@ class ProductsRepository {
         id: 1,
         isFeatured: true,
         name: 'Stella sunglasses',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductStellaSunglasses,
         price: 58,
       ),
       Product(
@@ -39,6 +40,7 @@ class ProductsRepository {
         id: 2,
         isFeatured: false,
         name: 'Whitney belt',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductWhitneyBelt,
         price: 35,
       ),
       Product(
@@ -46,6 +48,7 @@ class ProductsRepository {
         id: 3,
         isFeatured: true,
         name: 'Garden strand',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductGardenStrand,
         price: 98,
       ),
       Product(
@@ -53,6 +56,7 @@ class ProductsRepository {
         id: 4,
         isFeatured: false,
         name: 'Strut earrings',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductStrutEarrings,
         price: 34,
       ),
       Product(
@@ -60,6 +64,7 @@ class ProductsRepository {
         id: 5,
         isFeatured: false,
         name: 'Varsity socks',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductVarsitySocks,
         price: 12,
       ),
       Product(
@@ -67,6 +72,7 @@ class ProductsRepository {
         id: 6,
         isFeatured: false,
         name: 'Weave keyring',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductWeaveKeyring,
         price: 16,
       ),
       Product(
@@ -74,6 +80,7 @@ class ProductsRepository {
         id: 7,
         isFeatured: true,
         name: 'Gatsby hat',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductGatsbyHat,
         price: 40,
       ),
       Product(
@@ -81,6 +88,7 @@ class ProductsRepository {
         id: 8,
         isFeatured: true,
         name: 'Shrug bag',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductShrugBag,
         price: 198,
       ),
       Product(
@@ -88,6 +96,7 @@ class ProductsRepository {
         id: 9,
         isFeatured: true,
         name: 'Gilt desk trio',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductGiltDeskTrio,
         price: 58,
       ),
       Product(
@@ -95,6 +104,7 @@ class ProductsRepository {
         id: 10,
         isFeatured: false,
         name: 'Copper wire rack',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductCopperWireRack,
         price: 18,
       ),
       Product(
@@ -102,6 +112,7 @@ class ProductsRepository {
         id: 11,
         isFeatured: false,
         name: 'Soothe ceramic set',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductSootheCeramicSet,
         price: 28,
       ),
       Product(
@@ -109,6 +120,7 @@ class ProductsRepository {
         id: 12,
         isFeatured: false,
         name: 'Hurrahs tea set',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductHurrahsTeaSet,
         price: 34,
       ),
       Product(
@@ -116,6 +128,7 @@ class ProductsRepository {
         id: 13,
         isFeatured: true,
         name: 'Blue stone mug',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductBlueStoneMug,
         price: 18,
       ),
       Product(
@@ -123,6 +136,7 @@ class ProductsRepository {
         id: 14,
         isFeatured: true,
         name: 'Rainwater tray',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductRainwaterTray,
         price: 27,
       ),
       Product(
@@ -130,6 +144,7 @@ class ProductsRepository {
         id: 15,
         isFeatured: true,
         name: 'Chambray napkins',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductChambrayNapkins,
         price: 16,
       ),
       Product(
@@ -137,6 +152,7 @@ class ProductsRepository {
         id: 16,
         isFeatured: true,
         name: 'Succulent planters',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductSucculentPlanters,
         price: 16,
       ),
       Product(
@@ -144,6 +160,7 @@ class ProductsRepository {
         id: 17,
         isFeatured: false,
         name: 'Quartet table',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductQuartetTable,
         price: 175,
       ),
       Product(
@@ -151,6 +168,7 @@ class ProductsRepository {
         id: 18,
         isFeatured: true,
         name: 'Kitchen quattro',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductKitchenQuattro,
         price: 129,
       ),
       Product(
@@ -158,6 +176,7 @@ class ProductsRepository {
         id: 19,
         isFeatured: false,
         name: 'Clay sweater',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductClaySweater,
         price: 48,
       ),
       Product(
@@ -165,6 +184,7 @@ class ProductsRepository {
         id: 20,
         isFeatured: false,
         name: 'Sea tunic',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductSeaTunic,
         price: 45,
       ),
       Product(
@@ -172,6 +192,7 @@ class ProductsRepository {
         id: 21,
         isFeatured: false,
         name: 'Plaster tunic',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductPlasterTunic,
         price: 38,
       ),
       Product(
@@ -179,6 +200,7 @@ class ProductsRepository {
         id: 22,
         isFeatured: false,
         name: 'White pinstripe shirt',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductWhitePinstripeShirt,
         price: 70,
       ),
       Product(
@@ -186,6 +208,7 @@ class ProductsRepository {
         id: 23,
         isFeatured: false,
         name: 'Chambray shirt',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductChambrayShirt,
         price: 70,
       ),
       Product(
@@ -193,6 +216,7 @@ class ProductsRepository {
         id: 24,
         isFeatured: true,
         name: 'Seabreeze sweater',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductSeabreezeSweater,
         price: 60,
       ),
       Product(
@@ -200,6 +224,7 @@ class ProductsRepository {
         id: 25,
         isFeatured: false,
         name: 'Gentry jacket',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductGentryJacket,
         price: 178,
       ),
       Product(
@@ -207,6 +232,7 @@ class ProductsRepository {
         id: 26,
         isFeatured: false,
         name: 'Navy trousers',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductNavyTrousers,
         price: 74,
       ),
       Product(
@@ -214,6 +240,7 @@ class ProductsRepository {
         id: 27,
         isFeatured: true,
         name: 'Walter henley (white)',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductWalterHenleyWhite,
         price: 38,
       ),
       Product(
@@ -221,6 +248,7 @@ class ProductsRepository {
         id: 28,
         isFeatured: true,
         name: 'Surf and perf shirt',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductSurfAndPerfShirt,
         price: 48,
       ),
       Product(
@@ -228,6 +256,7 @@ class ProductsRepository {
         id: 29,
         isFeatured: true,
         name: 'Ginger scarf',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductGingerScarf,
         price: 98,
       ),
       Product(
@@ -235,6 +264,7 @@ class ProductsRepository {
         id: 30,
         isFeatured: true,
         name: 'Ramona crossover',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductRamonaCrossover,
         price: 68,
       ),
       Product(
@@ -242,6 +272,7 @@ class ProductsRepository {
         id: 31,
         isFeatured: false,
         name: 'Chambray shirt',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductChambrayShirt,
         price: 38,
       ),
       Product(
@@ -249,6 +280,7 @@ class ProductsRepository {
         id: 32,
         isFeatured: false,
         name: 'Classic white collar',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductClassicWhiteCollar,
         price: 58,
       ),
       Product(
@@ -256,6 +288,7 @@ class ProductsRepository {
         id: 33,
         isFeatured: true,
         name: 'Cerise scallop tee',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductCeriseScallopTee,
         price: 42,
       ),
       Product(
@@ -263,6 +296,7 @@ class ProductsRepository {
         id: 34,
         isFeatured: false,
         name: 'Shoulder rolls tee',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductShoulderRollsTee,
         price: 27,
       ),
       Product(
@@ -270,6 +304,7 @@ class ProductsRepository {
         id: 35,
         isFeatured: false,
         name: 'Grey slouch tank',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductGreySlouchTank,
         price: 24,
       ),
       Product(
@@ -277,6 +312,7 @@ class ProductsRepository {
         id: 36,
         isFeatured: false,
         name: 'Sunshirt dress',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductSunshirtDress,
         price: 58,
       ),
       Product(
@@ -284,6 +320,7 @@ class ProductsRepository {
         id: 37,
         isFeatured: true,
         name: 'Fine lines tee',
+        internationalizedName: (context) => GalleryLocalizations.of(context).shrineProductFineLinesTee,
         price: 58,
       ),
     ];
