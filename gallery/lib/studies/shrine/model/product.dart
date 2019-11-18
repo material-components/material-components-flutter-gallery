@@ -24,7 +24,11 @@ class Category {
   })  : assert(internalName != null),
         assert(nameMaker != null);
 
+  // An internal name for debugging purposes.
   final String internalName;
+
+  // A function taking a BuildContext as input and
+  // returns the internationalized name of the category.
   final String Function(BuildContext) nameMaker;
 
   @override
@@ -76,8 +80,14 @@ class Product {
   final Category category;
   final int id;
   final bool isFeatured;
+
+  // An internal name for debugging purposes.
   final String internalName;
+
+  // A function taking a BuildContext as input and
+  // returns the internationalized name of the product.
   final String Function(BuildContext) nameMaker;
+
   final int price;
 
   String get assetName => '$id-0.jpg';
