@@ -30,7 +30,13 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m0(value) => "You selected: \"${value}\"";
 
-  static m5(value) => "Item ${value}";
+  static m5(quantity) => "${quantity} ITEMS";
+
+  static m6(price) => "x ${price}";
+
+  static m7(quantity) => "Quantity: ${quantity}";
+
+  static m8(value) => "Item ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -320,11 +326,113 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Small"),
         "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
         "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+        "shrineCancelButtonCaption":
+            MessageLookupByLibrary.simpleMessage("CANCEL"),
+        "shrineCartClearButtonCaption":
+            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
+        "shrineCartItemCount": m5,
+        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+        "shrineCartShippingCaption":
+            MessageLookupByLibrary.simpleMessage("Shipping:"),
+        "shrineCartSubtotalCaption":
+            MessageLookupByLibrary.simpleMessage("Subtotal:"),
+        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
+        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+        "shrineCategoryNameAccessories":
+            MessageLookupByLibrary.simpleMessage("Accessories"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+        "shrineCategoryNameClothing":
+            MessageLookupByLibrary.simpleMessage("Clothing"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
         "shrineDescription":
             MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+        "shrineLoginPasswordLabel":
+            MessageLookupByLibrary.simpleMessage("Password"),
+        "shrineLoginUsernameLabel":
+            MessageLookupByLibrary.simpleMessage("Username"),
+        "shrineLogoutButtonCaption":
+            MessageLookupByLibrary.simpleMessage("LOGOUT"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
+        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+        "shrineProductBlueStoneMug":
+            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
+        "shrineProductCeriseScallopTee":
+            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+        "shrineProductChambrayNapkins":
+            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+        "shrineProductChambrayShirt":
+            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+        "shrineProductClassicWhiteCollar":
+            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+        "shrineProductClaySweater":
+            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+        "shrineProductCopperWireRack":
+            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+        "shrineProductFineLinesTee":
+            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+        "shrineProductGardenStrand":
+            MessageLookupByLibrary.simpleMessage("Garden strand"),
+        "shrineProductGatsbyHat":
+            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+        "shrineProductGentryJacket":
+            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
+        "shrineProductGiltDeskTrio":
+            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+        "shrineProductGingerScarf":
+            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+        "shrineProductGreySlouchTank":
+            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+        "shrineProductHurrahsTeaSet":
+            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+        "shrineProductKitchenQuattro":
+            MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
+        "shrineProductNavyTrousers":
+            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+        "shrineProductPlasterTunic":
+            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
+        "shrineProductPrice": m6,
+        "shrineProductQuantity": m7,
+        "shrineProductQuartetTable":
+            MessageLookupByLibrary.simpleMessage("Quartet table"),
+        "shrineProductRainwaterTray":
+            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+        "shrineProductRamonaCrossover":
+            MessageLookupByLibrary.simpleMessage("Ramona crossover"),
+        "shrineProductSeaTunic":
+            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+        "shrineProductSeabreezeSweater":
+            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
+        "shrineProductShoulderRollsTee":
+            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
+        "shrineProductShrugBag":
+            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+        "shrineProductSootheCeramicSet":
+            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
+        "shrineProductStellaSunglasses":
+            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+        "shrineProductStrutEarrings":
+            MessageLookupByLibrary.simpleMessage("Strut earrings"),
+        "shrineProductSucculentPlanters":
+            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+        "shrineProductSunshirtDress":
+            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+        "shrineProductSurfAndPerfShirt":
+            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+        "shrineProductVagabondSack":
+            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+        "shrineProductVarsitySocks":
+            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+        "shrineProductWalterHenleyWhite":
+            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+        "shrineProductWeaveKeyring":
+            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+        "shrineProductWhitePinstripeShirt":
+            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+        "shrineProductWhitneyBelt":
+            MessageLookupByLibrary.simpleMessage("Whitney belt"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m5,
+        "starterAppDrawerItem": m8,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("BUTTON"),

@@ -1466,11 +1466,418 @@ class GalleryLocalizations {
         desc: r'Title for the settings screen.');
   }
 
+  String get shrineCancelButtonCaption {
+    return Intl.message(r'CANCEL',
+        locale: _localeName,
+        name: 'shrineCancelButtonCaption',
+        desc:
+            r'On the login screen, the caption for a button to cancel login.');
+  }
+
+  String get shrineCartClearButtonCaption {
+    return Intl.message(r'CLEAR CART',
+        locale: _localeName,
+        name: 'shrineCartClearButtonCaption',
+        desc: r'Caption for a button used to clear the cart.');
+  }
+
+  String shrineCartItemCount(Object quantity) {
+    return Intl.message(r'$quantity ITEMS',
+        locale: _localeName,
+        name: 'shrineCartItemCount',
+        desc: r'A text showing the total number of items in the cart.',
+        args: <Object>[quantity]);
+  }
+
+  String get shrineCartPageCaption {
+    return Intl.message(r'CART',
+        locale: _localeName,
+        name: 'shrineCartPageCaption',
+        desc: r'Caption for a shopping cart page.');
+  }
+
+  String get shrineCartShippingCaption {
+    return Intl.message(r'Shipping:',
+        locale: _localeName,
+        name: 'shrineCartShippingCaption',
+        desc:
+            r'Label for a text showing the shipping cost for the items in the cart.');
+  }
+
+  String get shrineCartSubtotalCaption {
+    return Intl.message(r'Subtotal:',
+        locale: _localeName,
+        name: 'shrineCartSubtotalCaption',
+        desc:
+            r'Label for a text showing the subtotal price of the items in the cart (excluding shipping and tax).');
+  }
+
+  String get shrineCartTaxCaption {
+    return Intl.message(r'Tax:',
+        locale: _localeName,
+        name: 'shrineCartTaxCaption',
+        desc: r'Label for a text showing the tax for the items in the cart.');
+  }
+
+  String get shrineCartTotalCaption {
+    return Intl.message(r'TOTAL',
+        locale: _localeName,
+        name: 'shrineCartTotalCaption',
+        desc:
+            r'Label for a text showing total price of the items in the cart.');
+  }
+
+  String get shrineCategoryNameAccessories {
+    return Intl.message(r'Accessories',
+        locale: _localeName,
+        name: 'shrineCategoryNameAccessories',
+        desc:
+            r'A category of products consisting of accessories (clothing items).');
+  }
+
+  String get shrineCategoryNameAll {
+    return Intl.message(r'All',
+        locale: _localeName,
+        name: 'shrineCategoryNameAll',
+        desc: r'A tab showing products from all categories.');
+  }
+
+  String get shrineCategoryNameClothing {
+    return Intl.message(r'Clothing',
+        locale: _localeName,
+        name: 'shrineCategoryNameClothing',
+        desc: r'A category of products consisting of clothing.');
+  }
+
+  String get shrineCategoryNameHome {
+    return Intl.message(r'Home',
+        locale: _localeName,
+        name: 'shrineCategoryNameHome',
+        desc: r'A category of products consisting of items used at home.');
+  }
+
   String get shrineDescription {
     return Intl.message(r'A fashionable retail app',
         locale: _localeName,
         name: 'shrineDescription',
         desc: r'Study description for Shrine.');
+  }
+
+  String get shrineLoginPasswordLabel {
+    return Intl.message(r'Password',
+        locale: _localeName,
+        name: 'shrineLoginPasswordLabel',
+        desc:
+            r'On the login screen, a label for a textfield for the user to input their password.');
+  }
+
+  String get shrineLoginUsernameLabel {
+    return Intl.message(r'Username',
+        locale: _localeName,
+        name: 'shrineLoginUsernameLabel',
+        desc:
+            r'On the login screen, a label for a textfield for the user to input their username.');
+  }
+
+  String get shrineLogoutButtonCaption {
+    return Intl.message(r'LOGOUT',
+        locale: _localeName,
+        name: 'shrineLogoutButtonCaption',
+        desc: r'Label for a logout button.');
+  }
+
+  String get shrineMenuCaption {
+    return Intl.message(r'MENU',
+        locale: _localeName,
+        name: 'shrineMenuCaption',
+        desc: r'Caption for a menu page.');
+  }
+
+  String get shrineNextButtonCaption {
+    return Intl.message(r'NEXT',
+        locale: _localeName,
+        name: 'shrineNextButtonCaption',
+        desc:
+            r'On the login screen, the caption for a button to proceed login.');
+  }
+
+  String get shrineProductBlueStoneMug {
+    return Intl.message(r'Blue stone mug',
+        locale: _localeName,
+        name: 'shrineProductBlueStoneMug',
+        desc: r'Name of the product ' "'" r'Blue stone mug' "'" r'.');
+  }
+
+  String get shrineProductCeriseScallopTee {
+    return Intl.message(r'Cerise scallop tee',
+        locale: _localeName,
+        name: 'shrineProductCeriseScallopTee',
+        desc: r'Name of the product ' "'" r'Cerise scallop tee' "'" r'.');
+  }
+
+  String get shrineProductChambrayNapkins {
+    return Intl.message(r'Chambray napkins',
+        locale: _localeName,
+        name: 'shrineProductChambrayNapkins',
+        desc: r'Name of the product ' "'" r'Chambray napkins' "'" r'.');
+  }
+
+  String get shrineProductChambrayShirt {
+    return Intl.message(r'Chambray shirt',
+        locale: _localeName,
+        name: 'shrineProductChambrayShirt',
+        desc: r'Name of the product ' "'" r'Chambray shirt' "'" r'.');
+  }
+
+  String get shrineProductClassicWhiteCollar {
+    return Intl.message(r'Classic white collar',
+        locale: _localeName,
+        name: 'shrineProductClassicWhiteCollar',
+        desc: r'Name of the product ' "'" r'Classic white collar' "'" r'.');
+  }
+
+  String get shrineProductClaySweater {
+    return Intl.message(r'Clay sweater',
+        locale: _localeName,
+        name: 'shrineProductClaySweater',
+        desc: r'Name of the product ' "'" r'Clay sweater' "'" r'.');
+  }
+
+  String get shrineProductCopperWireRack {
+    return Intl.message(r'Copper wire rack',
+        locale: _localeName,
+        name: 'shrineProductCopperWireRack',
+        desc: r'Name of the product ' "'" r'Copper wire rack' "'" r'.');
+  }
+
+  String get shrineProductFineLinesTee {
+    return Intl.message(r'Fine lines tee',
+        locale: _localeName,
+        name: 'shrineProductFineLinesTee',
+        desc: r'Name of the product ' "'" r'Fine lines tee' "'" r'.');
+  }
+
+  String get shrineProductGardenStrand {
+    return Intl.message(r'Garden strand',
+        locale: _localeName,
+        name: 'shrineProductGardenStrand',
+        desc: r'Name of the product ' "'" r'Garden strand' "'" r'.');
+  }
+
+  String get shrineProductGatsbyHat {
+    return Intl.message(r'Gatsby hat',
+        locale: _localeName,
+        name: 'shrineProductGatsbyHat',
+        desc: r'Name of the product ' "'" r'Gatsby hat' "'" r'.');
+  }
+
+  String get shrineProductGentryJacket {
+    return Intl.message(r'Gentry jacket',
+        locale: _localeName,
+        name: 'shrineProductGentryJacket',
+        desc: r'Name of the product ' "'" r'Gentry jacket' "'" r'.');
+  }
+
+  String get shrineProductGiltDeskTrio {
+    return Intl.message(r'Gilt desk trio',
+        locale: _localeName,
+        name: 'shrineProductGiltDeskTrio',
+        desc: r'Name of the product ' "'" r'Gilt desk trio' "'" r'.');
+  }
+
+  String get shrineProductGingerScarf {
+    return Intl.message(r'Ginger scarf',
+        locale: _localeName,
+        name: 'shrineProductGingerScarf',
+        desc: r'Name of the product ' "'" r'Ginger scarf' "'" r'.');
+  }
+
+  String get shrineProductGreySlouchTank {
+    return Intl.message(r'Grey slouch tank',
+        locale: _localeName,
+        name: 'shrineProductGreySlouchTank',
+        desc: r'Name of the product ' "'" r'Grey slouch tank' "'" r'.');
+  }
+
+  String get shrineProductHurrahsTeaSet {
+    return Intl.message(r'Hurrahs tea set',
+        locale: _localeName,
+        name: 'shrineProductHurrahsTeaSet',
+        desc: r'Name of the product ' "'" r'Hurrahs tea set' "'" r'.');
+  }
+
+  String get shrineProductKitchenQuattro {
+    return Intl.message(r'Kitchen quattro',
+        locale: _localeName,
+        name: 'shrineProductKitchenQuattro',
+        desc: r'Name of the product ' "'" r'Kitchen quattro' "'" r'.');
+  }
+
+  String get shrineProductNavyTrousers {
+    return Intl.message(r'Navy trousers',
+        locale: _localeName,
+        name: 'shrineProductNavyTrousers',
+        desc: r'Name of the product ' "'" r'Navy trousers' "'" r'.');
+  }
+
+  String get shrineProductPlasterTunic {
+    return Intl.message(r'Plaster tunic',
+        locale: _localeName,
+        name: 'shrineProductPlasterTunic',
+        desc: r'Name of the product ' "'" r'Plaster tunic' "'" r'.');
+  }
+
+  String shrineProductPrice(Object price) {
+    return Intl.message(r'x $price',
+        locale: _localeName,
+        name: 'shrineProductPrice',
+        desc: r'A text showing the unit price of each product. Used as: '
+            "'"
+            r'Quantity: 3 x $129'
+            "'"
+            r'. The currency will be handled by the formatter.',
+        args: <Object>[price]);
+  }
+
+  String shrineProductQuantity(Object quantity) {
+    return Intl.message(r'Quantity: $quantity',
+        locale: _localeName,
+        name: 'shrineProductQuantity',
+        desc: r'A text showing the number of items for a specific product.',
+        args: <Object>[quantity]);
+  }
+
+  String get shrineProductQuartetTable {
+    return Intl.message(r'Quartet table',
+        locale: _localeName,
+        name: 'shrineProductQuartetTable',
+        desc: r'Name of the product ' "'" r'Quartet table' "'" r'.');
+  }
+
+  String get shrineProductRainwaterTray {
+    return Intl.message(r'Rainwater tray',
+        locale: _localeName,
+        name: 'shrineProductRainwaterTray',
+        desc: r'Name of the product ' "'" r'Rainwater tray' "'" r'.');
+  }
+
+  String get shrineProductRamonaCrossover {
+    return Intl.message(r'Ramona crossover',
+        locale: _localeName,
+        name: 'shrineProductRamonaCrossover',
+        desc: r'Name of the product ' "'" r'Ramona crossover' "'" r'.');
+  }
+
+  String get shrineProductSeaTunic {
+    return Intl.message(r'Sea tunic',
+        locale: _localeName,
+        name: 'shrineProductSeaTunic',
+        desc: r'Name of the product ' "'" r'Sea tunic' "'" r'.');
+  }
+
+  String get shrineProductSeabreezeSweater {
+    return Intl.message(r'Seabreeze sweater',
+        locale: _localeName,
+        name: 'shrineProductSeabreezeSweater',
+        desc: r'Name of the product ' "'" r'Seabreeze sweater' "'" r'.');
+  }
+
+  String get shrineProductShoulderRollsTee {
+    return Intl.message(r'Shoulder rolls tee',
+        locale: _localeName,
+        name: 'shrineProductShoulderRollsTee',
+        desc: r'Name of the product ' "'" r'Shoulder rolls tee' "'" r'.');
+  }
+
+  String get shrineProductShrugBag {
+    return Intl.message(r'Shrug bag',
+        locale: _localeName,
+        name: 'shrineProductShrugBag',
+        desc: r'Name of the product ' "'" r'Shrug bag' "'" r'.');
+  }
+
+  String get shrineProductSootheCeramicSet {
+    return Intl.message(r'Soothe ceramic set',
+        locale: _localeName,
+        name: 'shrineProductSootheCeramicSet',
+        desc: r'Name of the product ' "'" r'Soothe ceramic set' "'" r'.');
+  }
+
+  String get shrineProductStellaSunglasses {
+    return Intl.message(r'Stella sunglasses',
+        locale: _localeName,
+        name: 'shrineProductStellaSunglasses',
+        desc: r'Name of the product ' "'" r'Stella sunglasses' "'" r'.');
+  }
+
+  String get shrineProductStrutEarrings {
+    return Intl.message(r'Strut earrings',
+        locale: _localeName,
+        name: 'shrineProductStrutEarrings',
+        desc: r'Name of the product ' "'" r'Strut earrings' "'" r'.');
+  }
+
+  String get shrineProductSucculentPlanters {
+    return Intl.message(r'Succulent planters',
+        locale: _localeName,
+        name: 'shrineProductSucculentPlanters',
+        desc: r'Name of the product ' "'" r'Succulent planters' "'" r'.');
+  }
+
+  String get shrineProductSunshirtDress {
+    return Intl.message(r'Sunshirt dress',
+        locale: _localeName,
+        name: 'shrineProductSunshirtDress',
+        desc: r'Name of the product ' "'" r'Sunshirt dress' "'" r'.');
+  }
+
+  String get shrineProductSurfAndPerfShirt {
+    return Intl.message(r'Surf and perf shirt',
+        locale: _localeName,
+        name: 'shrineProductSurfAndPerfShirt',
+        desc: r'Name of the product ' "'" r'Surf and perf shirt' "'" r'.');
+  }
+
+  String get shrineProductVagabondSack {
+    return Intl.message(r'Vagabond sack',
+        locale: _localeName,
+        name: 'shrineProductVagabondSack',
+        desc: r'Name of the product ' "'" r'Vagabond sack' "'" r'.');
+  }
+
+  String get shrineProductVarsitySocks {
+    return Intl.message(r'Varsity socks',
+        locale: _localeName,
+        name: 'shrineProductVarsitySocks',
+        desc: r'Name of the product ' "'" r'Varsity socks' "'" r'.');
+  }
+
+  String get shrineProductWalterHenleyWhite {
+    return Intl.message(r'Walter henley (white)',
+        locale: _localeName,
+        name: 'shrineProductWalterHenleyWhite',
+        desc: r'Name of the product ' "'" r'Walter henley (white)' "'" r'.');
+  }
+
+  String get shrineProductWeaveKeyring {
+    return Intl.message(r'Weave keyring',
+        locale: _localeName,
+        name: 'shrineProductWeaveKeyring',
+        desc: r'Name of the product ' "'" r'Weave keyring' "'" r'.');
+  }
+
+  String get shrineProductWhitePinstripeShirt {
+    return Intl.message(r'White pinstripe shirt',
+        locale: _localeName,
+        name: 'shrineProductWhitePinstripeShirt',
+        desc: r'Name of the product ' "'" r'White pinstripe shirt' "'" r'.');
+  }
+
+  String get shrineProductWhitneyBelt {
+    return Intl.message(r'Whitney belt',
+        locale: _localeName,
+        name: 'shrineProductWhitneyBelt',
+        desc: r'Name of the product ' "'" r'Whitney belt' "'" r'.');
   }
 
   String get starterAppDescription {
