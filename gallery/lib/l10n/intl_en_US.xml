@@ -30,6 +30,202 @@
     description="Study description for Rally."
     >A personal finance app</string>
   <string
+    name="rallyAccountDataChecking"
+    description="Name for account made up by user."
+    >Checking</string>
+  <string
+    name="rallyAccountDataHomeSavings"
+    description="Name for account made up by user."
+    >Home Savings</string>
+  <string
+    name="rallyAccountDataCarSavings"
+    description="Name for account made up by user."
+    >Car Savings</string>
+  <string
+    name="rallyAccountDataVacation"
+    description="Name for account made up by user."
+    >Vacation</string>
+  <string
+    name="rallyAccountDetailDataAnnualPercentageYield"
+    description="Title for account statistics. Below a percentage such as 0.10% will be displayed."
+    >Annual Percentage Yield</string>
+  <string
+    name="rallyAccountDetailDataInterestRate"
+    description="Title for account statistics. Below a dollar amount such as $100 will be displayed."
+    >Interest Rate</string>
+  <string
+    name="rallyAccountDetailDataInterestYtd"
+    description="Title for account statistics. Below a dollar amount such as $100 will be displayed."
+    >Interest YTD</string>
+  <string
+    name="rallyAccountDetailDataInterestPaidLastYear"
+    description="Title for account statistics. Below a dollar amount such as $100 will be displayed."
+    >Interest Paid Last Year</string>
+  <string
+    name="rallyAccountDetailDataNextStatement"
+    description="Title for an account detail. Below a date for when the next account statement is released."
+    >Next Statement</string>
+  <string
+    name="rallyAccountDetailDataAccountOwner"
+    description="Title for an account detail. Below the name of the account owner will be displayed."
+    >Account Owner</string>
+  <string
+    name="rallyBudgetCategoryCoffeeShops"
+    description="Category for budget, to sort expenses / bills in."
+    >Coffee Shops</string>
+  <string
+    name="rallyBudgetCategoryGroceries"
+    description="Category for budget, to sort expenses / bills in."
+    >Groceries</string>
+  <string
+    name="rallyBudgetCategoryRestaurants"
+    description="Category for budget, to sort expenses / bills in."
+    >Restaurants</string>
+  <string
+    name="rallyBudgetCategoryClothing"
+    description="Category for budget, to sort expenses / bills in."
+    >Clothing</string>
+  <string
+    name="rallySettingsManageAccounts"
+    description="Link to go to the page &apos;Manage Accounts."
+    >Manage Accounts</string>
+  <string
+    name="rallySettingsTaxDocuments"
+    description="Link to go to the page &apos;Tax Documents&apos;."
+    >Tax Documents</string>
+  <string
+    name="rallySettingsPasscodeAndTouchId"
+    description="Link to go to the page &apos;Passcode and Touch ID&apos;."
+    >Passcode and Touch ID</string>
+  <string
+    name="rallySettingsNotifications"
+    description="Link to go to the page &apos;Notifications&apos;."
+    >Notifications</string>
+  <string
+    name="rallySettingsPersonalInformation"
+    description="Link to go to the page &apos;Personal Information&apos;."
+    >Personal Information</string>
+  <string
+    name="rallySettingsPaperlessSettings"
+    description="Link to go to the page &apos;Paperless Settings&apos;."
+    >Paperless Settings</string>
+  <string
+    name="rallySettingsFindAtms"
+    description="Link to go to the page &apos;Find ATMs&apos;."
+    >Find ATMs</string>
+  <string
+    name="rallySettingsHelp"
+    description="Link to go to the page &apos;Help&apos;."
+    >Help</string>
+  <string
+    name="rallySettingsSignOut"
+    description="Link to go to the page &apos;Sign out&apos;."
+    >Sign out</string>
+  <string
+    name="rallyAccountTotal"
+    description="Title for &apos;total account value&apos; overview page, a dollar value is displayed next to it."
+    >Total</string>
+  <string
+    name="rallyBillsDue"
+    description="Title for &apos;bills due&apos; page, a dollar value is displayed next to it."
+    >Due</string>
+  <string
+    name="rallyBudgetLeft"
+    description="Title for &apos;budget left&apos; page, a dollar value is displayed next to it."
+    >Left</string>
+  <string
+    name="rallyAccounts"
+    description="Link text for accounts page."
+    >Accounts</string>
+  <string
+    name="rallyBills"
+    description="Link text for bills page."
+    >Bills</string>
+  <string
+    name="rallyBudgets"
+    description="Link text for budgets page."
+    >Budgets</string>
+  <string
+    name="rallyAlerts"
+    description="Title for alerts part of overview page."
+    >Alerts</string>
+  <string
+    name="rallySeeAll"
+    description="Link text for button to see all data for category."
+    >SEE ALL</string>
+  <string
+    name="rallyFinanceLeft"
+    description="Displayed as &apos;dollar amount left&apos;, for example $46.70 LEFT, for a budget category."
+    > LEFT</string>
+  <string
+    name="rallyTitleOverview"
+    description="The navigation link to the overview page."
+    >OVERVIEW</string>
+  <string
+    name="rallyTitleAccounts"
+    description="The navigation link to the accounts page."
+    >ACCOUNTS</string>
+  <string
+    name="rallyTitleBills"
+    description="The navigation link to the bills page."
+    >BILLS</string>
+  <string
+    name="rallyTitleBudgets"
+    description="The navigation link to the budgets page."
+    >BUDGETS</string>
+  <string
+    name="rallyTitleSettings"
+    description="The navigation link to the settings page."
+    >SETTINGS</string>
+  <string
+    name="rallyLoginLoginToRally"
+    description="Title for login page for the Rally app (Rally does not need to be translated as it is a product name)."
+    >Login to Rally</string>
+  <string
+    name="rallyLoginNoAccount"
+    description="Prompt for signing up for an account."
+    >Don&apos;t have an account?</string>
+  <string
+    name="rallyLoginSignUp"
+    description="Button text to sign up for an account."
+    >SIGN UP</string>
+  <string
+    name="rallyLoginUsername"
+    description="The username field in an login form."
+    >Username</string>
+  <string
+    name="rallyLoginPassword"
+    description="The password field in an login form."
+    >Password</string>
+  <string
+    name="rallyLoginLabelLogin"
+    description="The label text to login."
+    >Login</string>
+  <string
+    name="rallyLoginRememberMe"
+    description="Text if the user wants to stay logged in."
+    >Remember Me</string>
+  <string
+    name="rallyLoginButtonLogin"
+    description="Text for login button."
+    >LOGIN</string>
+  <string
+    name="rallyAlertsMessageHeadsUpShopping"
+    description="Alert message shown when for example, user has used more than 90% of their shopping budget."
+    >Heads up, you’ve used up {percent} of your Shopping budget for this month.</string>
+  <string
+    name="rallyAlertsMessageSpentOnRestaurants"
+    description="Alert message shown when for example, user has spent $120 on Restaurants this week."
+    >You’ve spent {amount} on Restaurants this week.</string>
+  <string
+    name="rallyAlertsMessageATMFees"
+    description="Alert message shown when for example, the user has spent $24 in ATM fees this month."
+    >You’ve spent {amount} in ATM fees this month</string>
+  <string
+    name="rallyAlertsMessageCheckingAccount"
+    description="Alert message shown when for example, the checking account is 1% higher than last month."
+    >Good work! Your checking account is {percent} higher than last month.</string>
+  <string
     name="craneDescription"
     description="Study description for Crane."
     >A personalized travel app</string>

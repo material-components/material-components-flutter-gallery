@@ -4,6 +4,7 @@
 
 import 'package:intl/intl.dart';
 
+// TODO: Localize date and number formats.
 NumberFormat usdFormat = NumberFormat.currency(name: '');
 NumberFormat usdWithSignFormat = NumberFormat.currency(name: '\$');
 DateFormat dateFormat = DateFormat('MM-dd-yy');

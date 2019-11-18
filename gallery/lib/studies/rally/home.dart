@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 
+import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/rally/tabs/accounts.dart';
 import 'package:gallery/studies/rally/tabs/bills.dart';
@@ -46,6 +47,12 @@ class _HomePageState extends State<HomePage>
     final isDesktop = isDisplayDesktop(context);
     Widget tabBarView;
     if (isDesktop) {
+      final isTextDirectionRtl =
+          Directionality.of(context) == TextDirection.rtl;
+      final verticalRotation =
+          isTextDirectionRtl ? turnsToRotateLeft : turnsToRotateRight;
+      final revertVerticalRotation =
+          isTextDirectionRtl ? turnsToRotateRight : turnsToRotateLeft;
       tabBarView = Row(
         children: [
           Container(
@@ -65,13 +72,15 @@ class _HomePageState extends State<HomePage>
                 const SizedBox(height: 24),
                 // Rotate the tab bar, so the animation is vertical for desktops.
                 RotatedBox(
-                  quarterTurns: turnsToRotateRight,
+                  quarterTurns: verticalRotation,
                   child: _RallyTabBar(
-                    tabs: _buildTabs(theme: theme, isVertical: true).map(
+                    tabs: _buildTabs(
+                            context: context, theme: theme, isVertical: true)
+                        .map(
                       (widget) {
                         // Revert the rotation on the tabs.
                         return RotatedBox(
-                          quarterTurns: turnsToRotateLeft,
+                          quarterTurns: revertVerticalRotation,
                           child: widget,
                         );
                       },
@@ -85,14 +94,14 @@ class _HomePageState extends State<HomePage>
           Expanded(
             // Rotate the tab views so we can swipe up and down.
             child: RotatedBox(
-              quarterTurns: turnsToRotateRight,
+              quarterTurns: verticalRotation,
               child: TabBarView(
                 controller: _tabController,
                 children: _buildTabViews().map(
                   (widget) {
                     // Revert the rotation on the tab views.
                     return RotatedBox(
-                      quarterTurns: turnsToRotateLeft,
+                      quarterTurns: revertVerticalRotation,
                       child: widget,
                     );
                   },
@@ -106,7 +115,7 @@ class _HomePageState extends State<HomePage>
       tabBarView = Column(
         children: [
           _RallyTabBar(
-            tabs: _buildTabs(theme: theme),
+            tabs: _buildTabs(context: context, theme: theme),
             tabController: _tabController,
           ),
           Expanded(
@@ -138,17 +147,49 @@ class _HomePageState extends State<HomePage>
     );
   }
 
-  List<Widget> _buildTabs({ThemeData theme, bool isVertical = false}) {
+  List<Widget> _buildTabs(
+      {BuildContext context, ThemeData theme, bool isVertical = false}) {
     return [
       _RallyTab(
-          theme, Icons.pie_chart, 'OVERVIEW', 0, _tabController, isVertical),
+        theme: theme,
+        iconData: Icons.pie_chart,
+        title: GalleryLocalizations.of(context).rallyTitleOverview,
+        tabIndex: 0,
+        tabController: _tabController,
+        isVertical: isVertical,
+      ),
       _RallyTab(
-          theme, Icons.attach_money, 'ACCOUNTS', 1, _tabController, isVertical),
-      _RallyTab(theme, Icons.money_off, 'BILLS', 2, _tabController, isVertical),
+        theme: theme,
+        iconData: Icons.attach_money,
+        title: GalleryLocalizations.of(context).rallyTitleAccounts,
+        tabIndex: 1,
+        tabController: _tabController,
+        isVertical: isVertical,
+      ),
       _RallyTab(
-          theme, Icons.table_chart, 'BUDGETS', 3, _tabController, isVertical),
+        theme: theme,
+        iconData: Icons.money_off,
+        title: GalleryLocalizations.of(context).rallyTitleBills,
+        tabIndex: 2,
+        tabController: _tabController,
+        isVertical: isVertical,
+      ),
       _RallyTab(
-          theme, Icons.settings, 'SETTINGS', 4, _tabController, isVertical),
+        theme: theme,
+        iconData: Icons.table_chart,
+        title: GalleryLocalizations.of(context).rallyTitleBudgets,
+        tabIndex: 3,
+        tabController: _tabController,
+        isVertical: isVertical,
+      ),
+      _RallyTab(
+        theme: theme,
+        iconData: Icons.settings,
+        title: GalleryLocalizations.of(context).rallyTitleSettings,
+        tabIndex: 4,
+        tabController: _tabController,
+        isVertical: isVertical,
+      ),
     ];
   }
 
@@ -187,14 +228,14 @@ class _RallyTabBar extends StatelessWidget {
 }
 
 class _RallyTab extends StatefulWidget {
-  _RallyTab(
+  _RallyTab({
     ThemeData theme,
     IconData iconData,
     String title,
     int tabIndex,
     TabController tabController,
     this.isVertical,
-  )   : titleText = Text(title, style: theme.textTheme.button),
+  })  : titleText = Text(title, style: theme.textTheme.button),
         isExpanded = tabController.index == tabIndex,
         icon = Icon(iconData);
 

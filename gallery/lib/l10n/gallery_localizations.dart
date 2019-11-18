@@ -1311,11 +1311,386 @@ class GalleryLocalizations {
         desc: r'Header title on home screen for Gallery section.');
   }
 
+  String get rallyAccountDataCarSavings {
+    return Intl.message(r'Car Savings',
+        locale: _localeName,
+        name: 'rallyAccountDataCarSavings',
+        desc: r'Name for account made up by user.');
+  }
+
+  String get rallyAccountDataChecking {
+    return Intl.message(r'Checking',
+        locale: _localeName,
+        name: 'rallyAccountDataChecking',
+        desc: r'Name for account made up by user.');
+  }
+
+  String get rallyAccountDataHomeSavings {
+    return Intl.message(r'Home Savings',
+        locale: _localeName,
+        name: 'rallyAccountDataHomeSavings',
+        desc: r'Name for account made up by user.');
+  }
+
+  String get rallyAccountDataVacation {
+    return Intl.message(r'Vacation',
+        locale: _localeName,
+        name: 'rallyAccountDataVacation',
+        desc: r'Name for account made up by user.');
+  }
+
+  String get rallyAccountDetailDataAccountOwner {
+    return Intl.message(r'Account Owner',
+        locale: _localeName,
+        name: 'rallyAccountDetailDataAccountOwner',
+        desc:
+            r'Title for an account detail. Below the name of the account owner will be displayed.');
+  }
+
+  String get rallyAccountDetailDataAnnualPercentageYield {
+    return Intl.message(r'Annual Percentage Yield',
+        locale: _localeName,
+        name: 'rallyAccountDetailDataAnnualPercentageYield',
+        desc:
+            r'Title for account statistics. Below a percentage such as 0.10% will be displayed.');
+  }
+
+  String get rallyAccountDetailDataInterestPaidLastYear {
+    return Intl.message(r'Interest Paid Last Year',
+        locale: _localeName,
+        name: 'rallyAccountDetailDataInterestPaidLastYear',
+        desc:
+            r'Title for account statistics. Below a dollar amount such as $100 will be displayed.');
+  }
+
+  String get rallyAccountDetailDataInterestRate {
+    return Intl.message(r'Interest Rate',
+        locale: _localeName,
+        name: 'rallyAccountDetailDataInterestRate',
+        desc:
+            r'Title for account statistics. Below a dollar amount such as $100 will be displayed.');
+  }
+
+  String get rallyAccountDetailDataInterestYtd {
+    return Intl.message(r'Interest YTD',
+        locale: _localeName,
+        name: 'rallyAccountDetailDataInterestYtd',
+        desc:
+            r'Title for account statistics. Below a dollar amount such as $100 will be displayed.');
+  }
+
+  String get rallyAccountDetailDataNextStatement {
+    return Intl.message(r'Next Statement',
+        locale: _localeName,
+        name: 'rallyAccountDetailDataNextStatement',
+        desc:
+            r'Title for an account detail. Below a date for when the next account statement is released.');
+  }
+
+  String get rallyAccountTotal {
+    return Intl.message(r'Total',
+        locale: _localeName,
+        name: 'rallyAccountTotal',
+        desc: r'Title for '
+            "'"
+            r'total account value'
+            "'"
+            r' overview page, a dollar value is displayed next to it.');
+  }
+
+  String get rallyAccounts {
+    return Intl.message(r'Accounts',
+        locale: _localeName,
+        name: 'rallyAccounts',
+        desc: r'Link text for accounts page.');
+  }
+
+  String get rallyAlerts {
+    return Intl.message(r'Alerts',
+        locale: _localeName,
+        name: 'rallyAlerts',
+        desc: r'Title for alerts part of overview page.');
+  }
+
+  String rallyAlertsMessageATMFees(Object amount) {
+    return Intl.message(r'You’ve spent $amount in ATM fees this month',
+        locale: _localeName,
+        name: 'rallyAlertsMessageATMFees',
+        desc:
+            r'Alert message shown when for example, the user has spent $24 in ATM fees this month.',
+        args: <Object>[amount]);
+  }
+
+  String rallyAlertsMessageCheckingAccount(Object percent) {
+    return Intl.message(
+        r'Good work! Your checking account is $percent higher than last month.',
+        locale: _localeName,
+        name: 'rallyAlertsMessageCheckingAccount',
+        desc:
+            r'Alert message shown when for example, the checking account is 1% higher than last month.',
+        args: <Object>[percent]);
+  }
+
+  String rallyAlertsMessageHeadsUpShopping(Object percent) {
+    return Intl.message(
+        r'Heads up, you’ve used up $percent of your Shopping budget for this month.',
+        locale: _localeName,
+        name: 'rallyAlertsMessageHeadsUpShopping',
+        desc: r'Alert message shown when for example, user has used more than 90% of their shopping budget.',
+        args: <Object>[percent]);
+  }
+
+  String rallyAlertsMessageSpentOnRestaurants(Object amount) {
+    return Intl.message(r'You’ve spent $amount on Restaurants this week.',
+        locale: _localeName,
+        name: 'rallyAlertsMessageSpentOnRestaurants',
+        desc:
+            r'Alert message shown when for example, user has spent $120 on Restaurants this week.',
+        args: <Object>[amount]);
+  }
+
+  String get rallyBills {
+    return Intl.message(r'Bills',
+        locale: _localeName,
+        name: 'rallyBills',
+        desc: r'Link text for bills page.');
+  }
+
+  String get rallyBillsDue {
+    return Intl.message(r'Due',
+        locale: _localeName,
+        name: 'rallyBillsDue',
+        desc: r'Title for '
+            "'"
+            r'bills due'
+            "'"
+            r' page, a dollar value is displayed next to it.');
+  }
+
+  String get rallyBudgetCategoryClothing {
+    return Intl.message(r'Clothing',
+        locale: _localeName,
+        name: 'rallyBudgetCategoryClothing',
+        desc: r'Category for budget, to sort expenses / bills in.');
+  }
+
+  String get rallyBudgetCategoryCoffeeShops {
+    return Intl.message(r'Coffee Shops',
+        locale: _localeName,
+        name: 'rallyBudgetCategoryCoffeeShops',
+        desc: r'Category for budget, to sort expenses / bills in.');
+  }
+
+  String get rallyBudgetCategoryGroceries {
+    return Intl.message(r'Groceries',
+        locale: _localeName,
+        name: 'rallyBudgetCategoryGroceries',
+        desc: r'Category for budget, to sort expenses / bills in.');
+  }
+
+  String get rallyBudgetCategoryRestaurants {
+    return Intl.message(r'Restaurants',
+        locale: _localeName,
+        name: 'rallyBudgetCategoryRestaurants',
+        desc: r'Category for budget, to sort expenses / bills in.');
+  }
+
+  String get rallyBudgetLeft {
+    return Intl.message(r'Left',
+        locale: _localeName,
+        name: 'rallyBudgetLeft',
+        desc: r'Title for '
+            "'"
+            r'budget left'
+            "'"
+            r' page, a dollar value is displayed next to it.');
+  }
+
+  String get rallyBudgets {
+    return Intl.message(r'Budgets',
+        locale: _localeName,
+        name: 'rallyBudgets',
+        desc: r'Link text for budgets page.');
+  }
+
   String get rallyDescription {
     return Intl.message(r'A personal finance app',
         locale: _localeName,
         name: 'rallyDescription',
         desc: r'Study description for Rally.');
+  }
+
+  String get rallyFinanceLeft {
+    return Intl.message(r' LEFT',
+        locale: _localeName,
+        name: 'rallyFinanceLeft',
+        desc: r'Displayed as '
+            "'"
+            r'dollar amount left'
+            "'"
+            r', for example $46.70 LEFT, for a budget category.');
+  }
+
+  String get rallyLoginButtonLogin {
+    return Intl.message(r'LOGIN',
+        locale: _localeName,
+        name: 'rallyLoginButtonLogin',
+        desc: r'Text for login button.');
+  }
+
+  String get rallyLoginLabelLogin {
+    return Intl.message(r'Login',
+        locale: _localeName,
+        name: 'rallyLoginLabelLogin',
+        desc: r'The label text to login.');
+  }
+
+  String get rallyLoginLoginToRally {
+    return Intl.message(r'Login to Rally',
+        locale: _localeName,
+        name: 'rallyLoginLoginToRally',
+        desc:
+            r'Title for login page for the Rally app (Rally does not need to be translated as it is a product name).');
+  }
+
+  String get rallyLoginNoAccount {
+    return Intl.message(r'Don' "'" r't have an account?',
+        locale: _localeName,
+        name: 'rallyLoginNoAccount',
+        desc: r'Prompt for signing up for an account.');
+  }
+
+  String get rallyLoginPassword {
+    return Intl.message(r'Password',
+        locale: _localeName,
+        name: 'rallyLoginPassword',
+        desc: r'The password field in an login form.');
+  }
+
+  String get rallyLoginRememberMe {
+    return Intl.message(r'Remember Me',
+        locale: _localeName,
+        name: 'rallyLoginRememberMe',
+        desc: r'Text if the user wants to stay logged in.');
+  }
+
+  String get rallyLoginSignUp {
+    return Intl.message(r'SIGN UP',
+        locale: _localeName,
+        name: 'rallyLoginSignUp',
+        desc: r'Button text to sign up for an account.');
+  }
+
+  String get rallyLoginUsername {
+    return Intl.message(r'Username',
+        locale: _localeName,
+        name: 'rallyLoginUsername',
+        desc: r'The username field in an login form.');
+  }
+
+  String get rallySeeAll {
+    return Intl.message(r'SEE ALL',
+        locale: _localeName,
+        name: 'rallySeeAll',
+        desc: r'Link text for button to see all data for category.');
+  }
+
+  String get rallySettingsFindAtms {
+    return Intl.message(r'Find ATMs',
+        locale: _localeName,
+        name: 'rallySettingsFindAtms',
+        desc: r'Link to go to the page ' "'" r'Find ATMs' "'" r'.');
+  }
+
+  String get rallySettingsHelp {
+    return Intl.message(r'Help',
+        locale: _localeName,
+        name: 'rallySettingsHelp',
+        desc: r'Link to go to the page ' "'" r'Help' "'" r'.');
+  }
+
+  String get rallySettingsManageAccounts {
+    return Intl.message(r'Manage Accounts',
+        locale: _localeName,
+        name: 'rallySettingsManageAccounts',
+        desc: r'Link to go to the page ' "'" r'Manage Accounts.');
+  }
+
+  String get rallySettingsNotifications {
+    return Intl.message(r'Notifications',
+        locale: _localeName,
+        name: 'rallySettingsNotifications',
+        desc: r'Link to go to the page ' "'" r'Notifications' "'" r'.');
+  }
+
+  String get rallySettingsPaperlessSettings {
+    return Intl.message(r'Paperless Settings',
+        locale: _localeName,
+        name: 'rallySettingsPaperlessSettings',
+        desc: r'Link to go to the page ' "'" r'Paperless Settings' "'" r'.');
+  }
+
+  String get rallySettingsPasscodeAndTouchId {
+    return Intl.message(r'Passcode and Touch ID',
+        locale: _localeName,
+        name: 'rallySettingsPasscodeAndTouchId',
+        desc: r'Link to go to the page ' "'" r'Passcode and Touch ID' "'" r'.');
+  }
+
+  String get rallySettingsPersonalInformation {
+    return Intl.message(r'Personal Information',
+        locale: _localeName,
+        name: 'rallySettingsPersonalInformation',
+        desc: r'Link to go to the page ' "'" r'Personal Information' "'" r'.');
+  }
+
+  String get rallySettingsSignOut {
+    return Intl.message(r'Sign out',
+        locale: _localeName,
+        name: 'rallySettingsSignOut',
+        desc: r'Link to go to the page ' "'" r'Sign out' "'" r'.');
+  }
+
+  String get rallySettingsTaxDocuments {
+    return Intl.message(r'Tax Documents',
+        locale: _localeName,
+        name: 'rallySettingsTaxDocuments',
+        desc: r'Link to go to the page ' "'" r'Tax Documents' "'" r'.');
+  }
+
+  String get rallyTitleAccounts {
+    return Intl.message(r'ACCOUNTS',
+        locale: _localeName,
+        name: 'rallyTitleAccounts',
+        desc: r'The navigation link to the accounts page.');
+  }
+
+  String get rallyTitleBills {
+    return Intl.message(r'BILLS',
+        locale: _localeName,
+        name: 'rallyTitleBills',
+        desc: r'The navigation link to the bills page.');
+  }
+
+  String get rallyTitleBudgets {
+    return Intl.message(r'BUDGETS',
+        locale: _localeName,
+        name: 'rallyTitleBudgets',
+        desc: r'The navigation link to the budgets page.');
+  }
+
+  String get rallyTitleOverview {
+    return Intl.message(r'OVERVIEW',
+        locale: _localeName,
+        name: 'rallyTitleOverview',
+        desc: r'The navigation link to the overview page.');
+  }
+
+  String get rallyTitleSettings {
+    return Intl.message(r'SETTINGS',
+        locale: _localeName,
+        name: 'rallyTitleSettings',
+        desc: r'The navigation link to the settings page.');
   }
 
   String get settingsAbout {

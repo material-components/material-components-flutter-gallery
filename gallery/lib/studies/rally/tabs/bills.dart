@@ -4,6 +4,7 @@
 
 import 'package:flutter/widgets.dart';
 
+import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/rally/charts/pie_chart.dart';
 import 'package:gallery/studies/rally/data.dart';
@@ -26,7 +27,7 @@ class _BillsViewState extends State<BillsView>
       child: Container(
         padding: isDisplayDesktop(context) ? EdgeInsets.only(top: 24) : null,
         child: FinancialEntityView(
-          heroLabel: 'Due',
+          heroLabel: GalleryLocalizations.of(context).rallyBillsDue,
           heroAmount: dueTotal,
           segments: buildSegmentsFromBillItems(items),
           wholeAmount: dueTotal,

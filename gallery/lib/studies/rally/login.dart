@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 
+import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/rally/colors.dart';
 
@@ -77,7 +78,12 @@ class _MainView extends StatelessWidget {
           maxWidth: desktopMaxWidth,
           passwordController: passwordController,
         ),
-        _LoginButton(maxWidth: desktopMaxWidth),
+        _LoginButton(
+          maxWidth: desktopMaxWidth,
+          onTap: () {
+            _login(context);
+          },
+        ),
       ];
     } else {
       listViewChildren = [
@@ -136,7 +142,7 @@ class _TopBar extends StatelessWidget {
         ),
         spacing,
         Text(
-          'Login to Rally',
+          GalleryLocalizations.of(context).rallyLoginLoginToRally,
           style: Theme.of(context).textTheme.body2.copyWith(
                 fontSize: 35,
                 fontWeight: FontWeight.w600,
@@ -144,11 +150,11 @@ class _TopBar extends StatelessWidget {
         ),
         const Expanded(child: SizedBox.shrink()),
         Text(
-          'Don\'t have an account?',
+          GalleryLocalizations.of(context).rallyLoginNoAccount,
           style: Theme.of(context).textTheme.subhead,
         ),
         spacing,
-        const _BorderButton(text: 'SIGN UP'),
+        _BorderButton(text: GalleryLocalizations.of(context).rallyLoginSignUp),
         spacing,
       ],
     );
@@ -193,8 +199,8 @@ class _UsernameInput extends StatelessWidget {
         constraints: BoxConstraints(maxWidth: maxWidth ?? double.infinity),
         child: TextField(
           controller: usernameController,
-          decoration: const InputDecoration(
-            labelText: 'Username',
+          decoration: InputDecoration(
+            labelText: GalleryLocalizations.of(context).rallyLoginUsername,
           ),
         ),
       ),
@@ -220,8 +226,8 @@ class _PasswordInput extends StatelessWidget {
         constraints: BoxConstraints(maxWidth: maxWidth ?? double.infinity),
         child: TextField(
           controller: passwordController,
-          decoration: const InputDecoration(
-            labelText: 'Password',
+          decoration: InputDecoration(
+            labelText: GalleryLocalizations.of(context).rallyLoginPassword,
           ),
           obscureText: true,
         ),
@@ -242,7 +248,7 @@ class _ThumbButton extends StatelessWidget {
     return Semantics(
       button: true,
       enabled: true,
-      label: 'Login',
+      label: GalleryLocalizations.of(context).rallyLoginLabelLogin,
       child: GestureDetector(
         onTap: onTap,
         child: SizedBox(
@@ -260,10 +266,12 @@ class _ThumbButton extends StatelessWidget {
 class _LoginButton extends StatelessWidget {
   const _LoginButton({
     Key key,
+    @required this.onTap,
     this.maxWidth,
   }) : super(key: key);
 
   final double maxWidth;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -276,9 +284,12 @@ class _LoginButton extends StatelessWidget {
           children: [
             Icon(Icons.check_circle_outline, color: RallyColors.buttonColor),
             const SizedBox(width: 12),
-            const Text('Remember Me'),
+            Text(GalleryLocalizations.of(context).rallyLoginRememberMe),
             const Expanded(child: SizedBox.shrink()),
-            const _FilledButton(text: 'LOGIN'),
+            _FilledButton(
+              text: GalleryLocalizations.of(context).rallyLoginButtonLogin,
+              onTap: onTap,
+            ),
           ],
         ),
       ),
@@ -287,7 +298,7 @@ class _LoginButton extends StatelessWidget {
 }
 
 class _BorderButton extends StatelessWidget {
-  const _BorderButton({Key key, this.text}) : super(key: key);
+  const _BorderButton({Key key, @required this.text}) : super(key: key);
 
   final String text;
 
@@ -311,9 +322,11 @@ class _BorderButton extends StatelessWidget {
 }
 
 class _FilledButton extends StatelessWidget {
-  const _FilledButton({Key key, this.text}) : super(key: key);
+  const _FilledButton({Key key, @required this.text, @required this.onTap})
+      : super(key: key);
 
   final String text;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -323,9 +336,7 @@ class _FilledButton extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),
       ),
-      onPressed: () {
-        Navigator.pop(context);
-      },
+      onPressed: onTap,
       child: Row(
         children: [
           Icon(Icons.lock),

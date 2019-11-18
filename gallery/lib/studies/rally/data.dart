@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 
+import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/studies/rally/formatters.dart';
 
 /// Calculates the sum of the primary amounts of a list of [AccountData].
@@ -117,61 +118,68 @@ class AccountDetailData {
 ///
 /// In a real app, this might be replaced with some asynchronous service.
 class DummyDataService {
-  static List<AccountData> getAccountDataList() {
+  static List<AccountData> getAccountDataList(BuildContext context) {
     return <AccountData>[
-      const AccountData(
-        name: 'Checking',
+      AccountData(
+        name: GalleryLocalizations.of(context).rallyAccountDataChecking,
         primaryAmount: 2215.13,
         accountNumber: '1234561234',
       ),
-      const AccountData(
-        name: 'Home Savings',
+      AccountData(
+        name: GalleryLocalizations.of(context).rallyAccountDataHomeSavings,
         primaryAmount: 8678.88,
         accountNumber: '8888885678',
       ),
-      const AccountData(
-        name: 'Car Savings',
+      AccountData(
+        name: GalleryLocalizations.of(context).rallyAccountDataCarSavings,
         primaryAmount: 987.48,
         accountNumber: '8888889012',
       ),
-      const AccountData(
-        name: 'Vacation',
+      AccountData(
+        name: GalleryLocalizations.of(context).rallyAccountDataVacation,
         primaryAmount: 253,
         accountNumber: '1231233456',
       ),
     ];
   }
 
-  static List<AccountDetailData> getAccountDetailList() {
+  static List<AccountDetailData> getAccountDetailList(BuildContext context) {
     return <AccountDetailData>[
       AccountDetailData(
-        title: 'Annual Percentage Yield',
+        title: GalleryLocalizations.of(context)
+            .rallyAccountDetailDataAnnualPercentageYield,
         value: '0.10\%',
       ),
       AccountDetailData(
-        title: 'Interest Rate',
+        title:
+            GalleryLocalizations.of(context).rallyAccountDetailDataInterestRate,
         value: usdWithSignFormat.format(1676.14),
       ),
       AccountDetailData(
-        title: 'Interest YTD',
+        title:
+            GalleryLocalizations.of(context).rallyAccountDetailDataInterestYtd,
         value: usdWithSignFormat.format(81.45),
       ),
       AccountDetailData(
-        title: 'Interest Paid Last Year',
+        title: GalleryLocalizations.of(context)
+            .rallyAccountDetailDataInterestPaidLastYear,
         value: usdWithSignFormat.format(987.12),
       ),
       AccountDetailData(
-        title: 'Next Statement',
+        title: GalleryLocalizations.of(context)
+            .rallyAccountDetailDataNextStatement,
         value: dateFormat.format(DateTime.utc(2019, 12, 25)),
       ),
       AccountDetailData(
-        title: 'Account Owner',
+        title:
+            GalleryLocalizations.of(context).rallyAccountDetailDataAccountOwner,
         value: 'Philip Cao',
       ),
     ];
   }
 
   static List<DetailedEventData> getDetailedEventItems() {
+    // The following titles are not localized as they're product/brand names.
     return <DetailedEventData>[
       DetailedEventData(
         title: 'Genoe',
@@ -212,6 +220,8 @@ class DummyDataService {
   }
 
   static List<BillData> getBillDataList() {
+    // The following names are not localized as they're product/brand names.
+    // TODO: Localize the due dates.
     return <BillData>[
       const BillData(
         name: 'RedPay Credit',
@@ -236,65 +246,69 @@ class DummyDataService {
     ];
   }
 
-  static List<BudgetData> getBudgetDataList() {
+  static List<BudgetData> getBudgetDataList(BuildContext context) {
     return <BudgetData>[
-      const BudgetData(
-        name: 'Coffee Shops',
+      BudgetData(
+        name: GalleryLocalizations.of(context).rallyBudgetCategoryCoffeeShops,
         primaryAmount: 70,
         amountUsed: 45.49,
       ),
-      const BudgetData(
-        name: 'Groceries',
+      BudgetData(
+        name: GalleryLocalizations.of(context).rallyBudgetCategoryGroceries,
         primaryAmount: 170,
         amountUsed: 16.45,
       ),
-      const BudgetData(
-        name: 'Restaurants',
+      BudgetData(
+        name: GalleryLocalizations.of(context).rallyBudgetCategoryRestaurants,
         primaryAmount: 170,
         amountUsed: 123.25,
       ),
-      const BudgetData(
-        name: 'Clothing',
+      BudgetData(
+        name: GalleryLocalizations.of(context).rallyBudgetCategoryClothing,
         primaryAmount: 70,
         amountUsed: 19.45,
       ),
     ];
   }
 
-  static List<String> getSettingsTitles() {
+  static List<String> getSettingsTitles(BuildContext context) {
     return <String>[
-      'Manage Accounts',
-      'Tax Documents',
-      'Passcode and Touch ID',
-      'Notifications',
-      'Personal Information',
-      'Paperless Settings',
-      'Find ATMs',
-      'Help',
-      'Sign out',
+      GalleryLocalizations.of(context).rallySettingsManageAccounts,
+      GalleryLocalizations.of(context).rallySettingsTaxDocuments,
+      GalleryLocalizations.of(context).rallySettingsPasscodeAndTouchId,
+      GalleryLocalizations.of(context).rallySettingsNotifications,
+      GalleryLocalizations.of(context).rallySettingsPersonalInformation,
+      GalleryLocalizations.of(context).rallySettingsPaperlessSettings,
+      GalleryLocalizations.of(context).rallySettingsFindAtms,
+      GalleryLocalizations.of(context).rallySettingsHelp,
+      GalleryLocalizations.of(context).rallySettingsSignOut,
     ];
   }
 
-  static List<AlertData> getAlerts() {
+  static List<AlertData> getAlerts(BuildContext context) {
+    // TODO: Localize the numbers, dollar amounts and percentages.
     return <AlertData>[
       AlertData(
+        message: GalleryLocalizations.of(context)
+            .rallyAlertsMessageHeadsUpShopping('90%'),
+        iconData: Icons.sort,
+      ),
+      AlertData(
+        message: GalleryLocalizations.of(context)
+            .rallyAlertsMessageSpentOnRestaurants('\$120'),
+        iconData: Icons.sort,
+      ),
+      AlertData(
         message:
-            'Heads up, you’ve used up 90% of your Shopping budget for this month.',
-        iconData: Icons.sort,
-      ),
-      AlertData(
-        message: 'You’ve spent \$120 on Restaurants this week.',
-        iconData: Icons.sort,
-      ),
-      AlertData(
-        message: 'You’ve spent \$24 in ATM fees this month',
+            GalleryLocalizations.of(context).rallyAlertsMessageATMFees('\$24'),
         iconData: Icons.credit_card,
       ),
       AlertData(
-        message:
-            'Good work! Your checking account is 4\% higher than last month.',
+        message: GalleryLocalizations.of(context)
+            .rallyAlertsMessageCheckingAccount('4%'),
         iconData: Icons.attach_money,
       ),
+      // TODO: Localize this when the l10n tool supports plural strings.
       AlertData(
         message:
             'Increase your potential tax deduction! Assign categories to 16 unassigned transactions.',

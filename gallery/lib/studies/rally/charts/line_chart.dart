@@ -151,6 +151,7 @@ class RallyLineChartPainter extends CustomPainter {
       color: RallyColors.gray25,
     );
 
+    // TODO: Localize dates.
     final leftLabel = TextPainter(
       text: TextSpan(text: 'AUGUST 2019', style: unselectedLabelStyle),
       textDirection: TextDirection.ltr,

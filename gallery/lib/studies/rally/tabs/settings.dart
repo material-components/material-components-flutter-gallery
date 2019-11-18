@@ -14,12 +14,11 @@ class SettingsView extends StatefulWidget {
 }
 
 class _SettingsViewState extends State<SettingsView> {
-  List<Widget> items = DummyDataService.getSettingsTitles()
-      .map((title) => _SettingsItem(title))
-      .toList();
-
   @override
   Widget build(BuildContext context) {
+    final items = DummyDataService.getSettingsTitles(context)
+        .map((title) => _SettingsItem(title))
+        .toList();
     return SingleChildScrollView(
       child: Container(
         padding: isDisplayDesktop(context) ? EdgeInsets.only(top: 24) : null,

@@ -4,6 +4,7 @@
 
 import 'package:flutter/widgets.dart';
 
+import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/rally/charts/pie_chart.dart';
 import 'package:gallery/studies/rally/data.dart';
@@ -16,17 +17,16 @@ class BudgetsView extends StatefulWidget {
 
 class _BudgetsViewState extends State<BudgetsView>
     with SingleTickerProviderStateMixin {
-  final List<BudgetData> items = DummyDataService.getBudgetDataList();
-
   @override
   Widget build(BuildContext context) {
+    final items = DummyDataService.getBudgetDataList(context);
     final capTotal = sumBudgetDataPrimaryAmount(items);
     final usedTotal = sumBudgetDataAmountUsed(items);
     return SingleChildScrollView(
       child: Container(
         padding: isDisplayDesktop(context) ? EdgeInsets.only(top: 24) : null,
         child: FinancialEntityView(
-          heroLabel: 'Left',
+          heroLabel: GalleryLocalizations.of(context).rallyBudgetLeft,
           heroAmount: capTotal - usedTotal,
           segments: buildSegmentsFromBudgetItems(items),
           wholeAmount: capTotal,

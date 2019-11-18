@@ -6,6 +6,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/studies/rally/charts/line_chart.dart';
 import 'package:gallery/studies/rally/charts/pie_chart.dart';
 import 'package:gallery/studies/rally/charts/vertical_fraction_bar.dart';
@@ -214,7 +215,7 @@ FinancialEntityCategoryView buildFinancialEntityFromBudgetData(
 
   return FinancialEntityCategoryView(
     suffix: Text(
-      ' LEFT',
+      GalleryLocalizations.of(context).rallyFinanceLeft,
       style: Theme.of(context)
           .textTheme
           .body1
@@ -260,6 +261,7 @@ class FinancialEntityCategoryDetailsPage extends StatelessWidget {
     final List<_DetailedEventCard> cards = items.map((detailedEventData) {
       return _DetailedEventCard(
         title: detailedEventData.title,
+        // TODO: Localize date.
         subtitle: dateFormat.format(detailedEventData.date),
         amount: detailedEventData.amount,
       );
@@ -270,7 +272,7 @@ class FinancialEntityCategoryDetailsPage extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Text(
-          'Checking',
+          GalleryLocalizations.of(context).rallyAccountDataChecking,
           style: Theme.of(context).textTheme.body1.copyWith(fontSize: 18),
         ),
       ),

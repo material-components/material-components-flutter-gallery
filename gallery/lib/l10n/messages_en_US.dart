@@ -30,13 +30,23 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m0(value) => "You selected: \"${value}\"";
 
-  static m5(quantity) => "${quantity} ITEMS";
+  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
 
-  static m6(price) => "x ${price}";
+  static m6(percent) =>
+      "Good work! Your checking account is ${percent} higher than last month.";
 
-  static m7(quantity) => "Quantity: ${quantity}";
+  static m7(percent) =>
+      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
 
-  static m8(value) => "Item ${value}";
+  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+
+  static m9(quantity) => "${quantity} ITEMS";
+
+  static m10(price) => "x ${price}";
+
+  static m11(quantity) => "Quantity: ${quantity}";
+
+  static m12(value) => "Item ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -292,8 +302,82 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Categories"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Gallery"),
+        "rallyAccountDataCarSavings":
+            MessageLookupByLibrary.simpleMessage("Car Savings"),
+        "rallyAccountDataChecking":
+            MessageLookupByLibrary.simpleMessage("Checking"),
+        "rallyAccountDataHomeSavings":
+            MessageLookupByLibrary.simpleMessage("Home Savings"),
+        "rallyAccountDataVacation":
+            MessageLookupByLibrary.simpleMessage("Vacation"),
+        "rallyAccountDetailDataAccountOwner":
+            MessageLookupByLibrary.simpleMessage("Account Owner"),
+        "rallyAccountDetailDataAnnualPercentageYield":
+            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+        "rallyAccountDetailDataInterestPaidLastYear":
+            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+        "rallyAccountDetailDataInterestRate":
+            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+        "rallyAccountDetailDataInterestYtd":
+            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+        "rallyAccountDetailDataNextStatement":
+            MessageLookupByLibrary.simpleMessage("Next Statement"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
+        "rallyAlertsMessageATMFees": m5,
+        "rallyAlertsMessageCheckingAccount": m6,
+        "rallyAlertsMessageHeadsUpShopping": m7,
+        "rallyAlertsMessageSpentOnRestaurants": m8,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+        "rallyBudgetCategoryClothing":
+            MessageLookupByLibrary.simpleMessage("Clothing"),
+        "rallyBudgetCategoryCoffeeShops":
+            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+        "rallyBudgetCategoryGroceries":
+            MessageLookupByLibrary.simpleMessage("Groceries"),
+        "rallyBudgetCategoryRestaurants":
+            MessageLookupByLibrary.simpleMessage("Restaurants"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
         "rallyDescription":
             MessageLookupByLibrary.simpleMessage("A personal finance app"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
+        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
+        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+        "rallyLoginLoginToRally":
+            MessageLookupByLibrary.simpleMessage("Login to Rally"),
+        "rallyLoginNoAccount":
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+        "rallyLoginRememberMe":
+            MessageLookupByLibrary.simpleMessage("Remember Me"),
+        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
+        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+        "rallySettingsFindAtms":
+            MessageLookupByLibrary.simpleMessage("Find ATMs"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+        "rallySettingsManageAccounts":
+            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+        "rallySettingsNotifications":
+            MessageLookupByLibrary.simpleMessage("Notifications"),
+        "rallySettingsPaperlessSettings":
+            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
+        "rallySettingsPasscodeAndTouchId":
+            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+        "rallySettingsPersonalInformation":
+            MessageLookupByLibrary.simpleMessage("Personal Information"),
+        "rallySettingsSignOut":
+            MessageLookupByLibrary.simpleMessage("Sign out"),
+        "rallySettingsTaxDocuments":
+            MessageLookupByLibrary.simpleMessage("Tax Documents"),
+        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
+        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
+        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
+        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
         "settingsAbout":
             MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
@@ -330,7 +414,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("CANCEL"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m5,
+        "shrineCartItemCount": m9,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Shipping:"),
@@ -390,8 +474,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Navy trousers"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m6,
-        "shrineProductQuantity": m7,
+        "shrineProductPrice": m10,
+        "shrineProductQuantity": m11,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Quartet table"),
         "shrineProductRainwaterTray":
@@ -432,7 +516,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m8,
+        "starterAppDrawerItem": m12,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("BUTTON"),

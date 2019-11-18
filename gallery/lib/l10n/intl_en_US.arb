@@ -29,6 +29,214 @@
   "@rallyDescription": {
     "description": "Study description for Rally."
   },
+  "rallyAccountDataChecking": "Checking",
+  "@rallyAccountDataChecking": {
+    "description": "Name for account made up by user."
+  },
+  "rallyAccountDataHomeSavings": "Home Savings",
+  "@rallyAccountDataHomeSavings": {
+    "description": "Name for account made up by user."
+  },
+  "rallyAccountDataCarSavings": "Car Savings",
+  "@rallyAccountDataCarSavings": {
+    "description": "Name for account made up by user."
+  },
+  "rallyAccountDataVacation": "Vacation",
+  "@rallyAccountDataVacation": {
+    "description": "Name for account made up by user."
+  },
+  "rallyAccountDetailDataAnnualPercentageYield": "Annual Percentage Yield",
+  "@rallyAccountDetailDataAnnualPercentageYield": {
+    "description": "Title for account statistics. Below a percentage such as 0.10% will be displayed."
+  },
+  "rallyAccountDetailDataInterestRate": "Interest Rate",
+  "@rallyAccountDetailDataInterestRate": {
+    "description": "Title for account statistics. Below a dollar amount such as $100 will be displayed."
+  },
+  "rallyAccountDetailDataInterestYtd": "Interest YTD",
+  "@rallyAccountDetailDataInterestYtd": {
+    "description": "Title for account statistics. Below a dollar amount such as $100 will be displayed."
+  },
+  "rallyAccountDetailDataInterestPaidLastYear": "Interest Paid Last Year",
+  "@rallyAccountDetailDataInterestPaidLastYear": {
+    "description": "Title for account statistics. Below a dollar amount such as $100 will be displayed."
+  },
+  "rallyAccountDetailDataNextStatement": "Next Statement",
+  "@rallyAccountDetailDataNextStatement": {
+    "description": "Title for an account detail. Below a date for when the next account statement is released."
+  },
+  "rallyAccountDetailDataAccountOwner": "Account Owner",
+  "@rallyAccountDetailDataAccountOwner": {
+    "description": "Title for an account detail. Below the name of the account owner will be displayed."
+  },
+  "rallyBudgetCategoryCoffeeShops": "Coffee Shops",
+  "@rallyBudgetCategoryCoffeeShops": {
+    "description": "Category for budget, to sort expenses / bills in."
+  },
+  "rallyBudgetCategoryGroceries": "Groceries",
+  "@rallyBudgetCategoryGroceries": {
+    "description": "Category for budget, to sort expenses / bills in."
+  },
+  "rallyBudgetCategoryRestaurants": "Restaurants",
+  "@rallyBudgetCategoryRestaurants": {
+    "description": "Category for budget, to sort expenses / bills in."
+  },
+  "rallyBudgetCategoryClothing": "Clothing",
+  "@rallyBudgetCategoryClothing": {
+    "description": "Category for budget, to sort expenses / bills in."
+  },
+  "rallySettingsManageAccounts": "Manage Accounts",
+  "@rallySettingsManageAccounts": {
+    "description": "Link to go to the page 'Manage Accounts."
+  },
+  "rallySettingsTaxDocuments": "Tax Documents",
+  "@rallySettingsTaxDocuments": {
+    "description": "Link to go to the page 'Tax Documents'."
+  },
+  "rallySettingsPasscodeAndTouchId": "Passcode and Touch ID",
+  "@rallySettingsPasscodeAndTouchId": {
+    "description": "Link to go to the page 'Passcode and Touch ID'."
+  },
+  "rallySettingsNotifications": "Notifications",
+  "@rallySettingsNotifications": {
+    "description": "Link to go to the page 'Notifications'."
+  },
+  "rallySettingsPersonalInformation": "Personal Information",
+  "@rallySettingsPersonalInformation": {
+    "description": "Link to go to the page 'Personal Information'."
+  },
+  "rallySettingsPaperlessSettings": "Paperless Settings",
+  "@rallySettingsPaperlessSettings": {
+    "description": "Link to go to the page 'Paperless Settings'."
+  },
+  "rallySettingsFindAtms": "Find ATMs",
+  "@rallySettingsFindAtms": {
+    "description": "Link to go to the page 'Find ATMs'."
+  },
+  "rallySettingsHelp": "Help",
+  "@rallySettingsHelp": {
+    "description": "Link to go to the page 'Help'."
+  },
+  "rallySettingsSignOut": "Sign out",
+  "@rallySettingsSignOut": {
+    "description": "Link to go to the page 'Sign out'."
+  },
+  "rallyAccountTotal": "Total",
+  "@rallyAccountTotal": {
+    "description": "Title for 'total account value' overview page, a dollar value is displayed next to it."
+  },
+  "rallyBillsDue": "Due",
+  "@rallyBillsDue": {
+    "description": "Title for 'bills due' page, a dollar value is displayed next to it."
+  },
+  "rallyBudgetLeft": "Left",
+  "@rallyBudgetLeft": {
+    "description": "Title for 'budget left' page, a dollar value is displayed next to it."
+  },
+  "rallyAccounts": "Accounts",
+  "@rallyAccounts": {
+    "description": "Link text for accounts page."
+  },
+  "rallyBills": "Bills",
+  "@rallyBills": {
+    "description": "Link text for bills page."
+  },
+  "rallyBudgets": "Budgets",
+  "@rallyBudgets": {
+    "description": "Link text for budgets page."
+  },
+  "rallyAlerts": "Alerts",
+  "@rallyAlerts": {
+    "description": "Title for alerts part of overview page."
+  },
+  "rallySeeAll": "SEE ALL",
+  "@rallySeeAll": {
+    "description": "Link text for button to see all data for category."
+  },
+  "rallyFinanceLeft": " LEFT",
+  "@rallyFinanceLeft": {
+    "description": "Displayed as 'dollar amount left', for example $46.70 LEFT, for a budget category."
+  },
+  "rallyTitleOverview": "OVERVIEW",
+  "@rallyTitleOverview": {
+    "description": "The navigation link to the overview page."
+  },
+  "rallyTitleAccounts": "ACCOUNTS",
+  "@rallyTitleAccounts": {
+    "description": "The navigation link to the accounts page."
+  },
+  "rallyTitleBills": "BILLS",
+  "@rallyTitleBills": {
+    "description": "The navigation link to the bills page."
+  },
+  "rallyTitleBudgets": "BUDGETS",
+  "@rallyTitleBudgets": {
+    "description": "The navigation link to the budgets page."
+  },
+  "rallyTitleSettings": "SETTINGS",
+  "@rallyTitleSettings": {
+    "description": "The navigation link to the settings page."
+  },
+  "rallyLoginLoginToRally": "Login to Rally",
+  "@rallyLoginLoginToRally": {
+    "description": "Title for login page for the Rally app (Rally does not need to be translated as it is a product name)."
+  },
+  "rallyLoginNoAccount": "Don't have an account?",
+  "@rallyLoginNoAccount": {
+    "description": "Prompt for signing up for an account."
+  },
+  "rallyLoginSignUp": "SIGN UP",
+  "@rallyLoginSignUp": {
+    "description": "Button text to sign up for an account."
+  },
+  "rallyLoginUsername": "Username",
+  "@rallyLoginUsername": {
+    "description": "The username field in an login form."
+  },
+  "rallyLoginPassword": "Password",
+  "@rallyLoginPassword": {
+    "description": "The password field in an login form."
+  },
+  "rallyLoginLabelLogin": "Login",
+  "@rallyLoginLabelLogin": {
+    "description": "The label text to login."
+  },
+  "rallyLoginRememberMe": "Remember Me",
+  "@rallyLoginRememberMe": {
+    "description": "Text if the user wants to stay logged in."
+  },
+  "rallyLoginButtonLogin": "LOGIN",
+  "@rallyLoginButtonLogin": {
+    "description": "Text for login button."
+  },
+  "rallyAlertsMessageHeadsUpShopping": "Heads up, you’ve used up {percent} of your Shopping budget for this month.",
+  "@rallyAlertsMessageHeadsUpShopping": {
+    "description": "Alert message shown when for example, user has used more than 90% of their shopping budget.",
+    "placeholders": {
+      "percent": "90%"
+    }
+  },
+  "rallyAlertsMessageSpentOnRestaurants": "You’ve spent {amount} on Restaurants this week.",
+  "@rallyAlertsMessageSpentOnRestaurants": {
+    "description": "Alert message shown when for example, user has spent $120 on Restaurants this week.",
+    "placeholders": {
+       "amount": "$120"
+    }
+  },
+  "rallyAlertsMessageATMFees": "You’ve spent {amount} in ATM fees this month",
+  "@rallyAlertsMessageATMFees": {
+    "description": "Alert message shown when for example, the user has spent $24 in ATM fees this month.",
+    "placeholders": {
+       "amount": "24"
+    }
+  },
+  "rallyAlertsMessageCheckingAccount": "Good work! Your checking account is {percent} higher than last month.",
+  "@rallyAlertsMessageCheckingAccount": {
+    "description": "Alert message shown when for example, the checking account is 1% higher than last month.",
+    "placeholders": {
+       "percent": "1%"
+    }
+  },
   "craneDescription": "A personalized travel app",
   "@craneDescription": {
     "description": "Study description for Crane."

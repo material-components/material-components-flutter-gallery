@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 
+import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/rally/charts/pie_chart.dart';
 import 'package:gallery/studies/rally/colors.dart';
@@ -12,15 +13,13 @@ import 'package:gallery/studies/rally/finance.dart';
 
 /// A page that shows a summary of accounts.
 class AccountsView extends StatelessWidget {
-  final List<AccountData> items = DummyDataService.getAccountDataList();
-  final List<AccountDetailData> detailItems =
-      DummyDataService.getAccountDetailList();
-
   @override
   Widget build(BuildContext context) {
+    final items = DummyDataService.getAccountDataList(context);
+    final detailItems = DummyDataService.getAccountDetailList(context);
     final balanceTotal = sumAccountDataPrimaryAmount(items);
     final view = FinancialEntityView(
-      heroLabel: 'Total',
+      heroLabel: GalleryLocalizations.of(context).rallyAccountTotal,
       heroAmount: balanceTotal,
       segments: buildSegmentsFromAccountItems(items),
       wholeAmount: balanceTotal,

@@ -7,6 +7,7 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/rally/colors.dart';
 import 'package:gallery/studies/rally/data.dart';
@@ -22,10 +23,10 @@ class OverviewView extends StatefulWidget {
 class _OverviewViewState extends State<OverviewView> {
   @override
   Widget build(BuildContext context) {
-    final accountDataList = DummyDataService.getAccountDataList();
+    final accountDataList = DummyDataService.getAccountDataList(context);
     final billDataList = DummyDataService.getBillDataList();
-    final budgetDataList = DummyDataService.getBudgetDataList();
-    final alerts = DummyDataService.getAlerts();
+    final budgetDataList = DummyDataService.getBudgetDataList(context);
+    final alerts = DummyDataService.getAlerts(context);
 
     if (isDisplayDesktop(context)) {
       return SingleChildScrollView(
@@ -46,8 +47,10 @@ class _OverviewViewState extends State<OverviewView> {
               SizedBox(width: 24),
               Flexible(
                 flex: 3,
-                child:
-                    Container(width: 400, child: _AlertsView(alerts: alerts)),
+                child: Container(
+                  width: 400,
+                  child: _AlertsView(alerts: alerts),
+                ),
               ),
             ],
           ),
@@ -104,7 +107,7 @@ class _OverviewGrid extends StatelessWidget {
           Container(
             width: boxWidth,
             child: _FinancialView(
-              title: 'Accounts',
+              title: GalleryLocalizations.of(context).rallyAccounts,
               total: sumAccountDataPrimaryAmount(accountDataList),
               financialItemViews: buildAccountDataListViews(accountDataList),
             ),
@@ -113,13 +116,13 @@ class _OverviewGrid extends StatelessWidget {
           Container(
             width: boxWidth,
             child: _FinancialView(
-              title: 'Bills',
+              title: GalleryLocalizations.of(context).rallyBills,
               total: sumBillDataPrimaryAmount(billDataList),
               financialItemViews: buildBillDataListViews(billDataList),
             ),
           ),
           _FinancialView(
-            title: 'Budgets',
+            title: GalleryLocalizations.of(context).rallyBudgets,
             total: sumBudgetDataPrimaryAmount(budgetDataList),
             financialItemViews:
                 buildBudgetDataListViews(budgetDataList, context),
@@ -140,7 +143,7 @@ class _AlertsView extends StatelessWidget {
     final isDesktop = isDisplayDesktop(context);
 
     return Container(
-      padding: const EdgeInsets.only(left: 16, top: 4, bottom: 4),
+      padding: const EdgeInsetsDirectional.only(start: 16, top: 4, bottom: 4),
       color: RallyColors.cardBackground,
       child: Column(
         children: [
@@ -149,11 +152,11 @@ class _AlertsView extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text('Alerts'),
+                Text(GalleryLocalizations.of(context).rallyAlerts),
                 if (!isDesktop)
                   FlatButton(
                     onPressed: () {},
-                    child: const Text('SEE ALL'),
+                    child: Text(GalleryLocalizations.of(context).rallySeeAll),
                     textColor: Colors.white,
                   ),
               ],
@@ -220,7 +223,7 @@ class _FinancialView extends StatelessWidget {
           ),
           ...financialItemViews.sublist(0, min(financialItemViews.length, 3)),
           FlatButton(
-            child: const Text('SEE ALL'),
+            child: Text(GalleryLocalizations.of(context).rallySeeAll),
             textColor: Colors.white,
             onPressed: () {},
           ),
