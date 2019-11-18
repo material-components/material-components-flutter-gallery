@@ -16,6 +16,7 @@ import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 import '../../layout/adaptive.dart';
+import '../../l10n/gallery_localizations.dart';
 
 import 'colors.dart';
 import 'model/app_state_model.dart';
@@ -118,7 +119,7 @@ class CategoryMenuPage extends StatelessWidget {
                     MaterialPageRoute<void>(builder: (context) => LoginPage()),
                   );
                 },
-                child: _buttonText("LOGOUT", logoutTextStyle),
+                child: _buttonText(GalleryLocalizations.of(context).shrineLogoutButtonCaption, logoutTextStyle),
               ),
               const Spacer(),
               IconButton(
@@ -151,7 +152,7 @@ class CategoryMenuPage extends StatelessWidget {
                     MaterialPageRoute<void>(builder: (context) => LoginPage()),
                   );
                 },
-                child: _buttonText("LOGOUT", logoutTextStyle),
+                child: _buttonText(GalleryLocalizations.of(context).shrineLogoutButtonCaption, logoutTextStyle),
               ),
             ],
           ),
