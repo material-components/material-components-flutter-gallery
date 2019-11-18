@@ -19,16 +19,37 @@ import '../../../l10n/gallery_localizations.dart';
 
 class Category {
   const Category({
-    @required this.internationalizedName,
-  })  : assert(internationalizedName != null);
+    @required this.internalName,
+    @required this.nameMaker,
+  })  : assert(internalName != null),
+        assert(nameMaker != null);
 
-  final String Function(BuildContext) internationalizedName;
+  final String internalName;
+  final String Function(BuildContext) nameMaker;
+
+  @override
+  String toString() => 'Category $internalName';
 }
 
-Category categoryAll = Category(internationalizedName: (context) => GalleryLocalizations.of(context).shrineCategoryNameAll,);
-Category categoryAccessories = Category(internationalizedName: (context) => GalleryLocalizations.of(context).shrineCategoryNameAccessories,);
-Category categoryClothing = Category(internationalizedName: (context) => GalleryLocalizations.of(context).shrineCategoryNameClothing,);
-Category categoryHome = Category(internationalizedName: (context) => GalleryLocalizations.of(context).shrineCategoryNameHome,);
+Category categoryAll = Category(
+  internalName: 'All',
+  nameMaker: (context) => GalleryLocalizations.of(context).shrineCategoryNameAll,
+);
+
+Category categoryAccessories = Category(
+  internalName: 'Accessories',
+  nameMaker: (context) => GalleryLocalizations.of(context).shrineCategoryNameAccessories,
+);
+
+Category categoryClothing = Category(
+  internalName: 'Clothing',
+  nameMaker: (context) => GalleryLocalizations.of(context).shrineCategoryNameClothing,
+);
+
+Category categoryHome = Category(
+  internalName: 'Home',
+  nameMaker: (context) => GalleryLocalizations.of(context).shrineCategoryNameHome,
+);
 
 List<Category> Categories = [
   categoryAll,

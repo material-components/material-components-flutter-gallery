@@ -52,7 +52,7 @@ class CategoryMenuPage extends StatelessWidget {
   Widget _buildCategory(Category category, BuildContext context) {
     final bool isDesktop = isDisplayDesktop(context);
 
-    final String categoryString = category.internationalizedName(context);
+    final String categoryString = category.nameMaker(context);
 
     final TextStyle selectedCategoryTextStyle = Theme.of(context)
         .textTheme
