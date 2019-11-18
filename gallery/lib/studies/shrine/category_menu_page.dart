@@ -109,7 +109,7 @@ class CategoryMenuPage extends StatelessWidget {
                 style: Theme.of(context).textTheme.headline,
               ),
               const Spacer(),
-              for (var c in Categories) _buildCategory(c, context),
+              for (var c in categories) _buildCategory(c, context),
               _divider(),
               GestureDetector(
                 onTap: () {
@@ -137,7 +137,7 @@ class CategoryMenuPage extends StatelessWidget {
           color: shrinePink100,
           child: ListView(
             children: [
-              for (var c in Categories) _buildCategory(c, context),
+              for (var c in categories) _buildCategory(c, context),
               Center(
                 child: _divider(),
               ),

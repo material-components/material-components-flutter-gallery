@@ -256,7 +256,7 @@ class ShoppingCartRow extends StatelessWidget {
                                   child: Text(GalleryLocalizations.of(context).shrineProductQuantity(quantity),),
                                 ),
                                 Text(
-                                  GalleryLocalizations.of(context).shrineProductPrice(product.price),
+                                  GalleryLocalizations.of(context).shrineProductPrice(formatter.format(product.price)),
                                 ),
                               ],
                             ),

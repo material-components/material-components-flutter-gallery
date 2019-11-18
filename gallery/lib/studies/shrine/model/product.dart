@@ -55,7 +55,7 @@ Category categoryHome = Category(
   nameMaker: (context) => GalleryLocalizations.of(context).shrineCategoryNameHome,
 );
 
-List<Category> Categories = [
+List<Category> categories = [
   categoryAll,
   categoryAccessories,
   categoryClothing,
