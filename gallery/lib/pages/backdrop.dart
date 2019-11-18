@@ -9,7 +9,7 @@ import 'package:flare_flutter/flare_controller.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
-import '../l10n/gallery_localizations.dart';
+import '../layout/adaptive.dart';
 
 class Backdrop extends StatefulWidget {
   final Widget frontLayer;
@@ -98,6 +98,35 @@ class _BackdropState extends State<Backdrop>
             rect: animation,
             child: widget.backLayer,
           ),
+          Align(
+            alignment: AlignmentDirectional.topEnd,
+            child: SafeArea(
+              child: SizedBox(
+                width: 64,
+                height: isDisplayDesktop(context) ? 56 : 40,
+                child: GestureDetector(
+                  onTap: () {
+                    _controller.fling(velocity: _isPanelVisible ? -1 : 1);
+                  },
+                  child: Material(
+                    borderRadius: BorderRadiusDirectional.only(
+                      bottomStart: Radius.circular(10),
+                    ),
+                    color: Theme.of(context).colorScheme.secondaryVariant,
+                    child: FlareActor(
+                      'assets/icons/settings/settings.flr',
+                      alignment: Directionality.of(context) == TextDirection.ltr
+                          ? Alignment.bottomLeft
+                          : Alignment.bottomRight,
+                      animation: 'Animations',
+                      fit: BoxFit.contain,
+                      controller: this,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -105,51 +134,7 @@ class _BackdropState extends State<Backdrop>
 
   @override
   Widget build(BuildContext context) {
-    AnimationStatus controllerStatus = _controller.status;
-    final colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
-      appBar: AppBar(
-        title: Padding(
-          padding: EdgeInsetsDirectional.only(start: 32),
-          child: Text(
-            (controllerStatus != AnimationStatus.completed)
-                ? GalleryLocalizations.of(context).settingsTitle
-                : '',
-            style: Theme.of(context).textTheme.display1.apply(
-                  color: colorScheme.onSurface,
-                ),
-            textAlign: TextAlign.start,
-          ),
-        ),
-        centerTitle: false,
-        titleSpacing: 0,
-        backgroundColor: ((controllerStatus == AnimationStatus.completed)
-            ? colorScheme.background
-            : colorScheme.secondaryVariant),
-        actions: [
-          AspectRatio(
-            aspectRatio: 1,
-            child: GestureDetector(
-              onTap: () {
-                _controller.fling(velocity: _isPanelVisible ? -1 : 1);
-              },
-              child: PhysicalModel(
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(10),
-                ),
-                color: colorScheme.secondaryVariant,
-                child: FlareActor(
-                  'assets/icons/settings/settings.flr',
-                  alignment: Alignment.topRight,
-                  animation: 'Animations',
-                  fit: BoxFit.contain,
-                  controller: this,
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
       body: LayoutBuilder(
         builder: _buildStack,
       ),

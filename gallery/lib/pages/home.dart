@@ -187,8 +187,9 @@ class HomePage extends StatelessWidget {
 
   Widget header(BuildContext context, Color color, String text) {
     return Padding(
-      padding: EdgeInsets.symmetric(
-        vertical: 16,
+      padding: EdgeInsets.only(
+        top: 29,
+        bottom: 16,
       ),
       child: Text(
         text,

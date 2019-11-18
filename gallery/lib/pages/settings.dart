@@ -34,6 +34,20 @@ class SettingsPage extends StatelessWidget {
       child: Center(
         child: ListView(
           children: [
+            Padding(
+              padding: EdgeInsetsDirectional.only(
+                start: 32,
+                top: 21,
+                end: 32,
+                bottom: 27,
+              ),
+              child: Text(
+                GalleryLocalizations.of(context).settingsTitle,
+                style: Theme.of(context).textTheme.display1.apply(
+                      color: colorScheme.onSurface,
+                    ),
+              ),
+            ),
             SettingsListItem<double>(
               title: GalleryLocalizations.of(context).settingsTextScaling,
               selectedOption: options.textScaleFactor,

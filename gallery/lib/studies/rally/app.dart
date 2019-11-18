@@ -18,6 +18,7 @@ class RallyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Rally',
+      debugShowCheckedModeBanner: false,
       theme: _buildRallyTheme(),
       localizationsDelegates: GalleryLocalizations.localizationsDelegates,
       supportedLocales: GalleryLocalizations.supportedLocales,

@@ -91,6 +91,7 @@ class _ShrineAppState extends State<ShrineApp> with TickerProviderStateMixin {
       model: _model,
       child: MaterialApp(
         title: 'Shrine',
+        debugShowCheckedModeBanner: false,
         home: HomePage(
           backdrop: backdrop,
           scrim: Scrim(controller: _expandingController),

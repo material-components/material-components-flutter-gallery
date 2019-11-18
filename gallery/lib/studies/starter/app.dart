@@ -15,6 +15,7 @@ class StarterApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: GalleryLocalizations.of(context).starterAppTitle,
+      debugShowCheckedModeBanner: false,
       localizationsDelegates: GalleryLocalizations.localizationsDelegates,
       supportedLocales: GalleryLocalizations.supportedLocales,
       home: HomePage(),

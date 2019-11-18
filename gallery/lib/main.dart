@@ -87,6 +87,7 @@ class _GalleryAppState extends State<GalleryApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Gallery',
+      debugShowCheckedModeBanner: false,
       themeMode: _options.themeMode,
       theme: GalleryThemeData.lightThemeData.copyWith(
         platform: _options.platform,
