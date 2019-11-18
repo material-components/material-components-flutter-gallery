@@ -30,23 +30,23 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m4(value) => "You selected: \"${value}\"";
 
-  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
-
-  static m6(percent) =>
-      "Good work! Your checking account is ${percent} higher than last month.";
+  static m6(amount) => "You’ve spent ${amount} in ATM fees this month";
 
   static m7(percent) =>
+      "Good work! Your checking account is ${percent} higher than last month.";
+
+  static m8(percent) =>
       "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
 
-  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m9(amount) => "You’ve spent ${amount} on Restaurants this week.";
 
-  static m9(quantity) => "${quantity} ITEMS";
+  static m10(quantity) => "${quantity} ÎTÉMŠ";
 
-  static m10(price) => "x ${price}";
+  static m11(price) => "x ${price}";
 
-  static m11(quantity) => "Quantity: ${quantity}";
+  static m12(quantity) => "Qüåṇtîtÿ: ${quantity}";
 
-  static m12(value) => "Item ${value}";
+  static m5(value) => "Item ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -325,10 +325,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m5,
-        "rallyAlertsMessageCheckingAccount": m6,
-        "rallyAlertsMessageHeadsUpShopping": m7,
-        "rallyAlertsMessageSpentOnRestaurants": m8,
+        "rallyAlertsMessageATMFees": m6,
+        "rallyAlertsMessageCheckingAccount": m7,
+        "rallyAlertsMessageHeadsUpShopping": m8,
+        "rallyAlertsMessageSpentOnRestaurants": m9,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
         "rallyBudgetCategoryClothing":
@@ -411,112 +411,112 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
         "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
         "shrineCancelButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CANCEL"),
+            MessageLookupByLibrary.simpleMessage("ÇÅṆÇÉŁ"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m9,
-        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+            MessageLookupByLibrary.simpleMessage("ÇŁÉÅR ÇÅRT"),
+        "shrineCartItemCount": m10,
+        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("ÇÅRT"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("Shipping:"),
+            MessageLookupByLibrary.simpleMessage("Šħîppîṇğ:"),
         "shrineCartSubtotalCaption":
-            MessageLookupByLibrary.simpleMessage("Subtotal:"),
-        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
-        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+            MessageLookupByLibrary.simpleMessage("Šübtòtåł:"),
+        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tåx:"),
+        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TÒTÅŁ"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("Accessories"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+            MessageLookupByLibrary.simpleMessage("Åççéššòrîéš"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("Åłł"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
+            MessageLookupByLibrary.simpleMessage("Çłòtħîṇğ"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Ħòmé"),
         "shrineDescription":
             MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
         "shrineLoginPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Påššwòrd"),
         "shrineLoginUsernameLabel":
-            MessageLookupByLibrary.simpleMessage("Username"),
+            MessageLookupByLibrary.simpleMessage("Üšérṇåmé"),
         "shrineLogoutButtonCaption":
-            MessageLookupByLibrary.simpleMessage("LOGOUT"),
-        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
-        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+            MessageLookupByLibrary.simpleMessage("ŁÒĞÒÜT"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MÉṆÜ"),
+        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("ṆÉXT"),
         "shrineProductBlueStoneMug":
-            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
+            MessageLookupByLibrary.simpleMessage("Błüé štòṇé müğ"),
         "shrineProductCeriseScallopTee":
-            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+            MessageLookupByLibrary.simpleMessage("Çérîšé šçåłłòp téé"),
         "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+            MessageLookupByLibrary.simpleMessage("Çħåmbråÿ ṇåpkîṇš"),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+            MessageLookupByLibrary.simpleMessage("Çħåmbråÿ šħîrt"),
         "shrineProductClassicWhiteCollar":
-            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+            MessageLookupByLibrary.simpleMessage("Çłåššîç wħîté çòłłår"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+            MessageLookupByLibrary.simpleMessage("Çłåÿ šwéåtér"),
         "shrineProductCopperWireRack":
-            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+            MessageLookupByLibrary.simpleMessage("Çòppér wîré råçk"),
         "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+            MessageLookupByLibrary.simpleMessage("Fîṇé łîṇéš téé"),
         "shrineProductGardenStrand":
-            MessageLookupByLibrary.simpleMessage("Garden strand"),
+            MessageLookupByLibrary.simpleMessage("Ğårdéṇ štråṇd"),
         "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+            MessageLookupByLibrary.simpleMessage("Ğåtšbÿ ħåt"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
+            MessageLookupByLibrary.simpleMessage("Ğéṇtrÿ jåçkét"),
         "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+            MessageLookupByLibrary.simpleMessage("Ğîłt déšk trîò"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+            MessageLookupByLibrary.simpleMessage("Ğîṇğér šçårf"),
         "shrineProductGreySlouchTank":
-            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+            MessageLookupByLibrary.simpleMessage("Ğréÿ šłòüçħ tåṇk"),
         "shrineProductHurrahsTeaSet":
-            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+            MessageLookupByLibrary.simpleMessage("Ħürråħš téå šét"),
         "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
+            MessageLookupByLibrary.simpleMessage("Kîtçħéṇ qüåttrò"),
         "shrineProductNavyTrousers":
-            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+            MessageLookupByLibrary.simpleMessage("Ṇåvÿ tròüšérš"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m10,
-        "shrineProductQuantity": m11,
+            MessageLookupByLibrary.simpleMessage("Płåštér tüṇîç"),
+        "shrineProductPrice": m11,
+        "shrineProductQuantity": m12,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Quartet table"),
+            MessageLookupByLibrary.simpleMessage("Qüårtét tåbłé"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+            MessageLookupByLibrary.simpleMessage("Råîṇwåtér tråÿ"),
         "shrineProductRamonaCrossover":
-            MessageLookupByLibrary.simpleMessage("Ramona crossover"),
+            MessageLookupByLibrary.simpleMessage("Råmòṇå çròššòvér"),
         "shrineProductSeaTunic":
-            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+            MessageLookupByLibrary.simpleMessage("Šéå tüṇîç"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
+            MessageLookupByLibrary.simpleMessage("Šéåbrééźé šwéåtér"),
         "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
+            MessageLookupByLibrary.simpleMessage("Šħòüłdér ròłłš téé"),
         "shrineProductShrugBag":
-            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+            MessageLookupByLibrary.simpleMessage("Šħrüğ båğ"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
+            MessageLookupByLibrary.simpleMessage("Šòòtħé çéråmîç šét"),
         "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+            MessageLookupByLibrary.simpleMessage("Štéłłå šüṇğłåššéš"),
         "shrineProductStrutEarrings":
-            MessageLookupByLibrary.simpleMessage("Strut earrings"),
+            MessageLookupByLibrary.simpleMessage("Štrüt éårrîṇğš"),
         "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+            MessageLookupByLibrary.simpleMessage("Šüççüłéṇt płåṇtérš"),
         "shrineProductSunshirtDress":
-            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+            MessageLookupByLibrary.simpleMessage("Šüṇšħîrt dréšš"),
         "shrineProductSurfAndPerfShirt":
-            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+            MessageLookupByLibrary.simpleMessage("Šürf åṇd pérf šħîrt"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+            MessageLookupByLibrary.simpleMessage("Våğåbòṇd šåçk"),
         "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+            MessageLookupByLibrary.simpleMessage("Våršîtÿ šòçkš"),
         "shrineProductWalterHenleyWhite":
-            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+            MessageLookupByLibrary.simpleMessage("Wåłtér ħéṇłéÿ (wħîté)"),
         "shrineProductWeaveKeyring":
-            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+            MessageLookupByLibrary.simpleMessage("Wéåvé kéÿrîṇğ"),
         "shrineProductWhitePinstripeShirt":
-            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+            MessageLookupByLibrary.simpleMessage("Wħîté pîṇštrîpé šħîrt"),
         "shrineProductWhitneyBelt":
-            MessageLookupByLibrary.simpleMessage("Whitney belt"),
+            MessageLookupByLibrary.simpleMessage("Wħîtṇéÿ béłt"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m12,
+        "starterAppDrawerItem": m5,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("BUTTON"),

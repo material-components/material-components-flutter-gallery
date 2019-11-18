@@ -948,51 +948,51 @@
   <string
     name="shrineMenuCaption"
     description="Caption for a menu page."
-    >MENU</string>
+    >MÉṆÜ</string>
   <string
     name="shrineCategoryNameAll"
     description="A tab showing products from all categories."
-    >All</string>
+    >Åłł</string>
   <string
     name="shrineCategoryNameAccessories"
     description="A category of products consisting of accessories (clothing items)."
-    >Accessories</string>
+    >Åççéššòrîéš</string>
   <string
     name="shrineCategoryNameClothing"
     description="A category of products consisting of clothing."
-    >Clothing</string>
+    >Çłòtħîṇğ</string>
   <string
     name="shrineCategoryNameHome"
     description="A category of products consisting of items used at home."
-    >Home</string>
+    >Ħòmé</string>
   <string
     name="shrineLogoutButtonCaption"
     description="Label for a logout button."
-    >LOGOUT</string>
+    >ŁÒĞÒÜT</string>
   <string
     name="shrineLoginUsernameLabel"
     description="On the login screen, a label for a textfield for the user to input their username."
-    >Username</string>
+    >Üšérṇåmé</string>
   <string
     name="shrineLoginPasswordLabel"
     description="On the login screen, a label for a textfield for the user to input their password."
-    >Password</string>
+    >Påššwòrd</string>
   <string
     name="shrineCancelButtonCaption"
     description="On the login screen, the caption for a button to cancel login."
-    >CANCEL</string>
+    >ÇÅṆÇÉŁ</string>
   <string
     name="shrineNextButtonCaption"
     description="On the login screen, the caption for a button to proceed login."
-    >NEXT</string>
+    >ṆÉXT</string>
   <string
     name="shrineCartPageCaption"
     description="Caption for a shopping cart page."
-    >CART</string>
+    >ÇÅRT</string>
   <string
     name="shrineProductQuantity"
     description="A text showing the number of items for a specific product."
-    >Quantity: {quantity}</string>
+    >Qüåṇtîtÿ: {quantity}</string>
   <string
     name="shrineProductPrice"
     description="A text showing the unit price of each product. Used as: &apos;Quantity: 3 x $129&apos;. The currency will be handled by the formatter."
@@ -1000,173 +1000,173 @@
   <string
     name="shrineCartItemCount"
     description="A text showing the total number of items in the cart."
-    >{quantity} ITEMS</string>
+    >{quantity} ÎTÉMŠ</string>
   <string
     name="shrineCartClearButtonCaption"
     description="Caption for a button used to clear the cart."
-    >CLEAR CART</string>
+    >ÇŁÉÅR ÇÅRT</string>
   <string
     name="shrineCartTotalCaption"
     description="Label for a text showing total price of the items in the cart."
-    >TOTAL</string>
+    >TÒTÅŁ</string>
   <string
     name="shrineCartSubtotalCaption"
     description="Label for a text showing the subtotal price of the items in the cart (excluding shipping and tax)."
-    >Subtotal:</string>
+    >Šübtòtåł:</string>
   <string
     name="shrineCartShippingCaption"
     description="Label for a text showing the shipping cost for the items in the cart."
-    >Shipping:</string>
+    >Šħîppîṇğ:</string>
   <string
     name="shrineCartTaxCaption"
     description="Label for a text showing the tax for the items in the cart."
-    >Tax:</string>
+    >Tåx:</string>
   <string
     name="shrineProductVagabondSack"
     description="Name of the product &apos;Vagabond sack&apos;."
-    >Vagabond sack</string>
+    >Våğåbòṇd šåçk</string>
   <string
     name="shrineProductStellaSunglasses"
     description="Name of the product &apos;Stella sunglasses&apos;."
-    >Stella sunglasses</string>
+    >Štéłłå šüṇğłåššéš</string>
   <string
     name="shrineProductWhitneyBelt"
     description="Name of the product &apos;Whitney belt&apos;."
-    >Whitney belt</string>
+    >Wħîtṇéÿ béłt</string>
   <string
     name="shrineProductGardenStrand"
     description="Name of the product &apos;Garden strand&apos;."
-    >Garden strand</string>
+    >Ğårdéṇ štråṇd</string>
   <string
     name="shrineProductStrutEarrings"
     description="Name of the product &apos;Strut earrings&apos;."
-    >Strut earrings</string>
+    >Štrüt éårrîṇğš</string>
   <string
     name="shrineProductVarsitySocks"
     description="Name of the product &apos;Varsity socks&apos;."
-    >Varsity socks</string>
+    >Våršîtÿ šòçkš</string>
   <string
     name="shrineProductWeaveKeyring"
     description="Name of the product &apos;Weave keyring&apos;."
-    >Weave keyring</string>
+    >Wéåvé kéÿrîṇğ</string>
   <string
     name="shrineProductGatsbyHat"
     description="Name of the product &apos;Gatsby hat&apos;."
-    >Gatsby hat</string>
+    >Ğåtšbÿ ħåt</string>
   <string
     name="shrineProductShrugBag"
     description="Name of the product &apos;Shrug bag&apos;."
-    >Shrug bag</string>
+    >Šħrüğ båğ</string>
   <string
     name="shrineProductGiltDeskTrio"
     description="Name of the product &apos;Gilt desk trio&apos;."
-    >Gilt desk trio</string>
+    >Ğîłt déšk trîò</string>
   <string
     name="shrineProductCopperWireRack"
     description="Name of the product &apos;Copper wire rack&apos;."
-    >Copper wire rack</string>
+    >Çòppér wîré råçk</string>
   <string
     name="shrineProductSootheCeramicSet"
     description="Name of the product &apos;Soothe ceramic set&apos;."
-    >Soothe ceramic set</string>
+    >Šòòtħé çéråmîç šét</string>
   <string
     name="shrineProductHurrahsTeaSet"
     description="Name of the product &apos;Hurrahs tea set&apos;."
-    >Hurrahs tea set</string>
+    >Ħürråħš téå šét</string>
   <string
     name="shrineProductBlueStoneMug"
     description="Name of the product &apos;Blue stone mug&apos;."
-    >Blue stone mug</string>
+    >Błüé štòṇé müğ</string>
   <string
     name="shrineProductRainwaterTray"
     description="Name of the product &apos;Rainwater tray&apos;."
-    >Rainwater tray</string>
+    >Råîṇwåtér tråÿ</string>
   <string
     name="shrineProductChambrayNapkins"
     description="Name of the product &apos;Chambray napkins&apos;."
-    >Chambray napkins</string>
+    >Çħåmbråÿ ṇåpkîṇš</string>
   <string
     name="shrineProductSucculentPlanters"
     description="Name of the product &apos;Succulent planters&apos;."
-    >Succulent planters</string>
+    >Šüççüłéṇt płåṇtérš</string>
   <string
     name="shrineProductQuartetTable"
     description="Name of the product &apos;Quartet table&apos;."
-    >Quartet table</string>
+    >Qüårtét tåbłé</string>
   <string
     name="shrineProductKitchenQuattro"
     description="Name of the product &apos;Kitchen quattro&apos;."
-    >Kitchen quattro</string>
+    >Kîtçħéṇ qüåttrò</string>
   <string
     name="shrineProductClaySweater"
     description="Name of the product &apos;Clay sweater&apos;."
-    >Clay sweater</string>
+    >Çłåÿ šwéåtér</string>
   <string
     name="shrineProductSeaTunic"
     description="Name of the product &apos;Sea tunic&apos;."
-    >Sea tunic</string>
+    >Šéå tüṇîç</string>
   <string
     name="shrineProductPlasterTunic"
     description="Name of the product &apos;Plaster tunic&apos;."
-    >Plaster tunic</string>
+    >Płåštér tüṇîç</string>
   <string
     name="shrineProductWhitePinstripeShirt"
     description="Name of the product &apos;White pinstripe shirt&apos;."
-    >White pinstripe shirt</string>
+    >Wħîté pîṇštrîpé šħîrt</string>
   <string
     name="shrineProductChambrayShirt"
     description="Name of the product &apos;Chambray shirt&apos;."
-    >Chambray shirt</string>
+    >Çħåmbråÿ šħîrt</string>
   <string
     name="shrineProductSeabreezeSweater"
     description="Name of the product &apos;Seabreeze sweater&apos;."
-    >Seabreeze sweater</string>
+    >Šéåbrééźé šwéåtér</string>
   <string
     name="shrineProductGentryJacket"
     description="Name of the product &apos;Gentry jacket&apos;."
-    >Gentry jacket</string>
+    >Ğéṇtrÿ jåçkét</string>
   <string
     name="shrineProductNavyTrousers"
     description="Name of the product &apos;Navy trousers&apos;."
-    >Navy trousers</string>
+    >Ṇåvÿ tròüšérš</string>
   <string
     name="shrineProductWalterHenleyWhite"
     description="Name of the product &apos;Walter henley (white)&apos;."
-    >Walter henley (white)</string>
+    >Wåłtér ħéṇłéÿ (wħîté)</string>
   <string
     name="shrineProductSurfAndPerfShirt"
     description="Name of the product &apos;Surf and perf shirt&apos;."
-    >Surf and perf shirt</string>
+    >Šürf åṇd pérf šħîrt</string>
   <string
     name="shrineProductGingerScarf"
     description="Name of the product &apos;Ginger scarf&apos;."
-    >Ginger scarf</string>
+    >Ğîṇğér šçårf</string>
   <string
     name="shrineProductRamonaCrossover"
     description="Name of the product &apos;Ramona crossover&apos;."
-    >Ramona crossover</string>
+    >Råmòṇå çròššòvér</string>
   <string
     name="shrineProductClassicWhiteCollar"
     description="Name of the product &apos;Classic white collar&apos;."
-    >Classic white collar</string>
+    >Çłåššîç wħîté çòłłår</string>
   <string
     name="shrineProductCeriseScallopTee"
     description="Name of the product &apos;Cerise scallop tee&apos;."
-    >Cerise scallop tee</string>
+    >Çérîšé šçåłłòp téé</string>
   <string
     name="shrineProductShoulderRollsTee"
     description="Name of the product &apos;Shoulder rolls tee&apos;."
-    >Shoulder rolls tee</string>
+    >Šħòüłdér ròłłš téé</string>
   <string
     name="shrineProductGreySlouchTank"
     description="Name of the product &apos;Grey slouch tank&apos;."
-    >Grey slouch tank</string>
+    >Ğréÿ šłòüçħ tåṇk</string>
   <string
     name="shrineProductSunshirtDress"
     description="Name of the product &apos;Sunshirt dress&apos;."
-    >Sunshirt dress</string>
+    >Šüṇšħîrt dréšš</string>
   <string
     name="shrineProductFineLinesTee"
     description="Name of the product &apos;Fine lines tee&apos;."
-    >Fine lines tee</string>
+    >Fîṇé łîṇéš téé</string>
 </resources>

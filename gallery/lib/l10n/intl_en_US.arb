@@ -989,51 +989,51 @@
       }
     }
   },
-  "shrineMenuCaption": "MENU",
+  "shrineMenuCaption": "MÉṆÜ",
   "@shrineMenuCaption": {
     "description": "Caption for a menu page."
   },
-  "shrineCategoryNameAll": "All",
+  "shrineCategoryNameAll": "Åłł",
   "@shrineCategoryNameAll": {
     "description": "A tab showing products from all categories."
   },
-  "shrineCategoryNameAccessories": "Accessories",
+  "shrineCategoryNameAccessories": "Åççéššòrîéš",
   "@shrineCategoryNameAccessories": {
     "description": "A category of products consisting of accessories (clothing items)."
   },
-  "shrineCategoryNameClothing": "Clothing",
+  "shrineCategoryNameClothing": "Çłòtħîṇğ",
   "@shrineCategoryNameClothing": {
     "description": "A category of products consisting of clothing."
   },
-  "shrineCategoryNameHome": "Home",
+  "shrineCategoryNameHome": "Ħòmé",
   "@shrineCategoryNameHome": {
     "description": "A category of products consisting of items used at home."
   },
-  "shrineLogoutButtonCaption": "LOGOUT",
+  "shrineLogoutButtonCaption": "ŁÒĞÒÜT",
   "@shrineLogoutButtonCaption": {
     "description": "Label for a logout button."
   },
-  "shrineLoginUsernameLabel": "Username",
+  "shrineLoginUsernameLabel": "Üšérṇåmé",
   "@shrineLoginUsernameLabel": {
     "description": "On the login screen, a label for a textfield for the user to input their username."
   },
-  "shrineLoginPasswordLabel": "Password",
+  "shrineLoginPasswordLabel": "Påššwòrd",
   "@shrineLoginPasswordLabel": {
     "description": "On the login screen, a label for a textfield for the user to input their password."
   },
-  "shrineCancelButtonCaption": "CANCEL",
+  "shrineCancelButtonCaption": "ÇÅṆÇÉŁ",
   "@shrineCancelButtonCaption": {
     "description": "On the login screen, the caption for a button to cancel login."
   },
-  "shrineNextButtonCaption": "NEXT",
+  "shrineNextButtonCaption": "ṆÉXT",
   "@shrineNextButtonCaption": {
     "description": "On the login screen, the caption for a button to proceed login."
   },
-  "shrineCartPageCaption": "CART",
+  "shrineCartPageCaption": "ÇÅRT",
   "@shrineCartPageCaption": {
     "description": "Caption for a shopping cart page."
   },
-  "shrineProductQuantity": "Quantity: {quantity}",
+  "shrineProductQuantity": "Qüåṇtîtÿ: {quantity}",
   "@shrineProductQuantity": {
     "description": "A text showing the number of items for a specific product.",
     "placeholders": {
@@ -1051,7 +1051,7 @@
       }
     }
   },
-  "shrineCartItemCount": "{quantity} ITEMS",
+  "shrineCartItemCount": "{quantity} ÎTÉMŠ",
   "@shrineCartItemCount": {
     "description": "A text showing the total number of items in the cart.",
     "placeholders": {
@@ -1060,175 +1060,175 @@
       }
     }
   },
-  "shrineCartClearButtonCaption": "CLEAR CART",
+  "shrineCartClearButtonCaption": "ÇŁÉÅR ÇÅRT",
   "@shrineCartClearButtonCaption": {
     "description": "Caption for a button used to clear the cart."
   },
-  "shrineCartTotalCaption": "TOTAL",
+  "shrineCartTotalCaption": "TÒTÅŁ",
   "@shrineCartTotalCaption": {
     "description": "Label for a text showing total price of the items in the cart."
   },
-  "shrineCartSubtotalCaption": "Subtotal:",
+  "shrineCartSubtotalCaption": "Šübtòtåł:",
   "@shrineCartSubtotalCaption": {
     "description": "Label for a text showing the subtotal price of the items in the cart (excluding shipping and tax)."
   },
-  "shrineCartShippingCaption": "Shipping:",
+  "shrineCartShippingCaption": "Šħîppîṇğ:",
   "@shrineCartShippingCaption": {
     "description": "Label for a text showing the shipping cost for the items in the cart."
   },
-  "shrineCartTaxCaption": "Tax:",
+  "shrineCartTaxCaption": "Tåx:",
   "@shrineCartTaxCaption": {
     "description": "Label for a text showing the tax for the items in the cart."
   },
-  "shrineProductVagabondSack": "Vagabond sack",
+  "shrineProductVagabondSack": "Våğåbòṇd šåçk",
   "@shrineProductVagabondSack": {
     "description": "Name of the product 'Vagabond sack'."
   },
-  "shrineProductStellaSunglasses": "Stella sunglasses",
+  "shrineProductStellaSunglasses": "Štéłłå šüṇğłåššéš",
   "@shrineProductStellaSunglasses": {
     "description": "Name of the product 'Stella sunglasses'."
   },
-  "shrineProductWhitneyBelt": "Whitney belt",
+  "shrineProductWhitneyBelt": "Wħîtṇéÿ béłt",
   "@shrineProductWhitneyBelt": {
     "description": "Name of the product 'Whitney belt'."
   },
-  "shrineProductGardenStrand": "Garden strand",
+  "shrineProductGardenStrand": "Ğårdéṇ štråṇd",
   "@shrineProductGardenStrand": {
     "description": "Name of the product 'Garden strand'."
   },
-  "shrineProductStrutEarrings": "Strut earrings",
+  "shrineProductStrutEarrings": "Štrüt éårrîṇğš",
   "@shrineProductStrutEarrings": {
     "description": "Name of the product 'Strut earrings'."
   },
-  "shrineProductVarsitySocks": "Varsity socks",
+  "shrineProductVarsitySocks": "Våršîtÿ šòçkš",
   "@shrineProductVarsitySocks": {
     "description": "Name of the product 'Varsity socks'."
   },
-  "shrineProductWeaveKeyring": "Weave keyring",
+  "shrineProductWeaveKeyring": "Wéåvé kéÿrîṇğ",
   "@shrineProductWeaveKeyring": {
     "description": "Name of the product 'Weave keyring'."
   },
-  "shrineProductGatsbyHat": "Gatsby hat",
+  "shrineProductGatsbyHat": "Ğåtšbÿ ħåt",
   "@shrineProductGatsbyHat": {
     "description": "Name of the product 'Gatsby hat'."
   },
-  "shrineProductShrugBag": "Shrug bag",
+  "shrineProductShrugBag": "Šħrüğ båğ",
   "@shrineProductShrugBag": {
     "description": "Name of the product 'Shrug bag'."
   },
-  "shrineProductGiltDeskTrio": "Gilt desk trio",
+  "shrineProductGiltDeskTrio": "Ğîłt déšk trîò",
   "@shrineProductGiltDeskTrio": {
     "description": "Name of the product 'Gilt desk trio'."
   },
-  "shrineProductCopperWireRack": "Copper wire rack",
+  "shrineProductCopperWireRack": "Çòppér wîré råçk",
   "@shrineProductCopperWireRack": {
     "description": "Name of the product 'Copper wire rack'."
   },
-  "shrineProductSootheCeramicSet": "Soothe ceramic set",
+  "shrineProductSootheCeramicSet": "Šòòtħé çéråmîç šét",
   "@shrineProductSootheCeramicSet": {
     "description": "Name of the product 'Soothe ceramic set'."
   },
-  "shrineProductHurrahsTeaSet": "Hurrahs tea set",
+  "shrineProductHurrahsTeaSet": "Ħürråħš téå šét",
   "@shrineProductHurrahsTeaSet": {
     "description": "Name of the product 'Hurrahs tea set'."
   },
-  "shrineProductBlueStoneMug": "Blue stone mug",
+  "shrineProductBlueStoneMug": "Błüé štòṇé müğ",
   "@shrineProductBlueStoneMug": {
     "description": "Name of the product 'Blue stone mug'."
   },
-  "shrineProductRainwaterTray": "Rainwater tray",
+  "shrineProductRainwaterTray": "Råîṇwåtér tråÿ",
   "@shrineProductRainwaterTray": {
     "description": "Name of the product 'Rainwater tray'."
   },
-  "shrineProductChambrayNapkins": "Chambray napkins",
+  "shrineProductChambrayNapkins": "Çħåmbråÿ ṇåpkîṇš",
   "@shrineProductChambrayNapkins": {
     "description": "Name of the product 'Chambray napkins'."
   },
-  "shrineProductSucculentPlanters": "Succulent planters",
+  "shrineProductSucculentPlanters": "Šüççüłéṇt płåṇtérš",
   "@shrineProductSucculentPlanters": {
     "description": "Name of the product 'Succulent planters'."
   },
-  "shrineProductQuartetTable": "Quartet table",
+  "shrineProductQuartetTable": "Qüårtét tåbłé",
   "@shrineProductQuartetTable": {
     "description": "Name of the product 'Quartet table'."
   },
-  "shrineProductKitchenQuattro": "Kitchen quattro",
+  "shrineProductKitchenQuattro": "Kîtçħéṇ qüåttrò",
   "@shrineProductKitchenQuattro": {
     "description": "Name of the product 'Kitchen quattro'."
   },
-  "shrineProductClaySweater": "Clay sweater",
+  "shrineProductClaySweater": "Çłåÿ šwéåtér",
   "@shrineProductClaySweater": {
     "description": "Name of the product 'Clay sweater'."
   },
-  "shrineProductSeaTunic": "Sea tunic",
+  "shrineProductSeaTunic": "Šéå tüṇîç",
   "@shrineProductSeaTunic": {
     "description": "Name of the product 'Sea tunic'."
   },
-  "shrineProductPlasterTunic": "Plaster tunic",
+  "shrineProductPlasterTunic": "Płåštér tüṇîç",
   "@shrineProductPlasterTunic": {
     "description": "Name of the product 'Plaster tunic'."
   },
-  "shrineProductWhitePinstripeShirt": "White pinstripe shirt",
+  "shrineProductWhitePinstripeShirt": "Wħîté pîṇštrîpé šħîrt",
   "@shrineProductWhitePinstripeShirt": {
     "description": "Name of the product 'White pinstripe shirt'."
   },
-  "shrineProductChambrayShirt": "Chambray shirt",
+  "shrineProductChambrayShirt": "Çħåmbråÿ šħîrt",
   "@shrineProductChambrayShirt": {
     "description": "Name of the product 'Chambray shirt'."
   },
-  "shrineProductSeabreezeSweater": "Seabreeze sweater",
+  "shrineProductSeabreezeSweater": "Šéåbrééźé šwéåtér",
   "@shrineProductSeabreezeSweater": {
     "description": "Name of the product 'Seabreeze sweater'."
   },
-  "shrineProductGentryJacket": "Gentry jacket",
+  "shrineProductGentryJacket": "Ğéṇtrÿ jåçkét",
   "@shrineProductGentryJacket": {
     "description": "Name of the product 'Gentry jacket'."
   },
-  "shrineProductNavyTrousers": "Navy trousers",
+  "shrineProductNavyTrousers": "Ṇåvÿ tròüšérš",
   "@shrineProductNavyTrousers": {
     "description": "Name of the product 'Navy trousers'."
   },
-  "shrineProductWalterHenleyWhite": "Walter henley (white)",
+  "shrineProductWalterHenleyWhite": "Wåłtér ħéṇłéÿ (wħîté)",
   "@shrineProductWalterHenleyWhite": {
     "description": "Name of the product 'Walter henley (white)'."
   },
-  "shrineProductSurfAndPerfShirt": "Surf and perf shirt",
+  "shrineProductSurfAndPerfShirt": "Šürf åṇd pérf šħîrt",
   "@shrineProductSurfAndPerfShirt": {
     "description": "Name of the product 'Surf and perf shirt'."
   },
-  "shrineProductGingerScarf": "Ginger scarf",
+  "shrineProductGingerScarf": "Ğîṇğér šçårf",
   "@shrineProductGingerScarf": {
     "description": "Name of the product 'Ginger scarf'."
   },
-  "shrineProductRamonaCrossover": "Ramona crossover",
+  "shrineProductRamonaCrossover": "Råmòṇå çròššòvér",
   "@shrineProductRamonaCrossover": {
     "description": "Name of the product 'Ramona crossover'."
   },
-  "shrineProductChambrayShirt": "Chambray shirt",
+  "shrineProductChambrayShirt": "Çħåmbråÿ šħîrt",
   "@shrineProductChambrayShirt": {
     "description": "Name of the product 'Chambray shirt'."
   },
-  "shrineProductClassicWhiteCollar": "Classic white collar",
+  "shrineProductClassicWhiteCollar": "Çłåššîç wħîté çòłłår",
   "@shrineProductClassicWhiteCollar": {
     "description": "Name of the product 'Classic white collar'."
   },
-  "shrineProductCeriseScallopTee": "Cerise scallop tee",
+  "shrineProductCeriseScallopTee": "Çérîšé šçåłłòp téé",
   "@shrineProductCeriseScallopTee": {
     "description": "Name of the product 'Cerise scallop tee'."
   },
-  "shrineProductShoulderRollsTee": "Shoulder rolls tee",
+  "shrineProductShoulderRollsTee": "Šħòüłdér ròłłš téé",
   "@shrineProductShoulderRollsTee": {
     "description": "Name of the product 'Shoulder rolls tee'."
   },
-  "shrineProductGreySlouchTank": "Grey slouch tank",
+  "shrineProductGreySlouchTank": "Ğréÿ šłòüçħ tåṇk",
   "@shrineProductGreySlouchTank": {
     "description": "Name of the product 'Grey slouch tank'."
   },
-  "shrineProductSunshirtDress": "Sunshirt dress",
+  "shrineProductSunshirtDress": "Šüṇšħîrt dréšš",
   "@shrineProductSunshirtDress": {
     "description": "Name of the product 'Sunshirt dress'."
   },
-  "shrineProductFineLinesTee": "Fine lines tee",
+  "shrineProductFineLinesTee": "Fîṇé łîṇéš téé",
   "@shrineProductFineLinesTee": {
     "description": "Name of the product 'Fine lines tee'."
   }
