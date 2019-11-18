@@ -5,6 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../constants.dart';
 import '../data/demos.dart';
 import '../l10n/gallery_localizations.dart';
 import '../layout/adaptive.dart';
@@ -287,7 +288,11 @@ class _DemoSectionOptions extends StatelessWidget {
           ),
           child: Text(
             GalleryLocalizations.of(context).demoOptionsTooltip,
-            style: textTheme.display1.apply(color: colorScheme.onSurface),
+            style: textTheme.display1.apply(
+              color: colorScheme.onSurface,
+              fontSizeDelta:
+                  isDisplayDesktop(context) ? desktopDisplay1FontDelta : 0,
+            ),
           ),
         ),
         Divider(
@@ -385,7 +390,11 @@ class _DemoSectionInfo extends StatelessWidget {
           children: [
             Text(
               title,
-              style: textTheme.display1.apply(color: colorScheme.onSurface),
+              style: textTheme.display1.apply(
+                color: colorScheme.onSurface,
+                fontSizeDelta:
+                    isDisplayDesktop(context) ? desktopDisplay1FontDelta : 0,
+              ),
             ),
             SizedBox(height: 12),
             Text(

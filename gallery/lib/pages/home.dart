@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 
+import '../constants.dart';
 import '../data/demos.dart';
 import '../l10n/gallery_localizations.dart';
 import '../layout/adaptive.dart';
@@ -183,10 +184,10 @@ class HomePage extends StatelessWidget {
       ),
       child: Text(
         text,
-        //TODO: Have the theme handle Desktop font sizes
         style: Theme.of(context).textTheme.display1.apply(
               color: color,
-              fontSizeDelta: 16,
+              fontSizeDelta:
+                  isDisplayDesktop(context) ? desktopDisplay1FontDelta : 0,
             ),
       ),
     );

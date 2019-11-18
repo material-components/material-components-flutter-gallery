@@ -5,7 +5,6 @@
 import 'package:flutter/material.dart';
 
 class GalleryThemeData {
-  /// TODO: Replace fillColor and brightness with actual requirements.
   static const _lightFillColor = Colors.black;
   static const _darkFillColor = Colors.white;
 
