@@ -26,14 +26,14 @@ class _TextStyleItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(
             width: 72,
             child: Text(name, style: Theme.of(context).textTheme.caption),
           ),
           Expanded(
-            child: Text(text, style: style.copyWith(height: 1)),
+            child: Text(text, style: style),
           ),
         ],
       ),

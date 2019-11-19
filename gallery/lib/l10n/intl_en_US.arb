@@ -555,7 +555,7 @@
   },
   "demoColorsDescription": "Color and color swatch constants which represent Material Design's color palette.",
   "@demoColorsDescription": {
-    "description": "Description for the colors demo."
+    "description": "Description for the colors demo. Material Design should remain capitalized."
   },
   "demoTypographyTitle": "Typography",
   "@demoTypographyTitle": {
@@ -567,7 +567,7 @@
   },
   "demoTypographyDescription": "Definitions for the various typographical styles found in Material Design.",
   "@demoTypographyDescription": {
-    "description": "Description for the typography demo."
+    "description": "Description for the typography demo. Material Design should remain capitalized."
   },
   "buttonText": "BUTTON",
   "@buttonText": {

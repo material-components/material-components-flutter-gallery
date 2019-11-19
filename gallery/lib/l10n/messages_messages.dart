@@ -83,9 +83,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "Chocolate Brownie":
             MessageLookupByLibrary.simpleMessage("Chocolate Brownie"),
         "Code Sample": MessageLookupByLibrary.simpleMessage("Code Sample"),
-        "Color and color swatch constants which represent Material design\'s color palette.":
+        "Color and color swatch constants which represent Material Design\'s color palette.":
             MessageLookupByLibrary.simpleMessage(
-                "Color and color swatch constants which represent Material design\'s color palette."),
+                "Color and color swatch constants which represent Material Design\'s color palette."),
         "Colors": MessageLookupByLibrary.simpleMessage("Colors"),
         "Couldn\'t display URL:":
             MessageLookupByLibrary.simpleMessage("Couldn\'t display URL:"),

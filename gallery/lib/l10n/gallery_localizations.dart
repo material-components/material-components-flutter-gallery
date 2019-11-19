@@ -804,7 +804,8 @@ class GalleryLocalizations {
         r's color palette.',
         locale: _localeName,
         name: 'demoColorsDescription',
-        desc: r'Description for the colors demo.');
+        desc:
+            r'Description for the colors demo. Material Design should remain capitalized.');
   }
 
   String get demoColorsSubtitle {
@@ -1304,7 +1305,8 @@ class GalleryLocalizations {
         r'Definitions for the various typographical styles found in Material Design.',
         locale: _localeName,
         name: 'demoTypographyDescription',
-        desc: r'Description for the typography demo.');
+        desc:
+            r'Description for the typography demo. Material Design should remain capitalized.');
   }
 
   String get demoTypographySubtitle {

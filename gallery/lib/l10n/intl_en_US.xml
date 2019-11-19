@@ -543,7 +543,7 @@
     >All of the predefined colors</string>
   <string
     name="demoColorsDescription"
-    description="Description for the colors demo."
+    description="Description for the colors demo. Material Design should remain capitalized."
     >Color and color swatch constants which represent Material Design&apos;s color palette.</string>
   <string
     name="demoTypographyTitle"
@@ -555,7 +555,7 @@
     >All of the predefined text styles</string>
   <string
     name="demoTypographyDescription"
-    description="Description for the typography demo."
+    description="Description for the typography demo. Material Design should remain capitalized."
     >Definitions for the various typographical styles found in Material Design.</string>
   <string
     name="buttonText"
