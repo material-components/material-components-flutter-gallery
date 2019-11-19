@@ -103,6 +103,7 @@ class _BottomNavigationDemoState extends State<BottomNavigationDemo>
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
 
     var bottomNavigationBarItems = _navigationViews
         .map<BottomNavigationBarItem>((navigationView) => navigationView.item)
@@ -127,6 +128,8 @@ class _BottomNavigationDemoState extends State<BottomNavigationDemo>
         items: bottomNavigationBarItems,
         currentIndex: _currentIndex,
         type: BottomNavigationBarType.fixed,
+        selectedFontSize: textTheme.caption.fontSize,
+        unselectedFontSize: textTheme.caption.fontSize,
         onTap: (index) {
           setState(() {
             _navigationViews[_currentIndex].controller.reverse();
@@ -169,41 +172,33 @@ class _NavigationIconView {
   FadeTransition transition(BuildContext context) {
     return FadeTransition(
       opacity: _animation,
-      child: SlideTransition(
-        position: _animation.drive(
-          Tween<Offset>(
-            begin: const Offset(0.0, 0.02), // Slightly down.
-            end: Offset.zero,
+      child: Stack(
+        children: [
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.all(16),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Image.asset(
+                  'assets/demos/bottom_navigation_background.png',
+                ),
+              ),
+            ),
           ),
-        ),
-        child: Stack(
-          children: [
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: Image.asset(
-                    'assets/demos/bottom_navigation_background.png',
-                  ),
-                ),
+          Center(
+            child: IconTheme(
+              data: IconThemeData(
+                color: Colors.white,
+                size: 80,
+              ),
+              child: Semantics(
+                label: GalleryLocalizations.of(context)
+                    .bottomNavigationContentPlaceholder(title),
+                child: icon,
               ),
             ),
-            Center(
-              child: IconTheme(
-                data: IconThemeData(
-                  color: Colors.white,
-                  size: 80,
-                ),
-                child: Semantics(
-                  label: GalleryLocalizations.of(context)
-                      .bottomNavigationContentPlaceholder(title),
-                  child: icon,
-                ),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
