@@ -24,29 +24,35 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m1(title) => "Placeholder for ${title} tab";
 
+  static m6(totalRestaurants) => "${totalRestaurants} Restaurants";
+
+  static m7(numberOfStops) => "${numberOfStops} stops";
+
+  static m8(totalProperties) => "${totalProperties} Available Properties";
+
   static m2(value) => "Item ${value}";
 
   static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
 
   static m4(value) => "You selected: \"${value}\"";
 
-  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m9(amount) => "You’ve spent ${amount} in ATM fees this month";
 
-  static m6(percent) =>
+  static m10(percent) =>
       "Good work! Your checking account is ${percent} higher than last month.";
 
-  static m7(percent) =>
+  static m11(percent) =>
       "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
 
-  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m12(amount) => "You’ve spent ${amount} on Restaurants this week.";
 
-  static m9(quantity) => "${quantity} ITEMS";
+  static m13(quantity) => "${quantity} ITEMS";
 
-  static m10(price) => "x ${price}";
+  static m14(price) => "x ${price}";
 
-  static m11(quantity) => "Quantity: ${quantity}";
+  static m15(quantity) => "Quantity: ${quantity}";
 
-  static m12(value) => "Item ${value}";
+  static m5(value) => "Item ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -96,6 +102,84 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsYellow": MessageLookupByLibrary.simpleMessage("YELLOW"),
         "craneDescription":
             MessageLookupByLibrary.simpleMessage("A personalized travel app"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
+        "craneEat1":
+            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
+        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
+        "craneEat3":
+            MessageLookupByLibrary.simpleMessage("Portland, United States"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
+        "craneEat6":
+            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
+        "craneEat7":
+            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
+        "craneEat8":
+            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneEatRestaurants": m6,
+        "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
+            "Explore Restaurants by Destination"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
+        "craneFly0":
+            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
+        "craneFly1":
+            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
+        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneFly12":
+            MessageLookupByLibrary.simpleMessage("Napa, United States"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+        "craneFly2":
+            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneFly5":
+            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneFly7": MessageLookupByLibrary.simpleMessage(
+            "Mount Rushmore, United States"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneFlyMultipleStops": m7,
+        "craneFlyNonstop": MessageLookupByLibrary.simpleMessage("Nonstop"),
+        "craneFlyOneStop": MessageLookupByLibrary.simpleMessage("1 stop"),
+        "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
+            "Explore Flights by Destination"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
+        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+        "craneFormDestination":
+            MessageLookupByLibrary.simpleMessage("Choose Destination"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+        "craneFormLocation":
+            MessageLookupByLibrary.simpleMessage("Select Location"),
+        "craneFormOrigin":
+            MessageLookupByLibrary.simpleMessage("Choose Origin"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneSleep1":
+            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+        "craneSleep2":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneSleep4":
+            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
+        "craneSleep5":
+            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
+        "craneSleep6":
+            MessageLookupByLibrary.simpleMessage("Napa, United States"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
+        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneSleepProperties": m8,
+        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
+            "Explore Properties by Destination"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("Allow"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("Apple Pie"),
@@ -353,10 +437,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m5,
-        "rallyAlertsMessageCheckingAccount": m6,
-        "rallyAlertsMessageHeadsUpShopping": m7,
-        "rallyAlertsMessageSpentOnRestaurants": m8,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
         "rallyBudgetCategoryClothing":
@@ -442,7 +526,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("CANCEL"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m9,
+        "shrineCartItemCount": m13,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Shipping:"),
@@ -502,8 +586,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Navy trousers"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m10,
-        "shrineProductQuantity": m11,
+        "shrineProductPrice": m14,
+        "shrineProductQuantity": m15,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Quartet table"),
         "shrineProductRainwaterTray":
@@ -544,7 +628,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m12,
+        "starterAppDrawerItem": m5,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("BUTTON"),

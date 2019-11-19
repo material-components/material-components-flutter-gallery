@@ -18,6 +18,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:meta/meta.dart';
 
+import '../../l10n/gallery_localizations.dart';
 import '../../layout/adaptive.dart';
 import 'border_tab_indicator.dart';
 import 'colors.dart';
@@ -92,11 +93,11 @@ class _ItemCardsState extends State<ItemCards> {
   }
 
   @override
-  void initState() {
-    flyDestinations = getFlyDestinations()..shuffle();
-    sleepDestinations = getSleepDestinations()..shuffle();
-    eatDestinations = getEatDestinations()..shuffle();
-    super.initState();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    flyDestinations = getFlyDestinations(context)..shuffle();
+    sleepDestinations = getSleepDestinations(context)..shuffle();
+    eatDestinations = getEatDestinations(context)..shuffle();
   }
 
   @override
@@ -249,24 +250,22 @@ class _BackdropState extends State<Backdrop> with TickerProviderStateMixin {
                     SlideTransition(
                       position: _flyLayerOffset,
                       child: _FrontLayer(
-                        // TODO: localize
-                        title: 'Explore Flights by Destination',
+                        title: GalleryLocalizations.of(context).craneFlySubhead,
                         index: 0,
                       ),
                     ),
                     SlideTransition(
                       position: _sleepLayerOffset,
                       child: _FrontLayer(
-                        // TODO: localize
-                        title: 'Explore Properties by Destination',
+                        title:
+                            GalleryLocalizations.of(context).craneSleepSubhead,
                         index: 1,
                       ),
                     ),
                     SlideTransition(
                       position: _eatLayerOffset,
                       child: _FrontLayer(
-                        // TODO: localize
-                        title: 'Explore Restaurants by Destination',
+                        title: GalleryLocalizations.of(context).craneEatSubhead,
                         index: 2,
                       ),
                     ),
@@ -351,22 +350,19 @@ class _CraneAppBarState extends State<CraneAppBar> {
                   isScrollable: isDesktop, // left-align tabs on web
                   tabs: [
                     _NavigationTab(
-                      // TODO: localize
-                      title: 'FLY',
+                      title: GalleryLocalizations.of(context).craneFly,
                       tabHandler: widget.tabHandler,
                       tabController: widget.tabController,
                       index: 0,
                     ),
                     _NavigationTab(
-                      // TODO: localize
-                      title: 'SLEEP',
+                      title: GalleryLocalizations.of(context).craneSleep,
                       tabHandler: widget.tabHandler,
                       tabController: widget.tabController,
                       index: 1,
                     ),
                     _NavigationTab(
-                      // TODO: localize
-                      title: 'EAT',
+                      title: GalleryLocalizations.of(context).craneEat,
                       tabHandler: widget.tabHandler,
                       tabController: widget.tabController,
                       index: 2,
@@ -458,7 +454,7 @@ class _DestinationCard extends StatelessWidget {
               ),
             ),
             Text(
-              destination.subtitle,
+              destination.subtitle(context),
               style: Theme.of(context).textTheme.subtitle,
             ),
           ],
@@ -481,7 +477,7 @@ class _DestinationCard extends StatelessWidget {
             title: Text(destination.destination,
                 style: Theme.of(context).textTheme.subhead),
             subtitle: Text(
-              destination.subtitle,
+              destination.subtitle(context),
               style: Theme.of(context).textTheme.subtitle,
             ),
           ),

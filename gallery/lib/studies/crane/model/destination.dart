@@ -13,6 +13,9 @@
 // limitations under the License.
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+
+import '../../../l10n/gallery_localizations.dart';
 
 abstract class Destination {
   const Destination({
@@ -26,7 +29,7 @@ abstract class Destination {
 
   String get assetName;
 
-  String get subtitle;
+  String subtitle(BuildContext context);
 
   @override
   String toString() => '$destination (id=$id)';
@@ -47,9 +50,13 @@ class FlyDestination extends Destination {
 
   String get assetName => 'assets/crane/destinations/fly_$id.png';
 
-  String get subtitle {
-    var stopsText =
-        stops == 0 ? 'Nonstop' : stops == 1 ? '1 stop' : '$stops stops';
+  String subtitle(BuildContext context) {
+    // TODO: use plural intl support when ready
+    var stopsText = stops == 0
+        ? GalleryLocalizations.of(context).craneFlyNonstop
+        : stops == 1
+            ? GalleryLocalizations.of(context).craneFlyOneStop
+            : GalleryLocalizations.of(context).craneFlyMultipleStops(stops);
     return duration == null ? stopsText : '$stopsText · $duration';
   }
 }
@@ -67,8 +74,8 @@ class SleepDestination extends Destination {
 
   String get assetName => 'assets/crane/destinations/sleep_$id.png';
 
-  String get subtitle {
-    return '$total Available Properties';
+  String subtitle(BuildContext context) {
+    return GalleryLocalizations.of(context).craneSleepProperties(total);
   }
 }
 
@@ -85,7 +92,7 @@ class EatDestination extends Destination {
 
   String get assetName => 'assets/crane/destinations/eat_$id.png';
 
-  String get subtitle {
-    return '$total Restaurants';
+  String subtitle(BuildContext context) {
+    return GalleryLocalizations.of(context).craneEatRestaurants(total);
   }
 }

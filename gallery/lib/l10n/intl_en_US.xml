@@ -1241,4 +1241,228 @@
     name="shrineProductFineLinesTee"
     description="Name of the product &apos;Fine lines tee&apos;."
     >Fine lines tee</string>
+  <string
+    name="craneFormDiners"
+    description="Form field label to enter the number of diners."
+    >Diners</string>
+  <string
+    name="craneFormDate"
+    description="Form field label to select a date."
+    >Select Date</string>
+  <string
+    name="craneFormTime"
+    description="Form field label to select a time."
+    >Select Time</string>
+  <string
+    name="craneFormLocation"
+    description="Form field label to select a location."
+    >Select Location</string>
+  <string
+    name="craneFormTravelers"
+    description="Form field label to select the number of travellers."
+    >Travelers</string>
+  <string
+    name="craneFormOrigin"
+    description="Form field label to choose a travel origin."
+    >Choose Origin</string>
+  <string
+    name="craneFormDestination"
+    description="Form field label to choose a travel destination."
+    >Choose Destination</string>
+  <string
+    name="craneFormDates"
+    description="Form field label to select multiple dates."
+    >Select Dates</string>
+  <string
+    name="craneFly"
+    description="Title for FLY tab."
+    >FLY</string>
+  <string
+    name="craneSleep"
+    description="Title for SLEEP tab."
+    >SLEEP</string>
+  <string
+    name="craneEat"
+    description="Title for EAT tab."
+    >EAT</string>
+  <string
+    name="craneFlySubhead"
+    description="Subhead for FLY tab."
+    >Explore Flights by Destination</string>
+  <string
+    name="craneSleepSubhead"
+    description="Subhead for SLEEP tab."
+    >Explore Properties by Destination</string>
+  <string
+    name="craneEatSubhead"
+    description="Subhead for EAT tab."
+    >Explore Restaurants by Destination</string>
+  <string
+    name="craneFlyNonstop"
+    description="Label indicating a nonstop flight."
+    >Nonstop</string>
+  <string
+    name="craneFlyOneStop"
+    description="Label indicating a flight with a single layover."
+    >1 stop</string>
+  <string
+    name="craneFlyMultipleStops"
+    description="Label indicating a flight with 2 or more layovers."
+    >{numberOfStops} stops</string>
+  <string
+    name="craneSleepProperties"
+    description="Text indicating the number of available properties (temporary rentals). Always plural"
+    >{totalProperties} Available Properties</string>
+  <string
+    name="craneEatRestaurants"
+    description="Text indicating the number of restaurants. Always plural."
+    >{totalRestaurants} Restaurants</string>
+  <string
+    name="craneFly0"
+    description="Label for city."
+    >Aspen, United States</string>
+  <string
+    name="craneFly1"
+    description="Label for city."
+    >Big Sur, United States</string>
+  <string
+    name="craneFly2"
+    description="Label for city."
+    >Khumbu Valley, Nepal</string>
+  <string
+    name="craneFly3"
+    description="Label for city."
+    >Machu Picchu, Peru</string>
+  <string
+    name="craneFly4"
+    description="Label for city."
+    >Malé, Maldives</string>
+  <string
+    name="craneFly5"
+    description="Label for city."
+    >Vitznau, Switzerland</string>
+  <string
+    name="craneFly6"
+    description="Label for city."
+    >Madrid, Spain</string>
+  <string
+    name="craneFly7"
+    description="Label for city."
+    >Mount Rushmore, United States</string>
+  <string
+    name="craneFly8"
+    description="Label for city."
+    >Singapore</string>
+  <string
+    name="craneFly9"
+    description="Label for city."
+    >Havana, Cuba</string>
+  <string
+    name="craneFly10"
+    description="Label for city."
+    >Cairo, Egypt</string>
+  <string
+    name="craneFly11"
+    description="Label for city."
+    >Lisbon, Portugal</string>
+  <string
+    name="craneFly12"
+    description="Label for city."
+    >Napa, United States</string>
+  <string
+    name="craneFly13"
+    description="Label for city."
+    >Bali, Indonesia</string>
+  <string
+    name="craneSleep0"
+    description="Label for city."
+    >Malé, Maldives</string>
+  <string
+    name="craneSleep1"
+    description="Label for city."
+    >Aspen, United States</string>
+  <string
+    name="craneSleep2"
+    description="Label for city."
+    >Machu Picchu, Peru</string>
+  <string
+    name="craneSleep3"
+    description="Label for city."
+    >Havana, Cuba</string>
+  <string
+    name="craneSleep4"
+    description="Label for city."
+    >Vitznau, Switzerland</string>
+  <string
+    name="craneSleep5"
+    description="Label for city."
+    >Big Sur, United States</string>
+  <string
+    name="craneSleep6"
+    description="Label for city."
+    >Napa, United States</string>
+  <string
+    name="craneSleep7"
+    description="Label for city."
+    >Porto, Portugal</string>
+  <string
+    name="craneSleep8"
+    description="Label for city."
+    >Tulum, Mexico</string>
+  <string
+    name="craneSleep9"
+    description="Label for city."
+    >Lisbon, Portugal</string>
+  <string
+    name="craneSleep10"
+    description="Label for city."
+    >Cairo, Egypt</string>
+  <string
+    name="craneSleep11"
+    description="Label for city."
+    >Taipei, Taiwan</string>
+  <string
+    name="craneEat0"
+    description="Label for city."
+    >Naples, Italy</string>
+  <string
+    name="craneEat1"
+    description="Label for city."
+    >Dallas, United States</string>
+  <string
+    name="craneEat2"
+    description="Label for city."
+    >Córdoba, Argentina</string>
+  <string
+    name="craneEat3"
+    description="Label for city."
+    >Portland, United States</string>
+  <string
+    name="craneEat4"
+    description="Label for city."
+    >Paris, France</string>
+  <string
+    name="craneEat5"
+    description="Label for city."
+    >Seoul, South Korea</string>
+  <string
+    name="craneEat6"
+    description="Label for city."
+    >Seattle, United States</string>
+  <string
+    name="craneEat7"
+    description="Label for city."
+    >Nashville, United States</string>
+  <string
+    name="craneEat8"
+    description="Label for city."
+    >Atlanta, United States</string>
+  <string
+    name="craneEat9"
+    description="Label for city."
+    >Madrid, Spain</string>
+  <string
+    name="craneEat10"
+    description="Label for city."
+    >Lisbon, Portugal</string>
 </resources>

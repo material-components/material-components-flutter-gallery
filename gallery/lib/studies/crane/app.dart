@@ -14,6 +14,7 @@
 
 import 'package:flutter/material.dart';
 
+import '../../l10n/gallery_localizations.dart';
 import 'backdrop.dart';
 import 'eat_form.dart';
 import 'fly_form.dart';
@@ -33,6 +34,8 @@ class _CraneAppState extends State<CraneApp> {
     return MaterialApp(
       title: 'Crane',
       debugShowCheckedModeBanner: false,
+      localizationsDelegates: GalleryLocalizations.localizationsDelegates,
+      supportedLocales: GalleryLocalizations.supportedLocales,
       home: Backdrop(
         frontLayer: Container(),
         backLayer: <Widget>[

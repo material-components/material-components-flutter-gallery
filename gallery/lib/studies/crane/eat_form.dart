@@ -14,9 +14,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../../l10n/gallery_localizations.dart';
 import 'header_form.dart';
-
-// TODO: I10n
 
 class EatForm extends StatefulWidget {
   @override
@@ -35,22 +34,22 @@ class _EatFormState extends State<EatForm> {
       fields: <HeaderFormField>[
         HeaderFormField(
           iconData: Icons.person,
-          title: 'Diners',
+          title: GalleryLocalizations.of(context).craneFormDiners,
           textController: dinerController,
         ),
         HeaderFormField(
           iconData: Icons.date_range,
-          title: 'Select Date',
+          title: GalleryLocalizations.of(context).craneFormDate,
           textController: dateController,
         ),
         HeaderFormField(
           iconData: Icons.access_time,
-          title: 'Select Time',
+          title: GalleryLocalizations.of(context).craneFormTime,
           textController: timeController,
         ),
         HeaderFormField(
           iconData: Icons.restaurant_menu,
-          title: 'Select Location',
+          title: GalleryLocalizations.of(context).craneFormLocation,
           textController: locationController,
         ),
       ],

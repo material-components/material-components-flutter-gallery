@@ -1303,5 +1303,244 @@
   "shrineProductFineLinesTee": "Fine lines tee",
   "@shrineProductFineLinesTee": {
     "description": "Name of the product 'Fine lines tee'."
+  },
+  "craneFormDiners": "Diners",
+  "@craneFormDiners": {
+    "description": "Form field label to enter the number of diners."
+  },
+  "craneFormDate": "Select Date",
+  "@craneFormDate": {
+    "description": "Form field label to select a date."
+  },
+  "craneFormTime": "Select Time",
+  "@craneFormTime": {
+    "description": "Form field label to select a time."
+  },
+  "craneFormLocation": "Select Location",
+  "@craneFormLocation": {
+    "description": "Form field label to select a location."
+  },
+  "craneFormTravelers": "Travelers",
+  "@craneFormTravelers": {
+    "description": "Form field label to select the number of travellers."
+  },
+  "craneFormOrigin": "Choose Origin",
+  "@craneFormOrigin": {
+    "description": "Form field label to choose a travel origin."
+  },
+  "craneFormDestination": "Choose Destination",
+  "@craneFormDestination": {
+    "description": "Form field label to choose a travel destination."
+  },
+  "craneFormDates": "Select Dates",
+  "@craneFormDates": {
+    "description": "Form field label to select multiple dates."
+  },
+  "craneFly": "FLY",
+  "@craneFly": {
+    "description": "Title for FLY tab."
+  },
+  "craneSleep": "SLEEP",
+  "@craneSleep": {
+    "description": "Title for SLEEP tab."
+  },
+  "craneEat": "EAT",
+  "@craneEat": {
+    "description": "Title for EAT tab."
+  },
+  "craneFlySubhead": "Explore Flights by Destination",
+  "@craneFlySubhead": {
+    "description": "Subhead for FLY tab."
+  },
+  "craneSleepSubhead": "Explore Properties by Destination",
+  "@craneSleepSubhead": {
+    "description": "Subhead for SLEEP tab."
+  },
+  "craneEatSubhead": "Explore Restaurants by Destination",
+  "@craneEatSubhead": {
+    "description": "Subhead for EAT tab."
+  },
+  "craneFlyNonstop": "Nonstop",
+  "@craneFlyNonstop": {
+    "description": "Label indicating a nonstop flight."
+  },
+  "craneFlyOneStop": "1 stop",
+  "@craneFlyOneStop": {
+    "description": "Label indicating a flight with a single layover."
+  },
+  "craneFlyMultipleStops": "{numberOfStops} stops",
+  "@craneFlyMultipleStops": {
+    "description": "Label indicating a flight with 2 or more layovers.",
+    "placeholders": {
+      "numberOfStops": {
+        "example": "2"
+      }
+    }
+  },
+  "craneSleepProperties": "{totalProperties} Available Properties",
+  "@craneSleepProperties": {
+    "description": "Text indicating the number of available properties (temporary rentals). Always plural.",
+    "placeholders": {
+      "totalProperties": {
+        "example": "100"
+      }
+    }
+  },
+  "craneEatRestaurants": "{totalRestaurants} Restaurants",
+  "@craneEatRestaurants": {
+    "description": "Text indicating the number of restaurants. Always plural.",
+    "placeholders": {
+      "totalRestaurants": {
+        "example": "100"
+      }
+    }
+  },
+  "craneFly0": "Aspen, United States",
+  "@craneFly0": {
+    "description": "Label for city."
+  },
+  "craneFly1": "Big Sur, United States",
+  "@craneFly1": {
+    "description": "Label for city."
+  },
+  "craneFly2": "Khumbu Valley, Nepal",
+  "@craneFly2": {
+    "description": "Label for city."
+  },
+  "craneFly3": "Machu Picchu, Peru",
+  "@craneFly3": {
+    "description": "Label for city."
+  },
+  "craneFly4": "Malé, Maldives",
+  "@craneFly4": {
+    "description": "Label for city."
+  },
+  "craneFly5": "Vitznau, Switzerland",
+  "@craneFly5": {
+    "description": "Label for city."
+  },
+  "craneFly6": "Madrid, Spain",
+  "@craneFly6": {
+    "description": "Label for city."
+  },
+  "craneFly7": "Mount Rushmore, United States",
+  "@craneFly7": {
+    "description": "Label for city."
+  },
+  "craneFly8": "Singapore",
+  "@craneFly8": {
+    "description": "Label for city."
+  },
+  "craneFly9": "Havana, Cuba",
+  "@craneFly9": {
+    "description": "Label for city."
+  },
+  "craneFly10": "Cairo, Egypt",
+  "@craneFly10": {
+    "description": "Label for city."
+  },
+  "craneFly11": "Lisbon, Portugal",
+  "@craneFly11": {
+    "description": "Label for city."
+  },
+  "craneFly12": "Napa, United States",
+  "@craneFly12": {
+    "description": "Label for city."
+  },
+  "craneFly13": "Bali, Indonesia",
+  "@craneFly13": {
+    "description": "Label for city."
+  },
+  "craneSleep0": "Malé, Maldives",
+  "@craneSleep0": {
+    "description": "Label for city."
+  },
+  "craneSleep1": "Aspen, United States",
+  "@craneSleep1": {
+    "description": "Label for city."
+  },
+  "craneSleep2": "Machu Picchu, Peru",
+  "@craneSleep2": {
+    "description": "Label for city."
+  },
+  "craneSleep3": "Havana, Cuba",
+  "@craneSleep3": {
+    "description": "Label for city."
+  },
+  "craneSleep4": "Vitznau, Switzerland",
+  "@craneSleep4": {
+    "description": "Label for city."
+  },
+  "craneSleep5": "Big Sur, United States",
+  "@craneSleep5": {
+    "description": "Label for city."
+  },
+  "craneSleep6": "Napa, United States",
+  "@craneSleep6": {
+    "description": "Label for city."
+  },
+  "craneSleep7": "Porto, Portugal",
+  "@craneSleep7": {
+    "description": "Label for city."
+  },
+  "craneSleep8": "Tulum, Mexico",
+  "@craneSleep8": {
+    "description": "Label for city."
+  },
+  "craneSleep9": "Lisbon, Portugal",
+  "@craneSleep9": {
+    "description": "Label for city."
+  },
+  "craneSleep10": "Cairo, Egypt",
+  "@craneSleep10": {
+    "description": "Label for city."
+  },
+  "craneSleep11": "Taipei, Taiwan",
+  "@craneSleep11": {
+    "description": "Label for city."
+  },
+  "craneEat0": "Naples, Italy",
+  "@craneEat0": {
+    "description": "Label for city."
+  },
+  "craneEat1": "Dallas, United States",
+  "@craneEat1": {
+    "description": "Label for city."
+  },
+  "craneEat2": "Córdoba, Argentina",
+  "@craneEat2": {
+    "description": "Label for city."
+  },
+  "craneEat3": "Portland, United States",
+  "@craneEat3": {
+    "description": "Label for city."
+  },
+  "craneEat4": "Paris, France",
+  "@craneEat4": {
+    "description": "Label for city."
+  },
+  "craneEat5": "Seoul, South Korea",
+  "@craneEat5": {
+    "description": "Label for city."
+  },
+  "craneEat6": "Seattle, United States",
+  "@craneEat6": {
+    "description": "Label for city."
+  },
+  "craneEat7": "Nashville, United States",
+  "@craneEat7": {
+    "description": "Label for city."
+  },
+  "craneEat8": "Atlanta, United States",
+  "@craneEat8": {
+    "description": "Label for city."
+  },
+  "craneEat9": "Madrid, Spain",
+  "@craneEat9": {
+    "description": "Label for city."
+  },
+  "craneEat10": "Lisbon, Portugal",
+  "@craneEat10": {
+    "description": "Label for city."
   }
 }

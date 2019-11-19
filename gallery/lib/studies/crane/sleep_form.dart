@@ -13,10 +13,9 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
 
 import 'header_form.dart';
-
-// TODO: I10n
 
 class SleepForm extends StatefulWidget {
   @override
@@ -34,17 +33,17 @@ class _SleepFormState extends State<SleepForm> {
       fields: <HeaderFormField>[
         HeaderFormField(
           iconData: Icons.person,
-          title: 'Travelers',
+          title: GalleryLocalizations.of(context).craneFormTravelers,
           textController: travelerController,
         ),
         HeaderFormField(
           iconData: Icons.date_range,
-          title: 'Select Dates',
+          title: GalleryLocalizations.of(context).craneFormDates,
           textController: dateController,
         ),
         HeaderFormField(
           iconData: Icons.hotel,
-          title: 'Select Location',
+          title: GalleryLocalizations.of(context).craneFormLocation,
           textController: locationController,
         ),
       ],

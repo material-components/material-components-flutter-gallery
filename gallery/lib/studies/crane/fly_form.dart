@@ -14,9 +14,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../../l10n/gallery_localizations.dart';
 import 'header_form.dart';
-
-// TODO: I10n
 
 class FlyForm extends StatefulWidget {
   @override
@@ -35,22 +34,22 @@ class _FlyFormState extends State<FlyForm> {
       fields: <HeaderFormField>[
         HeaderFormField(
           iconData: Icons.person,
-          title: 'Travelers',
+          title: GalleryLocalizations.of(context).craneFormTravelers,
           textController: travelerController,
         ),
         HeaderFormField(
           iconData: Icons.place,
-          title: 'Choose Origin',
+          title: GalleryLocalizations.of(context).craneFormOrigin,
           textController: countryDestinationController,
         ),
         HeaderFormField(
           iconData: Icons.airplanemode_active,
-          title: 'Choose Destination',
+          title: GalleryLocalizations.of(context).craneFormDestination,
           textController: destinationController,
         ),
         HeaderFormField(
           iconData: Icons.date_range,
-          title: 'Select Dates',
+          title: GalleryLocalizations.of(context).craneFormDates,
           textController: dateController,
         ),
       ],

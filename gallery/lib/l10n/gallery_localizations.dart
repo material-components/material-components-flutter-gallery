@@ -483,6 +483,322 @@ class GalleryLocalizations {
         desc: r'Study description for Crane.');
   }
 
+  String get craneEat {
+    return Intl.message(r'EAT',
+        locale: _localeName, name: 'craneEat', desc: r'Title for EAT tab.');
+  }
+
+  String get craneEat0 {
+    return Intl.message(r'Naples, Italy',
+        locale: _localeName, name: 'craneEat0', desc: r'Label for city.');
+  }
+
+  String get craneEat1 {
+    return Intl.message(r'Dallas, United States',
+        locale: _localeName, name: 'craneEat1', desc: r'Label for city.');
+  }
+
+  String get craneEat10 {
+    return Intl.message(r'Lisbon, Portugal',
+        locale: _localeName, name: 'craneEat10', desc: r'Label for city.');
+  }
+
+  String get craneEat2 {
+    return Intl.message(r'Córdoba, Argentina',
+        locale: _localeName, name: 'craneEat2', desc: r'Label for city.');
+  }
+
+  String get craneEat3 {
+    return Intl.message(r'Portland, United States',
+        locale: _localeName, name: 'craneEat3', desc: r'Label for city.');
+  }
+
+  String get craneEat4 {
+    return Intl.message(r'Paris, France',
+        locale: _localeName, name: 'craneEat4', desc: r'Label for city.');
+  }
+
+  String get craneEat5 {
+    return Intl.message(r'Seoul, South Korea',
+        locale: _localeName, name: 'craneEat5', desc: r'Label for city.');
+  }
+
+  String get craneEat6 {
+    return Intl.message(r'Seattle, United States',
+        locale: _localeName, name: 'craneEat6', desc: r'Label for city.');
+  }
+
+  String get craneEat7 {
+    return Intl.message(r'Nashville, United States',
+        locale: _localeName, name: 'craneEat7', desc: r'Label for city.');
+  }
+
+  String get craneEat8 {
+    return Intl.message(r'Atlanta, United States',
+        locale: _localeName, name: 'craneEat8', desc: r'Label for city.');
+  }
+
+  String get craneEat9 {
+    return Intl.message(r'Madrid, Spain',
+        locale: _localeName, name: 'craneEat9', desc: r'Label for city.');
+  }
+
+  String craneEatRestaurants(Object totalRestaurants) {
+    return Intl.message(r'$totalRestaurants Restaurants',
+        locale: _localeName,
+        name: 'craneEatRestaurants',
+        desc: r'Text indicating the number of restaurants. Always plural.',
+        args: <Object>[totalRestaurants]);
+  }
+
+  String get craneEatSubhead {
+    return Intl.message(r'Explore Restaurants by Destination',
+        locale: _localeName,
+        name: 'craneEatSubhead',
+        desc: r'Subhead for EAT tab.');
+  }
+
+  String get craneFly {
+    return Intl.message(r'FLY',
+        locale: _localeName, name: 'craneFly', desc: r'Title for FLY tab.');
+  }
+
+  String get craneFly0 {
+    return Intl.message(r'Aspen, United States',
+        locale: _localeName, name: 'craneFly0', desc: r'Label for city.');
+  }
+
+  String get craneFly1 {
+    return Intl.message(r'Big Sur, United States',
+        locale: _localeName, name: 'craneFly1', desc: r'Label for city.');
+  }
+
+  String get craneFly10 {
+    return Intl.message(r'Cairo, Egypt',
+        locale: _localeName, name: 'craneFly10', desc: r'Label for city.');
+  }
+
+  String get craneFly11 {
+    return Intl.message(r'Lisbon, Portugal',
+        locale: _localeName, name: 'craneFly11', desc: r'Label for city.');
+  }
+
+  String get craneFly12 {
+    return Intl.message(r'Napa, United States',
+        locale: _localeName, name: 'craneFly12', desc: r'Label for city.');
+  }
+
+  String get craneFly13 {
+    return Intl.message(r'Bali, Indonesia',
+        locale: _localeName, name: 'craneFly13', desc: r'Label for city.');
+  }
+
+  String get craneFly2 {
+    return Intl.message(r'Khumbu Valley, Nepal',
+        locale: _localeName, name: 'craneFly2', desc: r'Label for city.');
+  }
+
+  String get craneFly3 {
+    return Intl.message(r'Machu Picchu, Peru',
+        locale: _localeName, name: 'craneFly3', desc: r'Label for city.');
+  }
+
+  String get craneFly4 {
+    return Intl.message(r'Malé, Maldives',
+        locale: _localeName, name: 'craneFly4', desc: r'Label for city.');
+  }
+
+  String get craneFly5 {
+    return Intl.message(r'Vitznau, Switzerland',
+        locale: _localeName, name: 'craneFly5', desc: r'Label for city.');
+  }
+
+  String get craneFly6 {
+    return Intl.message(r'Madrid, Spain',
+        locale: _localeName, name: 'craneFly6', desc: r'Label for city.');
+  }
+
+  String get craneFly7 {
+    return Intl.message(r'Mount Rushmore, United States',
+        locale: _localeName, name: 'craneFly7', desc: r'Label for city.');
+  }
+
+  String get craneFly8 {
+    return Intl.message(r'Singapore',
+        locale: _localeName, name: 'craneFly8', desc: r'Label for city.');
+  }
+
+  String get craneFly9 {
+    return Intl.message(r'Havana, Cuba',
+        locale: _localeName, name: 'craneFly9', desc: r'Label for city.');
+  }
+
+  String craneFlyMultipleStops(Object numberOfStops) {
+    return Intl.message(r'$numberOfStops stops',
+        locale: _localeName,
+        name: 'craneFlyMultipleStops',
+        desc: r'Label indicating a flight with 2 or more layovers.',
+        args: <Object>[numberOfStops]);
+  }
+
+  String get craneFlyNonstop {
+    return Intl.message(r'Nonstop',
+        locale: _localeName,
+        name: 'craneFlyNonstop',
+        desc: r'Label indicating a nonstop flight.');
+  }
+
+  String get craneFlyOneStop {
+    return Intl.message(r'1 stop',
+        locale: _localeName,
+        name: 'craneFlyOneStop',
+        desc: r'Label indicating a flight with a single layover.');
+  }
+
+  String get craneFlySubhead {
+    return Intl.message(r'Explore Flights by Destination',
+        locale: _localeName,
+        name: 'craneFlySubhead',
+        desc: r'Subhead for FLY tab.');
+  }
+
+  String get craneFormDate {
+    return Intl.message(r'Select Date',
+        locale: _localeName,
+        name: 'craneFormDate',
+        desc: r'Form field label to select a date.');
+  }
+
+  String get craneFormDates {
+    return Intl.message(r'Select Dates',
+        locale: _localeName,
+        name: 'craneFormDates',
+        desc: r'Form field label to select multiple dates.');
+  }
+
+  String get craneFormDestination {
+    return Intl.message(r'Choose Destination',
+        locale: _localeName,
+        name: 'craneFormDestination',
+        desc: r'Form field label to choose a travel destination.');
+  }
+
+  String get craneFormDiners {
+    return Intl.message(r'Diners',
+        locale: _localeName,
+        name: 'craneFormDiners',
+        desc: r'Form field label to enter the number of diners.');
+  }
+
+  String get craneFormLocation {
+    return Intl.message(r'Select Location',
+        locale: _localeName,
+        name: 'craneFormLocation',
+        desc: r'Form field label to select a location.');
+  }
+
+  String get craneFormOrigin {
+    return Intl.message(r'Choose Origin',
+        locale: _localeName,
+        name: 'craneFormOrigin',
+        desc: r'Form field label to choose a travel origin.');
+  }
+
+  String get craneFormTime {
+    return Intl.message(r'Select Time',
+        locale: _localeName,
+        name: 'craneFormTime',
+        desc: r'Form field label to select a time.');
+  }
+
+  String get craneFormTravelers {
+    return Intl.message(r'Travelers',
+        locale: _localeName,
+        name: 'craneFormTravelers',
+        desc: r'Form field label to select the number of travellers.');
+  }
+
+  String get craneSleep {
+    return Intl.message(r'SLEEP',
+        locale: _localeName, name: 'craneSleep', desc: r'Title for SLEEP tab.');
+  }
+
+  String get craneSleep0 {
+    return Intl.message(r'Malé, Maldives',
+        locale: _localeName, name: 'craneSleep0', desc: r'Label for city.');
+  }
+
+  String get craneSleep1 {
+    return Intl.message(r'Aspen, United States',
+        locale: _localeName, name: 'craneSleep1', desc: r'Label for city.');
+  }
+
+  String get craneSleep10 {
+    return Intl.message(r'Cairo, Egypt',
+        locale: _localeName, name: 'craneSleep10', desc: r'Label for city.');
+  }
+
+  String get craneSleep11 {
+    return Intl.message(r'Taipei, Taiwan',
+        locale: _localeName, name: 'craneSleep11', desc: r'Label for city.');
+  }
+
+  String get craneSleep2 {
+    return Intl.message(r'Machu Picchu, Peru',
+        locale: _localeName, name: 'craneSleep2', desc: r'Label for city.');
+  }
+
+  String get craneSleep3 {
+    return Intl.message(r'Havana, Cuba',
+        locale: _localeName, name: 'craneSleep3', desc: r'Label for city.');
+  }
+
+  String get craneSleep4 {
+    return Intl.message(r'Vitznau, Switzerland',
+        locale: _localeName, name: 'craneSleep4', desc: r'Label for city.');
+  }
+
+  String get craneSleep5 {
+    return Intl.message(r'Big Sur, United States',
+        locale: _localeName, name: 'craneSleep5', desc: r'Label for city.');
+  }
+
+  String get craneSleep6 {
+    return Intl.message(r'Napa, United States',
+        locale: _localeName, name: 'craneSleep6', desc: r'Label for city.');
+  }
+
+  String get craneSleep7 {
+    return Intl.message(r'Porto, Portugal',
+        locale: _localeName, name: 'craneSleep7', desc: r'Label for city.');
+  }
+
+  String get craneSleep8 {
+    return Intl.message(r'Tulum, Mexico',
+        locale: _localeName, name: 'craneSleep8', desc: r'Label for city.');
+  }
+
+  String get craneSleep9 {
+    return Intl.message(r'Lisbon, Portugal',
+        locale: _localeName, name: 'craneSleep9', desc: r'Label for city.');
+  }
+
+  String craneSleepProperties(Object totalProperties) {
+    return Intl.message(r'$totalProperties Available Properties',
+        locale: _localeName,
+        name: 'craneSleepProperties',
+        desc:
+            r'Text indicating the number of available properties (temporary rentals). Always plural',
+        args: <Object>[totalProperties]);
+  }
+
+  String get craneSleepSubhead {
+    return Intl.message(r'Explore Properties by Destination',
+        locale: _localeName,
+        name: 'craneSleepSubhead',
+        desc: r'Subhead for SLEEP tab.');
+  }
+
   String get cupertinoAlertAllow {
     return Intl.message(r'Allow',
         locale: _localeName,
