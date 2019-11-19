@@ -173,8 +173,6 @@ class SettingsAttribution extends StatelessWidget {
               fontSize: 12,
               color: Theme.of(context).colorScheme.onSecondary,
             ),
-        overflow: TextOverflow.ellipsis,
-        maxLines: 1,
       ),
     );
   }
@@ -198,20 +196,24 @@ class _SettingsLink extends StatelessWidget {
         padding: EdgeInsets.symmetric(
             horizontal: isDisplayDesktop(context) ? 16 : 32),
         child: Row(
+          mainAxisSize: MainAxisSize.min,
           children: [
             Icon(
               icon,
               color: colorScheme.onSecondary.withOpacity(0.5),
               size: 24,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 16,
-                vertical: 12,
-              ),
-              child: Text(
-                title,
-                style: textTheme.subtitle.apply(color: colorScheme.onSecondary),
+            Flexible(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 12,
+                ),
+                child: Text(
+                  title,
+                  style:
+                      textTheme.subtitle.apply(color: colorScheme.onSecondary),
+                ),
               ),
             ),
           ],

@@ -10,10 +10,8 @@ import '../data/gallery_options.dart';
 import '../l10n/gallery_localizations.dart';
 
 // Common constants between SlowMotionSetting and SettingsListItem.
-const settingItemHeight = 56.0;
 final settingItemBorderRadius = BorderRadius.circular(10);
 const settingItemHeaderMargin = EdgeInsetsDirectional.fromSTEB(32, 0, 32, 8);
-const settingItemHeaderPadding = EdgeInsetsDirectional.fromSTEB(16, 10, 8, 10);
 
 class SlowMotionSetting extends StatelessWidget {
   const SlowMotionSetting({this.options, this.onOptionsChanged});
@@ -27,7 +25,6 @@ class SlowMotionSetting extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
     return Container(
       margin: settingItemHeaderMargin,
-      height: settingItemHeight,
       child: Material(
         shape: RoundedRectangleBorder(borderRadius: settingItemBorderRadius),
         color: colorScheme.secondary,
@@ -35,26 +32,31 @@ class SlowMotionSetting extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Padding(
-              padding: settingItemHeaderPadding,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    GalleryLocalizations.of(context).settingsSlowMotion,
-                    style: textTheme.subhead.apply(
-                      color: colorScheme.onSurface,
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      GalleryLocalizations.of(context).settingsSlowMotion,
+                      style: textTheme.subhead.apply(
+                        color: colorScheme.onSurface,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-            Switch(
-              activeColor: colorScheme.primary,
-              value: options.timeDilation != 1.0,
-              onChanged: (isOn) => onOptionsChanged(
-                options.copyWith(timeDilation: isOn ? 10.0 : 1.0),
+            Padding(
+              padding: const EdgeInsetsDirectional.only(end: 8),
+              child: Switch(
+                activeColor: colorScheme.primary,
+                value: options.timeDilation != 1.0,
+                onChanged: (isOn) => onOptionsChanged(
+                  options.copyWith(timeDilation: isOn ? 10.0 : 1.0),
+                ),
               ),
             ),
           ],
@@ -110,8 +112,8 @@ class _SettingsListItemState<T> extends State<SettingsListItem<T>>
       end: EdgeInsets.zero,
     ).animate(_controller);
     _headerPadding = EdgeInsetsGeometryTween(
-      begin: settingItemHeaderPadding,
-      end: EdgeInsetsDirectional.fromSTEB(32, 10, 32, 10),
+      begin: EdgeInsetsDirectional.fromSTEB(16, 10, 0, 10),
+      end: EdgeInsetsDirectional.fromSTEB(32, 18, 32, 20),
     ).animate(_controller);
     _headerSubtitleHeight =
         _controller.drive(Tween<double>(begin: 1.0, end: 0.0));
@@ -256,7 +258,6 @@ class _CategoryHeader extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
     return Container(
       margin: margin,
-      height: settingItemHeight,
       child: Material(
         shape: RoundedRectangleBorder(borderRadius: borderRadius),
         color: colorScheme.secondary,
@@ -266,34 +267,36 @@ class _CategoryHeader extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Padding(
-                padding: padding,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      title,
-                      style: textTheme.subhead.apply(
-                        color: colorScheme.onSurface,
-                      ),
-                    ),
-                    SizeTransition(
-                      sizeFactor: subtitleHeight,
-                      child: Text(
-                        subtitle,
-                        style: textTheme.overline.apply(
-                          color: colorScheme.primary,
+              Expanded(
+                child: Padding(
+                  padding: padding,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        title,
+                        style: textTheme.subhead.apply(
+                          color: colorScheme.onSurface,
                         ),
                       ),
-                    )
-                  ],
+                      SizeTransition(
+                        sizeFactor: subtitleHeight,
+                        child: Text(
+                          subtitle,
+                          style: textTheme.overline.apply(
+                            color: colorScheme.primary,
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
               Padding(
                 padding: const EdgeInsetsDirectional.only(
                   start: 8,
-                  end: 32,
+                  end: 24,
                 ),
                 child: RotationTransition(
                   turns: chevronRotation,
