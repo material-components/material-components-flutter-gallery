@@ -15,14 +15,13 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-import '../../layout/adaptive.dart';
-import '../../l10n/gallery_localizations.dart';
-
-import 'colors.dart';
-import 'model/app_state_model.dart';
-import 'model/product.dart';
-import 'login.dart';
-import 'triangle_category_indicator.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
+import 'package:gallery/layout/adaptive.dart';
+import 'package:gallery/studies/shrine/colors.dart';
+import 'package:gallery/studies/shrine/login.dart';
+import 'package:gallery/studies/shrine/model/app_state_model.dart';
+import 'package:gallery/studies/shrine/model/product.dart';
+import 'package:gallery/studies/shrine/triangle_category_indicator.dart';
 
 const desktopCategoryMenuPageWidth = 232.0;
 

@@ -15,7 +15,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 
-import 'colors.dart';
+import 'package:gallery/studies/shrine/colors.dart';
 
 const List<Offset> _vertices = [
   Offset(0, -14),

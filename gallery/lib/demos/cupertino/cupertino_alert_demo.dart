@@ -4,7 +4,7 @@
 
 import 'package:flutter/cupertino.dart';
 
-import '../../l10n/gallery_localizations.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
 
 enum AlertDemoType {
   alert,

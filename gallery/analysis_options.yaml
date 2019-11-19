@@ -30,3 +30,4 @@ linter:
     - unnecessary_getters_setters
     - unnecessary_new
     - unnecessary_statements
+    - directives_ordering

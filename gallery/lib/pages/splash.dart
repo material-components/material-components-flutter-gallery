@@ -7,7 +7,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-import '../layout/adaptive.dart';
+import 'package:gallery/layout/adaptive.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({

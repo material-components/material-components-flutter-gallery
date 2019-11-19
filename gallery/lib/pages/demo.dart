@@ -5,11 +5,11 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import '../constants.dart';
-import '../data/demos.dart';
-import '../l10n/gallery_localizations.dart';
-import '../layout/adaptive.dart';
-import 'splash.dart';
+import 'package:gallery/constants.dart';
+import 'package:gallery/data/demos.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
+import 'package:gallery/layout/adaptive.dart';
+import 'package:gallery/pages/splash.dart';
 
 enum _DemoState {
   normal,

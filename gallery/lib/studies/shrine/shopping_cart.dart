@@ -16,12 +16,11 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-import '../../l10n/gallery_localizations.dart';
-
-import 'colors.dart';
-import 'expanding_bottom_sheet.dart';
-import 'model/app_state_model.dart';
-import 'model/product.dart';
+import 'package:gallery/studies/shrine/colors.dart';
+import 'package:gallery/studies/shrine/expanding_bottom_sheet.dart';
+import 'package:gallery/studies/shrine/model/app_state_model.dart';
+import 'package:gallery/studies/shrine/model/product.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
 
 const _leftColumnWidth = 60.0;
 

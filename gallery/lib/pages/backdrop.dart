@@ -8,8 +8,8 @@ import 'package:flare_flutter/flare_actor.dart';
 import 'package:flare_flutter/flare_controller.dart';
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
-import '../layout/adaptive.dart';
+import 'package:gallery/constants.dart';
+import 'package:gallery/layout/adaptive.dart';
 
 class Backdrop extends StatefulWidget {
   final Widget frontLayer;

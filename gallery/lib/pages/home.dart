@@ -4,19 +4,19 @@
 
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
-import '../data/demos.dart';
-import '../l10n/gallery_localizations.dart';
-import '../layout/adaptive.dart';
-import '../studies/crane/app.dart';
-import '../studies/crane/colors.dart';
-import '../studies/rally/app.dart';
-import '../studies/rally/colors.dart';
-import '../studies/shrine/app.dart';
-import '../studies/shrine/colors.dart';
-import '../studies/starter/app.dart';
-import 'category_list_item.dart';
-import 'settings.dart';
+import 'package:gallery/constants.dart';
+import 'package:gallery/data/demos.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
+import 'package:gallery/layout/adaptive.dart';
+import 'package:gallery/studies/crane/app.dart';
+import 'package:gallery/studies/crane/colors.dart';
+import 'package:gallery/studies/rally/app.dart';
+import 'package:gallery/studies/rally/colors.dart';
+import 'package:gallery/studies/shrine/app.dart';
+import 'package:gallery/studies/shrine/colors.dart';
+import 'package:gallery/studies/starter/app.dart';
+import 'package:gallery/pages/category_list_item.dart';
+import 'package:gallery/pages/settings.dart';
 
 const _horizontalPadding = 32.0;
 const _carouselItemMargin = 8.0;

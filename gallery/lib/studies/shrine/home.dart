@@ -15,11 +15,10 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-import '../../layout/adaptive.dart';
-
-import 'expanding_bottom_sheet.dart';
-import 'model/app_state_model.dart';
-import 'supplemental/asymmetric_view.dart';
+import 'package:gallery/layout/adaptive.dart';
+import 'package:gallery/studies/shrine/expanding_bottom_sheet.dart';
+import 'package:gallery/studies/shrine/model/app_state_model.dart';
+import 'package:gallery/studies/shrine/supplemental/asymmetric_view.dart';
 
 class ProductPage extends StatelessWidget {
   const ProductPage();

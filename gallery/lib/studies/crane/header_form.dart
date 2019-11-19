@@ -14,8 +14,8 @@
 
 import 'package:flutter/material.dart';
 
-import '../../layout/adaptive.dart';
-import 'colors.dart';
+import 'package:gallery/layout/adaptive.dart';
+import 'package:gallery/studies/crane/colors.dart';
 
 class HeaderFormField {
   final IconData iconData;

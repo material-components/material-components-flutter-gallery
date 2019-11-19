@@ -4,8 +4,8 @@
 
 import 'package:flutter/material.dart';
 
-import '../data/demos.dart';
-import 'demo.dart';
+import 'package:gallery/data/demos.dart';
+import 'package:gallery/pages/demo.dart';
 
 class CategoryListItem extends StatefulWidget {
   const CategoryListItem({

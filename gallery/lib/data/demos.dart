@@ -5,19 +5,19 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../demos/cupertino/cupertino_alert_demo.dart';
-import '../demos/cupertino/cupertino_button_demo.dart';
-import '../demos/material/bottom_navigation_demo.dart';
-import '../demos/material/bottom_sheet_demo.dart';
-import '../demos/material/button_demo.dart';
-import '../demos/material/chip_demo.dart';
-import '../demos/material/dialog_demo.dart';
-import '../demos/material/text_field_demo.dart';
-import '../demos/reference/colors_demo.dart';
-import '../demos/reference/typography_demo.dart';
-import '../l10n/gallery_localizations.dart';
-import '../themes/material_demo_theme_data.dart';
-import 'icons.dart';
+import 'package:gallery/data/icons.dart';
+import 'package:gallery/demos/cupertino/cupertino_alert_demo.dart';
+import 'package:gallery/demos/cupertino/cupertino_button_demo.dart';
+import 'package:gallery/demos/material/bottom_navigation_demo.dart';
+import 'package:gallery/demos/material/bottom_sheet_demo.dart';
+import 'package:gallery/demos/material/button_demo.dart';
+import 'package:gallery/demos/material/chip_demo.dart';
+import 'package:gallery/demos/material/dialog_demo.dart';
+import 'package:gallery/demos/material/text_field_demo.dart';
+import 'package:gallery/demos/reference/colors_demo.dart';
+import 'package:gallery/demos/reference/typography_demo.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
+import 'package:gallery/themes/material_demo_theme_data.dart';
 
 class GalleryDemo {
   GalleryDemo({

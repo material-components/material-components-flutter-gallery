@@ -15,18 +15,17 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
-import '../../layout/adaptive.dart';
-import '../../l10n/gallery_localizations.dart';
-
-import 'backdrop.dart';
-import 'category_menu_page.dart';
-import 'colors.dart';
-import 'expanding_bottom_sheet.dart';
-import 'home.dart';
-import 'login.dart';
-import 'scrim.dart';
-import 'model/app_state_model.dart';
-import 'supplemental/cut_corners_border.dart';
+import 'package:gallery/layout/adaptive.dart';
+import 'package:gallery/studies/shrine/backdrop.dart';
+import 'package:gallery/studies/shrine/category_menu_page.dart';
+import 'package:gallery/studies/shrine/colors.dart';
+import 'package:gallery/studies/shrine/expanding_bottom_sheet.dart';
+import 'package:gallery/studies/shrine/home.dart';
+import 'package:gallery/studies/shrine/login.dart';
+import 'package:gallery/studies/shrine/model/app_state_model.dart';
+import 'package:gallery/studies/shrine/scrim.dart';
+import 'package:gallery/studies/shrine/supplemental/cut_corners_border.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
 
 class ShrineApp extends StatefulWidget {
   @override

@@ -4,9 +4,8 @@
 
 import 'package:flutter/material.dart';
 
-import '../../l10n/gallery_localizations.dart';
-
-import 'home.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
+import 'package:gallery/studies/starter/home.dart';
 
 const _primaryColor = Color(0xFF6200EE);
 

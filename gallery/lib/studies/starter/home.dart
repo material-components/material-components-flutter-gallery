@@ -5,8 +5,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import '../../l10n/gallery_localizations.dart';
-import '../../layout/adaptive.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
+import 'package:gallery/layout/adaptive.dart';
 
 const appBarDesktopHeight = 128.0;
 

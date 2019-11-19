@@ -12,9 +12,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
-import '../../../l10n/gallery_localizations.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
 import 'destination.dart';
 
 // TODO: localize durations

@@ -14,10 +14,10 @@
 
 import 'package:flutter/material.dart';
 
-import '../category_menu_page.dart';
-import '../model/product.dart';
-import 'product_columns.dart';
-import 'desktop_product_columns.dart';
+import 'package:gallery/studies/shrine/category_menu_page.dart';
+import 'package:gallery/studies/shrine/model/product.dart';
+import 'package:gallery/studies/shrine/supplemental/desktop_product_columns.dart';
+import 'package:gallery/studies/shrine/supplemental/product_columns.dart';
 
 class MobileAsymmetricView extends StatelessWidget {
   const MobileAsymmetricView({Key key, this.products}) : super(key: key);

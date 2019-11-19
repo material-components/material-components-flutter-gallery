@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'colors.dart';
+import 'package:gallery/studies/crane/colors.dart';
 
 final ThemeData craneTheme = _buildCraneTheme();
 

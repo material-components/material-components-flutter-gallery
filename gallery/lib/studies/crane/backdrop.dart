@@ -18,12 +18,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:meta/meta.dart';
 
-import '../../l10n/gallery_localizations.dart';
-import '../../layout/adaptive.dart';
-import 'border_tab_indicator.dart';
-import 'colors.dart';
-import 'model/data.dart';
-import 'model/destination.dart';
+import 'package:gallery/layout/adaptive.dart';
+import 'package:gallery/studies/crane/border_tab_indicator.dart';
+import 'package:gallery/studies/crane/colors.dart';
+import 'package:gallery/studies/crane/model/data.dart';
+import 'package:gallery/studies/crane/model/destination.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
 
 class _FrontLayer extends StatelessWidget {
   const _FrontLayer({

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/gestures.dart' show DragStartBehavior;
 
-import '../../l10n/gallery_localizations.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
 
 class TextFieldDemo extends StatelessWidget {
   @override

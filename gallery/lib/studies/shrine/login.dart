@@ -14,9 +14,8 @@
 
 import 'package:flutter/material.dart';
 
-import '../../l10n/gallery_localizations.dart';
-
-import 'colors.dart';
+import 'package:gallery/studies/shrine/colors.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
 
 class LoginPage extends StatefulWidget {
   @override

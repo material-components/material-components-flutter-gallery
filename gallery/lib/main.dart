@@ -9,13 +9,13 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 
-import 'data/gallery_options.dart';
-import 'l10n/gallery_localizations.dart';
-import 'pages/backdrop.dart';
-import 'pages/home.dart';
-import 'pages/settings.dart';
-import 'pages/splash.dart';
-import 'themes/gallery_theme_data.dart';
+import 'package:gallery/data/gallery_options.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
+import 'package:gallery/pages/backdrop.dart';
+import 'package:gallery/pages/home.dart';
+import 'package:gallery/pages/settings.dart';
+import 'package:gallery/pages/splash.dart';
+import 'package:gallery/themes/gallery_theme_data.dart';
 
 void setOverrideForDesktop() {
   if (kIsWeb) return;

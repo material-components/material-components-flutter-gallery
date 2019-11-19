@@ -14,12 +14,12 @@
 
 import 'package:flutter/material.dart';
 
-import '../../l10n/gallery_localizations.dart';
-import 'backdrop.dart';
-import 'eat_form.dart';
-import 'fly_form.dart';
-import 'sleep_form.dart';
-import 'theme.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
+import 'package:gallery/studies/crane/backdrop.dart';
+import 'package:gallery/studies/crane/eat_form.dart';
+import 'package:gallery/studies/crane/fly_form.dart';
+import 'package:gallery/studies/crane/sleep_form.dart';
+import 'package:gallery/studies/crane/theme.dart';
 
 void main() => runApp(CraneApp());
 
