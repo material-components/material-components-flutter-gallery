@@ -14,6 +14,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+    final colorScheme = Theme.of(context).colorScheme;
     final isDesktop = isDisplayDesktop(context);
     final body = SafeArea(
       child: Padding(
@@ -48,8 +49,18 @@ class HomePage extends StatelessWidget {
           ListDrawer(),
           VerticalDivider(width: 1),
           Expanded(
-            child: DesktopScaffold(
+            child: Scaffold(
+              appBar: AdaptiveAppBar(isDesktop: true),
               body: body,
+              floatingActionButton: FloatingActionButton.extended(
+                onPressed: () {},
+                label: Text(
+                  GalleryLocalizations.of(context).starterAppGenericButton,
+                  style: TextStyle(color: colorScheme.onSecondary),
+                ),
+                icon: Icon(Icons.add, color: colorScheme.onSecondary),
+                tooltip: GalleryLocalizations.of(context).starterAppTooltipAdd,
+              ),
             ),
           ),
         ],
@@ -69,54 +80,6 @@ class HomePage extends StatelessWidget {
         ),
       );
     }
-  }
-}
-
-class DesktopScaffold extends StatelessWidget {
-  const DesktopScaffold({Key key, this.body}) : super(key: key);
-
-  final Widget body;
-
-  @override
-  Widget build(BuildContext context) {
-    final buttonHeight = 48;
-    final buttonTopPosition = appBarDesktopHeight -
-        buttonHeight / 2 +
-        MediaQuery.of(context).padding.top;
-
-    return Stack(
-      children: [
-        Scaffold(
-          appBar: AdaptiveAppBar(isDesktop: true),
-          body: body,
-        ),
-        PositionedDirectional(
-          top: buttonTopPosition,
-          end: 48,
-          child: RaisedButton(
-            color: Theme.of(context).colorScheme.secondary,
-            padding: const EdgeInsets.symmetric(
-              vertical: 12,
-              horizontal: 20,
-            ),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5),
-            ),
-            onPressed: () {},
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                const Icon(Icons.add),
-                SizedBox(width: 12),
-                Text(
-                  GalleryLocalizations.of(context).starterAppGenericButton,
-                ),
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
   }
 }
 
