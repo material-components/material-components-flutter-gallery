@@ -410,8 +410,48 @@
     description="Description for the floating action button component demo."
     >A floating action button is a circular icon button that hovers over content to promote a primary action in the application.</string>
   <string
+    name="demoChipTitle"
+    description="Title for the material chips component demo."
+    >Chips</string>
+  <string
+    name="demoChipSubtitle"
+    description="Subtitle for the material chips component demo."
+    >Compact elements that represent an input, attribute, or action</string>
+  <string
+    name="demoActionChipTitle"
+    description="Title for the action chip component demo."
+    >Action Chip</string>
+  <string
+    name="demoActionChipDescription"
+    description="Description for the action chip component demo."
+    >Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI.</string>
+  <string
+    name="demoChoiceChipTitle"
+    description="Title for the choice chip component demo."
+    >Choice Chip</string>
+  <string
+    name="demoChoiceChipDescription"
+    description="Description for the choice chip component demo."
+    >Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories.</string>
+  <string
+    name="demoFilterChipTitle"
+    description="Title for the filter chip component demo."
+    >Filter Chip</string>
+  <string
+    name="demoFilterChipDescription"
+    description="Description for the filter chip component demo."
+    >Filter chips use tags or descriptive words as a way to filter content.</string>
+  <string
+    name="demoInputChipTitle"
+    description="Title for the input chip component demo."
+    >Input Chip</string>
+  <string
+    name="demoInputChipDescription"
+    description="Description for the input chip component demo."
+    >Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form.</string>
+  <string
     name="demoDialogTitle"
-    description="Title for the material buttons component demo."
+    description="Title for the material dialog component demo."
     >Dialogs</string>
   <string
     name="demoDialogSubtitle"
@@ -709,6 +749,38 @@
     name="dialogSelectedOption"
     description="Message displayed after an option is selected from a dialog"
     >You selected: &quot;{value}&quot;</string>
+  <string
+    name="chipTurnOnLights"
+    description="A chip component to turn on the lights."
+    >Turn on lights</string>
+  <string
+    name="chipSmall"
+    description="A chip component to select a small size."
+    >Small</string>
+  <string
+    name="chipMedium"
+    description="A chip component to select a medium size."
+    >Medium</string>
+  <string
+    name="chipLarge"
+    description="A chip component to select a large size."
+    >Large</string>
+  <string
+    name="chipElevator"
+    description="A chip component to filter selection by elevators."
+    >Elevator</string>
+  <string
+    name="chipWasher"
+    description="A chip component to filter selection by washers."
+    >Washer</string>
+  <string
+    name="chipFireplace"
+    description="A chip component to filter selection by fireplaces."
+    >Fireplace</string>
+  <string
+    name="chipBiking"
+    description="A chip component to that indicates a biking selection."
+    >Biking</string>
   <string
     name="dialogDiscardTitle"
     description="Alert dialog message to discard draft."

@@ -421,9 +421,49 @@
   "@demoFloatingButtonDescription": {
     "description": "Description for the floating action button component demo."
   },
+  "demoChipTitle": "Chips",
+  "@demoChipTitle": {
+    "description": "Title for the material chips component demo."
+  },
+  "demoChipSubtitle": "Compact elements that represent an input, attribute, or action",
+  "@demoChipSubtitle": {
+    "description": "Subtitle for the material chips component demo."
+  },
+  "demoActionChipTitle": "Action Chip",
+  "@demoActionChipTitle": {
+    "description": "Title for the action chip component demo."
+  },
+  "demoActionChipDescription": "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI.",
+  "@demoActionChipDescription": {
+    "description": "Description for the action chip component demo."
+  },
+  "demoChoiceChipTitle": "Choice Chip",
+  "@demoChoiceChipTitle": {
+    "description": "Title for the choice chip component demo."
+  },
+  "demoChoiceChipDescription": "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories.",
+  "@demoChoiceChipDescription": {
+    "description": "Description for the choice chip component demo."
+  },
+  "demoFilterChipTitle": "Filter Chip",
+  "@demoFilterChipTitle": {
+    "description": "Title for the filter chip component demo."
+  },
+  "demoFilterChipDescription": "Filter chips use tags or descriptive words as a way to filter content.",
+  "@demoFilterChipDescription": {
+    "description": "Description for the filter chip component demo."
+  },
+  "demoInputChipTitle": "Input Chip",
+  "@demoInputChipTitle": {
+    "description": "Title for the input chip component demo."
+  },
+  "demoInputChipDescription": "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form.",
+  "@demoInputChipDescription": {
+    "description": "Description for the input chip component demo."
+  },
   "demoDialogTitle": "Dialogs",
   "@demoDialogTitle": {
-    "description": "Title for the material buttons component demo."
+    "description": "Title for the material dialog component demo."
   },
   "demoDialogSubtitle": "Simple, alert, and fullscreen",
   "@demoDialogSubtitle": {
@@ -747,6 +787,38 @@
         "example": "AGREE"
       }
     }
+  },
+  "chipTurnOnLights": "Turn on lights",
+  "@chipTurnOnLights": {
+    "description": "A chip component to turn on the lights."
+  },
+  "chipSmall": "Small",
+  "@chipSmall": {
+    "description": "A chip component to select a small size."
+  },
+  "chipMedium": "Medium",
+  "@chipMedium": {
+    "description": "A chip component to select a medium size."
+  },
+  "chipLarge": "Large",
+  "@chipLarge": {
+    "description": "A chip component to select a large size."
+  },
+  "chipElevator": "Elevator",
+  "@chipElevator": {
+    "description": "A chip component to filter selection by elevators."
+  },
+  "chipWasher": "Washer",
+  "@chipWasher": {
+    "description": "A chip component to filter selection by washers."
+  },
+  "chipFireplace": "Fireplace",
+  "@chipFireplace": {
+    "description": "A chip component to filter selection by fireplaces."
+  },
+  "chipBiking": "Biking",
+  "@chipBiking": {
+    "description": "A chip component to that indicates a biking selection."
   },
   "dialogDiscardTitle": "Discard draft?",
   "@dialogDiscardTitle": {

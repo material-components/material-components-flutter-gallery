@@ -287,6 +287,62 @@ class GalleryLocalizations {
         desc: r'Tooltip text for a create button.');
   }
 
+  String get chipBiking {
+    return Intl.message(r'Biking',
+        locale: _localeName,
+        name: 'chipBiking',
+        desc: r'A chip component to that indicates a biking selection.');
+  }
+
+  String get chipElevator {
+    return Intl.message(r'Elevator',
+        locale: _localeName,
+        name: 'chipElevator',
+        desc: r'A chip component to filter selection by elevators.');
+  }
+
+  String get chipFireplace {
+    return Intl.message(r'Fireplace',
+        locale: _localeName,
+        name: 'chipFireplace',
+        desc: r'A chip component to filter selection by fireplaces.');
+  }
+
+  String get chipLarge {
+    return Intl.message(r'Large',
+        locale: _localeName,
+        name: 'chipLarge',
+        desc: r'A chip component to select a large size.');
+  }
+
+  String get chipMedium {
+    return Intl.message(r'Medium',
+        locale: _localeName,
+        name: 'chipMedium',
+        desc: r'A chip component to select a medium size.');
+  }
+
+  String get chipSmall {
+    return Intl.message(r'Small',
+        locale: _localeName,
+        name: 'chipSmall',
+        desc: r'A chip component to select a small size.');
+  }
+
+  String get chipTurnOnLights {
+    return Intl.message(r'Turn on lights',
+        locale: _localeName,
+        name: 'chipTurnOnLights',
+        desc: r'A chip component to turn on the lights.');
+  }
+
+  String get chipWasher {
+    return Intl.message(r'Washer',
+        locale: _localeName,
+        name: 'chipWasher',
+        desc: r'A chip component to filter selection by washers.');
+  }
+
   String get colorsAmber {
     return Intl.message(r'AMBER',
         locale: _localeName,
@@ -535,6 +591,21 @@ class GalleryLocalizations {
         desc: r'Button text to show iOS-style alert.');
   }
 
+  String get demoActionChipDescription {
+    return Intl.message(
+        r'Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI.',
+        locale: _localeName,
+        name: 'demoActionChipDescription',
+        desc: r'Description for the action chip component demo.');
+  }
+
+  String get demoActionChipTitle {
+    return Intl.message(r'Action Chip',
+        locale: _localeName,
+        name: 'demoActionChipTitle',
+        desc: r'Title for the action chip component demo.');
+  }
+
   String get demoAlertDialogDescription {
     return Intl.message(
         r'An alert dialog informs the user about situations that require acknowledgement. An alert dialog has an optional title and an optional list of actions.',
@@ -689,6 +760,36 @@ class GalleryLocalizations {
         desc: r'Title for the material buttons component demo.');
   }
 
+  String get demoChipSubtitle {
+    return Intl.message(
+        r'Compact elements that represent an input, attribute, or action',
+        locale: _localeName,
+        name: 'demoChipSubtitle',
+        desc: r'Subtitle for the material chips component demo.');
+  }
+
+  String get demoChipTitle {
+    return Intl.message(r'Chips',
+        locale: _localeName,
+        name: 'demoChipTitle',
+        desc: r'Title for the material chips component demo.');
+  }
+
+  String get demoChoiceChipDescription {
+    return Intl.message(
+        r'Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories.',
+        locale: _localeName,
+        name: 'demoChoiceChipDescription',
+        desc: r'Description for the choice chip component demo.');
+  }
+
+  String get demoChoiceChipTitle {
+    return Intl.message(r'Choice Chip',
+        locale: _localeName,
+        name: 'demoChoiceChipTitle',
+        desc: r'Title for the choice chip component demo.');
+  }
+
   String get demoCodeTooltip {
     return Intl.message(r'Code Sample',
         locale: _localeName,
@@ -818,7 +919,7 @@ class GalleryLocalizations {
     return Intl.message(r'Dialogs',
         locale: _localeName,
         name: 'demoDialogTitle',
-        desc: r'Title for the material buttons component demo.');
+        desc: r'Title for the material dialog component demo.');
   }
 
   String get demoDocumentationTooltip {
@@ -826,6 +927,21 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'demoDocumentationTooltip',
         desc: r'Tooltip for API documentation button in a demo.');
+  }
+
+  String get demoFilterChipDescription {
+    return Intl.message(
+        r'Filter chips use tags or descriptive words as a way to filter content.',
+        locale: _localeName,
+        name: 'demoFilterChipDescription',
+        desc: r'Description for the filter chip component demo.');
+  }
+
+  String get demoFilterChipTitle {
+    return Intl.message(r'Filter Chip',
+        locale: _localeName,
+        name: 'demoFilterChipTitle',
+        desc: r'Title for the filter chip component demo.');
   }
 
   String get demoFlatButtonDescription {
@@ -885,6 +1001,21 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'demoInfoTooltip',
         desc: r'Tooltip for info button in a demo.');
+  }
+
+  String get demoInputChipDescription {
+    return Intl.message(
+        r'Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form.',
+        locale: _localeName,
+        name: 'demoInputChipDescription',
+        desc: r'Description for the input chip component demo.');
+  }
+
+  String get demoInputChipTitle {
+    return Intl.message(r'Input Chip',
+        locale: _localeName,
+        name: 'demoInputChipTitle',
+        desc: r'Title for the input chip component demo.');
   }
 
   String get demoInvalidURL {

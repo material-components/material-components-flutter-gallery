@@ -10,6 +10,7 @@ import '../demos/cupertino/cupertino_button_demo.dart';
 import '../demos/material/bottom_navigation_demo.dart';
 import '../demos/material/bottom_sheet_demo.dart';
 import '../demos/material/button_demo.dart';
+import '../demos/material/chip_demo.dart';
 import '../demos/material/dialog_demo.dart';
 import '../demos/material/text_field_demo.dart';
 import '../demos/reference/colors_demo.dart';
@@ -147,6 +148,45 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://docs.flutter.io/flutter/material/FloatingActionButton-class.html',
           buildRoute: (context) => ButtonDemo(type: ButtonDemoType.floating),
+        ),
+      ],
+    ),
+    GalleryDemo(
+      title: GalleryLocalizations.of(context).demoChipTitle,
+      icon: GalleryIcons.chips,
+      subtitle: GalleryLocalizations.of(context).demoInputChipDescription,
+      configurations: [
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoActionChipTitle,
+          description:
+              GalleryLocalizations.of(context).demoActionChipDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/ActionChip-class.html',
+          buildRoute: (context) => ChipDemo(type: ChipDemoType.action),
+        ),
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoChoiceChipTitle,
+          description:
+              GalleryLocalizations.of(context).demoChoiceChipDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/ChoiceChip-class.html',
+          buildRoute: (context) => ChipDemo(type: ChipDemoType.choice),
+        ),
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoFilterChipTitle,
+          description:
+              GalleryLocalizations.of(context).demoFilterChipDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/FilterChip-class.html',
+          buildRoute: (context) => ChipDemo(type: ChipDemoType.filter),
+        ),
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoInputChipTitle,
+          description:
+              GalleryLocalizations.of(context).demoInputChipDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/InputChip-class.html',
+          buildRoute: (context) => ChipDemo(type: ChipDemoType.input),
         ),
       ],
     ),
