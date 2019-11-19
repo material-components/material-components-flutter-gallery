@@ -788,7 +788,7 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'craneSleepProperties',
         desc:
-            r'Text indicating the number of available properties (temporary rentals). Always plural',
+            r'Text indicating the number of available properties (temporary rentals). Always plural.',
         args: <Object>[totalProperties]);
   }
 
@@ -2352,7 +2352,7 @@ class GalleryLocalizations {
   }
 
   String get shrineCategoryNameAccessories {
-    return Intl.message(r'Accessories',
+    return Intl.message(r'ACCESSORIES',
         locale: _localeName,
         name: 'shrineCategoryNameAccessories',
         desc:
@@ -2360,21 +2360,21 @@ class GalleryLocalizations {
   }
 
   String get shrineCategoryNameAll {
-    return Intl.message(r'All',
+    return Intl.message(r'ALL',
         locale: _localeName,
         name: 'shrineCategoryNameAll',
         desc: r'A tab showing products from all categories.');
   }
 
   String get shrineCategoryNameClothing {
-    return Intl.message(r'Clothing',
+    return Intl.message(r'CLOTHING',
         locale: _localeName,
         name: 'shrineCategoryNameClothing',
         desc: r'A category of products consisting of clothing.');
   }
 
   String get shrineCategoryNameHome {
-    return Intl.message(r'Home',
+    return Intl.message(r'HOME',
         locale: _localeName,
         name: 'shrineCategoryNameHome',
         desc: r'A category of products consisting of items used at home.');

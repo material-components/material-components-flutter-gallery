@@ -1024,19 +1024,19 @@
   <string
     name="shrineCategoryNameAll"
     description="A tab showing products from all categories."
-    >All</string>
+    >ALL</string>
   <string
     name="shrineCategoryNameAccessories"
     description="A category of products consisting of accessories (clothing items)."
-    >Accessories</string>
+    >ACCESSORIES</string>
   <string
     name="shrineCategoryNameClothing"
     description="A category of products consisting of clothing."
-    >Clothing</string>
+    >CLOTHING</string>
   <string
     name="shrineCategoryNameHome"
     description="A category of products consisting of items used at home."
-    >Home</string>
+    >HOME</string>
   <string
     name="shrineLogoutButtonCaption"
     description="Label for a logout button."
@@ -1311,7 +1311,7 @@
     >{numberOfStops} stops</string>
   <string
     name="craneSleepProperties"
-    description="Text indicating the number of available properties (temporary rentals). Always plural"
+    description="Text indicating the number of available properties (temporary rentals). Always plural."
     >{totalProperties} Available Properties</string>
   <string
     name="craneEatRestaurants"

@@ -535,11 +535,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
         "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("Accessories"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
+            MessageLookupByLibrary.simpleMessage("CLOTHING"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
         "shrineDescription":
             MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
         "shrineLoginPasswordLabel":

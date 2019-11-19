@@ -1065,19 +1065,19 @@
   "@shrineMenuCaption": {
     "description": "Caption for a menu page."
   },
-  "shrineCategoryNameAll": "All",
+  "shrineCategoryNameAll": "ALL",
   "@shrineCategoryNameAll": {
     "description": "A tab showing products from all categories."
   },
-  "shrineCategoryNameAccessories": "Accessories",
+  "shrineCategoryNameAccessories": "ACCESSORIES",
   "@shrineCategoryNameAccessories": {
     "description": "A category of products consisting of accessories (clothing items)."
   },
-  "shrineCategoryNameClothing": "Clothing",
+  "shrineCategoryNameClothing": "CLOTHING",
   "@shrineCategoryNameClothing": {
     "description": "A category of products consisting of clothing."
   },
-  "shrineCategoryNameHome": "Home",
+  "shrineCategoryNameHome": "HOME",
   "@shrineCategoryNameHome": {
     "description": "A category of products consisting of items used at home."
   },
