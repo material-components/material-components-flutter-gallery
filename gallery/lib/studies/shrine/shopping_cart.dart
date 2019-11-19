@@ -16,6 +16,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:scoped_model/scoped_model.dart';
 
+import '../../l10n/gallery_localizations.dart';
+
 import 'colors.dart';
 import 'expanding_bottom_sheet.dart';
 import 'model/app_state_model.dart';
@@ -68,12 +70,16 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                             ),
                           ),
                           Text(
-                            'CART',
+                            GalleryLocalizations.of(context)
+                                .shrineCartPageCaption,
                             style: localTheme.textTheme.subhead
                                 .copyWith(fontWeight: FontWeight.w600),
                           ),
                           const SizedBox(width: 16),
-                          Text('${model.totalCartQuantity} ITEMS'),
+                          Text(
+                            GalleryLocalizations.of(context)
+                                .shrineCartItemCount(model.totalCartQuantity),
+                          ),
                         ],
                       ),
                       const SizedBox(height: 16),
@@ -94,9 +100,12 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                       ),
                       color: shrinePink100,
                       splashColor: shrineBrown600,
-                      child: const Padding(
+                      child: Padding(
                         padding: EdgeInsets.symmetric(vertical: 12),
-                        child: Text('CLEAR CART'),
+                        child: Text(
+                          GalleryLocalizations.of(context)
+                              .shrineCartClearButtonCaption,
+                        ),
                       ),
                       onPressed: () {
                         model.clearCart();
@@ -140,8 +149,10 @@ class ShoppingCartSummary extends StatelessWidget {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const Expanded(
-                      child: Text('TOTAL'),
+                    Expanded(
+                      child: Text(
+                        GalleryLocalizations.of(context).shrineCartTotalCaption,
+                      ),
                     ),
                     Text(
                       formatter.format(model.totalCost),
@@ -152,8 +163,11 @@ class ShoppingCartSummary extends StatelessWidget {
                 const SizedBox(height: 16),
                 Row(
                   children: [
-                    const Expanded(
-                      child: Text('Subtotal:'),
+                    Expanded(
+                      child: Text(
+                        GalleryLocalizations.of(context)
+                            .shrineCartSubtotalCaption,
+                      ),
                     ),
                     Text(
                       formatter.format(model.subtotalCost),
@@ -164,8 +178,11 @@ class ShoppingCartSummary extends StatelessWidget {
                 const SizedBox(height: 4),
                 Row(
                   children: [
-                    const Expanded(
-                      child: Text('Shipping:'),
+                    Expanded(
+                      child: Text(
+                        GalleryLocalizations.of(context)
+                            .shrineCartShippingCaption,
+                      ),
                     ),
                     Text(
                       formatter.format(model.shippingCost),
@@ -176,8 +193,10 @@ class ShoppingCartSummary extends StatelessWidget {
                 const SizedBox(height: 4),
                 Row(
                   children: [
-                    const Expanded(
-                      child: Text('Tax:'),
+                    Expanded(
+                      child: Text(
+                        GalleryLocalizations.of(context).shrineCartTaxCaption,
+                      ),
                     ),
                     Text(
                       formatter.format(model.tax),
@@ -249,13 +268,20 @@ class ShoppingCartRow extends StatelessWidget {
                             Row(
                               children: [
                                 Expanded(
-                                  child: Text('Quantity: $quantity'),
+                                  child: Text(
+                                    GalleryLocalizations.of(context)
+                                        .shrineProductQuantity(quantity),
+                                  ),
                                 ),
-                                Text('x ${formatter.format(product.price)}'),
+                                Text(
+                                  GalleryLocalizations.of(context)
+                                      .shrineProductPrice(
+                                          formatter.format(product.price)),
+                                ),
                               ],
                             ),
                             Text(
-                              product.name,
+                              product.name(context),
                               style: localTheme.textTheme.subhead
                                   .copyWith(fontWeight: FontWeight.w600),
                             ),

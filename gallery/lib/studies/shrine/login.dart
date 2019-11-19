@@ -14,6 +14,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../../l10n/gallery_localizations.dart';
+
 import 'colors.dart';
 
 class LoginPage extends StatefulWidget {
@@ -74,8 +76,9 @@ class _LoginPageState extends State<LoginPage> {
                 child: TextField(
                   controller: _usernameController,
                   cursorColor: colorScheme.onSurface,
-                  decoration: const InputDecoration(
-                    labelText: 'Username',
+                  decoration: InputDecoration(
+                    labelText: GalleryLocalizations.of(context)
+                        .shrineLoginUsernameLabel,
                   ),
                 ),
               ),
@@ -89,8 +92,9 @@ class _LoginPageState extends State<LoginPage> {
                   controller: _passwordController,
                   cursorColor: colorScheme.onSurface,
                   obscureText: true,
-                  decoration: const InputDecoration(
-                    labelText: 'Password',
+                  decoration: InputDecoration(
+                    labelText: GalleryLocalizations.of(context)
+                        .shrineLoginPasswordLabel,
                   ),
                 ),
               ),
@@ -101,7 +105,8 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     FlatButton(
                       child: Text(
-                        'CANCEL',
+                        GalleryLocalizations.of(context)
+                            .shrineCancelButtonCaption,
                         style: TextStyle(color: colorScheme.onSurface),
                       ),
                       shape: const BeveledRectangleBorder(
@@ -116,7 +121,10 @@ class _LoginPageState extends State<LoginPage> {
                       },
                     ),
                     RaisedButton(
-                      child: const Text('NEXT'),
+                      child: Text(
+                        GalleryLocalizations.of(context)
+                            .shrineNextButtonCaption,
+                      ),
                       elevation: 8,
                       shape: const BeveledRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(7)),

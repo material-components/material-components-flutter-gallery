@@ -25,7 +25,7 @@ class AppStateModel extends Model {
   List<Product> _availableProducts;
 
   // The currently selected category of products.
-  Category _selectedCategory = Category.all;
+  Category _selectedCategory = categoryAll;
 
   // The IDs and quantities of products currently in the cart.
   final Map<int, int> _productsInCart = <int, int>{};
@@ -62,7 +62,7 @@ class AppStateModel extends Model {
       return [];
     }
 
-    if (_selectedCategory == Category.all) {
+    if (_selectedCategory == categoryAll) {
       return List<Product>.from(_availableProducts);
     } else {
       return _availableProducts
@@ -108,7 +108,7 @@ class AppStateModel extends Model {
 
   // Loads the list of available products from the repo.
   void loadProducts() {
-    _availableProducts = ProductsRepository.loadProducts(Category.all);
+    _availableProducts = ProductsRepository.loadProducts(categoryAll);
     notifyListeners();
   }
 

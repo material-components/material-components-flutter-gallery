@@ -16,6 +16,7 @@ import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 import '../../layout/adaptive.dart';
+import '../../l10n/gallery_localizations.dart';
 
 import 'backdrop.dart';
 import 'category_menu_page.dart';
@@ -69,7 +70,7 @@ class _ShrineAppState extends State<ShrineApp> with TickerProviderStateMixin {
       frontLayer: const ProductPage(),
       backLayer: CategoryMenuPage(onCategoryTap: () => _controller.forward()),
       frontTitle: const Text('SHRINE'),
-      backTitle: const Text('MENU'),
+      backTitle: Text(GalleryLocalizations.of(context).shrineMenuCaption),
       controller: _controller,
     );
   }
@@ -105,6 +106,9 @@ class _ShrineAppState extends State<ShrineApp> with TickerProviderStateMixin {
         // Copy the platform from the main theme in order to support platform
         // toggling from the Gallery options menu.
         theme: _shrineTheme.copyWith(platform: Theme.of(context).platform),
+        // L10n settings.
+        localizationsDelegates: GalleryLocalizations.localizationsDelegates,
+        supportedLocales: GalleryLocalizations.supportedLocales,
       ),
     );
   }

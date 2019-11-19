@@ -12,14 +12,45 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 
-enum Category {
-  all,
-  accessories,
-  clothing,
-  home,
+import '../../../l10n/gallery_localizations.dart';
+
+class Category {
+  const Category({
+    @required this.name,
+  }) : assert(name != null);
+
+  // A function taking a BuildContext as input and
+  // returns the internationalized name of the category.
+  final String Function(BuildContext) name;
 }
+
+Category categoryAll = Category(
+  name: (context) => GalleryLocalizations.of(context).shrineCategoryNameAll,
+);
+
+Category categoryAccessories = Category(
+  name: (context) =>
+      GalleryLocalizations.of(context).shrineCategoryNameAccessories,
+);
+
+Category categoryClothing = Category(
+  name: (context) =>
+      GalleryLocalizations.of(context).shrineCategoryNameClothing,
+);
+
+Category categoryHome = Category(
+  name: (context) => GalleryLocalizations.of(context).shrineCategoryNameHome,
+);
+
+List<Category> categories = [
+  categoryAll,
+  categoryAccessories,
+  categoryClothing,
+  categoryHome,
+];
 
 class Product {
   const Product({
@@ -37,12 +68,13 @@ class Product {
   final Category category;
   final int id;
   final bool isFeatured;
-  final String name;
+
+  // A function taking a BuildContext as input and
+  // returns the internationalized name of the product.
+  final String Function(BuildContext) name;
+
   final int price;
 
   String get assetName => '$id-0.jpg';
   String get assetPackage => 'shrine_images';
-
-  @override
-  String toString() => '$name (id=$id)';
 }

@@ -19,13 +19,10 @@ import '../../layout/adaptive.dart';
 
 import 'expanding_bottom_sheet.dart';
 import 'model/app_state_model.dart';
-import 'model/product.dart';
 import 'supplemental/asymmetric_view.dart';
 
 class ProductPage extends StatelessWidget {
-  const ProductPage({this.category = Category.all});
-
-  final Category category;
+  const ProductPage();
 
   @override
   Widget build(BuildContext context) {
