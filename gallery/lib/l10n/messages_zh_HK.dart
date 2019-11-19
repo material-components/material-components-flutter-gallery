@@ -28,9 +28,25 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
 
-  static m4(value) => "You selected: \"${value}\"";
+  static m4(value) => "您已選取：「${value}」";
 
-  static m5(value) => "Item ${value}";
+  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
+
+  static m6(percent) =>
+      "Good work! Your checking account is ${percent} higher than last month.";
+
+  static m7(percent) =>
+      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+
+  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+
+  static m9(quantity) => "${quantity} ITEMS";
+
+  static m10(price) => "x ${price}";
+
+  static m11(quantity) => "Quantity: ${quantity}";
+
+  static m12(value) => "Item ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -49,60 +65,57 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Comments"),
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
-        "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Create"),
-        "colorsAmber": MessageLookupByLibrary.simpleMessage("AMBER"),
-        "colorsBlue": MessageLookupByLibrary.simpleMessage("BLUE"),
-        "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("BLUE GREY"),
-        "colorsBrown": MessageLookupByLibrary.simpleMessage("BROWN"),
-        "colorsCyan": MessageLookupByLibrary.simpleMessage("CYAN"),
-        "colorsDeepOrange": MessageLookupByLibrary.simpleMessage("DEEP ORANGE"),
-        "colorsDeepPurple": MessageLookupByLibrary.simpleMessage("DEEP PURPLE"),
-        "colorsGreen": MessageLookupByLibrary.simpleMessage("GREEN"),
-        "colorsGrey": MessageLookupByLibrary.simpleMessage("GREY"),
-        "colorsIndigo": MessageLookupByLibrary.simpleMessage("INDIGO"),
-        "colorsLightBlue": MessageLookupByLibrary.simpleMessage("LIGHT BLUE"),
-        "colorsLightGreen": MessageLookupByLibrary.simpleMessage("LIGHT GREEN"),
-        "colorsLime": MessageLookupByLibrary.simpleMessage("LIME"),
-        "colorsOrange": MessageLookupByLibrary.simpleMessage("ORANGE"),
-        "colorsPink": MessageLookupByLibrary.simpleMessage("PINK"),
-        "colorsPurple": MessageLookupByLibrary.simpleMessage("PURPLE"),
-        "colorsRed": MessageLookupByLibrary.simpleMessage("RED"),
-        "colorsTeal": MessageLookupByLibrary.simpleMessage("TEAL"),
-        "colorsYellow": MessageLookupByLibrary.simpleMessage("YELLOW"),
+        "buttonTextCreate": MessageLookupByLibrary.simpleMessage("建立"),
+        "colorsAmber": MessageLookupByLibrary.simpleMessage("琥珀色"),
+        "colorsBlue": MessageLookupByLibrary.simpleMessage("藍色"),
+        "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("灰藍色"),
+        "colorsBrown": MessageLookupByLibrary.simpleMessage("啡色"),
+        "colorsCyan": MessageLookupByLibrary.simpleMessage("青藍色"),
+        "colorsDeepOrange": MessageLookupByLibrary.simpleMessage("深橙色"),
+        "colorsDeepPurple": MessageLookupByLibrary.simpleMessage("深紫色"),
+        "colorsGreen": MessageLookupByLibrary.simpleMessage("綠色"),
+        "colorsGrey": MessageLookupByLibrary.simpleMessage("灰色"),
+        "colorsIndigo": MessageLookupByLibrary.simpleMessage("靛藍色"),
+        "colorsLightBlue": MessageLookupByLibrary.simpleMessage("淺藍色"),
+        "colorsLightGreen": MessageLookupByLibrary.simpleMessage("淺綠色"),
+        "colorsLime": MessageLookupByLibrary.simpleMessage("青檸色"),
+        "colorsOrange": MessageLookupByLibrary.simpleMessage("橙色"),
+        "colorsPink": MessageLookupByLibrary.simpleMessage("粉紅色"),
+        "colorsPurple": MessageLookupByLibrary.simpleMessage("紫色"),
+        "colorsRed": MessageLookupByLibrary.simpleMessage("紅色"),
+        "colorsTeal": MessageLookupByLibrary.simpleMessage("藍綠色"),
+        "colorsYellow": MessageLookupByLibrary.simpleMessage("黃色"),
         "craneDescription":
             MessageLookupByLibrary.simpleMessage("A personalized travel app"),
-        "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("Allow"),
-        "cupertinoAlertApplePie":
-            MessageLookupByLibrary.simpleMessage("Apple Pie"),
-        "cupertinoAlertCancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+        "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("允許"),
+        "cupertinoAlertApplePie": MessageLookupByLibrary.simpleMessage("蘋果批"),
+        "cupertinoAlertCancel": MessageLookupByLibrary.simpleMessage("取消"),
         "cupertinoAlertCheesecake":
-            MessageLookupByLibrary.simpleMessage("Cheesecake"),
+            MessageLookupByLibrary.simpleMessage("芝士蛋糕"),
         "cupertinoAlertChocolateBrownie":
-            MessageLookupByLibrary.simpleMessage("Chocolate Brownie"),
-        "cupertinoAlertDessertDescription": MessageLookupByLibrary.simpleMessage(
-            "Please select your favorite type of dessert from the list below. Your selection will be used to customize the suggested list of eateries in your area."),
-        "cupertinoAlertDiscard":
-            MessageLookupByLibrary.simpleMessage("Discard"),
-        "cupertinoAlertDontAllow":
-            MessageLookupByLibrary.simpleMessage("Don\'t Allow"),
+            MessageLookupByLibrary.simpleMessage("朱古力布朗尼"),
+        "cupertinoAlertDessertDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "請從下方清單中選取您喜愛的甜點類型。系統會根據您的選擇和所在地區，提供個人化的餐廳建議清單。"),
+        "cupertinoAlertDiscard": MessageLookupByLibrary.simpleMessage("捨棄"),
+        "cupertinoAlertDontAllow": MessageLookupByLibrary.simpleMessage("不允許"),
         "cupertinoAlertFavoriteDessert":
-            MessageLookupByLibrary.simpleMessage("Select Favorite Dessert"),
-        "cupertinoAlertLocationDescription": MessageLookupByLibrary.simpleMessage(
-            "Your current location will be displayed on the map and used for directions, nearby search results, and estimated travel times."),
-        "cupertinoAlertLocationTitle": MessageLookupByLibrary.simpleMessage(
-            "Allow \"Maps\" to access your location while you are using the app?"),
-        "cupertinoAlertTiramisu":
-            MessageLookupByLibrary.simpleMessage("Tiramisu"),
+            MessageLookupByLibrary.simpleMessage("選取喜愛的甜品"),
+        "cupertinoAlertLocationDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "您的目前位置會在地圖上顯示，並用於路線、附近搜尋結果和預計的行程時間。"),
+        "cupertinoAlertLocationTitle":
+            MessageLookupByLibrary.simpleMessage("要允許「Google 地圖」在您使用時存取位置資訊嗎？"),
+        "cupertinoAlertTiramisu": MessageLookupByLibrary.simpleMessage("提拉米蘇"),
         "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
         "cupertinoButtonWithBackground":
-            MessageLookupByLibrary.simpleMessage("With Background"),
-        "cupertinoShowAlert":
-            MessageLookupByLibrary.simpleMessage("Show Alert"),
+            MessageLookupByLibrary.simpleMessage("設有背景"),
+        "cupertinoShowAlert": MessageLookupByLibrary.simpleMessage("顯示通知"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
-            "An alert dialog informs the user about situations that require acknowledgement. An alert dialog has an optional title and an optional list of actions."),
-        "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("Alert"),
+            "通知對話框會通知使用者目前發生要確認的情況。您可按需要為這類對話框設定標題和動作清單。"),
+        "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("通知"),
         "demoAlertTitleDialogTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage("具有標題的通知"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
             "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
         "demoBottomNavigationPersistentLabels":
@@ -133,73 +146,67 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Bottom sheet"),
         "demoBottomTextFieldsTitle":
             MessageLookupByLibrary.simpleMessage("Text fields"),
-        "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Flat, raised, outline, and more"),
-        "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Buttons"),
-        "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Code Sample"),
+        "demoButtonSubtitle":
+            MessageLookupByLibrary.simpleMessage("平面、凸起、外框等等"),
+        "demoButtonTitle": MessageLookupByLibrary.simpleMessage("按鈕"),
+        "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("程式碼範本"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Color and color swatch constants which represent Material Design\'s color palette."),
-        "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined colors"),
-        "demoColorsTitle": MessageLookupByLibrary.simpleMessage("Colors"),
-        "demoCupertinoActionSheetDescription": MessageLookupByLibrary.simpleMessage(
-            "An action sheet is a specific style of alert that presents the user with a set of two or more choices related to the current context. An action sheet can have a title, an additional message, and a list of actions."),
+        "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage("所有預先定義的顏色"),
+        "demoColorsTitle": MessageLookupByLibrary.simpleMessage("顏色"),
+        "demoCupertinoActionSheetDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "動作表是一種特定樣式的通知，根據目前情況向使用者提供兩個或以上的相關選項。您可按需要為動作表設定標題、額外訊息和動作清單。"),
         "demoCupertinoActionSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Action Sheet"),
+            MessageLookupByLibrary.simpleMessage("動作表"),
         "demoCupertinoAlertButtonsOnlyTitle":
-            MessageLookupByLibrary.simpleMessage("Alert Buttons Only"),
+            MessageLookupByLibrary.simpleMessage("只限通知按鈕"),
         "demoCupertinoAlertButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Buttons"),
+            MessageLookupByLibrary.simpleMessage("含有按鈕的通知"),
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
-            "An alert dialog informs the user about situations that require acknowledgement. An alert dialog has an optional title, optional content, and an optional list of actions. The title is displayed above the content and the actions are displayed below the content."),
+            "通知對話框會通知使用者目前發生要確認的情況。您可按需要為這類對話框設定標題、內容和動作清單。標題會在內容上方顯示，動作會在內容下方顯示。"),
         "demoCupertinoAlertTitle":
             MessageLookupByLibrary.simpleMessage("Alert"),
         "demoCupertinoAlertWithTitleTitle":
             MessageLookupByLibrary.simpleMessage("Alert With Title"),
         "demoCupertinoAlertsSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style alert dialogs"),
-        "demoCupertinoAlertsTitle":
-            MessageLookupByLibrary.simpleMessage("Alerts"),
+            MessageLookupByLibrary.simpleMessage("iOS 樣式的通知對話框"),
+        "demoCupertinoAlertsTitle": MessageLookupByLibrary.simpleMessage("通知"),
         "demoCupertinoButtonsDescription": MessageLookupByLibrary.simpleMessage(
-            "An iOS-style button. It takes in text and/or an icon that fades out and in on touch. May optionally have a background."),
+            "iOS 樣式的按鈕，當中的文字和/或圖示會在使用者輕觸按鈕時淡出及淡入。可按需要設定背景。"),
         "demoCupertinoButtonsSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style buttons"),
+            MessageLookupByLibrary.simpleMessage("iOS 樣式按鈕"),
         "demoCupertinoButtonsTitle":
             MessageLookupByLibrary.simpleMessage("Buttons"),
-        "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Simple, alert, and fullscreen"),
-        "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dialogs"),
+        "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage("簡單、通知和全螢幕"),
+        "demoDialogTitle": MessageLookupByLibrary.simpleMessage("對話框"),
         "demoDocumentationTooltip":
-            MessageLookupByLibrary.simpleMessage("API Documentation"),
+            MessageLookupByLibrary.simpleMessage("API 說明文件"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
-            "A flat button displays an ink splash on press but does not lift. Use flat buttons on toolbars, in dialogs and inline with padding"),
-        "demoFlatButtonTitle":
-            MessageLookupByLibrary.simpleMessage("Flat Button"),
+            "平面式按鈕，按下後會出現墨水擴散特效，但不會有升起效果。這類按鈕用於工具列、對話框和設有邊框間距的內嵌元素"),
+        "demoFlatButtonTitle": MessageLookupByLibrary.simpleMessage("平面式按鈕"),
         "demoFloatingButtonDescription": MessageLookupByLibrary.simpleMessage(
-            "A floating action button is a circular icon button that hovers over content to promote a primary action in the application."),
+            "懸浮動作按鈕是個圓形圖示按鈕，會懸停在內容上，可用來在應用程式中執行一項主要動作。"),
         "demoFloatingButtonTitle":
-            MessageLookupByLibrary.simpleMessage("Floating Action Button"),
+            MessageLookupByLibrary.simpleMessage("懸浮動作按鈕"),
         "demoFullscreenDialogDescription": MessageLookupByLibrary.simpleMessage(
-            "The fullscreenDialog property specifies whether the incoming page is a fullscreen modal dialog"),
+            "您可以利用 fullscreenDialog 屬性指定接下來顯示的頁面是否顯示為全螢幕強制回應對話框"),
         "demoFullscreenDialogTitle":
-            MessageLookupByLibrary.simpleMessage("Fullscreen"),
+            MessageLookupByLibrary.simpleMessage("全螢幕"),
         "demoFullscreenTooltip":
             MessageLookupByLibrary.simpleMessage("Full Screen"),
-        "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Info"),
-        "demoInvalidURL":
-            MessageLookupByLibrary.simpleMessage("Couldn\'t display URL:"),
-        "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Options"),
+        "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("資料"),
+        "demoInvalidURL": MessageLookupByLibrary.simpleMessage("無法顯示網址："),
+        "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("選項"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
-            "Outline buttons become opaque and elevate when pressed. They are often paired with raised buttons to indicate an alternative, secondary action."),
-        "demoOutlineButtonTitle":
-            MessageLookupByLibrary.simpleMessage("Outline Button"),
+            "外框按鈕會在使用者按下時轉為不透明並升起。這類按鈕通常會與凸起的按鈕一同使用，用於指出次要的替代動作。"),
+        "demoOutlineButtonTitle": MessageLookupByLibrary.simpleMessage("外框按鈕"),
         "demoRaisedButtonDescription": MessageLookupByLibrary.simpleMessage(
-            "Raised buttons add dimension to mostly flat layouts. They emphasize functions on busy or wide spaces."),
-        "demoRaisedButtonTitle":
-            MessageLookupByLibrary.simpleMessage("Raised Button"),
+            "凸起的按鈕可為主要為平面的版面配置增添層次。這類按鈕可在擁擠或寬闊的空間中突顯其功能。"),
+        "demoRaisedButtonTitle": MessageLookupByLibrary.simpleMessage("凸起的按鈕"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
-            "A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices."),
-        "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Simple"),
+            "簡單對話框讓使用者在幾個選項之間選擇。您可按需要為簡單對話框設定標題 (標題會在選項上方顯示)。"),
+        "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("簡單"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
@@ -252,42 +259,111 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("Your email address"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
-            "Toggle buttons can be used to group related options. To emphasize groups of related toggle buttons, a group should share a common container"),
-        "demoToggleButtonTitle":
-            MessageLookupByLibrary.simpleMessage("Toggle Buttons"),
+            "切換按鈕可用於將相關的選項分組。為突顯相關的切換按鈕群組，單一群組應共用同一個容器"),
+        "demoToggleButtonTitle": MessageLookupByLibrary.simpleMessage("切換按鈕"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Definitions for the various typographical styles found in Material Design."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
             "All of the predefined text styles"),
         "demoTypographyTitle":
             MessageLookupByLibrary.simpleMessage("Typography"),
-        "dialogAddAccount": MessageLookupByLibrary.simpleMessage("Add account"),
-        "dialogAgree": MessageLookupByLibrary.simpleMessage("AGREE"),
-        "dialogCancel": MessageLookupByLibrary.simpleMessage("CANCEL"),
-        "dialogDisagree": MessageLookupByLibrary.simpleMessage("DISAGREE"),
-        "dialogDiscard": MessageLookupByLibrary.simpleMessage("DISCARD"),
-        "dialogDiscardTitle":
-            MessageLookupByLibrary.simpleMessage("Discard draft?"),
+        "dialogAddAccount": MessageLookupByLibrary.simpleMessage("新增帳戶"),
+        "dialogAgree": MessageLookupByLibrary.simpleMessage("同意"),
+        "dialogCancel": MessageLookupByLibrary.simpleMessage("取消"),
+        "dialogDisagree": MessageLookupByLibrary.simpleMessage("不同意"),
+        "dialogDiscard": MessageLookupByLibrary.simpleMessage("捨棄"),
+        "dialogDiscardTitle": MessageLookupByLibrary.simpleMessage("要捨棄草稿嗎？"),
         "dialogFullscreenDescription":
-            MessageLookupByLibrary.simpleMessage("A full screen dialog demo"),
-        "dialogFullscreenSave": MessageLookupByLibrary.simpleMessage("SAVE"),
-        "dialogFullscreenTitle":
-            MessageLookupByLibrary.simpleMessage("Full Screen Dialog"),
+            MessageLookupByLibrary.simpleMessage("全螢幕對話框示範"),
+        "dialogFullscreenSave": MessageLookupByLibrary.simpleMessage("儲存"),
+        "dialogFullscreenTitle": MessageLookupByLibrary.simpleMessage("全螢幕對話框"),
         "dialogLocationDescription": MessageLookupByLibrary.simpleMessage(
-            "Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running."),
-        "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
-            "Use Google\'s location service?"),
+            "允許 Google 協助應用程式判斷您的位置。這麼做會將匿名的位置資料傳送給 Google (即使您未執行任何應用程式)。"),
+        "dialogLocationTitle":
+            MessageLookupByLibrary.simpleMessage("要使用 Google 的定位服務嗎？"),
         "dialogSelectedOption": m4,
-        "dialogSetBackup":
-            MessageLookupByLibrary.simpleMessage("Set backup account"),
-        "dialogShow": MessageLookupByLibrary.simpleMessage("SHOW DIALOG"),
+        "dialogSetBackup": MessageLookupByLibrary.simpleMessage("設定備份帳戶"),
+        "dialogShow": MessageLookupByLibrary.simpleMessage("顯示對話框"),
         "homeCategoryReference":
-            MessageLookupByLibrary.simpleMessage("REFERENCE STYLES & MEDIA"),
-        "homeHeaderCategories":
-            MessageLookupByLibrary.simpleMessage("Categories"),
-        "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Gallery"),
+            MessageLookupByLibrary.simpleMessage("參考樣式和媒體"),
+        "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("類別"),
+        "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("相片集"),
+        "rallyAccountDataCarSavings":
+            MessageLookupByLibrary.simpleMessage("Car Savings"),
+        "rallyAccountDataChecking":
+            MessageLookupByLibrary.simpleMessage("Checking"),
+        "rallyAccountDataHomeSavings":
+            MessageLookupByLibrary.simpleMessage("Home Savings"),
+        "rallyAccountDataVacation":
+            MessageLookupByLibrary.simpleMessage("Vacation"),
+        "rallyAccountDetailDataAccountOwner":
+            MessageLookupByLibrary.simpleMessage("Account Owner"),
+        "rallyAccountDetailDataAnnualPercentageYield":
+            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+        "rallyAccountDetailDataInterestPaidLastYear":
+            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+        "rallyAccountDetailDataInterestRate":
+            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+        "rallyAccountDetailDataInterestYtd":
+            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+        "rallyAccountDetailDataNextStatement":
+            MessageLookupByLibrary.simpleMessage("Next Statement"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
+        "rallyAlertsMessageATMFees": m5,
+        "rallyAlertsMessageCheckingAccount": m6,
+        "rallyAlertsMessageHeadsUpShopping": m7,
+        "rallyAlertsMessageSpentOnRestaurants": m8,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+        "rallyBudgetCategoryClothing":
+            MessageLookupByLibrary.simpleMessage("Clothing"),
+        "rallyBudgetCategoryCoffeeShops":
+            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+        "rallyBudgetCategoryGroceries":
+            MessageLookupByLibrary.simpleMessage("Groceries"),
+        "rallyBudgetCategoryRestaurants":
+            MessageLookupByLibrary.simpleMessage("Restaurants"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
         "rallyDescription":
             MessageLookupByLibrary.simpleMessage("A personal finance app"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
+        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
+        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+        "rallyLoginLoginToRally":
+            MessageLookupByLibrary.simpleMessage("Login to Rally"),
+        "rallyLoginNoAccount":
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+        "rallyLoginRememberMe":
+            MessageLookupByLibrary.simpleMessage("Remember Me"),
+        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
+        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+        "rallySettingsFindAtms":
+            MessageLookupByLibrary.simpleMessage("Find ATMs"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+        "rallySettingsManageAccounts":
+            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+        "rallySettingsNotifications":
+            MessageLookupByLibrary.simpleMessage("Notifications"),
+        "rallySettingsPaperlessSettings":
+            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
+        "rallySettingsPasscodeAndTouchId":
+            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+        "rallySettingsPersonalInformation":
+            MessageLookupByLibrary.simpleMessage("Personal Information"),
+        "rallySettingsSignOut":
+            MessageLookupByLibrary.simpleMessage("Sign out"),
+        "rallySettingsTaxDocuments":
+            MessageLookupByLibrary.simpleMessage("Tax Documents"),
+        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
+        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
+        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
+        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
         "settingsAbout":
             MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
@@ -320,11 +396,113 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Small"),
         "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
         "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+        "shrineCancelButtonCaption":
+            MessageLookupByLibrary.simpleMessage("CANCEL"),
+        "shrineCartClearButtonCaption":
+            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
+        "shrineCartItemCount": m9,
+        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+        "shrineCartShippingCaption":
+            MessageLookupByLibrary.simpleMessage("Shipping:"),
+        "shrineCartSubtotalCaption":
+            MessageLookupByLibrary.simpleMessage("Subtotal:"),
+        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
+        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+        "shrineCategoryNameAccessories":
+            MessageLookupByLibrary.simpleMessage("Accessories"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+        "shrineCategoryNameClothing":
+            MessageLookupByLibrary.simpleMessage("Clothing"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
         "shrineDescription":
             MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+        "shrineLoginPasswordLabel":
+            MessageLookupByLibrary.simpleMessage("Password"),
+        "shrineLoginUsernameLabel":
+            MessageLookupByLibrary.simpleMessage("Username"),
+        "shrineLogoutButtonCaption":
+            MessageLookupByLibrary.simpleMessage("LOGOUT"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
+        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+        "shrineProductBlueStoneMug":
+            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
+        "shrineProductCeriseScallopTee":
+            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+        "shrineProductChambrayNapkins":
+            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+        "shrineProductChambrayShirt":
+            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+        "shrineProductClassicWhiteCollar":
+            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+        "shrineProductClaySweater":
+            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+        "shrineProductCopperWireRack":
+            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+        "shrineProductFineLinesTee":
+            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+        "shrineProductGardenStrand":
+            MessageLookupByLibrary.simpleMessage("Garden strand"),
+        "shrineProductGatsbyHat":
+            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+        "shrineProductGentryJacket":
+            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
+        "shrineProductGiltDeskTrio":
+            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+        "shrineProductGingerScarf":
+            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+        "shrineProductGreySlouchTank":
+            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+        "shrineProductHurrahsTeaSet":
+            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+        "shrineProductKitchenQuattro":
+            MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
+        "shrineProductNavyTrousers":
+            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+        "shrineProductPlasterTunic":
+            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
+        "shrineProductPrice": m10,
+        "shrineProductQuantity": m11,
+        "shrineProductQuartetTable":
+            MessageLookupByLibrary.simpleMessage("Quartet table"),
+        "shrineProductRainwaterTray":
+            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+        "shrineProductRamonaCrossover":
+            MessageLookupByLibrary.simpleMessage("Ramona crossover"),
+        "shrineProductSeaTunic":
+            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+        "shrineProductSeabreezeSweater":
+            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
+        "shrineProductShoulderRollsTee":
+            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
+        "shrineProductShrugBag":
+            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+        "shrineProductSootheCeramicSet":
+            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
+        "shrineProductStellaSunglasses":
+            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+        "shrineProductStrutEarrings":
+            MessageLookupByLibrary.simpleMessage("Strut earrings"),
+        "shrineProductSucculentPlanters":
+            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+        "shrineProductSunshirtDress":
+            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+        "shrineProductSurfAndPerfShirt":
+            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+        "shrineProductVagabondSack":
+            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+        "shrineProductVarsitySocks":
+            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+        "shrineProductWalterHenleyWhite":
+            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+        "shrineProductWeaveKeyring":
+            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+        "shrineProductWhitePinstripeShirt":
+            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+        "shrineProductWhitneyBelt":
+            MessageLookupByLibrary.simpleMessage("Whitney belt"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m5,
+        "starterAppDrawerItem": m12,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("BUTTON"),

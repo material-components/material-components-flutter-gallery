@@ -28,9 +28,25 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
 
-  static m4(value) => "You selected: \"${value}\"";
+  static m4(value) => "እርስዎ ይህን መርጠዋል፦ «${value}»";
 
-  static m5(value) => "Item ${value}";
+  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
+
+  static m6(percent) =>
+      "Good work! Your checking account is ${percent} higher than last month.";
+
+  static m7(percent) =>
+      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+
+  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+
+  static m9(quantity) => "${quantity} ITEMS";
+
+  static m10(price) => "x ${price}";
+
+  static m11(quantity) => "Quantity: ${quantity}";
+
+  static m12(value) => "Item ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -49,60 +65,57 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Comments"),
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
-        "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Create"),
-        "colorsAmber": MessageLookupByLibrary.simpleMessage("AMBER"),
-        "colorsBlue": MessageLookupByLibrary.simpleMessage("BLUE"),
-        "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("BLUE GREY"),
-        "colorsBrown": MessageLookupByLibrary.simpleMessage("BROWN"),
-        "colorsCyan": MessageLookupByLibrary.simpleMessage("CYAN"),
-        "colorsDeepOrange": MessageLookupByLibrary.simpleMessage("DEEP ORANGE"),
-        "colorsDeepPurple": MessageLookupByLibrary.simpleMessage("DEEP PURPLE"),
-        "colorsGreen": MessageLookupByLibrary.simpleMessage("GREEN"),
-        "colorsGrey": MessageLookupByLibrary.simpleMessage("GREY"),
-        "colorsIndigo": MessageLookupByLibrary.simpleMessage("INDIGO"),
-        "colorsLightBlue": MessageLookupByLibrary.simpleMessage("LIGHT BLUE"),
-        "colorsLightGreen": MessageLookupByLibrary.simpleMessage("LIGHT GREEN"),
-        "colorsLime": MessageLookupByLibrary.simpleMessage("LIME"),
-        "colorsOrange": MessageLookupByLibrary.simpleMessage("ORANGE"),
-        "colorsPink": MessageLookupByLibrary.simpleMessage("PINK"),
-        "colorsPurple": MessageLookupByLibrary.simpleMessage("PURPLE"),
-        "colorsRed": MessageLookupByLibrary.simpleMessage("RED"),
-        "colorsTeal": MessageLookupByLibrary.simpleMessage("TEAL"),
-        "colorsYellow": MessageLookupByLibrary.simpleMessage("YELLOW"),
+        "buttonTextCreate": MessageLookupByLibrary.simpleMessage("ይፍጠሩ"),
+        "colorsAmber": MessageLookupByLibrary.simpleMessage("አምበር"),
+        "colorsBlue": MessageLookupByLibrary.simpleMessage("ሰማያዊ"),
+        "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("ሰማያዊ ግራጫ"),
+        "colorsBrown": MessageLookupByLibrary.simpleMessage("ቡናማ"),
+        "colorsCyan": MessageLookupByLibrary.simpleMessage("አረንጓዴ-ሰማያዊ"),
+        "colorsDeepOrange": MessageLookupByLibrary.simpleMessage("ደማቅ ብርቱካናማ"),
+        "colorsDeepPurple": MessageLookupByLibrary.simpleMessage("ደማቅ ሐምራዊ"),
+        "colorsGreen": MessageLookupByLibrary.simpleMessage("አረንጓዴ"),
+        "colorsGrey": MessageLookupByLibrary.simpleMessage("ግራጫ"),
+        "colorsIndigo": MessageLookupByLibrary.simpleMessage("ወይን ጠጅ"),
+        "colorsLightBlue": MessageLookupByLibrary.simpleMessage("ፈካ ያለ ሰማያዊ"),
+        "colorsLightGreen": MessageLookupByLibrary.simpleMessage("ፈካ ያለ አረንጓዴ"),
+        "colorsLime": MessageLookupByLibrary.simpleMessage("ሎሚ ቀለም"),
+        "colorsOrange": MessageLookupByLibrary.simpleMessage("ብርቱካናማ"),
+        "colorsPink": MessageLookupByLibrary.simpleMessage("ሮዝ"),
+        "colorsPurple": MessageLookupByLibrary.simpleMessage("ሐምራዊ"),
+        "colorsRed": MessageLookupByLibrary.simpleMessage("ቀይ"),
+        "colorsTeal": MessageLookupByLibrary.simpleMessage("ደማቅ አረንጓዴ-ሰማያዊ"),
+        "colorsYellow": MessageLookupByLibrary.simpleMessage("ቢጫ"),
         "craneDescription":
             MessageLookupByLibrary.simpleMessage("A personalized travel app"),
-        "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("Allow"),
+        "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("ፍቀድ"),
         "cupertinoAlertApplePie":
-            MessageLookupByLibrary.simpleMessage("Apple Pie"),
-        "cupertinoAlertCancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+            MessageLookupByLibrary.simpleMessage("የፖም ፓይ"),
+        "cupertinoAlertCancel": MessageLookupByLibrary.simpleMessage("ተወው"),
         "cupertinoAlertCheesecake":
-            MessageLookupByLibrary.simpleMessage("Cheesecake"),
+            MessageLookupByLibrary.simpleMessage("ቺዝ ኬክ"),
         "cupertinoAlertChocolateBrownie":
-            MessageLookupByLibrary.simpleMessage("Chocolate Brownie"),
+            MessageLookupByLibrary.simpleMessage("ቸኮሌት ብራውኒ"),
         "cupertinoAlertDessertDescription": MessageLookupByLibrary.simpleMessage(
-            "Please select your favorite type of dessert from the list below. Your selection will be used to customize the suggested list of eateries in your area."),
-        "cupertinoAlertDiscard":
-            MessageLookupByLibrary.simpleMessage("Discard"),
+            "ከዚህ በታች ካለው ዝርዝር እባክዎ የእርስዎን ተወዳጅ ጣፋጭ ምግብ ዓይነት ይምረጡ። የእርስዎ ምርጫ በእርስዎ አካባቢ ያሉትን የሚጠቆሙ መመገቢያ ቦታዎችን ዝርዝር ብጁ ለማድረግ ጥቅም ላይ ሊውል ይችላል።"),
+        "cupertinoAlertDiscard": MessageLookupByLibrary.simpleMessage("አስወግድ"),
         "cupertinoAlertDontAllow":
-            MessageLookupByLibrary.simpleMessage("Don\'t Allow"),
+            MessageLookupByLibrary.simpleMessage("አትፍቀድ"),
         "cupertinoAlertFavoriteDessert":
-            MessageLookupByLibrary.simpleMessage("Select Favorite Dessert"),
+            MessageLookupByLibrary.simpleMessage("ተወዳጅ ጣፋጭ ምግብን ይምረጡ"),
         "cupertinoAlertLocationDescription": MessageLookupByLibrary.simpleMessage(
-            "Your current location will be displayed on the map and used for directions, nearby search results, and estimated travel times."),
+            "የእርስዎ አሁን ያሉበት መገኛ አካባቢ በካርታው ላይ ይታያል እንዲሁም ለአቅጣጫዎች፣ በአቅራቢያ ያሉ ፍለጋ ውጤቶች እና የሚገመቱ የጉዞ ጊዜያት ጥቅም ላይ ይውላል።"),
         "cupertinoAlertLocationTitle": MessageLookupByLibrary.simpleMessage(
-            "Allow \"Maps\" to access your location while you are using the app?"),
-        "cupertinoAlertTiramisu":
-            MessageLookupByLibrary.simpleMessage("Tiramisu"),
+            "የእርስዎ መገኛ አካባቢ እርስዎ መተግበሪያውን እየተጠቀሙ እንዳሉ እንዲደርስበት ለ \"ካርታዎች\" ይፈቀድ?"),
+        "cupertinoAlertTiramisu": MessageLookupByLibrary.simpleMessage("ቴራሚሶ"),
         "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
         "cupertinoButtonWithBackground":
-            MessageLookupByLibrary.simpleMessage("With Background"),
-        "cupertinoShowAlert":
-            MessageLookupByLibrary.simpleMessage("Show Alert"),
+            MessageLookupByLibrary.simpleMessage("ከበስተጀርባ ጋር"),
+        "cupertinoShowAlert": MessageLookupByLibrary.simpleMessage("ማንቂያን አሳይ"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
-            "An alert dialog informs the user about situations that require acknowledgement. An alert dialog has an optional title and an optional list of actions."),
-        "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("Alert"),
+            "የማንቂያ ንግግር ተጠቃሚውን ስለ ዕውቅና መስጠት የሚያስፈልጋቸው ሁኔታዎች በተመለከተ መረጃ ይሰጣል። የማንቂያ ንግግር አማራጭ አርዕስት እና የድርጊቶች አማራጭ ዝርዝር አለው።"),
+        "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("ማንቂያ"),
         "demoAlertTitleDialogTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage("ከአርእስት ጋር ማስጠንቀቂያ ስጥ"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
             "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
         "demoBottomNavigationPersistentLabels":
@@ -133,73 +146,72 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Bottom sheet"),
         "demoBottomTextFieldsTitle":
             MessageLookupByLibrary.simpleMessage("Text fields"),
-        "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Flat, raised, outline, and more"),
-        "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Buttons"),
-        "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Code Sample"),
+        "demoButtonSubtitle":
+            MessageLookupByLibrary.simpleMessage("ዝርግ፣ ከፍ ያለ፣ ቢጋር እና ተጨማሪ"),
+        "demoButtonTitle": MessageLookupByLibrary.simpleMessage("አዝራሮች"),
+        "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("የኮድ ናሙና"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Color and color swatch constants which represent Material Design\'s color palette."),
-        "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined colors"),
-        "demoColorsTitle": MessageLookupByLibrary.simpleMessage("Colors"),
+        "demoColorsSubtitle":
+            MessageLookupByLibrary.simpleMessage("ሁሉም አስቀድመው የተገለጹ ቀለማት"),
+        "demoColorsTitle": MessageLookupByLibrary.simpleMessage("ቀለማት"),
         "demoCupertinoActionSheetDescription": MessageLookupByLibrary.simpleMessage(
-            "An action sheet is a specific style of alert that presents the user with a set of two or more choices related to the current context. An action sheet can have a title, an additional message, and a list of actions."),
+            "የእርምጃ ሉህ ከሁለት ወይም ከዚያ በላይ አሁን ካለው ዓውድ ጋር ግንኙነት ያላቸው ምርጫዎች ጋር የምርጫ ስብስብ ለተጠቃሚው የሚያቀርብ የተወሰነ የማንቂያ ቅጥ ነው። የእርምጃ ሉህ አርእስት፣ ተጨማሪ መልዕክት፣ እና የእርምጃዎች ዝርዝር ሊኖረው ይችላል።"),
         "demoCupertinoActionSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Action Sheet"),
+            MessageLookupByLibrary.simpleMessage("የእርምጃ ሉህ"),
         "demoCupertinoAlertButtonsOnlyTitle":
-            MessageLookupByLibrary.simpleMessage("Alert Buttons Only"),
+            MessageLookupByLibrary.simpleMessage("የማንቂያ አዝራሮች ብቻ"),
         "demoCupertinoAlertButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Buttons"),
+            MessageLookupByLibrary.simpleMessage("ከአዝራሮች ጋር ማንቂያዎች"),
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
-            "An alert dialog informs the user about situations that require acknowledgement. An alert dialog has an optional title, optional content, and an optional list of actions. The title is displayed above the content and the actions are displayed below the content."),
+            "የማንቂያ ንግግር ተጠቃሚውን ስለ ዕውቅና መስጠት የሚያስፈልጋቸው ሁኔታዎች በተመለከተ መረጃ ይሰጣል። የማንቂያ ንግግር አማራጭ አርዕስት፣ አማራጭ ይዘት እና የድርጊቶች አማራጭ ዝርዝር አለው። አርእስቱ ከይዘቱ በላይ ይታያል እና እርምጃዎቹ ከይዘቱ ሥር ይታያሉ።"),
         "demoCupertinoAlertTitle":
             MessageLookupByLibrary.simpleMessage("Alert"),
         "demoCupertinoAlertWithTitleTitle":
             MessageLookupByLibrary.simpleMessage("Alert With Title"),
         "demoCupertinoAlertsSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style alert dialogs"),
+            MessageLookupByLibrary.simpleMessage("iOS-ቅጥ ማንቂያ ንግግሮች"),
         "demoCupertinoAlertsTitle":
-            MessageLookupByLibrary.simpleMessage("Alerts"),
+            MessageLookupByLibrary.simpleMessage("ማንቂያዎች"),
         "demoCupertinoButtonsDescription": MessageLookupByLibrary.simpleMessage(
-            "An iOS-style button. It takes in text and/or an icon that fades out and in on touch. May optionally have a background."),
+            "የ iOS-ቅጥ አዝራር። ሲነካ የሚደበዝዝ እና የሚደምቅ የጽሑፍ ውስጥ እና/ወይም አዶ ይወስዳል። በአማራጭነት በስተጀርባ ሊኖረው ይችል ይሆናል።"),
         "demoCupertinoButtonsSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style buttons"),
+            MessageLookupByLibrary.simpleMessage("iOS-ቅጥ አዝራሮች"),
         "demoCupertinoButtonsTitle":
             MessageLookupByLibrary.simpleMessage("Buttons"),
-        "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Simple, alert, and fullscreen"),
-        "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dialogs"),
+        "demoDialogSubtitle":
+            MessageLookupByLibrary.simpleMessage("ቀላል፣ ማንቂያ እና ሙሉ ማያ ገጽ"),
+        "demoDialogTitle": MessageLookupByLibrary.simpleMessage("ንግግሮች"),
         "demoDocumentationTooltip":
-            MessageLookupByLibrary.simpleMessage("API Documentation"),
+            MessageLookupByLibrary.simpleMessage("የኤፒአይ ስነዳ"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
-            "A flat button displays an ink splash on press but does not lift. Use flat buttons on toolbars, in dialogs and inline with padding"),
-        "demoFlatButtonTitle":
-            MessageLookupByLibrary.simpleMessage("Flat Button"),
+            "ዝርግ አዝራር የቀለም መርጫ በመጫን ወቅት ያሳያል ሆኖም ግን አያነሳም። ከመደገፍ ጋር በንግግሮች እና በውስጠ መስመር ውስጥ በመሣሪያ አሞሌዎች ላይ ዝርግ አዝራሮችን ይጠቀሙ"),
+        "demoFlatButtonTitle": MessageLookupByLibrary.simpleMessage("ዝርግ አዝራር"),
         "demoFloatingButtonDescription": MessageLookupByLibrary.simpleMessage(
-            "A floating action button is a circular icon button that hovers over content to promote a primary action in the application."),
+            "ተንሳፋፊ የድርጊት አዝራር በመተግበሪያው ላይ ተቀዳሚ ድርጊትን ለማበረታታት በይዘት ላይ የሚያንዣብብ ክብ አዶ አዝራር ነው።"),
         "demoFloatingButtonTitle":
-            MessageLookupByLibrary.simpleMessage("Floating Action Button"),
+            MessageLookupByLibrary.simpleMessage("የተንሳፋፊ እርምጃ አዝራር"),
         "demoFullscreenDialogDescription": MessageLookupByLibrary.simpleMessage(
-            "The fullscreenDialog property specifies whether the incoming page is a fullscreen modal dialog"),
+            "የ fullscreenDialog ባህሪ መጪው ገጽ ባለ ሙሉ ማያ ገጽ ሞዳል ንግግር መሆን አለመሆኑን ይጠቅሳል"),
         "demoFullscreenDialogTitle":
-            MessageLookupByLibrary.simpleMessage("Fullscreen"),
+            MessageLookupByLibrary.simpleMessage("ሙሉ ማያ ገጽ"),
         "demoFullscreenTooltip":
             MessageLookupByLibrary.simpleMessage("Full Screen"),
-        "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Info"),
+        "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("መረጃ"),
         "demoInvalidURL":
-            MessageLookupByLibrary.simpleMessage("Couldn\'t display URL:"),
-        "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Options"),
+            MessageLookupByLibrary.simpleMessage("ዩአርኤልን ማሳየት አልተቻለም፦"),
+        "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("አማራጮች"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
-            "Outline buttons become opaque and elevate when pressed. They are often paired with raised buttons to indicate an alternative, secondary action."),
+            "የቢጋር አዝራሮች የማይታዩ ይሆኑና በሚጫኑበት ጊዜ ከፍ ይላሉ። አማራጭን፣ ሁለተኛ እርምጃን ለመጠቆም ብዙውን ጊዜ ከፍ ካሉ አዝራሮች ጋር ይጣመራሉ።"),
         "demoOutlineButtonTitle":
-            MessageLookupByLibrary.simpleMessage("Outline Button"),
+            MessageLookupByLibrary.simpleMessage("የቢጋር አዝራር"),
         "demoRaisedButtonDescription": MessageLookupByLibrary.simpleMessage(
-            "Raised buttons add dimension to mostly flat layouts. They emphasize functions on busy or wide spaces."),
+            "ከፍ ያሉ አዝራሮች ብዙውን ጊዜ ለዝርግ አቀማመጦች ስፋት ያክላሉ። በባተሌ ወይም ሰፊ ቦታዎች ላይ ተግባራት ላይ አጽዕኖት ይሰጣሉ።"),
         "demoRaisedButtonTitle":
-            MessageLookupByLibrary.simpleMessage("Raised Button"),
+            MessageLookupByLibrary.simpleMessage("ከፍ ያለ አዝራር"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
-            "A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices."),
-        "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Simple"),
+            "ቀላል ንግግር ለተጠቃሚው በበርካታ አማራጮች መካከል ምርጫን ያቀርባል። ቀላል ንግግር ከምርጫዎ በላይ የሚታይ አማራጭ አርዕስት አለው።"),
+        "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("ቀላል"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
@@ -252,42 +264,115 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("Your email address"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
-            "Toggle buttons can be used to group related options. To emphasize groups of related toggle buttons, a group should share a common container"),
+            "ተዛማጅ አማራጮችን ለመቦደን የቀያይር አዝራሮች ጥቅም ላይ ሊውሉ ይችላሉ። ተዛማጅነት ያላቸው መቀያየሪያ አዝራሮችን ቡድኖች አጽዕኖት ለመስጠት፣ ቡድን የጋራ መያዣን ማጋራት አለበት።"),
         "demoToggleButtonTitle":
-            MessageLookupByLibrary.simpleMessage("Toggle Buttons"),
+            MessageLookupByLibrary.simpleMessage("መቀያየሪያ አዝራሮች"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Definitions for the various typographical styles found in Material Design."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
             "All of the predefined text styles"),
         "demoTypographyTitle":
             MessageLookupByLibrary.simpleMessage("Typography"),
-        "dialogAddAccount": MessageLookupByLibrary.simpleMessage("Add account"),
-        "dialogAgree": MessageLookupByLibrary.simpleMessage("AGREE"),
-        "dialogCancel": MessageLookupByLibrary.simpleMessage("CANCEL"),
-        "dialogDisagree": MessageLookupByLibrary.simpleMessage("DISAGREE"),
-        "dialogDiscard": MessageLookupByLibrary.simpleMessage("DISCARD"),
-        "dialogDiscardTitle":
-            MessageLookupByLibrary.simpleMessage("Discard draft?"),
+        "dialogAddAccount": MessageLookupByLibrary.simpleMessage("መለያ አክል"),
+        "dialogAgree": MessageLookupByLibrary.simpleMessage("እስማማለሁ"),
+        "dialogCancel": MessageLookupByLibrary.simpleMessage("ተወው"),
+        "dialogDisagree": MessageLookupByLibrary.simpleMessage("አትስማማ"),
+        "dialogDiscard": MessageLookupByLibrary.simpleMessage("አስወግድ"),
+        "dialogDiscardTitle": MessageLookupByLibrary.simpleMessage("ረቂቅ ይጣል?"),
         "dialogFullscreenDescription":
-            MessageLookupByLibrary.simpleMessage("A full screen dialog demo"),
-        "dialogFullscreenSave": MessageLookupByLibrary.simpleMessage("SAVE"),
+            MessageLookupByLibrary.simpleMessage("የሙሉ ማያ ገጽ ንግግር ተግባራዊ ማሳያ"),
+        "dialogFullscreenSave": MessageLookupByLibrary.simpleMessage("አስቀምጥ"),
         "dialogFullscreenTitle":
-            MessageLookupByLibrary.simpleMessage("Full Screen Dialog"),
+            MessageLookupByLibrary.simpleMessage("የሙሉ ማያ ገጽ ንግግር"),
         "dialogLocationDescription": MessageLookupByLibrary.simpleMessage(
-            "Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running."),
-        "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
-            "Use Google\'s location service?"),
+            "መተግበሪያዎች አካባቢ እንዲያውቁ Google ያግዛቸው። ይሄ ማለት ስም-አልባ የአካባቢ ውሂብ ለGoogle መላክ ማለት ነው፣ ምንም እያሄዱ ያሉ መተግበሪያዎች ባይኖሩም እንኳ።"),
+        "dialogLocationTitle":
+            MessageLookupByLibrary.simpleMessage("የGoogle አካባቢ አገልግሎትን ይጠቀም?"),
         "dialogSelectedOption": m4,
         "dialogSetBackup":
-            MessageLookupByLibrary.simpleMessage("Set backup account"),
-        "dialogShow": MessageLookupByLibrary.simpleMessage("SHOW DIALOG"),
+            MessageLookupByLibrary.simpleMessage("የምትኬ መለያ አቀናብር"),
+        "dialogShow": MessageLookupByLibrary.simpleMessage("ንግግርን አሳይ"),
         "homeCategoryReference":
-            MessageLookupByLibrary.simpleMessage("REFERENCE STYLES & MEDIA"),
-        "homeHeaderCategories":
-            MessageLookupByLibrary.simpleMessage("Categories"),
-        "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Gallery"),
+            MessageLookupByLibrary.simpleMessage("የማጣቀሻ ቅጦች እና መገናኛ ብዙኃን"),
+        "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("ምድቦች"),
+        "homeHeaderGallery":
+            MessageLookupByLibrary.simpleMessage("የሥነ ጥበብ ማዕከል"),
+        "rallyAccountDataCarSavings":
+            MessageLookupByLibrary.simpleMessage("Car Savings"),
+        "rallyAccountDataChecking":
+            MessageLookupByLibrary.simpleMessage("Checking"),
+        "rallyAccountDataHomeSavings":
+            MessageLookupByLibrary.simpleMessage("Home Savings"),
+        "rallyAccountDataVacation":
+            MessageLookupByLibrary.simpleMessage("Vacation"),
+        "rallyAccountDetailDataAccountOwner":
+            MessageLookupByLibrary.simpleMessage("Account Owner"),
+        "rallyAccountDetailDataAnnualPercentageYield":
+            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+        "rallyAccountDetailDataInterestPaidLastYear":
+            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+        "rallyAccountDetailDataInterestRate":
+            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+        "rallyAccountDetailDataInterestYtd":
+            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+        "rallyAccountDetailDataNextStatement":
+            MessageLookupByLibrary.simpleMessage("Next Statement"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
+        "rallyAlertsMessageATMFees": m5,
+        "rallyAlertsMessageCheckingAccount": m6,
+        "rallyAlertsMessageHeadsUpShopping": m7,
+        "rallyAlertsMessageSpentOnRestaurants": m8,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+        "rallyBudgetCategoryClothing":
+            MessageLookupByLibrary.simpleMessage("Clothing"),
+        "rallyBudgetCategoryCoffeeShops":
+            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+        "rallyBudgetCategoryGroceries":
+            MessageLookupByLibrary.simpleMessage("Groceries"),
+        "rallyBudgetCategoryRestaurants":
+            MessageLookupByLibrary.simpleMessage("Restaurants"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
         "rallyDescription":
             MessageLookupByLibrary.simpleMessage("A personal finance app"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
+        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
+        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+        "rallyLoginLoginToRally":
+            MessageLookupByLibrary.simpleMessage("Login to Rally"),
+        "rallyLoginNoAccount":
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+        "rallyLoginRememberMe":
+            MessageLookupByLibrary.simpleMessage("Remember Me"),
+        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
+        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+        "rallySettingsFindAtms":
+            MessageLookupByLibrary.simpleMessage("Find ATMs"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+        "rallySettingsManageAccounts":
+            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+        "rallySettingsNotifications":
+            MessageLookupByLibrary.simpleMessage("Notifications"),
+        "rallySettingsPaperlessSettings":
+            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
+        "rallySettingsPasscodeAndTouchId":
+            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+        "rallySettingsPersonalInformation":
+            MessageLookupByLibrary.simpleMessage("Personal Information"),
+        "rallySettingsSignOut":
+            MessageLookupByLibrary.simpleMessage("Sign out"),
+        "rallySettingsTaxDocuments":
+            MessageLookupByLibrary.simpleMessage("Tax Documents"),
+        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
+        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
+        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
+        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
         "settingsAbout":
             MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
@@ -320,11 +405,113 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Small"),
         "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
         "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+        "shrineCancelButtonCaption":
+            MessageLookupByLibrary.simpleMessage("CANCEL"),
+        "shrineCartClearButtonCaption":
+            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
+        "shrineCartItemCount": m9,
+        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+        "shrineCartShippingCaption":
+            MessageLookupByLibrary.simpleMessage("Shipping:"),
+        "shrineCartSubtotalCaption":
+            MessageLookupByLibrary.simpleMessage("Subtotal:"),
+        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
+        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+        "shrineCategoryNameAccessories":
+            MessageLookupByLibrary.simpleMessage("Accessories"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+        "shrineCategoryNameClothing":
+            MessageLookupByLibrary.simpleMessage("Clothing"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
         "shrineDescription":
             MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+        "shrineLoginPasswordLabel":
+            MessageLookupByLibrary.simpleMessage("Password"),
+        "shrineLoginUsernameLabel":
+            MessageLookupByLibrary.simpleMessage("Username"),
+        "shrineLogoutButtonCaption":
+            MessageLookupByLibrary.simpleMessage("LOGOUT"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
+        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+        "shrineProductBlueStoneMug":
+            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
+        "shrineProductCeriseScallopTee":
+            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+        "shrineProductChambrayNapkins":
+            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+        "shrineProductChambrayShirt":
+            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+        "shrineProductClassicWhiteCollar":
+            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+        "shrineProductClaySweater":
+            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+        "shrineProductCopperWireRack":
+            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+        "shrineProductFineLinesTee":
+            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+        "shrineProductGardenStrand":
+            MessageLookupByLibrary.simpleMessage("Garden strand"),
+        "shrineProductGatsbyHat":
+            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+        "shrineProductGentryJacket":
+            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
+        "shrineProductGiltDeskTrio":
+            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+        "shrineProductGingerScarf":
+            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+        "shrineProductGreySlouchTank":
+            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+        "shrineProductHurrahsTeaSet":
+            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+        "shrineProductKitchenQuattro":
+            MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
+        "shrineProductNavyTrousers":
+            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+        "shrineProductPlasterTunic":
+            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
+        "shrineProductPrice": m10,
+        "shrineProductQuantity": m11,
+        "shrineProductQuartetTable":
+            MessageLookupByLibrary.simpleMessage("Quartet table"),
+        "shrineProductRainwaterTray":
+            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+        "shrineProductRamonaCrossover":
+            MessageLookupByLibrary.simpleMessage("Ramona crossover"),
+        "shrineProductSeaTunic":
+            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+        "shrineProductSeabreezeSweater":
+            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
+        "shrineProductShoulderRollsTee":
+            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
+        "shrineProductShrugBag":
+            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+        "shrineProductSootheCeramicSet":
+            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
+        "shrineProductStellaSunglasses":
+            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+        "shrineProductStrutEarrings":
+            MessageLookupByLibrary.simpleMessage("Strut earrings"),
+        "shrineProductSucculentPlanters":
+            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+        "shrineProductSunshirtDress":
+            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+        "shrineProductSurfAndPerfShirt":
+            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+        "shrineProductVagabondSack":
+            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+        "shrineProductVarsitySocks":
+            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+        "shrineProductWalterHenleyWhite":
+            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+        "shrineProductWeaveKeyring":
+            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+        "shrineProductWhitePinstripeShirt":
+            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+        "shrineProductWhitneyBelt":
+            MessageLookupByLibrary.simpleMessage("Whitney belt"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m5,
+        "starterAppDrawerItem": m12,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("BUTTON"),
