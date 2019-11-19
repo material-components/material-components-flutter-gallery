@@ -2,10 +2,12 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'package:intl/intl.dart' as intl;
 import 'package:flutter/material.dart';
 
 import 'package:gallery/studies/rally/colors.dart';
 import 'package:gallery/studies/rally/data.dart';
+import 'package:gallery/studies/rally/formatters.dart';
 
 class RallyLineChart extends StatelessWidget {
   const RallyLineChart({this.events = const <DetailedEventData>[]})
@@ -16,15 +18,32 @@ class RallyLineChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
-        painter:
-            RallyLineChartPainter(Theme.of(context).textTheme.body1, events));
+      painter: RallyLineChartPainter(
+        dateFormat: dateFormatMonthYear(context),
+        events: events,
+        labelStyle: Theme.of(context).textTheme.body1,
+        textDirection: Directionality.of(context),
+      ),
+    );
   }
 }
 
 class RallyLineChartPainter extends CustomPainter {
-  RallyLineChartPainter(this.labelStyle, this.events);
+  RallyLineChartPainter({
+    @required this.dateFormat,
+    @required this.events,
+    @required this.labelStyle,
+    @required this.textDirection,
+  });
 
+  // The style for the labels.
   final TextStyle labelStyle;
+
+  // The text direction for the texts.
+  final TextDirection textDirection;
+
+  // The format for the dates.
+  final intl.DateFormat dateFormat;
 
   // Events to plot on the line as points.
   final List<DetailedEventData> events;
@@ -151,17 +170,24 @@ class RallyLineChartPainter extends CustomPainter {
       color: RallyColors.gray25,
     );
 
-    // TODO: Localize dates.
+    // We use toUpperCase to format the dates. This function uses the language
+    // independent Unicode mapping and thus only works in some languages.
     final leftLabel = TextPainter(
-      text: TextSpan(text: 'AUGUST 2019', style: unselectedLabelStyle),
-      textDirection: TextDirection.ltr,
+      text: TextSpan(
+        text: dateFormat.format(DateTime(2019, 8)).toUpperCase(),
+        style: unselectedLabelStyle,
+      ),
+      textDirection: textDirection,
     );
     leftLabel.layout();
     leftLabel.paint(canvas, Offset(rect.left + space / 2, rect.center.dy));
 
     final centerLabel = TextPainter(
-      text: TextSpan(text: 'SEPTEMBER 2019', style: selectedLabelStyle),
-      textDirection: TextDirection.ltr,
+      text: TextSpan(
+        text: dateFormat.format(DateTime(2019, 9)).toUpperCase(),
+        style: selectedLabelStyle,
+      ),
+      textDirection: textDirection,
     );
     centerLabel.layout();
     final x = (rect.width - centerLabel.width) / 2;
@@ -169,8 +195,11 @@ class RallyLineChartPainter extends CustomPainter {
     centerLabel.paint(canvas, Offset(x, y));
 
     final rightLabel = TextPainter(
-      text: TextSpan(text: 'OCTOBER 2019', style: unselectedLabelStyle),
-      textDirection: TextDirection.ltr,
+      text: TextSpan(
+        text: dateFormat.format(DateTime(2019, 10)).toUpperCase(),
+        style: unselectedLabelStyle,
+      ),
+      textDirection: textDirection,
     );
     rightLabel.layout();
     rightLabel.paint(

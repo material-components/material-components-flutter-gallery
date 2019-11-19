@@ -24,7 +24,7 @@ class _OverviewViewState extends State<OverviewView> {
   @override
   Widget build(BuildContext context) {
     final accountDataList = DummyDataService.getAccountDataList(context);
-    final billDataList = DummyDataService.getBillDataList();
+    final billDataList = DummyDataService.getBillDataList(context);
     final budgetDataList = DummyDataService.getBudgetDataList(context);
     final alerts = DummyDataService.getAlerts(context);
 
@@ -214,7 +214,7 @@ class _FinancialView extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 16),
             child: Text(
-              usdWithSignFormat.format(total),
+              usdWithSignFormat(context).format(total),
               style: theme.textTheme.body2.copyWith(
                 fontSize: 44,
                 fontWeight: FontWeight.w600,

@@ -135,7 +135,7 @@ class FinancialEntityCategoryView extends StatelessWidget {
                   ),
                   const Spacer(),
                   Text(
-                    '\$ ' + usdFormat.format(amount),
+                    usdWithSignFormat(context).format(amount),
                     style: Theme.of(context)
                         .textTheme
                         .body2
@@ -210,8 +210,9 @@ FinancialEntityCategoryView buildFinancialEntityFromBudgetData(
   int budgetDataIndex,
   BuildContext context,
 ) {
-  final String amountUsed = usdWithSignFormat.format(item.amountUsed);
-  final String primaryAmount = usdWithSignFormat.format(item.primaryAmount);
+  final String amountUsed = usdWithSignFormat(context).format(item.amountUsed);
+  final String primaryAmount =
+      usdWithSignFormat(context).format(item.primaryAmount);
 
   return FinancialEntityCategoryView(
     suffix: Text(
@@ -261,8 +262,7 @@ class FinancialEntityCategoryDetailsPage extends StatelessWidget {
     final List<_DetailedEventCard> cards = items.map((detailedEventData) {
       return _DetailedEventCard(
         title: detailedEventData.title,
-        // TODO: Localize date.
-        subtitle: dateFormat.format(detailedEventData.date),
+        subtitle: shortDateFormat(context).format(detailedEventData.date),
         amount: detailedEventData.amount,
       );
     }).toList();
@@ -333,7 +333,7 @@ class _DetailedEventCard extends StatelessWidget {
                   ),
                   const Spacer(),
                   Text(
-                    '\$${usdFormat.format(amount)}',
+                    usdWithSignFormat(context).format(amount),
                     style: textTheme.body2
                         .copyWith(fontSize: 20, color: RallyColors.gray),
                   ),

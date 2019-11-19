@@ -161,7 +161,7 @@ class _AnimatedRallyPieChart extends AnimatedWidget {
                 style: labelTextStyle,
               ),
               Text(
-                usdWithSignFormat.format(centerAmount),
+                usdWithSignFormat(context).format(centerAmount),
                 // When the widget is larger, we increase the font size.
                 style: constraints.maxHeight >= kPieChartMaxSize
                     ? textTheme.headline.copyWith(fontSize: 70)

@@ -148,27 +148,27 @@ class DummyDataService {
       AccountDetailData(
         title: GalleryLocalizations.of(context)
             .rallyAccountDetailDataAnnualPercentageYield,
-        value: '0.10\%',
+        value: percentFormat(context).format(0.001),
       ),
       AccountDetailData(
         title:
             GalleryLocalizations.of(context).rallyAccountDetailDataInterestRate,
-        value: usdWithSignFormat.format(1676.14),
+        value: usdWithSignFormat(context).format(1676.14),
       ),
       AccountDetailData(
         title:
             GalleryLocalizations.of(context).rallyAccountDetailDataInterestYtd,
-        value: usdWithSignFormat.format(81.45),
+        value: usdWithSignFormat(context).format(81.45),
       ),
       AccountDetailData(
         title: GalleryLocalizations.of(context)
             .rallyAccountDetailDataInterestPaidLastYear,
-        value: usdWithSignFormat.format(987.12),
+        value: usdWithSignFormat(context).format(987.12),
       ),
       AccountDetailData(
         title: GalleryLocalizations.of(context)
             .rallyAccountDetailDataNextStatement,
-        value: dateFormat.format(DateTime.utc(2019, 12, 25)),
+        value: shortDateFormat(context).format(DateTime.utc(2019, 12, 25)),
       ),
       AccountDetailData(
         title:
@@ -219,29 +219,32 @@ class DummyDataService {
     ];
   }
 
-  static List<BillData> getBillDataList() {
+  static List<BillData> getBillDataList(BuildContext context) {
     // The following names are not localized as they're product/brand names.
-    // TODO: Localize the due dates.
     return <BillData>[
-      const BillData(
+      BillData(
         name: 'RedPay Credit',
         primaryAmount: 45.36,
-        dueDate: 'Jan 29',
+        dueDate: dateFormatAbbreviatedMonthDay(context)
+            .format(DateTime.utc(2019, 1, 29)),
       ),
-      const BillData(
+      BillData(
         name: 'Rent',
         primaryAmount: 1200,
-        dueDate: 'Feb 9',
+        dueDate: dateFormatAbbreviatedMonthDay(context)
+            .format(DateTime.utc(2019, 2, 9)),
       ),
-      const BillData(
+      BillData(
         name: 'TabFine Credit',
         primaryAmount: 87.33,
-        dueDate: 'Feb 22',
+        dueDate: dateFormatAbbreviatedMonthDay(context)
+            .format(DateTime.utc(2019, 2, 22)),
       ),
-      const BillData(
+      BillData(
         name: 'ABC Loans',
         primaryAmount: 400,
-        dueDate: 'Feb 29',
+        dueDate: dateFormatAbbreviatedMonthDay(context)
+            .format(DateTime.utc(2019, 2, 29)),
       ),
     ];
   }
@@ -286,26 +289,28 @@ class DummyDataService {
   }
 
   static List<AlertData> getAlerts(BuildContext context) {
-    // TODO: Localize the numbers, dollar amounts and percentages.
     return <AlertData>[
       AlertData(
         message: GalleryLocalizations.of(context)
-            .rallyAlertsMessageHeadsUpShopping('90%'),
+            .rallyAlertsMessageHeadsUpShopping(
+                percentFormat(context).format(90)),
         iconData: Icons.sort,
       ),
       AlertData(
         message: GalleryLocalizations.of(context)
-            .rallyAlertsMessageSpentOnRestaurants('\$120'),
+            .rallyAlertsMessageSpentOnRestaurants(
+                usdWithSignFormat(context).format(120)),
         iconData: Icons.sort,
       ),
       AlertData(
-        message:
-            GalleryLocalizations.of(context).rallyAlertsMessageATMFees('\$24'),
+        message: GalleryLocalizations.of(context)
+            .rallyAlertsMessageATMFees(usdWithSignFormat(context).format(24)),
         iconData: Icons.credit_card,
       ),
       AlertData(
         message: GalleryLocalizations.of(context)
-            .rallyAlertsMessageCheckingAccount('4%'),
+            .rallyAlertsMessageCheckingAccount(
+                percentFormat(context).format(4)),
         iconData: Icons.attach_money,
       ),
       // TODO: Localize this when the l10n tool supports plural strings.

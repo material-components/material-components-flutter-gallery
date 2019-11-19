@@ -18,10 +18,9 @@ class BillsView extends StatefulWidget {
 
 class _BillsViewState extends State<BillsView>
     with SingleTickerProviderStateMixin {
-  final List<BillData> items = DummyDataService.getBillDataList();
-
   @override
   Widget build(BuildContext context) {
+    List<BillData> items = DummyDataService.getBillDataList(context);
     final dueTotal = sumBillDataPrimaryAmount(items);
     return SingleChildScrollView(
       child: Container(
