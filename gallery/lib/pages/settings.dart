@@ -10,12 +10,18 @@ import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/pages/about.dart' as about;
+import 'package:gallery/pages/home.dart';
 import 'package:gallery/pages/settings_list_item.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Widget settingsHeader() => Header(
+          color: Theme.of(context).colorScheme.onSurface,
+          text: GalleryLocalizations.of(context).settingsTitle,
+        );
+
     final colorScheme = Theme.of(context).colorScheme;
     final options = GalleryOptions.of(context);
 
@@ -28,16 +34,11 @@ class SettingsPage extends StatelessWidget {
             Padding(
               padding: EdgeInsetsDirectional.only(
                 start: 32,
-                top: 21,
+                top: (isDisplayDesktop(context)) ? 5 : 21,
                 end: 32,
-                bottom: 27,
+                bottom: (isDisplayDesktop(context)) ? 5 : 27,
               ),
-              child: Text(
-                GalleryLocalizations.of(context).settingsTitle,
-                style: Theme.of(context).textTheme.display1.apply(
-                      color: colorScheme.onSurface,
-                    ),
-              ),
+              child: settingsHeader(),
             ),
             SettingsListItem<double>(
               title: GalleryLocalizations.of(context).settingsTextScaling,

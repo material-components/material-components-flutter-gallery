@@ -7,7 +7,6 @@ import 'package:flare_flutter/flare.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flare_flutter/flare_controller.dart';
 import 'package:flutter/material.dart';
-
 import 'package:gallery/constants.dart';
 import 'package:gallery/layout/adaptive.dart';
 
@@ -25,8 +24,9 @@ class Backdrop extends StatefulWidget {
 }
 
 class _BackdropState extends State<Backdrop>
-    with SingleTickerProviderStateMixin, FlareController {
+    with TickerProviderStateMixin, FlareController {
   AnimationController _controller;
+  AnimationController _desktopController;
 
   double _speed = 4;
   double _settingsAnimationProgress = 0;
@@ -46,11 +46,14 @@ class _BackdropState extends State<Backdrop>
       ..addListener(() {
         this.setState(() {});
       });
+    _desktopController = AnimationController(
+        duration: Duration(milliseconds: 100), value: 0, vsync: this);
   }
 
   @override
   void dispose() {
     _controller.dispose();
+    _desktopController.dispose();
     super.dispose();
   }
 
@@ -67,6 +70,7 @@ class _BackdropState extends State<Backdrop>
   @override
   bool advance(FlutterActorArtboard artboard, double elapsed) {
     double animateDirection = _isPanelVisible ? -1 : 1;
+
     double targetAnimationProgress =
         _settingsAnimationProgress + animateDirection * elapsed * _speed;
 
@@ -90,14 +94,45 @@ class _BackdropState extends State<Backdrop>
 
   Widget _buildStack(BuildContext context, BoxConstraints constraints) {
     final Animation<RelativeRect> animation = _getPanelAnimation(constraints);
+
     return Container(
       child: Stack(
         children: [
-          widget.frontLayer,
-          PositionedTransition(
-            rect: animation,
-            child: widget.backLayer,
-          ),
+          if (!isDisplayDesktop(context)) ...[
+            widget.frontLayer,
+            PositionedTransition(
+              rect: animation,
+              child: widget.backLayer,
+            ),
+          ],
+          if (isDisplayDesktop(context)) ...[
+            widget.backLayer,
+            ScaleTransition(
+              alignment: Directionality.of(context) == TextDirection.ltr
+                  ? Alignment.topRight
+                  : Alignment.topLeft,
+              scale: CurvedAnimation(
+                parent: _desktopController,
+                curve: Curves.easeIn,
+                reverseCurve: Curves.easeOut,
+              ),
+              child: Align(
+                alignment: AlignmentDirectional.topEnd,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(40),
+                  child: Container(
+                    color: Theme.of(context).colorScheme.secondaryVariant,
+                    constraints: const BoxConstraints(
+                      maxHeight: 768,
+                      maxWidth: desktopSettingsWidth,
+                      minWidth: desktopSettingsWidth,
+                    ),
+                    child: widget.frontLayer,
+                  ),
+                ),
+              ),
+            ),
+          ],
           Align(
             alignment: AlignmentDirectional.topEnd,
             child: SafeArea(
@@ -107,6 +142,8 @@ class _BackdropState extends State<Backdrop>
                 child: GestureDetector(
                   onTap: () {
                     _controller.fling(velocity: _isPanelVisible ? -1 : 1);
+                    _desktopController.fling(
+                        velocity: _isPanelVisible ? -1 : 1);
                   },
                   child: Material(
                     borderRadius: BorderRadiusDirectional.only(

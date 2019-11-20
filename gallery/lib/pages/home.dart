@@ -3,11 +3,12 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-
 import 'package:gallery/constants.dart';
 import 'package:gallery/data/demos.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
+import 'package:gallery/pages/category_list_item.dart';
+import 'package:gallery/pages/settings.dart';
 import 'package:gallery/studies/crane/app.dart';
 import 'package:gallery/studies/crane/colors.dart';
 import 'package:gallery/studies/rally/app.dart';
@@ -15,8 +16,6 @@ import 'package:gallery/studies/rally/colors.dart';
 import 'package:gallery/studies/shrine/app.dart';
 import 'package:gallery/studies/shrine/colors.dart';
 import 'package:gallery/studies/starter/app.dart';
-import 'package:gallery/pages/category_list_item.dart';
-import 'package:gallery/pages/settings.dart';
 
 const _horizontalPadding = 32.0;
 const _carouselItemMargin = 8.0;
@@ -32,16 +31,14 @@ const String homeCategoryCupertino = 'CUPERTINO';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Widget galleryHeader() => header(
-          context,
-          Theme.of(context).colorScheme.primaryVariant,
-          GalleryLocalizations.of(context).homeHeaderGallery,
+    Widget galleryHeader() => Header(
+          color: Theme.of(context).colorScheme.primaryVariant,
+          text: GalleryLocalizations.of(context).homeHeaderGallery,
         );
 
-    Widget settingsHeader() => header(
-          context,
-          Theme.of(context).colorScheme.primary,
-          GalleryLocalizations.of(context).homeHeaderCategories,
+    Widget categoriesHeader() => Header(
+          color: Theme.of(context).colorScheme.primary,
+          text: GalleryLocalizations.of(context).homeHeaderCategories,
         );
 
     final carouselCards = <_CarouselCard>[
@@ -100,9 +97,14 @@ class HomePage extends StatelessWidget {
 
       return Scaffold(
         body: ListView(
-          padding: EdgeInsets.symmetric(horizontal: _horizontalDesktopPadding),
+          padding: EdgeInsetsDirectional.only(
+            start: _horizontalDesktopPadding,
+            top: (isDisplayDesktop(context)) ? 5 : 21,
+            end: _horizontalDesktopPadding,
+          ),
           children: [
             galleryHeader(),
+            SizedBox(height: 11),
             Container(
               height: _carouselHeight,
               child: Row(
@@ -111,8 +113,7 @@ class HomePage extends StatelessWidget {
                 children: spaceBetween(30, carouselCards),
               ),
             ),
-            SizedBox(height: 32),
-            settingsHeader(),
+            categoriesHeader(),
             Container(
               height: 585,
               child: Row(
@@ -151,7 +152,7 @@ class HomePage extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.symmetric(horizontal: _horizontalPadding),
-              child: settingsHeader(),
+              child: categoriesHeader(),
             ),
             CategoryListItem(
               title: homeCategoryMaterial,
@@ -184,11 +185,19 @@ class HomePage extends StatelessWidget {
       ],
     ];
   }
+}
 
-  Widget header(BuildContext context, Color color, String text) {
+class Header extends StatelessWidget {
+  const Header({this.color, this.text});
+
+  final Color color;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        top: 29,
+        top: isDisplayDesktop(context) ? 63 : 21,
         bottom: 16,
       ),
       child: Text(
