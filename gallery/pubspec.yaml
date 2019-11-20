@@ -20,6 +20,11 @@ dependencies:
   shrine_images: ^1.1.2
   flare_flutter: ^1.6.5
   url_launcher:
+  url_launcher_fde:
+    git:
+      url: git://github.com/google/flutter-desktop-embedding.git
+      ref: a075c245ffdfc17409a3fff12517cf416aa77c87
+      path: plugins/flutter_plugins/url_launcher_fde
 
 dev_dependencies:
   flutter_test:
