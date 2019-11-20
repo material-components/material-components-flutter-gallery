@@ -424,19 +424,21 @@ class _CarouselCard extends StatelessWidget {
                 image: AssetImage(asset),
                 fit: BoxFit.cover,
               ),
-              Positioned(
-                bottom: 16,
-                left: 16,
+              Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(16, 0, 16, 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Text(
                       title,
                       style: textTheme.caption.apply(color: textColor),
+                      overflow: TextOverflow.ellipsis,
                     ),
                     Text(
                       subtitle,
                       style: textTheme.overline.apply(color: textColor),
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ],
                 ),
