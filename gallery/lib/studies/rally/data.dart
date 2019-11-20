@@ -313,10 +313,9 @@ class DummyDataService {
                 percentFormat(context).format(4)),
         iconData: Icons.attach_money,
       ),
-      // TODO: Localize this when the l10n tool supports plural strings.
       AlertData(
-        message:
-            'Increase your potential tax deduction! Assign categories to 16 unassigned transactions.',
+        message: GalleryLocalizations.of(context)
+            .rallyAlertsMessageUnassignedTransactions(16),
         iconData: Icons.not_interested,
       ),
     ];

@@ -24,11 +24,11 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m1(title) => "Placeholder for ${title} tab";
 
-  static m6(totalRestaurants) => "${totalRestaurants} Restaurants";
+  static m13(totalRestaurants) => "${totalRestaurants} Restaurants";
 
-  static m7(numberOfStops) => "${numberOfStops} stops";
+  static m14(numberOfStops) => "${numberOfStops} stops";
 
-  static m8(totalProperties) => "${totalProperties} Available Properties";
+  static m15(totalProperties) => "${totalProperties} Available Properties";
 
   static m2(value) => "Item ${value}";
 
@@ -36,23 +36,26 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m4(value) => "You selected: \"${value}\"";
 
-  static m9(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
 
-  static m10(percent) =>
+  static m6(percent) =>
       "Good work! Your checking account is ${percent} higher than last month.";
 
-  static m11(percent) =>
+  static m7(percent) =>
       "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
 
-  static m12(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
 
-  static m13(quantity) => "${quantity} ITEMS";
+  static m16(count) =>
+      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m14(price) => "x ${price}";
+  static m9(quantity) => "${quantity} ITEMS";
 
-  static m15(quantity) => "Quantity: ${quantity}";
+  static m10(price) => "x ${price}";
 
-  static m5(value) => "Item ${value}";
+  static m11(quantity) => "Quantity: ${quantity}";
+
+  static m12(value) => "Item ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -119,7 +122,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
-        "craneEatRestaurants": m6,
+        "craneEatRestaurants": m13,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Explore Restaurants by Destination"),
         "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
@@ -143,7 +146,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Mount Rushmore, United States"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
-        "craneFlyMultipleStops": m7,
+        "craneFlyMultipleStops": m14,
         "craneFlyNonstop": MessageLookupByLibrary.simpleMessage("Nonstop"),
         "craneFlyOneStop": MessageLookupByLibrary.simpleMessage("1 stop"),
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
@@ -177,7 +180,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneSleepProperties": m8,
+        "craneSleepProperties": m15,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Explore Properties by Destination"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("Allow"),
@@ -437,10 +440,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageATMFees": m5,
+        "rallyAlertsMessageCheckingAccount": m6,
+        "rallyAlertsMessageHeadsUpShopping": m7,
+        "rallyAlertsMessageSpentOnRestaurants": m8,
+        "rallyAlertsMessageUnassignedTransactions": m16,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
         "rallyBudgetCategoryClothing":
@@ -526,7 +530,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("CANCEL"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m9,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Shipping:"),
@@ -586,8 +590,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Navy trousers"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m10,
+        "shrineProductQuantity": m11,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Quartet table"),
         "shrineProductRainwaterTray":
@@ -628,7 +632,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m5,
+        "starterAppDrawerItem": m12,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("BUTTON"),

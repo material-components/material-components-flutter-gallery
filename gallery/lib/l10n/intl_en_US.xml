@@ -226,6 +226,10 @@
     description="Alert message shown when for example, the checking account is 1% higher than last month."
     >Good work! Your checking account is {percent} higher than last month.</string>
   <string
+    name="rallyAlertsMessageUnassignedTransactions"
+    description="Alert message shown when you have unassigned transactions."
+    >{count, plural, =1{Increase your potential tax deduction! Assign categories to 1 unassigned transaction.}other{Increase your potential tax deduction! Assign categories to {count} unassigned transactions.}}</string>
+  <string
     name="craneDescription"
     description="Study description for Crane."
     >A personalized travel app</string>

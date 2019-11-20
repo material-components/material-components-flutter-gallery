@@ -1898,6 +1898,18 @@ class GalleryLocalizations {
         args: <Object>[amount]);
   }
 
+  String rallyAlertsMessageUnassignedTransactions(int count) {
+    return Intl.plural(count,
+        locale: _localeName,
+        name: 'rallyAlertsMessageUnassignedTransactions',
+        desc: r'Alert message shown when you have unassigned transactions.',
+        args: <Object>[count],
+        one:
+            'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.',
+        other:
+            'Increase your potential tax deduction! Assign categories to $count unassigned transactions.');
+  }
+
   String get rallyBills {
     return Intl.message(r'Bills',
         locale: _localeName,

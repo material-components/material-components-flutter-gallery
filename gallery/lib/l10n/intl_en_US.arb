@@ -237,6 +237,13 @@
        "percent": "1%"
     }
   },
+  "rallyAlertsMessageUnassignedTransactions": "{count, plural, =1{Increase your potential tax deduction! Assign categories to 1 unassigned transaction.}other{Increase your potential tax deduction! Assign categories to {count} unassigned transactions.}}",
+  "@rallyAlertsMessageUnassignedTransactions": {
+    "description": "Alert message shown when you have unassigned transactions.",
+    "placeholders": {
+       "count": "2"
+    }
+  },
   "craneDescription": "A personalized travel app",
   "@craneDescription": {
     "description": "Study description for Crane."
