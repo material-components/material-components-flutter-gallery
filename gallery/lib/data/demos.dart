@@ -370,6 +370,8 @@ class DemoWrapper extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       localizationsDelegates: GalleryLocalizations.localizationsDelegates,
       supportedLocales: GalleryLocalizations.supportedLocales,
+      // Remove the MediaQuery padding because the demo is rendered inside of a
+      // different page that already accounts for this padding.
       home: MediaQuery.removePadding(
         context: context,
         removeTop: true,

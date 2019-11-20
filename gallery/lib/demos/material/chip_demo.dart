@@ -135,38 +135,44 @@ class _FilterChipDemoState extends State<_FilterChipDemo> {
 
   @override
   Widget build(BuildContext context) {
+    final chips = <Widget>[
+      FilterChip(
+        label: Text(GalleryLocalizations.of(context).chipElevator),
+        selected: isSelectedElevator,
+        onSelected: (value) {
+          setState(() {
+            isSelectedElevator = !isSelectedElevator;
+          });
+        },
+      ),
+      FilterChip(
+        label: Text(GalleryLocalizations.of(context).chipWasher),
+        selected: isSelectedWasher,
+        onSelected: (value) {
+          setState(() {
+            isSelectedWasher = !isSelectedWasher;
+          });
+        },
+      ),
+      FilterChip(
+        label: Text(GalleryLocalizations.of(context).chipFireplace),
+        selected: isSelectedFireplace,
+        onSelected: (value) {
+          setState(() {
+            isSelectedFireplace = !isSelectedFireplace;
+          });
+        },
+      ),
+    ];
+
     return Center(
       child: Wrap(
         children: [
-          FilterChip(
-            label: Text(GalleryLocalizations.of(context).chipElevator),
-            selected: isSelectedElevator,
-            onSelected: (value) {
-              setState(() {
-                isSelectedElevator = !isSelectedElevator;
-              });
-            },
-          ),
-          SizedBox(width: 8),
-          FilterChip(
-            label: Text(GalleryLocalizations.of(context).chipWasher),
-            selected: isSelectedWasher,
-            onSelected: (value) {
-              setState(() {
-                isSelectedWasher = !isSelectedWasher;
-              });
-            },
-          ),
-          SizedBox(width: 8),
-          FilterChip(
-            label: Text(GalleryLocalizations.of(context).chipFireplace),
-            selected: isSelectedFireplace,
-            onSelected: (value) {
-              setState(() {
-                isSelectedFireplace = !isSelectedFireplace;
-              });
-            },
-          ),
+          for (final chip in chips)
+            Padding(
+              padding: const EdgeInsets.all(4),
+              child: chip,
+            )
         ],
       ),
     );

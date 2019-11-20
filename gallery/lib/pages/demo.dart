@@ -288,47 +288,50 @@ class _DemoSectionOptions extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
     final colorScheme = Theme.of(context).colorScheme;
 
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Padding(
-          padding: const EdgeInsetsDirectional.only(
-            start: 24,
-            top: 12,
-            end: 24,
-          ),
-          child: Text(
-            GalleryLocalizations.of(context).demoOptionsTooltip,
-            style: textTheme.display1.apply(
-              color: colorScheme.onSurface,
-              fontSizeDelta:
-                  isDisplayDesktop(context) ? desktopDisplay1FontDelta : 0,
+    return Container(
+      constraints: BoxConstraints(maxHeight: maxHeight),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Padding(
+            padding: const EdgeInsetsDirectional.only(
+              start: 24,
+              top: 12,
+              end: 24,
+            ),
+            child: Text(
+              GalleryLocalizations.of(context).demoOptionsTooltip,
+              style: textTheme.display1.apply(
+                color: colorScheme.onSurface,
+                fontSizeDelta:
+                    isDisplayDesktop(context) ? desktopDisplay1FontDelta : 0,
+              ),
             ),
           ),
-        ),
-        Divider(
-          thickness: 1,
-          height: 16,
-          color: colorScheme.onSurface,
-        ),
-        Container(
-          constraints: BoxConstraints(maxHeight: maxHeight),
-          child: ListView(
-            shrinkWrap: true,
-            children: [
-              for (final configuration in configurations)
-                _DemoSectionOptionsItem(
-                  title: configuration.title,
-                  isSelected: configuration == configurations[configIndex],
-                  onTap: () {
-                    onConfigChanged(configurations.indexOf(configuration));
-                  },
-                ),
-            ],
+          Divider(
+            thickness: 1,
+            height: 16,
+            color: colorScheme.onSurface,
           ),
-        ),
-        SizedBox(height: 12),
-      ],
+          Flexible(
+            child: ListView(
+              shrinkWrap: true,
+              children: [
+                for (final configuration in configurations)
+                  _DemoSectionOptionsItem(
+                    title: configuration.title,
+                    isSelected: configuration == configurations[configIndex],
+                    onTap: () {
+                      onConfigChanged(configurations.indexOf(configuration));
+                    },
+                  ),
+              ],
+            ),
+          ),
+          SizedBox(height: 12),
+        ],
+      ),
     );
   }
 }

@@ -4,6 +4,7 @@
 
 import 'package:flutter/cupertino.dart';
 
+import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 
 enum AlertDemoType {
@@ -50,7 +51,7 @@ class _CupertinoAlertDemoState extends State<CupertinoAlertDemo> {
   void _showDemoDialog({BuildContext context, Widget child}) {
     showCupertinoDialog<String>(
       context: context,
-      builder: (context) => child,
+      builder: (context) => ApplyTextOptions(child: child),
     ).then((value) {
       if (value != null) {
         setState(() {
@@ -61,9 +62,11 @@ class _CupertinoAlertDemoState extends State<CupertinoAlertDemo> {
   }
 
   void _showDemoActionSheet({BuildContext context, Widget child}) {
-    child = CupertinoTheme(
-      data: CupertinoTheme.of(context),
-      child: child,
+    child = ApplyTextOptions(
+      child: CupertinoTheme(
+        data: CupertinoTheme.of(context),
+        child: child,
+      ),
     );
     showCupertinoModalPopup<String>(
       context: context,

@@ -169,7 +169,7 @@ class _ColorItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text('$prefix$index'),
-            Text(_colorString),
+            Flexible(child: Text(_colorString)),
           ],
         ),
       ),

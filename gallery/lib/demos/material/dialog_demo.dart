@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 
+import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 
 enum DialogDemoType {
@@ -34,9 +35,11 @@ class DialogDemo extends StatelessWidget {
   }
 
   Future<void> _showDemoDialog<T>({BuildContext context, Widget child}) async {
-    child = Theme(
-      data: Theme.of(context),
-      child: child,
+    child = ApplyTextOptions(
+      child: Theme(
+        data: Theme.of(context),
+        child: child,
+      ),
     );
     T value = await showDialog<T>(
       context: context,
@@ -194,9 +197,11 @@ class _DialogDemoItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Icon(icon, size: 36, color: color),
-          Padding(
-            padding: const EdgeInsetsDirectional.only(start: 16),
-            child: Text(text),
+          Flexible(
+            child: Padding(
+              padding: const EdgeInsetsDirectional.only(start: 16),
+              child: Text(text),
+            ),
           ),
         ],
       ),
@@ -209,28 +214,34 @@ class _FullScreenDialogDemo extends StatelessWidget {
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
 
-    return MediaQuery(
-      data: MediaQueryData(),
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text(GalleryLocalizations.of(context).dialogFullscreenTitle),
-          actions: [
-            FlatButton(
-              child: Text(
-                GalleryLocalizations.of(context).dialogFullscreenSave,
-                style: theme.textTheme.body1.copyWith(
-                  color: theme.colorScheme.onPrimary,
+    // Remove the MediaQuery padding because the demo is rendered inside of a
+    // different page that already accounts for this padding.
+    return MediaQuery.removePadding(
+      context: context,
+      removeTop: true,
+      removeBottom: true,
+      child: ApplyTextOptions(
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text(GalleryLocalizations.of(context).dialogFullscreenTitle),
+            actions: [
+              FlatButton(
+                child: Text(
+                  GalleryLocalizations.of(context).dialogFullscreenSave,
+                  style: theme.textTheme.body1.copyWith(
+                    color: theme.colorScheme.onPrimary,
+                  ),
                 ),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
               ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
+            ],
+          ),
+          body: Center(
+            child: Text(
+              GalleryLocalizations.of(context).dialogFullscreenDescription,
             ),
-          ],
-        ),
-        body: Center(
-          child: Text(
-            GalleryLocalizations.of(context).dialogFullscreenDescription,
           ),
         ),
       ),
