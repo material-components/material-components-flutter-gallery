@@ -13,8 +13,8 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
-import 'package:scoped_model/scoped_model.dart';
-
+import 'package:gallery/data/gallery_options.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/shrine/backdrop.dart';
 import 'package:gallery/studies/shrine/category_menu_page.dart';
@@ -25,7 +25,7 @@ import 'package:gallery/studies/shrine/login.dart';
 import 'package:gallery/studies/shrine/model/app_state_model.dart';
 import 'package:gallery/studies/shrine/scrim.dart';
 import 'package:gallery/studies/shrine/supplemental/cut_corners_border.dart';
-import 'package:gallery/l10n/gallery_localizations.dart';
+import 'package:scoped_model/scoped_model.dart';
 
 class ShrineApp extends StatefulWidget {
   @override
@@ -102,9 +102,9 @@ class _ShrineAppState extends State<ShrineApp> with TickerProviderStateMixin {
         ),
         initialRoute: '/login',
         onGenerateRoute: _getRoute,
-        // Copy the platform from the main theme in order to support platform
-        // toggling from the Gallery options menu.
-        theme: _shrineTheme.copyWith(platform: Theme.of(context).platform),
+        theme: _shrineTheme.copyWith(
+          platform: GalleryOptions.of(context).platform,
+        ),
         // L10n settings.
         localizationsDelegates: GalleryLocalizations.localizationsDelegates,
         supportedLocales: GalleryLocalizations.supportedLocales,

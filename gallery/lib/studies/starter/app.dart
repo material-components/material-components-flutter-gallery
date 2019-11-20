@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-
+import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/studies/starter/home.dart';
 
@@ -17,7 +17,9 @@ class StarterApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       localizationsDelegates: GalleryLocalizations.localizationsDelegates,
       supportedLocales: GalleryLocalizations.supportedLocales,
-      home: HomePage(),
+      home: ApplyTextOptions(
+        child: HomePage(),
+      ),
       theme: ThemeData(
         primaryColor: _primaryColor,
         colorScheme: ColorScheme(
@@ -39,6 +41,7 @@ class StarterApp extends StatelessWidget {
           thickness: 1,
           color: const Color(0xFFE5E5E5),
         ),
+        platform: GalleryOptions.of(context).platform,
       ),
     );
   }

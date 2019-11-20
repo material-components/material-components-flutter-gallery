@@ -4,7 +4,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/data/icons.dart';
 import 'package:gallery/demos/cupertino/cupertino_alert_demo.dart';
 import 'package:gallery/demos/cupertino/cupertino_button_demo.dart';
@@ -364,15 +364,21 @@ class DemoWrapper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: MaterialDemoThemeData.themeData,
+      theme: MaterialDemoThemeData.themeData.copyWith(
+        platform: GalleryOptions.of(context).platform,
+      ),
       debugShowCheckedModeBanner: false,
       localizationsDelegates: GalleryLocalizations.localizationsDelegates,
       supportedLocales: GalleryLocalizations.supportedLocales,
-      home: MediaQuery(
-        data: MediaQueryData(),
-        child: CupertinoTheme(
-          data: CupertinoThemeData(),
-          child: child,
+      home: MediaQuery.removePadding(
+        context: context,
+        removeTop: true,
+        removeBottom: true,
+        child: ApplyTextOptions(
+          child: CupertinoTheme(
+            data: CupertinoThemeData(),
+            child: child,
+          ),
         ),
       ),
     );

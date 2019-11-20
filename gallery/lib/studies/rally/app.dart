@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-
+import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/studies/rally/colors.dart';
 import 'package:gallery/studies/rally/home.dart';
@@ -19,7 +19,9 @@ class RallyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Rally',
       debugShowCheckedModeBanner: false,
-      theme: _buildRallyTheme(),
+      theme: _buildRallyTheme().copyWith(
+        platform: GalleryOptions.of(context).platform,
+      ),
       localizationsDelegates: GalleryLocalizations.localizationsDelegates,
       supportedLocales: GalleryLocalizations.supportedLocales,
       home: HomePage(),

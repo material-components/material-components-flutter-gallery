@@ -13,12 +13,12 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
-import 'package:scoped_model/scoped_model.dart';
-
+import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/shrine/expanding_bottom_sheet.dart';
 import 'package:gallery/studies/shrine/model/app_state_model.dart';
 import 'package:gallery/studies/shrine/supplemental/asymmetric_view.dart';
+import 'package:scoped_model/scoped_model.dart';
 
 class ProductPage extends StatelessWidget {
   const ProductPage();
@@ -52,15 +52,17 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final bool isDesktop = isDisplayDesktop(context);
 
-    return Stack(
-      children: [
-        backdrop,
-        scrim,
-        Align(
-          child: expandingBottomSheet,
-          alignment: isDesktop ? Alignment.topRight : Alignment.bottomRight,
-        ),
-      ],
+    return ApplyTextOptions(
+      child: Stack(
+        children: [
+          backdrop,
+          scrim,
+          Align(
+            child: expandingBottomSheet,
+            alignment: isDesktop ? Alignment.topRight : Alignment.bottomRight,
+          ),
+        ],
+      ),
     );
   }
 }

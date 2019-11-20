@@ -13,9 +13,9 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
-
-import 'package:gallery/studies/shrine/colors.dart';
+import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
+import 'package:gallery/studies/shrine/colors.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -36,107 +36,109 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     final ColorScheme colorScheme = Theme.of(context).colorScheme;
 
-    return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        brightness: Brightness.light,
-        leading: IconButton(
-          icon: const BackButtonIcon(),
-          tooltip: MaterialLocalizations.of(context).backButtonTooltip,
-          onPressed: () {
-            // The login screen is immediately displayed on top of the Shrine
-            // home screen using onGenerateRoute and so rootNavigator must be
-            // set to true in order to get out of Shrine completely.
-            Navigator.of(context, rootNavigator: true).pop();
-          },
+    return ApplyTextOptions(
+      child: Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
+          brightness: Brightness.light,
+          leading: IconButton(
+            icon: const BackButtonIcon(),
+            tooltip: MaterialLocalizations.of(context).backButtonTooltip,
+            onPressed: () {
+              // The login screen is immediately displayed on top of the Shrine
+              // home screen using onGenerateRoute and so rootNavigator must be
+              // set to true in order to get out of Shrine completely.
+              Navigator.of(context, rootNavigator: true).pop();
+            },
+          ),
         ),
-      ),
-      body: SafeArea(
-        child: ListView(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          children: [
-            const SizedBox(height: 80),
-            Column(
-              children: [
-                Image.asset('packages/shrine_images/diamond.png'),
-                const SizedBox(height: 16),
-                Text(
-                  'SHRINE',
-                  style: Theme.of(context).textTheme.headline,
-                ),
-              ],
-            ),
-            const SizedBox(height: 120),
-            PrimaryColorOverride(
-              color: shrineBrown900,
-              child: Container(
-                decoration: _decoration,
-                child: TextField(
-                  controller: _usernameController,
-                  cursorColor: colorScheme.onSurface,
-                  decoration: InputDecoration(
-                    labelText: GalleryLocalizations.of(context)
-                        .shrineLoginUsernameLabel,
+        body: SafeArea(
+          child: ListView(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            children: [
+              const SizedBox(height: 80),
+              Column(
+                children: [
+                  Image.asset('packages/shrine_images/diamond.png'),
+                  const SizedBox(height: 16),
+                  Text(
+                    'SHRINE',
+                    style: Theme.of(context).textTheme.headline,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 120),
+              PrimaryColorOverride(
+                color: shrineBrown900,
+                child: Container(
+                  decoration: _decoration,
+                  child: TextField(
+                    controller: _usernameController,
+                    cursorColor: colorScheme.onSurface,
+                    decoration: InputDecoration(
+                      labelText: GalleryLocalizations.of(context)
+                          .shrineLoginUsernameLabel,
+                    ),
                   ),
                 ),
               ),
-            ),
-            const SizedBox(height: 12),
-            PrimaryColorOverride(
-              color: shrineBrown900,
-              child: Container(
-                decoration: _decoration,
-                child: TextField(
-                  controller: _passwordController,
-                  cursorColor: colorScheme.onSurface,
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    labelText: GalleryLocalizations.of(context)
-                        .shrineLoginPasswordLabel,
+              const SizedBox(height: 12),
+              PrimaryColorOverride(
+                color: shrineBrown900,
+                child: Container(
+                  decoration: _decoration,
+                  child: TextField(
+                    controller: _passwordController,
+                    cursorColor: colorScheme.onSurface,
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      labelText: GalleryLocalizations.of(context)
+                          .shrineLoginPasswordLabel,
+                    ),
                   ),
                 ),
               ),
-            ),
-            Wrap(
-              children: [
-                ButtonBar(
-                  children: [
-                    FlatButton(
-                      child: Text(
-                        GalleryLocalizations.of(context)
-                            .shrineCancelButtonCaption,
-                        style: TextStyle(color: colorScheme.onSurface),
+              Wrap(
+                children: [
+                  ButtonBar(
+                    children: [
+                      FlatButton(
+                        child: Text(
+                          GalleryLocalizations.of(context)
+                              .shrineCancelButtonCaption,
+                          style: TextStyle(color: colorScheme.onSurface),
+                        ),
+                        shape: const BeveledRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(7)),
+                        ),
+                        onPressed: () {
+                          // The login screen is immediately displayed on top of
+                          // the Shrine home screen using onGenerateRoute and so
+                          // rootNavigator must be set to true in order to get out
+                          // of Shrine completely.
+                          Navigator.of(context, rootNavigator: true).pop();
+                        },
                       ),
-                      shape: const BeveledRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(7)),
+                      RaisedButton(
+                        child: Text(
+                          GalleryLocalizations.of(context)
+                              .shrineNextButtonCaption,
+                        ),
+                        elevation: 8,
+                        shape: const BeveledRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(7)),
+                        ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
                       ),
-                      onPressed: () {
-                        // The login screen is immediately displayed on top of
-                        // the Shrine home screen using onGenerateRoute and so
-                        // rootNavigator must be set to true in order to get out
-                        // of Shrine completely.
-                        Navigator.of(context, rootNavigator: true).pop();
-                      },
-                    ),
-                    RaisedButton(
-                      child: Text(
-                        GalleryLocalizations.of(context)
-                            .shrineNextButtonCaption,
-                      ),
-                      elevation: 8,
-                      shape: const BeveledRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(7)),
-                      ),
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ],
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -3,6 +3,7 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:gallery/data/gallery_options.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:gallery/constants.dart';
@@ -248,9 +249,11 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
     Widget page = Container(
       padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
       color: colorScheme.background,
-      child: Scaffold(
-        appBar: appBar,
-        body: body,
+      child: ApplyTextOptions(
+        child: Scaffold(
+          appBar: appBar,
+          body: body,
+        ),
       ),
     );
 

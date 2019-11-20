@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-
+import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/rally/colors.dart';
@@ -19,21 +19,23 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        leading: IconButton(
-          icon: const BackButtonIcon(),
-          tooltip: MaterialLocalizations.of(context).backButtonTooltip,
-          onPressed: () {
-            Navigator.of(context, rootNavigator: true).pop();
-          },
+    return ApplyTextOptions(
+      child: Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          leading: IconButton(
+            icon: const BackButtonIcon(),
+            tooltip: MaterialLocalizations.of(context).backButtonTooltip,
+            onPressed: () {
+              Navigator.of(context, rootNavigator: true).pop();
+            },
+          ),
         ),
-      ),
-      body: SafeArea(
-        child: _MainView(
-          usernameController: _usernameController,
-          passwordController: _passwordController,
+        body: SafeArea(
+          child: _MainView(
+            usernameController: _usernameController,
+            passwordController: _passwordController,
+          ),
         ),
       ),
     );

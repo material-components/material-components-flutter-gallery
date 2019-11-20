@@ -13,7 +13,7 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
-
+import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/studies/crane/backdrop.dart';
 import 'package:gallery/studies/crane/eat_form.dart';
@@ -36,20 +36,26 @@ class _CraneAppState extends State<CraneApp> {
       debugShowCheckedModeBanner: false,
       localizationsDelegates: GalleryLocalizations.localizationsDelegates,
       supportedLocales: GalleryLocalizations.supportedLocales,
-      home: Backdrop(
-        frontLayer: Container(),
-        backLayer: <Widget>[
-          FlyForm(),
-          SleepForm(),
-          EatForm(),
-        ],
-        frontTitle: Text('CRANE'),
-        backTitle: Text('MENU'),
-      ),
       initialRoute: '/',
       onGenerateRoute: _getRoute,
-      theme: craneTheme,
-      darkTheme: craneTheme,
+      theme: craneTheme.copyWith(
+        platform: GalleryOptions.of(context).platform,
+      ),
+      darkTheme: craneTheme.copyWith(
+        platform: GalleryOptions.of(context).platform,
+      ),
+      home: ApplyTextOptions(
+        child: Backdrop(
+          frontLayer: Container(),
+          backLayer: [
+            FlyForm(),
+            SleepForm(),
+            EatForm(),
+          ],
+          frontTitle: Text('CRANE'),
+          backTitle: Text('MENU'),
+        ),
+      ),
     );
   }
 }

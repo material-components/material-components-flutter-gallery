@@ -5,7 +5,6 @@
 import 'dart:collection';
 
 import 'package:flutter/material.dart';
-
 import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 
@@ -14,15 +13,12 @@ final settingItemBorderRadius = BorderRadius.circular(10);
 const settingItemHeaderMargin = EdgeInsetsDirectional.fromSTEB(32, 0, 32, 8);
 
 class SlowMotionSetting extends StatelessWidget {
-  const SlowMotionSetting({this.options, this.onOptionsChanged});
-
-  final GalleryOptions options;
-  final ValueChanged<GalleryOptions> onOptionsChanged;
-
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
+    final options = GalleryOptions.of(context);
+
     return Container(
       margin: settingItemHeaderMargin,
       child: Material(
@@ -54,8 +50,9 @@ class SlowMotionSetting extends StatelessWidget {
               child: Switch(
                 activeColor: colorScheme.primary,
                 value: options.timeDilation != 1.0,
-                onChanged: (isOn) => onOptionsChanged(
-                  options.copyWith(timeDilation: isOn ? 10.0 : 1.0),
+                onChanged: (isOn) => GalleryOptions.update(
+                  context,
+                  options.copyWith(timeDilation: isOn ? 5.0 : 1.0),
                 ),
               ),
             ),
