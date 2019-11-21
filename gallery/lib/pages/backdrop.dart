@@ -149,9 +149,14 @@ class _BackdropState extends State<Backdrop>
                     borderRadius: BorderRadiusDirectional.only(
                       bottomStart: Radius.circular(10),
                     ),
-                    color: Theme.of(context).colorScheme.secondaryVariant,
+                    color: _isPanelVisible
+                        ? Theme.of(context).colorScheme.secondaryVariant
+                        : Colors.transparent,
                     child: FlareActor(
-                      'assets/icons/settings/settings.flr',
+                      Theme.of(context).colorScheme.brightness ==
+                              Brightness.light
+                          ? 'assets/icons/settings/settings_light.flr'
+                          : 'assets/icons/settings/settings_dark.flr',
                       alignment: Directionality.of(context) == TextDirection.ltr
                           ? Alignment.bottomLeft
                           : Alignment.bottomRight,
