@@ -17,6 +17,7 @@ class StarterApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       localizationsDelegates: GalleryLocalizations.localizationsDelegates,
       supportedLocales: GalleryLocalizations.supportedLocales,
+      locale: GalleryOptions.of(context).locale,
       home: ApplyTextOptions(
         child: HomePage(),
       ),

@@ -516,6 +516,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirection":
             MessageLookupByLibrary.simpleMessage("Text direction"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
+        "settingsTextDirectionLocaleBased":
+            MessageLookupByLibrary.simpleMessage("Based on locale"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("Text scaling"),

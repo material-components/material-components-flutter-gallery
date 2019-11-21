@@ -39,7 +39,8 @@ class GalleryApp extends StatelessWidget {
       initialModel: GalleryOptions(
         themeMode: ThemeMode.system,
         textScaleFactor: null,
-        textDirection: TextDirection.ltr,
+        customTextDirection: CustomTextDirection.localeBased,
+        locale: null,
         timeDilation: timeDilation,
         platform: defaultTargetPlatform,
       ),
@@ -57,6 +58,11 @@ class GalleryApp extends StatelessWidget {
             ),
             localizationsDelegates: GalleryLocalizations.localizationsDelegates,
             supportedLocales: GalleryLocalizations.supportedLocales,
+            locale: GalleryOptions.of(context).locale,
+            localeResolutionCallback: (locale, supportedLocales) {
+              deviceLocale = locale;
+              return locale;
+            },
             home: ApplyTextOptions(
               child: SplashPage(
                 child: Backdrop(

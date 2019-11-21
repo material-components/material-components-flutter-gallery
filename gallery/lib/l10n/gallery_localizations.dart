@@ -2242,6 +2242,13 @@ class GalleryLocalizations {
         desc: r'Option label for left-to-right text direction setting.');
   }
 
+  String get settingsTextDirectionLocaleBased {
+    return Intl.message(r'Based on locale',
+        locale: _localeName,
+        name: 'settingsTextDirectionLocaleBased',
+        desc: r'Option label for locale-based text direction setting.');
+  }
+
   String get settingsTextDirectionRTL {
     return Intl.message(r'RTL',
         locale: _localeName,

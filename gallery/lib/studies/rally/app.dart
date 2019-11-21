@@ -24,6 +24,7 @@ class RallyApp extends StatelessWidget {
       ),
       localizationsDelegates: GalleryLocalizations.localizationsDelegates,
       supportedLocales: GalleryLocalizations.supportedLocales,
+      locale: GalleryOptions.of(context).locale,
       home: HomePage(),
       initialRoute: '/login',
       routes: <String, WidgetBuilder>{

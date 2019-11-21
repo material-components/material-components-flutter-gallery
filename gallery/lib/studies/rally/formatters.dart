@@ -3,11 +3,12 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:gallery/data/gallery_options.dart';
 import 'package:intl/intl.dart';
 
 /// Get the locale string for the context.
 String locale(BuildContext context) =>
-    Localizations.localeOf(context).toString();
+    GalleryOptions.of(context).locale.toString();
 
 /// Currency formatter for USD.
 NumberFormat usdWithSignFormat(BuildContext context) =>

@@ -308,6 +308,10 @@
   "@settingsTextDirection": {
     "description": "Title for text direction setting."
   },
+  "settingsTextDirectionLocaleBased": "Based on locale",
+  "@settingsTextDirectionLocaleBased": {
+    "description": "Option label for locale-based text direction setting."
+  },
   "settingsTextDirectionLTR": "LTR",
   "@settingsTextDirectionLTR": {
     "description": "Option label for left-to-right text direction setting."

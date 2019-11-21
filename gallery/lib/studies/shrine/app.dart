@@ -108,6 +108,7 @@ class _ShrineAppState extends State<ShrineApp> with TickerProviderStateMixin {
         // L10n settings.
         localizationsDelegates: GalleryLocalizations.localizationsDelegates,
         supportedLocales: GalleryLocalizations.supportedLocales,
+        locale: GalleryOptions.of(context).locale,
       ),
     );
   }

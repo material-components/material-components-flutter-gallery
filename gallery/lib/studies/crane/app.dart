@@ -34,6 +34,7 @@ class _CraneAppState extends State<CraneApp> {
       debugShowCheckedModeBanner: false,
       localizationsDelegates: GalleryLocalizations.localizationsDelegates,
       supportedLocales: GalleryLocalizations.supportedLocales,
+      locale: GalleryOptions.of(context).locale,
       initialRoute: '/',
       onGenerateRoute: _getRoute,
       theme: craneTheme.copyWith(

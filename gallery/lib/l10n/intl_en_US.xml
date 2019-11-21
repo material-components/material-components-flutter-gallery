@@ -294,6 +294,10 @@
     description="Title for text direction setting."
     >Text direction</string>
   <string
+    name="settingsTextDirectionLocaleBased"
+    description="Option label for locale-based text direction setting."
+    >Based on locale</string>
+  <string
     name="settingsTextDirectionLTR"
     description="Option label for left-to-right text direction setting."
     >LTR</string>

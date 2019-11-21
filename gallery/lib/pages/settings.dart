@@ -24,28 +24,48 @@ class SettingsPage extends StatelessWidget {
 
     final colorScheme = Theme.of(context).colorScheme;
     final options = GalleryOptions.of(context);
+    final isDesktop = isDisplayDesktop(context);
+
+    var localeOptions = LinkedHashMap.of({
+      systemLocaleOption:
+          GalleryLocalizations.of(context).settingsSystemDefault +
+              (deviceLocale != null ? ' - $deviceLocale' : '')
+    });
+    // Add supported locales to localeOptions, except the device locale.
+    var supportedLocales =
+        List<Locale>.from(GalleryLocalizations.supportedLocales);
+    supportedLocales.removeWhere((locale) => locale == deviceLocale);
+    localeOptions.addAll(
+      LinkedHashMap.fromIterable(
+        supportedLocales,
+        // TODO: use flutter_localized_countries when updated
+        value: (dynamic v) => v.toString(),
+      ),
+    );
 
     return Container(
       color: colorScheme.secondaryVariant,
-      margin: EdgeInsets.only(bottom: galleryHeaderHeight),
+      padding: isDesktop
+          ? EdgeInsets.zero
+          : EdgeInsets.only(bottom: galleryHeaderHeight),
       child: Center(
         child: ListView(
           children: [
             Padding(
               padding: EdgeInsetsDirectional.only(
                 start: 32,
-                top: (isDisplayDesktop(context)) ? 5 : 21,
+                top: isDesktop ? 5 : 0,
                 end: 32,
-                bottom: (isDisplayDesktop(context)) ? 5 : 27,
+                bottom: isDesktop ? 5 : 0,
               ),
               child: settingsHeader(),
             ),
             SettingsListItem<double>(
               title: GalleryLocalizations.of(context).settingsTextScaling,
-              selectedOption: options.textScaleFactor ?? 0,
+              selectedOption: options.textScaleFactor ?? -1,
               options: LinkedHashMap.of({
-                // Using a value of 0 to indicate the system setting.
-                0: GalleryLocalizations.of(context).settingsSystemDefault,
+                // Using a value of -1 to indicate the system setting.
+                -1: GalleryLocalizations.of(context).settingsSystemDefault,
                 0.8: GalleryLocalizations.of(context).settingsTextScalingSmall,
                 1.0: GalleryLocalizations.of(context).settingsTextScalingNormal,
                 2.0: GalleryLocalizations.of(context).settingsTextScalingLarge,
@@ -56,28 +76,38 @@ class SettingsPage extends StatelessWidget {
                 options.copyWith(textScaleFactor: newTextScale),
               ),
             ),
-            SettingsListItem<TextDirection>(
+            SettingsListItem<CustomTextDirection>(
               title: GalleryLocalizations.of(context).settingsTextDirection,
-              selectedOption: options.textDirection,
+              selectedOption: options.customTextDirection,
               options: LinkedHashMap.of({
-                TextDirection.ltr:
+                CustomTextDirection.localeBased:
+                    GalleryLocalizations.of(context)
+                        .settingsTextDirectionLocaleBased,
+                CustomTextDirection.ltr:
                     GalleryLocalizations.of(context).settingsTextDirectionLTR,
-                TextDirection.rtl:
+                CustomTextDirection.rtl:
                     GalleryLocalizations.of(context).settingsTextDirectionRTL,
               }),
               onOptionChanged: (newTextDirection) => GalleryOptions.update(
                 context,
-                options.copyWith(textDirection: newTextDirection),
+                options.copyWith(customTextDirection: newTextDirection),
               ),
             ),
-            SettingsListItem<Object>(
+            SettingsListItem<Locale>(
               title: GalleryLocalizations.of(context).settingsLocale,
-              selectedOption: null,
-              options: LinkedHashMap.of({}),
-              onOptionChanged: (newLocale) => GalleryOptions.update(
-                context,
-                options,
-              ),
+              selectedOption: options.locale == deviceLocale
+                  ? systemLocaleOption
+                  : options.locale,
+              options: localeOptions,
+              onOptionChanged: (newLocale) {
+                if (newLocale == systemLocaleOption) {
+                  newLocale = deviceLocale;
+                }
+                GalleryOptions.update(
+                  context,
+                  options.copyWith(locale: newLocale),
+                );
+              },
             ),
             SettingsListItem<TargetPlatform>(
               title: GalleryLocalizations.of(context).settingsPlatformMechanics,
@@ -110,7 +140,7 @@ class SettingsPage extends StatelessWidget {
               ),
             ),
             SlowMotionSetting(),
-            if (!isDisplayDesktop(context)) ...[
+            if (!isDesktop) ...[
               SizedBox(height: 16),
               Divider(thickness: 2, height: 0, color: colorScheme.background),
               SizedBox(height: 12),

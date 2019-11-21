@@ -7,36 +7,87 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 
+enum CustomTextDirection {
+  localeBased,
+  ltr,
+  rtl,
+}
+
+// See http://en.wikipedia.org/wiki/Right-to-left
+const List<String> rtlLanguages = <String>[
+  'ar', // Arabic
+  'fa', // Farsi
+  'he', // Hebrew
+  'ps', // Pashto
+  'ur', // Urdu
+];
+
+// Fake locale to represent the system Locale option.
+const systemLocaleOption = Locale('system');
+
+Locale _deviceLocale;
+Locale get deviceLocale => _deviceLocale;
+set deviceLocale(Locale locale) {
+  if (_deviceLocale == null) {
+    _deviceLocale = locale;
+  }
+}
+
 class GalleryOptions {
   const GalleryOptions({
     this.themeMode,
     double textScaleFactor,
-    this.textDirection,
+    this.customTextDirection,
+    Locale locale,
     this.timeDilation,
     this.platform,
-  }) : _textScaleFactor = textScaleFactor;
+  })  : _textScaleFactor = textScaleFactor,
+        _locale = locale;
 
   final ThemeMode themeMode;
   final double _textScaleFactor;
-  final TextDirection textDirection;
+  final CustomTextDirection customTextDirection;
+  final Locale _locale;
   final double timeDilation;
   final TargetPlatform platform;
 
-  // A null text scale will use the system setting. We use 0 for convenience.
+  // A null text scale will use the system's text scale. We use -1 for the
+  // option to be selectable in Settings.
   double get textScaleFactor =>
-      _textScaleFactor == 0.0 ? null : _textScaleFactor;
+      _textScaleFactor == -1 ? null : _textScaleFactor;
+
+  Locale get locale => _locale ?? deviceLocale;
+
+  /// Returns the text direction based on the [CustomTextDirection] setting.
+  /// If the locale cannot be determined, returns null.
+  TextDirection textDirection() {
+    switch (customTextDirection) {
+      case CustomTextDirection.localeBased:
+        final String language = locale?.languageCode?.toLowerCase();
+        if (language == null) return null;
+        return rtlLanguages.contains(language)
+            ? TextDirection.rtl
+            : TextDirection.ltr;
+      case CustomTextDirection.rtl:
+        return TextDirection.rtl;
+      default:
+        return TextDirection.ltr;
+    }
+  }
 
   GalleryOptions copyWith({
     ThemeMode themeMode,
     double textScaleFactor,
-    TextDirection textDirection,
+    CustomTextDirection customTextDirection,
+    Locale locale,
     double timeDilation,
     TargetPlatform platform,
   }) {
     return GalleryOptions(
       themeMode: themeMode ?? this.themeMode,
       textScaleFactor: textScaleFactor ?? this.textScaleFactor,
-      textDirection: textDirection ?? this.textDirection,
+      customTextDirection: customTextDirection ?? this.customTextDirection,
+      locale: locale ?? this.locale,
       timeDilation: timeDilation ?? this.timeDilation,
       platform: platform ?? this.platform,
     );
@@ -47,7 +98,8 @@ class GalleryOptions {
       other is GalleryOptions &&
       themeMode == other.themeMode &&
       _textScaleFactor == other._textScaleFactor &&
-      textDirection == other.textDirection &&
+      customTextDirection == other.customTextDirection &&
+      locale == other.locale &&
       timeDilation == other.timeDilation &&
       platform == other.platform;
 
@@ -55,7 +107,8 @@ class GalleryOptions {
   int get hashCode => hashValues(
         themeMode,
         _textScaleFactor,
-        textDirection,
+        customTextDirection,
+        locale,
         timeDilation,
         platform,
       );
@@ -82,15 +135,20 @@ class ApplyTextOptions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final options = GalleryOptions.of(context);
-    return Directionality(
-      textDirection: options.textDirection,
-      child: MediaQuery(
-        data: MediaQuery.of(context).copyWith(
-          textScaleFactor: options.textScaleFactor,
-        ),
-        child: child,
+    final textDirection = options.textDirection();
+
+    Widget widget = MediaQuery(
+      data: MediaQuery.of(context).copyWith(
+        textScaleFactor: options.textScaleFactor,
       ),
+      child: child,
     );
+    return textDirection == null
+        ? widget
+        : Directionality(
+            textDirection: textDirection,
+            child: widget,
+          );
   }
 }
 

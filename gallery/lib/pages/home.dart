@@ -197,8 +197,8 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        top: isDisplayDesktop(context) ? 63 : 21,
-        bottom: 16,
+        top: isDisplayDesktop(context) ? 63 : 4,
+        bottom: 27,
       ),
       child: Text(
         text,
