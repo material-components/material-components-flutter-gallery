@@ -543,12 +543,15 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneEat9', desc: r'Label for city.');
   }
 
-  String craneEatRestaurants(Object totalRestaurants) {
-    return Intl.message(r'$totalRestaurants Restaurants',
+  String craneEatRestaurants(int totalRestaurants) {
+    return Intl.plural(totalRestaurants,
         locale: _localeName,
         name: 'craneEatRestaurants',
         desc: r'Text indicating the number of restaurants. Always plural.',
-        args: <Object>[totalRestaurants]);
+        args: <Object>[totalRestaurants],
+        zero: 'No Restaurants',
+        one: '1 Restaurant',
+        other: '$totalRestaurants Restaurants');
   }
 
   String get craneEatSubhead {
@@ -633,26 +636,16 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneFly9', desc: r'Label for city.');
   }
 
-  String craneFlyMultipleStops(Object numberOfStops) {
-    return Intl.message(r'$numberOfStops stops',
+  String craneFlyStops(int numberOfStops) {
+    return Intl.plural(numberOfStops,
         locale: _localeName,
-        name: 'craneFlyMultipleStops',
-        desc: r'Label indicating a flight with 2 or more layovers.',
-        args: <Object>[numberOfStops]);
-  }
-
-  String get craneFlyNonstop {
-    return Intl.message(r'Nonstop',
-        locale: _localeName,
-        name: 'craneFlyNonstop',
-        desc: r'Label indicating a nonstop flight.');
-  }
-
-  String get craneFlyOneStop {
-    return Intl.message(r'1 stop',
-        locale: _localeName,
-        name: 'craneFlyOneStop',
-        desc: r'Label indicating a flight with a single layover.');
+        name: 'craneFlyStops',
+        desc:
+            r'Label indicating if a flight is nonstop or how many layovers it includes.',
+        args: <Object>[numberOfStops],
+        zero: 'Nonstop',
+        one: '1 stop',
+        other: '$numberOfStops stops');
   }
 
   String get craneFlySubhead {
@@ -783,13 +776,16 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneSleep9', desc: r'Label for city.');
   }
 
-  String craneSleepProperties(Object totalProperties) {
-    return Intl.message(r'$totalProperties Available Properties',
+  String craneSleepProperties(int totalProperties) {
+    return Intl.plural(totalProperties,
         locale: _localeName,
         name: 'craneSleepProperties',
         desc:
             r'Text indicating the number of available properties (temporary rentals). Always plural.',
-        args: <Object>[totalProperties]);
+        args: <Object>[totalProperties],
+        zero: 'No Available Properties',
+        one: '1 Available Properties',
+        other: '$totalProperties Available Properties');
   }
 
   String get craneSleepSubhead {

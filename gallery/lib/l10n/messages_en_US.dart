@@ -24,11 +24,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m1(title) => "Placeholder for ${title} tab";
 
-  static m13(totalRestaurants) => "${totalRestaurants} Restaurants";
+  static m13(totalRestaurants) =>
+      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
 
-  static m14(numberOfStops) => "${numberOfStops} stops";
+  static m14(numberOfStops) =>
+      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
 
-  static m15(totalProperties) => "${totalProperties} Available Properties";
+  static m15(totalProperties) =>
+      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
   static m2(value) => "Item ${value}";
 
@@ -146,9 +149,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Mount Rushmore, United States"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
-        "craneFlyMultipleStops": m14,
-        "craneFlyNonstop": MessageLookupByLibrary.simpleMessage("Nonstop"),
-        "craneFlyOneStop": MessageLookupByLibrary.simpleMessage("1 stop"),
+        "craneFlyStops": m14,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Explore Flights by Destination"),
         "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),

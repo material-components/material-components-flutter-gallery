@@ -1302,25 +1302,17 @@
     description="Subhead for EAT tab."
     >Explore Restaurants by Destination</string>
   <string
-    name="craneFlyNonstop"
-    description="Label indicating a nonstop flight."
-    >Nonstop</string>
-  <string
-    name="craneFlyOneStop"
-    description="Label indicating a flight with a single layover."
-    >1 stop</string>
-  <string
-    name="craneFlyMultipleStops"
-    description="Label indicating a flight with 2 or more layovers."
-    >{numberOfStops} stops</string>
+    name="craneFlyStops"
+    description="Label indicating if a flight is nonstop or how many layovers it includes."
+    >{numberOfStops, plural, =0{Nonstop} =1{1 stop} other{{numberOfStops} stops}}</string>
   <string
     name="craneSleepProperties"
     description="Text indicating the number of available properties (temporary rentals). Always plural."
-    >{totalProperties} Available Properties</string>
+    >{totalProperties, plural, =0{No Available Properties} =1{1 Available Properties} other{{totalProperties} Available Properties}}</string>
   <string
     name="craneEatRestaurants"
     description="Text indicating the number of restaurants. Always plural."
-    >{totalRestaurants} Restaurants</string>
+    >{totalRestaurants, plural, =0{No Restaurants} =1{1 Restaurant} other{{totalRestaurants} Restaurants}}</string>
   <string
     name="craneFly0"
     description="Label for city."

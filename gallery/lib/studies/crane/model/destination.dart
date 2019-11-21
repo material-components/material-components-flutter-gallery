@@ -51,12 +51,7 @@ class FlyDestination extends Destination {
   String get assetName => 'assets/crane/destinations/fly_$id.png';
 
   String subtitle(BuildContext context) {
-    // TODO: use plural intl support when ready
-    var stopsText = stops == 0
-        ? GalleryLocalizations.of(context).craneFlyNonstop
-        : stops == 1
-            ? GalleryLocalizations.of(context).craneFlyOneStop
-            : GalleryLocalizations.of(context).craneFlyMultipleStops(stops);
+    final stopsText = GalleryLocalizations.of(context).craneFlyStops(stops);
     return duration == null ? stopsText : '$stopsText · $duration';
   }
 }

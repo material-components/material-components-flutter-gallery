@@ -1367,24 +1367,16 @@
   "@craneEatSubhead": {
     "description": "Subhead for EAT tab."
   },
-  "craneFlyNonstop": "Nonstop",
-  "@craneFlyNonstop": {
-    "description": "Label indicating a nonstop flight."
-  },
-  "craneFlyOneStop": "1 stop",
-  "@craneFlyOneStop": {
-    "description": "Label indicating a flight with a single layover."
-  },
-  "craneFlyMultipleStops": "{numberOfStops} stops",
-  "@craneFlyMultipleStops": {
-    "description": "Label indicating a flight with 2 or more layovers.",
+  "craneFlyStops": "{numberOfStops, plural, =0{Nonstop} =1{1 stop} other{{numberOfStops} stops}}",
+  "@craneFlyStops": {
+    "description": "Label indicating if a flight is nonstop or how many layovers it includes.",
     "placeholders": {
       "numberOfStops": {
-        "example": "2"
+        "example": 2
       }
     }
   },
-  "craneSleepProperties": "{totalProperties} Available Properties",
+  "craneSleepProperties": "{totalProperties, plural, =0{No Available Properties} =1{1 Available Properties} other{{totalProperties} Available Properties}}",
   "@craneSleepProperties": {
     "description": "Text indicating the number of available properties (temporary rentals). Always plural.",
     "placeholders": {
@@ -1393,7 +1385,7 @@
       }
     }
   },
-  "craneEatRestaurants": "{totalRestaurants} Restaurants",
+  "craneEatRestaurants": "{totalRestaurants, plural, =0{No Restaurants} =1{1 Restaurant} other{{totalRestaurants} Restaurants}}",
   "@craneEatRestaurants": {
     "description": "Text indicating the number of restaurants. Always plural.",
     "placeholders": {
