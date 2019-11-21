@@ -174,13 +174,15 @@ class _NavigationIconView {
       opacity: _animation,
       child: Stack(
         children: [
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.all(16),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: Image.asset(
-                  'assets/demos/bottom_navigation_background.png',
+          ExcludeSemantics(
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Image.asset(
+                    'assets/demos/bottom_navigation_background.png',
+                  ),
                 ),
               ),
             ),
