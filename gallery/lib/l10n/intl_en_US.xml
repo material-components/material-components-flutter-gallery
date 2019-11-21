@@ -1076,7 +1076,7 @@
   <string
     name="shrineCartItemCount"
     description="A text showing the total number of items in the cart."
-    >{quantity} ITEMS</string>
+    >{quantity, plural, =0{NO ITEMS} =1{1 ITEM} other{{quantity} ITEMS}}</string>
   <string
     name="shrineCartClearButtonCaption"
     description="Caption for a button used to clear the cart."

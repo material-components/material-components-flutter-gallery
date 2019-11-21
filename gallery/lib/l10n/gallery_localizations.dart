@@ -2313,12 +2313,15 @@ class GalleryLocalizations {
         desc: r'Caption for a button used to clear the cart.');
   }
 
-  String shrineCartItemCount(Object quantity) {
-    return Intl.message(r'$quantity ITEMS',
+  String shrineCartItemCount(int quantity) {
+    return Intl.plural(quantity,
         locale: _localeName,
         name: 'shrineCartItemCount',
         desc: r'A text showing the total number of items in the cart.',
-        args: <Object>[quantity]);
+        args: <Object>[quantity],
+        zero: 'NO ITEMS',
+        one: '1 ITEM',
+        other: '$quantity ITEMS');
   }
 
   String get shrineCartPageCaption {

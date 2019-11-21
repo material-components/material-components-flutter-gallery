@@ -52,7 +52,8 @@ class MessageLookup extends MessageLookupByLibrary {
   static m16(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m9(quantity) => "${quantity} ITEMS";
+  static m9(quantity) =>
+      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
   static m10(price) => "x ${price}";
 
