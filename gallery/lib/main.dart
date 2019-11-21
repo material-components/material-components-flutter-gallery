@@ -36,6 +36,17 @@ void main() {
 class GalleryApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final home = DraggableScrollableSheet(
+      initialChildSize: 1,
+      minChildSize: 0.1,
+      builder: (context, scrollController) {
+        return Backdrop(
+          frontLayer: SettingsPage(),
+          backLayer: HomePage(scrollController: scrollController),
+        );
+      },
+    );
+
     return ModelBinding(
       initialModel: GalleryOptions(
         themeMode: ThemeMode.system,
@@ -66,10 +77,7 @@ class GalleryApp extends StatelessWidget {
             },
             home: ApplyTextOptions(
               child: SplashPage(
-                child: Backdrop(
-                  frontLayer: SettingsPage(),
-                  backLayer: HomePage(),
-                ),
+                child: home,
               ),
             ),
           );

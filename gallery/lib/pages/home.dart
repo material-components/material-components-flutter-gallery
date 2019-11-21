@@ -35,6 +35,10 @@ const String homeCategoryMaterial = 'MATERIAL';
 const String homeCategoryCupertino = 'CUPERTINO';
 
 class HomePage extends StatelessWidget {
+  const HomePage({Key key, this.scrollController}) : super(key: key);
+
+  final ScrollController scrollController;
+
   @override
   Widget build(BuildContext context) {
     var carouselHeight = _carouselHeight(.7, context);
@@ -95,6 +99,7 @@ class HomePage extends StatelessWidget {
 
       return Scaffold(
         body: ListView(
+          controller: scrollController,
           padding: EdgeInsetsDirectional.only(
             start: _horizontalDesktopPadding,
             top: (isDisplayDesktop(context)) ? 5 : 21,
