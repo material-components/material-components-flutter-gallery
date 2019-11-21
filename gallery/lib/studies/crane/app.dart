@@ -21,8 +21,6 @@ import 'package:gallery/studies/crane/fly_form.dart';
 import 'package:gallery/studies/crane/sleep_form.dart';
 import 'package:gallery/studies/crane/theme.dart';
 
-void main() => runApp(CraneApp());
-
 class CraneApp extends StatefulWidget {
   @override
   _CraneAppState createState() => _CraneAppState();
