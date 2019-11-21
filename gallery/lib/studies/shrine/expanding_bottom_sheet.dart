@@ -33,9 +33,9 @@ const _peakVelocityTime = 0.248210;
 // Percent (as a decimal) of animation that should be completed at _peakVelocityTime
 const _peakVelocityProgress = 0.379146;
 const _cartHeight = 56.0;
-// Radius of the shape on the top left of the sheet for mobile layouts.
+// Radius of the shape on the top start of the sheet for mobile layouts.
 const _mobileCornerRadius = 24.0;
-// Radius of the shape on the top left and bottom left of the sheet for mobile layouts.
+// Radius of the shape on the top start and bottom start of the sheet for mobile layouts.
 const _desktopCornerRadius = 12.0;
 // Width for just the cart icon and no thumbnails.
 const _widthForCartIcon = 64.0;
@@ -148,8 +148,8 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
   Animation<double> _heightAnimation;
   Animation<double> _thumbnailOpacityAnimation;
   Animation<double> _cartOpacityAnimation;
-  Animation<double> _topLeftShapeAnimation;
-  Animation<double> _bottomLeftShapeAnimation;
+  Animation<double> _topStartShapeAnimation;
+  Animation<double> _bottomStartShapeAnimation;
   Animation<Offset> _slideAnimation;
   Animation<double> _gapAnimation;
 
@@ -233,8 +233,8 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
     }
   }
 
-  // Animation of the top-left cut corner. It's cut when closed and not cut when open.
-  Animation<double> _getShapeTopLeftAnimation(BuildContext context) {
+  // Animation of the top-start cut corner. It's cut when closed and not cut when open.
+  Animation<double> _getShapeTopStartAnimation(BuildContext context) {
     final bool isDesktop = isDisplayDesktop(context);
 
     final double cornerRadius =
@@ -258,8 +258,8 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
     }
   }
 
-  // Animation of the bottom-left cut corner. It's cut when closed and not cut when open.
-  Animation<double> _getShapeBottomLeftAnimation(BuildContext context) {
+  // Animation of the bottom-start cut corner. It's cut when closed and not cut when open.
+  Animation<double> _getShapeBottomStartAnimation(BuildContext context) {
     final bool isDesktop = isDisplayDesktop(context);
 
     final double cornerRadius = isDesktop ? _desktopCornerRadius : 0;
@@ -436,8 +436,8 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
     _widthAnimation = _getWidthAnimation(expandedCartWidth);
     _height = isDesktop ? _heightFor(numProducts) : _cartHeight;
     _heightAnimation = _getHeightAnimation(screenHeight);
-    _topLeftShapeAnimation = _getShapeTopLeftAnimation(context);
-    _bottomLeftShapeAnimation = _getShapeBottomLeftAnimation(context);
+    _topStartShapeAnimation = _getShapeTopStartAnimation(context);
+    _bottomStartShapeAnimation = _getShapeBottomStartAnimation(context);
     _thumbnailOpacityAnimation = _getThumbnailOpacityAnimation();
     _cartOpacityAnimation = _getCartOpacityAnimation();
     _gapAnimation =
@@ -454,9 +454,9 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
           child: Material(
             animationDuration: const Duration(milliseconds: 0),
             shape: BeveledRectangleBorder(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(_topLeftShapeAnimation.value),
-                bottomLeft: Radius.circular(_bottomLeftShapeAnimation.value),
+              borderRadius: BorderRadiusDirectional.only(
+                topStart: Radius.circular(_topStartShapeAnimation.value),
+                bottomStart: Radius.circular(_bottomStartShapeAnimation.value),
               ),
             ),
             elevation: 4,
@@ -477,9 +477,12 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
     if (isDesktop) {
       return child;
     } else {
+      final double textDirectionScalar =
+          Directionality.of(context) == TextDirection.ltr ? 1 : -1;
+
       _slideAnimation = _getEmphasizedEasingAnimation(
-        begin: const Offset(1, 0),
-        peak: const Offset(_peakVelocityProgress, 0),
+        begin: Offset(1 * textDirectionScalar, 0),
+        peak: Offset(_peakVelocityProgress * textDirectionScalar, 0),
         end: const Offset(0, 0),
         isForward: widget.hideController.status == AnimationStatus.forward,
         parent: widget.hideController,
@@ -511,7 +514,7 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
       duration: const Duration(milliseconds: 225),
       curve: Curves.easeInOut,
       vsync: this,
-      alignment: FractionalOffset.topLeft,
+      alignment: AlignmentDirectional.topStart,
       child: WillPopScope(
         onWillPop: _onWillPop,
         child: AnimatedBuilder(
@@ -725,8 +728,8 @@ class ProductThumbnail extends StatelessWidget {
             borderRadius: const BorderRadius.all(Radius.circular(10)),
           ),
           margin: isDesktop
-              ? const EdgeInsets.only(left: 12, right: 12, bottom: 16)
-              : const EdgeInsets.only(left: 16),
+              ? const EdgeInsetsDirectional.only(start: 12, end: 12, bottom: 16)
+              : const EdgeInsetsDirectional.only(start: 16),
         ),
       ),
     );

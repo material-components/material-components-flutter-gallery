@@ -23,7 +23,7 @@ class DesktopProductCardColumn extends StatelessWidget {
   const DesktopProductCardColumn({
     @required this.columnCount,
     @required this.currentColumn,
-    @required this.alignToRight,
+    @required this.alignToEnd,
     @required this.startLarge,
     @required this.products,
   });
@@ -32,7 +32,7 @@ class DesktopProductCardColumn extends StatelessWidget {
   final int currentColumn;
   final List<Product> products;
 
-  final bool alignToRight;
+  final bool alignToEnd;
   final bool startLarge;
 
   @override
@@ -47,7 +47,7 @@ class DesktopProductCardColumn extends StatelessWidget {
         width: 186,
         child: Column(
           crossAxisAlignment:
-              alignToRight ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+              alignToEnd ? CrossAxisAlignment.end : CrossAxisAlignment.start,
           children: [
             if (currentColumn % 2 == 1) Container(height: 84),
             ...List<Widget>.generate(currentColumnWidgetCount, (index) {

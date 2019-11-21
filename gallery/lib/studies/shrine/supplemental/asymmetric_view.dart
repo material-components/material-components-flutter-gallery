@@ -87,7 +87,7 @@ class MobileAsymmetricView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       scrollDirection: Axis.horizontal,
-      padding: const EdgeInsets.fromLTRB(0, 34, 16, 44),
+      padding: const EdgeInsetsDirectional.fromSTEB(0, 34, 16, 44),
       children: _buildColumns(context),
       physics: const AlwaysScrollableScrollPhysics(),
     );
@@ -119,13 +119,13 @@ class DesktopAsymmetricView extends StatelessWidget {
 
     final List<DesktopProductCardColumn> productCardColumns =
         List<DesktopProductCardColumn>.generate(columnCount, (currentColumn) {
-      final bool alignToRight =
+      final bool alignToEnd =
           (currentColumn % 2 == 1) || (currentColumn == columnCount - 1);
       final bool startLarge = (currentColumn % 2 == 1);
       return DesktopProductCardColumn(
         columnCount: columnCount,
         currentColumn: currentColumn,
-        alignToRight: alignToRight,
+        alignToEnd: alignToEnd,
         startLarge: startLarge,
         products: products,
       );

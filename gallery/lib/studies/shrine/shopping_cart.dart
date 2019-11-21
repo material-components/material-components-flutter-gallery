@@ -22,7 +22,7 @@ import 'package:gallery/studies/shrine/model/app_state_model.dart';
 import 'package:gallery/studies/shrine/model/product.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 
-const _leftColumnWidth = 60.0;
+const _startColumnWidth = 60.0;
 
 class ShoppingCartPage extends StatefulWidget {
   @override
@@ -61,7 +61,7 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                       Row(
                         children: [
                           SizedBox(
-                            width: _leftColumnWidth,
+                            width: _startColumnWidth,
                             child: IconButton(
                               icon: const Icon(Icons.keyboard_arrow_down),
                               onPressed: () =>
@@ -89,10 +89,10 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                       const SizedBox(height: 100),
                     ],
                   ),
-                  Positioned(
+                  PositionedDirectional(
                     bottom: 16,
-                    left: 16,
-                    right: 16,
+                    start: 16,
+                    end: 16,
                     child: RaisedButton(
                       shape: const BeveledRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(7)),
@@ -139,10 +139,10 @@ class ShoppingCartSummary extends StatelessWidget {
 
     return Row(
       children: [
-        const SizedBox(width: _leftColumnWidth),
+        const SizedBox(width: _startColumnWidth),
         Expanded(
           child: Padding(
-            padding: const EdgeInsets.only(right: 16),
+            padding: const EdgeInsetsDirectional.only(end: 16),
             child: Column(
               children: [
                 Row(
@@ -238,7 +238,7 @@ class ShoppingCartRow extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            width: _leftColumnWidth,
+            width: _startColumnWidth,
             child: IconButton(
               icon: const Icon(Icons.remove_circle_outline),
               onPressed: onPressed,
@@ -246,7 +246,7 @@ class ShoppingCartRow extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.only(right: 16),
+              padding: const EdgeInsetsDirectional.only(end: 16),
               child: Column(
                 children: [
                   Row(

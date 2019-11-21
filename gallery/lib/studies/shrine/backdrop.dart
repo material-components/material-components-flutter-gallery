@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
@@ -37,7 +39,8 @@ class _FrontLayer extends StatelessWidget {
     return Material(
       elevation: 16,
       shape: const BeveledRectangleBorder(
-        borderRadius: BorderRadius.only(topLeft: Radius.circular(46)),
+        borderRadius:
+            BorderRadiusDirectional.only(topStart: Radius.circular(46)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -83,6 +86,21 @@ class _BackdropTitle extends AnimatedWidget {
       curve: const Interval(0, 0.78),
     );
 
+    final double textDirectionScalar =
+        Directionality.of(context) == TextDirection.ltr ? 1 : -1;
+
+    final slantedMenuIcon =
+        ImageIcon(AssetImage('packages/shrine_images/slanted_menu.png'));
+
+    final directionalSlantedMenuIcon =
+        Directionality.of(context) == TextDirection.ltr
+            ? slantedMenuIcon
+            : Transform(
+                alignment: Alignment.center,
+                transform: Matrix4.rotationY(pi),
+                child: slantedMenuIcon,
+              );
+
     return DefaultTextStyle(
       style: Theme.of(context).primaryTextTheme.title,
       softWrap: false,
@@ -92,18 +110,17 @@ class _BackdropTitle extends AnimatedWidget {
         SizedBox(
           width: 72,
           child: IconButton(
-            padding: const EdgeInsets.only(right: 8),
+            padding: const EdgeInsetsDirectional.only(end: 8),
             onPressed: onPress,
             icon: Stack(children: [
               Opacity(
                 opacity: animation.value,
-                child: const ImageIcon(
-                    AssetImage('packages/shrine_images/slanted_menu.png')),
+                child: directionalSlantedMenuIcon,
               ),
               FractionalTranslation(
                 translation: Tween<Offset>(
                   begin: Offset.zero,
-                  end: const Offset(1, 0),
+                  end: Offset(1 * textDirectionScalar, 0),
                 ).evaluate(animation),
                 child: const ImageIcon(
                     AssetImage('packages/shrine_images/diamond.png')),
@@ -123,7 +140,7 @@ class _BackdropTitle extends AnimatedWidget {
               child: FractionalTranslation(
                 translation: Tween<Offset>(
                   begin: Offset.zero,
-                  end: const Offset(0.5, 0),
+                  end: Offset(0.5 * textDirectionScalar, 0),
                 ).evaluate(animation),
                 child: backTitle,
               ),
@@ -135,7 +152,7 @@ class _BackdropTitle extends AnimatedWidget {
               ).value,
               child: FractionalTranslation(
                 translation: Tween<Offset>(
-                  begin: const Offset(-0.25, 0),
+                  begin: Offset(-0.25 * textDirectionScalar, 0),
                   end: Offset.zero,
                 ).evaluate(animation),
                 child: frontTitle,
@@ -334,7 +351,9 @@ class DesktopBackdrop extends StatelessWidget {
       children: [
         backLayer,
         Padding(
-          padding: const EdgeInsets.only(left: desktopCategoryMenuPageWidth),
+          padding: const EdgeInsetsDirectional.only(
+            start: desktopCategoryMenuPageWidth,
+          ),
           child: Material(
             elevation: 16,
             color: Colors.white,

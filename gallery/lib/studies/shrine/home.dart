@@ -59,7 +59,9 @@ class HomePage extends StatelessWidget {
           scrim,
           Align(
             child: expandingBottomSheet,
-            alignment: isDesktop ? Alignment.topRight : Alignment.bottomRight,
+            alignment: isDesktop
+                ? AlignmentDirectional.topEnd
+                : AlignmentDirectional.bottomEnd,
           ),
         ],
       ),
