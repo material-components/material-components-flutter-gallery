@@ -641,6 +641,18 @@
       }
     }
   },
+  "demoTabsTitle": "Tabs",
+  "@demoTabsTitle": {
+    "description": "Title for tabs demo."
+  },
+  "demoTabsSubtitle": "Tabs with independently scrollable views",
+  "@demoTabsSubtitle": {
+    "description": "Subtitle for tabs demo."
+  },
+  "demoTabsDescription": "Tabs organize content across different screens, data sets, and other interactions.",
+  "@demoTabsDescription": {
+    "description": "Description for tabs demo."
+  },
   "demoBottomTextFieldsTitle": "Text fields",
   "@demoBottomTextFieldsTitle": {
     "description": "Title for text fields demo."

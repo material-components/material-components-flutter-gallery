@@ -14,6 +14,7 @@ import 'package:gallery/demos/material/bottom_sheet_demo.dart';
 import 'package:gallery/demos/material/button_demo.dart';
 import 'package:gallery/demos/material/chip_demo.dart';
 import 'package:gallery/demos/material/dialog_demo.dart';
+import 'package:gallery/demos/material/tabs_demo.dart';
 import 'package:gallery/demos/material/text_field_demo.dart';
 import 'package:gallery/demos/reference/colors_demo.dart';
 import 'package:gallery/demos/reference/typography_demo.dart';
@@ -226,6 +227,20 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/widgets/PageRoute/fullscreenDialog.html',
           buildRoute: (_) => DialogDemo(type: DialogDemoType.fullscreen),
+        ),
+      ],
+    ),
+    GalleryDemo(
+      title: GalleryLocalizations.of(context).demoTabsTitle,
+      icon: GalleryIcons.tabs,
+      subtitle: GalleryLocalizations.of(context).demoTabsSubtitle,
+      configurations: [
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoTabsTitle,
+          description: GalleryLocalizations.of(context).demoTabsDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/TabBarView-class.html',
+          buildRoute: (context) => TabsDemo(),
         ),
       ],
     ),

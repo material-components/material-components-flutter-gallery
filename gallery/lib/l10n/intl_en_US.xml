@@ -622,6 +622,18 @@
     description="Generic item placeholder."
     >Item {value}</string>
   <string
+    name="demoTabsTitle"
+    description="Title for tabs demo."
+    >Tabs</string>
+  <string
+    name="demoTabsSubtitle"
+    description="Subtitle for tabs demo."
+    >Tabs with independently scrollable views</string>
+  <string
+    name="demoTabsDescription"
+    description="Description for tabs demo."
+    >Tabs organize content across different screens, data sets, and other interactions.</string>
+  <string
     name="demoBottomTextFieldsTitle"
     description="Title for text fields demo."
     >Text fields</string>

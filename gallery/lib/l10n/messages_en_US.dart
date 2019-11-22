@@ -340,6 +340,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Simple"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),

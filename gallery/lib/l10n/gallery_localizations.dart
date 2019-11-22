@@ -1413,6 +1413,28 @@ class GalleryLocalizations {
         desc: r'Title for the simple dialog component demo.');
   }
 
+  String get demoTabsDescription {
+    return Intl.message(
+        r'Tabs organize content across different screens, data sets, and other interactions.',
+        locale: _localeName,
+        name: 'demoTabsDescription',
+        desc: r'Description for tabs demo.');
+  }
+
+  String get demoTabsSubtitle {
+    return Intl.message(r'Tabs with independently scrollable views',
+        locale: _localeName,
+        name: 'demoTabsSubtitle',
+        desc: r'Subtitle for tabs demo.');
+  }
+
+  String get demoTabsTitle {
+    return Intl.message(r'Tabs',
+        locale: _localeName,
+        name: 'demoTabsTitle',
+        desc: r'Title for tabs demo.');
+  }
+
   String get demoTextFieldDescription {
     return Intl.message(
         r'Text fields allow users to enter text into a UI. They typically appear in forms and dialogs.',
