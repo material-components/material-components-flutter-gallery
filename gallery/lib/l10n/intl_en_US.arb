@@ -556,6 +556,18 @@
   "@demoCupertinoActionSheetDescription": {
     "description": "Description for the cupertino action sheet component demo."
   },
+  "demoCupertinoSegmentedControlTitle": "Segmented Control",
+  "@demoCupertinoSegmentedControlTitle": {
+    "description": "Title for the cupertino segmented control component demo."
+  },
+  "demoCupertinoSegmentedControlSubtitle": "iOS-style segmented control",
+  "@demoCupertinoSegmentedControlSubtitle": {
+    "description": "Subtitle for the cupertino segmented control component demo."
+  },
+  "demoCupertinoSegmentedControlDescription": "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected.",
+  "@demoCupertinoSegmentedControlDescription": {
+    "description": "Description for the cupertino segmented control component demo."
+  },
   "demoColorsTitle": "Colors",
   "@demoColorsTitle": {
     "description": "Title for the colors demo."

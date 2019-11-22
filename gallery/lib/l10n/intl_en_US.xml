@@ -542,6 +542,18 @@
     description="Description for the cupertino action sheet component demo."
     >An action sheet is a specific style of alert that presents the user with a set of two or more choices related to the current context. An action sheet can have a title, an additional message, and a list of actions.</string>
   <string
+    name="demoCupertinoSegmentedControlTitle"
+    description="Title for the cupertino segmented control component demo."
+    >Segmented Control</string>
+  <string
+    name="demoCupertinoSegmentedControlSubtitle"
+    description="Subtitle for the cupertino segmented control component demo."
+    >iOS-style segmented control</string>
+  <string
+    name="demoCupertinoSegmentedControlDescription"
+    description="Description for the cupertino segmented control component demo."
+    >Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected.</string>
+  <string
     name="demoColorsTitle"
     description="Title for the colors demo."
     >Colors</string>

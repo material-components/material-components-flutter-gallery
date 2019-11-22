@@ -291,6 +291,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("iOS-style buttons"),
         "demoCupertinoButtonsTitle":
             MessageLookupByLibrary.simpleMessage("Buttons"),
+        "demoCupertinoSegmentedControlDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+        "demoCupertinoSegmentedControlSubtitle":
+            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+        "demoCupertinoSegmentedControlTitle":
+            MessageLookupByLibrary.simpleMessage("Segmented Control"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Simple, alert, and fullscreen"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dialogs"),

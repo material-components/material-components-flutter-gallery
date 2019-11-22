@@ -1221,6 +1221,29 @@ class GalleryLocalizations {
         desc: r'Title for the cupertino buttons component demo.');
   }
 
+  String get demoCupertinoSegmentedControlDescription {
+    return Intl.message(
+        r'Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected.',
+        locale: _localeName,
+        name: 'demoCupertinoSegmentedControlDescription',
+        desc:
+            r'Description for the cupertino segmented control component demo.');
+  }
+
+  String get demoCupertinoSegmentedControlSubtitle {
+    return Intl.message(r'iOS-style segmented control',
+        locale: _localeName,
+        name: 'demoCupertinoSegmentedControlSubtitle',
+        desc: r'Subtitle for the cupertino segmented control component demo.');
+  }
+
+  String get demoCupertinoSegmentedControlTitle {
+    return Intl.message(r'Segmented Control',
+        locale: _localeName,
+        name: 'demoCupertinoSegmentedControlTitle',
+        desc: r'Title for the cupertino segmented control component demo.');
+  }
+
   String get demoDialogSubtitle {
     return Intl.message(r'Simple, alert, and fullscreen',
         locale: _localeName,
