@@ -109,12 +109,14 @@ class _RallyPieChartState extends State<RallyPieChart>
 
   @override
   Widget build(BuildContext context) {
-    return _AnimatedRallyPieChart(
-      animation: animation,
-      centerLabel: widget.heroLabel,
-      centerAmount: widget.heroAmount,
-      total: widget.wholeAmount,
-      segments: widget.segments,
+    return MergeSemantics(
+      child: _AnimatedRallyPieChart(
+        animation: animation,
+        centerLabel: widget.heroLabel,
+        centerAmount: widget.heroAmount,
+        total: widget.wholeAmount,
+        segments: widget.segments,
+      ),
     );
   }
 }

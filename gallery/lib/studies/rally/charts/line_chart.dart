@@ -4,7 +4,9 @@
 
 import 'package:intl/intl.dart' as intl;
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 
+import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/studies/rally/colors.dart';
 import 'package:gallery/studies/rally/data.dart';
 import 'package:gallery/studies/rally/formatters.dart';
@@ -20,9 +22,10 @@ class RallyLineChart extends StatelessWidget {
     return CustomPaint(
       painter: RallyLineChartPainter(
         dateFormat: dateFormatMonthYear(context),
+        numberFormat: usdWithSignFormat(context),
         events: events,
         labelStyle: Theme.of(context).textTheme.body1,
-        textDirection: Directionality.of(context),
+        textDirection: GalleryOptions.of(context).textDirection(),
       ),
     );
   }
@@ -31,6 +34,7 @@ class RallyLineChart extends StatelessWidget {
 class RallyLineChartPainter extends CustomPainter {
   RallyLineChartPainter({
     @required this.dateFormat,
+    @required this.numberFormat,
     @required this.events,
     @required this.labelStyle,
     @required this.textDirection,
@@ -44,6 +48,9 @@ class RallyLineChartPainter extends CustomPainter {
 
   // The format for the dates.
   final intl.DateFormat dateFormat;
+
+  // The currency format.
+  final intl.NumberFormat numberFormat;
 
   // Events to plot on the line as points.
   final List<DetailedEventData> events;
@@ -61,7 +68,7 @@ class RallyLineChartPainter extends CustomPainter {
   // Ranges uses to lerp the pixel points.
   // This is hardcoded to reflect the dummy data, but would be dynamic in a real
   // app.
-  final double maxAmount = 3000; // minAmount is assumed to be 0
+  final double maxAmount = 2000; // minAmount is assumed to be 0
 
   // The number of milliseconds in a day. This is the inherit period fot the
   // points in this line.
@@ -98,42 +105,98 @@ class RallyLineChartPainter extends CustomPainter {
   @override
   bool shouldRepaint(CustomPainter oldDelegate) => false;
 
+  @override
+  SemanticsBuilderCallback get semanticsBuilder {
+    return (size) {
+      final amounts = _amountsPerDay(numDays);
+
+      // We divide the graph and the amounts into [numGroups] groups, with
+      // [numItemsPerGroup] amounts per group.
+      final numGroups = 10;
+      final numItemsPerGroup = amounts.length ~/ numGroups;
+
+      // For each group we calculate the median value.
+      final medians = List.generate(
+        numGroups,
+        (i) {
+          final middleIndex = i * numItemsPerGroup + numItemsPerGroup ~/ 2;
+          if (numItemsPerGroup.isEven) {
+            return (amounts[middleIndex] + amounts[middleIndex + 1]) / 2;
+          } else {
+            return amounts[middleIndex];
+          }
+        },
+      );
+
+      // Return a list of [CustomPainterSemantics] with the length of
+      // [numGroups], all have the same width with the median amount as label.
+      return List.generate(numGroups, (i) {
+        return CustomPainterSemantics(
+          rect: Offset((i / numGroups) * size.width, 0) &
+              Size(size.width / numGroups, size.height),
+          properties: SemanticsProperties(
+            label: numberFormat.format(medians[i]),
+            textDirection: textDirection,
+          ),
+        );
+      });
+    };
+  }
+
+  /// Returns the amount of money in the account for the [numDays] given
+  /// from the [startDate].
+  List<double> _amountsPerDay(int numDays) {
+    // Arbitrary value for the first point. In a real app, a wider range of
+    // points would be used that go beyond the boundaries of the screen.
+    double lastAmount = 600;
+
+    // Align the points with equal deltas (1 day) as a cumulative sum.
+    int startMillis = startDate.millisecondsSinceEpoch;
+
+    final amounts = <double>[];
+    for (var i = 0; i < numDays; i++) {
+      final endMillis = startMillis + millisInDay * 1;
+      final filteredEvents = events.where(
+        (e) {
+          return startMillis <= e.date.millisecondsSinceEpoch &&
+              e.date.millisecondsSinceEpoch < endMillis;
+        },
+      ).toList();
+      lastAmount += sumOf<DetailedEventData>(filteredEvents, (e) => e.amount);
+      amounts.add(lastAmount);
+      startMillis = endMillis;
+    }
+    return amounts;
+  }
+
   void _drawLine(Canvas canvas, Rect rect) {
     final Paint linePaint = Paint()
       ..color = RallyColors.accountColor(2)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 2;
 
-    // Arbitrary value for the first point. In a real app, a wider range of
-    // points would be used that go beyond the boundaries of the screen.
-    double lastAmount = 800;
-
     // Try changing this value between 1, 7, 15, etc.
-    const smoothing = 7;
+    const smoothing = 1;
 
-    // Align the points with equal deltas (1 day) as a cumulative sum.
-    int startMillis = startDate.millisecondsSinceEpoch;
-    final points = <Offset>[
-      Offset(0, (maxAmount - lastAmount) / maxAmount * rect.height)
-    ];
-    for (int i = 0; i < numDays + smoothing; i++) {
-      final endMillis = startMillis + millisInDay * 1;
-      final filteredEvents = events.where(
-        (e) {
-          return startMillis <= e.date.millisecondsSinceEpoch &&
-              e.date.millisecondsSinceEpoch <= endMillis;
-        },
-      ).toList();
-      lastAmount += sumOf<DetailedEventData>(filteredEvents, (e) => e.amount);
+    final amounts = _amountsPerDay(numDays + smoothing);
+    final points = <Offset>[];
+    for (int i = 0; i < amounts.length; i++) {
       final x = i / numDays * rect.width;
-      final y = (maxAmount - lastAmount) / maxAmount * rect.height;
+      final y = (maxAmount - amounts[i]) / maxAmount * rect.height;
       points.add(Offset(x, y));
-      startMillis = endMillis;
     }
+
+    // Add last point of the graph to make sure we take up the full width.
+    points.add(
+      Offset(
+        rect.width,
+        (maxAmount - amounts[numDays - 1]) / maxAmount * rect.height,
+      ),
+    );
 
     final path = Path();
     path.moveTo(points[0].dx, points[0].dy);
-    for (int i = 1; i < points.length - smoothing; i += smoothing) {
+    for (int i = 1; i < numDays - smoothing + 2; i += smoothing) {
       final x1 = points[i].dx;
       final y1 = points[i].dy;
       final x2 = (x1 + points[i + smoothing].dx) / 2;
@@ -174,7 +237,7 @@ class RallyLineChartPainter extends CustomPainter {
     // independent Unicode mapping and thus only works in some languages.
     final leftLabel = TextPainter(
       text: TextSpan(
-        text: dateFormat.format(DateTime(2019, 8)).toUpperCase(),
+        text: dateFormat.format(startDate).toUpperCase(),
         style: unselectedLabelStyle,
       ),
       textDirection: textDirection,
@@ -184,7 +247,9 @@ class RallyLineChartPainter extends CustomPainter {
 
     final centerLabel = TextPainter(
       text: TextSpan(
-        text: dateFormat.format(DateTime(2019, 9)).toUpperCase(),
+        text: dateFormat
+            .format(DateTime(startDate.year, startDate.month + 1))
+            .toUpperCase(),
         style: selectedLabelStyle,
       ),
       textDirection: textDirection,
@@ -196,7 +261,9 @@ class RallyLineChartPainter extends CustomPainter {
 
     final rightLabel = TextPainter(
       text: TextSpan(
-        text: dateFormat.format(DateTime(2019, 10)).toUpperCase(),
+        text: dateFormat
+            .format(DateTime(startDate.year, startDate.month + 2))
+            .toUpperCase(),
         style: unselectedLabelStyle,
       ),
       textDirection: textDirection,

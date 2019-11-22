@@ -23,7 +23,7 @@ class AccountsView extends StatelessWidget {
       heroAmount: balanceTotal,
       segments: buildSegmentsFromAccountItems(items),
       wholeAmount: balanceTotal,
-      financialEntityCards: buildAccountDataListViews(items),
+      financialEntityCards: buildAccountDataListViews(items, context),
     );
     if (isDisplayDesktop(context)) {
       return Row(

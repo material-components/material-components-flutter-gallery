@@ -5,7 +5,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
+import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/studies/rally/charts/line_chart.dart';
 import 'package:gallery/studies/rally/charts/pie_chart.dart';
@@ -77,6 +79,7 @@ class FinancialEntityCategoryView extends StatelessWidget {
     @required this.indicatorFraction,
     @required this.title,
     @required this.subtitle,
+    @required this.semanticsLabel,
     @required this.amount,
     @required this.suffix,
   });
@@ -85,73 +88,81 @@ class FinancialEntityCategoryView extends StatelessWidget {
   final double indicatorFraction;
   final String title;
   final String subtitle;
-  final double amount;
+  final String semanticsLabel;
+  final String amount;
   final Widget suffix;
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute<FinancialEntityCategoryDetailsPage>(
-            builder: (context) => FinancialEntityCategoryDetailsPage(),
-          ),
-        );
-      },
-      child: SizedBox(
-        height: 68,
-        child: Column(
-          children: [
-            Expanded(
-              child: Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 12, right: 12),
-                    child: VerticalFractionBar(
-                      color: indicatorColor,
-                      fraction: indicatorFraction,
+    return Semantics.fromProperties(
+      properties: SemanticsProperties(
+        button: true,
+        label: semanticsLabel,
+      ),
+      excludeSemantics: true,
+      child: FlatButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute<FinancialEntityCategoryDetailsPage>(
+              builder: (context) => FinancialEntityCategoryDetailsPage(),
+            ),
+          );
+        },
+        child: SizedBox(
+          height: 68,
+          child: Column(
+            children: [
+              Expanded(
+                child: Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 12, right: 12),
+                      child: VerticalFractionBar(
+                        color: indicatorColor,
+                        fraction: indicatorFraction,
+                      ),
                     ),
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        title,
-                        style: Theme.of(context)
-                            .textTheme
-                            .body1
-                            .copyWith(fontSize: 16),
-                      ),
-                      Text(
-                        subtitle,
-                        style: Theme.of(context)
-                            .textTheme
-                            .body1
-                            .copyWith(color: RallyColors.gray60),
-                      ),
-                    ],
-                  ),
-                  const Spacer(),
-                  Text(
-                    usdWithSignFormat(context).format(amount),
-                    style: Theme.of(context)
-                        .textTheme
-                        .body2
-                        .copyWith(fontSize: 20, color: RallyColors.gray),
-                  ),
-                  SizedBox(width: 32, child: suffix),
-                ],
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          title,
+                          style: Theme.of(context)
+                              .textTheme
+                              .body1
+                              .copyWith(fontSize: 16),
+                        ),
+                        Text(
+                          subtitle,
+                          style: Theme.of(context)
+                              .textTheme
+                              .body1
+                              .copyWith(color: RallyColors.gray60),
+                        ),
+                      ],
+                    ),
+                    const Spacer(),
+                    Text(
+                      amount,
+                      style: Theme.of(context)
+                          .textTheme
+                          .body2
+                          .copyWith(fontSize: 20, color: RallyColors.gray),
+                    ),
+                    SizedBox(width: 32, child: suffix),
+                  ],
+                ),
               ),
-            ),
-            const Divider(
-              height: 1,
-              indent: 16,
-              endIndent: 16,
-              color: Color(0xAA282828),
-            ),
-          ],
+              const Divider(
+                height: 1,
+                indent: 16,
+                endIndent: 16,
+                color: Color(0xAA282828),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -180,39 +191,55 @@ class FinancialEntityCategoryModel {
 FinancialEntityCategoryView buildFinancialEntityFromAccountData(
   AccountData model,
   int accountDataIndex,
+  BuildContext context,
 ) {
+  final amount = usdWithSignFormat(context).format(model.primaryAmount);
+  final shortAccountNumber = model.accountNumber.substring(6);
   return FinancialEntityCategoryView(
     suffix: const Icon(Icons.chevron_right, color: Colors.grey),
     title: model.name,
-    subtitle: '• • • • • • ${model.accountNumber.substring(6)}',
+    subtitle: '• • • • • • $shortAccountNumber',
+    semanticsLabel: GalleryLocalizations.of(context).rallyAccountAmount(
+      model.name,
+      shortAccountNumber,
+      amount,
+    ),
     indicatorColor: RallyColors.accountColor(accountDataIndex),
     indicatorFraction: 1,
-    amount: model.primaryAmount,
+    amount: amount,
   );
 }
 
 FinancialEntityCategoryView buildFinancialEntityFromBillData(
   BillData model,
   int billDataIndex,
+  BuildContext context,
 ) {
+  final amount = usdWithSignFormat(context).format(model.primaryAmount);
   return FinancialEntityCategoryView(
     suffix: const Icon(Icons.chevron_right, color: Colors.grey),
     title: model.name,
     subtitle: model.dueDate,
+    semanticsLabel: GalleryLocalizations.of(context).rallyBillAmount(
+      model.name,
+      model.dueDate,
+      amount,
+    ),
     indicatorColor: RallyColors.billColor(billDataIndex),
     indicatorFraction: 1,
-    amount: model.primaryAmount,
+    amount: amount,
   );
 }
 
 FinancialEntityCategoryView buildFinancialEntityFromBudgetData(
-  BudgetData item,
+  BudgetData model,
   int budgetDataIndex,
   BuildContext context,
 ) {
-  final String amountUsed = usdWithSignFormat(context).format(item.amountUsed);
-  final String primaryAmount =
-      usdWithSignFormat(context).format(item.primaryAmount);
+  final amountUsed = usdWithSignFormat(context).format(model.amountUsed);
+  final primaryAmount = usdWithSignFormat(context).format(model.primaryAmount);
+  final amount =
+      usdWithSignFormat(context).format(model.primaryAmount - model.amountUsed);
 
   return FinancialEntityCategoryView(
     suffix: Text(
@@ -222,31 +249,44 @@ FinancialEntityCategoryView buildFinancialEntityFromBudgetData(
           .body1
           .copyWith(color: RallyColors.gray60, fontSize: 10),
     ),
-    title: item.name,
+    title: model.name,
     subtitle: amountUsed + ' / ' + primaryAmount,
+    semanticsLabel: GalleryLocalizations.of(context).rallyBudgetAmount(
+      model.name,
+      model.amountUsed,
+      model.primaryAmount,
+      amount,
+    ),
     indicatorColor: RallyColors.budgetColor(budgetDataIndex),
-    indicatorFraction: item.amountUsed / item.primaryAmount,
-    amount: item.primaryAmount - item.amountUsed,
+    indicatorFraction: model.amountUsed / model.primaryAmount,
+    amount: amount,
   );
 }
 
 List<FinancialEntityCategoryView> buildAccountDataListViews(
-    List<AccountData> items) {
+  List<AccountData> items,
+  BuildContext context,
+) {
   return List<FinancialEntityCategoryView>.generate(
     items.length,
-    (i) => buildFinancialEntityFromAccountData(items[i], i),
+    (i) => buildFinancialEntityFromAccountData(items[i], i, context),
   );
 }
 
-List<FinancialEntityCategoryView> buildBillDataListViews(List<BillData> items) {
+List<FinancialEntityCategoryView> buildBillDataListViews(
+  List<BillData> items,
+  BuildContext context,
+) {
   return List<FinancialEntityCategoryView>.generate(
     items.length,
-    (i) => buildFinancialEntityFromBillData(items[i], i),
+    (i) => buildFinancialEntityFromBillData(items[i], i, context),
   );
 }
 
 List<FinancialEntityCategoryView> buildBudgetDataListViews(
-    List<BudgetData> items, BuildContext context) {
+  List<BudgetData> items,
+  BuildContext context,
+) {
   return <FinancialEntityCategoryView>[
     for (int i = 0; i < items.length; i++)
       buildFinancialEntityFromBudgetData(items[i], i, context)
@@ -262,7 +302,7 @@ class FinancialEntityCategoryDetailsPage extends StatelessWidget {
     final List<_DetailedEventCard> cards = items.map((detailedEventData) {
       return _DetailedEventCard(
         title: detailedEventData.title,
-        subtitle: shortDateFormat(context).format(detailedEventData.date),
+        date: detailedEventData.date,
         amount: detailedEventData.amount,
       );
     }).toList();
@@ -295,17 +335,18 @@ class FinancialEntityCategoryDetailsPage extends StatelessWidget {
 class _DetailedEventCard extends StatelessWidget {
   const _DetailedEventCard({
     @required this.title,
-    @required this.subtitle,
+    @required this.date,
     @required this.amount,
   });
 
   final String title;
-  final String subtitle;
+  final DateTime date;
   final double amount;
 
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+    final textDirection = GalleryOptions.of(context).textDirection();
     return FlatButton(
       onPressed: () {},
       child: SizedBox(
@@ -315,8 +356,10 @@ class _DetailedEventCard extends StatelessWidget {
             SizedBox(
               height: 67,
               child: Row(
+                textDirection: textDirection,
                 children: [
                   Column(
+                    textDirection: textDirection,
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -325,7 +368,8 @@ class _DetailedEventCard extends StatelessWidget {
                         style: textTheme.body1.copyWith(fontSize: 16),
                       ),
                       Text(
-                        subtitle,
+                        shortDateFormat(context).format(date),
+                        semanticsLabel: longDateFormat(context).format(date),
                         style:
                             textTheme.body1.copyWith(color: RallyColors.gray60),
                       )

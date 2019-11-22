@@ -39,6 +39,9 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "You selected: \"${value}\"";
 
+  static m17(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
+
   static m8(amount) => "You’ve spent ${amount} in ATM fees this month";
 
   static m9(percent) =>
@@ -51,6 +54,12 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m12(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+
+  static m18(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m19(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
 
   static m13(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
@@ -431,6 +440,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Categories"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Gallery"),
+        "rallyAccountAmount": m17,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Car Savings"),
         "rallyAccountDataChecking":
@@ -459,8 +469,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAlertsMessageHeadsUpShopping": m10,
         "rallyAlertsMessageSpentOnRestaurants": m11,
         "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyBillAmount": m18,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+        "rallyBudgetAmount": m19,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Clothing"),
         "rallyBudgetCategoryCoffeeShops":
@@ -486,6 +498,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
         "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Find ATMs"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),

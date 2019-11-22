@@ -135,11 +135,13 @@ class _TopBar extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         spacing,
-        SizedBox(
-          height: 80,
-          child: Image.asset(
-            'logo.png',
-            package: 'rally_assets',
+        ExcludeSemantics(
+          child: SizedBox(
+            height: 80,
+            child: Image.asset(
+              'logo.png',
+              package: 'rally_assets',
+            ),
           ),
         ),
         spacing,
@@ -174,9 +176,11 @@ class _SmallLogo extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 64),
       child: SizedBox(
         height: 160,
-        child: Image.asset(
-          'logo.png',
-          package: 'rally_assets',
+        child: ExcludeSemantics(
+          child: Image.asset(
+            'logo.png',
+            package: 'rally_assets',
+          ),
         ),
       ),
     );
@@ -255,9 +259,11 @@ class _ThumbButton extends StatelessWidget {
         onTap: onTap,
         child: SizedBox(
           height: 120,
-          child: Image.asset(
-            'thumb.png',
-            package: 'rally_assets',
+          child: ExcludeSemantics(
+            child: Image.asset(
+              'thumb.png',
+              package: 'rally_assets',
+            ),
           ),
         ),
       ),

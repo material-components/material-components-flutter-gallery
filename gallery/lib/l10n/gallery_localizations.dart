@@ -1801,6 +1801,16 @@ class GalleryLocalizations {
         desc: r'Header title on home screen for Gallery section.');
   }
 
+  String rallyAccountAmount(
+      Object accountName, Object accountNumber, Object amount) {
+    return Intl.message(r'$accountName account $accountNumber with $amount.',
+        locale: _localeName,
+        name: 'rallyAccountAmount',
+        desc:
+            r'Semantics label for row with bank account name (for example checking) and its bank account number (for example 123), with how much money is deposited in it (for example $12).',
+        args: <Object>[accountName, accountNumber, amount]);
+  }
+
   String get rallyAccountDataCarSavings {
     return Intl.message(r'Car Savings',
         locale: _localeName,
@@ -1951,6 +1961,15 @@ class GalleryLocalizations {
             'Increase your potential tax deduction! Assign categories to $count unassigned transactions.');
   }
 
+  String rallyBillAmount(Object billName, Object date, Object amount) {
+    return Intl.message(r'$billName bill due $date for $amount.',
+        locale: _localeName,
+        name: 'rallyBillAmount',
+        desc:
+            r'Semantics label for row with a bill (example name is rent), when the bill is due (1/12/2019 for example) and for how much money ($12).',
+        args: <Object>[billName, date, amount]);
+  }
+
   String get rallyBills {
     return Intl.message(r'Bills',
         locale: _localeName,
@@ -1967,6 +1986,16 @@ class GalleryLocalizations {
             r'bills due'
             "'"
             r' page, a dollar value is displayed next to it.');
+  }
+
+  String rallyBudgetAmount(Object budgetName, Object amountUsed,
+      Object amountTotal, Object amountLeft) {
+    return Intl.message(
+        r'$budgetName budget with $amountUsed used of $amountTotal, $amountLeft left',
+        locale: _localeName,
+        name: 'rallyBudgetAmount',
+        desc: r'Semantics label for row with a budget (housing budget for example), with how much is used of the budget (for example $5), the total budget (for example $100) and the amount left in the budget (for example $95).',
+        args: <Object>[budgetName, amountUsed, amountTotal, amountLeft]);
   }
 
   String get rallyBudgetCategoryClothing {
@@ -2095,6 +2124,28 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'rallySeeAll',
         desc: r'Link text for button to see all data for category.');
+  }
+
+  String get rallySeeAllAccounts {
+    return Intl.message(r'See all accounts',
+        locale: _localeName,
+        name: 'rallySeeAllAccounts',
+        desc:
+            r'Semantics label for button to see all accounts. Accounts refer to bank account here.');
+  }
+
+  String get rallySeeAllBills {
+    return Intl.message(r'See all bills',
+        locale: _localeName,
+        name: 'rallySeeAllBills',
+        desc: r'Semantics label for button to see all bills.');
+  }
+
+  String get rallySeeAllBudgets {
+    return Intl.message(r'See all budgets',
+        locale: _localeName,
+        name: 'rallySeeAllBudgets',
+        desc: r'Semantics label for button to see all budgets.');
   }
 
   String get rallySettingsFindAtms {

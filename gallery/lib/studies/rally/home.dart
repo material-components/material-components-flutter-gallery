@@ -48,7 +48,7 @@ class _HomePageState extends State<HomePage>
     Widget tabBarView;
     if (isDesktop) {
       final isTextDirectionRtl =
-          Directionality.of(context) == TextDirection.rtl;
+          GalleryOptions.of(context).textDirection() == TextDirection.rtl;
       final verticalRotation =
           isTextDirectionRtl ? turnsToRotateLeft : turnsToRotateRight;
       final revertVerticalRotation =
@@ -62,11 +62,13 @@ class _HomePageState extends State<HomePage>
             child: Column(
               children: [
                 const SizedBox(height: 24),
-                SizedBox(
-                  height: 80,
-                  child: Image.asset(
-                    'logo.png',
-                    package: 'rally_assets',
+                ExcludeSemantics(
+                  child: SizedBox(
+                    height: 80,
+                    child: Image.asset(
+                      'logo.png',
+                      package: 'rally_assets',
+                    ),
                   ),
                 ),
                 const SizedBox(height: 24),
@@ -239,7 +241,7 @@ class _RallyTab extends StatefulWidget {
     this.isVertical,
   })  : titleText = Text(title, style: theme.textTheme.button),
         isExpanded = tabController.index == tabIndex,
-        icon = Icon(iconData);
+        icon = Icon(iconData, semanticLabel: title);
 
   final Text titleText;
   final Icon icon;
@@ -295,7 +297,7 @@ class _RallyTabState extends State<_RallyTab>
           const SizedBox(height: 12),
           FadeTransition(
             child: SizeTransition(
-              child: Center(child: widget.titleText),
+              child: Center(child: ExcludeSemantics(child: widget.titleText)),
               axis: Axis.vertical,
               axisAlignment: -1,
               sizeFactor: _titleSizeAnimation,
@@ -330,7 +332,7 @@ class _RallyTabState extends State<_RallyTab>
             child: SizeTransition(
               child: SizedBox(
                 width: unitWidth * expandedTitleWidthMultiplier,
-                child: Center(child: widget.titleText),
+                child: Center(child: ExcludeSemantics(child: widget.titleText)),
               ),
               axis: Axis.horizontal,
               axisAlignment: -1,

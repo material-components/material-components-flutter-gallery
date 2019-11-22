@@ -293,24 +293,24 @@ class DummyDataService {
       AlertData(
         message: GalleryLocalizations.of(context)
             .rallyAlertsMessageHeadsUpShopping(
-                percentFormat(context).format(90)),
+                percentFormat(context, decimalDigits: 0).format(0.9)),
         iconData: Icons.sort,
       ),
       AlertData(
         message: GalleryLocalizations.of(context)
             .rallyAlertsMessageSpentOnRestaurants(
-                usdWithSignFormat(context).format(120)),
+                usdWithSignFormat(context, decimalDigits: 0).format(120)),
         iconData: Icons.sort,
       ),
       AlertData(
-        message: GalleryLocalizations.of(context)
-            .rallyAlertsMessageATMFees(usdWithSignFormat(context).format(24)),
+        message: GalleryLocalizations.of(context).rallyAlertsMessageATMFees(
+            usdWithSignFormat(context, decimalDigits: 0).format(24)),
         iconData: Icons.credit_card,
       ),
       AlertData(
         message: GalleryLocalizations.of(context)
             .rallyAlertsMessageCheckingAccount(
-                percentFormat(context).format(4)),
+                percentFormat(context, decimalDigits: 0).format(0.04)),
         iconData: Icons.attach_money,
       ),
       AlertData(

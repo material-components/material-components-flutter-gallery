@@ -30,7 +30,7 @@ class _BillsViewState extends State<BillsView>
           heroAmount: dueTotal,
           segments: buildSegmentsFromBillItems(items),
           wholeAmount: dueTotal,
-          financialEntityCards: buildBillDataListViews(items),
+          financialEntityCards: buildBillDataListViews(items, context),
         ),
       ),
     );

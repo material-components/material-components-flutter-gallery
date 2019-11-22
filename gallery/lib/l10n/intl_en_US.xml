@@ -230,6 +230,30 @@
     description="Alert message shown when you have unassigned transactions."
     >{count, plural, =1{Increase your potential tax deduction! Assign categories to 1 unassigned transaction.}other{Increase your potential tax deduction! Assign categories to {count} unassigned transactions.}}</string>
   <string
+    name="rallySeeAllAccounts"
+    description="Semantics label for button to see all accounts. Accounts refer to bank account here."
+    >See all accounts</string>
+  <string
+    name="rallySeeAllBills"
+    description="Semantics label for button to see all bills."
+    >See all bills</string>
+  <string
+    name="rallySeeAllBudgets"
+    description="Semantics label for button to see all budgets."
+    >See all budgets</string>
+  <string
+    name="rallyAccountAmount"
+    description="Semantics label for row with bank account name (for example checking) and its bank account number (for example 123), with how much money is deposited in it (for example $12)."
+    >{accountName} account {accountNumber} with {amount}.</string>
+  <string
+    name="rallyBillAmount"
+    description="Semantics label for row with a bill (example name is rent), when the bill is due (1/12/2019 for example) and for how much money ($12)."
+    >{billName} bill due {date} for {amount}.</string>
+  <string
+    name="rallyBudgetAmount"
+    description="Semantics label for row with a budget (housing budget for example), with how much is used of the budget (for example $5), the total budget (for example $100) and the amount left in the budget (for example $95)."
+    >{budgetName} budget with {amountUsed} used of {amountTotal}, {amountLeft} left</string>
+  <string
     name="craneDescription"
     description="Study description for Crane."
     >A personalized travel app</string>

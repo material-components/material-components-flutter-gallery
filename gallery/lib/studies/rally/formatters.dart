@@ -11,17 +11,29 @@ String locale(BuildContext context) =>
     GalleryOptions.of(context).locale.toString();
 
 /// Currency formatter for USD.
-NumberFormat usdWithSignFormat(BuildContext context) =>
-    NumberFormat.currency(locale: locale(context), name: '\$');
+NumberFormat usdWithSignFormat(BuildContext context, {int decimalDigits = 2}) {
+  return NumberFormat.currency(
+    locale: locale(context),
+    name: '\$',
+    decimalDigits: decimalDigits,
+  );
+}
 
 /// Percent formatter with two decimal points.
-NumberFormat percentFormat(BuildContext context) =>
-    NumberFormat.decimalPercentPattern(
-        locale: locale(context), decimalDigits: 2);
+NumberFormat percentFormat(BuildContext context, {int decimalDigits = 2}) {
+  return NumberFormat.decimalPercentPattern(
+    locale: locale(context),
+    decimalDigits: decimalDigits,
+  );
+}
 
 /// Date formatter with year / number month / day.
 DateFormat shortDateFormat(BuildContext context) =>
     DateFormat.yMd(locale(context));
+
+/// Date formatter with year / month / day.
+DateFormat longDateFormat(BuildContext context) =>
+    DateFormat.yMMMMd(locale(context));
 
 /// Date formatter with abbreviated month and day.
 DateFormat dateFormatAbbreviatedMonthDay(BuildContext context) =>

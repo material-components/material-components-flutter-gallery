@@ -23,9 +23,6 @@ class OverviewView extends StatefulWidget {
 class _OverviewViewState extends State<OverviewView> {
   @override
   Widget build(BuildContext context) {
-    final accountDataList = DummyDataService.getAccountDataList(context);
-    final billDataList = DummyDataService.getBillDataList(context);
-    final budgetDataList = DummyDataService.getBudgetDataList(context);
     final alerts = DummyDataService.getAlerts(context);
 
     if (isDisplayDesktop(context)) {
@@ -37,12 +34,7 @@ class _OverviewViewState extends State<OverviewView> {
             children: [
               Flexible(
                 flex: 7,
-                child: _OverviewGrid(
-                  spacing: 24,
-                  accountDataList: accountDataList,
-                  billDataList: billDataList,
-                  budgetDataList: budgetDataList,
-                ),
+                child: _OverviewGrid(spacing: 24),
               ),
               SizedBox(width: 24),
               Flexible(
@@ -64,12 +56,7 @@ class _OverviewViewState extends State<OverviewView> {
             children: [
               _AlertsView(alerts: alerts.sublist(0, 1)),
               SizedBox(height: 12),
-              _OverviewGrid(
-                spacing: 12,
-                accountDataList: accountDataList,
-                billDataList: billDataList,
-                budgetDataList: budgetDataList,
-              ),
+              _OverviewGrid(spacing: 12),
             ],
           ),
         ),
@@ -79,21 +66,16 @@ class _OverviewViewState extends State<OverviewView> {
 }
 
 class _OverviewGrid extends StatelessWidget {
-  const _OverviewGrid({
-    Key key,
-    @required this.spacing,
-    @required this.accountDataList,
-    @required this.billDataList,
-    @required this.budgetDataList,
-  }) : super(key: key);
+  const _OverviewGrid({Key key, @required this.spacing}) : super(key: key);
 
-  final List<AccountData> accountDataList;
-  final List<BillData> billDataList;
-  final List<BudgetData> budgetDataList;
   final double spacing;
 
   @override
   Widget build(BuildContext context) {
+    final accountDataList = DummyDataService.getAccountDataList(context);
+    final billDataList = DummyDataService.getBillDataList(context);
+    final budgetDataList = DummyDataService.getBudgetDataList(context);
+
     return LayoutBuilder(builder: (context, constraints) {
       final hasMultipleColumns =
           isDisplayDesktop(context) && constraints.maxWidth > 600;
@@ -109,7 +91,10 @@ class _OverviewGrid extends StatelessWidget {
             child: _FinancialView(
               title: GalleryLocalizations.of(context).rallyAccounts,
               total: sumAccountDataPrimaryAmount(accountDataList),
-              financialItemViews: buildAccountDataListViews(accountDataList),
+              financialItemViews:
+                  buildAccountDataListViews(accountDataList, context),
+              buttonSemanticsLabel:
+                  GalleryLocalizations.of(context).rallySeeAllAccounts,
             ),
           ),
           if (hasMultipleColumns) SizedBox(width: spacing),
@@ -118,7 +103,9 @@ class _OverviewGrid extends StatelessWidget {
             child: _FinancialView(
               title: GalleryLocalizations.of(context).rallyBills,
               total: sumBillDataPrimaryAmount(billDataList),
-              financialItemViews: buildBillDataListViews(billDataList),
+              financialItemViews: buildBillDataListViews(billDataList, context),
+              buttonSemanticsLabel:
+                  GalleryLocalizations.of(context).rallySeeAllBills,
             ),
           ),
           _FinancialView(
@@ -126,6 +113,8 @@ class _OverviewGrid extends StatelessWidget {
             total: sumBudgetDataPrimaryAmount(budgetDataList),
             financialItemViews:
                 buildBudgetDataListViews(budgetDataList, context),
+            buttonSemanticsLabel:
+                GalleryLocalizations.of(context).rallySeeAllBudgets,
           ),
         ],
       );
@@ -149,42 +138,24 @@ class _AlertsView extends StatelessWidget {
         children: [
           Container(
             padding: isDesktop ? EdgeInsets.symmetric(vertical: 16) : null,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(GalleryLocalizations.of(context).rallyAlerts),
-                if (!isDesktop)
-                  FlatButton(
-                    onPressed: () {},
-                    child: Text(GalleryLocalizations.of(context).rallySeeAll),
-                    textColor: Colors.white,
-                  ),
-              ],
+            child: MergeSemantics(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(GalleryLocalizations.of(context).rallyAlerts),
+                  if (!isDesktop)
+                    FlatButton(
+                      onPressed: () {},
+                      child: Text(GalleryLocalizations.of(context).rallySeeAll),
+                      textColor: Colors.white,
+                    ),
+                ],
+              ),
             ),
           ),
           for (AlertData alert in alerts) ...[
             Container(color: RallyColors.primaryBackground, height: 1),
-            Container(
-              padding: isDesktop ? EdgeInsets.symmetric(vertical: 8) : null,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Expanded(
-                    child: Text(alert.message),
-                  ),
-                  SizedBox(
-                    width: 100,
-                    child: Align(
-                      alignment: Alignment.topRight,
-                      child: IconButton(
-                        onPressed: () {},
-                        icon: Icon(alert.iconData, color: RallyColors.white60),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            _Alert(alert: alert),
           ]
         ],
       ),
@@ -192,10 +163,54 @@ class _AlertsView extends StatelessWidget {
   }
 }
 
+class _Alert extends StatelessWidget {
+  const _Alert({
+    Key key,
+    @required this.alert,
+  }) : super(key: key);
+
+  final AlertData alert;
+
+  @override
+  Widget build(BuildContext context) {
+    return MergeSemantics(
+      child: Container(
+        padding: isDisplayDesktop(context)
+            ? EdgeInsets.symmetric(vertical: 8)
+            : null,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: Text(alert.message),
+            ),
+            SizedBox(
+              width: 100,
+              child: Align(
+                alignment: Alignment.topRight,
+                child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(alert.iconData, color: RallyColors.white60),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class _FinancialView extends StatelessWidget {
-  const _FinancialView({this.title, this.total, this.financialItemViews});
+  const _FinancialView({
+    this.title,
+    this.total,
+    this.financialItemViews,
+    this.buttonSemanticsLabel,
+  });
 
   final String title;
+  final String buttonSemanticsLabel;
   final double total;
   final List<FinancialEntityCategoryView> financialItemViews;
 
@@ -207,23 +222,33 @@ class _FinancialView extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Padding(
-            padding: const EdgeInsets.all(16),
-            child: Text(title),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 16, right: 16),
-            child: Text(
-              usdWithSignFormat(context).format(total),
-              style: theme.textTheme.body2.copyWith(
-                fontSize: 44,
-                fontWeight: FontWeight.w600,
-              ),
+          MergeSemantics(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Text(title),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 16, right: 16),
+                  child: Text(
+                    usdWithSignFormat(context).format(total),
+                    style: theme.textTheme.body2.copyWith(
+                      fontSize: 44,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
           ...financialItemViews.sublist(0, min(financialItemViews.length, 3)),
           FlatButton(
-            child: Text(GalleryLocalizations.of(context).rallySeeAll),
+            child: Text(
+              GalleryLocalizations.of(context).rallySeeAll,
+              semanticsLabel: buttonSemanticsLabel,
+            ),
             textColor: Colors.white,
             onPressed: () {},
           ),

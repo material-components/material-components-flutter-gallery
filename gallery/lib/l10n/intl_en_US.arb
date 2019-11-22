@@ -244,6 +244,46 @@
        "count": "2"
     }
   },
+  "rallySeeAllAccounts": "See all accounts",
+  "@rallySeeAllAccounts": {
+    "description": "Semantics label for button to see all accounts. Accounts refer to bank account here."
+  },
+  "rallySeeAllBills": "See all bills",
+  "@rallySeeAllBills": {
+    "description": "Semantics label for button to see all bills."
+  },
+  "rallySeeAllBudgets": "See all budgets",
+  "@rallySeeAllBudgets": {
+    "description": "Semantics label for button to see all budgets."
+  },
+  "rallyAccountAmount": "{accountName} account {accountNumber} with {amount}.",
+  "@rallyAccountAmount": {
+    "description": "Semantics label for row with bank account name (for example checking) and its bank account number (for example 123), with how much money is deposited in it (for example $12).",
+    "placeholders": {
+      "accountName": "Home Savings",
+      "accountNumber": "1234",
+      "amount": "$12"
+    }
+  },
+  "rallyBillAmount": "{billName} bill due {date} for {amount}.",
+  "@rallyBillAmount": {
+    "description": "Semantics label for row with a bill (example name is rent), when the bill is due (1/12/2019 for example) and for how much money ($12).",
+    "placeholders": {
+      "billName": "Rent",
+      "date": "1/24/2019",
+      "amount": "$12"
+    }
+  },
+  "rallyBudgetAmount": "{budgetName} budget with {amountUsed} used of {amountTotal}, {amountLeft} left",
+  "@rallyBudgetAmount": {
+    "description": "Semantics label for row with a budget (housing budget for example), with how much is used of the budget (for example $5), the total budget (for example $100) and the amount left in the budget (for example $95).",
+    "placeholders": {
+      "budgetName": "Groceries",
+      "amountUsed": "$5",
+      "amountTotal": "$100",
+      "amountLeft": "$95"
+    }
+  },
   "craneDescription": "A personalized travel app",
   "@craneDescription": {
     "description": "Study description for Crane."
