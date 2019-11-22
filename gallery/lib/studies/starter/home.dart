@@ -26,7 +26,9 @@ class HomePage extends StatelessWidget {
           children: [
             Text(
               GalleryLocalizations.of(context).starterAppGenericHeadline,
-              style: textTheme.display2.copyWith(color: Colors.black),
+              style: textTheme.display2.copyWith(
+                color: colorScheme.onSecondary,
+              ),
             ),
             SizedBox(height: 10),
             Text(
@@ -75,7 +77,7 @@ class HomePage extends StatelessWidget {
           tooltip: GalleryLocalizations.of(context).starterAppTooltipAdd,
           child: Icon(
             Icons.add,
-            color: Theme.of(context).colorScheme.secondaryVariant,
+            color: Theme.of(context).colorScheme.onSecondary,
           ),
         ),
       );
@@ -136,7 +138,14 @@ class AdaptiveAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 }
 
-class ListDrawer extends StatelessWidget {
+class ListDrawer extends StatefulWidget {
+  @override
+  _ListDrawerState createState() => _ListDrawerState();
+}
+
+class _ListDrawerState extends State<ListDrawer> {
+  int selectedItem = 0;
+
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
@@ -158,11 +167,16 @@ class ListDrawer extends StatelessWidget {
             for (var i in Iterable<int>.generate(9))
               ListTile(
                 enabled: true,
-                selected: i == 0,
+                selected: i == selectedItem,
                 leading: Icon(Icons.favorite),
                 title: Text(
                   GalleryLocalizations.of(context).starterAppDrawerItem(i + 1),
                 ),
+                onTap: () {
+                  setState(() {
+                    selectedItem = i;
+                  });
+                },
               ),
           ],
         ),

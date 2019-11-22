@@ -23,6 +23,7 @@ class StarterApp extends StatelessWidget {
       ),
       theme: ThemeData(
         primaryColor: _primaryColor,
+        highlightColor: Colors.transparent,
         colorScheme: ColorScheme(
           primary: _primaryColor,
           primaryVariant: const Color(0xFF3700B3),
