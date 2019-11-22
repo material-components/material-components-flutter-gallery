@@ -51,10 +51,11 @@ class DesktopProductCardColumn extends StatelessWidget {
           children: [
             if (currentColumn % 2 == 1) Container(height: 84),
             ...List<Widget>.generate(currentColumnWidgetCount, (index) {
+              Widget card;
               if (index % 2 == 0) {
                 // This is a product.
                 final int productCardIndex = index ~/ 2;
-                return DesktopProductCard(
+                card = DesktopProductCard(
                   product:
                       products[productCardIndex * columnCount + currentColumn],
                   imageWidth: startLarge
@@ -63,10 +64,11 @@ class DesktopProductCardColumn extends StatelessWidget {
                 );
               } else {
                 // This is just a divider.
-                return Container(
+                card = Container(
                   height: 84,
                 );
               }
+              return RepaintBoundary(child: card);
             }),
           ],
         ),
