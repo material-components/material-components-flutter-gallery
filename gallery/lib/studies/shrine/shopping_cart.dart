@@ -66,6 +66,8 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                               icon: const Icon(Icons.keyboard_arrow_down),
                               onPressed: () =>
                                   ExpandingBottomSheet.of(context).close(),
+                              tooltip: GalleryLocalizations.of(context)
+                                  .shrineTooltipCloseCart,
                             ),
                           ),
                           Text(
@@ -242,6 +244,7 @@ class ShoppingCartRow extends StatelessWidget {
             child: IconButton(
               icon: const Icon(Icons.remove_circle_outline),
               onPressed: onPressed,
+              tooltip: GalleryLocalizations.of(context).shrineTooltipRemoveItem,
             ),
           ),
           Expanded(

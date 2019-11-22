@@ -17,6 +17,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
+import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/studies/shrine/category_menu_page.dart';
 
 const Cubic _accelerateCurve = Cubic(0.548, 0, 0.757, 0.464);
@@ -101,6 +102,12 @@ class _BackdropTitle extends AnimatedWidget {
                 child: slantedMenuIcon,
               );
 
+    final String menuButtonTooltip = animation.isCompleted
+        ? GalleryLocalizations.of(context).shrineTooltipOpenMenu
+        : animation.isDismissed
+            ? GalleryLocalizations.of(context).shrineTooltipCloseMenu
+            : null;
+
     return DefaultTextStyle(
       style: Theme.of(context).primaryTextTheme.title,
       softWrap: false,
@@ -112,6 +119,7 @@ class _BackdropTitle extends AnimatedWidget {
           child: IconButton(
             padding: const EdgeInsetsDirectional.only(end: 8),
             onPressed: onPress,
+            tooltip: menuButtonTooltip,
             icon: Stack(children: [
               Opacity(
                 opacity: animation.value,
@@ -123,7 +131,8 @@ class _BackdropTitle extends AnimatedWidget {
                   end: Offset(1 * textDirectionScalar, 0),
                 ).evaluate(animation),
                 child: const ImageIcon(
-                    AssetImage('packages/shrine_images/diamond.png')),
+                  AssetImage('packages/shrine_images/diamond.png'),
+                ),
               ),
             ]),
           ),
@@ -318,11 +327,13 @@ class _BackdropState extends State<Backdrop>
       ),
       actions: [
         IconButton(
-          icon: const Icon(Icons.search, semanticLabel: 'search'),
+          icon: const Icon(Icons.search),
+          tooltip: GalleryLocalizations.of(context).shrineTooltipSearch,
           onPressed: () {},
         ),
         IconButton(
-          icon: const Icon(Icons.tune, semanticLabel: 'settings'),
+          icon: const Icon(Icons.tune),
+          tooltip: GalleryLocalizations.of(context).shrineTooltipSettings,
           onPressed: () {},
         ),
       ],

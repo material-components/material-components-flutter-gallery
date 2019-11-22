@@ -42,9 +42,7 @@ class _LoginPageState extends State<LoginPage> {
           elevation: 0,
           backgroundColor: Colors.white,
           brightness: Brightness.light,
-          leading: IconButton(
-            icon: const BackButtonIcon(),
-            tooltip: MaterialLocalizations.of(context).backButtonTooltip,
+          leading: BackButton(
             onPressed: () {
               // The login screen is immediately displayed on top of the Shrine
               // home screen using onGenerateRoute and so rootNavigator must be

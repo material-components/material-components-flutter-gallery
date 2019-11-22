@@ -2818,6 +2818,54 @@ class GalleryLocalizations {
         desc: r'Name of the product ' "'" r'Whitney belt' "'" r'.');
   }
 
+  String get shrineTooltipCloseCart {
+    return Intl.message(r'Close cart',
+        locale: _localeName,
+        name: 'shrineTooltipCloseCart',
+        desc:
+            r'The tooltip text for a button to close the shopping cart page. Also used as a semantic label, used by screen readers / VoiceOver.');
+  }
+
+  String get shrineTooltipCloseMenu {
+    return Intl.message(r'Close menu',
+        locale: _localeName,
+        name: 'shrineTooltipCloseMenu',
+        desc:
+            r'The tooltip text for a button to close a menu. Also used as a semantic label, used by screen readers / VoiceOver.');
+  }
+
+  String get shrineTooltipOpenMenu {
+    return Intl.message(r'Open menu',
+        locale: _localeName,
+        name: 'shrineTooltipOpenMenu',
+        desc:
+            r'The tooltip text for a menu button. Also used as a semantic label, used by screen readers / VoiceOver.');
+  }
+
+  String get shrineTooltipRemoveItem {
+    return Intl.message(r'Remove item',
+        locale: _localeName,
+        name: 'shrineTooltipRemoveItem',
+        desc:
+            r'The tooltip text for a button to remove an item (a product) in a shopping cart. Also used as a semantic label, used by screen readers / VoiceOver.');
+  }
+
+  String get shrineTooltipSearch {
+    return Intl.message(r'Search',
+        locale: _localeName,
+        name: 'shrineTooltipSearch',
+        desc:
+            r'The tooltip text for a search button. Also used as a semantic label, used by screen readers / VoiceOver.');
+  }
+
+  String get shrineTooltipSettings {
+    return Intl.message(r'Settings',
+        locale: _localeName,
+        name: 'shrineTooltipSettings',
+        desc:
+            r'The tooltip text for a settings button. Also used as a semantic label, used by screen readers / VoiceOver.');
+  }
+
   String get starterAppDescription {
     return Intl.message(r'A responsive starter layout',
         locale: _localeName,

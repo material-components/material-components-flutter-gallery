@@ -125,7 +125,8 @@ class CategoryMenuPage extends StatelessWidget {
               ),
               const Spacer(),
               IconButton(
-                icon: const Icon(Icons.search, semanticLabel: 'search'),
+                icon: const Icon(Icons.search),
+                tooltip: GalleryLocalizations.of(context).shrineTooltipSearch,
                 onPressed: () {},
               ),
               const SizedBox(height: 72),

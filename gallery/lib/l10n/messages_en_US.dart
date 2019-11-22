@@ -664,6 +664,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
         "starterAppDrawerItem": m16,

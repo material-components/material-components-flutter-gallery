@@ -1298,6 +1298,30 @@
     description="Name of the product &apos;Fine lines tee&apos;."
     >Fine lines tee</string>
   <string
+    name="shrineTooltipSearch"
+    description="The tooltip text for a search button. Also used as a semantic label, used by screen readers / VoiceOver."
+    >Search</string>
+  <string
+    name="shrineTooltipSettings"
+    description="The tooltip text for a settings button. Also used as a semantic label, used by screen readers / VoiceOver."
+    >Settings</string>
+  <string
+    name="shrineTooltipOpenMenu"
+    description="The tooltip text for a menu button. Also used as a semantic label, used by screen readers / VoiceOver."
+    >Open menu</string>
+  <string
+    name="shrineTooltipCloseMenu"
+    description="The tooltip text for a button to close a menu. Also used as a semantic label, used by screen readers / VoiceOver."
+    >Close menu</string>
+  <string
+    name="shrineTooltipCloseCart"
+    description="The tooltip text for a button to close the shopping cart page. Also used as a semantic label, used by screen readers / VoiceOver."
+    >Close cart</string>
+  <string
+    name="shrineTooltipRemoveItem"
+    description="The tooltip text for a button to remove an item (a product) in a shopping cart. Also used as a semantic label, used by screen readers / VoiceOver."
+    >Remove item</string>
+  <string
     name="craneFormDiners"
     description="Form field label to enter the number of diners."
     >Diners</string>
