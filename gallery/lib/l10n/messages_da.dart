@@ -19,34 +19,49 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'da';
 
-  static m0(value) =>
-      "To see the source code for this app, please visit the ${value}.";
+  static m0(value) => "Gå til ${value} for at se kildekoden for denne app.";
 
-  static m1(title) => "Placeholder for ${title} tab";
+  static m1(title) => "Pladsholder for fanen ${title}";
 
-  static m2(value) => "Item ${value}";
+  static m2(totalRestaurants) =>
+      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
 
-  static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m3(numberOfStops) =>
+      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
 
-  static m4(value) => "Du valgte: \"${value}\"";
+  static m4(totalProperties) =>
+      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m5(value) => "Vare ${value}";
 
-  static m6(percent) =>
-      "Good work! Your checking account is ${percent} higher than last month.";
+  static m6(name, phoneNumber) =>
+      "Telefonnummeret til ${name} er ${phoneNumber}";
 
-  static m7(percent) =>
-      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+  static m7(value) => "Du valgte: \"${value}\"";
 
-  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m8(amount) =>
+      "Du har brugt ${amount} på hæveautomatsgebyrer i denne måned";
 
-  static m9(quantity) => "${quantity} ITEMS";
+  static m9(percent) =>
+      "Flot! Din bankkonto er steget med ${percent} i forhold til sidste måned.";
 
-  static m10(price) => "x ${price}";
+  static m10(percent) =>
+      "Vær opmærksom på, at du har brugt ${percent} af denne måneds shoppingbudget.";
 
-  static m11(quantity) => "Quantity: ${quantity}";
+  static m11(amount) =>
+      "Du har brugt ${amount} på restaurantbesøg i denne uge.";
 
-  static m12(value) => "Item ${value}";
+  static m12(count) =>
+      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+
+  static m13(quantity) =>
+      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+
+  static m14(price) => "x ${price}";
+
+  static m15(quantity) => "Antal: ${quantity}";
+
+  static m16(value) => "Vare ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -54,18 +69,27 @@ class MessageLookup extends MessageLookupByLibrary {
         "aboutFlutterSamplesRepo":
             MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
         "bottomNavigationAccountTab":
-            MessageLookupByLibrary.simpleMessage("Account"),
+            MessageLookupByLibrary.simpleMessage("Konto"),
         "bottomNavigationAlarmTab":
             MessageLookupByLibrary.simpleMessage("Alarm"),
         "bottomNavigationCalendarTab":
-            MessageLookupByLibrary.simpleMessage("Calendar"),
+            MessageLookupByLibrary.simpleMessage("Kalender"),
         "bottomNavigationCameraTab":
-            MessageLookupByLibrary.simpleMessage("Camera"),
+            MessageLookupByLibrary.simpleMessage("Kamera"),
         "bottomNavigationCommentsTab":
-            MessageLookupByLibrary.simpleMessage("Comments"),
+            MessageLookupByLibrary.simpleMessage("Kommentarer"),
         "bottomNavigationContentPlaceholder": m1,
-        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "buttonText": MessageLookupByLibrary.simpleMessage("KNAP"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Opret"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipTurnOnLights":
+            MessageLookupByLibrary.simpleMessage("Turn on lights"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("ORANGEGUL"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("BLÅ"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("BLÅGRÅ"),
@@ -85,8 +109,84 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsRed": MessageLookupByLibrary.simpleMessage("RØD"),
         "colorsTeal": MessageLookupByLibrary.simpleMessage("GRØNBLÅ"),
         "colorsYellow": MessageLookupByLibrary.simpleMessage("GUL"),
-        "craneDescription":
-            MessageLookupByLibrary.simpleMessage("A personalized travel app"),
+        "craneDescription": MessageLookupByLibrary.simpleMessage(
+            "En personligt tilpasset rejseapp"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
+        "craneEat1":
+            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
+        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
+        "craneEat3":
+            MessageLookupByLibrary.simpleMessage("Portland, United States"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
+        "craneEat6":
+            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
+        "craneEat7":
+            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
+        "craneEat8":
+            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneEatRestaurants": m2,
+        "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
+            "Explore Restaurants by Destination"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
+        "craneFly0":
+            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
+        "craneFly1":
+            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
+        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneFly12":
+            MessageLookupByLibrary.simpleMessage("Napa, United States"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+        "craneFly2":
+            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneFly5":
+            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneFly7": MessageLookupByLibrary.simpleMessage(
+            "Mount Rushmore, United States"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneFlyStops": m3,
+        "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
+            "Explore Flights by Destination"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
+        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+        "craneFormDestination":
+            MessageLookupByLibrary.simpleMessage("Choose Destination"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+        "craneFormLocation":
+            MessageLookupByLibrary.simpleMessage("Select Location"),
+        "craneFormOrigin":
+            MessageLookupByLibrary.simpleMessage("Choose Origin"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneSleep1":
+            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+        "craneSleep2":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneSleep4":
+            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
+        "craneSleep5":
+            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
+        "craneSleep6":
+            MessageLookupByLibrary.simpleMessage("Napa, United States"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
+        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneSleepProperties": m4,
+        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
+            "Explore Properties by Destination"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("Tillad"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("Æbletærte"),
@@ -109,11 +209,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "Vil du give \"Maps\" adgang til din placering, når du bruger appen?"),
         "cupertinoAlertTiramisu":
             MessageLookupByLibrary.simpleMessage("Tiramisu"),
-        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Knap"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("Med baggrund"),
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Vis underretning"),
+        "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+        "demoActionChipTitle":
+            MessageLookupByLibrary.simpleMessage("Action Chip"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "En underretningsdialogboks oplyser brugeren om situationer, der kræver handling. En underretningsdialogboks har en valgfri titel og en valgfri liste med handlinger."),
         "demoAlertDialogTitle":
@@ -121,42 +225,51 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Underretning med titel"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
+            "Navigationslinjer i bunden viser tre til fem destinationer nederst på en skærm. Hver destination er angivet med et ikon og en valgfri tekstetiket. Når der trykkes på et navigationsikon nederst på en skærm, føres brugeren til den overordnede navigationsdestination, der er knyttet til det pågældende ikon."),
         "demoBottomNavigationPersistentLabels":
-            MessageLookupByLibrary.simpleMessage("Persistent labels"),
+            MessageLookupByLibrary.simpleMessage("Faste etiketter"),
         "demoBottomNavigationSelectedLabel":
-            MessageLookupByLibrary.simpleMessage("Selected label"),
+            MessageLookupByLibrary.simpleMessage("Valgt etiket"),
         "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation with cross-fading views"),
+            "Navigation i bunden med tværudtoning"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom navigation"),
-        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Navigation i bunden"),
+        "demoBottomSheetAddLabel":
+            MessageLookupByLibrary.simpleMessage("Tilføj"),
         "demoBottomSheetButtonText":
-            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
-        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
-        "demoBottomSheetItem": m2,
+            MessageLookupByLibrary.simpleMessage("VIS FELTET I BUNDEN"),
+        "demoBottomSheetHeader":
+            MessageLookupByLibrary.simpleMessage("Overskrift"),
+        "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
+            "Et modalt felt i bunden er et alternativ til en menu eller dialogboks og forhindrer, at brugeren interagerer med resten af appen."),
         "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Modalt felt i bunden"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
+                "Et fast felt i bunden viser oplysninger, der supplerer det primære indhold i appen. Et fast felt i bunden forbliver synligt, selvom brugeren interagerer med andre elementer i appen."),
         "demoBottomSheetPersistentTitle":
-            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Fast felt i bunden"),
         "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Persistent and modal bottom sheets"),
+            "Faste og modale felter i bunden"),
         "demoBottomSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Felt i bunden"),
         "demoBottomTextFieldsTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Tekstfelter"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "Flade, hævede, kontur og meget mere"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Knapper"),
+        "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Compact elements that represent an input, attribute, or action"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+        "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+        "demoChoiceChipTitle":
+            MessageLookupByLibrary.simpleMessage("Choice Chip"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Eksempel på et kodestykke"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "Color and color swatch constants which represent Material Design\'s color palette."),
+            "Faste farver og farveskemaer, som repræsenterer farvepaletten for Material Design."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
             "Alle de foruddefinerede farver"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("Farver"),
@@ -171,9 +284,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
             "En underretningsdialogboks oplyser brugeren om situationer, der kræver handling. En underretningsdialogboks har en valgfri titel, valgfrit indhold og en valgfri liste med handlinger. Titlen vises oven over indholdet, og handlinger vises under indholdet."),
         "demoCupertinoAlertTitle":
-            MessageLookupByLibrary.simpleMessage("Alert"),
+            MessageLookupByLibrary.simpleMessage("Underretning"),
         "demoCupertinoAlertWithTitleTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage("Underretning med titel"),
         "demoCupertinoAlertsSubtitle": MessageLookupByLibrary.simpleMessage(
             "Dialogbokse til underretning i samme stil som iOS"),
         "demoCupertinoAlertsTitle":
@@ -183,12 +296,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("Knapper i stil med iOS"),
         "demoCupertinoButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Buttons"),
+            MessageLookupByLibrary.simpleMessage("Knapper"),
+        "demoCupertinoSegmentedControlDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+        "demoCupertinoSegmentedControlSubtitle":
+            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+        "demoCupertinoSegmentedControlTitle":
+            MessageLookupByLibrary.simpleMessage("Segmented Control"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Enkel, underretning og fuld skærm"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dialogbokse"),
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API-dokumentation"),
+        "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Filter chips use tags or descriptive words as a way to filter content."),
+        "demoFilterChipTitle":
+            MessageLookupByLibrary.simpleMessage("Filter Chip"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "En flad knap viser en blækklat, når den trykkes ned, men den hæves ikke. Brug flade knapper på værktøjslinjer, i dialogbokse og indlejret i den indre margen."),
         "demoFlatButtonTitle":
@@ -202,8 +326,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoFullscreenDialogTitle":
             MessageLookupByLibrary.simpleMessage("Fuld skærm"),
         "demoFullscreenTooltip":
-            MessageLookupByLibrary.simpleMessage("Full Screen"),
+            MessageLookupByLibrary.simpleMessage("Fuld skærm"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Oplysninger"),
+        "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
+        "demoInputChipTitle":
+            MessageLookupByLibrary.simpleMessage("Input Chip"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Kunne ikke vise webadressen:"),
         "demoOptionsTooltip":
@@ -220,66 +348,65 @@ class MessageLookup extends MessageLookupByLibrary {
             "En enkel dialogboks giver brugeren et valg mellem flere muligheder. En enkel dialogboks har en valgfri titel, der vises oven over valgmulighederne."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Enkel"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
-        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
+            "Tekstfelterne giver brugerne mulighed for at angive tekst i en brugerflade. De vises normalt i formularer og dialogbokse."),
+        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("Mail"),
         "demoTextFieldEnterPassword":
-            MessageLookupByLibrary.simpleMessage("Please enter a password."),
+            MessageLookupByLibrary.simpleMessage("Angiv en adgangskode."),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### - Enter a US phone number."),
+            "(###) ###-#### – angiv et amerikansk telefonnummer."),
         "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
-            "Please fix the errors in red before submitting."),
+            "Ret de fejl, der er angivet med rød farve, før du sender."),
         "demoTextFieldHidePasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Hide password"),
+            MessageLookupByLibrary.simpleMessage("Skjul adgangskode"),
         "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
-            "Keep it short, this is just a demo."),
+            "Vær kortfattet; det her er kun en demo."),
         "demoTextFieldLifeStory":
-            MessageLookupByLibrary.simpleMessage("Life story"),
-        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
-        "demoTextFieldNameHasPhoneNumber": m3,
+            MessageLookupByLibrary.simpleMessage("Livshistorie"),
+        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Navn*"),
+        "demoTextFieldNameHasPhoneNumber": m6,
         "demoTextFieldNameRequired":
-            MessageLookupByLibrary.simpleMessage("Name is required."),
-        "demoTextFieldNoMoreThan":
-            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+            MessageLookupByLibrary.simpleMessage("Du skal angive et navn."),
+        "demoTextFieldNoMoreThan": MessageLookupByLibrary.simpleMessage(
+            "Du må højst angive otte tegn."),
         "demoTextFieldOnlyAlphabeticalChars":
-            MessageLookupByLibrary.simpleMessage(
-                "Please enter only alphabetical characters."),
+            MessageLookupByLibrary.simpleMessage("Angiv kun alfabetiske tegn."),
         "demoTextFieldPassword":
-            MessageLookupByLibrary.simpleMessage("Password*"),
+            MessageLookupByLibrary.simpleMessage("Adgangskode*"),
         "demoTextFieldPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+            MessageLookupByLibrary.simpleMessage("Adgangskoderne matcher ikke"),
         "demoTextFieldPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("Phone number*"),
-        "demoTextFieldRequiredField":
-            MessageLookupByLibrary.simpleMessage("* indicates required field"),
+            MessageLookupByLibrary.simpleMessage("Telefonnummer*"),
+        "demoTextFieldRequiredField": MessageLookupByLibrary.simpleMessage(
+            "* angiver et obligatorisk felt"),
         "demoTextFieldRetypePassword":
-            MessageLookupByLibrary.simpleMessage("Re-type password*"),
-        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+            MessageLookupByLibrary.simpleMessage("Angiv adgangskoden igen*"),
+        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Løn"),
         "demoTextFieldShowPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Show password"),
-        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
+            MessageLookupByLibrary.simpleMessage("Vis adgangskode"),
+        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SEND"),
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Single line of editable text and numbers"),
+            "En enkelt linje med tekst og tal, der kan redigeres"),
         "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
+            "Fortæl os, hvem du er (du kan f.eks. skrive, hvad du laver, eller hvilke fritidsinteresser du har)"),
         "demoTextFieldTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Tekstfelter"),
         "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
         "demoTextFieldWhatDoPeopleCallYou":
-            MessageLookupByLibrary.simpleMessage("What do people call you?"),
-        "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
+            MessageLookupByLibrary.simpleMessage("Hvad kalder andre dig?"),
+        "demoTextFieldWhereCanWeReachYou": MessageLookupByLibrary.simpleMessage(
+            "Hvordan kan vi kontakte dig?"),
         "demoTextFieldYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("Your email address"),
+            MessageLookupByLibrary.simpleMessage("Din mailadresse"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Til/fra-knapper kan bruges til at gruppere relaterede indstillinger. For at fremhæve grupper af relaterede til/fra-knapper bør grupperne dele en fælles container."),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Til/fra-knapper"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Definitions for the various typographical styles found in Material Design."),
+            "Definitioner for de forskellige typografier, der blev fundet i Material Design."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined text styles"),
+            "Alle de foruddefinerede typografier"),
         "demoTypographyTitle":
-            MessageLookupByLibrary.simpleMessage("Typography"),
+            MessageLookupByLibrary.simpleMessage("Typografi"),
         "dialogAddAccount":
             MessageLookupByLibrary.simpleMessage("Tilføj konto"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("ACCEPTÉR"),
@@ -297,7 +424,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lad Google gøre det nemmere for apps at fastlægge din placering. Det betyder, at der sendes anonyme placeringsdata til Google, også når der ikke er nogen apps, der kører."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Vil du bruge Googles placeringstjeneste?"),
-        "dialogSelectedOption": m4,
+        "dialogSelectedOption": m7,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Konfigurer konto til backup"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("VIS DIALOGBOKS"),
@@ -307,234 +434,242 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Kategorier"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galleri"),
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("Car Savings"),
+            MessageLookupByLibrary.simpleMessage("Opsparing til bil"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Checking"),
+            MessageLookupByLibrary.simpleMessage("Bankkonto"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("Home Savings"),
+            MessageLookupByLibrary.simpleMessage("Opsparing til hjemmet"),
         "rallyAccountDataVacation":
-            MessageLookupByLibrary.simpleMessage("Vacation"),
+            MessageLookupByLibrary.simpleMessage("Ferie"),
         "rallyAccountDetailDataAccountOwner":
-            MessageLookupByLibrary.simpleMessage("Account Owner"),
+            MessageLookupByLibrary.simpleMessage("Kontoejer"),
         "rallyAccountDetailDataAnnualPercentageYield":
-            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+            MessageLookupByLibrary.simpleMessage("Årligt afkast i procent"),
         "rallyAccountDetailDataInterestPaidLastYear":
-            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+            MessageLookupByLibrary.simpleMessage("Betalte renter sidste år"),
         "rallyAccountDetailDataInterestRate":
-            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+            MessageLookupByLibrary.simpleMessage("Rentesats"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+            MessageLookupByLibrary.simpleMessage("Renter ÅTD"),
         "rallyAccountDetailDataNextStatement":
-            MessageLookupByLibrary.simpleMessage("Next Statement"),
-        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
-        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
-        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m5,
-        "rallyAlertsMessageCheckingAccount": m6,
-        "rallyAlertsMessageHeadsUpShopping": m7,
-        "rallyAlertsMessageSpentOnRestaurants": m8,
-        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
-        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+            MessageLookupByLibrary.simpleMessage("Næste kontoudtog"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("I alt"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Konti"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Underretninger"),
+        "rallyAlertsMessageATMFees": m8,
+        "rallyAlertsMessageCheckingAccount": m9,
+        "rallyAlertsMessageHeadsUpShopping": m10,
+        "rallyAlertsMessageSpentOnRestaurants": m11,
+        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("Fakturaer"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Betalingsdato"),
         "rallyBudgetCategoryClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
+            MessageLookupByLibrary.simpleMessage("Tøj"),
         "rallyBudgetCategoryCoffeeShops":
-            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+            MessageLookupByLibrary.simpleMessage("Kaffebarer"),
         "rallyBudgetCategoryGroceries":
-            MessageLookupByLibrary.simpleMessage("Groceries"),
+            MessageLookupByLibrary.simpleMessage("Dagligvarer"),
         "rallyBudgetCategoryRestaurants":
-            MessageLookupByLibrary.simpleMessage("Restaurants"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
-        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
+            MessageLookupByLibrary.simpleMessage("Restauranter"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Tilbage"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgetter"),
         "rallyDescription":
-            MessageLookupByLibrary.simpleMessage("A personal finance app"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
-        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
-        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+            MessageLookupByLibrary.simpleMessage("En personlig økonomiapp"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("TILBAGE"),
+        "rallyLoginButtonLogin":
+            MessageLookupByLibrary.simpleMessage("LOG IND"),
+        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Log ind"),
         "rallyLoginLoginToRally":
-            MessageLookupByLibrary.simpleMessage("Login to Rally"),
+            MessageLookupByLibrary.simpleMessage("Log ind for at bruge Rally"),
         "rallyLoginNoAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Har du ikke en konto?"),
+        "rallyLoginPassword":
+            MessageLookupByLibrary.simpleMessage("Adgangskode"),
         "rallyLoginRememberMe":
-            MessageLookupByLibrary.simpleMessage("Remember Me"),
-        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
-        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
-        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+            MessageLookupByLibrary.simpleMessage("Husk mig"),
+        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("TILMELD DIG"),
+        "rallyLoginUsername":
+            MessageLookupByLibrary.simpleMessage("Brugernavn"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SE ALLE"),
         "rallySettingsFindAtms":
-            MessageLookupByLibrary.simpleMessage("Find ATMs"),
-        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+            MessageLookupByLibrary.simpleMessage("Find hæveautomater"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Hjælp"),
         "rallySettingsManageAccounts":
-            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+            MessageLookupByLibrary.simpleMessage("Administrer konti"),
         "rallySettingsNotifications":
-            MessageLookupByLibrary.simpleMessage("Notifications"),
+            MessageLookupByLibrary.simpleMessage("Notifikationer"),
         "rallySettingsPaperlessSettings":
-            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
+            MessageLookupByLibrary.simpleMessage("Indstillinger for Paperless"),
         "rallySettingsPasscodeAndTouchId":
-            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+            MessageLookupByLibrary.simpleMessage("Adgangskode og Touch ID"),
         "rallySettingsPersonalInformation":
-            MessageLookupByLibrary.simpleMessage("Personal Information"),
-        "rallySettingsSignOut":
-            MessageLookupByLibrary.simpleMessage("Sign out"),
+            MessageLookupByLibrary.simpleMessage("Personlige oplysninger"),
+        "rallySettingsSignOut": MessageLookupByLibrary.simpleMessage("Log ud"),
         "rallySettingsTaxDocuments":
-            MessageLookupByLibrary.simpleMessage("Tax Documents"),
-        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
-        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
-        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
-        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
-        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
+            MessageLookupByLibrary.simpleMessage("Skattedokumenter"),
+        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("KONTI"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("FAKTURAER"),
+        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETTER"),
+        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERSIGT"),
+        "rallyTitleSettings":
+            MessageLookupByLibrary.simpleMessage("INDSTILLINGER"),
         "settingsAbout":
-            MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
+            MessageLookupByLibrary.simpleMessage("Om Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
-            "Designed by TOASTER in London"),
-        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
+            "Designet af TOASTER i London"),
+        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Mørkt"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Send feedback"),
-        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Light"),
-        "settingsLocale": MessageLookupByLibrary.simpleMessage("Locale"),
+        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Lyst"),
+        "settingsLocale": MessageLookupByLibrary.simpleMessage("Landestandard"),
         "settingsPlatformAndroid":
             MessageLookupByLibrary.simpleMessage("Android"),
         "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
-            MessageLookupByLibrary.simpleMessage("Platform mechanics"),
+            MessageLookupByLibrary.simpleMessage("Platformmekanik"),
         "settingsSlowMotion":
-            MessageLookupByLibrary.simpleMessage("Slow motion"),
+            MessageLookupByLibrary.simpleMessage("Slowmotion"),
         "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
         "settingsTextDirection":
-            MessageLookupByLibrary.simpleMessage("Text direction"),
-        "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
-        "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
+            MessageLookupByLibrary.simpleMessage("Tekstretning"),
+        "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("VTH"),
+        "settingsTextDirectionLocaleBased":
+            MessageLookupByLibrary.simpleMessage("Based on locale"),
+        "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("HTV"),
         "settingsTextScaling":
-            MessageLookupByLibrary.simpleMessage("Text scaling"),
-        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
+            MessageLookupByLibrary.simpleMessage("Skalering af tekst"),
+        "settingsTextScalingHuge":
+            MessageLookupByLibrary.simpleMessage("Meget stor"),
         "settingsTextScalingLarge":
-            MessageLookupByLibrary.simpleMessage("Large"),
+            MessageLookupByLibrary.simpleMessage("Stor"),
         "settingsTextScalingNormal":
             MessageLookupByLibrary.simpleMessage("Normal"),
         "settingsTextScalingSmall":
-            MessageLookupByLibrary.simpleMessage("Small"),
-        "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Lille"),
+        "settingsTheme": MessageLookupByLibrary.simpleMessage("Tema"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("Indstillinger"),
         "shrineCancelButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CANCEL"),
+            MessageLookupByLibrary.simpleMessage("ANNULLER"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m9,
-        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+            MessageLookupByLibrary.simpleMessage("RYD KURV"),
+        "shrineCartItemCount": m13,
+        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("KURV"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("Shipping:"),
+            MessageLookupByLibrary.simpleMessage("Forsendelse:"),
         "shrineCartSubtotalCaption":
             MessageLookupByLibrary.simpleMessage("Subtotal:"),
-        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
-        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+        "shrineCartTaxCaption":
+            MessageLookupByLibrary.simpleMessage("Afgifter:"),
+        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("I ALT"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("Accessories"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
-        "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+            MessageLookupByLibrary.simpleMessage("CLOTHING"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
+        "shrineDescription": MessageLookupByLibrary.simpleMessage(
+            "En modebevidst forhandlerapp"),
         "shrineLoginPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Adgangskode"),
         "shrineLoginUsernameLabel":
-            MessageLookupByLibrary.simpleMessage("Username"),
+            MessageLookupByLibrary.simpleMessage("Brugernavn"),
         "shrineLogoutButtonCaption":
-            MessageLookupByLibrary.simpleMessage("LOGOUT"),
+            MessageLookupByLibrary.simpleMessage("LOG UD"),
         "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
-        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+        "shrineNextButtonCaption":
+            MessageLookupByLibrary.simpleMessage("NÆSTE"),
         "shrineProductBlueStoneMug":
-            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
+            MessageLookupByLibrary.simpleMessage("Blue Stone-krus"),
         "shrineProductCeriseScallopTee":
-            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+            MessageLookupByLibrary.simpleMessage("Lyserød Cerise-t-shirt"),
         "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+            MessageLookupByLibrary.simpleMessage("Chambrayservietter"),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+            MessageLookupByLibrary.simpleMessage("Chambrayskjorte"),
         "shrineProductClassicWhiteCollar":
-            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+            MessageLookupByLibrary.simpleMessage("Klassisk hvid krave"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+            MessageLookupByLibrary.simpleMessage("Clay-sweater"),
         "shrineProductCopperWireRack":
-            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+            MessageLookupByLibrary.simpleMessage("Hylde med kobbergitter"),
         "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+            MessageLookupByLibrary.simpleMessage("T-shirt med tynde striber"),
         "shrineProductGardenStrand":
             MessageLookupByLibrary.simpleMessage("Garden strand"),
         "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+            MessageLookupByLibrary.simpleMessage("Gatsby-hat"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
-        "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+            MessageLookupByLibrary.simpleMessage("Gentry-jakke"),
+        "shrineProductGiltDeskTrio": MessageLookupByLibrary.simpleMessage(
+            "Tre-i-et-skrivebord fra Gilt"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+            MessageLookupByLibrary.simpleMessage("Rødt halstørklæde"),
         "shrineProductGreySlouchTank":
-            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+            MessageLookupByLibrary.simpleMessage("Grå løstsiddende tanktop"),
         "shrineProductHurrahsTeaSet":
-            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+            MessageLookupByLibrary.simpleMessage("Hurrahs-testel"),
         "shrineProductKitchenQuattro":
             MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
         "shrineProductNavyTrousers":
-            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+            MessageLookupByLibrary.simpleMessage("Marineblå bukser"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m10,
-        "shrineProductQuantity": m11,
+            MessageLookupByLibrary.simpleMessage("Beige tunika"),
+        "shrineProductPrice": m14,
+        "shrineProductQuantity": m15,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Quartet table"),
+            MessageLookupByLibrary.simpleMessage("Bord med fire stole"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+            MessageLookupByLibrary.simpleMessage("Rende til regnvand"),
         "shrineProductRamonaCrossover":
-            MessageLookupByLibrary.simpleMessage("Ramona crossover"),
+            MessageLookupByLibrary.simpleMessage("Ramona-samarbejde"),
         "shrineProductSeaTunic":
-            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+            MessageLookupByLibrary.simpleMessage("Havblå tunika"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
-        "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
+            MessageLookupByLibrary.simpleMessage("Seabreeze-sweater"),
+        "shrineProductShoulderRollsTee": MessageLookupByLibrary.simpleMessage(
+            "T-shirt med åbning til skuldrene"),
         "shrineProductShrugBag":
-            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+            MessageLookupByLibrary.simpleMessage("Shrug-taske"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
+            MessageLookupByLibrary.simpleMessage("Soothe-keramiksæt"),
         "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+            MessageLookupByLibrary.simpleMessage("Stella-solbriller"),
         "shrineProductStrutEarrings":
-            MessageLookupByLibrary.simpleMessage("Strut earrings"),
+            MessageLookupByLibrary.simpleMessage("Strut-øreringe"),
         "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("Succulent planters"),
-        "shrineProductSunshirtDress":
-            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+            MessageLookupByLibrary.simpleMessage("Sukkulente planter"),
+        "shrineProductSunshirtDress": MessageLookupByLibrary.simpleMessage(
+            "Kjole, der beskytter mod solen"),
         "shrineProductSurfAndPerfShirt":
-            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+            MessageLookupByLibrary.simpleMessage("Surfertrøje"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+            MessageLookupByLibrary.simpleMessage("Vagabond-rygsæk"),
         "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+            MessageLookupByLibrary.simpleMessage("Varsity-sokker"),
         "shrineProductWalterHenleyWhite":
-            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+            MessageLookupByLibrary.simpleMessage("Walter-henley (hvid)"),
         "shrineProductWeaveKeyring":
-            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+            MessageLookupByLibrary.simpleMessage("Weave-nøglering"),
         "shrineProductWhitePinstripeShirt":
-            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+            MessageLookupByLibrary.simpleMessage("Nålestribet skjorte i hvid"),
         "shrineProductWhitneyBelt":
-            MessageLookupByLibrary.simpleMessage("Whitney belt"),
-        "starterAppDescription":
-            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m12,
-        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
-        "starterAppGenericButton":
-            MessageLookupByLibrary.simpleMessage("BUTTON"),
+            MessageLookupByLibrary.simpleMessage("Whitney-bælte"),
+        "starterAppDescription": MessageLookupByLibrary.simpleMessage(
+            "Et responsivt opstartslayout"),
+        "starterAppDrawerItem": m16,
+        "starterAppGenericBody":
+            MessageLookupByLibrary.simpleMessage("Brødtekst"),
+        "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("KNAP"),
         "starterAppGenericHeadline":
-            MessageLookupByLibrary.simpleMessage("Headline"),
+            MessageLookupByLibrary.simpleMessage("Overskrift"),
         "starterAppGenericSubtitle":
-            MessageLookupByLibrary.simpleMessage("Subtitle"),
-        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
-        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
-        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Undertekst"),
+        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Titel"),
+        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Begynderapp"),
+        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Tilføj"),
         "starterAppTooltipFavorite":
-            MessageLookupByLibrary.simpleMessage("Favorite"),
-        "starterAppTooltipSearch":
-            MessageLookupByLibrary.simpleMessage("Search"),
-        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
+            MessageLookupByLibrary.simpleMessage("Angiv som favorit"),
+        "starterAppTooltipSearch": MessageLookupByLibrary.simpleMessage("Søg"),
+        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Del")
       };
 }

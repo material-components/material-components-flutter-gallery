@@ -19,53 +19,74 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'is';
 
-  static m0(value) =>
-      "To see the source code for this app, please visit the ${value}.";
+  static m0(value) => "Farðu á ${value} til að sjá upprunakóða forritsins.";
 
-  static m1(title) => "Placeholder for ${title} tab";
+  static m1(title) => "Staðgengill fyrir flipann ${title}";
 
-  static m2(value) => "Item ${value}";
+  static m2(totalRestaurants) =>
+      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
 
-  static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m3(numberOfStops) =>
+      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
 
-  static m4(value) => "Þú valdir: „${value}“";
+  static m4(totalProperties) =>
+      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m5(value) => "Vara ${value}";
 
-  static m6(percent) =>
-      "Good work! Your checking account is ${percent} higher than last month.";
+  static m6(name, phoneNumber) => "Símanúmer ${name} er ${phoneNumber}";
 
-  static m7(percent) =>
-      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+  static m7(value) => "Þú valdir: „${value}“";
 
-  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m8(amount) => "Þú hefur eytt ${amount} í hraðbankagjöld í mánuðinum";
 
-  static m9(quantity) => "${quantity} ITEMS";
+  static m9(percent) =>
+      "Vel gert! Þú átt ${percent} meira inni á veltureikningnum þínum en í síðasta mánuði.";
 
-  static m10(price) => "x ${price}";
+  static m10(percent) =>
+      "Athugaðu að þú ert búin(n) með ${percent} af kostnaðarhámarki mánaðarins.";
 
-  static m11(quantity) => "Quantity: ${quantity}";
+  static m11(amount) => "Þú hefur eytt ${amount} á veitingastöðum í vikunni.";
 
-  static m12(value) => "Item ${value}";
+  static m12(count) =>
+      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+
+  static m13(quantity) =>
+      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+
+  static m14(price) => "x ${price}";
+
+  static m15(quantity) => "Magn: ${quantity}";
+
+  static m16(value) => "Vara ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "aboutDialogDescription": m0,
-        "aboutFlutterSamplesRepo":
-            MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
+        "aboutFlutterSamplesRepo": MessageLookupByLibrary.simpleMessage(
+            "Flutter-sýnishorn í Github-geymslu"),
         "bottomNavigationAccountTab":
-            MessageLookupByLibrary.simpleMessage("Account"),
+            MessageLookupByLibrary.simpleMessage("Reikningur"),
         "bottomNavigationAlarmTab":
-            MessageLookupByLibrary.simpleMessage("Alarm"),
+            MessageLookupByLibrary.simpleMessage("Vekjari"),
         "bottomNavigationCalendarTab":
-            MessageLookupByLibrary.simpleMessage("Calendar"),
+            MessageLookupByLibrary.simpleMessage("Dagatal"),
         "bottomNavigationCameraTab":
-            MessageLookupByLibrary.simpleMessage("Camera"),
+            MessageLookupByLibrary.simpleMessage("Myndavél"),
         "bottomNavigationCommentsTab":
-            MessageLookupByLibrary.simpleMessage("Comments"),
+            MessageLookupByLibrary.simpleMessage("Ummæli"),
         "bottomNavigationContentPlaceholder": m1,
-        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "buttonText": MessageLookupByLibrary.simpleMessage("HNAPPUR"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Búa til"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Hjólandi"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Lyfta"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Arinn"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Stór"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Miðlungs"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Lítill"),
+        "chipTurnOnLights":
+            MessageLookupByLibrary.simpleMessage("Kveikja á ljósum"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Þvottavél"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("RAFGULUR"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("BLÁR"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("BLÁGRÁR"),
@@ -88,7 +109,89 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsTeal": MessageLookupByLibrary.simpleMessage("GRÆNBLÁR"),
         "colorsYellow": MessageLookupByLibrary.simpleMessage("GULUR"),
         "craneDescription":
-            MessageLookupByLibrary.simpleMessage("A personalized travel app"),
+            MessageLookupByLibrary.simpleMessage("Sérsniðið ferðaforrit"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("MATUR"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Napólí, Ítalíu"),
+        "craneEat1":
+            MessageLookupByLibrary.simpleMessage("Dallas, Bandaríkjunum"),
+        "craneEat10":
+            MessageLookupByLibrary.simpleMessage("Lissabon, Portúgal"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentínu"),
+        "craneEat3":
+            MessageLookupByLibrary.simpleMessage("Portland, Bandaríkjunum"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("París, Frakklandi"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("Seúl, Suður-Kóreu"),
+        "craneEat6":
+            MessageLookupByLibrary.simpleMessage("Seattle, Bandaríkjunum"),
+        "craneEat7":
+            MessageLookupByLibrary.simpleMessage("Nashville, Bandaríkjunum"),
+        "craneEat8":
+            MessageLookupByLibrary.simpleMessage("Atlanta, Bandaríkjunum"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Madríd, Spáni"),
+        "craneEatRestaurants": m2,
+        "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
+            "Skoða veitingastaði eftir áfangastað"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("FLUG"),
+        "craneFly0":
+            MessageLookupByLibrary.simpleMessage("Aspen, Bandaríkjunum"),
+        "craneFly1":
+            MessageLookupByLibrary.simpleMessage("Big Sur, Bandaríkjunum"),
+        "craneFly10":
+            MessageLookupByLibrary.simpleMessage("Kaíró, Egyptalandi"),
+        "craneFly11":
+            MessageLookupByLibrary.simpleMessage("Lissabon, Portúgal"),
+        "craneFly12":
+            MessageLookupByLibrary.simpleMessage("Napa, Bandaríkjunum"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Balí, Indónesíu"),
+        "craneFly2":
+            MessageLookupByLibrary.simpleMessage("Khumbu-dalur, Nepal"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Perú"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldíveyjum"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Sviss"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Madríd, Spáni"),
+        "craneFly7": MessageLookupByLibrary.simpleMessage(
+            "Mount Rushmore, Bandaríkjunum"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapúr"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Kúbu"),
+        "craneFlyStops": m3,
+        "craneFlySubhead":
+            MessageLookupByLibrary.simpleMessage("Skoða flug eftir áfangastað"),
+        "craneFormDate":
+            MessageLookupByLibrary.simpleMessage("Veldu dagsetningu"),
+        "craneFormDates":
+            MessageLookupByLibrary.simpleMessage("Veldu dagsetningar"),
+        "craneFormDestination":
+            MessageLookupByLibrary.simpleMessage("Veldu áfangastað"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Matsölur"),
+        "craneFormLocation":
+            MessageLookupByLibrary.simpleMessage("Velja staðsetningu"),
+        "craneFormOrigin":
+            MessageLookupByLibrary.simpleMessage("Velja brottfararstað"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("Veldu tíma"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Farþegar"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("SVEFN"),
+        "craneSleep0":
+            MessageLookupByLibrary.simpleMessage("Malé, Maldíveyjum"),
+        "craneSleep1":
+            MessageLookupByLibrary.simpleMessage("Aspen, Bandaríkjunum"),
+        "craneSleep10":
+            MessageLookupByLibrary.simpleMessage("Kaíró, Egyptalandi"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taívan"),
+        "craneSleep2":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu, Perú"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Kúbu"),
+        "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, Sviss"),
+        "craneSleep5":
+            MessageLookupByLibrary.simpleMessage("Big Sur, Bandaríkjunum"),
+        "craneSleep6":
+            MessageLookupByLibrary.simpleMessage("Napa, Bandaríkjunum"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("Portó, Portúgal"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexíkó"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("Lissabon, Portúgal"),
+        "craneSleepProperties": m4,
+        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
+            "Skoða eignir eftir áfangastað"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("Leyfa"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("Eplabaka"),
@@ -112,11 +215,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "Viltu leyfa „Kort“ að fá aðgang að staðsetningu þinni á meðan þú notar forritið?"),
         "cupertinoAlertTiramisu":
             MessageLookupByLibrary.simpleMessage("Tiramisu"),
-        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Hnappur"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("Með bakgrunni"),
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Sýna viðvörun"),
+        "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Aðgerðarkubbar eru hópur valkosta sem ræsa aðgerð sem tengist upprunaefni. Birting aðgerðarkubba ætti að vera kvik og í samhengi í notandaviðmóti."),
+        "demoActionChipTitle":
+            MessageLookupByLibrary.simpleMessage("Aðgerðarkubbur"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Viðvörunargluggi upplýsir notanda um aðstæður sem krefjast staðfestingar. Viðvörunargluggi getur haft titil og lista yfir aðgerðir."),
         "demoAlertDialogTitle":
@@ -124,42 +231,50 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Viðvörun með titli"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
+            "Yfirlitsstikur neðst birta þrjá til fimm áfangastaði neðst á skjánum. Hver áfangastaður er auðkenndur með tákni og valfrjálsu textamerki. Þegar ýtt er á yfirlitstákn neðst fer notandinn á efstu staðsetninguna sem tengist tákninu."),
         "demoBottomNavigationPersistentLabels":
-            MessageLookupByLibrary.simpleMessage("Persistent labels"),
+            MessageLookupByLibrary.simpleMessage("Föst merki"),
         "demoBottomNavigationSelectedLabel":
-            MessageLookupByLibrary.simpleMessage("Selected label"),
+            MessageLookupByLibrary.simpleMessage("Valið merki"),
         "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation with cross-fading views"),
+            "Yfirlitssvæði neðst með víxldofnandi yfirliti"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom navigation"),
-        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Yfirlit neðst"),
+        "demoBottomSheetAddLabel":
+            MessageLookupByLibrary.simpleMessage("Bæta við"),
         "demoBottomSheetButtonText":
-            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
-        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
-        "demoBottomSheetItem": m2,
+            MessageLookupByLibrary.simpleMessage("SÝNA BLAÐ NEÐST"),
+        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Haus"),
+        "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
+            "Gluggablað neðst kemur í stað valmyndar eða glugga og kemur í veg fyrir að notandinn noti aðra hluta forritsins."),
         "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Gluggablað neðst"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
+                "Fast blað neðst birtir upplýsingar til viðbótar við aðalefni forritsins. Fast blað neðst er sýnilegt þótt notandinn noti aðra hluta forritsins."),
         "demoBottomSheetPersistentTitle":
-            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Fast blað neðst"),
         "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Persistent and modal bottom sheets"),
+            "Föst blöð og gluggablöð neðst"),
         "demoBottomSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Blað neðst"),
         "demoBottomTextFieldsTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Textareitir"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "Sléttur, upphleyptur, með útlínum og fleira"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Hnappar"),
+        "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Þjappaðar einingar sem tákna inntak, eigind eða aðgerð"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Kubbar"),
+        "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Valkubbar tákna eitt val úr mengi. Valkubbar innihalda tengdan lýsandi texta eða flokka."),
+        "demoChoiceChipTitle":
+            MessageLookupByLibrary.simpleMessage("Valkubbur"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Kóðasýnishorn"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "Color and color swatch constants which represent Material Design\'s color palette."),
+            "Fastar fyrir liti og litaprufur sem standa fyrir litaspjald nýju útlitshönnunarinnar."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
             "Allir fyrirfram skilgreindu litirnir"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("Litir"),
@@ -174,9 +289,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
             "Viðvörunargluggi upplýsir notanda um aðstæður sem krefjast staðfestingar. Viðvörunargluggi getur haft titil, efni og lista yfir aðgerðir. Titillinn birtist fyrir ofan efnið og aðgerðirnar birtast fyrir neðan efnið."),
         "demoCupertinoAlertTitle":
-            MessageLookupByLibrary.simpleMessage("Alert"),
+            MessageLookupByLibrary.simpleMessage("Tilkynning"),
         "demoCupertinoAlertWithTitleTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage("Tilkynning með titli"),
         "demoCupertinoAlertsSubtitle": MessageLookupByLibrary.simpleMessage(
             "Viðvörunargluggar í iOS-stíl"),
         "demoCupertinoAlertsTitle":
@@ -186,12 +301,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("Hnappar með iOS-stíl"),
         "demoCupertinoButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Buttons"),
+            MessageLookupByLibrary.simpleMessage("Hnappar"),
+        "demoCupertinoSegmentedControlDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+        "demoCupertinoSegmentedControlSubtitle":
+            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+        "demoCupertinoSegmentedControlTitle":
+            MessageLookupByLibrary.simpleMessage("Segmented Control"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Einfaldur, tilkynning og allur skjárinn"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Gluggar"),
         "demoDocumentationTooltip": MessageLookupByLibrary.simpleMessage(
             "Upplýsingaskjöl um forritaskil"),
+        "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Síukubbar nota merki eða lýsandi orð til að sía efni."),
+        "demoFilterChipTitle": MessageLookupByLibrary.simpleMessage("Síuflaga"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Sléttur hnappur birtir blekslettu þegar ýtt er á hann en lyftist ekki. Notið slétta hnappa í tækjastikum, gluggum og í línum með fyllingu"),
         "demoFlatButtonTitle":
@@ -205,8 +330,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoFullscreenDialogTitle":
             MessageLookupByLibrary.simpleMessage("Allur skjárinn"),
         "demoFullscreenTooltip":
-            MessageLookupByLibrary.simpleMessage("Full Screen"),
+            MessageLookupByLibrary.simpleMessage("Allur skjárinn"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Upplýsingar"),
+        "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Innsláttarkubbar tákna flóknar upplýsingar á borð við einingar (einstakling, stað eða hlut) eða samtalstexta á þjöppuðu sniði."),
+        "demoInputChipTitle":
+            MessageLookupByLibrary.simpleMessage("Innsláttarkubbur"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Ekki var hægt að birta vefslóð:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Valkostir"),
@@ -223,66 +352,67 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Einfalt"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
-        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
+            "Textareitir gera notendum kleift að slá texta inn í notendaviðmót. Þeir eru yfirleitt á eyðublöðum og í gluggum."),
+        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("Netfang"),
         "demoTextFieldEnterPassword":
-            MessageLookupByLibrary.simpleMessage("Please enter a password."),
+            MessageLookupByLibrary.simpleMessage("Sláðu inn aðgangsorð."),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### - Enter a US phone number."),
+            "(###) ###-#### – sláðu inn bandarískt símanúmer."),
         "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
-            "Please fix the errors in red before submitting."),
+            "Lagaðu rauðar villur með áður en þú sendir."),
         "demoTextFieldHidePasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Hide password"),
+            MessageLookupByLibrary.simpleMessage("Fela aðgangsorð"),
         "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
-            "Keep it short, this is just a demo."),
+            "Hafðu þetta stutt, þetta er einungis sýniútgáfa."),
         "demoTextFieldLifeStory":
-            MessageLookupByLibrary.simpleMessage("Life story"),
-        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
-        "demoTextFieldNameHasPhoneNumber": m3,
+            MessageLookupByLibrary.simpleMessage("Æviskeið"),
+        "demoTextFieldNameField":
+            MessageLookupByLibrary.simpleMessage("Heiti*"),
+        "demoTextFieldNameHasPhoneNumber": m6,
         "demoTextFieldNameRequired":
-            MessageLookupByLibrary.simpleMessage("Name is required."),
+            MessageLookupByLibrary.simpleMessage("Nafn er áskilið."),
         "demoTextFieldNoMoreThan":
-            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+            MessageLookupByLibrary.simpleMessage("Ekki fleiri en 8 stafir."),
         "demoTextFieldOnlyAlphabeticalChars":
-            MessageLookupByLibrary.simpleMessage(
-                "Please enter only alphabetical characters."),
+            MessageLookupByLibrary.simpleMessage("Sláðu aðeins inn bókstafi."),
         "demoTextFieldPassword":
-            MessageLookupByLibrary.simpleMessage("Password*"),
+            MessageLookupByLibrary.simpleMessage("Aðgangsorð*"),
         "demoTextFieldPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+            MessageLookupByLibrary.simpleMessage(
+                "Aðgangsorðin passa ekki saman"),
         "demoTextFieldPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("Phone number*"),
-        "demoTextFieldRequiredField":
-            MessageLookupByLibrary.simpleMessage("* indicates required field"),
-        "demoTextFieldRetypePassword":
-            MessageLookupByLibrary.simpleMessage("Re-type password*"),
-        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+            MessageLookupByLibrary.simpleMessage("Símanúmer*"),
+        "demoTextFieldRequiredField": MessageLookupByLibrary.simpleMessage(
+            "* gefur til kynna áskilinn reit"),
+        "demoTextFieldRetypePassword": MessageLookupByLibrary.simpleMessage(
+            "Sláðu aðgangsorðið aftur inn*"),
+        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Laun"),
         "demoTextFieldShowPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Show password"),
-        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
+            MessageLookupByLibrary.simpleMessage("Sýna aðgangsorð"),
+        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SENDA"),
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Single line of editable text and numbers"),
+            "Ein lína með texta og tölum sem hægt er að breyta"),
         "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
+            "Segðu okkur frá þér (skrifaðu til dæmis hvað þú vinnur við eða hver áhugmál þín eru)"),
         "demoTextFieldTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Textareitir"),
         "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
         "demoTextFieldWhatDoPeopleCallYou":
-            MessageLookupByLibrary.simpleMessage("What do people call you?"),
+            MessageLookupByLibrary.simpleMessage("Hvað kallar fólk þig?"),
         "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
+            MessageLookupByLibrary.simpleMessage("Hvar getum við náð í þig?"),
         "demoTextFieldYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("Your email address"),
+            MessageLookupByLibrary.simpleMessage("Netfangið þitt"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Hægt er að nota hnappa til að slökkva og kveikja á flokkun tengdra valkosta. Til að leggja áherslu á flokka tengdra hnappa til að slökkva og kveikja ætti flokkur að vera með sameiginlegan geymi"),
         "demoToggleButtonTitle": MessageLookupByLibrary.simpleMessage(
             "Hnappar til að slökkva og kveikja"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Definitions for the various typographical styles found in Material Design."),
+            "Skilgreiningar mismunandi leturstíla sem finna má í nýju útlitshönnuninni."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined text styles"),
+            "Allir fyrirframskilgreindir textastílar"),
         "demoTypographyTitle":
-            MessageLookupByLibrary.simpleMessage("Typography"),
+            MessageLookupByLibrary.simpleMessage("Leturgerð"),
         "dialogAddAccount":
             MessageLookupByLibrary.simpleMessage("Bæta reikningi við"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("SAMÞYKKJA"),
@@ -300,7 +430,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Leyfðu Google að hjálpa forritum að ákvarða staðsetningu. Í þessu felst að senda nafnlaus staðsetningargögn til Google, jafnvel þótt engin forrit séu í gangi."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Nota staðsetningarþjónustu Google?"),
-        "dialogSelectedOption": m4,
+        "dialogSelectedOption": m7,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Velja afritunarreikning"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("SÝNA GLUGGA"),
@@ -309,234 +439,251 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("Flokkar"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Myndasafn"),
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("Car Savings"),
+            MessageLookupByLibrary.simpleMessage("Bílasparnaður"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Checking"),
+            MessageLookupByLibrary.simpleMessage("Athugar"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("Home Savings"),
-        "rallyAccountDataVacation":
-            MessageLookupByLibrary.simpleMessage("Vacation"),
+            MessageLookupByLibrary.simpleMessage("Heimilissparnaður"),
+        "rallyAccountDataVacation": MessageLookupByLibrary.simpleMessage("Frí"),
         "rallyAccountDetailDataAccountOwner":
-            MessageLookupByLibrary.simpleMessage("Account Owner"),
+            MessageLookupByLibrary.simpleMessage("Reikningseigandi"),
         "rallyAccountDetailDataAnnualPercentageYield":
-            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+            MessageLookupByLibrary.simpleMessage("Ársávöxtun í prósentum"),
         "rallyAccountDetailDataInterestPaidLastYear":
-            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+            MessageLookupByLibrary.simpleMessage(
+                "Greiddir vextir á síðasta ári"),
         "rallyAccountDetailDataInterestRate":
-            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+            MessageLookupByLibrary.simpleMessage("Vextir"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+            MessageLookupByLibrary.simpleMessage("Vextir á árinu"),
         "rallyAccountDetailDataNextStatement":
-            MessageLookupByLibrary.simpleMessage("Next Statement"),
-        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
-        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
-        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m5,
-        "rallyAlertsMessageCheckingAccount": m6,
-        "rallyAlertsMessageHeadsUpShopping": m7,
-        "rallyAlertsMessageSpentOnRestaurants": m8,
-        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
-        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+            MessageLookupByLibrary.simpleMessage("Næsta yfirlit"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Samtals"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Reikningar"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Tilkynningar"),
+        "rallyAlertsMessageATMFees": m8,
+        "rallyAlertsMessageCheckingAccount": m9,
+        "rallyAlertsMessageHeadsUpShopping": m10,
+        "rallyAlertsMessageSpentOnRestaurants": m11,
+        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("Reikningar"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Til greiðslu"),
         "rallyBudgetCategoryClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
+            MessageLookupByLibrary.simpleMessage("Klæðnaður"),
         "rallyBudgetCategoryCoffeeShops":
-            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+            MessageLookupByLibrary.simpleMessage("Kaffihús"),
         "rallyBudgetCategoryGroceries":
-            MessageLookupByLibrary.simpleMessage("Groceries"),
+            MessageLookupByLibrary.simpleMessage("Matvörur"),
         "rallyBudgetCategoryRestaurants":
-            MessageLookupByLibrary.simpleMessage("Restaurants"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
-        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
-        "rallyDescription":
-            MessageLookupByLibrary.simpleMessage("A personal finance app"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
-        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
-        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+            MessageLookupByLibrary.simpleMessage("Veitingastaðir"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Eftir"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Kostnaðarmörk"),
+        "rallyDescription": MessageLookupByLibrary.simpleMessage(
+            "Forrit fyrir fjármál einstaklinga"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("EFTIR"),
+        "rallyLoginButtonLogin":
+            MessageLookupByLibrary.simpleMessage("SKRÁ INN"),
+        "rallyLoginLabelLogin":
+            MessageLookupByLibrary.simpleMessage("Skrá inn"),
         "rallyLoginLoginToRally":
-            MessageLookupByLibrary.simpleMessage("Login to Rally"),
+            MessageLookupByLibrary.simpleMessage("Skrá inn í Rally"),
         "rallyLoginNoAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Ertu ekki með reikning?"),
+        "rallyLoginPassword":
+            MessageLookupByLibrary.simpleMessage("Aðgangsorð"),
         "rallyLoginRememberMe":
-            MessageLookupByLibrary.simpleMessage("Remember Me"),
-        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
-        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
-        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+            MessageLookupByLibrary.simpleMessage("Muna eftir mér"),
+        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SKRÁ MIG"),
+        "rallyLoginUsername":
+            MessageLookupByLibrary.simpleMessage("Notandanafn"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SJÁ ALLT"),
         "rallySettingsFindAtms":
-            MessageLookupByLibrary.simpleMessage("Find ATMs"),
-        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+            MessageLookupByLibrary.simpleMessage("Finna hraðbanka"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Hjálp"),
         "rallySettingsManageAccounts":
-            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+            MessageLookupByLibrary.simpleMessage("Stjórna reikningum"),
         "rallySettingsNotifications":
-            MessageLookupByLibrary.simpleMessage("Notifications"),
+            MessageLookupByLibrary.simpleMessage("Tilkynningar"),
         "rallySettingsPaperlessSettings":
-            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
-        "rallySettingsPasscodeAndTouchId":
-            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+            MessageLookupByLibrary.simpleMessage("Stillingar Paperless"),
+        "rallySettingsPasscodeAndTouchId": MessageLookupByLibrary.simpleMessage(
+            "Aðgangskóði og snertiauðkenni"),
         "rallySettingsPersonalInformation":
-            MessageLookupByLibrary.simpleMessage("Personal Information"),
-        "rallySettingsSignOut":
-            MessageLookupByLibrary.simpleMessage("Sign out"),
+            MessageLookupByLibrary.simpleMessage("Persónuupplýsingar"),
+        "rallySettingsSignOut": MessageLookupByLibrary.simpleMessage("Skrá út"),
         "rallySettingsTaxDocuments":
-            MessageLookupByLibrary.simpleMessage("Tax Documents"),
-        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
-        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
-        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
-        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
-        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
+            MessageLookupByLibrary.simpleMessage("Skattaskjöl"),
+        "rallyTitleAccounts":
+            MessageLookupByLibrary.simpleMessage("REIKNINGAR"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("REIKNINGAR"),
+        "rallyTitleBudgets":
+            MessageLookupByLibrary.simpleMessage("KOSTNAÐARMÖRK"),
+        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("YFIRLIT"),
+        "rallyTitleSettings":
+            MessageLookupByLibrary.simpleMessage("STILLINGAR"),
         "settingsAbout":
-            MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
-        "settingsAttribution": MessageLookupByLibrary.simpleMessage(
-            "Designed by TOASTER in London"),
-        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
+            MessageLookupByLibrary.simpleMessage("Um Flutter Gallery"),
+        "settingsAttribution":
+            MessageLookupByLibrary.simpleMessage("Hannað af TOASTER í London"),
+        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dökkt"),
         "settingsFeedback":
-            MessageLookupByLibrary.simpleMessage("Send feedback"),
-        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Light"),
-        "settingsLocale": MessageLookupByLibrary.simpleMessage("Locale"),
+            MessageLookupByLibrary.simpleMessage("Senda ábendingu"),
+        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Ljóst"),
+        "settingsLocale": MessageLookupByLibrary.simpleMessage("Tungumálskóði"),
         "settingsPlatformAndroid":
             MessageLookupByLibrary.simpleMessage("Android"),
         "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
-            MessageLookupByLibrary.simpleMessage("Platform mechanics"),
-        "settingsSlowMotion":
-            MessageLookupByLibrary.simpleMessage("Slow motion"),
-        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
+            MessageLookupByLibrary.simpleMessage("Uppbygging kerfis"),
+        "settingsSlowMotion": MessageLookupByLibrary.simpleMessage("Hægspilun"),
+        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("Kerfi"),
         "settingsTextDirection":
-            MessageLookupByLibrary.simpleMessage("Text direction"),
-        "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
-        "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
+            MessageLookupByLibrary.simpleMessage("Textastefna"),
+        "settingsTextDirectionLTR":
+            MessageLookupByLibrary.simpleMessage("Vinstri til hægri"),
+        "settingsTextDirectionLocaleBased":
+            MessageLookupByLibrary.simpleMessage("Based on locale"),
+        "settingsTextDirectionRTL":
+            MessageLookupByLibrary.simpleMessage("Hægri til vinstri"),
         "settingsTextScaling":
-            MessageLookupByLibrary.simpleMessage("Text scaling"),
-        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
+            MessageLookupByLibrary.simpleMessage("Textastærð"),
+        "settingsTextScalingHuge":
+            MessageLookupByLibrary.simpleMessage("Risastórt"),
         "settingsTextScalingLarge":
-            MessageLookupByLibrary.simpleMessage("Large"),
+            MessageLookupByLibrary.simpleMessage("Stórt"),
         "settingsTextScalingNormal":
-            MessageLookupByLibrary.simpleMessage("Normal"),
+            MessageLookupByLibrary.simpleMessage("Venjulegt"),
         "settingsTextScalingSmall":
-            MessageLookupByLibrary.simpleMessage("Small"),
-        "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Lítið"),
+        "settingsTheme": MessageLookupByLibrary.simpleMessage("Þema"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("Stillingar"),
         "shrineCancelButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CANCEL"),
+            MessageLookupByLibrary.simpleMessage("HÆTTA VIÐ"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m9,
-        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+            MessageLookupByLibrary.simpleMessage("HREINSA KÖRFU"),
+        "shrineCartItemCount": m13,
+        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("KARFA"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("Shipping:"),
+            MessageLookupByLibrary.simpleMessage("Sending:"),
         "shrineCartSubtotalCaption":
-            MessageLookupByLibrary.simpleMessage("Subtotal:"),
-        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
-        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+            MessageLookupByLibrary.simpleMessage("Millisamtala:"),
+        "shrineCartTaxCaption":
+            MessageLookupByLibrary.simpleMessage("Skattur:"),
+        "shrineCartTotalCaption":
+            MessageLookupByLibrary.simpleMessage("SAMTALS"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("Accessories"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+            MessageLookupByLibrary.simpleMessage("AUKABÚNAÐUR"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALLT"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
+            MessageLookupByLibrary.simpleMessage("FÖT"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HEIMA"),
         "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+            MessageLookupByLibrary.simpleMessage("Tískulegt verslunarforrit"),
         "shrineLoginPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Aðgangsorð"),
         "shrineLoginUsernameLabel":
-            MessageLookupByLibrary.simpleMessage("Username"),
+            MessageLookupByLibrary.simpleMessage("Notandanafn"),
         "shrineLogoutButtonCaption":
-            MessageLookupByLibrary.simpleMessage("LOGOUT"),
-        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
-        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+            MessageLookupByLibrary.simpleMessage("SKRÁ ÚT"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("VALMYND"),
+        "shrineNextButtonCaption":
+            MessageLookupByLibrary.simpleMessage("ÁFRAM"),
         "shrineProductBlueStoneMug":
-            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
-        "shrineProductCeriseScallopTee":
-            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+            MessageLookupByLibrary.simpleMessage("Blár steinbolli"),
+        "shrineProductCeriseScallopTee": MessageLookupByLibrary.simpleMessage(
+            "Rauðbleikur bolur með ávölum faldi"),
         "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+            MessageLookupByLibrary.simpleMessage("Chambray-munnþurrkur"),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+            MessageLookupByLibrary.simpleMessage("Chambray-skyrta"),
         "shrineProductClassicWhiteCollar":
-            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+            MessageLookupByLibrary.simpleMessage("Klassísk hvít skyrta"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+            MessageLookupByLibrary.simpleMessage("Clay-peysa"),
         "shrineProductCopperWireRack":
-            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+            MessageLookupByLibrary.simpleMessage("Koparvírarekkki"),
         "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+            MessageLookupByLibrary.simpleMessage("Smáröndóttur bolur"),
         "shrineProductGardenStrand":
-            MessageLookupByLibrary.simpleMessage("Garden strand"),
+            MessageLookupByLibrary.simpleMessage("Hálsmen"),
         "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+            MessageLookupByLibrary.simpleMessage("Gatsby-hattur"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
+            MessageLookupByLibrary.simpleMessage("Herrajakki"),
         "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+            MessageLookupByLibrary.simpleMessage("Þrjú hliðarborð"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+            MessageLookupByLibrary.simpleMessage("Rauðbrúnn trefill"),
         "shrineProductGreySlouchTank":
-            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+            MessageLookupByLibrary.simpleMessage("Grár, víður hlýrabolur"),
         "shrineProductHurrahsTeaSet":
-            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+            MessageLookupByLibrary.simpleMessage("Hurrahs-tesett"),
         "shrineProductKitchenQuattro":
             MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
         "shrineProductNavyTrousers":
-            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+            MessageLookupByLibrary.simpleMessage("Dökkbláar buxur"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m10,
-        "shrineProductQuantity": m11,
+            MessageLookupByLibrary.simpleMessage("Ljós skokkur"),
+        "shrineProductPrice": m14,
+        "shrineProductQuantity": m15,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Quartet table"),
+            MessageLookupByLibrary.simpleMessage("Ferhyrnt borð"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+            MessageLookupByLibrary.simpleMessage("Regnbakki"),
         "shrineProductRamonaCrossover":
-            MessageLookupByLibrary.simpleMessage("Ramona crossover"),
+            MessageLookupByLibrary.simpleMessage("Ramona-axlarpoki"),
         "shrineProductSeaTunic":
-            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+            MessageLookupByLibrary.simpleMessage("Strandskokkur"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
+            MessageLookupByLibrary.simpleMessage("Þunn prjónapeysa"),
         "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
+            MessageLookupByLibrary.simpleMessage("Bolur með uppbrettum ermum"),
         "shrineProductShrugBag":
-            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+            MessageLookupByLibrary.simpleMessage("Axlarpoki"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
+            MessageLookupByLibrary.simpleMessage("Soothe-keramiksett"),
         "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+            MessageLookupByLibrary.simpleMessage("Stella-sólgleraugu"),
         "shrineProductStrutEarrings":
-            MessageLookupByLibrary.simpleMessage("Strut earrings"),
-        "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+            MessageLookupByLibrary.simpleMessage("Strut-eyrnalokkar"),
+        "shrineProductSucculentPlanters": MessageLookupByLibrary.simpleMessage(
+            "Blómapottar fyrir þykkblöðunga"),
         "shrineProductSunshirtDress":
-            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+            MessageLookupByLibrary.simpleMessage("Sunshirt-kjóll"),
         "shrineProductSurfAndPerfShirt":
-            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+            MessageLookupByLibrary.simpleMessage("Surf and perf-skyrta"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+            MessageLookupByLibrary.simpleMessage("Vagabond-taska"),
         "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+            MessageLookupByLibrary.simpleMessage("Sokkar með röndum"),
         "shrineProductWalterHenleyWhite":
-            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+            MessageLookupByLibrary.simpleMessage("Walter Henley (hvítur)"),
         "shrineProductWeaveKeyring":
-            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+            MessageLookupByLibrary.simpleMessage("Ofin lyklakippa"),
         "shrineProductWhitePinstripeShirt":
-            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+            MessageLookupByLibrary.simpleMessage("Hvít teinótt skyrta"),
         "shrineProductWhitneyBelt":
-            MessageLookupByLibrary.simpleMessage("Whitney belt"),
+            MessageLookupByLibrary.simpleMessage("Whitney belti"),
         "starterAppDescription":
-            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m12,
-        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
+            MessageLookupByLibrary.simpleMessage("Hraðvirkt upphafsútlit"),
+        "starterAppDrawerItem": m16,
+        "starterAppGenericBody":
+            MessageLookupByLibrary.simpleMessage("Meginmál"),
         "starterAppGenericButton":
-            MessageLookupByLibrary.simpleMessage("BUTTON"),
+            MessageLookupByLibrary.simpleMessage("HNAPPUR"),
         "starterAppGenericHeadline":
-            MessageLookupByLibrary.simpleMessage("Headline"),
+            MessageLookupByLibrary.simpleMessage("Fyrirsögn"),
         "starterAppGenericSubtitle":
-            MessageLookupByLibrary.simpleMessage("Subtitle"),
-        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
-        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
-        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Undirtitill"),
+        "starterAppGenericTitle":
+            MessageLookupByLibrary.simpleMessage("Titill"),
+        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Ræsiforrit"),
+        "starterAppTooltipAdd":
+            MessageLookupByLibrary.simpleMessage("Bæta við"),
         "starterAppTooltipFavorite":
-            MessageLookupByLibrary.simpleMessage("Favorite"),
+            MessageLookupByLibrary.simpleMessage("Eftirlæti"),
         "starterAppTooltipSearch":
-            MessageLookupByLibrary.simpleMessage("Search"),
-        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
+            MessageLookupByLibrary.simpleMessage("Leita"),
+        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Deila")
       };
 }

@@ -20,53 +20,76 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ml';
 
   static m0(value) =>
-      "To see the source code for this app, please visit the ${value}.";
+      "ഈ ആപ്പിനായുള്ള ഉറവിട കോഡ് കാണുന്നതിന്, ${value} സന്ദർശിക്കുക.";
 
-  static m1(title) => "Placeholder for ${title} tab";
+  static m1(title) => "${title} ടാബിനുള്ള പ്ലെയ്സ്‌ഹോൾഡർ";
 
-  static m2(value) => "Item ${value}";
+  static m2(totalRestaurants) =>
+      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
 
-  static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m3(numberOfStops) =>
+      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
 
-  static m4(value) => "നിങ്ങൾ തിരഞ്ഞെടുത്തത്: \"${value}\"";
+  static m4(totalProperties) =>
+      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m5(value) => "ഇനം ${value}";
 
-  static m6(percent) =>
-      "Good work! Your checking account is ${percent} higher than last month.";
+  static m6(name, phoneNumber) =>
+      "${name} എന്ന വ്യക്തിയുടെ ഫോൺ നമ്പർ ${phoneNumber} ആണ്";
 
-  static m7(percent) =>
-      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+  static m7(value) => "നിങ്ങൾ തിരഞ്ഞെടുത്തത്: \"${value}\"";
 
-  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m8(amount) => "ഈ മാസം നിങ്ങൾ ${amount} ATM ഫീസ് അടച്ചു";
 
-  static m9(quantity) => "${quantity} ITEMS";
+  static m9(percent) =>
+      "തകർപ്പൻ പ്രകടനം! നിങ്ങളുടെ ചെക്കിംഗ് അക്കൗണ്ട് കഴിഞ്ഞ മാസത്തേക്കാൾ ${percent} കൂടുതലാണ്.";
 
-  static m10(price) => "x ${price}";
+  static m10(percent) =>
+      "ശ്രദ്ധിക്കൂ, നിങ്ങൾ ഈ മാസത്തെ ഷോപ്പിംഗ് ബജറ്റിന്റെ ${percent} ഉപയോഗിച്ചു.";
 
-  static m11(quantity) => "Quantity: ${quantity}";
+  static m11(amount) => "ഈ ആഴ്ച റസ്റ്റോറന്റുകളിൽ നിങ്ങൾ ${amount} ചെലവാക്കി.";
 
-  static m12(value) => "Item ${value}";
+  static m12(count) =>
+      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+
+  static m13(quantity) =>
+      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+
+  static m14(price) => "x ${price}";
+
+  static m15(quantity) => "അളവ്: ${quantity}";
+
+  static m16(value) => "ഇനം ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "aboutDialogDescription": m0,
-        "aboutFlutterSamplesRepo":
-            MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
+        "aboutFlutterSamplesRepo": MessageLookupByLibrary.simpleMessage(
+            "ഫ്ലട്ടർ സാമ്പിൾസ് ഗിതുബ് റെപോ"),
         "bottomNavigationAccountTab":
-            MessageLookupByLibrary.simpleMessage("Account"),
+            MessageLookupByLibrary.simpleMessage("അക്കൗണ്ട്"),
         "bottomNavigationAlarmTab":
-            MessageLookupByLibrary.simpleMessage("Alarm"),
+            MessageLookupByLibrary.simpleMessage("അലാറം"),
         "bottomNavigationCalendarTab":
-            MessageLookupByLibrary.simpleMessage("Calendar"),
+            MessageLookupByLibrary.simpleMessage("കലണ്ടർ"),
         "bottomNavigationCameraTab":
-            MessageLookupByLibrary.simpleMessage("Camera"),
+            MessageLookupByLibrary.simpleMessage("ക്യാമറ"),
         "bottomNavigationCommentsTab":
-            MessageLookupByLibrary.simpleMessage("Comments"),
+            MessageLookupByLibrary.simpleMessage("കമന്റുകൾ"),
         "bottomNavigationContentPlaceholder": m1,
-        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "buttonText": MessageLookupByLibrary.simpleMessage("ബട്ടൺ"),
         "buttonTextCreate":
             MessageLookupByLibrary.simpleMessage("സൃഷ്‌ടിക്കുക"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipTurnOnLights":
+            MessageLookupByLibrary.simpleMessage("Turn on lights"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
         "colorsAmber":
             MessageLookupByLibrary.simpleMessage("മഞ്ഞ കലർന്ന ഓറഞ്ച് വർണ്ണം"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("നീല"),
@@ -90,8 +113,84 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsRed": MessageLookupByLibrary.simpleMessage("ചുവപ്പ്"),
         "colorsTeal": MessageLookupByLibrary.simpleMessage("ടീൽ"),
         "colorsYellow": MessageLookupByLibrary.simpleMessage("മഞ്ഞ"),
-        "craneDescription":
-            MessageLookupByLibrary.simpleMessage("A personalized travel app"),
+        "craneDescription": MessageLookupByLibrary.simpleMessage(
+            "വ്യക്തിപരമാക്കിയ യാത്രാ ആപ്പ്"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
+        "craneEat1":
+            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
+        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
+        "craneEat3":
+            MessageLookupByLibrary.simpleMessage("Portland, United States"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
+        "craneEat6":
+            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
+        "craneEat7":
+            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
+        "craneEat8":
+            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneEatRestaurants": m2,
+        "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
+            "Explore Restaurants by Destination"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
+        "craneFly0":
+            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
+        "craneFly1":
+            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
+        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneFly12":
+            MessageLookupByLibrary.simpleMessage("Napa, United States"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+        "craneFly2":
+            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneFly5":
+            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneFly7": MessageLookupByLibrary.simpleMessage(
+            "Mount Rushmore, United States"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneFlyStops": m3,
+        "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
+            "Explore Flights by Destination"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
+        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+        "craneFormDestination":
+            MessageLookupByLibrary.simpleMessage("Choose Destination"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+        "craneFormLocation":
+            MessageLookupByLibrary.simpleMessage("Select Location"),
+        "craneFormOrigin":
+            MessageLookupByLibrary.simpleMessage("Choose Origin"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneSleep1":
+            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+        "craneSleep2":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneSleep4":
+            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
+        "craneSleep5":
+            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
+        "craneSleep6":
+            MessageLookupByLibrary.simpleMessage("Napa, United States"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
+        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneSleepProperties": m4,
+        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
+            "Explore Properties by Destination"),
         "cupertinoAlertAllow":
             MessageLookupByLibrary.simpleMessage("അനുവദിക്കുക"),
         "cupertinoAlertApplePie":
@@ -116,11 +215,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "ആപ്പ് ഉപയോഗിക്കുമ്പോൾ നിങ്ങളുടെ ലൊക്കേഷൻ ആക്‌സസ് ചെയ്യാൻ \"Maps\"-നെ അനുവദിക്കണോ?"),
         "cupertinoAlertTiramisu":
             MessageLookupByLibrary.simpleMessage("തിറാമിസു"),
-        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("ബട്ടൺ"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("പശ്ചാത്തലവുമായി"),
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("മുന്നറിയിപ്പ് കാണിക്കുക"),
+        "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+        "demoActionChipTitle":
+            MessageLookupByLibrary.simpleMessage("Action Chip"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "മുന്നറിയിപ്പ് ഡയലോഗ്, അംഗീകാരം ആവശ്യമുള്ള സാഹചര്യങ്ങളെക്കുറിച്ച് ഉപയോക്താവിനെ അറിയിക്കുന്നു. മുന്നറിയിപ്പ് ഡയലോഗിന് ഒരു ഓപ്‌ഷണൽ പേരും പ്രവർത്തനങ്ങളുടെ ഓപ്‌ഷണൽ പട്ടികയും ഉണ്ട്."),
         "demoAlertDialogTitle":
@@ -128,41 +231,50 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoAlertTitleDialogTitle": MessageLookupByLibrary.simpleMessage(
             "പേര് ഉപയോഗിച്ച് മുന്നറിയിപ്പ്"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
+            "സ്‌ക്രീനിന്റെ ചുവടെ മൂന്ന് മുതൽ അഞ്ച് വരെ ലക്ഷ്യസ്ഥാനങ്ങൾ ബോട്ടം നാവിഗേഷൻ ബാറുകൾ പ്രദർശിപ്പിക്കുന്നു. ഓരോ ലക്ഷ്യസ്ഥാനവും ഐക്കൺ, ഓപ്ഷണൽ ടെക്സ്റ്റ് ലേബൽ എന്നിവയിലൂടെ പ്രതിനിധീകരിക്കപ്പെടുന്നു. ബോട്ടം നാവിഗേഷൻ ഐക്കൺ ടാപ്പ് ചെയ്യുമ്പോൾ, ഉപയോക്താവിനെ ആ ഐക്കണുമായി ബന്ധപ്പെട്ട ഉയർന്ന ലെവൽ നാവിഗേഷൻ ലക്ഷ്യസ്ഥാനത്തേക്ക് കൊണ്ടുപോകും."),
         "demoBottomNavigationPersistentLabels":
-            MessageLookupByLibrary.simpleMessage("Persistent labels"),
+            MessageLookupByLibrary.simpleMessage("സ്ഥിരമായ ലേബലുകൾ"),
         "demoBottomNavigationSelectedLabel":
-            MessageLookupByLibrary.simpleMessage("Selected label"),
+            MessageLookupByLibrary.simpleMessage("ലേബൽ തിരഞ്ഞെടുത്തു"),
         "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation with cross-fading views"),
+            "ക്രോസ്-ഫേഡിംഗ് കാഴ്‌ചകളുള്ള ബോട്ടം നാവിഗേഷൻ"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom navigation"),
-        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("ബോട്ടം നാവിഗേഷൻ"),
+        "demoBottomSheetAddLabel":
+            MessageLookupByLibrary.simpleMessage("ചേർക്കുക"),
         "demoBottomSheetButtonText":
-            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
-        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
-        "demoBottomSheetItem": m2,
+            MessageLookupByLibrary.simpleMessage("ബോട്ടം ഷീറ്റ് കാണിക്കുക"),
+        "demoBottomSheetHeader":
+            MessageLookupByLibrary.simpleMessage("തലക്കെട്ട്"),
+        "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
+            "മോഡൽ ബോട്ടം ഷീറ്റ് മെനുവിനോ ഡയലോഗിനോ ഉള്ള ബദലാണ്, ഇത് ബാക്കി ആപ്പുമായി ഇടപഴകുന്നതിൽ നിന്ന് ഉപയോക്താവിനെ തടയുന്നു."),
         "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("മോഡൽ ബോട്ടം ഷീറ്റ്"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
+                "ആപ്പിന്റെ പ്രാഥമിക ഉള്ളടക്കത്തിന് അനുബന്ധമായ വിവരങ്ങൾ സ്ഥിരമായ ബോട്ടം ഷീറ്റ് കാണിക്കുന്നു. ഉപയോക്താവ് ആപ്പിന്റെ മറ്റ് ഭാഗങ്ങളുമായി സംവദിക്കുമ്പോഴും സ്ഥിരമായ ഒരു ബോട്ടം ഷീറ്റ് ദൃശ്യമാകും."),
         "demoBottomSheetPersistentTitle":
-            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("സ്ഥിരമായ ബോട്ടം ഷീറ്റ്"),
         "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Persistent and modal bottom sheets"),
+            "സ്ഥിരമായ, മോഡൽ ബോട്ടം ഷീറ്റുകൾ"),
         "demoBottomSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("ബോട്ടം ഷീറ്റ്"),
         "demoBottomTextFieldsTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("ടെക്‌സ്റ്റ് ഫീൽഡുകൾ"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "ഫ്ലാറ്റ്, റെയ്‌സ്‌ഡ്, ഔട്ട്‌ലൈൻ എന്നിവയും മറ്റും"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("ബട്ടണുകൾ"),
+        "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Compact elements that represent an input, attribute, or action"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+        "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+        "demoChoiceChipTitle":
+            MessageLookupByLibrary.simpleMessage("Choice Chip"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("കോഡ് മാതൃക"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "Color and color swatch constants which represent Material Design\'s color palette."),
+            "മെറ്റീരിയൽ രൂപകൽപ്പനയുടെ വർണ്ണ പാലെറ്റിനെ പ്രതിനിധീകരിക്കുന്ന വർണ്ണ, വർണ്ണ സ്വാച്ച് കോൺസ്‌റ്റന്റുകൾ."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
             "എല്ലാ മുൻനിശ്ചയിച്ച വർണ്ണങ്ങളും"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("വർണ്ണങ്ങൾ"),
@@ -178,9 +290,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
             "മുന്നറിയിപ്പ് ഡയലോഗ്, അംഗീകാരം ആവശ്യമുള്ള സാഹചര്യങ്ങളെക്കുറിച്ച് ഉപയോക്താവിനെ അറിയിക്കുന്നു. മുന്നറിയിപ്പ് ഡയലോഗിന് ഒരു ഓപ്‌ഷണൽ പേര്, ഓപ്‌ഷണൽ ഉള്ളടക്കം, പ്രവർത്തനങ്ങളുടെ ഒരു ഓപ്‌ഷണൽ പട്ടിക എന്നിവയുണ്ട്. ഉള്ളടക്കത്തിന്റെ മുകളിൽ പേര്, താഴെ പ്രവർത്തനങ്ങൾ എന്നിവ പ്രദർശിപ്പിക്കുന്നു."),
         "demoCupertinoAlertTitle":
-            MessageLookupByLibrary.simpleMessage("Alert"),
+            MessageLookupByLibrary.simpleMessage("മുന്നറിയിപ്പ്"),
         "demoCupertinoAlertWithTitleTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage(
+                "പേര് ഉപയോഗിച്ചുള്ള മുന്നറിയിപ്പ്"),
         "demoCupertinoAlertsSubtitle": MessageLookupByLibrary.simpleMessage(
             "iOS-സ്റ്റൈലിലുള്ള മുന്നറിയിപ്പ് ഡയലോഗുകൾ"),
         "demoCupertinoAlertsTitle":
@@ -190,12 +303,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS-സ്റ്റൈലിലുള്ള ബട്ടണുകൾ"),
         "demoCupertinoButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Buttons"),
+            MessageLookupByLibrary.simpleMessage("ബട്ടണുകൾ"),
+        "demoCupertinoSegmentedControlDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+        "demoCupertinoSegmentedControlSubtitle":
+            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+        "demoCupertinoSegmentedControlTitle":
+            MessageLookupByLibrary.simpleMessage("Segmented Control"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "ലളിതം, മുന്നറിയിപ്പ്, പൂർണ്ണസ്‌ക്രീൻ എന്നിവ"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("ഡയലോഗുകൾ"),
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API ഡോക്യുമെന്റേഷൻ"),
+        "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Filter chips use tags or descriptive words as a way to filter content."),
+        "demoFilterChipTitle":
+            MessageLookupByLibrary.simpleMessage("Filter Chip"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "ഒരു ഫ്ലാറ്റ് ബട്ടൺ അമർത്തുമ്പോൾ ഒരു ഇങ്ക് സ്പ്ലാഷ് പോലെ പ്രദർശിപ്പിക്കുമെങ്കിലും ബട്ടൺ ഉയർത്തുന്നില്ല. ടൂൾബാറുകളിലും ഡയലോഗുകളിലും പാഡിംഗ് ഉപയോഗിക്കുന്ന ഇൻലൈനിലും ഫ്ലാറ്റ് ബട്ടണുകൾ ഉപയോഗിക്കുക"),
         "demoFlatButtonTitle":
@@ -209,8 +333,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoFullscreenDialogTitle":
             MessageLookupByLibrary.simpleMessage("പൂർണ്ണസ്ക്രീൻ"),
         "demoFullscreenTooltip":
-            MessageLookupByLibrary.simpleMessage("Full Screen"),
+            MessageLookupByLibrary.simpleMessage("പൂർണ്ണസ്ക്രീൻ"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("വിവരം"),
+        "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
+        "demoInputChipTitle":
+            MessageLookupByLibrary.simpleMessage("Input Chip"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "URL പ്രദർശിപ്പിക്കാൻ ആയില്ല:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("ഓപ്‌ഷനുകൾ"),
@@ -226,66 +354,69 @@ class MessageLookup extends MessageLookupByLibrary {
             "ഒരു ലളിതമായ ഡയലോഗ് ഉപയോക്താവിന് നിരവധി ഓപ്ഷനുകളിൽ ഒരു തിരഞ്ഞെടുക്കൽ ഓഫർ ചെയ്യുന്നു. ഒരു ലളിതമായ ഡയലോഗിന്റെ ഓപ്‌ഷണൽ പേര്, തിരഞ്ഞെടുത്തവയ്ക്ക് മുകളിൽ പ്രദർശിപ്പിക്കും."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("ലളിതം"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
-        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
+            "UI-ലേക്ക് ടെക്സ്റ്റ് ചേർക്കാൻ ടെക്സ്റ്റ് ഫീൽഡുകൾ ഉപയോക്താക്കളെ അനുവദിക്കുന്നു. അവ സാധാരണയായി ഫോമുകളിലും ഡയലോഗുകളിലും പ്രത്യക്ഷപ്പെടുന്നു."),
+        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("ഇമെയിൽ"),
         "demoTextFieldEnterPassword":
-            MessageLookupByLibrary.simpleMessage("Please enter a password."),
+            MessageLookupByLibrary.simpleMessage("പാസ്‌വേഡ് നൽകുക."),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### - Enter a US phone number."),
+            "(###) ###-#### - ഒരു US ഫോൺ നമ്പർ നൽകുക."),
         "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
-            "Please fix the errors in red before submitting."),
+            "സമർപ്പിക്കുന്നതിന് മുമ്പ് ചുവപ്പ് നിറത്തിൽ അടയാളപ്പെടുത്തിയ പിശകുകൾ പരിഹരിക്കുക."),
         "demoTextFieldHidePasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Hide password"),
+            MessageLookupByLibrary.simpleMessage("പാസ്‍വേഡ് മറയ്ക്കുക"),
         "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
-            "Keep it short, this is just a demo."),
+            "ചെറുതാക്കി വയ്ക്കൂ, ഇത് കേവലം ഒരു ഡെമോ മാത്രമാണ്."),
         "demoTextFieldLifeStory":
-            MessageLookupByLibrary.simpleMessage("Life story"),
-        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
-        "demoTextFieldNameHasPhoneNumber": m3,
+            MessageLookupByLibrary.simpleMessage("ജീവിത കഥ"),
+        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("പേര്*"),
+        "demoTextFieldNameHasPhoneNumber": m6,
         "demoTextFieldNameRequired":
-            MessageLookupByLibrary.simpleMessage("Name is required."),
-        "demoTextFieldNoMoreThan":
-            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+            MessageLookupByLibrary.simpleMessage("പേര് ആവശ്യമാണ്."),
+        "demoTextFieldNoMoreThan": MessageLookupByLibrary.simpleMessage(
+            "8 അക്ഷരങ്ങളെക്കാൾ അധികമില്ല."),
         "demoTextFieldOnlyAlphabeticalChars":
             MessageLookupByLibrary.simpleMessage(
-                "Please enter only alphabetical characters."),
+                "അക്ഷര പ്രതീകങ്ങൾ മാത്രം നൽകുക."),
         "demoTextFieldPassword":
-            MessageLookupByLibrary.simpleMessage("Password*"),
+            MessageLookupByLibrary.simpleMessage("പാസ്‌വേഡ്*"),
         "demoTextFieldPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+            MessageLookupByLibrary.simpleMessage(
+                "പാസ്‌വേഡുകൾ പൊരുത്തപ്പെടുന്നില്ല"),
         "demoTextFieldPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("Phone number*"),
-        "demoTextFieldRequiredField":
-            MessageLookupByLibrary.simpleMessage("* indicates required field"),
-        "demoTextFieldRetypePassword":
-            MessageLookupByLibrary.simpleMessage("Re-type password*"),
-        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+            MessageLookupByLibrary.simpleMessage("ഫോൺ നമ്പർ*"),
+        "demoTextFieldRequiredField": MessageLookupByLibrary.simpleMessage(
+            "* ചിഹ്നം ഈ ഭാഗം പൂരിപ്പിക്കേണ്ടതുണ്ട് എന്ന് സൂചിപ്പിക്കുന്നു"),
+        "demoTextFieldRetypePassword": MessageLookupByLibrary.simpleMessage(
+            "പാസ്‌വേഡ് വീണ്ടും ടൈപ്പുചെയ്യുക*"),
+        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("ശമ്പളം"),
         "demoTextFieldShowPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Show password"),
-        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
+            MessageLookupByLibrary.simpleMessage("പാസ്‌വേഡ് കാണിക്കുക"),
+        "demoTextFieldSubmit":
+            MessageLookupByLibrary.simpleMessage("സമർപ്പിക്കുക"),
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Single line of editable text and numbers"),
+            "എഡിറ്റ് ചെയ്യാവുന്ന ടെക്‌സ്‌റ്റിന്റെയും അക്കങ്ങളുടെയും ഒറ്റ വരി"),
         "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
+            "നിങ്ങളെക്കുറിച്ച് ഞങ്ങളോട് പറയുക (ഉദാ. നിങ്ങൾ എന്താണ് ചെയ്യുന്നത് അല്ലെങ്കിൽ ഹോബികൾ എന്തൊക്കെയാണ് എന്ന് എഴുതുക)"),
         "demoTextFieldTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("ടെക്‌സ്റ്റ് ഫീൽഡുകൾ"),
         "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
         "demoTextFieldWhatDoPeopleCallYou":
-            MessageLookupByLibrary.simpleMessage("What do people call you?"),
-        "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
+            MessageLookupByLibrary.simpleMessage(
+                "എന്താണ് നിങ്ങളെ ആളുകൾ വിളിക്കുന്നത്?"),
+        "demoTextFieldWhereCanWeReachYou": MessageLookupByLibrary.simpleMessage(
+            "നിങ്ങളെ എവിടെയാണ് ഞങ്ങൾക്ക് ബന്ധപ്പെടാനാവുക?"),
         "demoTextFieldYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("Your email address"),
+            MessageLookupByLibrary.simpleMessage("നിങ്ങളുടെ ഇമെയിൽ വിലാസം"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "സമാനമായ ഓപ്ഷനുകൾ ഗ്രൂപ്പ് ചെയ്യാൻ ടോഗിൾ ബട്ടണുകൾ ഉപയോഗിക്കാം. സമാനമായ ടോഗിൾ ബട്ടണുകളുടെ ഗ്രൂപ്പുകൾക്ക് പ്രാധാന്യം നൽകുന്നതിന്, ഒരു ഗ്രൂപ്പ് ഒരു പൊതു കണ്ടെയിനർ പങ്കിടണം"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("ടോഗിൾ ബട്ടണുകൾ"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Definitions for the various typographical styles found in Material Design."),
+            "മെറ്റീരിയൽ രൂപകൽപ്പനയിൽ കാണുന്ന വിവിധ ടൈപ്പോഗ്രാഫിക്കൽ ശൈലികൾക്കുള്ള നിർവ്വചനങ്ങൾ."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined text styles"),
+            "എല്ലാ മുൻകൂട്ടി നിശ്ചയിച്ച ടെക്സ്റ്റ് ശൈലികൾ"),
         "demoTypographyTitle":
-            MessageLookupByLibrary.simpleMessage("Typography"),
+            MessageLookupByLibrary.simpleMessage("ടൈപ്പോഗ്രാഫി"),
         "dialogAddAccount":
             MessageLookupByLibrary.simpleMessage("അക്കൗണ്ട് ചേർക്കുക"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("അംഗീകരിക്കുക"),
@@ -305,7 +436,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "ലൊക്കേഷൻ നിർണ്ണയിക്കുന്നതിന് ആപ്പുകളെ സഹായിക്കാൻ Google-നെ അനുവദിക്കുക. ആപ്പുകളൊന്നും പ്രവർത്തിക്കാത്തപ്പോൾ പോലും Google-ലേക്ക് അജ്ഞാത ലൊക്കേഷൻ ഡാറ്റ അയയ്‌ക്കുന്നുവെന്നാണ് ഇത് അർത്ഥമാക്കുന്നത്."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Google-ന്റെ ലൊക്കേഷൻ സേവനം ഉപയോഗിക്കണോ?"),
-        "dialogSelectedOption": m4,
+        "dialogSelectedOption": m7,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "ബാക്കപ്പ് അക്കൗണ്ട് സജ്ജീകരിക്കൂ"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("ഡയലോഗ് കാണിക്കുക"),
@@ -315,234 +446,249 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("വിഭാഗങ്ങൾ"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("ഗാലറി"),
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("Car Savings"),
+            MessageLookupByLibrary.simpleMessage("കാർ സംബന്ധിച്ച് ലാഭിച്ച തുക"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Checking"),
+            MessageLookupByLibrary.simpleMessage("പരിശോധിക്കുന്നു"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("Home Savings"),
+            MessageLookupByLibrary.simpleMessage("ഹോം സേവിംഗ്‌സ്"),
         "rallyAccountDataVacation":
-            MessageLookupByLibrary.simpleMessage("Vacation"),
+            MessageLookupByLibrary.simpleMessage("ഒരു അവധിക്കാലം"),
         "rallyAccountDetailDataAccountOwner":
-            MessageLookupByLibrary.simpleMessage("Account Owner"),
+            MessageLookupByLibrary.simpleMessage("അക്കൗണ്ട് ഉടമ"),
         "rallyAccountDetailDataAnnualPercentageYield":
-            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+            MessageLookupByLibrary.simpleMessage("വാർഷിക ശതമാനം വരുമാനം"),
         "rallyAccountDetailDataInterestPaidLastYear":
-            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+            MessageLookupByLibrary.simpleMessage("കഴിഞ്ഞ വർഷം അടച്ച പലിശ"),
         "rallyAccountDetailDataInterestRate":
-            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+            MessageLookupByLibrary.simpleMessage("പലിശനിരക്ക്"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+            MessageLookupByLibrary.simpleMessage("പലിശ YTD"),
         "rallyAccountDetailDataNextStatement":
-            MessageLookupByLibrary.simpleMessage("Next Statement"),
-        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
-        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
-        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m5,
-        "rallyAlertsMessageCheckingAccount": m6,
-        "rallyAlertsMessageHeadsUpShopping": m7,
-        "rallyAlertsMessageSpentOnRestaurants": m8,
-        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
-        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+            MessageLookupByLibrary.simpleMessage("അടുത്ത പ്രസ്താവന"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("മൊത്തം"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("അക്കൗണ്ടുകൾ"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("മുന്നറിയിപ്പുകൾ"),
+        "rallyAlertsMessageATMFees": m8,
+        "rallyAlertsMessageCheckingAccount": m9,
+        "rallyAlertsMessageHeadsUpShopping": m10,
+        "rallyAlertsMessageSpentOnRestaurants": m11,
+        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("ബില്ലുകൾ"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("അവസാന തീയതി"),
         "rallyBudgetCategoryClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
+            MessageLookupByLibrary.simpleMessage("വസ്ത്രങ്ങൾ"),
         "rallyBudgetCategoryCoffeeShops":
-            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+            MessageLookupByLibrary.simpleMessage("കോഫി ഷോപ്പുകൾ"),
         "rallyBudgetCategoryGroceries":
-            MessageLookupByLibrary.simpleMessage("Groceries"),
+            MessageLookupByLibrary.simpleMessage("പലചരക്ക് സാധനങ്ങൾ"),
         "rallyBudgetCategoryRestaurants":
-            MessageLookupByLibrary.simpleMessage("Restaurants"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
-        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
-        "rallyDescription":
-            MessageLookupByLibrary.simpleMessage("A personal finance app"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
-        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
-        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+            MessageLookupByLibrary.simpleMessage("റെസ്റ്റോറന്റുകൾ"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("ഇടത്"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("ബജറ്റുകൾ"),
+        "rallyDescription": MessageLookupByLibrary.simpleMessage(
+            "വ്യക്തിപരമാക്കിയ ഫിനാൻസ് ആപ്പ്"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("ഇടത്"),
+        "rallyLoginButtonLogin":
+            MessageLookupByLibrary.simpleMessage("ലോഗിൻ ചെയ്യുക"),
+        "rallyLoginLabelLogin":
+            MessageLookupByLibrary.simpleMessage("ലോഗിൻ ചെയ്യുക"),
         "rallyLoginLoginToRally":
-            MessageLookupByLibrary.simpleMessage("Login to Rally"),
+            MessageLookupByLibrary.simpleMessage("റാലിയിലേക്ക് ലോഗിൻ ചെയ്യുക"),
         "rallyLoginNoAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("ഒരു അക്കൗണ്ട് ഇല്ലേ?"),
+        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("പാസ്‌വേഡ്"),
         "rallyLoginRememberMe":
-            MessageLookupByLibrary.simpleMessage("Remember Me"),
-        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
-        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
-        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+            MessageLookupByLibrary.simpleMessage("എന്നെ ഓർക്കൂ"),
+        "rallyLoginSignUp":
+            MessageLookupByLibrary.simpleMessage("സൈൻ അപ്പ് ചെയ്യുക"),
+        "rallyLoginUsername":
+            MessageLookupByLibrary.simpleMessage("ഉപയോക്തൃനാമം"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("എല്ലാം കാണുക"),
         "rallySettingsFindAtms":
-            MessageLookupByLibrary.simpleMessage("Find ATMs"),
-        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+            MessageLookupByLibrary.simpleMessage("ATM-കൾ കണ്ടെത്തുക"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("സഹായം"),
         "rallySettingsManageAccounts":
-            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+            MessageLookupByLibrary.simpleMessage("അക്കൗണ്ടുകൾ മാനേജ് ചെയ്യുക"),
         "rallySettingsNotifications":
-            MessageLookupByLibrary.simpleMessage("Notifications"),
+            MessageLookupByLibrary.simpleMessage("അറിയിപ്പുകൾ"),
         "rallySettingsPaperlessSettings":
-            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
+            MessageLookupByLibrary.simpleMessage("കടലാസില്ലാതെയുള്ള ക്രമീകരണം"),
         "rallySettingsPasscodeAndTouchId":
-            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+            MessageLookupByLibrary.simpleMessage("പാസ്‌കോഡും ടച്ച് ഐഡിയും"),
         "rallySettingsPersonalInformation":
-            MessageLookupByLibrary.simpleMessage("Personal Information"),
+            MessageLookupByLibrary.simpleMessage("വ്യക്തിഗത വിവരം"),
         "rallySettingsSignOut":
-            MessageLookupByLibrary.simpleMessage("Sign out"),
+            MessageLookupByLibrary.simpleMessage("സൈൻ ഔട്ട് ചെയ്യുക"),
         "rallySettingsTaxDocuments":
-            MessageLookupByLibrary.simpleMessage("Tax Documents"),
-        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
-        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
-        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
-        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
-        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
+            MessageLookupByLibrary.simpleMessage("നികുതി പ്രമാണങ്ങൾ"),
+        "rallyTitleAccounts":
+            MessageLookupByLibrary.simpleMessage("അക്കൗണ്ടുകൾ"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("ബില്ലുകൾ"),
+        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("ബജറ്റുകൾ"),
+        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("അവലോകനം"),
+        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("ക്രമീകരണം"),
         "settingsAbout":
-            MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
+            MessageLookupByLibrary.simpleMessage("ഫ്ലട്ടർ ഗ്യാലറിയെ കുറിച്ച്"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
-            "Designed by TOASTER in London"),
-        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
+            "ലണ്ടനിലെ TOASTER രൂപകൽപ്പന ചെയ്തത്"),
+        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("ഇരുണ്ട"),
         "settingsFeedback":
-            MessageLookupByLibrary.simpleMessage("Send feedback"),
-        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Light"),
-        "settingsLocale": MessageLookupByLibrary.simpleMessage("Locale"),
+            MessageLookupByLibrary.simpleMessage("ഫീഡ്ബാക്ക് അയച്ചു"),
+        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("പ്രകാശം"),
+        "settingsLocale": MessageLookupByLibrary.simpleMessage("പ്രാദേശിക ഭാഷ"),
         "settingsPlatformAndroid":
             MessageLookupByLibrary.simpleMessage("Android"),
         "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
-            MessageLookupByLibrary.simpleMessage("Platform mechanics"),
-        "settingsSlowMotion":
-            MessageLookupByLibrary.simpleMessage("Slow motion"),
-        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
+            MessageLookupByLibrary.simpleMessage("പ്ലാറ്റ്‌ഫോം മെക്കാനിക്‌സ്"),
+        "settingsSlowMotion": MessageLookupByLibrary.simpleMessage("സ്ലോ മോഷൻ"),
+        "settingsSystemDefault":
+            MessageLookupByLibrary.simpleMessage("സിസ്റ്റം"),
         "settingsTextDirection":
-            MessageLookupByLibrary.simpleMessage("Text direction"),
+            MessageLookupByLibrary.simpleMessage("ടെക്‌സ്‌റ്റ് ദിശ"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
+        "settingsTextDirectionLocaleBased":
+            MessageLookupByLibrary.simpleMessage("Based on locale"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
-            MessageLookupByLibrary.simpleMessage("Text scaling"),
-        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
+            MessageLookupByLibrary.simpleMessage("ടെക്‌സ്റ്റ് സ്‌കെയിലിംഗ്"),
+        "settingsTextScalingHuge":
+            MessageLookupByLibrary.simpleMessage("വളരെ വലുത്"),
         "settingsTextScalingLarge":
-            MessageLookupByLibrary.simpleMessage("Large"),
+            MessageLookupByLibrary.simpleMessage("വലുത്"),
         "settingsTextScalingNormal":
-            MessageLookupByLibrary.simpleMessage("Normal"),
+            MessageLookupByLibrary.simpleMessage("സാധാരണം"),
         "settingsTextScalingSmall":
-            MessageLookupByLibrary.simpleMessage("Small"),
-        "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("ചെറുത്"),
+        "settingsTheme": MessageLookupByLibrary.simpleMessage("തീം"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("ക്രമീകരണം"),
         "shrineCancelButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CANCEL"),
+            MessageLookupByLibrary.simpleMessage("റദ്ദാക്കുക"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m9,
-        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+            MessageLookupByLibrary.simpleMessage("കാർട്ട് മായ്‌ക്കുക"),
+        "shrineCartItemCount": m13,
+        "shrineCartPageCaption":
+            MessageLookupByLibrary.simpleMessage("കാർട്ട്"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("Shipping:"),
+            MessageLookupByLibrary.simpleMessage("ഷിപ്പിംഗ്:"),
         "shrineCartSubtotalCaption":
-            MessageLookupByLibrary.simpleMessage("Subtotal:"),
-        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
-        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+            MessageLookupByLibrary.simpleMessage("ആകെത്തുക:"),
+        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("നികുതി:"),
+        "shrineCartTotalCaption":
+            MessageLookupByLibrary.simpleMessage("മൊത്തം"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("Accessories"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
-        "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+            MessageLookupByLibrary.simpleMessage("CLOTHING"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
+        "shrineDescription": MessageLookupByLibrary.simpleMessage(
+            "ആകർഷകമായ ചില്ലറവ്യാപാര ആപ്പ്"),
         "shrineLoginPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("പാസ്‌വേഡ്"),
         "shrineLoginUsernameLabel":
-            MessageLookupByLibrary.simpleMessage("Username"),
+            MessageLookupByLibrary.simpleMessage("ഉപയോക്തൃനാമം"),
         "shrineLogoutButtonCaption":
-            MessageLookupByLibrary.simpleMessage("LOGOUT"),
-        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
-        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+            MessageLookupByLibrary.simpleMessage("ലോഗൗട്ട് ചെയ്യുക"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("മെനു"),
+        "shrineNextButtonCaption":
+            MessageLookupByLibrary.simpleMessage("അടുത്തത്"),
         "shrineProductBlueStoneMug":
-            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
+            MessageLookupByLibrary.simpleMessage("ബ്ലൂ സ്റ്റോൺ മഗ്"),
         "shrineProductCeriseScallopTee":
-            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+            MessageLookupByLibrary.simpleMessage("സറീസ് സ്കാലപ്പ് ടീ"),
         "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+            MessageLookupByLibrary.simpleMessage("ഷാംബ്രേ നാപ്കിൻസ്"),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+            MessageLookupByLibrary.simpleMessage("ചേമ്പ്രേ ഷർട്ട്"),
         "shrineProductClassicWhiteCollar":
-            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+            MessageLookupByLibrary.simpleMessage("ക്ലാസിക് വൈറ്റ് കോളർ"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+            MessageLookupByLibrary.simpleMessage("ക്ലേ സ്വെറ്റർ"),
         "shrineProductCopperWireRack":
-            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+            MessageLookupByLibrary.simpleMessage("കോപ്പർ വയർ റാക്ക്"),
         "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+            MessageLookupByLibrary.simpleMessage("ഫൈൻ ലൈൻസ് ടീ"),
         "shrineProductGardenStrand":
-            MessageLookupByLibrary.simpleMessage("Garden strand"),
+            MessageLookupByLibrary.simpleMessage("ഗാർഡൻ സ്ട്രാൻഡ്"),
         "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+            MessageLookupByLibrary.simpleMessage("ഗാറ്റ്സ്ബി തൊപ്പി"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
+            MessageLookupByLibrary.simpleMessage("ജന്റ്രി ജാക്കറ്റ്"),
         "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+            MessageLookupByLibrary.simpleMessage("ഗിൽറ്റ് ഡെസ്‌ക് ട്രൈയോ"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+            MessageLookupByLibrary.simpleMessage("ജിൻജർ സ്കാഫ്"),
         "shrineProductGreySlouchTank":
-            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+            MessageLookupByLibrary.simpleMessage("ഗ്രേ സ്ലൗച്ച് ടാങ്ക്"),
         "shrineProductHurrahsTeaSet":
-            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+            MessageLookupByLibrary.simpleMessage("ഹുറാസ് ടീ സെറ്റ്"),
         "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
+            MessageLookupByLibrary.simpleMessage("കിച്ചൻ ക്വാത്രോ"),
         "shrineProductNavyTrousers":
-            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+            MessageLookupByLibrary.simpleMessage("നേവി ട്രൗസേഴ്‌സ്"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m10,
-        "shrineProductQuantity": m11,
+            MessageLookupByLibrary.simpleMessage("പ്ലാസ്‌റ്റർ ട്യൂണിക്"),
+        "shrineProductPrice": m14,
+        "shrineProductQuantity": m15,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Quartet table"),
+            MessageLookupByLibrary.simpleMessage("ക്വാർട്ടറ്റ് പട്ടിക"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+            MessageLookupByLibrary.simpleMessage("റെയ്‌ൻവാട്ടർ ട്രേ"),
         "shrineProductRamonaCrossover":
-            MessageLookupByLibrary.simpleMessage("Ramona crossover"),
+            MessageLookupByLibrary.simpleMessage("റമോണാ ക്രോസോവർ"),
         "shrineProductSeaTunic":
-            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+            MessageLookupByLibrary.simpleMessage("സീ ട്യൂണിക്"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
+            MessageLookupByLibrary.simpleMessage("സീബ്രീസ് സ്വറ്റർ"),
         "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
+            MessageLookupByLibrary.simpleMessage("ഷോൾഡർ റോൾസ് ടീ"),
         "shrineProductShrugBag":
-            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+            MessageLookupByLibrary.simpleMessage("തോൾ സഞ്ചി"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
+            MessageLookupByLibrary.simpleMessage("സൂത്ത് സെറാമിൽ സെറ്റ്"),
         "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+            MessageLookupByLibrary.simpleMessage("സ്റ്റെല്ല സൺഗ്ലാസസ്"),
         "shrineProductStrutEarrings":
-            MessageLookupByLibrary.simpleMessage("Strut earrings"),
+            MessageLookupByLibrary.simpleMessage("സ്റ്റ്രട്ട് ഇയർറിംഗ്‌സ്"),
         "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+            MessageLookupByLibrary.simpleMessage("സക്കുലന്റ് പ്ലാന്റേഴ്‌സ്"),
         "shrineProductSunshirtDress":
-            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+            MessageLookupByLibrary.simpleMessage("സൺഷർട്ട് ഡ്രസ്"),
         "shrineProductSurfAndPerfShirt":
-            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+            MessageLookupByLibrary.simpleMessage("സർഫ് ആന്റ് പെർഫ് ഷർട്ട്"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+            MessageLookupByLibrary.simpleMessage("വാഗബോണ്ട് സാക്ക്"),
         "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+            MessageLookupByLibrary.simpleMessage("വാഴ്‌സിറ്റി സോക്‌സ്"),
         "shrineProductWalterHenleyWhite":
-            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+            MessageLookupByLibrary.simpleMessage("വാൾട്ടർ ഹെൻലി (വൈറ്റ്)"),
         "shrineProductWeaveKeyring":
-            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+            MessageLookupByLibrary.simpleMessage("വീവ് കീറിംഗ്"),
         "shrineProductWhitePinstripeShirt":
-            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+            MessageLookupByLibrary.simpleMessage("വൈറ്റ് പിൻസ്ട്രൈപ്പ് ഷർട്ട്"),
         "shrineProductWhitneyBelt":
-            MessageLookupByLibrary.simpleMessage("Whitney belt"),
-        "starterAppDescription":
-            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m12,
-        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
+            MessageLookupByLibrary.simpleMessage("വിറ്റ്നി ബെൽറ്റ്"),
+        "starterAppDescription": MessageLookupByLibrary.simpleMessage(
+            "റെസ്പോൺസിവ് സ്റ്റാർട്ടർ ലേഔട്ട്"),
+        "starterAppDrawerItem": m16,
+        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("ബോഡി"),
         "starterAppGenericButton":
-            MessageLookupByLibrary.simpleMessage("BUTTON"),
+            MessageLookupByLibrary.simpleMessage("ബട്ടൺ"),
         "starterAppGenericHeadline":
-            MessageLookupByLibrary.simpleMessage("Headline"),
+            MessageLookupByLibrary.simpleMessage("തലക്കെട്ട്"),
         "starterAppGenericSubtitle":
-            MessageLookupByLibrary.simpleMessage("Subtitle"),
-        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
-        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
-        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("ഉപശീർഷകം"),
+        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("പേര്"),
+        "starterAppTitle":
+            MessageLookupByLibrary.simpleMessage("സ്റ്റാർട്ടർ ആപ്പ്"),
+        "starterAppTooltipAdd":
+            MessageLookupByLibrary.simpleMessage("ചേർക്കുക"),
         "starterAppTooltipFavorite":
-            MessageLookupByLibrary.simpleMessage("Favorite"),
+            MessageLookupByLibrary.simpleMessage("പ്രിയപ്പെട്ടത്"),
         "starterAppTooltipSearch":
-            MessageLookupByLibrary.simpleMessage("Search"),
-        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
+            MessageLookupByLibrary.simpleMessage("തിരയൽ"),
+        "starterAppTooltipShare":
+            MessageLookupByLibrary.simpleMessage("പങ്കിടുക")
       };
 }

@@ -20,52 +20,75 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'fi';
 
   static m0(value) =>
-      "To see the source code for this app, please visit the ${value}.";
+      "Jos haluat nähdä tämän sovelluksen lähdekoodin, avaa ${value}.";
 
-  static m1(title) => "Placeholder for ${title} tab";
+  static m1(title) => "Paikkamerkki ${title}-välilehdelle";
 
-  static m2(value) => "Item ${value}";
+  static m2(totalRestaurants) =>
+      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
 
-  static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m3(numberOfStops) =>
+      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
 
-  static m4(value) => "Valitsit: \"${value}\"";
+  static m4(totalProperties) =>
+      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m5(value) => "Tuote ${value}";
 
-  static m6(percent) =>
-      "Good work! Your checking account is ${percent} higher than last month.";
+  static m6(name, phoneNumber) => "Puhelinnumero (${name}) on ${phoneNumber}";
 
-  static m7(percent) =>
-      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+  static m7(value) => "Valitsit: \"${value}\"";
 
-  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m8(amount) =>
+      "Tässä kuussa olet käyttänyt ${amount} pankkiautomaattien maksuihin";
 
-  static m9(quantity) => "${quantity} ITEMS";
+  static m9(percent) =>
+      "Hienoa – käyttötilisi saldo on ${percent} viime kuuta korkeampi.";
 
-  static m10(price) => "x ${price}";
+  static m10(percent) =>
+      "Hei, olet käyttänyt tämän kuun ostosbudjetista ${percent}.";
 
-  static m11(quantity) => "Quantity: ${quantity}";
+  static m11(amount) => "Tässä kuussa olet käyttänyt ${amount} ravintoloihin.";
 
-  static m12(value) => "Item ${value}";
+  static m12(count) =>
+      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+
+  static m13(quantity) =>
+      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+
+  static m14(price) => "x ${price}";
+
+  static m15(quantity) => "Määrä: ${quantity}";
+
+  static m16(value) => "Tuote ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "aboutDialogDescription": m0,
-        "aboutFlutterSamplesRepo":
-            MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
+        "aboutFlutterSamplesRepo": MessageLookupByLibrary.simpleMessage(
+            "Flutter-näytteiden Github-kirjasto"),
         "bottomNavigationAccountTab":
-            MessageLookupByLibrary.simpleMessage("Account"),
+            MessageLookupByLibrary.simpleMessage("Tili"),
         "bottomNavigationAlarmTab":
-            MessageLookupByLibrary.simpleMessage("Alarm"),
+            MessageLookupByLibrary.simpleMessage("Herätys"),
         "bottomNavigationCalendarTab":
-            MessageLookupByLibrary.simpleMessage("Calendar"),
+            MessageLookupByLibrary.simpleMessage("Kalenteri"),
         "bottomNavigationCameraTab":
-            MessageLookupByLibrary.simpleMessage("Camera"),
+            MessageLookupByLibrary.simpleMessage("Kamera"),
         "bottomNavigationCommentsTab":
-            MessageLookupByLibrary.simpleMessage("Comments"),
+            MessageLookupByLibrary.simpleMessage("Kommentit"),
         "bottomNavigationContentPlaceholder": m1,
-        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "buttonText": MessageLookupByLibrary.simpleMessage("PAINIKE"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Luo"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipTurnOnLights":
+            MessageLookupByLibrary.simpleMessage("Turn on lights"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("KULLANRUSKEA"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("SININEN"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("SINIHARMAA"),
@@ -90,7 +113,83 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsTeal": MessageLookupByLibrary.simpleMessage("TURKOOSI"),
         "colorsYellow": MessageLookupByLibrary.simpleMessage("KELTAINEN"),
         "craneDescription":
-            MessageLookupByLibrary.simpleMessage("A personalized travel app"),
+            MessageLookupByLibrary.simpleMessage("Personoitu matkasovellus"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
+        "craneEat1":
+            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
+        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
+        "craneEat3":
+            MessageLookupByLibrary.simpleMessage("Portland, United States"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
+        "craneEat6":
+            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
+        "craneEat7":
+            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
+        "craneEat8":
+            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneEatRestaurants": m2,
+        "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
+            "Explore Restaurants by Destination"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
+        "craneFly0":
+            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
+        "craneFly1":
+            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
+        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneFly12":
+            MessageLookupByLibrary.simpleMessage("Napa, United States"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+        "craneFly2":
+            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneFly5":
+            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneFly7": MessageLookupByLibrary.simpleMessage(
+            "Mount Rushmore, United States"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneFlyStops": m3,
+        "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
+            "Explore Flights by Destination"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
+        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+        "craneFormDestination":
+            MessageLookupByLibrary.simpleMessage("Choose Destination"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+        "craneFormLocation":
+            MessageLookupByLibrary.simpleMessage("Select Location"),
+        "craneFormOrigin":
+            MessageLookupByLibrary.simpleMessage("Choose Origin"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneSleep1":
+            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+        "craneSleep2":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneSleep4":
+            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
+        "craneSleep5":
+            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
+        "craneSleep6":
+            MessageLookupByLibrary.simpleMessage("Napa, United States"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
+        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneSleepProperties": m4,
+        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
+            "Explore Properties by Destination"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("Salli"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("Omenapiirakka"),
@@ -112,11 +211,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "Saako Maps käyttää sijaintiasi, kun käytät sovellusta?"),
         "cupertinoAlertTiramisu":
             MessageLookupByLibrary.simpleMessage("Tiramisu"),
-        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Painike"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("Sisältää taustan"),
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Näytä ilmoitus"),
+        "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+        "demoActionChipTitle":
+            MessageLookupByLibrary.simpleMessage("Action Chip"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Ilmoitusikkuna kertoo käyttäjälle tilanteista, jotka vaativat toimia. Ilmoitusikkunassa on valinnainen otsikko ja valinnainen toimintoluettelo."),
         "demoAlertDialogTitle":
@@ -124,42 +227,50 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Otsikollinen ilmoitus"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
+            "Alareunan siirtymispalkissa näytetään kolmesta viiteen kohdetta näytön alalaidassa. Joka kohteella on kuvake ja mahdollisesti myös tekstikenttä. Kun käyttäjä napauttaa alaosan navigointikuvaketta, hän siirtyy siihen liittyvään navigointisijaintiin."),
         "demoBottomNavigationPersistentLabels":
-            MessageLookupByLibrary.simpleMessage("Persistent labels"),
+            MessageLookupByLibrary.simpleMessage("Näkyvissä pysyvä tunnisteet"),
         "demoBottomNavigationSelectedLabel":
-            MessageLookupByLibrary.simpleMessage("Selected label"),
+            MessageLookupByLibrary.simpleMessage("Valittu tunniste"),
         "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation with cross-fading views"),
+            "Alanavigointi, näkymien ristiinhäivytys"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom navigation"),
-        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Alanavigointi"),
+        "demoBottomSheetAddLabel":
+            MessageLookupByLibrary.simpleMessage("Lisää"),
         "demoBottomSheetButtonText":
-            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
-        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
-        "demoBottomSheetItem": m2,
+            MessageLookupByLibrary.simpleMessage("NÄYTÄ ALAOSA"),
+        "demoBottomSheetHeader":
+            MessageLookupByLibrary.simpleMessage("Ylätunniste"),
+        "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
+            "Modaalinen alaosa on valikon tai valintaikkunan vaihtoehto, joka estää käyttäjää toimimasta muualla sovelluksessa."),
         "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Modaalinen alaosa"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
+                "Näkyvissä pysyvä alaosa näyttää sovelluksen pääsisältöä täydentäviä tietoja. Tällainen alaosa on näkyvissä, vaikka käyttäjä tekee jotain sovelluksen muissa osissa."),
         "demoBottomSheetPersistentTitle":
-            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Näkyvissä pysyvä alaosa"),
         "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Persistent and modal bottom sheets"),
-        "demoBottomSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+            "Näkyvissä pysyvä tai modaalinen alaosa"),
+        "demoBottomSheetTitle": MessageLookupByLibrary.simpleMessage("Alaosa"),
         "demoBottomTextFieldsTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Tekstikentät"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "Litteä, korotettu, ääriviivat ja muita"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Painikkeet"),
+        "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Compact elements that represent an input, attribute, or action"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+        "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+        "demoChoiceChipTitle":
+            MessageLookupByLibrary.simpleMessage("Choice Chip"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Koodiesimerkki"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "Color and color swatch constants which represent Material Design\'s color palette."),
+            "Material designin väripaletin värien ja värijoukkojen arvot."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
             "Kaikki ennalta määritetyt värit"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("Värit"),
@@ -174,9 +285,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
             "Ilmoitusikkuna kertoo käyttäjälle tilanteista, jotka vaativat toimia. Ilmoitusikkunassa on valinnainen otsikko, valinnainen sisältö ja valinnainen toimintoluettelo. Otsikko näkyy sisällön yläpuolella ja toiminnot sisällön alapuolella."),
         "demoCupertinoAlertTitle":
-            MessageLookupByLibrary.simpleMessage("Alert"),
+            MessageLookupByLibrary.simpleMessage("Ilmoitus"),
         "demoCupertinoAlertWithTitleTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage("Otsikollinen ilmoitus"),
         "demoCupertinoAlertsSubtitle": MessageLookupByLibrary.simpleMessage(
             "iOS-tyyliset ilmoitusikkunat"),
         "demoCupertinoAlertsTitle":
@@ -186,13 +297,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS-tyyliset painikkeet"),
         "demoCupertinoButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Buttons"),
+            MessageLookupByLibrary.simpleMessage("Painikkeet"),
+        "demoCupertinoSegmentedControlDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+        "demoCupertinoSegmentedControlSubtitle":
+            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+        "demoCupertinoSegmentedControlTitle":
+            MessageLookupByLibrary.simpleMessage("Segmented Control"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Yksinkertainen, ilmoitus ja koko näyttö"),
         "demoDialogTitle":
             MessageLookupByLibrary.simpleMessage("Valintaikkunat"),
         "demoDocumentationTooltip": MessageLookupByLibrary.simpleMessage(
             "Sovellusliittymien dokumentaatio"),
+        "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Filter chips use tags or descriptive words as a way to filter content."),
+        "demoFilterChipTitle":
+            MessageLookupByLibrary.simpleMessage("Filter Chip"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Litteä painike värjää tekstin painettaessa, mutta ei nosta painiketta. Use flat buttons on toolbars, in dialogs and inline with padding"),
         "demoFlatButtonTitle":
@@ -206,8 +328,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoFullscreenDialogTitle":
             MessageLookupByLibrary.simpleMessage("Koko näyttö"),
         "demoFullscreenTooltip":
-            MessageLookupByLibrary.simpleMessage("Full Screen"),
+            MessageLookupByLibrary.simpleMessage("Koko näyttö"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Tietoja"),
+        "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
+        "demoInputChipTitle":
+            MessageLookupByLibrary.simpleMessage("Input Chip"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "URL-osoitetta ei voitu näyttää:"),
         "demoOptionsTooltip":
@@ -225,66 +351,68 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Yksinkertainen"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
-        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
+            "Tekstikentässä käyttäjä voi lisätä käyttöliittymään tekstiä. Niitä on yleensä lomakkeissa ja valintaikkunoissa."),
+        "demoTextFieldEmail":
+            MessageLookupByLibrary.simpleMessage("Sähköposti"),
         "demoTextFieldEnterPassword":
-            MessageLookupByLibrary.simpleMessage("Please enter a password."),
+            MessageLookupByLibrary.simpleMessage("Lisää salasana."),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### - Enter a US phone number."),
+            "(###) ###-#### – Lisää yhdysvaltalainen puhelinnumero."),
         "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
-            "Please fix the errors in red before submitting."),
+            "Korjaa punaisena näkyvät virheet ennen lähettämistä."),
         "demoTextFieldHidePasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Hide password"),
+            MessageLookupByLibrary.simpleMessage("Piilota salasana"),
         "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
-            "Keep it short, this is just a demo."),
+            "Älä kirjoita liikaa, tämä on pelkkä demo."),
         "demoTextFieldLifeStory":
-            MessageLookupByLibrary.simpleMessage("Life story"),
-        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
-        "demoTextFieldNameHasPhoneNumber": m3,
+            MessageLookupByLibrary.simpleMessage("Elämäntarina"),
+        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Nimi*"),
+        "demoTextFieldNameHasPhoneNumber": m6,
         "demoTextFieldNameRequired":
-            MessageLookupByLibrary.simpleMessage("Name is required."),
+            MessageLookupByLibrary.simpleMessage("Nimi on pakollinen."),
         "demoTextFieldNoMoreThan":
-            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+            MessageLookupByLibrary.simpleMessage("Enintään 8 merkkiä"),
         "demoTextFieldOnlyAlphabeticalChars":
-            MessageLookupByLibrary.simpleMessage(
-                "Please enter only alphabetical characters."),
+            MessageLookupByLibrary.simpleMessage("Käytä vain aakkosia."),
         "demoTextFieldPassword":
-            MessageLookupByLibrary.simpleMessage("Password*"),
+            MessageLookupByLibrary.simpleMessage("Salasana*"),
         "demoTextFieldPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+            MessageLookupByLibrary.simpleMessage("Salasanat eivät ole samat"),
         "demoTextFieldPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("Phone number*"),
+            MessageLookupByLibrary.simpleMessage("Puhelinnumero*"),
         "demoTextFieldRequiredField":
-            MessageLookupByLibrary.simpleMessage("* indicates required field"),
+            MessageLookupByLibrary.simpleMessage("* pakollinen kenttä"),
         "demoTextFieldRetypePassword":
-            MessageLookupByLibrary.simpleMessage("Re-type password*"),
-        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+            MessageLookupByLibrary.simpleMessage("Lisää salasana uudelleen*"),
+        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Palkka"),
         "demoTextFieldShowPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Show password"),
-        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
+            MessageLookupByLibrary.simpleMessage("Näytä salasana"),
+        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("LÄHETÄ"),
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Single line of editable text and numbers"),
-        "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
+            "Yksi rivi muokattavaa tekstiä ja numeroita"),
+        "demoTextFieldTellUsAboutYourself":
+            MessageLookupByLibrary.simpleMessage(
+                "Kerro itsestäsi (esim. mitä teet työksesi, mitä harrastat)"),
         "demoTextFieldTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Tekstikentät"),
         "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
         "demoTextFieldWhatDoPeopleCallYou":
-            MessageLookupByLibrary.simpleMessage("What do people call you?"),
+            MessageLookupByLibrary.simpleMessage(
+                "Millä nimellä sinua kutsutaan?"),
         "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
+            MessageLookupByLibrary.simpleMessage("Mistä sinut saa kiinni?"),
         "demoTextFieldYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("Your email address"),
+            MessageLookupByLibrary.simpleMessage("Sähköpostiosoite"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Päälle/pois-painikkeiden avulla voidaan ryhmitellä vaihtoehtoja yhteen. To emphasize groups of related toggle buttons, a group should share a common container"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Päälle/pois-painikkeet"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Definitions for the various typographical styles found in Material Design."),
+            "Material Designin erilaisten typografisten tyylien määritelmät."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined text styles"),
+            "Kaikki ennalta määrätyt tekstityylit"),
         "demoTypographyTitle":
-            MessageLookupByLibrary.simpleMessage("Typography"),
+            MessageLookupByLibrary.simpleMessage("Typografia"),
         "dialogAddAccount": MessageLookupByLibrary.simpleMessage("Lisää tili"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("HYVÄKSY"),
         "dialogCancel": MessageLookupByLibrary.simpleMessage("PERUUTA"),
@@ -302,7 +430,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Anna Googlen auttaa sovelluksia sijainnin määrittämisessä. Googlelle lähetetään anonyymejä sijaintitietoja – myös kun sovelluksia ei ole käytössä."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Käytetäänkö Googlen sijaintipalvelua?"),
-        "dialogSelectedOption": m4,
+        "dialogSelectedOption": m7,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Luo varmuuskopiointitili"),
         "dialogShow":
@@ -312,234 +440,248 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("Luokat"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galleria"),
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("Car Savings"),
+            MessageLookupByLibrary.simpleMessage("Autosäästötili"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Checking"),
+            MessageLookupByLibrary.simpleMessage("Tarkistetaan"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("Home Savings"),
+            MessageLookupByLibrary.simpleMessage("Kodin säästötili"),
         "rallyAccountDataVacation":
-            MessageLookupByLibrary.simpleMessage("Vacation"),
+            MessageLookupByLibrary.simpleMessage("Loma"),
         "rallyAccountDetailDataAccountOwner":
-            MessageLookupByLibrary.simpleMessage("Account Owner"),
+            MessageLookupByLibrary.simpleMessage("Tilin omistaja"),
         "rallyAccountDetailDataAnnualPercentageYield":
-            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+            MessageLookupByLibrary.simpleMessage("Vuosituotto prosentteina"),
         "rallyAccountDetailDataInterestPaidLastYear":
-            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+            MessageLookupByLibrary.simpleMessage("Viime vuonna maksetut korot"),
         "rallyAccountDetailDataInterestRate":
-            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+            MessageLookupByLibrary.simpleMessage("Korkoprosentti"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+            MessageLookupByLibrary.simpleMessage("Korko YTD"),
         "rallyAccountDetailDataNextStatement":
-            MessageLookupByLibrary.simpleMessage("Next Statement"),
-        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
-        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
-        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m5,
-        "rallyAlertsMessageCheckingAccount": m6,
-        "rallyAlertsMessageHeadsUpShopping": m7,
-        "rallyAlertsMessageSpentOnRestaurants": m8,
-        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
-        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+            MessageLookupByLibrary.simpleMessage("Seuraava ote"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Yhteensä"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Tilit"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Ilmoitukset"),
+        "rallyAlertsMessageATMFees": m8,
+        "rallyAlertsMessageCheckingAccount": m9,
+        "rallyAlertsMessageHeadsUpShopping": m10,
+        "rallyAlertsMessageSpentOnRestaurants": m11,
+        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("Laskut"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Maksettavaa"),
         "rallyBudgetCategoryClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
+            MessageLookupByLibrary.simpleMessage("Vaatteet"),
         "rallyBudgetCategoryCoffeeShops":
-            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+            MessageLookupByLibrary.simpleMessage("Kahvilat"),
         "rallyBudgetCategoryGroceries":
-            MessageLookupByLibrary.simpleMessage("Groceries"),
+            MessageLookupByLibrary.simpleMessage("Ruokaostokset"),
         "rallyBudgetCategoryRestaurants":
-            MessageLookupByLibrary.simpleMessage("Restaurants"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
-        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
-        "rallyDescription":
-            MessageLookupByLibrary.simpleMessage("A personal finance app"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
-        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
-        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+            MessageLookupByLibrary.simpleMessage("Ravintolat"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Vasen"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budjetit"),
+        "rallyDescription": MessageLookupByLibrary.simpleMessage(
+            "Sovellus oman talouden hoitoon"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("VASEN"),
+        "rallyLoginButtonLogin":
+            MessageLookupByLibrary.simpleMessage("KIRJAUDU SISÄÄN"),
+        "rallyLoginLabelLogin":
+            MessageLookupByLibrary.simpleMessage("Kirjaudu sisään"),
         "rallyLoginLoginToRally":
-            MessageLookupByLibrary.simpleMessage("Login to Rally"),
+            MessageLookupByLibrary.simpleMessage("Kirjaudu sisään Rallyyn"),
         "rallyLoginNoAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Eikö sinulla ole tiliä?"),
+        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Salasana"),
         "rallyLoginRememberMe":
-            MessageLookupByLibrary.simpleMessage("Remember Me"),
-        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
-        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
-        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+            MessageLookupByLibrary.simpleMessage("Muista kirjautumiseni"),
+        "rallyLoginSignUp":
+            MessageLookupByLibrary.simpleMessage("REKISTERÖIDY"),
+        "rallyLoginUsername":
+            MessageLookupByLibrary.simpleMessage("Käyttäjänimi"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("NÄYTÄ KAIKKI"),
         "rallySettingsFindAtms":
-            MessageLookupByLibrary.simpleMessage("Find ATMs"),
-        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+            MessageLookupByLibrary.simpleMessage("Etsi pankkiautomaatteja"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Ohje"),
         "rallySettingsManageAccounts":
-            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+            MessageLookupByLibrary.simpleMessage("Hallitse tilejä"),
         "rallySettingsNotifications":
-            MessageLookupByLibrary.simpleMessage("Notifications"),
+            MessageLookupByLibrary.simpleMessage("Ilmoitukset"),
         "rallySettingsPaperlessSettings":
-            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
+            MessageLookupByLibrary.simpleMessage("Paperittomuuden asetukset"),
         "rallySettingsPasscodeAndTouchId":
-            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+            MessageLookupByLibrary.simpleMessage("Tunnuskoodi ja Touch ID"),
         "rallySettingsPersonalInformation":
-            MessageLookupByLibrary.simpleMessage("Personal Information"),
+            MessageLookupByLibrary.simpleMessage("Henkilötiedot"),
         "rallySettingsSignOut":
-            MessageLookupByLibrary.simpleMessage("Sign out"),
+            MessageLookupByLibrary.simpleMessage("Kirjaudu ulos"),
         "rallySettingsTaxDocuments":
-            MessageLookupByLibrary.simpleMessage("Tax Documents"),
-        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
-        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
-        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
-        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
-        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
+            MessageLookupByLibrary.simpleMessage("Veroasiakirjat"),
+        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("TILIT"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("LASKUT"),
+        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDJETIT"),
+        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("ESITTELY"),
+        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("ASETUKSET"),
         "settingsAbout":
-            MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
+            MessageLookupByLibrary.simpleMessage("Tietoja Flutter Gallerysta"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
-            "Designed by TOASTER in London"),
-        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
+            "Suunnittelija: TOASTER, Lontoo"),
+        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Tumma"),
         "settingsFeedback":
-            MessageLookupByLibrary.simpleMessage("Send feedback"),
-        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Light"),
-        "settingsLocale": MessageLookupByLibrary.simpleMessage("Locale"),
+            MessageLookupByLibrary.simpleMessage("Lähetä palautetta"),
+        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Vaalea"),
+        "settingsLocale":
+            MessageLookupByLibrary.simpleMessage("Kieli- ja maa-asetus"),
         "settingsPlatformAndroid":
             MessageLookupByLibrary.simpleMessage("Android"),
         "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
-            MessageLookupByLibrary.simpleMessage("Platform mechanics"),
-        "settingsSlowMotion":
-            MessageLookupByLibrary.simpleMessage("Slow motion"),
-        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
+            MessageLookupByLibrary.simpleMessage("Alustan mekaniikka"),
+        "settingsSlowMotion": MessageLookupByLibrary.simpleMessage("Hidastus"),
+        "settingsSystemDefault":
+            MessageLookupByLibrary.simpleMessage("Järjestelmä"),
         "settingsTextDirection":
-            MessageLookupByLibrary.simpleMessage("Text direction"),
-        "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
-        "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
+            MessageLookupByLibrary.simpleMessage("Tekstin suunta"),
+        "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("V-O"),
+        "settingsTextDirectionLocaleBased":
+            MessageLookupByLibrary.simpleMessage("Based on locale"),
+        "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("O-V"),
         "settingsTextScaling":
-            MessageLookupByLibrary.simpleMessage("Text scaling"),
-        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
+            MessageLookupByLibrary.simpleMessage("Tekstin skaalaus"),
+        "settingsTextScalingHuge":
+            MessageLookupByLibrary.simpleMessage("Hyvin suuri"),
         "settingsTextScalingLarge":
-            MessageLookupByLibrary.simpleMessage("Large"),
+            MessageLookupByLibrary.simpleMessage("Suuri"),
         "settingsTextScalingNormal":
-            MessageLookupByLibrary.simpleMessage("Normal"),
+            MessageLookupByLibrary.simpleMessage("Normaali"),
         "settingsTextScalingSmall":
-            MessageLookupByLibrary.simpleMessage("Small"),
-        "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Pieni"),
+        "settingsTheme": MessageLookupByLibrary.simpleMessage("Teema"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("Asetukset"),
         "shrineCancelButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CANCEL"),
+            MessageLookupByLibrary.simpleMessage("PERUUTA"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m9,
-        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+            MessageLookupByLibrary.simpleMessage("TYHJENNÄ OSTOSKORI"),
+        "shrineCartItemCount": m13,
+        "shrineCartPageCaption":
+            MessageLookupByLibrary.simpleMessage("OSTOSKORI"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("Shipping:"),
+            MessageLookupByLibrary.simpleMessage("Toimituskulut:"),
         "shrineCartSubtotalCaption":
-            MessageLookupByLibrary.simpleMessage("Subtotal:"),
-        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
-        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+            MessageLookupByLibrary.simpleMessage("Välisumma:"),
+        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Verot:"),
+        "shrineCartTotalCaption":
+            MessageLookupByLibrary.simpleMessage("YHTEENSÄ"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("Accessories"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
+            MessageLookupByLibrary.simpleMessage("CLOTHING"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
         "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+            MessageLookupByLibrary.simpleMessage("Muodin kauppapaikkasovellus"),
         "shrineLoginPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Salasana"),
         "shrineLoginUsernameLabel":
-            MessageLookupByLibrary.simpleMessage("Username"),
+            MessageLookupByLibrary.simpleMessage("Käyttäjänimi"),
         "shrineLogoutButtonCaption":
-            MessageLookupByLibrary.simpleMessage("LOGOUT"),
-        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
-        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+            MessageLookupByLibrary.simpleMessage("KIRJAUDU ULOS"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("VALIKKO"),
+        "shrineNextButtonCaption":
+            MessageLookupByLibrary.simpleMessage("SEURAAVA"),
         "shrineProductBlueStoneMug":
-            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
-        "shrineProductCeriseScallopTee":
-            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+            MessageLookupByLibrary.simpleMessage("Sininen keraaminen muki"),
+        "shrineProductCeriseScallopTee": MessageLookupByLibrary.simpleMessage(
+            "Kirsikanpunainen scallop-teepaita"),
         "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+            MessageLookupByLibrary.simpleMessage("Chambray-lautasliinat"),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+            MessageLookupByLibrary.simpleMessage("Chambray-paita"),
         "shrineProductClassicWhiteCollar":
-            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+            MessageLookupByLibrary.simpleMessage("Klassinen valkokaulus"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+            MessageLookupByLibrary.simpleMessage("Maanvärinen college-paita"),
         "shrineProductCopperWireRack":
-            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+            MessageLookupByLibrary.simpleMessage("Kuparilankahylly"),
         "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+            MessageLookupByLibrary.simpleMessage("T-paita, ohuet viivat"),
         "shrineProductGardenStrand":
-            MessageLookupByLibrary.simpleMessage("Garden strand"),
+            MessageLookupByLibrary.simpleMessage("Garden-moniketju"),
         "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+            MessageLookupByLibrary.simpleMessage("Gatsby-hattu"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
+            MessageLookupByLibrary.simpleMessage("Gentry-takki"),
         "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+            MessageLookupByLibrary.simpleMessage("Kullattu kolmoispöytä"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+            MessageLookupByLibrary.simpleMessage("Punertava huivi"),
         "shrineProductGreySlouchTank":
-            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+            MessageLookupByLibrary.simpleMessage("Hihaton harmaa löysä paita"),
         "shrineProductHurrahsTeaSet":
-            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+            MessageLookupByLibrary.simpleMessage("Hurrahs-teeastiasto"),
         "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
+            MessageLookupByLibrary.simpleMessage("Quattro (keittiö)"),
         "shrineProductNavyTrousers":
-            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+            MessageLookupByLibrary.simpleMessage("Laivastonsiniset housut"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m10,
-        "shrineProductQuantity": m11,
+            MessageLookupByLibrary.simpleMessage("Luonnonvalkoinen tunika"),
+        "shrineProductPrice": m14,
+        "shrineProductQuantity": m15,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Quartet table"),
+            MessageLookupByLibrary.simpleMessage("Neliosainen pöytäsarja"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+            MessageLookupByLibrary.simpleMessage("Sadeveden keräin"),
         "shrineProductRamonaCrossover":
             MessageLookupByLibrary.simpleMessage("Ramona crossover"),
         "shrineProductSeaTunic":
-            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+            MessageLookupByLibrary.simpleMessage("Merenvärinen tunika"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
+            MessageLookupByLibrary.simpleMessage("Merituuli-college"),
         "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
+            MessageLookupByLibrary.simpleMessage("T-paita, käärittävät hihat"),
         "shrineProductShrugBag":
-            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+            MessageLookupByLibrary.simpleMessage("Olkalaukku"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
+            MessageLookupByLibrary.simpleMessage("Soothe-keramiikka-astiasto"),
         "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+            MessageLookupByLibrary.simpleMessage("Stella-aurinkolasit"),
         "shrineProductStrutEarrings":
-            MessageLookupByLibrary.simpleMessage("Strut earrings"),
+            MessageLookupByLibrary.simpleMessage("Näyttävät korvakorut"),
         "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+            MessageLookupByLibrary.simpleMessage("Mehikasvien ruukut"),
         "shrineProductSunshirtDress":
-            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+            MessageLookupByLibrary.simpleMessage("UV-paitamekko"),
         "shrineProductSurfAndPerfShirt":
-            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+            MessageLookupByLibrary.simpleMessage("Surffipaita"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+            MessageLookupByLibrary.simpleMessage("Vagabond-laukku"),
         "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+            MessageLookupByLibrary.simpleMessage("Tennissukat"),
         "shrineProductWalterHenleyWhite":
-            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+            MessageLookupByLibrary.simpleMessage("Walter Henley (valkoinen)"),
         "shrineProductWeaveKeyring":
-            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+            MessageLookupByLibrary.simpleMessage("Punottu avaimenperä"),
         "shrineProductWhitePinstripeShirt":
-            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+            MessageLookupByLibrary.simpleMessage("Valkoinen liituraitapaita"),
         "shrineProductWhitneyBelt":
-            MessageLookupByLibrary.simpleMessage("Whitney belt"),
-        "starterAppDescription":
-            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m12,
-        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
+            MessageLookupByLibrary.simpleMessage("Whitney-vyö"),
+        "starterAppDescription": MessageLookupByLibrary.simpleMessage(
+            "Responsiivinen aloitusasettelu"),
+        "starterAppDrawerItem": m16,
+        "starterAppGenericBody":
+            MessageLookupByLibrary.simpleMessage("Leipäteksti"),
         "starterAppGenericButton":
-            MessageLookupByLibrary.simpleMessage("BUTTON"),
+            MessageLookupByLibrary.simpleMessage("PAINIKE"),
         "starterAppGenericHeadline":
-            MessageLookupByLibrary.simpleMessage("Headline"),
+            MessageLookupByLibrary.simpleMessage("Otsake"),
         "starterAppGenericSubtitle":
-            MessageLookupByLibrary.simpleMessage("Subtitle"),
-        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
-        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
-        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Alaotsikko"),
+        "starterAppGenericTitle":
+            MessageLookupByLibrary.simpleMessage("Otsikko"),
+        "starterAppTitle":
+            MessageLookupByLibrary.simpleMessage("Aloitussovellus"),
+        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Lisää"),
         "starterAppTooltipFavorite":
-            MessageLookupByLibrary.simpleMessage("Favorite"),
-        "starterAppTooltipSearch":
-            MessageLookupByLibrary.simpleMessage("Search"),
-        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
+            MessageLookupByLibrary.simpleMessage("Suosikki"),
+        "starterAppTooltipSearch": MessageLookupByLibrary.simpleMessage("Haku"),
+        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Jaa")
       };
 }

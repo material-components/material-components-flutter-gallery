@@ -20,52 +20,75 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'hr';
 
   static m0(value) =>
-      "To see the source code for this app, please visit the ${value}.";
+      "Da biste vidjeli izvorni kôd za ovu aplikaciju, posjetite ${value}.";
 
-  static m1(title) => "Placeholder for ${title} tab";
+  static m1(title) => "Rezervirano mjesto za karticu ${title}";
 
-  static m2(value) => "Item ${value}";
+  static m2(totalRestaurants) =>
+      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
 
-  static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m3(numberOfStops) =>
+      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
 
-  static m4(value) => "Odabrali ste vrijednost: \"${value}\"";
+  static m4(totalProperties) =>
+      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m5(value) => "Stavka ${value}";
 
-  static m6(percent) =>
-      "Good work! Your checking account is ${percent} higher than last month.";
+  static m6(name, phoneNumber) => "${name} ima telefonski broj ${phoneNumber}";
 
-  static m7(percent) =>
-      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+  static m7(value) => "Odabrali ste vrijednost: \"${value}\"";
 
-  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m8(amount) =>
+      "Ovaj ste mjesec potrošili ${amount} za naknade za bankomate";
 
-  static m9(quantity) => "${quantity} ITEMS";
+  static m9(percent) =>
+      "Bravo! Na tekućem računu imate ${percent} više nego prošli mjesec.";
 
-  static m10(price) => "x ${price}";
+  static m10(percent) =>
+      "Upozorenje! Iskoristili ste ${percent} proračuna za kupnju ovaj mjesec.";
 
-  static m11(quantity) => "Quantity: ${quantity}";
+  static m11(amount) => "Ovaj ste mjesec potrošili ${amount} u restoranima";
 
-  static m12(value) => "Item ${value}";
+  static m12(count) =>
+      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+
+  static m13(quantity) =>
+      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+
+  static m14(price) => "x ${price}";
+
+  static m15(quantity) => "Količina: ${quantity}";
+
+  static m16(value) => "Stavka ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "aboutDialogDescription": m0,
-        "aboutFlutterSamplesRepo":
-            MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
+        "aboutFlutterSamplesRepo": MessageLookupByLibrary.simpleMessage(
+            "Github repozitorij primjera za Flutter"),
         "bottomNavigationAccountTab":
-            MessageLookupByLibrary.simpleMessage("Account"),
+            MessageLookupByLibrary.simpleMessage("Račun"),
         "bottomNavigationAlarmTab":
             MessageLookupByLibrary.simpleMessage("Alarm"),
         "bottomNavigationCalendarTab":
-            MessageLookupByLibrary.simpleMessage("Calendar"),
+            MessageLookupByLibrary.simpleMessage("Kalendar"),
         "bottomNavigationCameraTab":
-            MessageLookupByLibrary.simpleMessage("Camera"),
+            MessageLookupByLibrary.simpleMessage("Fotoaparat"),
         "bottomNavigationCommentsTab":
-            MessageLookupByLibrary.simpleMessage("Comments"),
+            MessageLookupByLibrary.simpleMessage("Komentari"),
         "bottomNavigationContentPlaceholder": m1,
-        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "buttonText": MessageLookupByLibrary.simpleMessage("GUMB"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Izradite"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Vožnja biciklom"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Dizalo"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Kamin"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Veliko"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Srednje"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Malo"),
+        "chipTurnOnLights":
+            MessageLookupByLibrary.simpleMessage("Uključivanje svjetla"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Perilica"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("JANTARNA"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("PLAVA"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("PLAVOSIVA"),
@@ -89,8 +112,88 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsRed": MessageLookupByLibrary.simpleMessage("CRVENA"),
         "colorsTeal": MessageLookupByLibrary.simpleMessage("TIRKIZNOPLAVA"),
         "colorsYellow": MessageLookupByLibrary.simpleMessage("ŽUTA"),
-        "craneDescription":
-            MessageLookupByLibrary.simpleMessage("A personalized travel app"),
+        "craneDescription": MessageLookupByLibrary.simpleMessage(
+            "Prilagođena aplikacija za putovanja"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("PREHRANA"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Napulj, Italija"),
+        "craneEat1": MessageLookupByLibrary.simpleMessage(
+            "Dallas, Sjedinjene Američke Države"),
+        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisabon, Portugal"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage(
+            "Portland, Sjedinjene Američke Države"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Pariz, Francuska"),
+        "craneEat5":
+            MessageLookupByLibrary.simpleMessage("Seoul, Južna Koreja"),
+        "craneEat6": MessageLookupByLibrary.simpleMessage(
+            "Seattle, Sjedinjene Američke Države"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage(
+            "Nashville, Sjedinjene Američke Države"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage(
+            "Atlanta, Sjedinjene Američke Države"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Španjolska"),
+        "craneEatRestaurants": m2,
+        "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
+            "Istražite restorane po odredištu"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("LET"),
+        "craneFly0": MessageLookupByLibrary.simpleMessage(
+            "Aspen, Sjedinjene Američke Države"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage(
+            "Big Sur, Sjedinjene Američke Države"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Kairo, Egipat"),
+        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisabon, Portugal"),
+        "craneFly12": MessageLookupByLibrary.simpleMessage(
+            "Napa, Sjedinjene Američke Države"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonezija"),
+        "craneFly2":
+            MessageLookupByLibrary.simpleMessage("Dolina Khumbu, Nepal"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldivi"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Švicarska"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Španjolska"),
+        "craneFly7": MessageLookupByLibrary.simpleMessage(
+            "Mount Rushmore, Sjedinjene Američke Države"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapur"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneFlyStops": m3,
+        "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
+            "Istražite letove po odredištu"),
+        "craneFormDate":
+            MessageLookupByLibrary.simpleMessage("Odaberite datum"),
+        "craneFormDates":
+            MessageLookupByLibrary.simpleMessage("Odaberite datume"),
+        "craneFormDestination":
+            MessageLookupByLibrary.simpleMessage("Odaberite odredište"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Zalogajnice"),
+        "craneFormLocation":
+            MessageLookupByLibrary.simpleMessage("Odaberite lokaciju"),
+        "craneFormOrigin":
+            MessageLookupByLibrary.simpleMessage("Odaberite polazište"),
+        "craneFormTime":
+            MessageLookupByLibrary.simpleMessage("Odaberite vrijeme"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Putnici"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("SPAVANJE"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldivi"),
+        "craneSleep1": MessageLookupByLibrary.simpleMessage(
+            "Aspen, Sjedinjene Američke Države"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Kairo, Egipat"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Tajvan"),
+        "craneSleep2":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneSleep4":
+            MessageLookupByLibrary.simpleMessage("Vitznau, Švicarska"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage(
+            "Big Sur, Sjedinjene Američke Države"),
+        "craneSleep6": MessageLookupByLibrary.simpleMessage(
+            "Napa, Sjedinjene Američke Države"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Meksiko"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("Lisabon, Portugal"),
+        "craneSleepProperties": m4,
+        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
+            "Istražite smještajne objekte po odredištu"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("Dopusti"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("Pita od jabuka"),
@@ -113,11 +216,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "Želite li dopustiti da aplikacija \"Karte pristupa vašoj lokaciji dok je upotrebljavate?"),
         "cupertinoAlertTiramisu":
             MessageLookupByLibrary.simpleMessage("Tiramisu"),
-        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Gumb"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("S pozadinom"),
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Prikaži upozorenje"),
+        "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Čipovi radnje skup su opcija koji pokreću radnju povezanu s primarnim sadržajem. Čipovi radnje trebali bi se prikazivati dinamički i kontekstualno na korisničkom sučelju."),
+        "demoActionChipTitle":
+            MessageLookupByLibrary.simpleMessage("Čip radnji"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Dijalog upozorenja informira korisnika o situacijama koje je potrebno potvrditi. Dijalog upozorenja ima naslov i popis radnji, no te stavke nisu obavezne."),
         "demoAlertDialogTitle":
@@ -125,41 +232,50 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Upozorenje s naslovom"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
+            "Donja navigacijska traka prikazuje tri do pet odredišta pri dnu zaslona. Svako odredište predstavlja ikona i tekstna oznaka koja nije obavezna. Kad korisnik dodirne ikonu na donjoj navigacijskoj traci, otvara se odredište navigacije na najvišoj razini povezano s tom ikonom."),
         "demoBottomNavigationPersistentLabels":
-            MessageLookupByLibrary.simpleMessage("Persistent labels"),
+            MessageLookupByLibrary.simpleMessage("Fiksne oznake"),
         "demoBottomNavigationSelectedLabel":
-            MessageLookupByLibrary.simpleMessage("Selected label"),
+            MessageLookupByLibrary.simpleMessage("Odabrana oznaka"),
         "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation with cross-fading views"),
+            "Donja navigacija koja se postupno prikazuje i nestaje"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom navigation"),
-        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Donja navigacija"),
+        "demoBottomSheetAddLabel":
+            MessageLookupByLibrary.simpleMessage("Dodavanje"),
         "demoBottomSheetButtonText":
-            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
-        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
-        "demoBottomSheetItem": m2,
+            MessageLookupByLibrary.simpleMessage("PRIKAŽI DONJU TABLICU"),
+        "demoBottomSheetHeader":
+            MessageLookupByLibrary.simpleMessage("Zaglavlje"),
+        "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
+            "Modalna donja tablica alternativa je izborniku ili dijalogu i onemogućuje korisnicima interakciju s ostatkom aplikacije."),
         "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Modalna donja tablica"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
+                "Fiksna donja tablica prikazuje informacije koje nadopunjuju primarni sadržaj aplikacije. Ostaje vidljiva čak i tijekom korisnikove interakcije s drugim dijelovima aplikacije."),
         "demoBottomSheetPersistentTitle":
-            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Fiksna donja tablica"),
         "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Persistent and modal bottom sheets"),
+            "Fiksne i modalne donje tablice"),
         "demoBottomSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Donja tablica"),
         "demoBottomTextFieldsTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Tekstualna polja"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "Ravni, izdignuti, ocrtani i ostali"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Gumbi"),
+        "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Kompaktni elementi koji predstavljaju unos, atribut ili radnju"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Čipovi"),
+        "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Čipovi odabira predstavljaju jedan odabir iz skupa. Čipovi odabira sadrže povezani opisni tekst ili kategorije."),
+        "demoChoiceChipTitle":
+            MessageLookupByLibrary.simpleMessage("Čip odabira"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Primjer koda"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "Color and color swatch constants which represent Material Design\'s color palette."),
+            "Boje i konstante uzoraka boja koje predstavljaju paletu boja materijalnog dizajna."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
             "Sve unaprijed definirane boje"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("Boje"),
@@ -174,9 +290,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
             "Dijalog upozorenja informira korisnika o situacijama koje je potrebno potvrditi. Dijalog upozorenja ima naslov, sadržaj i popis radnji, no te stavke nisu obavezne. Naslov se prikazuje iznad sadržaja, a radnje ispod sadržaja."),
         "demoCupertinoAlertTitle":
-            MessageLookupByLibrary.simpleMessage("Alert"),
+            MessageLookupByLibrary.simpleMessage("Upozorenje"),
         "demoCupertinoAlertWithTitleTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage("Upozorenje s naslovom"),
         "demoCupertinoAlertsSubtitle": MessageLookupByLibrary.simpleMessage(
             "Dijalozi upozorenja u iOS-ovom stilu"),
         "demoCupertinoAlertsTitle":
@@ -186,12 +302,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("Gumbi u iOS-ovom stilu"),
         "demoCupertinoButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Buttons"),
+            MessageLookupByLibrary.simpleMessage("Gumbi"),
+        "demoCupertinoSegmentedControlDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+        "demoCupertinoSegmentedControlSubtitle":
+            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+        "demoCupertinoSegmentedControlTitle":
+            MessageLookupByLibrary.simpleMessage("Segmented Control"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Jednostavni, upozorenje i na cijelom zaslonu"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dijalozi"),
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("Dokumentacija API-ja"),
+        "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Elementi filtriranja koriste oznake ili opisne riječi kao način filtriranja sadržaja."),
+        "demoFilterChipTitle":
+            MessageLookupByLibrary.simpleMessage("Element filtriranja"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Ravni gumb prikazuje mrlju boje prilikom pritiska, ali se ne podiže. Ravne gumbe koristite na alatnim trakama, u dijalozima i ugrađene u ispunu"),
         "demoFlatButtonTitle":
@@ -205,8 +332,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoFullscreenDialogTitle":
             MessageLookupByLibrary.simpleMessage("Na cijelom zaslonu"),
         "demoFullscreenTooltip":
-            MessageLookupByLibrary.simpleMessage("Full Screen"),
+            MessageLookupByLibrary.simpleMessage("Cijeli zaslon"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Informacije"),
+        "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Čipovi unosa predstavljaju kompleksne informacije, na primjer entitete (osobe, mjesta ili predmete) ili tekst razgovora, u kompaktnom obliku."),
+        "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("Čip unosa"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Prikazivanje URL-a nije uspjelo:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opcije"),
@@ -223,66 +353,65 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Jednostavni"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
-        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
+            "Tekstualna polja omogućuju korisnicima da unesu tekst u korisničko sučelje. Obično su u obliku obrazaca i dijaloga."),
+        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-adresa"),
         "demoTextFieldEnterPassword":
-            MessageLookupByLibrary.simpleMessage("Please enter a password."),
+            MessageLookupByLibrary.simpleMessage("Unesite zaporku."),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### - Enter a US phone number."),
+            "(###) ###-#### – unesite telefonski broj u SAD-u."),
         "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
-            "Please fix the errors in red before submitting."),
+            "Prije slanja ispravite pogreške označene crvenom bojom."),
         "demoTextFieldHidePasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Hide password"),
+            MessageLookupByLibrary.simpleMessage("Sakrij zaporku"),
         "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
-            "Keep it short, this is just a demo."),
+            "Neka bude kratko, ovo je samo demonstracija."),
         "demoTextFieldLifeStory":
-            MessageLookupByLibrary.simpleMessage("Life story"),
-        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
-        "demoTextFieldNameHasPhoneNumber": m3,
+            MessageLookupByLibrary.simpleMessage("Biografija"),
+        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Ime*"),
+        "demoTextFieldNameHasPhoneNumber": m6,
         "demoTextFieldNameRequired":
-            MessageLookupByLibrary.simpleMessage("Name is required."),
-        "demoTextFieldNoMoreThan":
-            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+            MessageLookupByLibrary.simpleMessage("Ime je obavezno."),
+        "demoTextFieldNoMoreThan": MessageLookupByLibrary.simpleMessage(
+            "Ne možete unijeti više od osam znakova."),
         "demoTextFieldOnlyAlphabeticalChars":
-            MessageLookupByLibrary.simpleMessage(
-                "Please enter only alphabetical characters."),
+            MessageLookupByLibrary.simpleMessage("Unesite samo slova abecede."),
         "demoTextFieldPassword":
-            MessageLookupByLibrary.simpleMessage("Password*"),
+            MessageLookupByLibrary.simpleMessage("Zaporka*"),
         "demoTextFieldPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+            MessageLookupByLibrary.simpleMessage("Zaporke se ne podudaraju"),
         "demoTextFieldPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("Phone number*"),
+            MessageLookupByLibrary.simpleMessage("Telefonski broj*"),
         "demoTextFieldRequiredField":
-            MessageLookupByLibrary.simpleMessage("* indicates required field"),
+            MessageLookupByLibrary.simpleMessage("* označava obavezno polje"),
         "demoTextFieldRetypePassword":
-            MessageLookupByLibrary.simpleMessage("Re-type password*"),
-        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+            MessageLookupByLibrary.simpleMessage("Ponovo unesite zaporku*"),
+        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Plaća"),
         "demoTextFieldShowPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Show password"),
-        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
+            MessageLookupByLibrary.simpleMessage("Prikaži zaporku"),
+        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("POŠALJI"),
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Single line of editable text and numbers"),
+            "Jedan redak teksta i brojeva koji se mogu uređivati"),
         "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
+            "Recite nam nešto o sebi (na primjer napišite što radite ili koji su vam hobiji)"),
         "demoTextFieldTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Tekstualna polja"),
         "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
         "demoTextFieldWhatDoPeopleCallYou":
-            MessageLookupByLibrary.simpleMessage("What do people call you?"),
-        "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
+            MessageLookupByLibrary.simpleMessage("Kako vas zovu?"),
+        "demoTextFieldWhereCanWeReachYou": MessageLookupByLibrary.simpleMessage(
+            "Na kojem vas broju možemo dobiti?"),
         "demoTextFieldYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("Your email address"),
+            MessageLookupByLibrary.simpleMessage("Vaša e-adresa"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Prekidači se mogu upotrebljavati za grupiranje povezanih opcija. Da bi se naglasile grupe povezanih prekidača, grupa bi trebala dijeliti zajednički spremnik"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Prekidači"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Definitions for the various typographical styles found in Material Design."),
+            "Definicije raznih tipografskih stilova u materijalnom dizajnu."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined text styles"),
+            "Svi unaprijed definirani stilovi teksta"),
         "demoTypographyTitle":
-            MessageLookupByLibrary.simpleMessage("Typography"),
+            MessageLookupByLibrary.simpleMessage("Tipografija"),
         "dialogAddAccount":
             MessageLookupByLibrary.simpleMessage("Dodavanje računa"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("PRIHVAĆAM"),
@@ -300,7 +429,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Dopustite Googleu da pomogne aplikacijama odrediti lokaciju. To znači da će se anonimni podaci o lokaciji slati Googleu, čak i kada se ne izvodi nijedna aplikacija."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Želite li upotrebljavati Googleovu uslugu lokacije?"),
-        "dialogSelectedOption": m4,
+        "dialogSelectedOption": m7,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "Postavljanje računa za sigurnosno kopiranje"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("PRIKAŽI DIJALOG"),
@@ -310,234 +439,252 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Kategorije"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galerija"),
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("Car Savings"),
+            MessageLookupByLibrary.simpleMessage("Štednja za automobil"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Checking"),
+            MessageLookupByLibrary.simpleMessage("Tekući"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("Home Savings"),
+            MessageLookupByLibrary.simpleMessage("Štednja za kupnju doma"),
         "rallyAccountDataVacation":
-            MessageLookupByLibrary.simpleMessage("Vacation"),
+            MessageLookupByLibrary.simpleMessage("Odmor"),
         "rallyAccountDetailDataAccountOwner":
-            MessageLookupByLibrary.simpleMessage("Account Owner"),
+            MessageLookupByLibrary.simpleMessage("Vlasnik računa"),
         "rallyAccountDetailDataAnnualPercentageYield":
-            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+            MessageLookupByLibrary.simpleMessage("Godišnji postotak prinosa"),
         "rallyAccountDetailDataInterestPaidLastYear":
-            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+            MessageLookupByLibrary.simpleMessage(
+                "Kamate plaćene prošle godine"),
         "rallyAccountDetailDataInterestRate":
-            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+            MessageLookupByLibrary.simpleMessage("Kamatna stopa"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+            MessageLookupByLibrary.simpleMessage(
+                "Kamate od početka godine do danas"),
         "rallyAccountDetailDataNextStatement":
-            MessageLookupByLibrary.simpleMessage("Next Statement"),
-        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
-        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
-        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m5,
-        "rallyAlertsMessageCheckingAccount": m6,
-        "rallyAlertsMessageHeadsUpShopping": m7,
-        "rallyAlertsMessageSpentOnRestaurants": m8,
-        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
-        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+            MessageLookupByLibrary.simpleMessage("Sljedeća izjava"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Ukupno"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Računi"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Upozorenja"),
+        "rallyAlertsMessageATMFees": m8,
+        "rallyAlertsMessageCheckingAccount": m9,
+        "rallyAlertsMessageHeadsUpShopping": m10,
+        "rallyAlertsMessageSpentOnRestaurants": m11,
+        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("Računi"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Rok"),
         "rallyBudgetCategoryClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
+            MessageLookupByLibrary.simpleMessage("Odjeća"),
         "rallyBudgetCategoryCoffeeShops":
-            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+            MessageLookupByLibrary.simpleMessage("Kafići"),
         "rallyBudgetCategoryGroceries":
-            MessageLookupByLibrary.simpleMessage("Groceries"),
+            MessageLookupByLibrary.simpleMessage("Namirnice"),
         "rallyBudgetCategoryRestaurants":
-            MessageLookupByLibrary.simpleMessage("Restaurants"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
-        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
-        "rallyDescription":
-            MessageLookupByLibrary.simpleMessage("A personal finance app"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
-        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
-        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+            MessageLookupByLibrary.simpleMessage("Restorani"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Preostalo"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Proračuni"),
+        "rallyDescription": MessageLookupByLibrary.simpleMessage(
+            "Aplikacija za osobne financije"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("PREOSTALO"),
+        "rallyLoginButtonLogin":
+            MessageLookupByLibrary.simpleMessage("PRIJAVA"),
+        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Prijava"),
         "rallyLoginLoginToRally":
-            MessageLookupByLibrary.simpleMessage("Login to Rally"),
+            MessageLookupByLibrary.simpleMessage("Prijavite se na Rally"),
         "rallyLoginNoAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Nemate račun?"),
+        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Zaporka"),
         "rallyLoginRememberMe":
-            MessageLookupByLibrary.simpleMessage("Remember Me"),
-        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
-        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
-        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+            MessageLookupByLibrary.simpleMessage("Zapamti me"),
+        "rallyLoginSignUp":
+            MessageLookupByLibrary.simpleMessage("REGISTRACIJA"),
+        "rallyLoginUsername":
+            MessageLookupByLibrary.simpleMessage("Korisničko ime"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("PRIKAŽI SVE"),
         "rallySettingsFindAtms":
-            MessageLookupByLibrary.simpleMessage("Find ATMs"),
-        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+            MessageLookupByLibrary.simpleMessage("Pronađite bankomate"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Pomoć"),
         "rallySettingsManageAccounts":
-            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+            MessageLookupByLibrary.simpleMessage("Upravljajte računima"),
         "rallySettingsNotifications":
-            MessageLookupByLibrary.simpleMessage("Notifications"),
+            MessageLookupByLibrary.simpleMessage("Obavijesti"),
         "rallySettingsPaperlessSettings":
-            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
+            MessageLookupByLibrary.simpleMessage("Postavke bez papira"),
         "rallySettingsPasscodeAndTouchId":
-            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+            MessageLookupByLibrary.simpleMessage("Šifra i Touch ID"),
         "rallySettingsPersonalInformation":
-            MessageLookupByLibrary.simpleMessage("Personal Information"),
-        "rallySettingsSignOut":
-            MessageLookupByLibrary.simpleMessage("Sign out"),
+            MessageLookupByLibrary.simpleMessage("Osobni podaci"),
+        "rallySettingsSignOut": MessageLookupByLibrary.simpleMessage("Odjava"),
         "rallySettingsTaxDocuments":
-            MessageLookupByLibrary.simpleMessage("Tax Documents"),
-        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
-        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
-        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
-        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
-        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
+            MessageLookupByLibrary.simpleMessage("Porezni dokumenti"),
+        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("RAČUNI"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("RAČUNI"),
+        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("PRORAČUNI"),
+        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("PREGLED"),
+        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("POSTAVKE"),
         "settingsAbout":
-            MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
+            MessageLookupByLibrary.simpleMessage("O usluzi Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
-            "Designed by TOASTER in London"),
-        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
+            "Dizajnirala agencija TOASTER iz Londona"),
+        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Tamno"),
         "settingsFeedback":
-            MessageLookupByLibrary.simpleMessage("Send feedback"),
-        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Light"),
-        "settingsLocale": MessageLookupByLibrary.simpleMessage("Locale"),
+            MessageLookupByLibrary.simpleMessage("Pošaljite komentare"),
+        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Svijetlo"),
+        "settingsLocale":
+            MessageLookupByLibrary.simpleMessage("Oznaka zemlje/jezika"),
         "settingsPlatformAndroid":
             MessageLookupByLibrary.simpleMessage("Android"),
         "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
-            MessageLookupByLibrary.simpleMessage("Platform mechanics"),
+            MessageLookupByLibrary.simpleMessage("Mehanika platforme"),
         "settingsSlowMotion":
-            MessageLookupByLibrary.simpleMessage("Slow motion"),
-        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
+            MessageLookupByLibrary.simpleMessage("Usporena snimka"),
+        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("Sustav"),
         "settingsTextDirection":
-            MessageLookupByLibrary.simpleMessage("Text direction"),
-        "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
-        "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
+            MessageLookupByLibrary.simpleMessage("Smjer teksta"),
+        "settingsTextDirectionLTR":
+            MessageLookupByLibrary.simpleMessage("Slijeva udesno"),
+        "settingsTextDirectionLocaleBased":
+            MessageLookupByLibrary.simpleMessage("Based on locale"),
+        "settingsTextDirectionRTL":
+            MessageLookupByLibrary.simpleMessage("Zdesna ulijevo"),
         "settingsTextScaling":
-            MessageLookupByLibrary.simpleMessage("Text scaling"),
-        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
+            MessageLookupByLibrary.simpleMessage("Skaliranje teksta"),
+        "settingsTextScalingHuge":
+            MessageLookupByLibrary.simpleMessage("Ogroman"),
         "settingsTextScalingLarge":
-            MessageLookupByLibrary.simpleMessage("Large"),
+            MessageLookupByLibrary.simpleMessage("Veliki"),
         "settingsTextScalingNormal":
-            MessageLookupByLibrary.simpleMessage("Normal"),
+            MessageLookupByLibrary.simpleMessage("Uobičajeni"),
         "settingsTextScalingSmall":
-            MessageLookupByLibrary.simpleMessage("Small"),
-        "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Mali"),
+        "settingsTheme": MessageLookupByLibrary.simpleMessage("Tema"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("Postavke"),
         "shrineCancelButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CANCEL"),
+            MessageLookupByLibrary.simpleMessage("ODUSTANI"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m9,
-        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+            MessageLookupByLibrary.simpleMessage("ISPRAZNI KOŠARICU"),
+        "shrineCartItemCount": m13,
+        "shrineCartPageCaption":
+            MessageLookupByLibrary.simpleMessage("KOŠARICA"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("Shipping:"),
+            MessageLookupByLibrary.simpleMessage("Dostava:"),
         "shrineCartSubtotalCaption":
-            MessageLookupByLibrary.simpleMessage("Subtotal:"),
-        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
-        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+            MessageLookupByLibrary.simpleMessage("Međuzbroj:"),
+        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Porez:"),
+        "shrineCartTotalCaption":
+            MessageLookupByLibrary.simpleMessage("UKUPNO"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("Accessories"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+            MessageLookupByLibrary.simpleMessage("DODACI"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("SVE"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
-        "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+            MessageLookupByLibrary.simpleMessage("ODJEĆA"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("DOM"),
+        "shrineDescription": MessageLookupByLibrary.simpleMessage(
+            "Moderna aplikacija za maloprodaju"),
         "shrineLoginPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Zaporka"),
         "shrineLoginUsernameLabel":
-            MessageLookupByLibrary.simpleMessage("Username"),
+            MessageLookupByLibrary.simpleMessage("Korisničko ime"),
         "shrineLogoutButtonCaption":
-            MessageLookupByLibrary.simpleMessage("LOGOUT"),
-        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
-        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+            MessageLookupByLibrary.simpleMessage("ODJAVA"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("IZBORNIK"),
+        "shrineNextButtonCaption":
+            MessageLookupByLibrary.simpleMessage("SLJEDEĆE"),
         "shrineProductBlueStoneMug":
-            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
-        "shrineProductCeriseScallopTee":
-            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+            MessageLookupByLibrary.simpleMessage("Plava kamena šalica"),
+        "shrineProductCeriseScallopTee": MessageLookupByLibrary.simpleMessage(
+            "Tamnoružičasta majica s valovitim rubom"),
         "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+            MessageLookupByLibrary.simpleMessage("Ubrusi od chambraya"),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+            MessageLookupByLibrary.simpleMessage("Košulja od chambraya"),
         "shrineProductClassicWhiteCollar":
-            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+            MessageLookupByLibrary.simpleMessage("Klasična bijela košulja"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+            MessageLookupByLibrary.simpleMessage("Džemper u boji gline"),
         "shrineProductCopperWireRack":
-            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+            MessageLookupByLibrary.simpleMessage("Bakrena vješalica"),
         "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+            MessageLookupByLibrary.simpleMessage("Majica s tankim crtama"),
         "shrineProductGardenStrand":
-            MessageLookupByLibrary.simpleMessage("Garden strand"),
+            MessageLookupByLibrary.simpleMessage("Vrtni konop"),
         "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+            MessageLookupByLibrary.simpleMessage("Kačket"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
+            MessageLookupByLibrary.simpleMessage("Gentry jakna"),
         "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+            MessageLookupByLibrary.simpleMessage("Trio pozlaćenih stolića"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+            MessageLookupByLibrary.simpleMessage("Šal u boji đumbira"),
         "shrineProductGreySlouchTank":
-            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+            MessageLookupByLibrary.simpleMessage("Siva majica bez rukava"),
         "shrineProductHurrahsTeaSet":
-            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
-        "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
+            MessageLookupByLibrary.simpleMessage("Čajni set Hurrahs"),
+        "shrineProductKitchenQuattro": MessageLookupByLibrary.simpleMessage(
+            "Četverodijelni kuhinjski set"),
         "shrineProductNavyTrousers":
-            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+            MessageLookupByLibrary.simpleMessage("Mornarskoplave hlače"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m10,
-        "shrineProductQuantity": m11,
+            MessageLookupByLibrary.simpleMessage("Tunika u boji gipsa"),
+        "shrineProductPrice": m14,
+        "shrineProductQuantity": m15,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Quartet table"),
+            MessageLookupByLibrary.simpleMessage("Četiri stolića"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+            MessageLookupByLibrary.simpleMessage("Posuda za kišnicu"),
         "shrineProductRamonaCrossover":
             MessageLookupByLibrary.simpleMessage("Ramona crossover"),
         "shrineProductSeaTunic":
-            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+            MessageLookupByLibrary.simpleMessage("Tunika morskoplave boje"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
-        "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
-        "shrineProductShrugBag":
-            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+            MessageLookupByLibrary.simpleMessage("Džemper s nautičkim uzorkom"),
+        "shrineProductShoulderRollsTee": MessageLookupByLibrary.simpleMessage(
+            "Majica s podvrnutim rukavima"),
+        "shrineProductShrugBag": MessageLookupByLibrary.simpleMessage(
+            "Torba s kratkom ručkom za nošenje na ramenu"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
+            MessageLookupByLibrary.simpleMessage("Keramički set Soothe"),
         "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+            MessageLookupByLibrary.simpleMessage("Sunčane naočale Stella"),
         "shrineProductStrutEarrings":
-            MessageLookupByLibrary.simpleMessage("Strut earrings"),
+            MessageLookupByLibrary.simpleMessage("Strut naušnice"),
         "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+            MessageLookupByLibrary.simpleMessage("Posude za sukulentne biljke"),
         "shrineProductSunshirtDress":
-            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+            MessageLookupByLibrary.simpleMessage("Haljina za zaštitu od sunca"),
         "shrineProductSurfAndPerfShirt":
-            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+            MessageLookupByLibrary.simpleMessage("Surf and perf majica"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+            MessageLookupByLibrary.simpleMessage("Vrećasta torba"),
         "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+            MessageLookupByLibrary.simpleMessage("Čarape s prugama"),
         "shrineProductWalterHenleyWhite":
-            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
-        "shrineProductWeaveKeyring":
-            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+            MessageLookupByLibrary.simpleMessage("Walter Henley (bijele boje)"),
+        "shrineProductWeaveKeyring": MessageLookupByLibrary.simpleMessage(
+            "Pleteni privjesak za ključeve"),
         "shrineProductWhitePinstripeShirt":
-            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+            MessageLookupByLibrary.simpleMessage("Prugasta bijela košulja"),
         "shrineProductWhitneyBelt":
-            MessageLookupByLibrary.simpleMessage("Whitney belt"),
-        "starterAppDescription":
-            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m12,
-        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
-        "starterAppGenericButton":
-            MessageLookupByLibrary.simpleMessage("BUTTON"),
+            MessageLookupByLibrary.simpleMessage("Pojas Whitney"),
+        "starterAppDescription": MessageLookupByLibrary.simpleMessage(
+            "Responzivni izgled aplikacije za pokretanje"),
+        "starterAppDrawerItem": m16,
+        "starterAppGenericBody":
+            MessageLookupByLibrary.simpleMessage("Glavni tekst"),
+        "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("GUMB"),
         "starterAppGenericHeadline":
-            MessageLookupByLibrary.simpleMessage("Headline"),
+            MessageLookupByLibrary.simpleMessage("Naslov"),
         "starterAppGenericSubtitle":
-            MessageLookupByLibrary.simpleMessage("Subtitle"),
-        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
-        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
-        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Titlovi"),
+        "starterAppGenericTitle":
+            MessageLookupByLibrary.simpleMessage("Naslov"),
+        "starterAppTitle":
+            MessageLookupByLibrary.simpleMessage("Aplikacija za pokretanje"),
+        "starterAppTooltipAdd":
+            MessageLookupByLibrary.simpleMessage("Dodavanje"),
         "starterAppTooltipFavorite":
-            MessageLookupByLibrary.simpleMessage("Favorite"),
+            MessageLookupByLibrary.simpleMessage("Favorit"),
         "starterAppTooltipSearch":
-            MessageLookupByLibrary.simpleMessage("Search"),
-        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
+            MessageLookupByLibrary.simpleMessage("Pretraživanje"),
+        "starterAppTooltipShare":
+            MessageLookupByLibrary.simpleMessage("Dijeljenje")
       };
 }

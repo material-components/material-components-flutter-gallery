@@ -19,53 +19,69 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'zh_CN';
 
-  static m0(value) =>
-      "To see the source code for this app, please visit the ${value}.";
+  static m0(value) => "要查看此应用的源代码，请访问 ${value}。";
 
-  static m1(title) => "Placeholder for ${title} tab";
+  static m1(title) => "“${title}”标签页的占位符";
 
-  static m2(value) => "Item ${value}";
+  static m2(totalRestaurants) =>
+      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
 
-  static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m3(numberOfStops) =>
+      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
 
-  static m4(value) => "您已选择：“${value}”";
+  static m4(totalProperties) =>
+      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m5(value) => "项 ${value}";
 
-  static m6(percent) =>
-      "Good work! Your checking account is ${percent} higher than last month.";
+  static m6(name, phoneNumber) => "${name}的手机号码是 ${phoneNumber}";
 
-  static m7(percent) =>
-      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+  static m7(value) => "您已选择：“${value}”";
 
-  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m8(amount) => "本月您已支付 ${amount}的 ATM 取款手续费";
 
-  static m9(quantity) => "${quantity} ITEMS";
+  static m9(percent) => "做得好！您的支票帐号余额比上个月多 ${percent}。";
 
-  static m10(price) => "x ${price}";
+  static m10(percent) => "注意，您已使用本月购物预算的 ${percent}。";
 
-  static m11(quantity) => "Quantity: ${quantity}";
+  static m11(amount) => "本周您已在餐馆花费 ${amount}。";
 
-  static m12(value) => "Item ${value}";
+  static m12(count) =>
+      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+
+  static m13(quantity) =>
+      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+
+  static m14(price) => "x ${price}";
+
+  static m15(quantity) => "数量：${quantity}";
+
+  static m16(value) => "项 ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "aboutDialogDescription": m0,
         "aboutFlutterSamplesRepo":
-            MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
+            MessageLookupByLibrary.simpleMessage("Flutter 示例 GitHub 代码库"),
         "bottomNavigationAccountTab":
-            MessageLookupByLibrary.simpleMessage("Account"),
-        "bottomNavigationAlarmTab":
-            MessageLookupByLibrary.simpleMessage("Alarm"),
+            MessageLookupByLibrary.simpleMessage("帐号"),
+        "bottomNavigationAlarmTab": MessageLookupByLibrary.simpleMessage("闹钟"),
         "bottomNavigationCalendarTab":
-            MessageLookupByLibrary.simpleMessage("Calendar"),
-        "bottomNavigationCameraTab":
-            MessageLookupByLibrary.simpleMessage("Camera"),
+            MessageLookupByLibrary.simpleMessage("日历"),
+        "bottomNavigationCameraTab": MessageLookupByLibrary.simpleMessage("相机"),
         "bottomNavigationCommentsTab":
-            MessageLookupByLibrary.simpleMessage("Comments"),
+            MessageLookupByLibrary.simpleMessage("注释"),
         "bottomNavigationContentPlaceholder": m1,
-        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "buttonText": MessageLookupByLibrary.simpleMessage("按钮"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("创建"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("骑车"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("电梯"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("壁炉"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("大"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("中"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("小"),
+        "chipTurnOnLights": MessageLookupByLibrary.simpleMessage("开灯"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("洗衣机"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("琥珀色"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("蓝色"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("蓝灰色"),
@@ -85,8 +101,61 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsRed": MessageLookupByLibrary.simpleMessage("红色"),
         "colorsTeal": MessageLookupByLibrary.simpleMessage("青色"),
         "colorsYellow": MessageLookupByLibrary.simpleMessage("黄色"),
-        "craneDescription":
-            MessageLookupByLibrary.simpleMessage("A personalized travel app"),
+        "craneDescription": MessageLookupByLibrary.simpleMessage("个性化旅行应用"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("用餐"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("意大利那不勒斯"),
+        "craneEat1": MessageLookupByLibrary.simpleMessage("美国达拉斯"),
+        "craneEat10": MessageLookupByLibrary.simpleMessage("葡萄牙里斯本"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("阿根廷科尔多瓦"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage("美国波特兰"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("法国巴黎"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("韩国首尔"),
+        "craneEat6": MessageLookupByLibrary.simpleMessage("美国西雅图"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage("美国纳什维尔"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage("美国亚特兰大"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("西班牙马德里"),
+        "craneEatRestaurants": m2,
+        "craneEatSubhead": MessageLookupByLibrary.simpleMessage("按目的地浏览餐厅"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("航班"),
+        "craneFly0": MessageLookupByLibrary.simpleMessage("美国阿斯彭"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage("美国大苏尔"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("埃及开罗"),
+        "craneFly11": MessageLookupByLibrary.simpleMessage("葡萄牙里斯本"),
+        "craneFly12": MessageLookupByLibrary.simpleMessage("美国纳帕"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("印度尼西亚巴厘岛"),
+        "craneFly2": MessageLookupByLibrary.simpleMessage("尼泊尔坤布谷"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("秘鲁马丘比丘"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("马尔代夫马累"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("瑞士维兹诺"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("西班牙马德里"),
+        "craneFly7": MessageLookupByLibrary.simpleMessage("美国拉什莫尔山"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("新加坡"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("古巴哈瓦那"),
+        "craneFlyStops": m3,
+        "craneFlySubhead": MessageLookupByLibrary.simpleMessage("按目的地浏览航班"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("选择日期"),
+        "craneFormDates": MessageLookupByLibrary.simpleMessage("选择日期"),
+        "craneFormDestination": MessageLookupByLibrary.simpleMessage("选择目的地"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("小饭馆"),
+        "craneFormLocation": MessageLookupByLibrary.simpleMessage("选择位置"),
+        "craneFormOrigin": MessageLookupByLibrary.simpleMessage("选择出发地"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("选择时间"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("旅行者人数"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("睡眠"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("马尔代夫马累"),
+        "craneSleep1": MessageLookupByLibrary.simpleMessage("美国阿斯彭"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("埃及开罗"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("台湾台北"),
+        "craneSleep2": MessageLookupByLibrary.simpleMessage("秘鲁马丘比丘"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("古巴哈瓦那"),
+        "craneSleep4": MessageLookupByLibrary.simpleMessage("瑞士维兹诺"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage("美国大苏尔"),
+        "craneSleep6": MessageLookupByLibrary.simpleMessage("美国纳帕"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("葡萄牙波尔图"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("墨西哥图伦"),
+        "craneSleep9": MessageLookupByLibrary.simpleMessage("葡萄牙里斯本"),
+        "craneSleepProperties": m4,
+        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage("按目的地浏览住宿地"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("允许"),
         "cupertinoAlertApplePie": MessageLookupByLibrary.simpleMessage("苹果派"),
         "cupertinoAlertCancel": MessageLookupByLibrary.simpleMessage("取消"),
@@ -107,50 +176,58 @@ class MessageLookup extends MessageLookupByLibrary {
         "cupertinoAlertLocationTitle": MessageLookupByLibrary.simpleMessage(
             "是否允许“Google 地图”在您使用该应用时获取您的位置信息？"),
         "cupertinoAlertTiramisu": MessageLookupByLibrary.simpleMessage("提拉米苏"),
-        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("按钮"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("设有背景"),
         "cupertinoShowAlert": MessageLookupByLibrary.simpleMessage("显示提醒"),
+        "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
+            "操作信息块是一组选项，可触发与主要内容相关的操作。操作信息块应以动态和与上下文相关的形式显示在界面中。"),
+        "demoActionChipTitle": MessageLookupByLibrary.simpleMessage("操作信息块"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "提醒对话框会通知用户需要知悉的情况。您可以选择性地为提醒对话框提供标题和操作列表。"),
         "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("提醒"),
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("带有标题的提醒"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
+            "底部导航栏会在屏幕底部显示三到五个目标位置。各个目标位置会显示为图标和文本标签（文本标签选择性显示）。用户点按底部导航栏中的图标后，系统会将用户转至与该图标关联的顶级导航目标位置。"),
         "demoBottomNavigationPersistentLabels":
-            MessageLookupByLibrary.simpleMessage("Persistent labels"),
+            MessageLookupByLibrary.simpleMessage("常驻标签页"),
         "demoBottomNavigationSelectedLabel":
-            MessageLookupByLibrary.simpleMessage("Selected label"),
-        "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation with cross-fading views"),
+            MessageLookupByLibrary.simpleMessage("已选择标签"),
+        "demoBottomNavigationSubtitle":
+            MessageLookupByLibrary.simpleMessage("采用交替淡变视图的底部导航栏"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom navigation"),
-        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("底部导航栏"),
+        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("添加"),
         "demoBottomSheetButtonText":
-            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
-        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
-        "demoBottomSheetItem": m2,
+            MessageLookupByLibrary.simpleMessage("显示底部工作表"),
+        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("页眉"),
+        "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
+            "模态底部工作表可替代菜单或对话框，并且会阻止用户与应用的其余部分互动。"),
         "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("模态底部工作表"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
+                "常驻底部工作表会显示应用主要内容的补充信息。即使在用户与应用的其他部分互动时，常驻底部工作表也会一直显示。"),
         "demoBottomSheetPersistentTitle":
-            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
-        "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Persistent and modal bottom sheets"),
-        "demoBottomSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("常驻底部工作表"),
+        "demoBottomSheetSubtitle":
+            MessageLookupByLibrary.simpleMessage("常驻底部工作表和模态底部工作表"),
+        "demoBottomSheetTitle": MessageLookupByLibrary.simpleMessage("底部工作表"),
         "demoBottomTextFieldsTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("文本字段"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage("平面、凸起、轮廓等"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("按钮"),
+        "demoChipSubtitle":
+            MessageLookupByLibrary.simpleMessage("代表输入、属性或操作的精简元素"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("信息块"),
+        "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
+            "选择信息块代表一组选择中的一项。选择信息块包含相关的说明性文字或类别。"),
+        "demoChoiceChipTitle": MessageLookupByLibrary.simpleMessage("选择信息块"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("代码示例"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "Color and color swatch constants which represent Material Design\'s color palette."),
+            "代表 Material Design 调色板的颜色和色样常量。"),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage("所有预定义的颜色"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("颜色"),
         "demoCupertinoActionSheetDescription":
@@ -164,10 +241,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("带有按钮的提醒"),
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
             "提醒对话框会通知用户需要知悉的情况。您可以选择性地为提醒对话框提供标题、内容和操作列表。标题会显示在内容上方，操作则会显示在内容下方。"),
-        "demoCupertinoAlertTitle":
-            MessageLookupByLibrary.simpleMessage("Alert"),
+        "demoCupertinoAlertTitle": MessageLookupByLibrary.simpleMessage("提醒"),
         "demoCupertinoAlertWithTitleTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage("带有标题的提醒"),
         "demoCupertinoAlertsSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS 样式的提醒对话框"),
         "demoCupertinoAlertsTitle": MessageLookupByLibrary.simpleMessage("提醒"),
@@ -175,12 +251,21 @@ class MessageLookup extends MessageLookupByLibrary {
             "iOS 样式的按钮，这类按钮所采用的文本和/或图标会在用户轻触按钮时淡出和淡入，并可选择性地加入背景。"),
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS 样式的按钮"),
-        "demoCupertinoButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Buttons"),
+        "demoCupertinoButtonsTitle": MessageLookupByLibrary.simpleMessage("按钮"),
+        "demoCupertinoSegmentedControlDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+        "demoCupertinoSegmentedControlSubtitle":
+            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+        "demoCupertinoSegmentedControlTitle":
+            MessageLookupByLibrary.simpleMessage("Segmented Control"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage("简易、提醒和全屏"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("对话框"),
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API 文档"),
+        "demoFilterChipDescription":
+            MessageLookupByLibrary.simpleMessage("过滤条件信息块使用标签或说明性字词来过滤内容。"),
+        "demoFilterChipTitle": MessageLookupByLibrary.simpleMessage("过滤条件信息块"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "平面按钮，按下后会出现墨水飞溅效果，但按钮本身没有升起效果。这类按钮适用于工具栏、对话框和设有内边距的内嵌元素"),
         "demoFlatButtonTitle": MessageLookupByLibrary.simpleMessage("平面按钮"),
@@ -191,9 +276,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoFullscreenDialogDescription": MessageLookupByLibrary.simpleMessage(
             "您可以利用 fullscreenDialog 属性指定接下来显示的页面是否为全屏模态对话框"),
         "demoFullscreenDialogTitle": MessageLookupByLibrary.simpleMessage("全屏"),
-        "demoFullscreenTooltip":
-            MessageLookupByLibrary.simpleMessage("Full Screen"),
+        "demoFullscreenTooltip": MessageLookupByLibrary.simpleMessage("全屏"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("信息"),
+        "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
+            "输入信息块以精简的形式显示一段复杂的信息，例如实体（人物、地点或内容）或对话文字。"),
+        "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("输入信息块"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage("无法显示网址。"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("选项"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
@@ -206,65 +293,60 @@ class MessageLookup extends MessageLookupByLibrary {
             "简易对话框可以让用户在多个选项之间做选择。您可以选择性地为简易对话框提供标题（标题会显示在选项上方）。"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("简洁"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
-        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
+            "文本字段可让用户在界面中输入文本。这些字段通常出现在表单和对话框中。"),
+        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("电子邮件"),
         "demoTextFieldEnterPassword":
-            MessageLookupByLibrary.simpleMessage("Please enter a password."),
-        "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### - Enter a US phone number."),
-        "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
-            "Please fix the errors in red before submitting."),
+            MessageLookupByLibrary.simpleMessage("请输入密码。"),
+        "demoTextFieldEnterUSPhoneNumber":
+            MessageLookupByLibrary.simpleMessage("(###) ###-#### - 请输入美国手机号码。"),
+        "demoTextFieldFormErrors":
+            MessageLookupByLibrary.simpleMessage("请先修正红色错误，然后再提交。"),
         "demoTextFieldHidePasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Hide password"),
-        "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
-            "Keep it short, this is just a demo."),
-        "demoTextFieldLifeStory":
-            MessageLookupByLibrary.simpleMessage("Life story"),
-        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
-        "demoTextFieldNameHasPhoneNumber": m3,
+            MessageLookupByLibrary.simpleMessage("隐藏密码"),
+        "demoTextFieldKeepItShort":
+            MessageLookupByLibrary.simpleMessage("请确保内容简洁，因为这只是一个演示。"),
+        "demoTextFieldLifeStory": MessageLookupByLibrary.simpleMessage("生平事迹"),
+        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("姓名*"),
+        "demoTextFieldNameHasPhoneNumber": m6,
         "demoTextFieldNameRequired":
-            MessageLookupByLibrary.simpleMessage("Name is required."),
+            MessageLookupByLibrary.simpleMessage("必须填写姓名。"),
         "demoTextFieldNoMoreThan":
-            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+            MessageLookupByLibrary.simpleMessage("请勿超过 8 个字符。"),
         "demoTextFieldOnlyAlphabeticalChars":
-            MessageLookupByLibrary.simpleMessage(
-                "Please enter only alphabetical characters."),
-        "demoTextFieldPassword":
-            MessageLookupByLibrary.simpleMessage("Password*"),
+            MessageLookupByLibrary.simpleMessage("请只输入字母字符。"),
+        "demoTextFieldPassword": MessageLookupByLibrary.simpleMessage("密码*"),
         "demoTextFieldPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+            MessageLookupByLibrary.simpleMessage("密码不一致"),
         "demoTextFieldPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("Phone number*"),
+            MessageLookupByLibrary.simpleMessage("手机号码*"),
         "demoTextFieldRequiredField":
-            MessageLookupByLibrary.simpleMessage("* indicates required field"),
+            MessageLookupByLibrary.simpleMessage("* 表示必填字段"),
         "demoTextFieldRetypePassword":
-            MessageLookupByLibrary.simpleMessage("Re-type password*"),
-        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+            MessageLookupByLibrary.simpleMessage("再次输入密码*"),
+        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("工资"),
         "demoTextFieldShowPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Show password"),
-        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
-        "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Single line of editable text and numbers"),
-        "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
-        "demoTextFieldTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
-        "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
+            MessageLookupByLibrary.simpleMessage("显示密码"),
+        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("提交"),
+        "demoTextFieldSubtitle":
+            MessageLookupByLibrary.simpleMessage("单行可修改的文字和数字"),
+        "demoTextFieldTellUsAboutYourself":
+            MessageLookupByLibrary.simpleMessage("请介绍一下您自己（例如，写出您的职业或爱好）"),
+        "demoTextFieldTitle": MessageLookupByLibrary.simpleMessage("文本字段"),
+        "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("美元"),
         "demoTextFieldWhatDoPeopleCallYou":
-            MessageLookupByLibrary.simpleMessage("What do people call you?"),
+            MessageLookupByLibrary.simpleMessage("人们如何称呼您？"),
         "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
+            MessageLookupByLibrary.simpleMessage("我们如何与您联系？"),
         "demoTextFieldYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("Your email address"),
+            MessageLookupByLibrary.simpleMessage("您的电子邮件地址"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "切换按钮可用于对相关选项进行分组。为了凸显相关切换按钮的群组，一个群组应该共用一个常用容器"),
         "demoToggleButtonTitle": MessageLookupByLibrary.simpleMessage("切换按钮"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Definitions for the various typographical styles found in Material Design."),
-        "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined text styles"),
-        "demoTypographyTitle":
-            MessageLookupByLibrary.simpleMessage("Typography"),
+            "Material Design 中各种字体排版样式的定义。"),
+        "demoTypographySubtitle":
+            MessageLookupByLibrary.simpleMessage("所有预定义文本样式"),
+        "demoTypographyTitle": MessageLookupByLibrary.simpleMessage("字体排版"),
         "dialogAddAccount": MessageLookupByLibrary.simpleMessage("添加帐号"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("同意"),
         "dialogCancel": MessageLookupByLibrary.simpleMessage("取消"),
@@ -279,7 +361,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "让 Google 协助应用判断位置，即代表系统会将匿名的位置数据发送给 Google（即使设备并没有运行任何应用）。"),
         "dialogLocationTitle":
             MessageLookupByLibrary.simpleMessage("要使用 Google 的位置信息服务吗？"),
-        "dialogSelectedOption": m4,
+        "dialogSelectedOption": m7,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage("设置备份帐号"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("显示对话框"),
         "homeCategoryReference":
@@ -287,234 +369,216 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("类别"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("图库"),
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("Car Savings"),
+            MessageLookupByLibrary.simpleMessage("购车储蓄"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Checking"),
+            MessageLookupByLibrary.simpleMessage("支票帐号"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("Home Savings"),
-        "rallyAccountDataVacation":
-            MessageLookupByLibrary.simpleMessage("Vacation"),
+            MessageLookupByLibrary.simpleMessage("家庭储蓄"),
+        "rallyAccountDataVacation": MessageLookupByLibrary.simpleMessage("度假"),
         "rallyAccountDetailDataAccountOwner":
-            MessageLookupByLibrary.simpleMessage("Account Owner"),
+            MessageLookupByLibrary.simpleMessage("帐号所有者"),
         "rallyAccountDetailDataAnnualPercentageYield":
-            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+            MessageLookupByLibrary.simpleMessage("年收益率"),
         "rallyAccountDetailDataInterestPaidLastYear":
-            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+            MessageLookupByLibrary.simpleMessage("去年支付的利息"),
         "rallyAccountDetailDataInterestRate":
-            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+            MessageLookupByLibrary.simpleMessage("利率"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+            MessageLookupByLibrary.simpleMessage("年初至今的利息"),
         "rallyAccountDetailDataNextStatement":
-            MessageLookupByLibrary.simpleMessage("Next Statement"),
-        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
-        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
-        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m5,
-        "rallyAlertsMessageCheckingAccount": m6,
-        "rallyAlertsMessageHeadsUpShopping": m7,
-        "rallyAlertsMessageSpentOnRestaurants": m8,
-        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
-        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+            MessageLookupByLibrary.simpleMessage("下一个对帐单"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("总计"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("帐号"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("提醒"),
+        "rallyAlertsMessageATMFees": m8,
+        "rallyAlertsMessageCheckingAccount": m9,
+        "rallyAlertsMessageHeadsUpShopping": m10,
+        "rallyAlertsMessageSpentOnRestaurants": m11,
+        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("帐单"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("应付"),
         "rallyBudgetCategoryClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
+            MessageLookupByLibrary.simpleMessage("服饰"),
         "rallyBudgetCategoryCoffeeShops":
-            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+            MessageLookupByLibrary.simpleMessage("咖啡店"),
         "rallyBudgetCategoryGroceries":
-            MessageLookupByLibrary.simpleMessage("Groceries"),
+            MessageLookupByLibrary.simpleMessage("杂货"),
         "rallyBudgetCategoryRestaurants":
-            MessageLookupByLibrary.simpleMessage("Restaurants"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
-        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
-        "rallyDescription":
-            MessageLookupByLibrary.simpleMessage("A personal finance app"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
-        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
-        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+            MessageLookupByLibrary.simpleMessage("餐馆"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("剩余"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("预算"),
+        "rallyDescription": MessageLookupByLibrary.simpleMessage("个人理财应用"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("剩余"),
+        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("登录"),
+        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("登录"),
         "rallyLoginLoginToRally":
-            MessageLookupByLibrary.simpleMessage("Login to Rally"),
-        "rallyLoginNoAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("登录 Rally"),
+        "rallyLoginNoAccount": MessageLookupByLibrary.simpleMessage("还没有帐号？"),
+        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("密码"),
         "rallyLoginRememberMe":
-            MessageLookupByLibrary.simpleMessage("Remember Me"),
-        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
-        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
-        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
-        "rallySettingsFindAtms":
-            MessageLookupByLibrary.simpleMessage("Find ATMs"),
-        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+            MessageLookupByLibrary.simpleMessage("记住我的登录信息"),
+        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("注册"),
+        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("用户名"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("查看全部"),
+        "rallySettingsFindAtms": MessageLookupByLibrary.simpleMessage("查找 ATM"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("帮助"),
         "rallySettingsManageAccounts":
-            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+            MessageLookupByLibrary.simpleMessage("管理帐号"),
         "rallySettingsNotifications":
-            MessageLookupByLibrary.simpleMessage("Notifications"),
+            MessageLookupByLibrary.simpleMessage("通知"),
         "rallySettingsPaperlessSettings":
-            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
+            MessageLookupByLibrary.simpleMessage("无纸化设置"),
         "rallySettingsPasscodeAndTouchId":
-            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+            MessageLookupByLibrary.simpleMessage("密码和 Touch ID"),
         "rallySettingsPersonalInformation":
-            MessageLookupByLibrary.simpleMessage("Personal Information"),
-        "rallySettingsSignOut":
-            MessageLookupByLibrary.simpleMessage("Sign out"),
+            MessageLookupByLibrary.simpleMessage("个人信息"),
+        "rallySettingsSignOut": MessageLookupByLibrary.simpleMessage("退出"),
         "rallySettingsTaxDocuments":
-            MessageLookupByLibrary.simpleMessage("Tax Documents"),
-        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
-        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
-        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
-        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
-        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
+            MessageLookupByLibrary.simpleMessage("税费文件"),
+        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("帐号"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("帐单"),
+        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("预算"),
+        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("概览"),
+        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("设置"),
         "settingsAbout":
-            MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
-        "settingsAttribution": MessageLookupByLibrary.simpleMessage(
-            "Designed by TOASTER in London"),
-        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
-        "settingsFeedback":
-            MessageLookupByLibrary.simpleMessage("Send feedback"),
-        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Light"),
-        "settingsLocale": MessageLookupByLibrary.simpleMessage("Locale"),
+            MessageLookupByLibrary.simpleMessage("关于 Flutter Gallery"),
+        "settingsAttribution":
+            MessageLookupByLibrary.simpleMessage("由伦敦的 TOASTER 设计"),
+        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("深色"),
+        "settingsFeedback": MessageLookupByLibrary.simpleMessage("发送反馈"),
+        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("浅色"),
+        "settingsLocale": MessageLookupByLibrary.simpleMessage("语言区域"),
         "settingsPlatformAndroid":
             MessageLookupByLibrary.simpleMessage("Android"),
         "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
-            MessageLookupByLibrary.simpleMessage("Platform mechanics"),
-        "settingsSlowMotion":
-            MessageLookupByLibrary.simpleMessage("Slow motion"),
-        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
-        "settingsTextDirection":
-            MessageLookupByLibrary.simpleMessage("Text direction"),
-        "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
-        "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
-        "settingsTextScaling":
-            MessageLookupByLibrary.simpleMessage("Text scaling"),
-        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
-        "settingsTextScalingLarge":
-            MessageLookupByLibrary.simpleMessage("Large"),
-        "settingsTextScalingNormal":
-            MessageLookupByLibrary.simpleMessage("Normal"),
-        "settingsTextScalingSmall":
-            MessageLookupByLibrary.simpleMessage("Small"),
-        "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
-        "shrineCancelButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CANCEL"),
+            MessageLookupByLibrary.simpleMessage("平台力学"),
+        "settingsSlowMotion": MessageLookupByLibrary.simpleMessage("慢镜头"),
+        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("系统"),
+        "settingsTextDirection": MessageLookupByLibrary.simpleMessage("文本方向"),
+        "settingsTextDirectionLTR":
+            MessageLookupByLibrary.simpleMessage("从左到右"),
+        "settingsTextDirectionLocaleBased":
+            MessageLookupByLibrary.simpleMessage("Based on locale"),
+        "settingsTextDirectionRTL":
+            MessageLookupByLibrary.simpleMessage("从右到左"),
+        "settingsTextScaling": MessageLookupByLibrary.simpleMessage("文字缩放"),
+        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("超大"),
+        "settingsTextScalingLarge": MessageLookupByLibrary.simpleMessage("大"),
+        "settingsTextScalingNormal": MessageLookupByLibrary.simpleMessage("正常"),
+        "settingsTextScalingSmall": MessageLookupByLibrary.simpleMessage("小"),
+        "settingsTheme": MessageLookupByLibrary.simpleMessage("主题背景"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("设置"),
+        "shrineCancelButtonCaption": MessageLookupByLibrary.simpleMessage("取消"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m9,
-        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+            MessageLookupByLibrary.simpleMessage("清空购物车"),
+        "shrineCartItemCount": m13,
+        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("购物车"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("Shipping:"),
+            MessageLookupByLibrary.simpleMessage("运费："),
         "shrineCartSubtotalCaption":
-            MessageLookupByLibrary.simpleMessage("Subtotal:"),
-        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
-        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+            MessageLookupByLibrary.simpleMessage("小计："),
+        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("税费："),
+        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("总计"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("Accessories"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+            MessageLookupByLibrary.simpleMessage("配件"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("全部"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
-        "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
-        "shrineLoginPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Password"),
-        "shrineLoginUsernameLabel":
-            MessageLookupByLibrary.simpleMessage("Username"),
-        "shrineLogoutButtonCaption":
-            MessageLookupByLibrary.simpleMessage("LOGOUT"),
-        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
-        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+            MessageLookupByLibrary.simpleMessage("服饰"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("家用"),
+        "shrineDescription": MessageLookupByLibrary.simpleMessage("时尚的零售应用"),
+        "shrineLoginPasswordLabel": MessageLookupByLibrary.simpleMessage("密码"),
+        "shrineLoginUsernameLabel": MessageLookupByLibrary.simpleMessage("用户名"),
+        "shrineLogoutButtonCaption": MessageLookupByLibrary.simpleMessage("退出"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("菜单"),
+        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("下一步"),
         "shrineProductBlueStoneMug":
-            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
+            MessageLookupByLibrary.simpleMessage("蓝石杯子"),
         "shrineProductCeriseScallopTee":
-            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+            MessageLookupByLibrary.simpleMessage("樱桃色扇贝 T 恤衫"),
         "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+            MessageLookupByLibrary.simpleMessage("青年布餐巾"),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+            MessageLookupByLibrary.simpleMessage("青年布衬衫"),
         "shrineProductClassicWhiteCollar":
-            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+            MessageLookupByLibrary.simpleMessage("经典白色衣领"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+            MessageLookupByLibrary.simpleMessage("粘土色毛线衣"),
         "shrineProductCopperWireRack":
-            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+            MessageLookupByLibrary.simpleMessage("铜线支架"),
         "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+            MessageLookupByLibrary.simpleMessage("细条纹 T 恤衫"),
         "shrineProductGardenStrand":
-            MessageLookupByLibrary.simpleMessage("Garden strand"),
-        "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+            MessageLookupByLibrary.simpleMessage("花园项链"),
+        "shrineProductGatsbyHat": MessageLookupByLibrary.simpleMessage("盖茨比帽"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
+            MessageLookupByLibrary.simpleMessage("绅士夹克"),
         "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+            MessageLookupByLibrary.simpleMessage("镀金桌上三件套"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+            MessageLookupByLibrary.simpleMessage("姜黄色围巾"),
         "shrineProductGreySlouchTank":
-            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+            MessageLookupByLibrary.simpleMessage("灰色水槽"),
         "shrineProductHurrahsTeaSet":
-            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+            MessageLookupByLibrary.simpleMessage("Hurrahs 茶具"),
         "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
+            MessageLookupByLibrary.simpleMessage("厨房工具四件套"),
         "shrineProductNavyTrousers":
-            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+            MessageLookupByLibrary.simpleMessage("海军蓝裤子"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m10,
-        "shrineProductQuantity": m11,
+            MessageLookupByLibrary.simpleMessage("石膏色束腰外衣"),
+        "shrineProductPrice": m14,
+        "shrineProductQuantity": m15,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Quartet table"),
+            MessageLookupByLibrary.simpleMessage("四方桌"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+            MessageLookupByLibrary.simpleMessage("雨水排水沟"),
         "shrineProductRamonaCrossover":
-            MessageLookupByLibrary.simpleMessage("Ramona crossover"),
+            MessageLookupByLibrary.simpleMessage("Ramona 混搭"),
         "shrineProductSeaTunic":
-            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+            MessageLookupByLibrary.simpleMessage("海蓝色束腰外衣"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
+            MessageLookupByLibrary.simpleMessage("海风毛线衣"),
         "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
-        "shrineProductShrugBag":
-            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+            MessageLookupByLibrary.simpleMessage("绕肩 T 恤衫"),
+        "shrineProductShrugBag": MessageLookupByLibrary.simpleMessage("单肩包"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
+            MessageLookupByLibrary.simpleMessage("典雅的陶瓷套装"),
         "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+            MessageLookupByLibrary.simpleMessage("Stella 太阳镜"),
         "shrineProductStrutEarrings":
-            MessageLookupByLibrary.simpleMessage("Strut earrings"),
+            MessageLookupByLibrary.simpleMessage("Strut 耳环"),
         "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+            MessageLookupByLibrary.simpleMessage("多肉植物花盆"),
         "shrineProductSunshirtDress":
-            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+            MessageLookupByLibrary.simpleMessage("防晒衣"),
         "shrineProductSurfAndPerfShirt":
-            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+            MessageLookupByLibrary.simpleMessage("冲浪衬衫"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+            MessageLookupByLibrary.simpleMessage("流浪包"),
         "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+            MessageLookupByLibrary.simpleMessage("大学代表队袜子"),
         "shrineProductWalterHenleyWhite":
-            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+            MessageLookupByLibrary.simpleMessage("Walter henley（白色）"),
         "shrineProductWeaveKeyring":
-            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+            MessageLookupByLibrary.simpleMessage("编织钥匙扣"),
         "shrineProductWhitePinstripeShirt":
-            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+            MessageLookupByLibrary.simpleMessage("白色细条纹衬衫"),
         "shrineProductWhitneyBelt":
-            MessageLookupByLibrary.simpleMessage("Whitney belt"),
+            MessageLookupByLibrary.simpleMessage("Whitney 皮带"),
         "starterAppDescription":
-            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m12,
-        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
-        "starterAppGenericButton":
-            MessageLookupByLibrary.simpleMessage("BUTTON"),
-        "starterAppGenericHeadline":
-            MessageLookupByLibrary.simpleMessage("Headline"),
+            MessageLookupByLibrary.simpleMessage("自适应入门布局"),
+        "starterAppDrawerItem": m16,
+        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("正文"),
+        "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("按钮"),
+        "starterAppGenericHeadline": MessageLookupByLibrary.simpleMessage("标题"),
         "starterAppGenericSubtitle":
-            MessageLookupByLibrary.simpleMessage("Subtitle"),
-        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
-        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
-        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
-        "starterAppTooltipFavorite":
-            MessageLookupByLibrary.simpleMessage("Favorite"),
-        "starterAppTooltipSearch":
-            MessageLookupByLibrary.simpleMessage("Search"),
-        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
+            MessageLookupByLibrary.simpleMessage("副标题"),
+        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("标题"),
+        "starterAppTitle": MessageLookupByLibrary.simpleMessage("入门应用"),
+        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("添加"),
+        "starterAppTooltipFavorite": MessageLookupByLibrary.simpleMessage("收藏"),
+        "starterAppTooltipSearch": MessageLookupByLibrary.simpleMessage("搜索"),
+        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("分享")
       };
 }

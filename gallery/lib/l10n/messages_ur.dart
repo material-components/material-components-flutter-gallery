@@ -20,52 +20,75 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ur';
 
   static m0(value) =>
-      "To see the source code for this app, please visit the ${value}.";
+      "اس ایپ کے لیے ماخذ کوڈ دیکھنے کے لیے، براہ کرم ${value} کا ملاحظہ کریں۔";
 
-  static m1(title) => "Placeholder for ${title} tab";
+  static m1(title) => "${title} ٹیب کے لیے پلیس ہولڈر";
 
-  static m2(value) => "Item ${value}";
+  static m2(totalRestaurants) =>
+      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
 
-  static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m3(numberOfStops) =>
+      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
 
-  static m4(value) => "آپ نے منتخب کیا: \"${value}\"";
+  static m4(totalProperties) =>
+      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m5(value) => "آئٹم ${value}";
 
-  static m6(percent) =>
-      "Good work! Your checking account is ${percent} higher than last month.";
+  static m6(name, phoneNumber) => "${name} کا فون نمبر ${phoneNumber} ہے";
 
-  static m7(percent) =>
-      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+  static m7(value) => "آپ نے منتخب کیا: \"${value}\"";
 
-  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m8(amount) => "آپ نے اس مہینے ATM فیس میں ${amount} خرچ کیے ہیں";
 
-  static m9(quantity) => "${quantity} ITEMS";
+  static m9(percent) =>
+      "بہت خوب! آپ کا چیکنگ اکاؤنٹ پچھلے مہینے سے ${percent} زیادہ ہے۔";
 
-  static m10(price) => "x ${price}";
+  static m10(percent) =>
+      "آگاہ رہیں، آپ نے اس ماہ کے لیے اپنی خریداری کے بجٹ کا ${percent} استعمال کر لیا ہے۔";
 
-  static m11(quantity) => "Quantity: ${quantity}";
+  static m11(amount) => "آپ نے اس ہفتے ریسٹورینٹس پر ${amount} خرچ کیے ہیں۔";
 
-  static m12(value) => "Item ${value}";
+  static m12(count) =>
+      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+
+  static m13(quantity) =>
+      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+
+  static m14(price) => "x ‏${price}";
+
+  static m15(quantity) => "مقدار: ${quantity}";
+
+  static m16(value) => "آئٹم ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "aboutDialogDescription": m0,
         "aboutFlutterSamplesRepo":
-            MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
+            MessageLookupByLibrary.simpleMessage("فلوٹر نمونے جیٹ بک ریپوزٹری"),
         "bottomNavigationAccountTab":
-            MessageLookupByLibrary.simpleMessage("Account"),
+            MessageLookupByLibrary.simpleMessage("اکاؤنٹ"),
         "bottomNavigationAlarmTab":
-            MessageLookupByLibrary.simpleMessage("Alarm"),
+            MessageLookupByLibrary.simpleMessage("الارم"),
         "bottomNavigationCalendarTab":
-            MessageLookupByLibrary.simpleMessage("Calendar"),
+            MessageLookupByLibrary.simpleMessage("کیلنڈر"),
         "bottomNavigationCameraTab":
-            MessageLookupByLibrary.simpleMessage("Camera"),
+            MessageLookupByLibrary.simpleMessage("کیمرا"),
         "bottomNavigationCommentsTab":
-            MessageLookupByLibrary.simpleMessage("Comments"),
+            MessageLookupByLibrary.simpleMessage("تبصرے"),
         "bottomNavigationContentPlaceholder": m1,
-        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "buttonText": MessageLookupByLibrary.simpleMessage("بٹن"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("تخلیق کریں"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("بائیکنگ"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("مستول"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("آتش دان"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("بڑا"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("متوسط"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("چھوٹا"),
+        "chipTurnOnLights":
+            MessageLookupByLibrary.simpleMessage("لائٹس آن کریں"),
+        "chipWasher":
+            MessageLookupByLibrary.simpleMessage("کپڑے دھونے والی مشین"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("امبر"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("نیلا"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("نیلا خاکستری"),
@@ -85,8 +108,85 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsRed": MessageLookupByLibrary.simpleMessage("سرخ"),
         "colorsTeal": MessageLookupByLibrary.simpleMessage("نیلگوں سبز"),
         "colorsYellow": MessageLookupByLibrary.simpleMessage("زرد"),
-        "craneDescription":
-            MessageLookupByLibrary.simpleMessage("A personalized travel app"),
+        "craneDescription": MessageLookupByLibrary.simpleMessage(
+            "ذاتی نوعیت کی بنائی گئی ایک سفری ایپ"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("کھائیں"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("نیپال، اٹلی"),
+        "craneEat1":
+            MessageLookupByLibrary.simpleMessage("ڈلاس، ریاستہائے متحدہ"),
+        "craneEat10": MessageLookupByLibrary.simpleMessage("لسبن، پرتگال"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("قرطبہ، ارجنٹینا"),
+        "craneEat3":
+            MessageLookupByLibrary.simpleMessage("پورٹلینڈ، ریاست ہائے متحدہ"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("پیرس، فرانس"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("سیول، جنوبی کوریا"),
+        "craneEat6":
+            MessageLookupByLibrary.simpleMessage("سی‏ئٹل، ریاستہائے متحدہ"),
+        "craneEat7":
+            MessageLookupByLibrary.simpleMessage("نیش ول، ریاستہائے متحدہ"),
+        "craneEat8":
+            MessageLookupByLibrary.simpleMessage("اٹلانٹا، ریاستہائے متحدہ"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("میڈرڈ، ہسپانیہ"),
+        "craneEatRestaurants": m2,
+        "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
+            "منزل کے لحاظ سے ریستوران دریافت کریں"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
+        "craneFly0":
+            MessageLookupByLibrary.simpleMessage("اسپین، ریاستہائے متحدہ"),
+        "craneFly1":
+            MessageLookupByLibrary.simpleMessage("بگ سور، ریاستہائے متحدہ"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("قاہرہ، مصر"),
+        "craneFly11": MessageLookupByLibrary.simpleMessage("لسبن، پرتگال"),
+        "craneFly12":
+            MessageLookupByLibrary.simpleMessage("ناپا، ریاستہائے متحدہ"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("بالی، انڈونیشیا"),
+        "craneFly2": MessageLookupByLibrary.simpleMessage("خومبو ویلی، نیپال"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("ماچو پچو، پیرو"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("مالے، مالدیپ"),
+        "craneFly5":
+            MessageLookupByLibrary.simpleMessage("وٹزناؤ، سوئٹزر لینڈ"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("میڈرڈ، ہسپانیہ"),
+        "craneFly7": MessageLookupByLibrary.simpleMessage(
+            "ماؤنٹ رشمور، ریاستہائے متحدہ امریکہ"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("سنگاپور"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("ہوانا، کیوبا"),
+        "craneFlyStops": m3,
+        "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
+            "منزل کے لحاظ سے فلائیٹس دریافت کریں"),
+        "craneFormDate":
+            MessageLookupByLibrary.simpleMessage("تاریخ منتخب کریں"),
+        "craneFormDates":
+            MessageLookupByLibrary.simpleMessage("تاریخیں منتخب کریں"),
+        "craneFormDestination":
+            MessageLookupByLibrary.simpleMessage("منزل منتخب کریں"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("ڈائنرز"),
+        "craneFormLocation":
+            MessageLookupByLibrary.simpleMessage("مقام منتخب کریں"),
+        "craneFormOrigin":
+            MessageLookupByLibrary.simpleMessage("مقام روانگی منتخب کریں"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("وقت منتخب کریں"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("سیاح"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("نیند"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("مالے، مالدیپ"),
+        "craneSleep1":
+            MessageLookupByLibrary.simpleMessage("اسپین، ریاستہائے متحدہ"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("قاہرہ، مصر"),
+        "craneSleep11":
+            MessageLookupByLibrary.simpleMessage("تائی پے، تائیوان"),
+        "craneSleep2": MessageLookupByLibrary.simpleMessage("ماچو پچو، پیرو"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("ہوانا، کیوبا"),
+        "craneSleep4":
+            MessageLookupByLibrary.simpleMessage("وٹزناؤ، سوئٹزر لینڈ"),
+        "craneSleep5":
+            MessageLookupByLibrary.simpleMessage("بگ سور، ریاستہائے متحدہ"),
+        "craneSleep6":
+            MessageLookupByLibrary.simpleMessage("ناپا، ریاستہائے متحدہ"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("پورٹو، پرتگال"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("تولوم ، میکسیکو"),
+        "craneSleep9": MessageLookupByLibrary.simpleMessage("لسبن، پرتگال"),
+        "craneSleepProperties": m4,
+        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
+            "منزل کے لحاظ سے پراپرٹیز دریافت کریں"),
         "cupertinoAlertAllow":
             MessageLookupByLibrary.simpleMessage("اجازت دیں"),
         "cupertinoAlertApplePie":
@@ -111,52 +211,63 @@ class MessageLookup extends MessageLookupByLibrary {
             "جب آپ ایپ استعمال کر رہے ہوں تو \"Maps\" کو اپنے مقام تک رسائی حاصل کرنے دیں؟"),
         "cupertinoAlertTiramisu":
             MessageLookupByLibrary.simpleMessage("تیرامیسو"),
-        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("بٹن"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("پس منظر کے ساتھ"),
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("الرٹ دکھائیں"),
+        "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
+            "ایکشن چپس اختیارات کا ایک سیٹ ہے جو بنیادی مواد سے متعلقہ کارروائی کو متحرک کرتا ہے۔ ایکشن چپس کو متحرک اور سیاق و سباق کے لحاظ سے کسی UI میں ظاہر ہونی چاہیے۔"),
+        "demoActionChipTitle": MessageLookupByLibrary.simpleMessage("ایکشن چپ"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "الرٹ ڈائیلاگ صارف کو ایسی صورتحال سے آگاہ کرتا ہے جہاں اقرار درکار ہوتا ہے۔ الرٹ ڈائیلاگ میں اختیاری عنوان اور کارروائیوں کی اختیاری فہرست ہوتی ہے۔"),
         "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("الرٹ"),
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("عنوان کے ساتھ الرٹ"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
+            "باٹم نیویگیشن بارز ایک اسکرین کے نیچے تین سے پانچ منازل کو ڈسپلے کرتا ہے۔ ہر منزل کی نمائندگی ایک آئیکن اور ایک اختیاری ٹیکسٹ لیبل کے ذریعے کی جاتی ہے۔ جب نیچے میں نیویگیشن آئیکن ٹیپ ہوجاتا ہے، تو صارف کو اس آئیکن سے وابستہ اعلی سطحی نیویگیشن منزل تک لے جایا جاتا ہے۔"),
         "demoBottomNavigationPersistentLabels":
-            MessageLookupByLibrary.simpleMessage("Persistent labels"),
+            MessageLookupByLibrary.simpleMessage("مستقل لیبلز"),
         "demoBottomNavigationSelectedLabel":
-            MessageLookupByLibrary.simpleMessage("Selected label"),
+            MessageLookupByLibrary.simpleMessage("منتخب کردہ لیول"),
         "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation with cross-fading views"),
+            "کراس فیڈنگ ملاحظات کے ساتھ نیچے میں نیویگیشن"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom navigation"),
-        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("نیچے نیویگیشن"),
+        "demoBottomSheetAddLabel":
+            MessageLookupByLibrary.simpleMessage("شامل کریں"),
         "demoBottomSheetButtonText":
-            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
-        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
-        "demoBottomSheetItem": m2,
+            MessageLookupByLibrary.simpleMessage("نیچے کی شیٹ دکھائیں"),
+        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("ہیڈر"),
+        "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
+            "نیچے کی موڈل شیٹ مینو یا ڈائیلاگ کا متبادل ہے اور صارف کو باقی ایپ کے ساتھ تعامل کرنے سے روکتی ہے۔"),
         "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("نیچے کی ماڈل شیٹ"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
+                "نیچے کی مستقل شیٹ ایپ کے بنیادی مواد کی اضافی معلومات دکھاتی ہے۔ جب تک صارف ایپ کے دوسرے حصوں سے تعامل کرتا ہے تب بھی نیچے کی مستقل شیٹ نظر آتی ہے۔"),
         "demoBottomSheetPersistentTitle":
-            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
-        "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Persistent and modal bottom sheets"),
+            MessageLookupByLibrary.simpleMessage("نیچے کی مستقل شیٹ"),
+        "demoBottomSheetSubtitle":
+            MessageLookupByLibrary.simpleMessage("نیچے کی مستقل اور موڈل شیٹس"),
         "demoBottomSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("نیچے کی شیٹ"),
         "demoBottomTextFieldsTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("متن کے فیلڈز"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "ہموار، ابھرا ہوا، آؤٹ لائن، اور مزید"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("بٹنز"),
+        "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
+            "مختصر عناصر وہ ہیں جو ان پٹ، انتساب، یا ایکشن کی نمائندگی کر تے ہیں"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("چپس"),
+        "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
+            "چوائس چپس ایک ہی سیٹ کے واحد چوائس کی نمائندگی کرتا ہے۔ چوائس چپس میں متعلقہ وضاحتی ٹیکسٹ یا زمرے ہوتے ہیں۔"),
+        "demoChoiceChipTitle":
+            MessageLookupByLibrary.simpleMessage("چوائس چپس"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("کوڈ کا نمونہ"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "Color and color swatch constants which represent Material Design\'s color palette."),
+            "رنگ اور رنگ کے نمونے مستقل رہتے ہیں جو مٹیریل ڈیزائن کے رنگ کے پیلیٹ کی نمائندگی کرتے ہیں۔"),
         "demoColorsSubtitle":
             MessageLookupByLibrary.simpleMessage("پیشگی متعین کردہ سبھی رنگ"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("رنگ"),
@@ -170,10 +281,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("بٹن کے ساتھ الرٹ"),
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
             "الرٹ ڈائیلاگ صارف کو ایسی صورتحال سے آگاہ کرتا ہے جہاں اقرار درکار ہوتا ہے۔ الرٹ ڈائیلاگ میں اختیاری عنوان، اختیاری مواد، اور کارروائیوں کی ایک اختیاری فہرست ہوتی ہے۔ عنوان کو مندرجات کے اوپر دکھایا جاتا ہے اور کارروائیوں کو مندرجات کے نیچے دکھایا جاتا ہے۔"),
-        "demoCupertinoAlertTitle":
-            MessageLookupByLibrary.simpleMessage("Alert"),
+        "demoCupertinoAlertTitle": MessageLookupByLibrary.simpleMessage("الرٹ"),
         "demoCupertinoAlertWithTitleTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage("عنوان کے ساتھ الرٹ"),
         "demoCupertinoAlertsSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS طرز الرٹ ڈائیلاگز"),
         "demoCupertinoAlertsTitle":
@@ -183,12 +293,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS طرز کے بٹن"),
         "demoCupertinoButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Buttons"),
+            MessageLookupByLibrary.simpleMessage("بٹنز"),
+        "demoCupertinoSegmentedControlDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+        "demoCupertinoSegmentedControlSubtitle":
+            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+        "demoCupertinoSegmentedControlTitle":
+            MessageLookupByLibrary.simpleMessage("Segmented Control"),
         "demoDialogSubtitle":
             MessageLookupByLibrary.simpleMessage("سادہ الرٹ اور پوری اسکرین"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("ڈائیلاگز"),
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API دستاویزات"),
+        "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
+            "فلٹر چپس مواد فلٹر کرنے کے طریقے سے ٹیگز یا وضاحتی الفاظ کا استعمال کرتے ہیں۔"),
+        "demoFilterChipTitle": MessageLookupByLibrary.simpleMessage("فلٹر چِپ"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "ہموار بٹن، جب دبایا جاتا ہے تو سیاہی کی چھلکیاں دکھاتا ہے، لیکن اوپر نہیں جاتا ہے۔ پیڈنگ کے ساتھ آن لائن اور ڈائیلاگز میں ہموار بٹن، ٹول بارز پر استعمال کریں"),
         "demoFlatButtonTitle":
@@ -202,8 +322,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoFullscreenDialogTitle":
             MessageLookupByLibrary.simpleMessage("پوری اسکرین"),
         "demoFullscreenTooltip":
-            MessageLookupByLibrary.simpleMessage("Full Screen"),
+            MessageLookupByLibrary.simpleMessage("پوری اسکرین"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("معلومات"),
+        "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
+            "ان پٹ چپس مختصر شکل میں ہستی (شخص، جگہ، یا چیز) یا گفتگو والے ٹیکسٹ جیسی معلومات کے ایک اہم حصے کی نمائندگی کرتے ہیں۔"),
+        "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("ان پٹ چپ"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL نہیں دکھایا جا سکا:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("اختیارات"),
@@ -219,66 +342,67 @@ class MessageLookup extends MessageLookupByLibrary {
             "ایک سادہ ڈائیلاگ صارف کو کئی اختیارات کے درمیان انتخاب پیش کرتا ہے ایک سادہ ڈائیلاگ کا اختیاری عنوان ہوتا ہے جو انتخابات کے اوپر دکھایا جاتا ہے۔"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("سادہ"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
-        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
-        "demoTextFieldEnterPassword":
-            MessageLookupByLibrary.simpleMessage("Please enter a password."),
+            "متں کی فیلڈز صارفین کو متن کو UI میں درج کرنے کی اجازت دیتی ہیں۔ وہ عام طور پر فارمز اور ڈائیلاگز میں ظاہر ہوتے ہیں۔"),
+        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("ای میل"),
+        "demoTextFieldEnterPassword": MessageLookupByLibrary.simpleMessage(
+            "براہ کرم ایک پاس ورڈ درج کریں۔"),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### - Enter a US phone number."),
+            "(###) ###-#### - ریاستہائے متحدہ امریکہ کا فون نمبر درج کریں۔"),
         "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
-            "Please fix the errors in red before submitting."),
+            "براہ کرم جمع کرانے سے پہلے سرخ رنگ کی خرابیوں کو درست کریں۔"),
         "demoTextFieldHidePasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Hide password"),
+            MessageLookupByLibrary.simpleMessage("پاس ورڈ چھپائیں"),
         "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
-            "Keep it short, this is just a demo."),
+            "اسے مختصر رکھیں ، یہ صرف ایک ڈیمو ہے۔"),
         "demoTextFieldLifeStory":
-            MessageLookupByLibrary.simpleMessage("Life story"),
-        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
-        "demoTextFieldNameHasPhoneNumber": m3,
+            MessageLookupByLibrary.simpleMessage("زندگی کی کہانی"),
+        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("نام*"),
+        "demoTextFieldNameHasPhoneNumber": m6,
         "demoTextFieldNameRequired":
-            MessageLookupByLibrary.simpleMessage("Name is required."),
+            MessageLookupByLibrary.simpleMessage("نام درکار ہے۔"),
         "demoTextFieldNoMoreThan":
-            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+            MessageLookupByLibrary.simpleMessage("8 حروف سے زیادہ نہیں۔"),
         "demoTextFieldOnlyAlphabeticalChars":
             MessageLookupByLibrary.simpleMessage(
-                "Please enter only alphabetical characters."),
+                "براہ کرم صرف حروف تہجی کے اعتبار سے حروف درک کریں۔"),
         "demoTextFieldPassword":
-            MessageLookupByLibrary.simpleMessage("Password*"),
+            MessageLookupByLibrary.simpleMessage("پاس ورڈ*"),
         "demoTextFieldPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+            MessageLookupByLibrary.simpleMessage("پاسورڈز مماثل نہیں ہیں"),
         "demoTextFieldPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("Phone number*"),
-        "demoTextFieldRequiredField":
-            MessageLookupByLibrary.simpleMessage("* indicates required field"),
+            MessageLookupByLibrary.simpleMessage("فون نمبر*"),
+        "demoTextFieldRequiredField": MessageLookupByLibrary.simpleMessage(
+            "* مطلوبہ فیلڈ کی نشاندہی کرتا ہے"),
         "demoTextFieldRetypePassword":
-            MessageLookupByLibrary.simpleMessage("Re-type password*"),
-        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+            MessageLookupByLibrary.simpleMessage("پاس ورڈ* دوبارہ ٹائپ کریں"),
+        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("تنخواہ"),
         "demoTextFieldShowPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Show password"),
-        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
+            MessageLookupByLibrary.simpleMessage("پاس ورڈ دکھائیں"),
+        "demoTextFieldSubmit":
+            MessageLookupByLibrary.simpleMessage("جمع کرائیں"),
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Single line of editable text and numbers"),
+            "قابل ترمیم متن اور نمبرز کے لیے واحد لائن"),
         "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
+            "اپنے بارے میں بتائیں (مثلاً، لکھیں کہ آپ کیا کرتے ہیں اور آپ کے مشغلے کیا ہیں)"),
         "demoTextFieldTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
-        "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
+            MessageLookupByLibrary.simpleMessage("متن کے فیلڈز"),
+        "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("یو ایس ڈی"),
         "demoTextFieldWhatDoPeopleCallYou":
-            MessageLookupByLibrary.simpleMessage("What do people call you?"),
-        "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
+            MessageLookupByLibrary.simpleMessage("لوگ آپ کو کیا پکارتے ہیں؟"),
+        "demoTextFieldWhereCanWeReachYou": MessageLookupByLibrary.simpleMessage(
+            "ہم آپ سے کیسے رابطہ کر سکتے ہیں؟"),
         "demoTextFieldYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("Your email address"),
+            MessageLookupByLibrary.simpleMessage("آپ کا ای میل پتہ"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "گروپ سے متعلق اختیارات کے لیے ٹوگل بٹنز استعمال کئے جا سکتے ہیں۔ متعلقہ ٹوگل بٹنز کے گروپوں پر زور دینے کے لئے، ایک گروپ کو مشترکہ کنٹینر کا اشتراک کرنا ہوگا"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("ٹوگل بٹنز"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Definitions for the various typographical styles found in Material Design."),
+            "مٹیریل ڈیزائن میں پائے جانے والے مختلف ٹائپوگرافیکل اسٹائل کی تعریفات۔"),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined text styles"),
+            "پہلے سے متعینہ متن کی تمام طرزیں"),
         "demoTypographyTitle":
-            MessageLookupByLibrary.simpleMessage("Typography"),
+            MessageLookupByLibrary.simpleMessage("ٹائپوگرافی"),
         "dialogAddAccount":
             MessageLookupByLibrary.simpleMessage("اکاؤنٹ شامل کریں"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("متفق ہوں"),
@@ -297,7 +421,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Google کو مقام کا تعین کرنے میں ایپس کی مدد کرنے دیں۔ اس کا مطلب یہ ہے کہ Google کو گمنام مقام کا ڈیٹا تب بھی بھیجا جائے گا، جب کوئی بھی ایپ نہیں چل رہی ہیں۔"),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Google کی مقام کی سروس کا استعمال کریں؟"),
-        "dialogSelectedOption": m4,
+        "dialogSelectedOption": m7,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("بیک اپ اکاؤنٹ ترتیب دیں"),
         "dialogShow":
@@ -307,234 +431,240 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("زمرے"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("گیلری"),
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("Car Savings"),
+            MessageLookupByLibrary.simpleMessage("کار کی سیونگز"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Checking"),
+            MessageLookupByLibrary.simpleMessage("چیک کیا جا رہا ہے"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("Home Savings"),
+            MessageLookupByLibrary.simpleMessage("ہوم سیونگز"),
         "rallyAccountDataVacation":
-            MessageLookupByLibrary.simpleMessage("Vacation"),
+            MessageLookupByLibrary.simpleMessage("تعطیل"),
         "rallyAccountDetailDataAccountOwner":
-            MessageLookupByLibrary.simpleMessage("Account Owner"),
+            MessageLookupByLibrary.simpleMessage("اکاؤنٹ کا مالک"),
         "rallyAccountDetailDataAnnualPercentageYield":
-            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+            MessageLookupByLibrary.simpleMessage("سالانہ فی صد منافع"),
         "rallyAccountDetailDataInterestPaidLastYear":
-            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+            MessageLookupByLibrary.simpleMessage("پچھلے سال ادا کیا گیا سود"),
         "rallyAccountDetailDataInterestRate":
-            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+            MessageLookupByLibrary.simpleMessage("سود کی شرح"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+            MessageLookupByLibrary.simpleMessage("YTD سود"),
         "rallyAccountDetailDataNextStatement":
-            MessageLookupByLibrary.simpleMessage("Next Statement"),
-        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
-        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
-        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m5,
-        "rallyAlertsMessageCheckingAccount": m6,
-        "rallyAlertsMessageHeadsUpShopping": m7,
-        "rallyAlertsMessageSpentOnRestaurants": m8,
-        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
-        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+            MessageLookupByLibrary.simpleMessage("اگلا بیان"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("کل"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("اکاؤنٹس"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("الرٹس"),
+        "rallyAlertsMessageATMFees": m8,
+        "rallyAlertsMessageCheckingAccount": m9,
+        "rallyAlertsMessageHeadsUpShopping": m10,
+        "rallyAlertsMessageSpentOnRestaurants": m11,
+        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("بلز"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("آخری تاریخ"),
         "rallyBudgetCategoryClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
+            MessageLookupByLibrary.simpleMessage("لباس"),
         "rallyBudgetCategoryCoffeeShops":
-            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+            MessageLookupByLibrary.simpleMessage("کافی کی دکانیں"),
         "rallyBudgetCategoryGroceries":
-            MessageLookupByLibrary.simpleMessage("Groceries"),
+            MessageLookupByLibrary.simpleMessage("گروسریز"),
         "rallyBudgetCategoryRestaurants":
-            MessageLookupByLibrary.simpleMessage("Restaurants"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
-        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
+            MessageLookupByLibrary.simpleMessage("ریستوراں"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("بائیں"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("بجٹس"),
         "rallyDescription":
-            MessageLookupByLibrary.simpleMessage("A personal finance app"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
-        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
-        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+            MessageLookupByLibrary.simpleMessage("ایک ذاتی اقتصادی ایپ"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("LEFT"),
+        "rallyLoginButtonLogin":
+            MessageLookupByLibrary.simpleMessage("لاگ ان کریں"),
+        "rallyLoginLabelLogin":
+            MessageLookupByLibrary.simpleMessage("لاگ ان کریں"),
         "rallyLoginLoginToRally":
-            MessageLookupByLibrary.simpleMessage("Login to Rally"),
-        "rallyLoginNoAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("ریلی میں لاگ ان کریں"),
+        "rallyLoginNoAccount": MessageLookupByLibrary.simpleMessage(
+            "کیا آپ کے پاس اکاؤنٹ نہیں ہے؟"),
+        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("پاس ورڈ"),
         "rallyLoginRememberMe":
-            MessageLookupByLibrary.simpleMessage("Remember Me"),
-        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
-        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
-        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+            MessageLookupByLibrary.simpleMessage("مجھے یاد رکھیں"),
+        "rallyLoginSignUp":
+            MessageLookupByLibrary.simpleMessage("سائن اپ کریں"),
+        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("صارف نام"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("سبھی دیکھیں"),
         "rallySettingsFindAtms":
-            MessageLookupByLibrary.simpleMessage("Find ATMs"),
-        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+            MessageLookupByLibrary.simpleMessage("ATMs تلاش کریں"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("مدد"),
         "rallySettingsManageAccounts":
-            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+            MessageLookupByLibrary.simpleMessage("اکاؤنٹس کا نظم کریں"),
         "rallySettingsNotifications":
-            MessageLookupByLibrary.simpleMessage("Notifications"),
-        "rallySettingsPaperlessSettings":
-            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
+            MessageLookupByLibrary.simpleMessage("اطلاعات"),
+        "rallySettingsPaperlessSettings": MessageLookupByLibrary.simpleMessage(
+            "کاغذ کا استعمال ترک کرنے کی ترتیبات"),
         "rallySettingsPasscodeAndTouchId":
-            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+            MessageLookupByLibrary.simpleMessage("پاس کوڈ اور ٹچ ID"),
         "rallySettingsPersonalInformation":
-            MessageLookupByLibrary.simpleMessage("Personal Information"),
+            MessageLookupByLibrary.simpleMessage("ذاتی معلومات"),
         "rallySettingsSignOut":
-            MessageLookupByLibrary.simpleMessage("Sign out"),
+            MessageLookupByLibrary.simpleMessage("سائن آؤٹ کریں"),
         "rallySettingsTaxDocuments":
-            MessageLookupByLibrary.simpleMessage("Tax Documents"),
-        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
-        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
-        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
-        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
-        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
-        "settingsAbout":
-            MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
+            MessageLookupByLibrary.simpleMessage("ٹیکس کے دستاویزات"),
+        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("اکاؤنٹس"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("بلز"),
+        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("بجٹس"),
+        "rallyTitleOverview":
+            MessageLookupByLibrary.simpleMessage("مجموعی جائزہ"),
+        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("ترتیبات"),
+        "settingsAbout": MessageLookupByLibrary.simpleMessage(
+            "چاپلوسی والی Gallery کے بارے میں"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
-            "Designed by TOASTER in London"),
-        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
+            "لندن میں ٹوسٹر کے ذریعے ڈیزائن کیا گیا"),
+        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("گہری"),
         "settingsFeedback":
-            MessageLookupByLibrary.simpleMessage("Send feedback"),
-        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Light"),
-        "settingsLocale": MessageLookupByLibrary.simpleMessage("Locale"),
+            MessageLookupByLibrary.simpleMessage("تاثرات بھیجیں"),
+        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("ہلکی"),
+        "settingsLocale": MessageLookupByLibrary.simpleMessage("زبان"),
         "settingsPlatformAndroid":
             MessageLookupByLibrary.simpleMessage("Android"),
         "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
-            MessageLookupByLibrary.simpleMessage("Platform mechanics"),
-        "settingsSlowMotion":
-            MessageLookupByLibrary.simpleMessage("Slow motion"),
-        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
+            MessageLookupByLibrary.simpleMessage("پلیٹ فارم میکانیات"),
+        "settingsSlowMotion": MessageLookupByLibrary.simpleMessage("سلو موشن"),
+        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("سسٹم"),
         "settingsTextDirection":
-            MessageLookupByLibrary.simpleMessage("Text direction"),
+            MessageLookupByLibrary.simpleMessage("متن کی ڈائریکشن"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
+        "settingsTextDirectionLocaleBased":
+            MessageLookupByLibrary.simpleMessage("Based on locale"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
-            MessageLookupByLibrary.simpleMessage("Text scaling"),
-        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
-        "settingsTextScalingLarge":
-            MessageLookupByLibrary.simpleMessage("Large"),
+            MessageLookupByLibrary.simpleMessage("متن کی پیمائی کرنا"),
+        "settingsTextScalingHuge":
+            MessageLookupByLibrary.simpleMessage("بہت بڑا"),
+        "settingsTextScalingLarge": MessageLookupByLibrary.simpleMessage("بڑا"),
         "settingsTextScalingNormal":
-            MessageLookupByLibrary.simpleMessage("Normal"),
+            MessageLookupByLibrary.simpleMessage("عام"),
         "settingsTextScalingSmall":
-            MessageLookupByLibrary.simpleMessage("Small"),
-        "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("چھوٹا"),
+        "settingsTheme": MessageLookupByLibrary.simpleMessage("تھیم"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("ترتیبات"),
         "shrineCancelButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CANCEL"),
+            MessageLookupByLibrary.simpleMessage("منسوخ کریں"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m9,
-        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+            MessageLookupByLibrary.simpleMessage("کارٹ کو صاف کریں"),
+        "shrineCartItemCount": m13,
+        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("کارٹ"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("Shipping:"),
+            MessageLookupByLibrary.simpleMessage("ترسیل:"),
         "shrineCartSubtotalCaption":
-            MessageLookupByLibrary.simpleMessage("Subtotal:"),
-        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
-        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+            MessageLookupByLibrary.simpleMessage("سب ٹوٹل:"),
+        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("ٹیکس:"),
+        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("کل"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("Accessories"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+            MessageLookupByLibrary.simpleMessage("لوازمات"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("سبھی"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
-        "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+            MessageLookupByLibrary.simpleMessage("کپڑے"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("ہوم"),
+        "shrineDescription": MessageLookupByLibrary.simpleMessage(
+            "فَيشَن پرَستی سے متعلق ریٹیل ایپ"),
         "shrineLoginPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("پاس ورڈ"),
         "shrineLoginUsernameLabel":
-            MessageLookupByLibrary.simpleMessage("Username"),
+            MessageLookupByLibrary.simpleMessage("صارف نام"),
         "shrineLogoutButtonCaption":
-            MessageLookupByLibrary.simpleMessage("LOGOUT"),
-        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
-        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+            MessageLookupByLibrary.simpleMessage("لاگ آؤٹ"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("مینو"),
+        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("اگلا"),
         "shrineProductBlueStoneMug":
-            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
+            MessageLookupByLibrary.simpleMessage("نیلے پتھر کا پیالا"),
         "shrineProductCeriseScallopTee":
-            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+            MessageLookupByLibrary.simpleMessage("لوئر ڈالبی کرس ٹی شرٹ"),
         "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+            MessageLookupByLibrary.simpleMessage("چمبری نیپکنز"),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+            MessageLookupByLibrary.simpleMessage("چمبری شرٹ"),
         "shrineProductClassicWhiteCollar":
-            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+            MessageLookupByLibrary.simpleMessage("کلاسک سفید کالر"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+            MessageLookupByLibrary.simpleMessage("مٹی کے رنگ کے سویٹر"),
         "shrineProductCopperWireRack":
-            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+            MessageLookupByLibrary.simpleMessage("کاپر وائر رینک"),
         "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+            MessageLookupByLibrary.simpleMessage("فائن لائن ٹی شرٹس"),
         "shrineProductGardenStrand":
-            MessageLookupByLibrary.simpleMessage("Garden strand"),
+            MessageLookupByLibrary.simpleMessage("گارڈن اسٹرینڈ"),
         "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+            MessageLookupByLibrary.simpleMessage("گیٹسوے ٹوپی"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
+            MessageLookupByLibrary.simpleMessage("جنٹری جیکٹ"),
         "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+            MessageLookupByLibrary.simpleMessage("جلیٹ کا ٹرپل ٹیبل"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+            MessageLookupByLibrary.simpleMessage("ادرک اسٹائل کا اسکارف"),
         "shrineProductGreySlouchTank":
-            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+            MessageLookupByLibrary.simpleMessage("گرے سلیوچ ٹینک"),
         "shrineProductHurrahsTeaSet":
-            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+            MessageLookupByLibrary.simpleMessage("ہوراس ٹی سیٹ"),
         "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
+            MessageLookupByLibrary.simpleMessage("کچن کواترو"),
         "shrineProductNavyTrousers":
-            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+            MessageLookupByLibrary.simpleMessage("نیوی پتلونیں"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m10,
-        "shrineProductQuantity": m11,
+            MessageLookupByLibrary.simpleMessage("پلاسٹر ٹیونک"),
+        "shrineProductPrice": m14,
+        "shrineProductQuantity": m15,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Quartet table"),
+            MessageLookupByLibrary.simpleMessage("کوآرٹیٹ ٹیبل"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+            MessageLookupByLibrary.simpleMessage("رین واٹر ٹرے"),
         "shrineProductRamonaCrossover":
-            MessageLookupByLibrary.simpleMessage("Ramona crossover"),
+            MessageLookupByLibrary.simpleMessage("رومانا کراس اوور"),
         "shrineProductSeaTunic":
-            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+            MessageLookupByLibrary.simpleMessage("سمندری سرنگ"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
+            MessageLookupByLibrary.simpleMessage("بحریہ کے نیلے رنگ کا سویٹر"),
         "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
+            MessageLookupByLibrary.simpleMessage("پولرائزڈ بلاؤج"),
         "shrineProductShrugBag":
-            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+            MessageLookupByLibrary.simpleMessage("شرگ بیک"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
+            MessageLookupByLibrary.simpleMessage("سوس سیرامک سیٹ"),
         "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+            MessageLookupByLibrary.simpleMessage("اسٹیلا دھوپ کے چشمے"),
         "shrineProductStrutEarrings":
-            MessageLookupByLibrary.simpleMessage("Strut earrings"),
+            MessageLookupByLibrary.simpleMessage("کان کی زبردست بالیاں"),
         "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+            MessageLookupByLibrary.simpleMessage("سکلینٹ پلانٹرز"),
         "shrineProductSunshirtDress":
-            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+            MessageLookupByLibrary.simpleMessage("سنشرٹ ڈریس"),
         "shrineProductSurfAndPerfShirt":
-            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+            MessageLookupByLibrary.simpleMessage("سرف اور پرف شرٹ"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+            MessageLookupByLibrary.simpleMessage("واگابونڈ سیگ"),
         "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+            MessageLookupByLibrary.simpleMessage("وارسٹی کی جرابیں"),
         "shrineProductWalterHenleyWhite":
-            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+            MessageLookupByLibrary.simpleMessage("والٹر ہینلے (سفید)"),
         "shrineProductWeaveKeyring":
-            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+            MessageLookupByLibrary.simpleMessage("بنائی والی کی رنگ"),
         "shrineProductWhitePinstripeShirt":
-            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+            MessageLookupByLibrary.simpleMessage("سفید پن اسٹراپ شرٹ"),
         "shrineProductWhitneyBelt":
-            MessageLookupByLibrary.simpleMessage("Whitney belt"),
+            MessageLookupByLibrary.simpleMessage("وہائٹنے نیلٹ"),
         "starterAppDescription":
-            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m12,
-        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
-        "starterAppGenericButton":
-            MessageLookupByLibrary.simpleMessage("BUTTON"),
+            MessageLookupByLibrary.simpleMessage("ایک ذمہ دار اسٹارٹر لے آؤٹ"),
+        "starterAppDrawerItem": m16,
+        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("مضمون"),
+        "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("بٹن"),
         "starterAppGenericHeadline":
-            MessageLookupByLibrary.simpleMessage("Headline"),
+            MessageLookupByLibrary.simpleMessage("سرخی"),
         "starterAppGenericSubtitle":
-            MessageLookupByLibrary.simpleMessage("Subtitle"),
-        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
-        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
-        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("سب ٹائٹل"),
+        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("عنوان"),
+        "starterAppTitle": MessageLookupByLibrary.simpleMessage("اسٹارٹر ایپ"),
+        "starterAppTooltipAdd":
+            MessageLookupByLibrary.simpleMessage("شامل کریں"),
         "starterAppTooltipFavorite":
-            MessageLookupByLibrary.simpleMessage("Favorite"),
-        "starterAppTooltipSearch":
-            MessageLookupByLibrary.simpleMessage("Search"),
-        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
+            MessageLookupByLibrary.simpleMessage("پسندیدہ"),
+        "starterAppTooltipSearch": MessageLookupByLibrary.simpleMessage("تلاش"),
+        "starterAppTooltipShare":
+            MessageLookupByLibrary.simpleMessage("اشتراک کریں")
       };
 }

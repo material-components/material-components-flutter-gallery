@@ -20,52 +20,74 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'af';
 
   static m0(value) =>
-      "To see the source code for this app, please visit the ${value}.";
+      "Besoek asseblief die ${value} om die bronkode vir hierdie program te sien.";
 
-  static m1(title) => "Placeholder for ${title} tab";
+  static m1(title) => "Plekhouer vir ${title}-oortjie";
 
-  static m2(value) => "Item ${value}";
+  static m2(totalRestaurants) =>
+      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
 
-  static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m3(numberOfStops) =>
+      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
 
-  static m4(value) => "Jy het gekies: \"${value}\"";
+  static m4(totalProperties) =>
+      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m5(value) => "Item ${value}";
 
-  static m6(percent) =>
-      "Good work! Your checking account is ${percent} higher than last month.";
+  static m6(name, phoneNumber) => "${name} se foonnommer is ${phoneNumber}";
 
-  static m7(percent) =>
-      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+  static m7(value) => "Jy het gekies: \"${value}\"";
 
-  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m8(amount) => "Jy het hierdie maand OTM-fooie van ${amount} betaal";
 
-  static m9(quantity) => "${quantity} ITEMS";
+  static m9(percent) =>
+      "Mooi so! Jou tjekrekening is ${percent} hoër as verlede maand.";
 
-  static m10(price) => "x ${price}";
+  static m10(percent) =>
+      "Pasop. Jy het al ${percent} van jou inkopie-begroting vir hierdie maand gebruik.";
 
-  static m11(quantity) => "Quantity: ${quantity}";
+  static m11(amount) => "Jy het hierdie week ${amount} by restaurante bestee.";
 
-  static m12(value) => "Item ${value}";
+  static m12(count) =>
+      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+
+  static m13(quantity) =>
+      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+
+  static m14(price) => "x ${price}";
+
+  static m15(quantity) => "Hoeveelheid: ${quantity}";
+
+  static m16(value) => "Item ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "aboutDialogDescription": m0,
-        "aboutFlutterSamplesRepo":
-            MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
+        "aboutFlutterSamplesRepo": MessageLookupByLibrary.simpleMessage(
+            "Flutter toets Github-bewaarplek"),
         "bottomNavigationAccountTab":
-            MessageLookupByLibrary.simpleMessage("Account"),
+            MessageLookupByLibrary.simpleMessage("Rekening"),
         "bottomNavigationAlarmTab":
-            MessageLookupByLibrary.simpleMessage("Alarm"),
+            MessageLookupByLibrary.simpleMessage("Wekker"),
         "bottomNavigationCalendarTab":
-            MessageLookupByLibrary.simpleMessage("Calendar"),
+            MessageLookupByLibrary.simpleMessage("Kalender"),
         "bottomNavigationCameraTab":
-            MessageLookupByLibrary.simpleMessage("Camera"),
+            MessageLookupByLibrary.simpleMessage("Kamera"),
         "bottomNavigationCommentsTab":
-            MessageLookupByLibrary.simpleMessage("Comments"),
+            MessageLookupByLibrary.simpleMessage("Opmerkings"),
         "bottomNavigationContentPlaceholder": m1,
-        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "buttonText": MessageLookupByLibrary.simpleMessage("KNOPPIE"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Skep"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Fietsry"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Hysbak"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Kaggel"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Groot"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Middelgroot"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Klein"),
+        "chipTurnOnLights":
+            MessageLookupByLibrary.simpleMessage("Skakel ligte aan"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Wasmasjien"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("GEELBRUIN"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("BLOU"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("BLOUGRYS"),
@@ -85,8 +107,89 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsRed": MessageLookupByLibrary.simpleMessage("ROOI"),
         "colorsTeal": MessageLookupByLibrary.simpleMessage("BLOUGROEN"),
         "colorsYellow": MessageLookupByLibrary.simpleMessage("GEEL"),
-        "craneDescription":
-            MessageLookupByLibrary.simpleMessage("A personalized travel app"),
+        "craneDescription": MessageLookupByLibrary.simpleMessage(
+            "\'n Gepersonaliseerde reisprogram"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("EET"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Napels, Italië"),
+        "craneEat1":
+            MessageLookupByLibrary.simpleMessage("Dallas, Verenigde State"),
+        "craneEat10":
+            MessageLookupByLibrary.simpleMessage("Lissabon, Portugal"),
+        "craneEat2":
+            MessageLookupByLibrary.simpleMessage("Córdoba, Argentinië"),
+        "craneEat3":
+            MessageLookupByLibrary.simpleMessage("Portland, Verenigde State"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Parys, Frankryk"),
+        "craneEat5":
+            MessageLookupByLibrary.simpleMessage("Seoel 06236 Suid-Korea"),
+        "craneEat6":
+            MessageLookupByLibrary.simpleMessage("Seattle, Verenigde State"),
+        "craneEat7":
+            MessageLookupByLibrary.simpleMessage("Nashville, Verenigde State"),
+        "craneEat8":
+            MessageLookupByLibrary.simpleMessage("Atlanta, Verenigde State"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spanje"),
+        "craneEatRestaurants": m2,
+        "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
+            "Verken restaurante volgens bestemming"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("VLIEG"),
+        "craneFly0":
+            MessageLookupByLibrary.simpleMessage("Aspen, Verenigde State"),
+        "craneFly1":
+            MessageLookupByLibrary.simpleMessage("Big Sur, Verenigde State"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Kaïro, Egipte"),
+        "craneFly11":
+            MessageLookupByLibrary.simpleMessage("Lissabon, Portugal"),
+        "craneFly12":
+            MessageLookupByLibrary.simpleMessage("Napa, Verenigde State"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesië"),
+        "craneFly2":
+            MessageLookupByLibrary.simpleMessage("Khumbu-vallei, Nepal"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maledive"),
+        "craneFly5":
+            MessageLookupByLibrary.simpleMessage("Vitznau, Switserland"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spanje"),
+        "craneFly7": MessageLookupByLibrary.simpleMessage(
+            "Mount Rushmore, Verenigde State"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapoer"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneFlyStops": m3,
+        "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
+            "Verken vlugte volgens bestemming"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("Kies datum"),
+        "craneFormDates": MessageLookupByLibrary.simpleMessage("Kies datums"),
+        "craneFormDestination":
+            MessageLookupByLibrary.simpleMessage("Kies bestemming"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Eetplekke"),
+        "craneFormLocation":
+            MessageLookupByLibrary.simpleMessage("Kies ligging"),
+        "craneFormOrigin":
+            MessageLookupByLibrary.simpleMessage("Kies oorsprong"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("Kies tyd"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Reisigers"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("SLAAP"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maledive"),
+        "craneSleep1":
+            MessageLookupByLibrary.simpleMessage("Aspen, Verenigde State"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Kaïro, Egipte"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+        "craneSleep2":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneSleep4":
+            MessageLookupByLibrary.simpleMessage("Vitznau, Switserland"),
+        "craneSleep5":
+            MessageLookupByLibrary.simpleMessage("Big Sur, Verenigde State"),
+        "craneSleep6":
+            MessageLookupByLibrary.simpleMessage("Napa, Verenigde State"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Meksiko"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("Lissabon, Portugal"),
+        "craneSleepProperties": m4,
+        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
+            "Verken eiendomme volgens bestemming"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("Laat toe"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("Appeltert"),
@@ -110,11 +213,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "Laat \"Maps\" toe om toegang tot jou ligging te kry terwyl jy die program gebruik?"),
         "cupertinoAlertTiramisu":
             MessageLookupByLibrary.simpleMessage("Tiramisu"),
-        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Knoppie"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("Met agtergrond"),
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Wys opletberig"),
+        "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Handelingskyfies is \'n stel opsies wat \'n handeling wat met primêre inhoud verband hou, veroorsaak. Handelingskyfies behoort dinamies en kontekstueel in \'n UI te verskyn."),
+        "demoActionChipTitle":
+            MessageLookupByLibrary.simpleMessage("Handelingskyfie"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "\'n Opletberigdialoog lig die gebruiker in oor situasies wat erkenning nodig het. \'n Opletberigdialoog het \'n opsionele titel en \'n opsionele lys handelinge."),
         "demoAlertDialogTitle":
@@ -122,42 +229,51 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Opletberig met titel"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
+            "Navigasiebalke aan die onderkant van die skerm wys drie tot vyf bestemmings. Elke bestemming word deur \'n ikoon en \'n opsionele teksetiket verteenwoordig. Wanneer \'n gebruiker op \'n onderste navigasie-ikoon tik, word hulle geneem na die topvlak-navigasiebestemming wat met daardie ikoon geassosieer word."),
         "demoBottomNavigationPersistentLabels":
-            MessageLookupByLibrary.simpleMessage("Persistent labels"),
+            MessageLookupByLibrary.simpleMessage("Blywende etikette"),
         "demoBottomNavigationSelectedLabel":
-            MessageLookupByLibrary.simpleMessage("Selected label"),
+            MessageLookupByLibrary.simpleMessage("Gekose etiket"),
         "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation with cross-fading views"),
+            "Navigasie aan die onderkant met kruisverdowwingaansigte"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom navigation"),
-        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Navigasie onder"),
+        "demoBottomSheetAddLabel":
+            MessageLookupByLibrary.simpleMessage("Voeg by"),
         "demoBottomSheetButtonText":
-            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
-        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
-        "demoBottomSheetItem": m2,
+            MessageLookupByLibrary.simpleMessage("WYS BLAD ONDER"),
+        "demoBottomSheetHeader":
+            MessageLookupByLibrary.simpleMessage("Loopkop"),
+        "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
-        "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+            "\'n Modale blad aan die onderkant van die skerm is \'n alternatief vir \'n kieslys of dialoog. Dit verhoed dat die gebruiker met die res van die program interaksie kan hê."),
+        "demoBottomSheetModalTitle": MessageLookupByLibrary.simpleMessage(
+            "Modale blad aan die onderkant"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
+                "\'n Blywende blad aan die onderkant van die skerm wys inligting wat die primêre inhoud van die program aanvul. Dit bly sigbaar, selfs wanneer die gebruiker met ander dele van die program interaksie het."),
         "demoBottomSheetPersistentTitle":
-            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Blywende blad onder"),
         "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Persistent and modal bottom sheets"),
+            "Blywende en modale blaaie onder"),
         "demoBottomSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Blad onder"),
         "demoBottomTextFieldsTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Teksvelde"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "Plat, verhewe, buitelyn, en meer"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Knoppies"),
+        "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Kompakte elemente wat \'n invoer, kenmerk of handeling verteenwoordig"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Skyfies"),
+        "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Keuseskyfies verteenwoordig \'n enkele keuse van \'n stel af. Keuseskyfies bevat beskrywende teks of kategorieë."),
+        "demoChoiceChipTitle":
+            MessageLookupByLibrary.simpleMessage("Keuseskyfie"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Kodevoorbeeld"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "Color and color swatch constants which represent Material Design\'s color palette."),
+            "Kleur en kleurmonsterkonstantes wat Materiaalontwerp se kleurpalet verteenwoordig."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
             "Al die vooraf gedefinieerde kleure"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("Kleure"),
@@ -172,9 +288,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
             "\'n Opletberigdialoog lig die gebruiker in oor situasies wat erkenning nodig het. \'n Opletberigdialoog het \'n opsionele titel, opsionele inhoud en \'n opsionele lys handelinge. Die titel word bo die inhoud vertoon en die handelinge word onder die inhoud vertoon."),
         "demoCupertinoAlertTitle":
-            MessageLookupByLibrary.simpleMessage("Alert"),
+            MessageLookupByLibrary.simpleMessage("Opletberig"),
         "demoCupertinoAlertWithTitleTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage("Opletberig met titel"),
         "demoCupertinoAlertsSubtitle": MessageLookupByLibrary.simpleMessage(
             "Opletberigdialoë in iOS-styl"),
         "demoCupertinoAlertsTitle":
@@ -184,12 +300,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("Knoppies in iOS-styl"),
         "demoCupertinoButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Buttons"),
+            MessageLookupByLibrary.simpleMessage("Knoppies"),
+        "demoCupertinoSegmentedControlDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+        "demoCupertinoSegmentedControlSubtitle":
+            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+        "demoCupertinoSegmentedControlTitle":
+            MessageLookupByLibrary.simpleMessage("Segmented Control"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Eenvoudig, opletberig, en volskerm"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dialoë"),
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API-dokumentasie"),
+        "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Filterskyfies gebruik merkers of beskrywende woorde om inhoud te filtreer."),
+        "demoFilterChipTitle":
+            MessageLookupByLibrary.simpleMessage("Filterskyfie"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "\'n Plat knoppie wys \'n inkspatsel wanneer dit gedruk word maar word nie gelig nie. Gebruik plat knoppies op nutsbalke, in dialoë en inlyn met opvulling"),
         "demoFlatButtonTitle":
@@ -203,8 +330,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoFullscreenDialogTitle":
             MessageLookupByLibrary.simpleMessage("Volskerm"),
         "demoFullscreenTooltip":
-            MessageLookupByLibrary.simpleMessage("Full Screen"),
+            MessageLookupByLibrary.simpleMessage("Volskerm"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Inligting"),
+        "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Invoerskyfies verteenwoordig \'n komplekse stuk inligting, soos \'n entiteit (persoon, plek of ding) of gespreksteks, in \'n kompakte vorm."),
+        "demoInputChipTitle":
+            MessageLookupByLibrary.simpleMessage("Invoerskyfie"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("Kon nie URL wys nie:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opsies"),
@@ -221,66 +352,66 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Eenvoudig"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
-        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
-        "demoTextFieldEnterPassword":
-            MessageLookupByLibrary.simpleMessage("Please enter a password."),
+            "Teksvelde laat gebruikers toe om teks by UI te voeg. Dit verskyn gewoonlik in vorms en dialoë."),
+        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-pos"),
+        "demoTextFieldEnterPassword": MessageLookupByLibrary.simpleMessage(
+            "Voer asseblief \'n wagwoord in."),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### - Enter a US phone number."),
+            "(###) ###-#### – Voer \'n Amerikaanse foonnommer in."),
         "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
-            "Please fix the errors in red before submitting."),
+            "Maak asseblief die foute in rooi reg voordat jy indien."),
         "demoTextFieldHidePasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Hide password"),
+            MessageLookupByLibrary.simpleMessage("Versteek wagwoord"),
         "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
-            "Keep it short, this is just a demo."),
+            "Hou dit kort; dis net \'n demonstrasie."),
         "demoTextFieldLifeStory":
-            MessageLookupByLibrary.simpleMessage("Life story"),
-        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
-        "demoTextFieldNameHasPhoneNumber": m3,
+            MessageLookupByLibrary.simpleMessage("Lewensverhaal"),
+        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Naam*"),
+        "demoTextFieldNameHasPhoneNumber": m6,
         "demoTextFieldNameRequired":
-            MessageLookupByLibrary.simpleMessage("Name is required."),
-        "demoTextFieldNoMoreThan":
-            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+            MessageLookupByLibrary.simpleMessage("Naam word vereis."),
+        "demoTextFieldNoMoreThan": MessageLookupByLibrary.simpleMessage(
+            "Nie meer as 8 karakters nie."),
         "demoTextFieldOnlyAlphabeticalChars":
             MessageLookupByLibrary.simpleMessage(
-                "Please enter only alphabetical characters."),
+                "Voer asseblief net alfabetkarakters in."),
         "demoTextFieldPassword":
-            MessageLookupByLibrary.simpleMessage("Password*"),
+            MessageLookupByLibrary.simpleMessage("Wagwoord*"),
         "demoTextFieldPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+            MessageLookupByLibrary.simpleMessage(
+                "Die wagwoorde stem nie ooreen nie"),
         "demoTextFieldPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("Phone number*"),
+            MessageLookupByLibrary.simpleMessage("Foonnommer*"),
         "demoTextFieldRequiredField":
-            MessageLookupByLibrary.simpleMessage("* indicates required field"),
+            MessageLookupByLibrary.simpleMessage("* dui vereiste veld aan"),
         "demoTextFieldRetypePassword":
-            MessageLookupByLibrary.simpleMessage("Re-type password*"),
-        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+            MessageLookupByLibrary.simpleMessage("Tik jou wagwoord weer in*"),
+        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salaris"),
         "demoTextFieldShowPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Show password"),
-        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
+            MessageLookupByLibrary.simpleMessage("Wys wagwoord"),
+        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("DIEN IN"),
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Single line of editable text and numbers"),
+            "Een reël met redigeerbare teks en syfers"),
         "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
-        "demoTextFieldTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            "Vertel ons meer oor jouself (bv., skryf neer wat jy doen of wat jou stokperdjies is)"),
+        "demoTextFieldTitle": MessageLookupByLibrary.simpleMessage("Teksvelde"),
         "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
         "demoTextFieldWhatDoPeopleCallYou":
-            MessageLookupByLibrary.simpleMessage("What do people call you?"),
+            MessageLookupByLibrary.simpleMessage("Wat noem mense jou?"),
         "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
+            MessageLookupByLibrary.simpleMessage("Waar kan ons jou bereik?"),
         "demoTextFieldYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("Your email address"),
+            MessageLookupByLibrary.simpleMessage("Jou e-posadres"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Wisselknoppies kan gebruik word om verwante opsies te groepeer. Om \'n groep verwante wisselknoppies te beklemtoon, moet \'n groep \'n gemeenskaplike houer deel"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Wisselknoppies"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Definitions for the various typographical styles found in Material Design."),
+            "Definisies vir die verskillende tipografiese style wat in Materiaalontwerp gevind word."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined text styles"),
+            "Al die voorafgedefinieerde teksstyle"),
         "demoTypographyTitle":
-            MessageLookupByLibrary.simpleMessage("Typography"),
+            MessageLookupByLibrary.simpleMessage("Tipografie"),
         "dialogAddAccount":
             MessageLookupByLibrary.simpleMessage("Voeg rekening by"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("STEM IN"),
@@ -299,7 +430,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Laat Google programme help om ligging te bepaal. Dit beteken dat anonieme liggingdata na Google toe gestuur word, selfs wanneer geen programme laat loop word nie."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Gebruik Google se liggingdiens?"),
-        "dialogSelectedOption": m4,
+        "dialogSelectedOption": m7,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Stel rugsteunrekening"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("WYS DIALOOG"),
@@ -309,234 +440,250 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Kategorieë"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galery"),
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("Car Savings"),
+            MessageLookupByLibrary.simpleMessage("Spaarrekening vir motor"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Checking"),
+            MessageLookupByLibrary.simpleMessage("Tjek"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("Home Savings"),
+            MessageLookupByLibrary.simpleMessage("Spaarrekening vir huis"),
         "rallyAccountDataVacation":
-            MessageLookupByLibrary.simpleMessage("Vacation"),
+            MessageLookupByLibrary.simpleMessage("Vakansie"),
         "rallyAccountDetailDataAccountOwner":
-            MessageLookupByLibrary.simpleMessage("Account Owner"),
+            MessageLookupByLibrary.simpleMessage("Rekeningeienaar"),
         "rallyAccountDetailDataAnnualPercentageYield":
-            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+            MessageLookupByLibrary.simpleMessage("Jaarpersentasie-opbrengs"),
         "rallyAccountDetailDataInterestPaidLastYear":
-            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+            MessageLookupByLibrary.simpleMessage(
+                "Rente wat verlede jaar betaal is"),
         "rallyAccountDetailDataInterestRate":
-            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+            MessageLookupByLibrary.simpleMessage("Rentekoers"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+            MessageLookupByLibrary.simpleMessage("Rente in jaar tot nou"),
         "rallyAccountDetailDataNextStatement":
-            MessageLookupByLibrary.simpleMessage("Next Statement"),
-        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
-        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
-        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m5,
-        "rallyAlertsMessageCheckingAccount": m6,
-        "rallyAlertsMessageHeadsUpShopping": m7,
-        "rallyAlertsMessageSpentOnRestaurants": m8,
-        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
-        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+            MessageLookupByLibrary.simpleMessage("Volgende staat"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Totaal"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Rekeninge"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Waarskuwings"),
+        "rallyAlertsMessageATMFees": m8,
+        "rallyAlertsMessageCheckingAccount": m9,
+        "rallyAlertsMessageHeadsUpShopping": m10,
+        "rallyAlertsMessageSpentOnRestaurants": m11,
+        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("Rekeninge"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Betaalbaar"),
         "rallyBudgetCategoryClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
+            MessageLookupByLibrary.simpleMessage("Klere"),
         "rallyBudgetCategoryCoffeeShops":
-            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+            MessageLookupByLibrary.simpleMessage("Koffiewinkels"),
         "rallyBudgetCategoryGroceries":
-            MessageLookupByLibrary.simpleMessage("Groceries"),
+            MessageLookupByLibrary.simpleMessage("Kruideniersware"),
         "rallyBudgetCategoryRestaurants":
-            MessageLookupByLibrary.simpleMessage("Restaurants"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
-        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
-        "rallyDescription":
-            MessageLookupByLibrary.simpleMessage("A personal finance app"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
-        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
-        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+            MessageLookupByLibrary.simpleMessage("Restaurante"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Oor"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Begrotings"),
+        "rallyDescription": MessageLookupByLibrary.simpleMessage(
+            "\'n Program vir jou persoonlike geldsake"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("OOR"),
+        "rallyLoginButtonLogin":
+            MessageLookupByLibrary.simpleMessage("MELD AAN"),
+        "rallyLoginLabelLogin":
+            MessageLookupByLibrary.simpleMessage("Meld aan"),
         "rallyLoginLoginToRally":
-            MessageLookupByLibrary.simpleMessage("Login to Rally"),
-        "rallyLoginNoAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Meld by Rally aan"),
+        "rallyLoginNoAccount": MessageLookupByLibrary.simpleMessage(
+            "Het jy nie \'n rekening nie?"),
+        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Wagwoord"),
         "rallyLoginRememberMe":
-            MessageLookupByLibrary.simpleMessage("Remember Me"),
-        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
-        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
-        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+            MessageLookupByLibrary.simpleMessage("Onthou my"),
+        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SLUIT AAN"),
+        "rallyLoginUsername":
+            MessageLookupByLibrary.simpleMessage("Gebruikernaam"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SIEN ALLES"),
         "rallySettingsFindAtms":
-            MessageLookupByLibrary.simpleMessage("Find ATMs"),
-        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+            MessageLookupByLibrary.simpleMessage("Soek OTM\'e"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Hulp"),
         "rallySettingsManageAccounts":
-            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+            MessageLookupByLibrary.simpleMessage("Bestuur rekeninge"),
         "rallySettingsNotifications":
-            MessageLookupByLibrary.simpleMessage("Notifications"),
+            MessageLookupByLibrary.simpleMessage("Kennisgewings"),
         "rallySettingsPaperlessSettings":
-            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
+            MessageLookupByLibrary.simpleMessage("Paperless-instellings"),
         "rallySettingsPasscodeAndTouchId":
-            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+            MessageLookupByLibrary.simpleMessage("Wagkode en raak-ID"),
         "rallySettingsPersonalInformation":
-            MessageLookupByLibrary.simpleMessage("Personal Information"),
-        "rallySettingsSignOut":
-            MessageLookupByLibrary.simpleMessage("Sign out"),
+            MessageLookupByLibrary.simpleMessage("Persoonlike inligting"),
+        "rallySettingsSignOut": MessageLookupByLibrary.simpleMessage("Meld af"),
         "rallySettingsTaxDocuments":
-            MessageLookupByLibrary.simpleMessage("Tax Documents"),
-        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
-        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
-        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
-        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
-        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
+            MessageLookupByLibrary.simpleMessage("Belastingdokumente"),
+        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("REKENINGE"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("REKENINGE"),
+        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BEGROTINGS"),
+        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OORSIG"),
+        "rallyTitleSettings":
+            MessageLookupByLibrary.simpleMessage("INSTELLINGS"),
         "settingsAbout":
-            MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
+            MessageLookupByLibrary.simpleMessage("Meer oor Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
-            "Designed by TOASTER in London"),
-        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
+            "Ontwerp deur TOASTER in Londen"),
+        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Donker"),
         "settingsFeedback":
-            MessageLookupByLibrary.simpleMessage("Send feedback"),
-        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Light"),
+            MessageLookupByLibrary.simpleMessage("Stuur terugvoer"),
+        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Lig"),
         "settingsLocale": MessageLookupByLibrary.simpleMessage("Locale"),
         "settingsPlatformAndroid":
             MessageLookupByLibrary.simpleMessage("Android"),
         "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
-            MessageLookupByLibrary.simpleMessage("Platform mechanics"),
+            MessageLookupByLibrary.simpleMessage("Platformmeganika"),
         "settingsSlowMotion":
-            MessageLookupByLibrary.simpleMessage("Slow motion"),
-        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
+            MessageLookupByLibrary.simpleMessage("Stadige aksie"),
+        "settingsSystemDefault":
+            MessageLookupByLibrary.simpleMessage("Stelsel"),
         "settingsTextDirection":
-            MessageLookupByLibrary.simpleMessage("Text direction"),
-        "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
-        "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
+            MessageLookupByLibrary.simpleMessage("Teksrigting"),
+        "settingsTextDirectionLTR":
+            MessageLookupByLibrary.simpleMessage("L.N.R."),
+        "settingsTextDirectionLocaleBased":
+            MessageLookupByLibrary.simpleMessage("Based on locale"),
+        "settingsTextDirectionRTL":
+            MessageLookupByLibrary.simpleMessage("R.N.L."),
         "settingsTextScaling":
-            MessageLookupByLibrary.simpleMessage("Text scaling"),
-        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
+            MessageLookupByLibrary.simpleMessage("Teksskalering"),
+        "settingsTextScalingHuge":
+            MessageLookupByLibrary.simpleMessage("Baie groot"),
         "settingsTextScalingLarge":
-            MessageLookupByLibrary.simpleMessage("Large"),
+            MessageLookupByLibrary.simpleMessage("Groot"),
         "settingsTextScalingNormal":
-            MessageLookupByLibrary.simpleMessage("Normal"),
+            MessageLookupByLibrary.simpleMessage("Normaal"),
         "settingsTextScalingSmall":
-            MessageLookupByLibrary.simpleMessage("Small"),
-        "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Klein"),
+        "settingsTheme": MessageLookupByLibrary.simpleMessage("Tema"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("Instellings"),
         "shrineCancelButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CANCEL"),
+            MessageLookupByLibrary.simpleMessage("KANSELLEER"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m9,
-        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+            MessageLookupByLibrary.simpleMessage("MAAK MANDJIE LEEG"),
+        "shrineCartItemCount": m13,
+        "shrineCartPageCaption":
+            MessageLookupByLibrary.simpleMessage("MANDJIE"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("Shipping:"),
+            MessageLookupByLibrary.simpleMessage("Versending:"),
         "shrineCartSubtotalCaption":
-            MessageLookupByLibrary.simpleMessage("Subtotal:"),
-        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
-        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+            MessageLookupByLibrary.simpleMessage("Subtotaal:"),
+        "shrineCartTaxCaption":
+            MessageLookupByLibrary.simpleMessage("Belasting:"),
+        "shrineCartTotalCaption":
+            MessageLookupByLibrary.simpleMessage("TOTAAL"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("Accessories"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+            MessageLookupByLibrary.simpleMessage("BYKOMSTIGHEDE"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALLES"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
-        "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+            MessageLookupByLibrary.simpleMessage("KLERE"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("TUIS"),
+        "shrineDescription": MessageLookupByLibrary.simpleMessage(
+            "\'n Modieuse kleinhandelprogram"),
         "shrineLoginPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Wagwoord"),
         "shrineLoginUsernameLabel":
-            MessageLookupByLibrary.simpleMessage("Username"),
+            MessageLookupByLibrary.simpleMessage("Gebruikernaam"),
         "shrineLogoutButtonCaption":
-            MessageLookupByLibrary.simpleMessage("LOGOUT"),
-        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
-        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+            MessageLookupByLibrary.simpleMessage("MELD AF"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("KIESLYS"),
+        "shrineNextButtonCaption":
+            MessageLookupByLibrary.simpleMessage("VOLGENDE"),
         "shrineProductBlueStoneMug":
-            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
+            MessageLookupByLibrary.simpleMessage("Blou erdebeker"),
         "shrineProductCeriseScallopTee":
-            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+            MessageLookupByLibrary.simpleMessage("Kersierooi skulprand-t-hemp"),
         "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+            MessageLookupByLibrary.simpleMessage("Chambray-servette"),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+            MessageLookupByLibrary.simpleMessage("Chambray-hemp"),
         "shrineProductClassicWhiteCollar":
-            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+            MessageLookupByLibrary.simpleMessage("Klassieke wit kraag"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+            MessageLookupByLibrary.simpleMessage("Clay-oortrektrui"),
         "shrineProductCopperWireRack":
-            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+            MessageLookupByLibrary.simpleMessage("Koperdraadrak"),
         "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+            MessageLookupByLibrary.simpleMessage("T-hemp met dun strepies"),
         "shrineProductGardenStrand":
-            MessageLookupByLibrary.simpleMessage("Garden strand"),
+            MessageLookupByLibrary.simpleMessage("Tuindraad"),
         "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+            MessageLookupByLibrary.simpleMessage("Gatsby-hoed"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
+            MessageLookupByLibrary.simpleMessage("Herebaadjie"),
         "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+            MessageLookupByLibrary.simpleMessage("Drietal vergulde tafels"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+            MessageLookupByLibrary.simpleMessage("Gemmerkleurige serp"),
         "shrineProductGreySlouchTank":
-            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+            MessageLookupByLibrary.simpleMessage("Grys slenterhemp"),
         "shrineProductHurrahsTeaSet":
-            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+            MessageLookupByLibrary.simpleMessage("Hurrahs-teestel"),
         "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
+            MessageLookupByLibrary.simpleMessage("Kombuiskwartet"),
         "shrineProductNavyTrousers":
-            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+            MessageLookupByLibrary.simpleMessage("Vlootblou broek"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m10,
-        "shrineProductQuantity": m11,
+            MessageLookupByLibrary.simpleMessage("Gipstuniek"),
+        "shrineProductPrice": m14,
+        "shrineProductQuantity": m15,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Quartet table"),
+            MessageLookupByLibrary.simpleMessage("Kwartettafel"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+            MessageLookupByLibrary.simpleMessage("Reënwaterlaai"),
         "shrineProductRamonaCrossover":
-            MessageLookupByLibrary.simpleMessage("Ramona crossover"),
+            MessageLookupByLibrary.simpleMessage("Ramona-oorkruissak"),
         "shrineProductSeaTunic":
-            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+            MessageLookupByLibrary.simpleMessage("Seetuniek"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
+            MessageLookupByLibrary.simpleMessage("Sea Breeze-trui"),
         "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
+            MessageLookupByLibrary.simpleMessage("Skouerrol-t-hemp"),
         "shrineProductShrugBag":
-            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+            MessageLookupByLibrary.simpleMessage("Shrug-sak"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
+            MessageLookupByLibrary.simpleMessage("Soothe-keramiekstel"),
         "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+            MessageLookupByLibrary.simpleMessage("Stella-sonbrille"),
         "shrineProductStrutEarrings":
-            MessageLookupByLibrary.simpleMessage("Strut earrings"),
+            MessageLookupByLibrary.simpleMessage("Strut-oorbelle"),
         "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+            MessageLookupByLibrary.simpleMessage("Vetplantplanter"),
         "shrineProductSunshirtDress":
-            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+            MessageLookupByLibrary.simpleMessage("Sunshirt-rok"),
         "shrineProductSurfAndPerfShirt":
-            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+            MessageLookupByLibrary.simpleMessage("\"Surf and perf\"-t-hemp"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+            MessageLookupByLibrary.simpleMessage("Vagabond-sak"),
         "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+            MessageLookupByLibrary.simpleMessage("Universiteitskouse"),
         "shrineProductWalterHenleyWhite":
-            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+            MessageLookupByLibrary.simpleMessage("Walter henley (wit)"),
         "shrineProductWeaveKeyring":
-            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+            MessageLookupByLibrary.simpleMessage("Geweefde sleutelhouer"),
         "shrineProductWhitePinstripeShirt":
-            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+            MessageLookupByLibrary.simpleMessage("Wit strepieshemp"),
         "shrineProductWhitneyBelt":
-            MessageLookupByLibrary.simpleMessage("Whitney belt"),
-        "starterAppDescription":
-            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m12,
-        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
+            MessageLookupByLibrary.simpleMessage("Whitney-belt"),
+        "starterAppDescription": MessageLookupByLibrary.simpleMessage(
+            "\'n Beginneruitleg wat goed reageer"),
+        "starterAppDrawerItem": m16,
+        "starterAppGenericBody":
+            MessageLookupByLibrary.simpleMessage("Liggaam"),
         "starterAppGenericButton":
-            MessageLookupByLibrary.simpleMessage("BUTTON"),
+            MessageLookupByLibrary.simpleMessage("KNOPPIE"),
         "starterAppGenericHeadline":
-            MessageLookupByLibrary.simpleMessage("Headline"),
+            MessageLookupByLibrary.simpleMessage("Hoofopskrif"),
         "starterAppGenericSubtitle":
-            MessageLookupByLibrary.simpleMessage("Subtitle"),
-        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
-        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
-        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Subtitel"),
+        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Titel"),
+        "starterAppTitle":
+            MessageLookupByLibrary.simpleMessage("Beginnerprogram"),
+        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Voeg by"),
         "starterAppTooltipFavorite":
-            MessageLookupByLibrary.simpleMessage("Favorite"),
-        "starterAppTooltipSearch":
-            MessageLookupByLibrary.simpleMessage("Search"),
-        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
+            MessageLookupByLibrary.simpleMessage("Merk as gunsteling"),
+        "starterAppTooltipSearch": MessageLookupByLibrary.simpleMessage("Soek"),
+        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Deel")
       };
 }

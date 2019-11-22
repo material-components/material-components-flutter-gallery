@@ -20,52 +20,74 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'sq';
 
   static m0(value) =>
-      "To see the source code for this app, please visit the ${value}.";
+      "Për të parë kodin burimor për këtë aplikacion, vizito ${value}.";
 
-  static m1(title) => "Placeholder for ${title} tab";
+  static m1(title) => "Vendmbajtësi për skedën ${title}";
 
-  static m2(value) => "Item ${value}";
+  static m2(totalRestaurants) =>
+      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
 
-  static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m3(numberOfStops) =>
+      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
 
-  static m4(value) => "Zgjodhe: \"${value}\"";
+  static m4(totalProperties) =>
+      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m5(value) => "Artikulli ${value}";
 
-  static m6(percent) =>
-      "Good work! Your checking account is ${percent} higher than last month.";
+  static m6(name, phoneNumber) =>
+      "Numri i telefonit të ${name} është ${phoneNumber}";
 
-  static m7(percent) =>
-      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+  static m7(value) => "Zgjodhe: \"${value}\"";
 
-  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m8(amount) => "Ke shpenzuar ${amount} në tarifa bankomati këtë muaj";
 
-  static m9(quantity) => "${quantity} ITEMS";
+  static m9(percent) =>
+      "Të lumtë! Llogaria jote rrjedhëse është ${percent} më e lartë se muajin e kaluar.";
 
-  static m10(price) => "x ${price}";
+  static m10(percent) =>
+      "Kujdes, ke përdorur ${percent} të buxhetit të \"Blerjeve\" për këtë muaj.";
 
-  static m11(quantity) => "Quantity: ${quantity}";
+  static m11(amount) => "Ke shpenzuar ${amount} për restorante këtë javë.";
 
-  static m12(value) => "Item ${value}";
+  static m12(count) =>
+      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+
+  static m13(quantity) =>
+      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+
+  static m14(price) => "x ${price}";
+
+  static m15(quantity) => "Sasia: ${quantity}";
+
+  static m16(value) => "Artikulli ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "aboutDialogDescription": m0,
-        "aboutFlutterSamplesRepo":
-            MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
+        "aboutFlutterSamplesRepo": MessageLookupByLibrary.simpleMessage(
+            "Depozita Github e kampioneve të Flutter"),
         "bottomNavigationAccountTab":
-            MessageLookupByLibrary.simpleMessage("Account"),
+            MessageLookupByLibrary.simpleMessage("Llogaria"),
         "bottomNavigationAlarmTab":
-            MessageLookupByLibrary.simpleMessage("Alarm"),
+            MessageLookupByLibrary.simpleMessage("Alarmi"),
         "bottomNavigationCalendarTab":
-            MessageLookupByLibrary.simpleMessage("Calendar"),
+            MessageLookupByLibrary.simpleMessage("Kalendari"),
         "bottomNavigationCameraTab":
-            MessageLookupByLibrary.simpleMessage("Camera"),
+            MessageLookupByLibrary.simpleMessage("Kamera"),
         "bottomNavigationCommentsTab":
-            MessageLookupByLibrary.simpleMessage("Comments"),
+            MessageLookupByLibrary.simpleMessage("Komente"),
         "bottomNavigationContentPlaceholder": m1,
-        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "buttonText": MessageLookupByLibrary.simpleMessage("BUTONI"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Krijo"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Me biçikletë"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Ashensor"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Oxhak"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("I madh"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Mesatar"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("I vogël"),
+        "chipTurnOnLights": MessageLookupByLibrary.simpleMessage("Ndiz dritat"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Lavatriçe"),
         "colorsAmber":
             MessageLookupByLibrary.simpleMessage("E VERDHË PORTOKALLI"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("BLU"),
@@ -89,8 +111,86 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsRed": MessageLookupByLibrary.simpleMessage("I KUQ"),
         "colorsTeal": MessageLookupByLibrary.simpleMessage("GURKALI"),
         "colorsYellow": MessageLookupByLibrary.simpleMessage("E VERDHË"),
-        "craneDescription":
-            MessageLookupByLibrary.simpleMessage("A personalized travel app"),
+        "craneDescription": MessageLookupByLibrary.simpleMessage(
+            "Një aplikacion i personalizuar për udhëtimin"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("NGRËNIE"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Napoli, Itali"),
+        "craneEat1":
+            MessageLookupByLibrary.simpleMessage("Dallas, Shtetet e Bashkuara"),
+        "craneEat10":
+            MessageLookupByLibrary.simpleMessage("Lisbonë, Portugali"),
+        "craneEat2":
+            MessageLookupByLibrary.simpleMessage("Kordoba, Argjentinë"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage(
+            "Portland, Shtetet e Bashkuara"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, Francë"),
+        "craneEat5":
+            MessageLookupByLibrary.simpleMessage("Seul, Koreja e Jugut"),
+        "craneEat6": MessageLookupByLibrary.simpleMessage(
+            "Siatëll, Shtetet e Bashkuara"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage(
+            "Nashvill, Shtetet e Bashkuara"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage(
+            "Atlanta, Shtetet e Bashkuara"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spanjë"),
+        "craneEatRestaurants": m2,
+        "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
+            "Eksploro restorantet sipas destinacionit"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("FLUTURIM"),
+        "craneFly0":
+            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage(
+            "Big Sur, Shtetet e Bashkuara"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Kajro, Egjipt"),
+        "craneFly11":
+            MessageLookupByLibrary.simpleMessage("Lisbonë, Portugali"),
+        "craneFly12":
+            MessageLookupByLibrary.simpleMessage("Napa, Shtetet e Bashkuara"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonezi"),
+        "craneFly2":
+            MessageLookupByLibrary.simpleMessage("Lugina Khumbu, Nepal"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("Maçu Piçu, Peru"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Zvicër"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spanjë"),
+        "craneFly7": MessageLookupByLibrary.simpleMessage(
+            "Mali Rushmore, Shtetet e Bashkuara"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapor"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Havanë, Kubë"),
+        "craneFlyStops": m3,
+        "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
+            "Eksploro fluturimet sipas destinacionit"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("Zgjidh datën"),
+        "craneFormDates": MessageLookupByLibrary.simpleMessage("Zgjidh datat"),
+        "craneFormDestination":
+            MessageLookupByLibrary.simpleMessage("Zgjidh destinacionin"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Restorante"),
+        "craneFormLocation":
+            MessageLookupByLibrary.simpleMessage("Zgjidh vendndodhjen"),
+        "craneFormOrigin":
+            MessageLookupByLibrary.simpleMessage("Zgjidh origjinën"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("Zgjidh orën"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Udhëtarët"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("GJUMI"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneSleep1":
+            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Kajro, Egjipt"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Tajvan"),
+        "craneSleep2": MessageLookupByLibrary.simpleMessage("Maçu Piçu, Peru"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havanë, Kubë"),
+        "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, Zvicër"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage(
+            "Big Sur, Shtetet e Bashkuara"),
+        "craneSleep6":
+            MessageLookupByLibrary.simpleMessage("Napa, Shtetet e Bashkuara"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugali"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Meksikë"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("Lisbonë, Portugali"),
+        "craneSleepProperties": m4,
+        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
+            "Eksploro pronat sipas destinacionit"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("Lejo"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("Ëmbëlsirë me mollë"),
@@ -113,11 +213,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "Dëshiron të lejosh që \"Maps\" të ketë qasje te vendndodhja jote ndërkohë që je duke përdorur aplikacionin?"),
         "cupertinoAlertTiramisu":
             MessageLookupByLibrary.simpleMessage("Tiramisu"),
-        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Butoni"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("Me sfond"),
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Shfaq sinjalizimin"),
+        "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Çipet e veprimit janë një grupim opsionesh që aktivizojnë një veprim që lidhet me përmbajtjen kryesore. Çipet e veprimit duhet të shfaqen në mënyrë dinamike dhe kontekstuale në një ndërfaqe përdoruesi."),
+        "demoActionChipTitle":
+            MessageLookupByLibrary.simpleMessage("Çipi i veprimit"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Një dialog sinjalizues informon përdoruesin rreth situatave që kërkojnë konfirmim. Një dialog sinjalizues ka një titull opsional dhe një listë opsionale veprimesh."),
         "demoAlertDialogTitle":
@@ -125,42 +229,50 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Sinjalizo me titullin"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
+            "Shiritat e poshtëm të navigimit shfaqin tre deri në pesë destinacione në fund të një ekrani. Secili destinacion paraqitet nga një ikonë dhe një etiketë opsionale me tekst. Kur trokitet mbi një ikonë navigimi poshtë, përdoruesi dërgohet te destinacioni i navigimit të nivelit të lartë i shoqëruar me atë ikonë."),
         "demoBottomNavigationPersistentLabels":
-            MessageLookupByLibrary.simpleMessage("Persistent labels"),
+            MessageLookupByLibrary.simpleMessage("Etiketat e vazhdueshme"),
         "demoBottomNavigationSelectedLabel":
-            MessageLookupByLibrary.simpleMessage("Selected label"),
+            MessageLookupByLibrary.simpleMessage("Etiketa e zgjedhur"),
         "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation with cross-fading views"),
+            "Navigimi i poshtëm me pamje që shuhen gradualisht"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom navigation"),
-        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Navigimi poshtë"),
+        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Shto"),
         "demoBottomSheetButtonText":
-            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
-        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
-        "demoBottomSheetItem": m2,
+            MessageLookupByLibrary.simpleMessage("SHFAQ FLETËN E POSHTME"),
+        "demoBottomSheetHeader":
+            MessageLookupByLibrary.simpleMessage("Koka e faqes"),
+        "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
+            "Një fletë e poshtme modale është një alternativë ndaj menysë apo dialogut dhe parandalon që përdoruesi të bashkëveprojë me pjesën tjetër të aplikacionit."),
         "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Fleta e poshtme modale"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
-        "demoBottomSheetPersistentTitle":
-            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
+                "Një fletë e poshtme e përhershme shfaq informacione që plotësojnë përmbajtjen parësore të aplikacionit. Një fletë e poshtme e përhershme mbetet e dukshme edhe kur përdoruesi bashkëvepron me pjesët e tjera të aplikacionit."),
+        "demoBottomSheetPersistentTitle": MessageLookupByLibrary.simpleMessage(
+            "Fletë e poshtme e përhershme"),
         "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Persistent and modal bottom sheets"),
+            "Fletët e përkohshme dhe modale të poshtme"),
         "demoBottomSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Fleta e poshtme"),
         "demoBottomTextFieldsTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Fushat me tekst"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "I rrafshët, i ngritur, me kontur etj."),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Butonat"),
+        "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Elemente kompakte që paraqesin një hyrje, atribut ose veprim"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Çipet"),
+        "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Çipet e zgjedhjes paraqesin një zgjedhje të vetme nga një grupim. Çipet e zgjedhjes përmbajnë tekst ose kategori të lidhura përshkruese."),
+        "demoChoiceChipTitle":
+            MessageLookupByLibrary.simpleMessage("Çipi i zgjedhjes"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Shembull kodi"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "Color and color swatch constants which represent Material Design\'s color palette."),
+            "Konstantet e ngjyrave dhe demonstrimeve të ngjyrave që paraqesin paletën e ngjyrave të dizajnit të materialit."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
             "Të gjitha ngjyrat e paracaktuara"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("Ngjyrat"),
@@ -176,9 +288,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
             "Një dialog sinjalizues informon përdoruesin rreth situatave që kërkojnë konfirmim. Një dialog sinjalizimi ka një titull opsional, përmbajtje opsionale dhe një listë opsionale veprimesh. Titulli shfaqet mbi përmbajtje dhe veprimet shfaqen poshtë përmbajtjes."),
         "demoCupertinoAlertTitle":
-            MessageLookupByLibrary.simpleMessage("Alert"),
+            MessageLookupByLibrary.simpleMessage("Sinjalizim"),
         "demoCupertinoAlertWithTitleTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage("Sinjalizo me titullin"),
         "demoCupertinoAlertsSubtitle": MessageLookupByLibrary.simpleMessage(
             "Dialogë sinjalizimi në stilin e iOS"),
         "demoCupertinoAlertsTitle":
@@ -188,12 +300,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("Butonat në stilin e iOS"),
         "demoCupertinoButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Buttons"),
+            MessageLookupByLibrary.simpleMessage("Butonat"),
+        "demoCupertinoSegmentedControlDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+        "demoCupertinoSegmentedControlSubtitle":
+            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+        "demoCupertinoSegmentedControlTitle":
+            MessageLookupByLibrary.simpleMessage("Segmented Control"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "I thjeshtë, sinjalizim dhe ekran i plotë"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dialogët"),
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("Dokumentacioni i API-t"),
+        "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Çipet e filtrit përdorin etiketime ose fjalë përshkruese si mënyrë për të filtruar përmbajtjen."),
+        "demoFilterChipTitle":
+            MessageLookupByLibrary.simpleMessage("Çipi i filtrit"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Një buton i rrafshët shfaq një spërkatje me bojë pas shtypjes, por nuk ngrihet. Përdor butonat e rrafshët në shiritat e veglave, dialogët dhe brenda faqes me skemë padding"),
         "demoFlatButtonTitle":
@@ -207,8 +330,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoFullscreenDialogTitle":
             MessageLookupByLibrary.simpleMessage("Ekrani i plotë"),
         "demoFullscreenTooltip":
-            MessageLookupByLibrary.simpleMessage("Full Screen"),
+            MessageLookupByLibrary.simpleMessage("Ekran i plotë"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Informacione"),
+        "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Çipet e hyrjes përfaqësojnë një pjesë komplekse informacioni, si p.sh. një entitet (person, vend ose send) ose tekst bisedor, në formë kompakte."),
+        "demoInputChipTitle":
+            MessageLookupByLibrary.simpleMessage("Çipi i hyrjes"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL-ja nuk mund të shfaqej:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opsionet"),
@@ -225,66 +352,66 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("I thjeshtë"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
-        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
+            "Fushat me tekst i lejojnë përdoruesit të fusin tekst në një ndërfaqe përdoruesi. Ato normalisht shfaqen në formularë dhe dialogë."),
+        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("Email-i"),
         "demoTextFieldEnterPassword":
-            MessageLookupByLibrary.simpleMessage("Please enter a password."),
+            MessageLookupByLibrary.simpleMessage("Fut një fjalëkalim."),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### - Enter a US phone number."),
+            "(###) ###-#### - Fut një numër telefoni amerikan."),
         "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
-            "Please fix the errors in red before submitting."),
+            "Rregullo gabimet me të kuqe përpara se ta dërgosh."),
         "demoTextFieldHidePasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Hide password"),
+            MessageLookupByLibrary.simpleMessage("Fshih fjalëkalimin"),
         "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
-            "Keep it short, this is just a demo."),
+            "Mbaje të shkurtër, është thjesht demonstrim."),
         "demoTextFieldLifeStory":
-            MessageLookupByLibrary.simpleMessage("Life story"),
-        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
-        "demoTextFieldNameHasPhoneNumber": m3,
+            MessageLookupByLibrary.simpleMessage("Historia e jetës"),
+        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Emri*"),
+        "demoTextFieldNameHasPhoneNumber": m6,
         "demoTextFieldNameRequired":
-            MessageLookupByLibrary.simpleMessage("Name is required."),
+            MessageLookupByLibrary.simpleMessage("Emri është i nevojshëm."),
         "demoTextFieldNoMoreThan":
-            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+            MessageLookupByLibrary.simpleMessage("Jo më shumë se 8 karaktere."),
         "demoTextFieldOnlyAlphabeticalChars":
             MessageLookupByLibrary.simpleMessage(
-                "Please enter only alphabetical characters."),
+                "Fut vetëm karaktere alfabetikë."),
         "demoTextFieldPassword":
-            MessageLookupByLibrary.simpleMessage("Password*"),
+            MessageLookupByLibrary.simpleMessage("Fjalëkalimi*"),
         "demoTextFieldPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+            MessageLookupByLibrary.simpleMessage("Fjalëkalimet nuk përputhen"),
         "demoTextFieldPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("Phone number*"),
+            MessageLookupByLibrary.simpleMessage("Numri i telefonit*"),
         "demoTextFieldRequiredField":
-            MessageLookupByLibrary.simpleMessage("* indicates required field"),
-        "demoTextFieldRetypePassword":
-            MessageLookupByLibrary.simpleMessage("Re-type password*"),
-        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+            MessageLookupByLibrary.simpleMessage("* tregon fushën e kërkuar"),
+        "demoTextFieldRetypePassword": MessageLookupByLibrary.simpleMessage(
+            "Shkruaj përsëri fjalëkalimin*"),
+        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Paga"),
         "demoTextFieldShowPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Show password"),
-        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
+            MessageLookupByLibrary.simpleMessage("Shfaq fjalëkalimin"),
+        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("DËRGO"),
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Single line of editable text and numbers"),
+            "Një rresht me tekst dhe numra të redaktueshëm"),
         "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
+            "Na trego rreth vetes (p.sh. shkruaj se çfarë bën ose çfarë hobish ke)"),
         "demoTextFieldTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Fushat me tekst"),
         "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
         "demoTextFieldWhatDoPeopleCallYou":
-            MessageLookupByLibrary.simpleMessage("What do people call you?"),
+            MessageLookupByLibrary.simpleMessage("Si të quajnë?"),
         "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
+            MessageLookupByLibrary.simpleMessage("Ku mund të të kontaktojmë?"),
         "demoTextFieldYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("Your email address"),
+            MessageLookupByLibrary.simpleMessage("Adresa jote e email-it"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Butonat e ndërrimit mund të përdoren për të grupuar opsionet e përafërta. Për të theksuar grupet e butonave të përafërt të ndërrimit, një grup duhet të ndajë një mbajtës të përbashkët"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Butonat e ndërrimit"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Definitions for the various typographical styles found in Material Design."),
+            "Përkufizimet e stileve të ndryshme tipografike të gjendura në dizajnin e materialit"),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined text styles"),
+            "Të gjitha stilet e paracaktuara të tekstit"),
         "demoTypographyTitle":
-            MessageLookupByLibrary.simpleMessage("Typography"),
+            MessageLookupByLibrary.simpleMessage("Tipografia"),
         "dialogAddAccount":
             MessageLookupByLibrary.simpleMessage("Shto llogari"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("PRANOJ"),
@@ -302,7 +429,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lejo Google të ndihmojë aplikacionet që të përcaktojnë vendndodhjen. Kjo do të thotë të dërgosh të dhëna te Google edhe kur nuk ka aplikacione në punë."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Të përdoret shërbimi \"Vendndodhjet Google\"?"),
-        "dialogSelectedOption": m4,
+        "dialogSelectedOption": m7,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "Cakto llogarinë e rezervimit"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("SHFAQ DIALOGUN"),
@@ -312,234 +439,255 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Kategoritë"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galeria"),
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("Car Savings"),
+            MessageLookupByLibrary.simpleMessage("Kursimet për makinë"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Checking"),
+            MessageLookupByLibrary.simpleMessage("Rrjedhëse"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("Home Savings"),
+            MessageLookupByLibrary.simpleMessage("Kursimet për shtëpinë"),
         "rallyAccountDataVacation":
-            MessageLookupByLibrary.simpleMessage("Vacation"),
+            MessageLookupByLibrary.simpleMessage("Pushime"),
         "rallyAccountDetailDataAccountOwner":
-            MessageLookupByLibrary.simpleMessage("Account Owner"),
+            MessageLookupByLibrary.simpleMessage("Zotëruesi i llogarisë"),
         "rallyAccountDetailDataAnnualPercentageYield":
-            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+            MessageLookupByLibrary.simpleMessage(
+                "Rendimenti vjetor në përqindje"),
         "rallyAccountDetailDataInterestPaidLastYear":
-            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+            MessageLookupByLibrary.simpleMessage(
+                "Interesi i paguar vitin e kaluar"),
         "rallyAccountDetailDataInterestRate":
-            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+            MessageLookupByLibrary.simpleMessage("Norma e interesit"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+            MessageLookupByLibrary.simpleMessage("Interesi vjetor deri më sot"),
         "rallyAccountDetailDataNextStatement":
-            MessageLookupByLibrary.simpleMessage("Next Statement"),
-        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
-        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
-        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m5,
-        "rallyAlertsMessageCheckingAccount": m6,
-        "rallyAlertsMessageHeadsUpShopping": m7,
-        "rallyAlertsMessageSpentOnRestaurants": m8,
-        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
-        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+            MessageLookupByLibrary.simpleMessage("Pasqyra e ardhshme"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Totali"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Llogaritë"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Sinjalizime"),
+        "rallyAlertsMessageATMFees": m8,
+        "rallyAlertsMessageCheckingAccount": m9,
+        "rallyAlertsMessageHeadsUpShopping": m10,
+        "rallyAlertsMessageSpentOnRestaurants": m11,
+        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("Faturat"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Afati"),
         "rallyBudgetCategoryClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
+            MessageLookupByLibrary.simpleMessage("Veshje"),
         "rallyBudgetCategoryCoffeeShops":
-            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+            MessageLookupByLibrary.simpleMessage("Bar-kafe"),
         "rallyBudgetCategoryGroceries":
-            MessageLookupByLibrary.simpleMessage("Groceries"),
+            MessageLookupByLibrary.simpleMessage("Ushqimore"),
         "rallyBudgetCategoryRestaurants":
-            MessageLookupByLibrary.simpleMessage("Restaurants"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
-        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
-        "rallyDescription":
-            MessageLookupByLibrary.simpleMessage("A personal finance app"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
-        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
-        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+            MessageLookupByLibrary.simpleMessage("Restorantet"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Të mbetura"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Buxhetet"),
+        "rallyDescription": MessageLookupByLibrary.simpleMessage(
+            "Një aplikacion për financat personale"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("TË MBETURA"),
+        "rallyLoginButtonLogin":
+            MessageLookupByLibrary.simpleMessage("IDENTIFIKOHU"),
+        "rallyLoginLabelLogin":
+            MessageLookupByLibrary.simpleMessage("Identifikohu"),
         "rallyLoginLoginToRally":
-            MessageLookupByLibrary.simpleMessage("Login to Rally"),
+            MessageLookupByLibrary.simpleMessage("Identifikohu në Rally"),
         "rallyLoginNoAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Nuk ke llogari?"),
+        "rallyLoginPassword":
+            MessageLookupByLibrary.simpleMessage("Fjalëkalimi"),
         "rallyLoginRememberMe":
-            MessageLookupByLibrary.simpleMessage("Remember Me"),
-        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
-        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
-        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+            MessageLookupByLibrary.simpleMessage("Kujto të dhënat e mia"),
+        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("REGJISTROHU"),
+        "rallyLoginUsername":
+            MessageLookupByLibrary.simpleMessage("Emri i përdoruesit"),
+        "rallySeeAll":
+            MessageLookupByLibrary.simpleMessage("SHIKOJI TË GJITHË"),
         "rallySettingsFindAtms":
-            MessageLookupByLibrary.simpleMessage("Find ATMs"),
-        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+            MessageLookupByLibrary.simpleMessage("Gjej bankomate"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Ndihma"),
         "rallySettingsManageAccounts":
-            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+            MessageLookupByLibrary.simpleMessage("Menaxho llogaritë"),
         "rallySettingsNotifications":
-            MessageLookupByLibrary.simpleMessage("Notifications"),
-        "rallySettingsPaperlessSettings":
-            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
+            MessageLookupByLibrary.simpleMessage("Njoftimet"),
+        "rallySettingsPaperlessSettings": MessageLookupByLibrary.simpleMessage(
+            "Cilësimet e faturës elektronike"),
         "rallySettingsPasscodeAndTouchId":
-            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+            MessageLookupByLibrary.simpleMessage("Kodi i kalimit dhe Touch ID"),
         "rallySettingsPersonalInformation":
-            MessageLookupByLibrary.simpleMessage("Personal Information"),
-        "rallySettingsSignOut":
-            MessageLookupByLibrary.simpleMessage("Sign out"),
+            MessageLookupByLibrary.simpleMessage("Të dhënat personale"),
+        "rallySettingsSignOut": MessageLookupByLibrary.simpleMessage("Dil"),
         "rallySettingsTaxDocuments":
-            MessageLookupByLibrary.simpleMessage("Tax Documents"),
-        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
-        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
-        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
-        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
-        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
+            MessageLookupByLibrary.simpleMessage("Dokumentet e taksave"),
+        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("LLOGARITË"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("FATURAT"),
+        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUXHETET"),
+        "rallyTitleOverview":
+            MessageLookupByLibrary.simpleMessage("PËRMBLEDHJE"),
+        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("CILËSIMET"),
         "settingsAbout":
-            MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
+            MessageLookupByLibrary.simpleMessage("Rreth galerisë së Flutter"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
-            "Designed by TOASTER in London"),
-        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
+            "Projektuar nga TOASTER në Londër"),
+        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("E errët"),
         "settingsFeedback":
-            MessageLookupByLibrary.simpleMessage("Send feedback"),
-        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Light"),
-        "settingsLocale": MessageLookupByLibrary.simpleMessage("Locale"),
+            MessageLookupByLibrary.simpleMessage("Dërgo koment"),
+        "settingsLightTheme":
+            MessageLookupByLibrary.simpleMessage("E ndriçuar"),
+        "settingsLocale":
+            MessageLookupByLibrary.simpleMessage("Gjuha e përdorimit"),
         "settingsPlatformAndroid":
             MessageLookupByLibrary.simpleMessage("Android"),
         "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
-            MessageLookupByLibrary.simpleMessage("Platform mechanics"),
+            MessageLookupByLibrary.simpleMessage("Mekanika e platformës"),
         "settingsSlowMotion":
-            MessageLookupByLibrary.simpleMessage("Slow motion"),
-        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
+            MessageLookupByLibrary.simpleMessage("Lëvizje e ngadaltë"),
+        "settingsSystemDefault":
+            MessageLookupByLibrary.simpleMessage("Sistemi"),
         "settingsTextDirection":
-            MessageLookupByLibrary.simpleMessage("Text direction"),
+            MessageLookupByLibrary.simpleMessage("Drejtimi i tekstit"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
+        "settingsTextDirectionLocaleBased":
+            MessageLookupByLibrary.simpleMessage("Based on locale"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
-            MessageLookupByLibrary.simpleMessage("Text scaling"),
-        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
+            MessageLookupByLibrary.simpleMessage("Shkallëzimi i tekstit"),
+        "settingsTextScalingHuge":
+            MessageLookupByLibrary.simpleMessage("Shumë i madh"),
         "settingsTextScalingLarge":
-            MessageLookupByLibrary.simpleMessage("Large"),
+            MessageLookupByLibrary.simpleMessage("E madhe"),
         "settingsTextScalingNormal":
-            MessageLookupByLibrary.simpleMessage("Normal"),
+            MessageLookupByLibrary.simpleMessage("Normale"),
         "settingsTextScalingSmall":
-            MessageLookupByLibrary.simpleMessage("Small"),
-        "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("I vogël"),
+        "settingsTheme": MessageLookupByLibrary.simpleMessage("Tema"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("Cilësimet"),
         "shrineCancelButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CANCEL"),
+            MessageLookupByLibrary.simpleMessage("ANULO"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m9,
-        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+            MessageLookupByLibrary.simpleMessage("PASTRO KARROCËN"),
+        "shrineCartItemCount": m13,
+        "shrineCartPageCaption":
+            MessageLookupByLibrary.simpleMessage("KARROCA"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("Shipping:"),
+            MessageLookupByLibrary.simpleMessage("Transporti:"),
         "shrineCartSubtotalCaption":
-            MessageLookupByLibrary.simpleMessage("Subtotal:"),
-        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
-        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+            MessageLookupByLibrary.simpleMessage("Nëntotali:"),
+        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Taksa:"),
+        "shrineCartTotalCaption":
+            MessageLookupByLibrary.simpleMessage("TOTALI"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("Accessories"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+            MessageLookupByLibrary.simpleMessage("AKSESORË"),
+        "shrineCategoryNameAll":
+            MessageLookupByLibrary.simpleMessage("TË GJITHA"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
-        "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+            MessageLookupByLibrary.simpleMessage("VESHJE"),
+        "shrineCategoryNameHome":
+            MessageLookupByLibrary.simpleMessage("SHTËPIA"),
+        "shrineDescription": MessageLookupByLibrary.simpleMessage(
+            "Një aplikacion blerjesh në modë"),
         "shrineLoginPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Fjalëkalimi"),
         "shrineLoginUsernameLabel":
-            MessageLookupByLibrary.simpleMessage("Username"),
+            MessageLookupByLibrary.simpleMessage("Emri i përdoruesit"),
         "shrineLogoutButtonCaption":
-            MessageLookupByLibrary.simpleMessage("LOGOUT"),
-        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
-        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+            MessageLookupByLibrary.simpleMessage("DIL"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENYJA"),
+        "shrineNextButtonCaption":
+            MessageLookupByLibrary.simpleMessage("PËRPARA"),
         "shrineProductBlueStoneMug":
-            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
-        "shrineProductCeriseScallopTee":
-            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+            MessageLookupByLibrary.simpleMessage("Filxhan blu prej guri"),
+        "shrineProductCeriseScallopTee": MessageLookupByLibrary.simpleMessage(
+            "Bluzë e kuqe e errët me fund të harkuar"),
         "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+            MessageLookupByLibrary.simpleMessage("Shami Chambray"),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+            MessageLookupByLibrary.simpleMessage("Këmishë Chambray"),
         "shrineProductClassicWhiteCollar":
-            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+            MessageLookupByLibrary.simpleMessage("Jakë e bardhë klasike"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+            MessageLookupByLibrary.simpleMessage("Triko ngjyrë balte"),
         "shrineProductCopperWireRack":
-            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+            MessageLookupByLibrary.simpleMessage("Rafti prej bakri"),
         "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+            MessageLookupByLibrary.simpleMessage("Bluzë me vija të holla"),
         "shrineProductGardenStrand":
-            MessageLookupByLibrary.simpleMessage("Garden strand"),
+            MessageLookupByLibrary.simpleMessage("Gardh kopshti"),
         "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+            MessageLookupByLibrary.simpleMessage("Kapelë Gatsby"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
+            MessageLookupByLibrary.simpleMessage("Xhaketë serioze"),
         "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+            MessageLookupByLibrary.simpleMessage("Set me tri tavolina"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+            MessageLookupByLibrary.simpleMessage("Shall ngjyrë xhenxhefili"),
         "shrineProductGreySlouchTank":
-            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+            MessageLookupByLibrary.simpleMessage("Kanotiere gri e varur"),
         "shrineProductHurrahsTeaSet":
-            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+            MessageLookupByLibrary.simpleMessage("Set çaji Hurrahs"),
         "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
+            MessageLookupByLibrary.simpleMessage("Kuzhinë quattro"),
         "shrineProductNavyTrousers":
-            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+            MessageLookupByLibrary.simpleMessage("Pantallona blu"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m10,
-        "shrineProductQuantity": m11,
+            MessageLookupByLibrary.simpleMessage("Tunikë allçie"),
+        "shrineProductPrice": m14,
+        "shrineProductQuantity": m15,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Quartet table"),
+            MessageLookupByLibrary.simpleMessage("Set me katër tavolina"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+            MessageLookupByLibrary.simpleMessage("Tabaka për ujin e shiut"),
         "shrineProductRamonaCrossover":
-            MessageLookupByLibrary.simpleMessage("Ramona crossover"),
+            MessageLookupByLibrary.simpleMessage("Crossover-i i Ramona-s"),
         "shrineProductSeaTunic":
-            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+            MessageLookupByLibrary.simpleMessage("Tunikë plazhi"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
-        "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
+            MessageLookupByLibrary.simpleMessage("Triko e hollë"),
+        "shrineProductShoulderRollsTee": MessageLookupByLibrary.simpleMessage(
+            "Bluzë me mëngë të përveshura"),
         "shrineProductShrugBag":
-            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+            MessageLookupByLibrary.simpleMessage("Çantë pazari"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
+            MessageLookupByLibrary.simpleMessage("Set qeramike për zbutje"),
         "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+            MessageLookupByLibrary.simpleMessage("Syze Stella"),
         "shrineProductStrutEarrings":
-            MessageLookupByLibrary.simpleMessage("Strut earrings"),
+            MessageLookupByLibrary.simpleMessage("Vathë Strut"),
         "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+            MessageLookupByLibrary.simpleMessage("Bimë mishtore"),
         "shrineProductSunshirtDress":
-            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+            MessageLookupByLibrary.simpleMessage("Fustan veror"),
         "shrineProductSurfAndPerfShirt":
-            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+            MessageLookupByLibrary.simpleMessage("Këmishë sërfi"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+            MessageLookupByLibrary.simpleMessage("Çantë model \"vagabond\""),
         "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+            MessageLookupByLibrary.simpleMessage("Çorape sportive"),
         "shrineProductWalterHenleyWhite":
-            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+            MessageLookupByLibrary.simpleMessage("Walter Henley (e bardhë)"),
         "shrineProductWeaveKeyring":
-            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+            MessageLookupByLibrary.simpleMessage("Mbajtëse çelësash e thurur"),
         "shrineProductWhitePinstripeShirt":
-            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+            MessageLookupByLibrary.simpleMessage("Këmishë me vija të bardha"),
         "shrineProductWhitneyBelt":
-            MessageLookupByLibrary.simpleMessage("Whitney belt"),
-        "starterAppDescription":
-            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m12,
-        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
+            MessageLookupByLibrary.simpleMessage("Rrip Whitney"),
+        "starterAppDescription": MessageLookupByLibrary.simpleMessage(
+            "Strukturë reaguese për aplikacionin nisës"),
+        "starterAppDrawerItem": m16,
+        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Trupi"),
         "starterAppGenericButton":
-            MessageLookupByLibrary.simpleMessage("BUTTON"),
+            MessageLookupByLibrary.simpleMessage("BUTONI"),
         "starterAppGenericHeadline":
-            MessageLookupByLibrary.simpleMessage("Headline"),
+            MessageLookupByLibrary.simpleMessage("Titulli"),
         "starterAppGenericSubtitle":
-            MessageLookupByLibrary.simpleMessage("Subtitle"),
-        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
-        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
-        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Nënemërtim"),
+        "starterAppGenericTitle":
+            MessageLookupByLibrary.simpleMessage("Titulli"),
+        "starterAppTitle":
+            MessageLookupByLibrary.simpleMessage("Aplikacion nisës"),
+        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Shto"),
         "starterAppTooltipFavorite":
-            MessageLookupByLibrary.simpleMessage("Favorite"),
+            MessageLookupByLibrary.simpleMessage("Të preferuara"),
         "starterAppTooltipSearch":
-            MessageLookupByLibrary.simpleMessage("Search"),
-        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
+            MessageLookupByLibrary.simpleMessage("Kërko"),
+        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Ndaj")
       };
 }

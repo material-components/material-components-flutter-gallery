@@ -20,52 +20,76 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'el';
 
   static m0(value) =>
-      "To see the source code for this app, please visit the ${value}.";
+      "Για να δείτε τον πηγαίο κώδικα για αυτήν την εφαρμογή, επισκεφτείτε το ${value}.";
 
-  static m1(title) => "Placeholder for ${title} tab";
+  static m1(title) => "Placeholder για την καρτέλα ${title}";
 
-  static m2(value) => "Item ${value}";
+  static m2(totalRestaurants) =>
+      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
 
-  static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m3(numberOfStops) =>
+      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
 
-  static m4(value) => "Επιλέξατε \"${value}\"";
+  static m4(totalProperties) =>
+      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m5(value) => "Στοιχείο ${value}";
 
-  static m6(percent) =>
-      "Good work! Your checking account is ${percent} higher than last month.";
+  static m6(name, phoneNumber) =>
+      "Ο αριθμός τηλεφώνου του χρήστη ${name} είναι ${phoneNumber}";
 
-  static m7(percent) =>
-      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+  static m7(value) => "Επιλέξατε \"${value}\"";
 
-  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m8(amount) => "Δαπανήσατε ${amount} σε προμήθειες ATM αυτόν τον μήνα.";
 
-  static m9(quantity) => "${quantity} ITEMS";
+  static m9(percent) =>
+      "Συγχαρητήρια! Ο τρεχούμενος λογαριασμός σας παρουσιάζει αύξηση ${percent} συγκριτικά με τον προηγούμενο μήνα.";
 
-  static m10(price) => "x ${price}";
+  static m10(percent) =>
+      "Έχετε υπόψη ότι χρησιμοποιήσατε το ${percent} του προϋπολογισμού αγορών σας γι\' αυτόν τον μήνα.";
 
-  static m11(quantity) => "Quantity: ${quantity}";
+  static m11(amount) =>
+      "Δαπανήσατε ${amount} σε εστιατόρια αυτήν την εβδομάδα.";
 
-  static m12(value) => "Item ${value}";
+  static m12(count) =>
+      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+
+  static m13(quantity) =>
+      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+
+  static m14(price) => "x ${price}";
+
+  static m15(quantity) => "Ποσότητα: ${quantity}";
+
+  static m16(value) => "Στοιχείο ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "aboutDialogDescription": m0,
-        "aboutFlutterSamplesRepo":
-            MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
+        "aboutFlutterSamplesRepo": MessageLookupByLibrary.simpleMessage(
+            "Χώρος φύλαξης Github δειγμάτων Flutter"),
         "bottomNavigationAccountTab":
-            MessageLookupByLibrary.simpleMessage("Account"),
+            MessageLookupByLibrary.simpleMessage("Λογαριασμός"),
         "bottomNavigationAlarmTab":
-            MessageLookupByLibrary.simpleMessage("Alarm"),
+            MessageLookupByLibrary.simpleMessage("Ξυπνητήρι"),
         "bottomNavigationCalendarTab":
-            MessageLookupByLibrary.simpleMessage("Calendar"),
+            MessageLookupByLibrary.simpleMessage("Ημερολόγιο"),
         "bottomNavigationCameraTab":
-            MessageLookupByLibrary.simpleMessage("Camera"),
+            MessageLookupByLibrary.simpleMessage("Κάμερα"),
         "bottomNavigationCommentsTab":
-            MessageLookupByLibrary.simpleMessage("Comments"),
+            MessageLookupByLibrary.simpleMessage("Σχόλια"),
         "bottomNavigationContentPlaceholder": m1,
-        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "buttonText": MessageLookupByLibrary.simpleMessage("ΚΟΥΜΠΙ"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Δημιουργία"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Ποδηλασία"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Ανελκυστήρας"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Τζάκι"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Μεγάλο"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Μέτριο"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Μικρό"),
+        "chipTurnOnLights":
+            MessageLookupByLibrary.simpleMessage("Ενεργοποίηση φωτισμού"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Πλυντήριο"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("ΚΕΧΡΙΜΠΑΡΙ"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("ΜΠΛΕ"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("ΜΠΛΕ ΓΚΡΙ"),
@@ -87,8 +111,91 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsRed": MessageLookupByLibrary.simpleMessage("ΚΟΚΚΙΝΟ"),
         "colorsTeal": MessageLookupByLibrary.simpleMessage("ΓΑΛΑΖΟΠΡΑΣΙΝΟ"),
         "colorsYellow": MessageLookupByLibrary.simpleMessage("ΚΙΤΡΙΝΟ"),
-        "craneDescription":
-            MessageLookupByLibrary.simpleMessage("A personalized travel app"),
+        "craneDescription": MessageLookupByLibrary.simpleMessage(
+            "Μια εξατομικευμένη εφαρμογή για ταξίδια"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("ΦΑΓΗΤΟ"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Νάπολη, Ιταλία"),
+        "craneEat1":
+            MessageLookupByLibrary.simpleMessage("Ντάλας, Ηνωμένες Πολιτείες"),
+        "craneEat10":
+            MessageLookupByLibrary.simpleMessage("Λισαβόνα, Πορτογαλία"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("Κόρδοβα, Αργεντινή"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage(
+            "Πόρτλαντ, Ηνωμένες Πολιτείες"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Παρίσι, Γαλλία"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("Σεούλ, Νότια Κορέα"),
+        "craneEat6":
+            MessageLookupByLibrary.simpleMessage("Σιάτλ, Ηνωμένες Πολιτείες"),
+        "craneEat7":
+            MessageLookupByLibrary.simpleMessage("Νάσβιλ, Ηνωμένες Πολιτείες"),
+        "craneEat8":
+            MessageLookupByLibrary.simpleMessage("Ατλάντα, Ηνωμένες Πολιτείες"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Μαδρίτη, Ισπανία"),
+        "craneEatRestaurants": m2,
+        "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
+            "Αναζήτηση εστιατορίων κατά προορισμό"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("ΠΤΗΣΗ"),
+        "craneFly0":
+            MessageLookupByLibrary.simpleMessage("Άσπεν, Ηνωμένες Πολιτείες"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage(
+            "Μπιγκ Σερ, Ηνωμένες Πολιτείες"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Κάιρο, Αίγυπτος"),
+        "craneFly11":
+            MessageLookupByLibrary.simpleMessage("Λισαβόνα, Πορτογαλία"),
+        "craneFly12":
+            MessageLookupByLibrary.simpleMessage("Νάπα, Ηνωμένες Πολιτείες"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Μπαλί, Ινδονησία"),
+        "craneFly2":
+            MessageLookupByLibrary.simpleMessage("Κοιλάδα Κούμπου, Νεπάλ"),
+        "craneFly3":
+            MessageLookupByLibrary.simpleMessage("Μάτσου Πίτσου, Περού"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Μαλέ, Μαλδίβες"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("Βιτζνάου, Ελβετία"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Μαδρίτη, Ισπανία"),
+        "craneFly7": MessageLookupByLibrary.simpleMessage(
+            "Όρος Ράσμορ, Ηνωμένες Πολιτείες"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Σιγκαπούρη"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Αβάνα, Κούβα"),
+        "craneFlyStops": m3,
+        "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
+            "Αναζητήστε πτήσεις κατά προορισμό"),
+        "craneFormDate":
+            MessageLookupByLibrary.simpleMessage("Επιλογή ημερομηνίας"),
+        "craneFormDates":
+            MessageLookupByLibrary.simpleMessage("Επιλογή ημερομηνιών"),
+        "craneFormDestination":
+            MessageLookupByLibrary.simpleMessage("Επιλογή προορισμού"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Εστιατόρια"),
+        "craneFormLocation":
+            MessageLookupByLibrary.simpleMessage("Επιλογή τοποθεσίας"),
+        "craneFormOrigin":
+            MessageLookupByLibrary.simpleMessage("Επιλογή προέλευσης"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("Επιλογή ώρας"),
+        "craneFormTravelers":
+            MessageLookupByLibrary.simpleMessage("Ταξιδιώτες"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("ΥΠΝΟΣ"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("Μαλέ, Μαλδίβες"),
+        "craneSleep1":
+            MessageLookupByLibrary.simpleMessage("Άσπεν, Ηνωμένες Πολιτείες"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Κάιρο, Αίγυπτος"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Ταϊπέι, Ταϊβάν"),
+        "craneSleep2":
+            MessageLookupByLibrary.simpleMessage("Μάτσου Πίτσου, Περού"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Αβάνα, Κούβα"),
+        "craneSleep4":
+            MessageLookupByLibrary.simpleMessage("Βιτζνάου, Ελβετία"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage(
+            "Μπιγκ Σερ, Ηνωμένες Πολιτείες"),
+        "craneSleep6":
+            MessageLookupByLibrary.simpleMessage("Νάπα, Ηνωμένες Πολιτείες"),
+        "craneSleep7":
+            MessageLookupByLibrary.simpleMessage("Πόρτο, Πορτογαλία"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Τουλούμ, Μεξικό"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("Λισαβόνα, Πορτογαλία"),
+        "craneSleepProperties": m4,
+        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
+            "Αναζήτηση ιδιοκτησιών κατά προορισμό"),
         "cupertinoAlertAllow":
             MessageLookupByLibrary.simpleMessage("Να επιτραπεί"),
         "cupertinoAlertApplePie":
@@ -112,11 +219,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "Να επιτρέπεται στους Χάρτες να έχουν πρόσβαση στην τοποθεσία σας, ενώ χρησιμοποιείτε την εφαρμογή;"),
         "cupertinoAlertTiramisu":
             MessageLookupByLibrary.simpleMessage("Τιραμισού"),
-        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Κουμπί"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("Με φόντο"),
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Εμφάνιση ειδοποίησης"),
+        "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Τα τσιπ δράσης είναι ένα σύνολο επιλογών που ενεργοποιούν μια δράση που σχετίζεται με το αρχικό περιεχόμενο. Τα τσιπ δράσης θα πρέπει να εμφανίζονται δυναμικά και με βάση τα συμφραζόμενα στη διεπαφή χρήστη."),
+        "demoActionChipTitle":
+            MessageLookupByLibrary.simpleMessage("Τσιπ δράσης"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Ένα παράθυρο διαλόγου ειδοποίησης που ενημερώνει τον χρήστη για καταστάσεις που απαιτούν επιβεβαίωση. Ένα παράθυρο διαλόγου ειδοποίησης με προαιρετικό τίτλο και προαιρετική λίστα ενεργειών."),
         "demoAlertDialogTitle":
@@ -124,42 +235,51 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Ειδοποίηση με τίτλο"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
+            "Οι γραμμές πλοήγησης κάτω μέρους εμφανίζουν από τρεις έως πέντε προορισμούς στο κάτω μέρος μιας οθόνης. Κάθε προορισμός αντιπροσωπεύεται από ένα εικονίδιο και μια προαιρετική ετικέτα κειμένου. Με το πάτημα ενός εικονιδίου πλοήγησης στο κάτω μέρος, ο χρήστης μεταφέρεται στον προορισμό της πλοήγησης ανώτερου επιπέδου που συσχετίζεται με αυτό το εικονίδιο."),
         "demoBottomNavigationPersistentLabels":
-            MessageLookupByLibrary.simpleMessage("Persistent labels"),
+            MessageLookupByLibrary.simpleMessage("Μόνιμες ετικέτες"),
         "demoBottomNavigationSelectedLabel":
-            MessageLookupByLibrary.simpleMessage("Selected label"),
+            MessageLookupByLibrary.simpleMessage("Επιλεγμένη ετικέτα"),
         "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation with cross-fading views"),
+            "Πλοήγηση κάτω μέρους με προβολές σταδιακής μετάβασης"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom navigation"),
-        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Πλοήγηση κάτω μέρους"),
+        "demoBottomSheetAddLabel":
+            MessageLookupByLibrary.simpleMessage("Προσθήκη"),
         "demoBottomSheetButtonText":
-            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
-        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
-        "demoBottomSheetItem": m2,
+            MessageLookupByLibrary.simpleMessage("ΕΜΦΑΝΙΣΗ ΦΥΛΛΟΥ ΚΑΤΩ ΜΕΡΟΥΣ"),
+        "demoBottomSheetHeader":
+            MessageLookupByLibrary.simpleMessage("Κεφαλίδα"),
+        "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
-        "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+            "Ένα αποκλειστικό φύλλο στο κάτω μέρος αποτελεί εναλλακτική λύση συγκριτικά με ένα μενού ή παράθυρο διαλόγου και αποτρέπει την αλληλεπίδραση του χρήστη με την υπόλοιπη εφαρμογή."),
+        "demoBottomSheetModalTitle": MessageLookupByLibrary.simpleMessage(
+            "Αποκλειστικό φύλλο κάτω μέρους"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
+                "Ένα μόνιμο φύλλο στο κάτω μέρος εμφανίζει πληροφορίες που συμπληρώνουν το κύριο περιεχόμενο της εφαρμογής. Ένα μόνιμο φύλλο στο κάτω μέρος παραμένει ορατό ακόμη και όταν ο χρήστης αλληλεπιδρά με άλλα μέρη της εφαρμογής."),
         "demoBottomSheetPersistentTitle":
-            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Μόνιμο φύλλο στο κάτω μέρος"),
         "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Persistent and modal bottom sheets"),
+            "Μόνιμα και αποκλειστικά φύλλα κάτω μέρους"),
         "demoBottomSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Φύλλο κάτω μέρους"),
         "demoBottomTextFieldsTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Πεδία κειμένου"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "Επίπεδο, ανασηκωμένο, με περίγραμμα και περισσότερα"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Κουμπιά"),
+        "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Συμπαγή στοιχεία που αντιπροσωπεύουν μια εισαγωγή, ένα χαρακτηριστικό ή μια δράση"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Τσιπ"),
+        "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Τα τσιπ επιλογής αντιπροσωπεύουν μία επιλογή από ένα σύνολο. Τα τσιπ επιλογής περιέχουν σχετικό περιγραφικό κείμενο ή κατηγορίες."),
+        "demoChoiceChipTitle":
+            MessageLookupByLibrary.simpleMessage("Τσιπ επιλογής"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Δείγμα κώδικα"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "Color and color swatch constants which represent Material Design\'s color palette."),
+            "Χρώματα και δείγματα χρώματος που αντιπροσωπεύουν τη χρωματική παλέτα του material design."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
             "Όλα τα προκαθορισμένα χρώματα"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("Χρώματα"),
@@ -174,9 +294,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
             "Ένα παράθυρο διαλόγου ειδοποίησης που ενημερώνει τον χρήστη για καταστάσεις που απαιτούν επιβεβαίωση. Ένα παράθυρο διαλόγου ειδοποίησης με προαιρετικό τίτλο, προαιρετικό περιεχόμενο και προαιρετική λίστα ενεργειών. Ο τίτλος εμφανίζεται πάνω από το περιεχόμενο και οι ενέργειες εμφανίζονται κάτω από το περιεχόμενο."),
         "demoCupertinoAlertTitle":
-            MessageLookupByLibrary.simpleMessage("Alert"),
+            MessageLookupByLibrary.simpleMessage("Ειδοποίηση"),
         "demoCupertinoAlertWithTitleTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage("Ειδοποίηση με τίτλο"),
         "demoCupertinoAlertsSubtitle": MessageLookupByLibrary.simpleMessage(
             "Παράθυρα διαλόγου ειδοποίησης σε στυλ iOS"),
         "demoCupertinoAlertsTitle":
@@ -186,13 +306,24 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("Κουμπιά σε στυλ iOS"),
         "demoCupertinoButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Buttons"),
+            MessageLookupByLibrary.simpleMessage("Κουμπιά"),
+        "demoCupertinoSegmentedControlDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+        "demoCupertinoSegmentedControlSubtitle":
+            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+        "demoCupertinoSegmentedControlTitle":
+            MessageLookupByLibrary.simpleMessage("Segmented Control"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Απλό, ειδοποίηση και σε πλήρη οθόνη"),
         "demoDialogTitle":
             MessageLookupByLibrary.simpleMessage("Παράθυρα διαλόγου"),
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("Τεκμηρίωση API"),
+        "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Τα τσιπ φίλτρου χρησιμοποιούν ετικέτες ή περιγραφικές λέξεις για το φιλτράρισμα περιεχομένου."),
+        "demoFilterChipTitle":
+            MessageLookupByLibrary.simpleMessage("Τσιπ φίλτρου"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Ένα επίπεδο κουμπί εμφανίζει μια πιτσιλιά μελανιού κατά το πάτημα, χωρίς ανασήκωμα. Χρησιμοποιήστε επίπεδα κουμπιά στις γραμμές εργαλείων, σε παράθυρα διαλόγου και ενσωματωμένα με την αναπλήρωση."),
         "demoFlatButtonTitle":
@@ -206,8 +337,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoFullscreenDialogTitle":
             MessageLookupByLibrary.simpleMessage("Πλήρης οθόνη"),
         "demoFullscreenTooltip":
-            MessageLookupByLibrary.simpleMessage("Full Screen"),
+            MessageLookupByLibrary.simpleMessage("Πλήρης οθόνη"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Πληροφορίες"),
+        "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Τα τσιπ εισαγωγής αντιπροσωπεύουν ένα περίπλοκο τμήμα πληροφοριών, όπως μια οντότητα (άτομο, μέρος ή πράγμα) ή κείμενο συνομιλίας, σε συμπαγή μορφή."),
+        "demoInputChipTitle":
+            MessageLookupByLibrary.simpleMessage("Τσιπ εισαγωγής"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Δεν ήταν δυνατή η προβολή του URL:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Επιλογές"),
@@ -223,66 +358,69 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ένα απλό παράθυρο διαλόγου που προσφέρει στον χρήστη τη δυνατότητα επιλογής μεταξύ διαφόρων επιλογών. Ένα απλό παράθυρο διαλόγου με προαιρετικό τίτλο που εμφανίζεται πάνω από τις επιλογές."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Απλό"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
-        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
-        "demoTextFieldEnterPassword":
-            MessageLookupByLibrary.simpleMessage("Please enter a password."),
+            "Τα πεδία κειμένου επιτρέπουν στους χρήστες να εισάγουν κείμενο σε μια διεπαφή χρήστη. Συνήθως, εμφανίζονται σε φόρμες και παράθυρα διαλόγου."),
+        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage(
+            "Διεύθυνση ηλεκτρονικού ταχυδρομείου"),
+        "demoTextFieldEnterPassword": MessageLookupByLibrary.simpleMessage(
+            "Καταχωρίστε έναν κωδικό πρόσβασης."),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### - Enter a US phone number."),
+            "(###) ###-#### - Εισαγάγετε έναν αριθμό τηλεφώνου ΗΠΑ."),
         "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
-            "Please fix the errors in red before submitting."),
+            "Διορθώστε τα σφάλματα που έχουν επισημανθεί με κόκκινο χρώμα πριν την υποβολή."),
         "demoTextFieldHidePasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Hide password"),
+            MessageLookupByLibrary.simpleMessage("Απόκρυψη κωδικού πρόσβασης"),
         "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
-            "Keep it short, this is just a demo."),
+            "Φροντίστε να είστε σύντομοι, αυτή είναι απλώς μια επίδειξη."),
         "demoTextFieldLifeStory":
-            MessageLookupByLibrary.simpleMessage("Life story"),
-        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
-        "demoTextFieldNameHasPhoneNumber": m3,
+            MessageLookupByLibrary.simpleMessage("Βιογραφία"),
+        "demoTextFieldNameField":
+            MessageLookupByLibrary.simpleMessage("Όνομα*"),
+        "demoTextFieldNameHasPhoneNumber": m6,
         "demoTextFieldNameRequired":
-            MessageLookupByLibrary.simpleMessage("Name is required."),
-        "demoTextFieldNoMoreThan":
-            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+            MessageLookupByLibrary.simpleMessage("Το όνομα είναι υποχρεωτικό."),
+        "demoTextFieldNoMoreThan": MessageLookupByLibrary.simpleMessage(
+            "Μέγιστος αριθμός οκτώ χαρακτήρων."),
         "demoTextFieldOnlyAlphabeticalChars":
             MessageLookupByLibrary.simpleMessage(
-                "Please enter only alphabetical characters."),
+                "Εισαγάγετε μόνο αλφαβητικούς χαρακτήρες."),
         "demoTextFieldPassword":
-            MessageLookupByLibrary.simpleMessage("Password*"),
+            MessageLookupByLibrary.simpleMessage("Κωδικός πρόσβασης*"),
         "demoTextFieldPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+            MessageLookupByLibrary.simpleMessage(
+                "Οι κωδικοί πρόσβασης δεν ταιριάζουν"),
         "demoTextFieldPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("Phone number*"),
-        "demoTextFieldRequiredField":
-            MessageLookupByLibrary.simpleMessage("* indicates required field"),
-        "demoTextFieldRetypePassword":
-            MessageLookupByLibrary.simpleMessage("Re-type password*"),
-        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+            MessageLookupByLibrary.simpleMessage("Αριθμός τηλεφώνου*"),
+        "demoTextFieldRequiredField": MessageLookupByLibrary.simpleMessage(
+            "Το * υποδεικνύει απαιτούμενο πεδίο"),
+        "demoTextFieldRetypePassword": MessageLookupByLibrary.simpleMessage(
+            "Επαναπληκτρολόγηση κωδικού πρόσβασης*"),
+        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Μισθός"),
         "demoTextFieldShowPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Show password"),
-        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
+            MessageLookupByLibrary.simpleMessage("Εμφάνιση κωδικού πρόσβασης"),
+        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("ΥΠΟΒΟΛΗ"),
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Single line of editable text and numbers"),
+            "Μονή γραμμή κειμένου και αριθμών με δυνατότητα επεξεργασίας"),
         "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
+            "Πείτε μας για τον εαυτό σας (π.χ., γράψτε με τι ασχολείστε ή ποια είναι τα χόμπι σας)"),
         "demoTextFieldTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Πεδία κειμένου"),
         "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
         "demoTextFieldWhatDoPeopleCallYou":
-            MessageLookupByLibrary.simpleMessage("What do people call you?"),
-        "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
-        "demoTextFieldYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("Your email address"),
+            MessageLookupByLibrary.simpleMessage("Πώς σας λένε;"),
+        "demoTextFieldWhereCanWeReachYou": MessageLookupByLibrary.simpleMessage(
+            "Πώς μπορούμε να επικοινωνήσουμε μαζί σας;"),
+        "demoTextFieldYourEmailAddress": MessageLookupByLibrary.simpleMessage(
+            "Η διεύθυνση ηλεκτρονικού ταχυδρομείου σας"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Μπορείτε να χρησιμοποιήσετε κουμπιά εναλλαγής για να ομαδοποιήσετε τις σχετικές επιλογές. Για να δοθεί έμφαση σε ομάδες σχετικών κουμπιών εναλλαγής, μια ομάδα θα πρέπει να μοιράζεται ένα κοινό κοντέινερ."),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Κουμπιά εναλλαγής"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Definitions for the various typographical styles found in Material Design."),
+            "Ορισμοί για διάφορα τυπογραφικά στιλ που συναντώνται στο material design."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined text styles"),
+            "Όλα τα προκαθορισμένα στιλ κειμένου"),
         "demoTypographyTitle":
-            MessageLookupByLibrary.simpleMessage("Typography"),
+            MessageLookupByLibrary.simpleMessage("Τυπογραφία"),
         "dialogAddAccount":
             MessageLookupByLibrary.simpleMessage("Προσθήκη λογαριασμού"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("ΣΥΜΦΩΝΩ"),
@@ -301,7 +439,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Επιτρέψτε στην Google να διευκολύνει τις εφαρμογές να προσδιορίζουν την τοποθεσία σας. Αυτό συνεπάγεται την αποστολή ανώνυμων δεδομένων τοποθεσίας στην Google, ακόμη και όταν δεν εκτελούνται εφαρμογές."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Χρήση της υπηρεσίας τοποθεσίας της Google;"),
-        "dialogSelectedOption": m4,
+        "dialogSelectedOption": m7,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "Ρύθμιση λογαριασμού δημιουργίας αντιγράφων ασφαλείας"),
         "dialogShow":
@@ -312,234 +450,253 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Κατηγορίες"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Συλλογή"),
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("Car Savings"),
+            MessageLookupByLibrary.simpleMessage("Οικονομίες αυτοκινήτου"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Checking"),
+            MessageLookupByLibrary.simpleMessage("Τρεχούμενος"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("Home Savings"),
+            MessageLookupByLibrary.simpleMessage("Οικονομίες σπιτιού"),
         "rallyAccountDataVacation":
-            MessageLookupByLibrary.simpleMessage("Vacation"),
+            MessageLookupByLibrary.simpleMessage("Διακοπές"),
         "rallyAccountDetailDataAccountOwner":
-            MessageLookupByLibrary.simpleMessage("Account Owner"),
+            MessageLookupByLibrary.simpleMessage("Κάτοχος λογαριασμού"),
         "rallyAccountDetailDataAnnualPercentageYield":
-            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+            MessageLookupByLibrary.simpleMessage("Απόδοση ετήσιου ποσοστού"),
         "rallyAccountDetailDataInterestPaidLastYear":
-            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+            MessageLookupByLibrary.simpleMessage(
+                "Τόκοι που πληρώθηκαν το προηγούμενο έτος"),
         "rallyAccountDetailDataInterestRate":
-            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+            MessageLookupByLibrary.simpleMessage("Επιτόκιο"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+            MessageLookupByLibrary.simpleMessage("Επιτόκιο τρέχοντος έτους"),
         "rallyAccountDetailDataNextStatement":
-            MessageLookupByLibrary.simpleMessage("Next Statement"),
-        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
-        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
-        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m5,
-        "rallyAlertsMessageCheckingAccount": m6,
-        "rallyAlertsMessageHeadsUpShopping": m7,
-        "rallyAlertsMessageSpentOnRestaurants": m8,
-        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
-        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+            MessageLookupByLibrary.simpleMessage("Επόμενη δήλωση"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Σύνολο"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Λογαριασμοί"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Ειδοποιήσεις"),
+        "rallyAlertsMessageATMFees": m8,
+        "rallyAlertsMessageCheckingAccount": m9,
+        "rallyAlertsMessageHeadsUpShopping": m10,
+        "rallyAlertsMessageSpentOnRestaurants": m11,
+        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("Λογαριασμοί"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Προθεσμία"),
         "rallyBudgetCategoryClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
+            MessageLookupByLibrary.simpleMessage("Ρουχισμός"),
         "rallyBudgetCategoryCoffeeShops":
-            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+            MessageLookupByLibrary.simpleMessage("Καφετέριες"),
         "rallyBudgetCategoryGroceries":
-            MessageLookupByLibrary.simpleMessage("Groceries"),
+            MessageLookupByLibrary.simpleMessage("Είδη παντοπωλείου"),
         "rallyBudgetCategoryRestaurants":
-            MessageLookupByLibrary.simpleMessage("Restaurants"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
-        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
-        "rallyDescription":
-            MessageLookupByLibrary.simpleMessage("A personal finance app"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
-        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
-        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+            MessageLookupByLibrary.simpleMessage("Εστιατόρια"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Αριστερά"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Προϋπολογισμοί"),
+        "rallyDescription": MessageLookupByLibrary.simpleMessage(
+            "Μια εφαρμογή για προσωπικά οικονομικά"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("ΑΡΙΣΤΕΡΑ"),
+        "rallyLoginButtonLogin":
+            MessageLookupByLibrary.simpleMessage("ΣΥΝΔΕΣΗ"),
+        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Σύνδεση"),
         "rallyLoginLoginToRally":
-            MessageLookupByLibrary.simpleMessage("Login to Rally"),
+            MessageLookupByLibrary.simpleMessage("Σύνδεση στην εφαρμογή Rally"),
         "rallyLoginNoAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
-        "rallyLoginRememberMe":
-            MessageLookupByLibrary.simpleMessage("Remember Me"),
-        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
-        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
-        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+            MessageLookupByLibrary.simpleMessage("Δεν έχετε λογαριασμό;"),
+        "rallyLoginPassword":
+            MessageLookupByLibrary.simpleMessage("Κωδικός πρόσβασης"),
+        "rallyLoginRememberMe": MessageLookupByLibrary.simpleMessage(
+            "Απομνημόνευση των στοιχείων μου"),
+        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("ΕΓΓΡΑΦΗ"),
+        "rallyLoginUsername":
+            MessageLookupByLibrary.simpleMessage("Όνομα χρήστη"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("ΠΡΟΒΟΛΗ ΟΛΩΝ"),
         "rallySettingsFindAtms":
-            MessageLookupByLibrary.simpleMessage("Find ATMs"),
-        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+            MessageLookupByLibrary.simpleMessage("Εύρεση ATM"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Βοήθεια"),
         "rallySettingsManageAccounts":
-            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+            MessageLookupByLibrary.simpleMessage("Διαχείριση λογαριασμών"),
         "rallySettingsNotifications":
-            MessageLookupByLibrary.simpleMessage("Notifications"),
+            MessageLookupByLibrary.simpleMessage("Ειδοποιήσεις"),
         "rallySettingsPaperlessSettings":
-            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
-        "rallySettingsPasscodeAndTouchId":
-            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+            MessageLookupByLibrary.simpleMessage("Ρυθμίσεις Paperless"),
+        "rallySettingsPasscodeAndTouchId": MessageLookupByLibrary.simpleMessage(
+            "Κωδικός πρόσβασης και Touch ID"),
         "rallySettingsPersonalInformation":
-            MessageLookupByLibrary.simpleMessage("Personal Information"),
+            MessageLookupByLibrary.simpleMessage("Προσωπικά στοιχεία"),
         "rallySettingsSignOut":
-            MessageLookupByLibrary.simpleMessage("Sign out"),
+            MessageLookupByLibrary.simpleMessage("Αποσύνδεση"),
         "rallySettingsTaxDocuments":
-            MessageLookupByLibrary.simpleMessage("Tax Documents"),
-        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
-        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
-        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
-        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
-        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
-        "settingsAbout":
-            MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
+            MessageLookupByLibrary.simpleMessage("Φορολογικά έγγραφα"),
+        "rallyTitleAccounts":
+            MessageLookupByLibrary.simpleMessage("ΛΟΓΑΡΙΑΣΜΟΙ"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("ΛΟΓΑΡΙΑΣΜΟΙ"),
+        "rallyTitleBudgets":
+            MessageLookupByLibrary.simpleMessage("ΠΡΟΥΠΟΛΟΓΙΣΜΟΙ"),
+        "rallyTitleOverview":
+            MessageLookupByLibrary.simpleMessage("ΕΠΙΣΚΟΠΗΣΗ"),
+        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("ΡΥΘΜΙΣΕΙΣ"),
+        "settingsAbout": MessageLookupByLibrary.simpleMessage(
+            "Σχετικά με το Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
-            "Designed by TOASTER in London"),
-        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
+            "Σχεδίαση από TOASTER στο Λονδίνο"),
+        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Σκούρο"),
         "settingsFeedback":
-            MessageLookupByLibrary.simpleMessage("Send feedback"),
-        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Light"),
-        "settingsLocale": MessageLookupByLibrary.simpleMessage("Locale"),
+            MessageLookupByLibrary.simpleMessage("Αποστολή σχολίων"),
+        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Φωτεινό"),
+        "settingsLocale":
+            MessageLookupByLibrary.simpleMessage("Τοπικές ρυθμίσεις"),
         "settingsPlatformAndroid":
             MessageLookupByLibrary.simpleMessage("Android"),
         "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
-            MessageLookupByLibrary.simpleMessage("Platform mechanics"),
+            MessageLookupByLibrary.simpleMessage("Μηχανική πλατφόρμας"),
         "settingsSlowMotion":
-            MessageLookupByLibrary.simpleMessage("Slow motion"),
-        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
+            MessageLookupByLibrary.simpleMessage("Αργή κίνηση"),
+        "settingsSystemDefault":
+            MessageLookupByLibrary.simpleMessage("Σύστημα"),
         "settingsTextDirection":
-            MessageLookupByLibrary.simpleMessage("Text direction"),
+            MessageLookupByLibrary.simpleMessage("Κατεύθυνση κειμένου"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
+        "settingsTextDirectionLocaleBased":
+            MessageLookupByLibrary.simpleMessage("Based on locale"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
-            MessageLookupByLibrary.simpleMessage("Text scaling"),
-        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
+            MessageLookupByLibrary.simpleMessage("Κλιμάκωση κειμένου"),
+        "settingsTextScalingHuge":
+            MessageLookupByLibrary.simpleMessage("Τεράστιο"),
         "settingsTextScalingLarge":
-            MessageLookupByLibrary.simpleMessage("Large"),
+            MessageLookupByLibrary.simpleMessage("Μεγάλο"),
         "settingsTextScalingNormal":
-            MessageLookupByLibrary.simpleMessage("Normal"),
+            MessageLookupByLibrary.simpleMessage("Κανονικό"),
         "settingsTextScalingSmall":
-            MessageLookupByLibrary.simpleMessage("Small"),
-        "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Μικρό"),
+        "settingsTheme": MessageLookupByLibrary.simpleMessage("Θέμα"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("Ρυθμίσεις"),
         "shrineCancelButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CANCEL"),
+            MessageLookupByLibrary.simpleMessage("ΑΚΥΡΩΣΗ"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m9,
-        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+            MessageLookupByLibrary.simpleMessage("ΑΔΕΙΑΣΜΑ ΚΑΛΑΘΙΟΥ"),
+        "shrineCartItemCount": m13,
+        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("ΚΑΛΑΘΙ"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("Shipping:"),
+            MessageLookupByLibrary.simpleMessage("Αποστολή:"),
         "shrineCartSubtotalCaption":
-            MessageLookupByLibrary.simpleMessage("Subtotal:"),
-        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
-        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+            MessageLookupByLibrary.simpleMessage("Υποσύνολο:"),
+        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Φόρος:"),
+        "shrineCartTotalCaption":
+            MessageLookupByLibrary.simpleMessage("ΣΥΝΟΛΟ"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("Accessories"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+            MessageLookupByLibrary.simpleMessage("ΑΞΕΣΟΥΑΡ"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ΟΛΑ"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
-        "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+            MessageLookupByLibrary.simpleMessage("ΡΟΥΧΙΣΜΟΣ"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("ΣΠΙΤΙ"),
+        "shrineDescription": MessageLookupByLibrary.simpleMessage(
+            "Μια μοντέρνα εφαρμογή λιανικής πώλησης"),
         "shrineLoginPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Κωδικός πρόσβασης"),
         "shrineLoginUsernameLabel":
-            MessageLookupByLibrary.simpleMessage("Username"),
+            MessageLookupByLibrary.simpleMessage("Όνομα χρήστη"),
         "shrineLogoutButtonCaption":
-            MessageLookupByLibrary.simpleMessage("LOGOUT"),
-        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
-        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+            MessageLookupByLibrary.simpleMessage("ΑΠΟΣΥΝΔΕΣΗ"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("ΜΕΝΟΥ"),
+        "shrineNextButtonCaption":
+            MessageLookupByLibrary.simpleMessage("ΕΠΟΜΕΝΟ"),
         "shrineProductBlueStoneMug":
-            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
+            MessageLookupByLibrary.simpleMessage("Κούπα Blue stone"),
         "shrineProductCeriseScallopTee":
-            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+            MessageLookupByLibrary.simpleMessage("Κοντομάνικο Cerise"),
         "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+            MessageLookupByLibrary.simpleMessage("Πετσέτες Chambray"),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+            MessageLookupByLibrary.simpleMessage("Μπλούζα Chambray"),
         "shrineProductClassicWhiteCollar":
-            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+            MessageLookupByLibrary.simpleMessage("Κλασικό στιλ γραφείου"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+            MessageLookupByLibrary.simpleMessage("Πουλόβερ Clay"),
         "shrineProductCopperWireRack":
-            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+            MessageLookupByLibrary.simpleMessage("Συρμάτινο ράφι από χαλκό"),
         "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+            MessageLookupByLibrary.simpleMessage("Μπλούζα Fine lines"),
         "shrineProductGardenStrand":
             MessageLookupByLibrary.simpleMessage("Garden strand"),
         "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+            MessageLookupByLibrary.simpleMessage("Τραγιάσκα Gatsby"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
-        "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+            MessageLookupByLibrary.simpleMessage("Μπουφάν Gentry"),
+        "shrineProductGiltDeskTrio": MessageLookupByLibrary.simpleMessage(
+            "Σετ τριών επιχρυσωμένων τραπεζιών"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+            MessageLookupByLibrary.simpleMessage("Κασκόλ Ginger"),
         "shrineProductGreySlouchTank":
-            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+            MessageLookupByLibrary.simpleMessage("Γκρι αμάνικη μπλούζα"),
         "shrineProductHurrahsTeaSet":
-            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+            MessageLookupByLibrary.simpleMessage("Σερβίτσιο τσαγιού Hurrahs"),
         "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
+            MessageLookupByLibrary.simpleMessage("Τραπέζι κουζίνας quattro"),
         "shrineProductNavyTrousers":
-            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+            MessageLookupByLibrary.simpleMessage("Παντελόνια Navy"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m10,
-        "shrineProductQuantity": m11,
+            MessageLookupByLibrary.simpleMessage("Τουνίκ με σχέδια"),
+        "shrineProductPrice": m14,
+        "shrineProductQuantity": m15,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Quartet table"),
+            MessageLookupByLibrary.simpleMessage("Τραπέζι Quartet"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+            MessageLookupByLibrary.simpleMessage("Δοχείο νερού βροχής"),
         "shrineProductRamonaCrossover":
             MessageLookupByLibrary.simpleMessage("Ramona crossover"),
         "shrineProductSeaTunic":
-            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+            MessageLookupByLibrary.simpleMessage("Τουνίκ θαλάσσης"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
-        "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
+            MessageLookupByLibrary.simpleMessage("Πουλόβερ Seabreeze"),
+        "shrineProductShoulderRollsTee": MessageLookupByLibrary.simpleMessage(
+            "Μπλούζα με άνοιγμα στους ώμους"),
         "shrineProductShrugBag":
-            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+            MessageLookupByLibrary.simpleMessage("Τσάντα ώμου"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
+            MessageLookupByLibrary.simpleMessage("Σετ κεραμικών Soothe"),
         "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+            MessageLookupByLibrary.simpleMessage("Γυαλιά ηλίου Stella"),
         "shrineProductStrutEarrings":
-            MessageLookupByLibrary.simpleMessage("Strut earrings"),
+            MessageLookupByLibrary.simpleMessage("Σκουλαρίκια Strut"),
         "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+            MessageLookupByLibrary.simpleMessage("Γλάστρες παχύφυτων"),
         "shrineProductSunshirtDress":
-            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+            MessageLookupByLibrary.simpleMessage("Φόρεμα παραλίας"),
         "shrineProductSurfAndPerfShirt":
-            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+            MessageLookupByLibrary.simpleMessage("Μπλούζα Surf and perf"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+            MessageLookupByLibrary.simpleMessage("Τσάντα Vagabond"),
         "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+            MessageLookupByLibrary.simpleMessage("Κάλτσες Varsity"),
         "shrineProductWalterHenleyWhite":
-            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+            MessageLookupByLibrary.simpleMessage("Walter henley (λευκό)"),
         "shrineProductWeaveKeyring":
-            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+            MessageLookupByLibrary.simpleMessage("Μπρελόκ Weave"),
         "shrineProductWhitePinstripeShirt":
-            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+            MessageLookupByLibrary.simpleMessage("Λευκό ριγέ πουκάμισο"),
         "shrineProductWhitneyBelt":
-            MessageLookupByLibrary.simpleMessage("Whitney belt"),
-        "starterAppDescription":
-            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m12,
-        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
+            MessageLookupByLibrary.simpleMessage("Ζώνη Whitney"),
+        "starterAppDescription": MessageLookupByLibrary.simpleMessage(
+            "Μια αποκριτική διάταξη για την εφαρμογή Starter"),
+        "starterAppDrawerItem": m16,
+        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Σώμα"),
         "starterAppGenericButton":
-            MessageLookupByLibrary.simpleMessage("BUTTON"),
+            MessageLookupByLibrary.simpleMessage("ΚΟΥΜΠΙ"),
         "starterAppGenericHeadline":
-            MessageLookupByLibrary.simpleMessage("Headline"),
+            MessageLookupByLibrary.simpleMessage("Επικεφαλίδα"),
         "starterAppGenericSubtitle":
-            MessageLookupByLibrary.simpleMessage("Subtitle"),
-        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
-        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
-        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Υπότιτλος"),
+        "starterAppGenericTitle":
+            MessageLookupByLibrary.simpleMessage("Τίτλος"),
+        "starterAppTitle":
+            MessageLookupByLibrary.simpleMessage("Εφαρμογή Starter"),
+        "starterAppTooltipAdd":
+            MessageLookupByLibrary.simpleMessage("Προσθήκη"),
         "starterAppTooltipFavorite":
-            MessageLookupByLibrary.simpleMessage("Favorite"),
+            MessageLookupByLibrary.simpleMessage("Αγαπημένο"),
         "starterAppTooltipSearch":
-            MessageLookupByLibrary.simpleMessage("Search"),
-        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
+            MessageLookupByLibrary.simpleMessage("Αναζήτηση"),
+        "starterAppTooltipShare":
+            MessageLookupByLibrary.simpleMessage("Κοινοποίηση")
       };
 }

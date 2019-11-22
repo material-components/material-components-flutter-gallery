@@ -20,52 +20,76 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'et';
 
   static m0(value) =>
-      "To see the source code for this app, please visit the ${value}.";
+      "Selle rakenduse lähtekoodi nägemiseks vaadake siia: ${value}.";
 
-  static m1(title) => "Placeholder for ${title} tab";
+  static m1(title) => "Vahelehe ${title} kohatäide";
 
-  static m2(value) => "Item ${value}";
+  static m2(totalRestaurants) =>
+      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
 
-  static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m3(numberOfStops) =>
+      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
 
-  static m4(value) => "Teie valik: „${value}”";
+  static m4(totalProperties) =>
+      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m5(value) => "Üksus ${value}";
 
-  static m6(percent) =>
-      "Good work! Your checking account is ${percent} higher than last month.";
+  static m6(name, phoneNumber) =>
+      "Kontakti ${name} telefoninumber on ${phoneNumber}";
 
-  static m7(percent) =>
-      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+  static m7(value) => "Teie valik: „${value}”";
 
-  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m8(amount) =>
+      "Olete sel kuul pangaautomaatidest välja võtnud ${amount}";
 
-  static m9(quantity) => "${quantity} ITEMS";
+  static m9(percent) =>
+      "Tubli! Teie deposiidikonto saldo on eelmise kuuga võrreldes ${percent} suurem.";
 
-  static m10(price) => "x ${price}";
+  static m10(percent) =>
+      "Tähelepanu! Olete sel kuu kulutanud ${percent} oma ostueelarvest.";
 
-  static m11(quantity) => "Quantity: ${quantity}";
+  static m11(amount) => "Olete sel nädalal restoranides kulutanud ${amount}.";
 
-  static m12(value) => "Item ${value}";
+  static m12(count) =>
+      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+
+  static m13(quantity) =>
+      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+
+  static m14(price) => "x ${price}";
+
+  static m15(quantity) => "Kogus: ${quantity}";
+
+  static m16(value) => "Üksus ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "aboutDialogDescription": m0,
-        "aboutFlutterSamplesRepo":
-            MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
+        "aboutFlutterSamplesRepo": MessageLookupByLibrary.simpleMessage(
+            "Flutteri näidiste Githubi andmehoidla"),
         "bottomNavigationAccountTab":
-            MessageLookupByLibrary.simpleMessage("Account"),
+            MessageLookupByLibrary.simpleMessage("Konto"),
         "bottomNavigationAlarmTab":
             MessageLookupByLibrary.simpleMessage("Alarm"),
         "bottomNavigationCalendarTab":
-            MessageLookupByLibrary.simpleMessage("Calendar"),
+            MessageLookupByLibrary.simpleMessage("Kalender"),
         "bottomNavigationCameraTab":
-            MessageLookupByLibrary.simpleMessage("Camera"),
+            MessageLookupByLibrary.simpleMessage("Kaamera"),
         "bottomNavigationCommentsTab":
-            MessageLookupByLibrary.simpleMessage("Comments"),
+            MessageLookupByLibrary.simpleMessage("Kommentaarid"),
         "bottomNavigationContentPlaceholder": m1,
-        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "buttonText": MessageLookupByLibrary.simpleMessage("NUPP"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Loo"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Jalgrattasõit"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Lift"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Kamin"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Suur"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Keskmine"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Väike"),
+        "chipTurnOnLights":
+            MessageLookupByLibrary.simpleMessage("Lülita tuled sisse"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Pesumasin"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("MEREVAIGUKOLLANE"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("SININE"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("SINAKASHALL"),
@@ -86,8 +110,88 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsRed": MessageLookupByLibrary.simpleMessage("PUNANE"),
         "colorsTeal": MessageLookupByLibrary.simpleMessage("SINAKASROHELINE"),
         "colorsYellow": MessageLookupByLibrary.simpleMessage("KOLLANE"),
-        "craneDescription":
-            MessageLookupByLibrary.simpleMessage("A personalized travel app"),
+        "craneDescription": MessageLookupByLibrary.simpleMessage(
+            "Isikupärastatud reisirakendus"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("SÖÖMINE"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Napoli, Itaalia"),
+        "craneEat1": MessageLookupByLibrary.simpleMessage(
+            "Dallas, Ameerika Ühendriigid"),
+        "craneEat10":
+            MessageLookupByLibrary.simpleMessage("Lissabon, Portugal"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage(
+            "Portland, Ameerika Ühendriigid"),
+        "craneEat4":
+            MessageLookupByLibrary.simpleMessage("Pariis, Prantsusmaa"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, Lõuna-Korea"),
+        "craneEat6": MessageLookupByLibrary.simpleMessage(
+            "Seattle, Ameerika Ühendriigid"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage(
+            "Nashville, Ameerika Ühendriigid"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage(
+            "Atlanta, Ameerika Ühendriigid"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Hispaania"),
+        "craneEatRestaurants": m2,
+        "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
+            "Restoranide avastamine sihtkoha järgi"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("LENDAMINE"),
+        "craneFly0":
+            MessageLookupByLibrary.simpleMessage("Aspen, Ameerika Ühendriigid"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage(
+            "Big Sur, Ameerika Ühendriigid"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Kairo, Egiptus"),
+        "craneFly11":
+            MessageLookupByLibrary.simpleMessage("Lissabon, Portugal"),
+        "craneFly12":
+            MessageLookupByLibrary.simpleMessage("Napa, Ameerika Ühendriigid"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indoneesia"),
+        "craneFly2":
+            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
+        "craneFly3":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peruu"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldiivid"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Šveits"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Hispaania"),
+        "craneFly7": MessageLookupByLibrary.simpleMessage(
+            "Mount Rushmore, Ameerika Ühendriigid"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapur"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Havanna, Kuuba"),
+        "craneFlyStops": m3,
+        "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
+            "Lendude avastamine sihtkoha järgi"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("Valige kuupäev"),
+        "craneFormDates":
+            MessageLookupByLibrary.simpleMessage("Valige kuupäevad"),
+        "craneFormDestination":
+            MessageLookupByLibrary.simpleMessage("Sihtkoha valimine"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Sööklad"),
+        "craneFormLocation":
+            MessageLookupByLibrary.simpleMessage("Asukoha valimine"),
+        "craneFormOrigin":
+            MessageLookupByLibrary.simpleMessage("Valige lähtekoht"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("Valige aeg"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Reisijad"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("UNEREŽIIM"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldiivid"),
+        "craneSleep1":
+            MessageLookupByLibrary.simpleMessage("Aspen, Ameerika Ühendriigid"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Kairo, Egiptus"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+        "craneSleep2":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peruu"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havanna, Kuuba"),
+        "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, Šveits"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage(
+            "Big Sur, Ameerika Ühendriigid"),
+        "craneSleep6":
+            MessageLookupByLibrary.simpleMessage("Napa, Ameerika Ühendriigid"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mehhiko"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("Lissabon, Portugal"),
+        "craneSleepProperties": m4,
+        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
+            "Atribuutide avastamine sihtkoha järgi"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("Luba"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("Õunakook"),
@@ -109,52 +213,63 @@ class MessageLookup extends MessageLookupByLibrary {
             "Kas anda rakendusele „Maps\" juurdepääs teie asukohale, kui rakendust kasutate?"),
         "cupertinoAlertTiramisu":
             MessageLookupByLibrary.simpleMessage("Tiramisu"),
-        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Nupp"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("Koos taustaga"),
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Kuva hoiatus"),
+        "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Toimingukiibid on valikukomplekt, mis käivitab primaarse sisuga seotud toimingu. Toimingukiibid peaksid kasutajaliideses ilmuma dünaamiliselt ja kontekstiliselt."),
+        "demoActionChipTitle":
+            MessageLookupByLibrary.simpleMessage("Toimingukiip"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Hoiatusdialoog teavitab kasutajat olukordadest, mis nõuavad tähelepanu. Hoiatusdialoogil on valikuline pealkiri ja valikuline toimingute loend."),
         "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("Hoiatus"),
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Hoiatus koos pealkirjaga"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
+            "Alumisel navigeerimisribal kuvatakse ekraanikuva allservas 3–5 sihtkohta. Iga sihtkohta esindab ikoon ja valikuline tekstisilt. Alumise navigeerimisikooni puudutamisel suunatakse kasutaja selle ikooniga seotud ülatasemel navigeerimise sihtkohta."),
         "demoBottomNavigationPersistentLabels":
-            MessageLookupByLibrary.simpleMessage("Persistent labels"),
+            MessageLookupByLibrary.simpleMessage("Püsivad sildid"),
         "demoBottomNavigationSelectedLabel":
-            MessageLookupByLibrary.simpleMessage("Selected label"),
+            MessageLookupByLibrary.simpleMessage("Valitud silt"),
         "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation with cross-fading views"),
+            "Allossa navigeerimine tuhmuvate kuvadega"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom navigation"),
-        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Alla liikumine"),
+        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Lisa"),
         "demoBottomSheetButtonText":
-            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
-        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
-        "demoBottomSheetItem": m2,
+            MessageLookupByLibrary.simpleMessage("KUVA ALUMINE LEHT"),
+        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Päis"),
+        "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
+            "Modaalne alumine leht on alternatiiv menüüle või dialoogile ja takistab kasutajal ülejäänud rakendusega suhelda."),
         "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Modaalne alumine leht"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
+                "Püsival alumisel lehel kuvatakse teave, mis täiendab rakenduse peamist sisu. Püsiv alumine leht jääb nähtavale ka siis, kui kasutaja suhtleb rakenduse muu osaga."),
         "demoBottomSheetPersistentTitle":
-            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Püsiv alumine leht"),
         "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Persistent and modal bottom sheets"),
+            "Püsivad ja modaalsed alumised lehed"),
         "demoBottomSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Alumine leht"),
         "demoBottomTextFieldsTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Tekstiväljad"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "Samatasandiline, tõstetud, mitmetasandiline ja muud"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Nupud"),
+        "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Kompaktsed elemendid, mis tähistavad sisendit, atribuuti või toimingut"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Kiibid"),
+        "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Valikukiibid tähistavad komplektist ühte valikut. Valikukiibid sisaldavad seotud kirjeldavat teksti või kategooriaid."),
+        "demoChoiceChipTitle":
+            MessageLookupByLibrary.simpleMessage("Valikukiip"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Näidiskood"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "Color and color swatch constants which represent Material Design\'s color palette."),
+            "Värvide ja värvipaletti püsiväärtused, mis esindavad materiaalse disaini värvipaletti."),
         "demoColorsSubtitle":
             MessageLookupByLibrary.simpleMessage("Kõik eelmääratud värvid"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("Värvid"),
@@ -169,9 +284,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
             "Hoiatusdialoog teavitab kasutajat olukordadest, mis nõuavad tähelepanu. Hoiatusdialoogil on valikuline pealkiri, valikuline sisu ja valikuline toimingute loend. Pealkiri kuvatakse sisu kohal ja toimingud sisu all."),
         "demoCupertinoAlertTitle":
-            MessageLookupByLibrary.simpleMessage("Alert"),
+            MessageLookupByLibrary.simpleMessage("Märguanne"),
         "demoCupertinoAlertWithTitleTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage("Hoiatus koos pealkirjaga"),
         "demoCupertinoAlertsSubtitle": MessageLookupByLibrary.simpleMessage(
             "iOS-i stiilis teatisedialoogid"),
         "demoCupertinoAlertsTitle":
@@ -181,12 +296,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS-i stiilis nupud"),
         "demoCupertinoButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Buttons"),
+            MessageLookupByLibrary.simpleMessage("Nupud"),
+        "demoCupertinoSegmentedControlDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+        "demoCupertinoSegmentedControlSubtitle":
+            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+        "demoCupertinoSegmentedControlTitle":
+            MessageLookupByLibrary.simpleMessage("Segmented Control"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Lihtne, hoiatus ja täisekraan"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dialoogid"),
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API dokumentatsioon"),
+        "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Filtreerimiskiibid kasutavad sisu filtreerimiseks märgendeid või kirjeldavaid sõnu."),
+        "demoFilterChipTitle":
+            MessageLookupByLibrary.simpleMessage("Filtrikiip"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Samatasandiline nupp kuvab vajutamisel tindipleki, kuid ei tõuse ülespoole. Kasutage samatasandilisi nuppe tööriistaribadel, dialoogides ja tekstisiseselt koos täidisega"),
         "demoFlatButtonTitle":
@@ -200,8 +326,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoFullscreenDialogTitle":
             MessageLookupByLibrary.simpleMessage("Täisekraan"),
         "demoFullscreenTooltip":
-            MessageLookupByLibrary.simpleMessage("Full Screen"),
+            MessageLookupByLibrary.simpleMessage("Täisekraan"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Teave"),
+        "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Sisendkiibid tähistavad kompaktsel kujul keerulist teavet, näiteks üksust (isik, koht või asi) või meilivestluse teksti."),
+        "demoInputChipTitle":
+            MessageLookupByLibrary.simpleMessage("Sisendkiip"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL-i ei saanud kuvada:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Valikud"),
@@ -217,66 +347,67 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lihtne dialoog pakub kasutajale valikut mitme võimaluse vahel. Lihtsal dialoogil on valikuline pealkiri, mis kuvatakse valikute kohal."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Lihtne"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
-        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
+            "Tekstiväljad võimaldavad kasutajatel kasutajaliideses teksti sisestada. Need kuvatakse tavaliselt vormides ja dialoogides."),
+        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-post"),
         "demoTextFieldEnterPassword":
-            MessageLookupByLibrary.simpleMessage("Please enter a password."),
+            MessageLookupByLibrary.simpleMessage("Sisestage parool."),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### - Enter a US phone number."),
+            "(###) ### #### – sisestage USA telefoninumber."),
         "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
-            "Please fix the errors in red before submitting."),
+            "Enne esitamist parandage punasega märgitud vead."),
         "demoTextFieldHidePasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Hide password"),
+            MessageLookupByLibrary.simpleMessage("Peida parool"),
         "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
-            "Keep it short, this is just a demo."),
+            "Ärge pikalt kirjutage, see on vaid demo."),
         "demoTextFieldLifeStory":
-            MessageLookupByLibrary.simpleMessage("Life story"),
-        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
-        "demoTextFieldNameHasPhoneNumber": m3,
+            MessageLookupByLibrary.simpleMessage("Elulugu"),
+        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Nimi*"),
+        "demoTextFieldNameHasPhoneNumber": m6,
         "demoTextFieldNameRequired":
-            MessageLookupByLibrary.simpleMessage("Name is required."),
+            MessageLookupByLibrary.simpleMessage("Nimi on nõutav."),
         "demoTextFieldNoMoreThan":
-            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+            MessageLookupByLibrary.simpleMessage("Mitte üle 8 tähemärgi."),
         "demoTextFieldOnlyAlphabeticalChars":
             MessageLookupByLibrary.simpleMessage(
-                "Please enter only alphabetical characters."),
+                "Sisestage ainult tähestikutähti."),
         "demoTextFieldPassword":
-            MessageLookupByLibrary.simpleMessage("Password*"),
+            MessageLookupByLibrary.simpleMessage("Parool*"),
         "demoTextFieldPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+            MessageLookupByLibrary.simpleMessage("Paroolid ei ühti"),
         "demoTextFieldPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("Phone number*"),
-        "demoTextFieldRequiredField":
-            MessageLookupByLibrary.simpleMessage("* indicates required field"),
+            MessageLookupByLibrary.simpleMessage("Telefoninumber*"),
+        "demoTextFieldRequiredField": MessageLookupByLibrary.simpleMessage(
+            "* tähistab kohustuslikku välja"),
         "demoTextFieldRetypePassword":
-            MessageLookupByLibrary.simpleMessage("Re-type password*"),
-        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+            MessageLookupByLibrary.simpleMessage("Sisestage parool uuesti*"),
+        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Palk"),
         "demoTextFieldShowPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Show password"),
-        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
+            MessageLookupByLibrary.simpleMessage("Kuva parool"),
+        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("ESITA"),
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Single line of editable text and numbers"),
+            "Üks rida muudetavat teksti ja numbreid"),
         "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
+            "Rääkige meile endast (nt kirjutage oma tegevustest või hobidest)"),
         "demoTextFieldTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Tekstiväljad"),
         "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
         "demoTextFieldWhatDoPeopleCallYou":
-            MessageLookupByLibrary.simpleMessage("What do people call you?"),
-        "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
+            MessageLookupByLibrary.simpleMessage(
+                "Kuidas inimesed teid kutsuvad?"),
+        "demoTextFieldWhereCanWeReachYou": MessageLookupByLibrary.simpleMessage(
+            "Kuidas saame teiega ühendust võtta?"),
         "demoTextFieldYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("Your email address"),
+            MessageLookupByLibrary.simpleMessage("Teie e-posti aadress"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Lülitusnuppe saab kasutada seotud valikute grupeerimiseks. Seotud lülitusnuppude gruppide esiletõstmiseks peab grupp jagama ühist konteinerit"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Lülitusnupp"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Definitions for the various typographical styles found in Material Design."),
+            "Materiaalses disainil leiduvate eri tüpograafiliste stiilide definitsioonid."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined text styles"),
+            "Kõik eelmääratud tekstistiilid"),
         "demoTypographyTitle":
-            MessageLookupByLibrary.simpleMessage("Typography"),
+            MessageLookupByLibrary.simpleMessage("Tüpograafia"),
         "dialogAddAccount": MessageLookupByLibrary.simpleMessage("Lisa konto"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("NÕUSTU"),
         "dialogCancel": MessageLookupByLibrary.simpleMessage("TÜHISTA"),
@@ -294,7 +425,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lubage Google\'il rakendusi asukoha tuvastamisel aidata. See tähendab, et Google\'ile saadetakse anonüümseid asukohaandmeid isegi siis, kui ükski rakendus ei tööta."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Kas kasutada Google\'i asukohateenuseid?"),
-        "dialogSelectedOption": m4,
+        "dialogSelectedOption": m7,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Varundamiskonto määramine"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("KUVA DIALOOG"),
@@ -304,141 +435,154 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Kategooriad"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galerii"),
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("Car Savings"),
+            MessageLookupByLibrary.simpleMessage("Autolaenukonto"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Checking"),
+            MessageLookupByLibrary.simpleMessage("Tšekikonto"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("Home Savings"),
+            MessageLookupByLibrary.simpleMessage("Kodulaenukonto"),
         "rallyAccountDataVacation":
-            MessageLookupByLibrary.simpleMessage("Vacation"),
+            MessageLookupByLibrary.simpleMessage("Puhkusekonto"),
         "rallyAccountDetailDataAccountOwner":
-            MessageLookupByLibrary.simpleMessage("Account Owner"),
+            MessageLookupByLibrary.simpleMessage("Konto omanik"),
         "rallyAccountDetailDataAnnualPercentageYield":
-            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+            MessageLookupByLibrary.simpleMessage("Aastane tuluprotsent"),
         "rallyAccountDetailDataInterestPaidLastYear":
-            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+            MessageLookupByLibrary.simpleMessage(
+                "Eelmisel aastal makstud intress"),
         "rallyAccountDetailDataInterestRate":
-            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+            MessageLookupByLibrary.simpleMessage("Intressimäär"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+            MessageLookupByLibrary.simpleMessage(
+                "Aastane intress tänase kuupäevani"),
         "rallyAccountDetailDataNextStatement":
-            MessageLookupByLibrary.simpleMessage("Next Statement"),
-        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
-        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
-        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m5,
-        "rallyAlertsMessageCheckingAccount": m6,
-        "rallyAlertsMessageHeadsUpShopping": m7,
-        "rallyAlertsMessageSpentOnRestaurants": m8,
-        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
-        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+            MessageLookupByLibrary.simpleMessage("Järgmine väljavõte"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Kokku"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Kontod"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Hoiatused"),
+        "rallyAlertsMessageATMFees": m8,
+        "rallyAlertsMessageCheckingAccount": m9,
+        "rallyAlertsMessageHeadsUpShopping": m10,
+        "rallyAlertsMessageSpentOnRestaurants": m11,
+        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("Arved"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Maksta"),
         "rallyBudgetCategoryClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
+            MessageLookupByLibrary.simpleMessage("Riided"),
         "rallyBudgetCategoryCoffeeShops":
-            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+            MessageLookupByLibrary.simpleMessage("Kohvikud"),
         "rallyBudgetCategoryGroceries":
-            MessageLookupByLibrary.simpleMessage("Groceries"),
+            MessageLookupByLibrary.simpleMessage("Toiduained"),
         "rallyBudgetCategoryRestaurants":
-            MessageLookupByLibrary.simpleMessage("Restaurants"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
-        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
+            MessageLookupByLibrary.simpleMessage("Restoranid"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Järel"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Eelarved"),
         "rallyDescription":
-            MessageLookupByLibrary.simpleMessage("A personal finance app"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
-        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
-        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
-        "rallyLoginLoginToRally":
-            MessageLookupByLibrary.simpleMessage("Login to Rally"),
+            MessageLookupByLibrary.simpleMessage("Isiklik finantsrakendus"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("JÄREL"),
+        "rallyLoginButtonLogin":
+            MessageLookupByLibrary.simpleMessage("LOGI SISSE"),
+        "rallyLoginLabelLogin":
+            MessageLookupByLibrary.simpleMessage("Logi sisse"),
+        "rallyLoginLoginToRally": MessageLookupByLibrary.simpleMessage(
+            "Sisselogimine rakendusse Rally"),
         "rallyLoginNoAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Kas teil pole kontot?"),
+        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Parool"),
         "rallyLoginRememberMe":
-            MessageLookupByLibrary.simpleMessage("Remember Me"),
-        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
-        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
-        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+            MessageLookupByLibrary.simpleMessage("Mäleta mind"),
+        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("REGISTREERU"),
+        "rallyLoginUsername":
+            MessageLookupByLibrary.simpleMessage("Kasutajanimi"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("KUVA KÕIK"),
         "rallySettingsFindAtms":
-            MessageLookupByLibrary.simpleMessage("Find ATMs"),
-        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+            MessageLookupByLibrary.simpleMessage("Otsige pangaautomaate"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Abi"),
         "rallySettingsManageAccounts":
-            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+            MessageLookupByLibrary.simpleMessage("Kontode haldamine"),
         "rallySettingsNotifications":
-            MessageLookupByLibrary.simpleMessage("Notifications"),
+            MessageLookupByLibrary.simpleMessage("Märguanded"),
         "rallySettingsPaperlessSettings":
-            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
+            MessageLookupByLibrary.simpleMessage("Paberivabad arved"),
         "rallySettingsPasscodeAndTouchId":
-            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+            MessageLookupByLibrary.simpleMessage("Pääsukood ja Touch ID"),
         "rallySettingsPersonalInformation":
-            MessageLookupByLibrary.simpleMessage("Personal Information"),
+            MessageLookupByLibrary.simpleMessage("Isiklikud andmed"),
         "rallySettingsSignOut":
-            MessageLookupByLibrary.simpleMessage("Sign out"),
+            MessageLookupByLibrary.simpleMessage("Logi välja"),
         "rallySettingsTaxDocuments":
-            MessageLookupByLibrary.simpleMessage("Tax Documents"),
-        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
-        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
-        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
-        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
-        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
-        "settingsAbout":
-            MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
-        "settingsAttribution": MessageLookupByLibrary.simpleMessage(
-            "Designed by TOASTER in London"),
-        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
+            MessageLookupByLibrary.simpleMessage("Maksudokumendid"),
+        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("KONTOD"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("ARVED"),
+        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("EELARVED"),
+        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("ÜLEVAADE"),
+        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SEADED"),
+        "settingsAbout": MessageLookupByLibrary.simpleMessage(
+            "Teave Flutteri galerii kohta"),
+        "settingsAttribution":
+            MessageLookupByLibrary.simpleMessage("Londonis kujundanud TOASTER"),
+        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Tume"),
         "settingsFeedback":
-            MessageLookupByLibrary.simpleMessage("Send feedback"),
-        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Light"),
-        "settingsLocale": MessageLookupByLibrary.simpleMessage("Locale"),
+            MessageLookupByLibrary.simpleMessage("Tagasiside saatmine"),
+        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Hele"),
+        "settingsLocale": MessageLookupByLibrary.simpleMessage("Lokaat"),
         "settingsPlatformAndroid":
             MessageLookupByLibrary.simpleMessage("Android"),
         "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
-            MessageLookupByLibrary.simpleMessage("Platform mechanics"),
-        "settingsSlowMotion":
-            MessageLookupByLibrary.simpleMessage("Slow motion"),
-        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
+            MessageLookupByLibrary.simpleMessage("Platvormi mehaanika"),
+        "settingsSlowMotion": MessageLookupByLibrary.simpleMessage("Aegluubis"),
+        "settingsSystemDefault":
+            MessageLookupByLibrary.simpleMessage("Süsteem"),
         "settingsTextDirection":
-            MessageLookupByLibrary.simpleMessage("Text direction"),
-        "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
-        "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
+            MessageLookupByLibrary.simpleMessage("Teksti suund"),
+        "settingsTextDirectionLTR":
+            MessageLookupByLibrary.simpleMessage("vasakult paremale"),
+        "settingsTextDirectionLocaleBased":
+            MessageLookupByLibrary.simpleMessage("Based on locale"),
+        "settingsTextDirectionRTL":
+            MessageLookupByLibrary.simpleMessage("Paremalt vasakule"),
         "settingsTextScaling":
-            MessageLookupByLibrary.simpleMessage("Text scaling"),
-        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
+            MessageLookupByLibrary.simpleMessage("Teksti skaleerimine"),
+        "settingsTextScalingHuge":
+            MessageLookupByLibrary.simpleMessage("Väga suur"),
         "settingsTextScalingLarge":
-            MessageLookupByLibrary.simpleMessage("Large"),
+            MessageLookupByLibrary.simpleMessage("Suur"),
         "settingsTextScalingNormal":
-            MessageLookupByLibrary.simpleMessage("Normal"),
+            MessageLookupByLibrary.simpleMessage("Tavaline"),
         "settingsTextScalingSmall":
-            MessageLookupByLibrary.simpleMessage("Small"),
-        "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Väike"),
+        "settingsTheme": MessageLookupByLibrary.simpleMessage("Teema"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("Seaded"),
         "shrineCancelButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CANCEL"),
+            MessageLookupByLibrary.simpleMessage("TÜHISTA"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m9,
-        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+            MessageLookupByLibrary.simpleMessage("TÜHJENDA KORV"),
+        "shrineCartItemCount": m13,
+        "shrineCartPageCaption":
+            MessageLookupByLibrary.simpleMessage("OSTUKORV"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("Shipping:"),
+            MessageLookupByLibrary.simpleMessage("Tarne:"),
         "shrineCartSubtotalCaption":
-            MessageLookupByLibrary.simpleMessage("Subtotal:"),
-        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
-        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+            MessageLookupByLibrary.simpleMessage("Vahesumma:"),
+        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Maks:"),
+        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("KOKKU"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("Accessories"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+            MessageLookupByLibrary.simpleMessage("AKSESSUAARID"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("KÕIK"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
+            MessageLookupByLibrary.simpleMessage("RIIDED"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("KODU"),
         "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+            MessageLookupByLibrary.simpleMessage("Moodne jaemüügirakendus"),
         "shrineLoginPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Parool"),
         "shrineLoginUsernameLabel":
-            MessageLookupByLibrary.simpleMessage("Username"),
+            MessageLookupByLibrary.simpleMessage("Kasutajanimi"),
         "shrineLogoutButtonCaption":
-            MessageLookupByLibrary.simpleMessage("LOGOUT"),
-        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
-        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+            MessageLookupByLibrary.simpleMessage("LOGI VÄLJA"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENÜÜ"),
+        "shrineNextButtonCaption":
+            MessageLookupByLibrary.simpleMessage("JÄRGMINE"),
         "shrineProductBlueStoneMug":
             MessageLookupByLibrary.simpleMessage("Blue stone mug"),
         "shrineProductCeriseScallopTee":
@@ -475,8 +619,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Navy trousers"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m10,
-        "shrineProductQuantity": m11,
+        "shrineProductPrice": m14,
+        "shrineProductQuantity": m15,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Quartet table"),
         "shrineProductRainwaterTray":
@@ -515,23 +659,24 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
-        "starterAppDescription":
-            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m12,
-        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
-        "starterAppGenericButton":
-            MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "starterAppDescription": MessageLookupByLibrary.simpleMessage(
+            "Automaatselt kohanduva stardirakenduse paigutus"),
+        "starterAppDrawerItem": m16,
+        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Sisu"),
+        "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("NUPP"),
         "starterAppGenericHeadline":
-            MessageLookupByLibrary.simpleMessage("Headline"),
+            MessageLookupByLibrary.simpleMessage("Pealkiri"),
         "starterAppGenericSubtitle":
-            MessageLookupByLibrary.simpleMessage("Subtitle"),
-        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
-        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
-        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Alapealkiri"),
+        "starterAppGenericTitle":
+            MessageLookupByLibrary.simpleMessage("Pealkiri"),
+        "starterAppTitle":
+            MessageLookupByLibrary.simpleMessage("Stardirakendus"),
+        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Lisa"),
         "starterAppTooltipFavorite":
-            MessageLookupByLibrary.simpleMessage("Favorite"),
+            MessageLookupByLibrary.simpleMessage("Lisa lemmikutesse"),
         "starterAppTooltipSearch":
-            MessageLookupByLibrary.simpleMessage("Search"),
-        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
+            MessageLookupByLibrary.simpleMessage("Otsing"),
+        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Jaga")
       };
 }

@@ -19,53 +19,71 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'ja';
 
-  static m0(value) =>
-      "To see the source code for this app, please visit the ${value}.";
+  static m0(value) => "このアプリのソースコードは ${value} で確認できます。";
 
-  static m1(title) => "Placeholder for ${title} tab";
+  static m1(title) => "${title} タブのプレースホルダ";
 
-  static m2(value) => "Item ${value}";
+  static m2(totalRestaurants) =>
+      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
 
-  static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m3(numberOfStops) =>
+      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
 
-  static m4(value) => "「${value}」を選択しました";
+  static m4(totalProperties) =>
+      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m5(value) => "項目 ${value}";
 
-  static m6(percent) =>
-      "Good work! Your checking account is ${percent} higher than last month.";
+  static m6(name, phoneNumber) => "${name} さんの電話番号は ${phoneNumber} です";
 
-  static m7(percent) =>
-      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+  static m7(value) => "「${value}」を選択しました";
 
-  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m8(amount) => "今月は ATM 手数料に ${amount} 使いました";
 
-  static m9(quantity) => "${quantity} ITEMS";
+  static m9(percent) => "がんばりました！当座預金口座額が先月より ${percent} 増えました。";
 
-  static m10(price) => "x ${price}";
+  static m10(percent) => "今月のショッピング予算の ${percent} を使いました。";
 
-  static m11(quantity) => "Quantity: ${quantity}";
+  static m11(amount) => "今週はレストランに ${amount} 使いました。";
 
-  static m12(value) => "Item ${value}";
+  static m12(count) =>
+      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+
+  static m13(quantity) =>
+      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+
+  static m14(price) => "x ${price}";
+
+  static m15(quantity) => "数量: ${quantity}";
+
+  static m16(value) => "項目 ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "aboutDialogDescription": m0,
         "aboutFlutterSamplesRepo":
-            MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
+            MessageLookupByLibrary.simpleMessage("Flutter サンプル Github レポジトリ"),
         "bottomNavigationAccountTab":
-            MessageLookupByLibrary.simpleMessage("Account"),
+            MessageLookupByLibrary.simpleMessage("口座"),
         "bottomNavigationAlarmTab":
-            MessageLookupByLibrary.simpleMessage("Alarm"),
+            MessageLookupByLibrary.simpleMessage("アラーム"),
         "bottomNavigationCalendarTab":
-            MessageLookupByLibrary.simpleMessage("Calendar"),
+            MessageLookupByLibrary.simpleMessage("カレンダー"),
         "bottomNavigationCameraTab":
-            MessageLookupByLibrary.simpleMessage("Camera"),
+            MessageLookupByLibrary.simpleMessage("カメラ"),
         "bottomNavigationCommentsTab":
-            MessageLookupByLibrary.simpleMessage("Comments"),
+            MessageLookupByLibrary.simpleMessage("コメント"),
         "bottomNavigationContentPlaceholder": m1,
-        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "buttonText": MessageLookupByLibrary.simpleMessage("ボタン"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("作成"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("自転車"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("エレベーター"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("暖炉"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("大"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("中"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("小"),
+        "chipTurnOnLights": MessageLookupByLibrary.simpleMessage("ライトをオンにする"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("洗濯機"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("アンバー"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("ブルー"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("ブルーグレー"),
@@ -86,7 +104,61 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsTeal": MessageLookupByLibrary.simpleMessage("ティール"),
         "colorsYellow": MessageLookupByLibrary.simpleMessage("イエロー"),
         "craneDescription":
-            MessageLookupByLibrary.simpleMessage("A personalized travel app"),
+            MessageLookupByLibrary.simpleMessage("カスタマイズ トラベル アプリ"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("食事"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("ナポリ（イタリア）"),
+        "craneEat1": MessageLookupByLibrary.simpleMessage("ダラス（米国）"),
+        "craneEat10": MessageLookupByLibrary.simpleMessage("リスボン（ポルトガル）"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("コルドバ（アルゼンチン）"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage("ポートランド（米国）"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("パリ（フランス）"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("ソウル（韓国）"),
+        "craneEat6": MessageLookupByLibrary.simpleMessage("シアトル（米国）"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage("ナッシュビル（米国）"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage("アトランタ（米国）"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("マドリッド（スペイン）"),
+        "craneEatRestaurants": m2,
+        "craneEatSubhead": MessageLookupByLibrary.simpleMessage("目的地でレストランを検索"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("飛行機"),
+        "craneFly0": MessageLookupByLibrary.simpleMessage("アスペン（米国）"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage("ビッグサー（米国）"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("カイロ（エジプト）"),
+        "craneFly11": MessageLookupByLibrary.simpleMessage("リスボン（ポルトガル）"),
+        "craneFly12": MessageLookupByLibrary.simpleMessage("ナパ（米国）"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("バリ島（インドネシア）"),
+        "craneFly2": MessageLookupByLibrary.simpleMessage("クンブ渓谷（ネパール）"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("マチュピチュ（ペルー）"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("マレ（モルディブ）"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("ヴィッツナウ（スイス）"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("マドリッド（スペイン）"),
+        "craneFly7": MessageLookupByLibrary.simpleMessage("ラシュモア山（米国）"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("シンガポール"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("ハバナ（キューバ）"),
+        "craneFlyStops": m3,
+        "craneFlySubhead": MessageLookupByLibrary.simpleMessage("目的地でフライトを検索"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("日付を選択"),
+        "craneFormDates": MessageLookupByLibrary.simpleMessage("日付を選択"),
+        "craneFormDestination": MessageLookupByLibrary.simpleMessage("目的地を選択"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("食堂数"),
+        "craneFormLocation": MessageLookupByLibrary.simpleMessage("場所を選択"),
+        "craneFormOrigin": MessageLookupByLibrary.simpleMessage("出発地を選択"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("時間を選択"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("訪問者数"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("宿泊"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("マレ（モルディブ）"),
+        "craneSleep1": MessageLookupByLibrary.simpleMessage("アスペン（米国）"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("カイロ（エジプト）"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("台北（台湾）"),
+        "craneSleep2": MessageLookupByLibrary.simpleMessage("マチュピチュ（ペルー）"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("ハバナ（キューバ）"),
+        "craneSleep4": MessageLookupByLibrary.simpleMessage("ヴィッツナウ（スイス）"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage("ビッグサー（米国）"),
+        "craneSleep6": MessageLookupByLibrary.simpleMessage("ナパ（米国）"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("ポルト（ポルトガル）"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("トゥルム（メキシコ）"),
+        "craneSleep9": MessageLookupByLibrary.simpleMessage("リスボン（ポルトガル）"),
+        "craneSleepProperties": m4,
+        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage("目的地で物件を検索"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("許可"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("アップルパイ"),
@@ -108,51 +180,60 @@ class MessageLookup extends MessageLookupByLibrary {
         "cupertinoAlertLocationTitle": MessageLookupByLibrary.simpleMessage(
             "マップアプリの使用中に「マップ」に位置情報にアクセスすることを許可しますか？"),
         "cupertinoAlertTiramisu": MessageLookupByLibrary.simpleMessage("ティラミス"),
-        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("ボタン"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("背景付き"),
         "cupertinoShowAlert": MessageLookupByLibrary.simpleMessage("アラートを表示"),
+        "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
+            "アクション チップは、メイン コンテンツに関連するアクションをトリガーするオプションの集合です。アクション チップは UI にコンテキストに基づいて動的に表示されます。"),
+        "demoActionChipTitle":
+            MessageLookupByLibrary.simpleMessage("アクション チップ"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "アラート ダイアログでは、確認を要する状況をユーザーに伝えることができます。必要に応じて、タイトルとアクション リストを設定できます。"),
         "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("アラート"),
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("タイトル付きアラート"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
+            "ボトム ナビゲーション バーでは、画面の一番下に 3～5 つの移動先が表示されます。各移動先はアイコンとテキストラベル（省略可）で表されます。ボトム ナビゲーション アイコンをタップすると、そのアイコンに関連付けられている最上位の移動先に移動します。"),
         "demoBottomNavigationPersistentLabels":
-            MessageLookupByLibrary.simpleMessage("Persistent labels"),
+            MessageLookupByLibrary.simpleMessage("永続ラベル"),
         "demoBottomNavigationSelectedLabel":
-            MessageLookupByLibrary.simpleMessage("Selected label"),
+            MessageLookupByLibrary.simpleMessage("選択済みのラベル"),
         "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation with cross-fading views"),
+            "クロスフェーディング ビュー付きのボトム ナビゲーション"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom navigation"),
-        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("ボトム ナビゲーション"),
+        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("追加"),
         "demoBottomSheetButtonText":
-            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
-        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
-        "demoBottomSheetItem": m2,
+            MessageLookupByLibrary.simpleMessage("ボトムシートを表示"),
+        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("ヘッダー"),
+        "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
+            "モーダル ボトムシートとは、メニューまたはダイアログの代わりになるもので、これが表示されている場合、ユーザーはアプリの他の部分を操作できません。"),
         "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("モーダル ボトムシート"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
+                "永続ボトムシートには、アプリのメイン コンテンツを補う情報が表示されます。永続ボトムシートは、ユーザーがアプリの他の部分を操作している場合も表示されたままとなります。"),
         "demoBottomSheetPersistentTitle":
-            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
-        "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Persistent and modal bottom sheets"),
-        "demoBottomSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("永続ボトムシート"),
+        "demoBottomSheetSubtitle":
+            MessageLookupByLibrary.simpleMessage("永続ボトムシートとモーダル ボトムシート"),
+        "demoBottomSheetTitle": MessageLookupByLibrary.simpleMessage("ボトムシート"),
         "demoBottomTextFieldsTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("テキスト欄"),
         "demoButtonSubtitle":
             MessageLookupByLibrary.simpleMessage("フラット、浮き出し、アウトラインなど"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("ボタン"),
+        "demoChipSubtitle":
+            MessageLookupByLibrary.simpleMessage("入力、属性、アクションを表すコンパクトな要素"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("チップ"),
+        "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
+            "選択チップは、集合からの 1 つの選択肢を表すものです。選択チップには、関連する説明テキストまたはカテゴリが含まれます。"),
+        "demoChoiceChipTitle": MessageLookupByLibrary.simpleMessage("選択チップ"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("コードサンプル"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "Color and color swatch constants which represent Material Design\'s color palette."),
+            "マテリアル デザインのカラーパレットを表す、カラーとカラー スウォッチの定数です。"),
         "demoColorsSubtitle":
             MessageLookupByLibrary.simpleMessage("定義済みのすべてのカラー"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("カラー"),
@@ -166,10 +247,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ボタン付きアラート"),
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
             "アラート ダイアログでは、確認を要する状況をユーザーに伝えることができます。必要に応じて、タイトル、コンテンツ、アクション リストを設定できます。コンテンツの上にタイトル、コンテンツの下にアクションが表示されます。"),
-        "demoCupertinoAlertTitle":
-            MessageLookupByLibrary.simpleMessage("Alert"),
+        "demoCupertinoAlertTitle": MessageLookupByLibrary.simpleMessage("アラート"),
         "demoCupertinoAlertWithTitleTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage("タイトル付きアラート"),
         "demoCupertinoAlertsSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS スタイルのアラート ダイアログ"),
         "demoCupertinoAlertsTitle":
@@ -179,12 +259,22 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS スタイルのボタン"),
         "demoCupertinoButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Buttons"),
+            MessageLookupByLibrary.simpleMessage("ボタン"),
+        "demoCupertinoSegmentedControlDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+        "demoCupertinoSegmentedControlSubtitle":
+            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+        "demoCupertinoSegmentedControlTitle":
+            MessageLookupByLibrary.simpleMessage("Segmented Control"),
         "demoDialogSubtitle":
             MessageLookupByLibrary.simpleMessage("シンプル、アラート、全画面表示"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("ダイアログ"),
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API ドキュメント"),
+        "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
+            "フィルタチップは、コンテンツをフィルタする方法としてタグやキーワードを使用します。"),
+        "demoFilterChipTitle": MessageLookupByLibrary.simpleMessage("フィルタチップ"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "フラットボタンを押すと、インク スプラッシュが表示されますが、このボタンは浮き上がりません。ツールバー、ダイアログのほか、パディング入りインラインで使用されます"),
         "demoFlatButtonTitle": MessageLookupByLibrary.simpleMessage("フラットボタン"),
@@ -196,9 +286,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "fullscreenDialog プロパティで、着信ページが全画面モード ダイアログかどうかを指定します"),
         "demoFullscreenDialogTitle":
             MessageLookupByLibrary.simpleMessage("全画面表示"),
-        "demoFullscreenTooltip":
-            MessageLookupByLibrary.simpleMessage("Full Screen"),
+        "demoFullscreenTooltip": MessageLookupByLibrary.simpleMessage("全画面表示"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("情報"),
+        "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
+            "入力チップは、エンティティ（人、場所、アイテムなど）や会話テキストなどの複雑な情報をコンパクトな形式で表すものです。"),
+        "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("入力チップ"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL を表示できませんでした:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("オプション"),
@@ -214,66 +306,61 @@ class MessageLookup extends MessageLookupByLibrary {
             "シンプル ダイアログでは、ユーザーに複数の選択肢を提示できます。必要に応じて、選択肢の上に表示するタイトルを設定できます。"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("シンプル"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
-        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
+            "テキスト欄では、ユーザーが UI にテキストを入力できます。一般にフォームやダイアログで表示されます。"),
+        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("メールアドレス"),
         "demoTextFieldEnterPassword":
-            MessageLookupByLibrary.simpleMessage("Please enter a password."),
+            MessageLookupByLibrary.simpleMessage("パスワードを入力してください。"),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### - Enter a US phone number."),
-        "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
-            "Please fix the errors in red before submitting."),
+            "（###）###-#### - 米国の電話番号を入力してください。"),
+        "demoTextFieldFormErrors":
+            MessageLookupByLibrary.simpleMessage("送信する前に赤のエラーを修正してください。"),
         "demoTextFieldHidePasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Hide password"),
-        "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
-            "Keep it short, this is just a demo."),
-        "demoTextFieldLifeStory":
-            MessageLookupByLibrary.simpleMessage("Life story"),
-        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
-        "demoTextFieldNameHasPhoneNumber": m3,
+            MessageLookupByLibrary.simpleMessage("パスワードを隠す"),
+        "demoTextFieldKeepItShort":
+            MessageLookupByLibrary.simpleMessage("簡単にご記入ください。これはデモです。"),
+        "demoTextFieldLifeStory": MessageLookupByLibrary.simpleMessage("略歴"),
+        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("名前*"),
+        "demoTextFieldNameHasPhoneNumber": m6,
         "demoTextFieldNameRequired":
-            MessageLookupByLibrary.simpleMessage("Name is required."),
+            MessageLookupByLibrary.simpleMessage("名前は必須です。"),
         "demoTextFieldNoMoreThan":
-            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+            MessageLookupByLibrary.simpleMessage("8 文字以内で入力してください。"),
         "demoTextFieldOnlyAlphabeticalChars":
-            MessageLookupByLibrary.simpleMessage(
-                "Please enter only alphabetical characters."),
-        "demoTextFieldPassword":
-            MessageLookupByLibrary.simpleMessage("Password*"),
+            MessageLookupByLibrary.simpleMessage("使用できるのは英字のみです。"),
+        "demoTextFieldPassword": MessageLookupByLibrary.simpleMessage("パスワード*"),
         "demoTextFieldPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+            MessageLookupByLibrary.simpleMessage("パスワードが一致しません"),
         "demoTextFieldPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("Phone number*"),
+            MessageLookupByLibrary.simpleMessage("電話番号*"),
         "demoTextFieldRequiredField":
-            MessageLookupByLibrary.simpleMessage("* indicates required field"),
+            MessageLookupByLibrary.simpleMessage("* は必須項目です"),
         "demoTextFieldRetypePassword":
-            MessageLookupByLibrary.simpleMessage("Re-type password*"),
-        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+            MessageLookupByLibrary.simpleMessage("パスワードを再入力*"),
+        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("給与"),
         "demoTextFieldShowPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Show password"),
-        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
-        "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Single line of editable text and numbers"),
-        "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
-        "demoTextFieldTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("パスワードを表示"),
+        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("送信"),
+        "demoTextFieldSubtitle":
+            MessageLookupByLibrary.simpleMessage("1 行（編集可能な文字と数字）"),
+        "demoTextFieldTellUsAboutYourself":
+            MessageLookupByLibrary.simpleMessage("自己紹介をご記入ください（仕事、趣味など）"),
+        "demoTextFieldTitle": MessageLookupByLibrary.simpleMessage("テキスト欄"),
         "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
         "demoTextFieldWhatDoPeopleCallYou":
-            MessageLookupByLibrary.simpleMessage("What do people call you?"),
+            MessageLookupByLibrary.simpleMessage("名前を入力してください"),
         "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
+            MessageLookupByLibrary.simpleMessage("電話番号を入力してください"),
         "demoTextFieldYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("Your email address"),
+            MessageLookupByLibrary.simpleMessage("メールアドレス"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "切り替えボタンでは、関連するオプションを 1 つのグループにまとめることができます。関連する切り替えボタンのグループを強調するには、グループが共通コンテナを共有する必要があります"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("切り替えボタン"),
-        "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Definitions for the various typographical styles found in Material Design."),
-        "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined text styles"),
-        "demoTypographyTitle":
-            MessageLookupByLibrary.simpleMessage("Typography"),
+        "demoTypographyDescription":
+            MessageLookupByLibrary.simpleMessage("マテリアル デザインにあるさまざまな字体の定義です。"),
+        "demoTypographySubtitle":
+            MessageLookupByLibrary.simpleMessage("定義済みテキスト スタイルすべて"),
+        "demoTypographyTitle": MessageLookupByLibrary.simpleMessage("タイポグラフィ"),
         "dialogAddAccount": MessageLookupByLibrary.simpleMessage("アカウントを追加"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("同意する"),
         "dialogCancel": MessageLookupByLibrary.simpleMessage("キャンセル"),
@@ -290,7 +377,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Google を利用してアプリが位置情報を特定できるようにします。この場合、アプリが起動していなくても匿名の位置情報が Google に送信されます。"),
         "dialogLocationTitle":
             MessageLookupByLibrary.simpleMessage("Google の位置情報サービスを使用しますか？"),
-        "dialogSelectedOption": m4,
+        "dialogSelectedOption": m7,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("バックアップ アカウントの設定"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("ダイアログを表示"),
@@ -299,234 +386,226 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("カテゴリ"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("ギャラリー"),
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("Car Savings"),
-        "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Checking"),
+            MessageLookupByLibrary.simpleMessage("車の節約"),
+        "rallyAccountDataChecking": MessageLookupByLibrary.simpleMessage("当座"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("Home Savings"),
+            MessageLookupByLibrary.simpleMessage("家計の節約"),
         "rallyAccountDataVacation":
-            MessageLookupByLibrary.simpleMessage("Vacation"),
+            MessageLookupByLibrary.simpleMessage("バケーション"),
         "rallyAccountDetailDataAccountOwner":
-            MessageLookupByLibrary.simpleMessage("Account Owner"),
+            MessageLookupByLibrary.simpleMessage("口座所有者"),
         "rallyAccountDetailDataAnnualPercentageYield":
-            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+            MessageLookupByLibrary.simpleMessage("年利回り"),
         "rallyAccountDetailDataInterestPaidLastYear":
-            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+            MessageLookupByLibrary.simpleMessage("昨年の利息"),
         "rallyAccountDetailDataInterestRate":
-            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+            MessageLookupByLibrary.simpleMessage("利息の率"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+            MessageLookupByLibrary.simpleMessage("過去 1 年間の利息"),
         "rallyAccountDetailDataNextStatement":
-            MessageLookupByLibrary.simpleMessage("Next Statement"),
-        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
-        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
-        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m5,
-        "rallyAlertsMessageCheckingAccount": m6,
-        "rallyAlertsMessageHeadsUpShopping": m7,
-        "rallyAlertsMessageSpentOnRestaurants": m8,
-        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
-        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+            MessageLookupByLibrary.simpleMessage("次回の取引明細"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("合計"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("口座"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("アラート"),
+        "rallyAlertsMessageATMFees": m8,
+        "rallyAlertsMessageCheckingAccount": m9,
+        "rallyAlertsMessageHeadsUpShopping": m10,
+        "rallyAlertsMessageSpentOnRestaurants": m11,
+        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("請求"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("期限"),
         "rallyBudgetCategoryClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
+            MessageLookupByLibrary.simpleMessage("衣料品"),
         "rallyBudgetCategoryCoffeeShops":
-            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+            MessageLookupByLibrary.simpleMessage("カフェ"),
         "rallyBudgetCategoryGroceries":
-            MessageLookupByLibrary.simpleMessage("Groceries"),
+            MessageLookupByLibrary.simpleMessage("食料品"),
         "rallyBudgetCategoryRestaurants":
-            MessageLookupByLibrary.simpleMessage("Restaurants"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
-        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
-        "rallyDescription":
-            MessageLookupByLibrary.simpleMessage("A personal finance app"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
-        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
-        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+            MessageLookupByLibrary.simpleMessage("レストラン"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("残"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("予算"),
+        "rallyDescription": MessageLookupByLibrary.simpleMessage("資産管理アプリ"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("残"),
+        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("ログイン"),
+        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("ログイン"),
         "rallyLoginLoginToRally":
-            MessageLookupByLibrary.simpleMessage("Login to Rally"),
+            MessageLookupByLibrary.simpleMessage("Rally にログイン"),
         "rallyLoginNoAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("口座をお持ちですか？"),
+        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("パスワード"),
         "rallyLoginRememberMe":
-            MessageLookupByLibrary.simpleMessage("Remember Me"),
-        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
-        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
-        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+            MessageLookupByLibrary.simpleMessage("次回から入力を省略する"),
+        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("登録"),
+        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("ユーザー名"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("すべて表示"),
         "rallySettingsFindAtms":
-            MessageLookupByLibrary.simpleMessage("Find ATMs"),
-        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+            MessageLookupByLibrary.simpleMessage("ATM を探す"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("ヘルプ"),
         "rallySettingsManageAccounts":
-            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+            MessageLookupByLibrary.simpleMessage("口座を管理"),
         "rallySettingsNotifications":
-            MessageLookupByLibrary.simpleMessage("Notifications"),
+            MessageLookupByLibrary.simpleMessage("通知"),
         "rallySettingsPaperlessSettings":
-            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
+            MessageLookupByLibrary.simpleMessage("ペーパーレスの設定"),
         "rallySettingsPasscodeAndTouchId":
-            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+            MessageLookupByLibrary.simpleMessage("パスコードと Touch ID"),
         "rallySettingsPersonalInformation":
-            MessageLookupByLibrary.simpleMessage("Personal Information"),
-        "rallySettingsSignOut":
-            MessageLookupByLibrary.simpleMessage("Sign out"),
+            MessageLookupByLibrary.simpleMessage("個人情報"),
+        "rallySettingsSignOut": MessageLookupByLibrary.simpleMessage("ログアウト"),
         "rallySettingsTaxDocuments":
-            MessageLookupByLibrary.simpleMessage("Tax Documents"),
-        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
-        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
-        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
-        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
-        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
+            MessageLookupByLibrary.simpleMessage("税務書類"),
+        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("口座"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("請求"),
+        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("予算"),
+        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("概要"),
+        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("設定"),
         "settingsAbout":
-            MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
-        "settingsAttribution": MessageLookupByLibrary.simpleMessage(
-            "Designed by TOASTER in London"),
-        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
-        "settingsFeedback":
-            MessageLookupByLibrary.simpleMessage("Send feedback"),
-        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Light"),
-        "settingsLocale": MessageLookupByLibrary.simpleMessage("Locale"),
+            MessageLookupByLibrary.simpleMessage("Flutter ギャラリーについて"),
+        "settingsAttribution":
+            MessageLookupByLibrary.simpleMessage("デザイン: TOASTER（ロンドン）"),
+        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("ダーク"),
+        "settingsFeedback": MessageLookupByLibrary.simpleMessage("フィードバックを送信"),
+        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("ライト"),
+        "settingsLocale": MessageLookupByLibrary.simpleMessage("言語 / 地域"),
         "settingsPlatformAndroid":
             MessageLookupByLibrary.simpleMessage("Android"),
         "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
-            MessageLookupByLibrary.simpleMessage("Platform mechanics"),
-        "settingsSlowMotion":
-            MessageLookupByLibrary.simpleMessage("Slow motion"),
-        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
+            MessageLookupByLibrary.simpleMessage("プラットフォームのメカニクス"),
+        "settingsSlowMotion": MessageLookupByLibrary.simpleMessage("スロー モーション"),
+        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("システム"),
         "settingsTextDirection":
-            MessageLookupByLibrary.simpleMessage("Text direction"),
+            MessageLookupByLibrary.simpleMessage("テキストの向き"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
+        "settingsTextDirectionLocaleBased":
+            MessageLookupByLibrary.simpleMessage("Based on locale"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
-            MessageLookupByLibrary.simpleMessage("Text scaling"),
-        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
-        "settingsTextScalingLarge":
-            MessageLookupByLibrary.simpleMessage("Large"),
-        "settingsTextScalingNormal":
-            MessageLookupByLibrary.simpleMessage("Normal"),
-        "settingsTextScalingSmall":
-            MessageLookupByLibrary.simpleMessage("Small"),
-        "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("テキストの拡大縮小"),
+        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("極大"),
+        "settingsTextScalingLarge": MessageLookupByLibrary.simpleMessage("大"),
+        "settingsTextScalingNormal": MessageLookupByLibrary.simpleMessage("標準"),
+        "settingsTextScalingSmall": MessageLookupByLibrary.simpleMessage("小"),
+        "settingsTheme": MessageLookupByLibrary.simpleMessage("テーマ"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("設定"),
         "shrineCancelButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CANCEL"),
+            MessageLookupByLibrary.simpleMessage("キャンセル"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m9,
-        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+            MessageLookupByLibrary.simpleMessage("カートをクリア"),
+        "shrineCartItemCount": m13,
+        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("カート"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("Shipping:"),
+            MessageLookupByLibrary.simpleMessage("送料:"),
         "shrineCartSubtotalCaption":
-            MessageLookupByLibrary.simpleMessage("Subtotal:"),
-        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
-        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+            MessageLookupByLibrary.simpleMessage("小計:"),
+        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("税金:"),
+        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("合計"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("Accessories"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+            MessageLookupByLibrary.simpleMessage("アクセサリ"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("すべて"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
+            MessageLookupByLibrary.simpleMessage("ファッション"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("家"),
         "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+            MessageLookupByLibrary.simpleMessage("ファッショナブルなお店のアプリ"),
         "shrineLoginPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("パスワード"),
         "shrineLoginUsernameLabel":
-            MessageLookupByLibrary.simpleMessage("Username"),
+            MessageLookupByLibrary.simpleMessage("ユーザー名"),
         "shrineLogoutButtonCaption":
-            MessageLookupByLibrary.simpleMessage("LOGOUT"),
-        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
-        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+            MessageLookupByLibrary.simpleMessage("ログアウト"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("メニュー"),
+        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("次へ"),
         "shrineProductBlueStoneMug":
-            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
+            MessageLookupByLibrary.simpleMessage("ストーンマグ（ブルー）"),
         "shrineProductCeriseScallopTee":
-            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+            MessageLookupByLibrary.simpleMessage("T シャツ（セリーズ スカロップ）"),
         "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+            MessageLookupByLibrary.simpleMessage("シャンブレー ナプキン"),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+            MessageLookupByLibrary.simpleMessage("シャンブレー シャツ"),
         "shrineProductClassicWhiteCollar":
-            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+            MessageLookupByLibrary.simpleMessage("クラッシック ホワイトカラー シャツ"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+            MessageLookupByLibrary.simpleMessage("セーター（クレイ）"),
         "shrineProductCopperWireRack":
-            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+            MessageLookupByLibrary.simpleMessage("銅製ワイヤー ラック"),
         "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+            MessageLookupByLibrary.simpleMessage("T シャツ（ファイン ラインズ）"),
         "shrineProductGardenStrand":
-            MessageLookupByLibrary.simpleMessage("Garden strand"),
+            MessageLookupByLibrary.simpleMessage("ガーデン スタンド"),
         "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+            MessageLookupByLibrary.simpleMessage("ギャツビー ハット"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
+            MessageLookupByLibrary.simpleMessage("ジェントリー ジャケット"),
         "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+            MessageLookupByLibrary.simpleMessage("ギルト デスク トリオ"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+            MessageLookupByLibrary.simpleMessage("スカーフ（ジンジャー）"),
         "shrineProductGreySlouchTank":
-            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+            MessageLookupByLibrary.simpleMessage("スラウチタンク（グレー）"),
         "shrineProductHurrahsTeaSet":
-            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+            MessageLookupByLibrary.simpleMessage("フラーズ ティー セット"),
         "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
+            MessageLookupByLibrary.simpleMessage("キッチン クアトロ"),
         "shrineProductNavyTrousers":
-            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+            MessageLookupByLibrary.simpleMessage("ズボン（ネイビー）"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m10,
-        "shrineProductQuantity": m11,
+            MessageLookupByLibrary.simpleMessage("チュニック（パステル）"),
+        "shrineProductPrice": m14,
+        "shrineProductQuantity": m15,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Quartet table"),
+            MessageLookupByLibrary.simpleMessage("カルテット テーブル"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+            MessageLookupByLibrary.simpleMessage("レインウォーター トレイ"),
         "shrineProductRamonaCrossover":
-            MessageLookupByLibrary.simpleMessage("Ramona crossover"),
+            MessageLookupByLibrary.simpleMessage("ラモナ クロスオーバー"),
         "shrineProductSeaTunic":
-            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+            MessageLookupByLibrary.simpleMessage("シー タニック"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
+            MessageLookupByLibrary.simpleMessage("セーター（シーブリーズ）"),
         "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
+            MessageLookupByLibrary.simpleMessage("T シャツ（ショルダー ロール）"),
         "shrineProductShrugBag":
-            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+            MessageLookupByLibrary.simpleMessage("シュラグバッグ"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
+            MessageLookupByLibrary.simpleMessage("スーズ セラミック セット"),
         "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+            MessageLookupByLibrary.simpleMessage("ステラ サングラス"),
         "shrineProductStrutEarrings":
-            MessageLookupByLibrary.simpleMessage("Strut earrings"),
+            MessageLookupByLibrary.simpleMessage("ストラット イヤリング"),
         "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+            MessageLookupByLibrary.simpleMessage("サキュレント プランター"),
         "shrineProductSunshirtDress":
-            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+            MessageLookupByLibrary.simpleMessage("サンシャツ ドレス"),
         "shrineProductSurfAndPerfShirt":
-            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+            MessageLookupByLibrary.simpleMessage("サーフ アンド パーフ シャツ"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+            MessageLookupByLibrary.simpleMessage("バガボンド サック"),
         "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+            MessageLookupByLibrary.simpleMessage("ソックス（ヴァーシティ）"),
         "shrineProductWalterHenleyWhite":
-            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+            MessageLookupByLibrary.simpleMessage("ウォルター ヘンレイ（ホワイト）"),
         "shrineProductWeaveKeyring":
-            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+            MessageLookupByLibrary.simpleMessage("ウィーブ キーリング"),
         "shrineProductWhitePinstripeShirt":
-            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+            MessageLookupByLibrary.simpleMessage("ホワイト ピンストライプ シャツ"),
         "shrineProductWhitneyBelt":
-            MessageLookupByLibrary.simpleMessage("Whitney belt"),
+            MessageLookupByLibrary.simpleMessage("ホイットニー ベルト"),
         "starterAppDescription":
-            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m12,
-        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
-        "starterAppGenericButton":
-            MessageLookupByLibrary.simpleMessage("BUTTON"),
+            MessageLookupByLibrary.simpleMessage("レスポンシブ スターター レイアウト"),
+        "starterAppDrawerItem": m16,
+        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("本文"),
+        "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("ボタン"),
         "starterAppGenericHeadline":
-            MessageLookupByLibrary.simpleMessage("Headline"),
-        "starterAppGenericSubtitle":
-            MessageLookupByLibrary.simpleMessage("Subtitle"),
-        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
-        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
-        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("見出し"),
+        "starterAppGenericSubtitle": MessageLookupByLibrary.simpleMessage("字幕"),
+        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("タイトル"),
+        "starterAppTitle": MessageLookupByLibrary.simpleMessage("スターター アプリ"),
+        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("追加"),
         "starterAppTooltipFavorite":
-            MessageLookupByLibrary.simpleMessage("Favorite"),
-        "starterAppTooltipSearch":
-            MessageLookupByLibrary.simpleMessage("Search"),
-        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
+            MessageLookupByLibrary.simpleMessage("お気に入り"),
+        "starterAppTooltipSearch": MessageLookupByLibrary.simpleMessage("検索"),
+        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("共有")
       };
 }

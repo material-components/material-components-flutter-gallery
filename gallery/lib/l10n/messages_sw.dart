@@ -24,29 +24,42 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m1(title) => "Placeholder for ${title} tab";
 
-  static m2(value) => "Item ${value}";
+  static m2(totalRestaurants) =>
+      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
 
-  static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m3(numberOfStops) =>
+      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
 
-  static m4(value) => "Umechagua: \"${value}\"";
+  static m4(totalProperties) =>
+      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m5(value) => "Item ${value}";
 
-  static m6(percent) =>
+  static m6(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+
+  static m7(value) => "Umechagua: \"${value}\"";
+
+  static m8(amount) => "You’ve spent ${amount} in ATM fees this month";
+
+  static m9(percent) =>
       "Good work! Your checking account is ${percent} higher than last month.";
 
-  static m7(percent) =>
+  static m10(percent) =>
       "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
 
-  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m11(amount) => "You’ve spent ${amount} on Restaurants this week.";
 
-  static m9(quantity) => "${quantity} ITEMS";
+  static m12(count) =>
+      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m10(price) => "x ${price}";
+  static m13(quantity) =>
+      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m11(quantity) => "Quantity: ${quantity}";
+  static m14(price) => "x ${price}";
 
-  static m12(value) => "Item ${value}";
+  static m15(quantity) => "Quantity: ${quantity}";
+
+  static m16(value) => "Item ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -66,6 +79,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Fungua"),
+        "chipBiking":
+            MessageLookupByLibrary.simpleMessage("Kuendesha baiskeli"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Lifti"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Mekoni"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Kubwa"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Wastani"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Ndogo"),
+        "chipTurnOnLights": MessageLookupByLibrary.simpleMessage("Washa taa"),
+        "chipWasher":
+            MessageLookupByLibrary.simpleMessage("Mashine ya kufua nguo"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("KAHARABU"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("SAMAWATI"),
         "colorsBlueGrey":
@@ -94,6 +117,72 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsYellow": MessageLookupByLibrary.simpleMessage("MANJANO"),
         "craneDescription":
             MessageLookupByLibrary.simpleMessage("A personalized travel app"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("KULA"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italia"),
+        "craneEat1": MessageLookupByLibrary.simpleMessage("Dallas, Marekani"),
+        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Ureno"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Ajentina"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage("Portland, Marekani"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, Ufaransa"),
+        "craneEat5":
+            MessageLookupByLibrary.simpleMessage("Seoul, Korea Kusini"),
+        "craneEat6": MessageLookupByLibrary.simpleMessage("Seattle, Marekani"),
+        "craneEat7":
+            MessageLookupByLibrary.simpleMessage("Nashville, Marekani"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage("Atlanta, Marekani"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Uhispania"),
+        "craneEatRestaurants": m2,
+        "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
+            "Gundua Mikahawa kwa Kutumia Vituo"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("RUKA"),
+        "craneFly0": MessageLookupByLibrary.simpleMessage("Aspen, Marekani"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage("Big Sur, Marekani"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Kairo, Misri"),
+        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Ureno"),
+        "craneFly12": MessageLookupByLibrary.simpleMessage("Napa, Marekani"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+        "craneFly2":
+            MessageLookupByLibrary.simpleMessage("Bonde la Khumbu, NepalI"),
+        "craneFly3":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peruu"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Uswisi"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Uhispania"),
+        "craneFly7":
+            MessageLookupByLibrary.simpleMessage("Mount Rushmore, Marekani"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapoo"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneFlyStops": m3,
+        "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
+            "Gundua Ndege kwa Kutumia Vituo"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("Chagua Tarehe"),
+        "craneFormDates": MessageLookupByLibrary.simpleMessage("Chagua Tarehe"),
+        "craneFormDestination":
+            MessageLookupByLibrary.simpleMessage("Chagua Unakoenda"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Migahawa"),
+        "craneFormLocation":
+            MessageLookupByLibrary.simpleMessage("Chagua Eneo"),
+        "craneFormOrigin": MessageLookupByLibrary.simpleMessage("Chagua Asili"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("Chagua Wakati"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Wasafiri"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("HALI TULI"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneSleep1": MessageLookupByLibrary.simpleMessage("Aspen, Marekani"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Kairo, Misri"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwani"),
+        "craneSleep2":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peruu"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, Uswisi"),
+        "craneSleep5":
+            MessageLookupByLibrary.simpleMessage("Big Sur, Marekani"),
+        "craneSleep6": MessageLookupByLibrary.simpleMessage("Napa, Marekani"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Ureno"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Meksiko"),
+        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Ureno"),
+        "craneSleepProperties": m4,
+        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
+            "Gundua Mali kwa Kutumia Vituo"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("Ruhusu"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("Mkate wa Tufaha"),
@@ -120,6 +209,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Na Mandharinyuma"),
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Onyesha Arifa"),
+        "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Chipu za kutenda ni seti ya chaguo zinazosababisha kitendo kinachohusiana na maudhui ya msingi. Chipu za kutenda zinafaa kuonekana kwa urahisi na kwa utaratibu katika kiolesura."),
+        "demoActionChipTitle":
+            MessageLookupByLibrary.simpleMessage("Chipu ya Kutenda"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Kidirisha cha arifa humjulisha mtumiaji kuhusu hali zinazohitaji uthibitisho. Kidirisha cha arifa kina kichwa kisicho cha lazima na orodha isiyo ya lazima ya vitendo."),
         "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("Arifa"),
@@ -139,7 +232,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoBottomSheetButtonText":
             MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
         "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
-        "demoBottomSheetItem": m2,
+        "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
             "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
         "demoBottomSheetModalTitle":
@@ -158,6 +251,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "Bapa, iliyoinuliwa, mpaka wa mstari na zaidi"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Vitufe"),
+        "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Vipengee vilivyoshikamana vinavyowakilisha ingizo, sifa au kitendo"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chipu"),
+        "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Chipu za kuchagua zinawakilisha chaguo moja kwenye seti. Chipu za kuchagua zina aina au maandishi ya ufafanuzi yanayohusiana."),
+        "demoChoiceChipTitle":
+            MessageLookupByLibrary.simpleMessage("Chipu ya Kuchagua"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Sampuli ya Msimbo"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
@@ -189,11 +289,22 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Vitufe vya muundo wa iOS"),
         "demoCupertinoButtonsTitle":
             MessageLookupByLibrary.simpleMessage("Buttons"),
+        "demoCupertinoSegmentedControlDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+        "demoCupertinoSegmentedControlSubtitle":
+            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+        "demoCupertinoSegmentedControlTitle":
+            MessageLookupByLibrary.simpleMessage("Segmented Control"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Rahisi, arifa na skrini nzima"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Vidirisha"),
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("Uwekaji hati wa API"),
+        "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Chipu za kuchuja hutumia lebo au maneno ya ufafanuzi kama mbinu ya kuchuja maudhui."),
+        "demoFilterChipTitle":
+            MessageLookupByLibrary.simpleMessage("Chipu ya Kichujio"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Kitufe bapa huonyesha madoadoa ya wino wakati wa kubonyeza lakini hakiinuki. Tumia vitufe bapa kwenye upau wa vidhibiti, katika vidirisha na kulingana na maandishi yenye nafasi"),
         "demoFlatButtonTitle":
@@ -209,6 +320,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoFullscreenTooltip":
             MessageLookupByLibrary.simpleMessage("Full Screen"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Maelezo"),
+        "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
+            "Chipu za kuingiza huwakilisha taarifa ya kina, kama vile huluki (mtu, mahali au kitu) au maandishi ya mazungumzo katika muundo wa kushikamana."),
+        "demoInputChipTitle":
+            MessageLookupByLibrary.simpleMessage("Chipu ya Kuingiza"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("Imeshindwa kuonyesha URL:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Chaguo"),
@@ -239,7 +354,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Life story"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
-        "demoTextFieldNameHasPhoneNumber": m3,
+        "demoTextFieldNameHasPhoneNumber": m6,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Name is required."),
         "demoTextFieldNoMoreThan":
@@ -301,7 +416,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ruhusu Google isaidie programu kutambua mahali. Hii inamaanisha kutuma data isiyokutambulisha kwa Google, hata wakati hakuna programu zinazotumika."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Ungependa kutumia huduma ya mahali ya Google?"),
-        "dialogSelectedOption": m4,
+        "dialogSelectedOption": m7,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "Weka akaunti ya kuhifadhi nakala"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("ONYESHA KIDIRISHA"),
@@ -332,10 +447,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m5,
-        "rallyAlertsMessageCheckingAccount": m6,
-        "rallyAlertsMessageHeadsUpShopping": m7,
-        "rallyAlertsMessageSpentOnRestaurants": m8,
+        "rallyAlertsMessageATMFees": m8,
+        "rallyAlertsMessageCheckingAccount": m9,
+        "rallyAlertsMessageHeadsUpShopping": m10,
+        "rallyAlertsMessageSpentOnRestaurants": m11,
+        "rallyAlertsMessageUnassignedTransactions": m12,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
         "rallyBudgetCategoryClothing":
@@ -405,6 +521,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirection":
             MessageLookupByLibrary.simpleMessage("Text direction"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
+        "settingsTextDirectionLocaleBased":
+            MessageLookupByLibrary.simpleMessage("Based on locale"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("Text scaling"),
@@ -421,7 +539,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("CANCEL"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m9,
+        "shrineCartItemCount": m13,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Shipping:"),
@@ -430,11 +548,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
         "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("Accessories"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+            MessageLookupByLibrary.simpleMessage("VIFUASI"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ZOTE"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
+            MessageLookupByLibrary.simpleMessage("MAVAZI"),
+        "shrineCategoryNameHome":
+            MessageLookupByLibrary.simpleMessage("NYUMBANI"),
         "shrineDescription":
             MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
         "shrineLoginPasswordLabel":
@@ -481,8 +600,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Navy trousers"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m10,
-        "shrineProductQuantity": m11,
+        "shrineProductPrice": m14,
+        "shrineProductQuantity": m15,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Quartet table"),
         "shrineProductRainwaterTray":
@@ -523,7 +642,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m12,
+        "starterAppDrawerItem": m16,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("BUTTON"),

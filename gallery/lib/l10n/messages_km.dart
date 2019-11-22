@@ -20,52 +20,75 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'km';
 
   static m0(value) =>
-      "To see the source code for this app, please visit the ${value}.";
+      "ដើម្បីមើលកូដប្រភព​សម្រាប់​កម្មវិធីនេះ សូមចូល​ទៅកាន់ ${value}។";
 
-  static m1(title) => "Placeholder for ${title} tab";
+  static m1(title) => "កន្លែងដាក់​សម្រាប់ផ្ទាំង ${title}";
 
-  static m2(value) => "Item ${value}";
+  static m2(totalRestaurants) =>
+      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
 
-  static m3(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m3(numberOfStops) =>
+      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
 
-  static m4(value) => "អ្នកបាន​ជ្រើសរើស៖ \"${value}\"";
+  static m4(totalProperties) =>
+      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m5(value) => "ធាតុ ${value}";
 
-  static m6(percent) =>
-      "Good work! Your checking account is ${percent} higher than last month.";
+  static m6(name, phoneNumber) => "លេខទូរសព្ទ​របស់ ${name} គឺ ${phoneNumber}";
 
-  static m7(percent) =>
-      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+  static m7(value) => "អ្នកបាន​ជ្រើសរើស៖ \"${value}\"";
 
-  static m8(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m8(amount) => "អ្នកបានចំណាយ​អស់ ${amount} សម្រាប់ថ្លៃសេវា ATM នៅខែនេះ";
 
-  static m9(quantity) => "${quantity} ITEMS";
+  static m9(percent) =>
+      "ល្អណាស់! គណនីមូលប្បទានបត្រ​របស់អ្នកគឺ​ខ្ពស់ជាង​ខែមុន ${percent}។";
 
-  static m10(price) => "x ${price}";
+  static m10(percent) =>
+      "សូមប្រុងប្រយ័ត្ន អ្នកបានប្រើអស់ ${percent} នៃថវិកាទិញ​ទំនិញរបស់អ្នក​សម្រាប់ខែនេះ។";
 
-  static m11(quantity) => "Quantity: ${quantity}";
+  static m11(amount) =>
+      "អ្នកបាន​ចំណាយអស់ ${amount} លើភោជនីយដ្ឋាន​នៅសប្ដាហ៍នេះ។";
 
-  static m12(value) => "Item ${value}";
+  static m12(count) =>
+      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+
+  static m13(quantity) =>
+      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+
+  static m14(price) => "x ${price}";
+
+  static m15(quantity) => "បរិមាណ៖ ${quantity}";
+
+  static m16(value) => "ធាតុ ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "aboutDialogDescription": m0,
-        "aboutFlutterSamplesRepo":
-            MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
+        "aboutFlutterSamplesRepo": MessageLookupByLibrary.simpleMessage(
+            "ឃ្លាំង Github នៃគំរូ Flutter"),
         "bottomNavigationAccountTab":
-            MessageLookupByLibrary.simpleMessage("Account"),
+            MessageLookupByLibrary.simpleMessage("គណនី"),
         "bottomNavigationAlarmTab":
-            MessageLookupByLibrary.simpleMessage("Alarm"),
+            MessageLookupByLibrary.simpleMessage("ម៉ោងរោទ៍"),
         "bottomNavigationCalendarTab":
-            MessageLookupByLibrary.simpleMessage("Calendar"),
+            MessageLookupByLibrary.simpleMessage("ប្រតិទិន"),
         "bottomNavigationCameraTab":
-            MessageLookupByLibrary.simpleMessage("Camera"),
+            MessageLookupByLibrary.simpleMessage("កាមេរ៉ា"),
         "bottomNavigationCommentsTab":
-            MessageLookupByLibrary.simpleMessage("Comments"),
+            MessageLookupByLibrary.simpleMessage("មតិ"),
         "bottomNavigationContentPlaceholder": m1,
-        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "buttonText": MessageLookupByLibrary.simpleMessage("ប៊ូតុង"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("បង្កើត"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("ការ​ជិះ​កង់"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("ជណ្ដើរ​យន្ត"),
+        "chipFireplace":
+            MessageLookupByLibrary.simpleMessage("ជើងក្រាន​កម្ដៅ​បន្ទប់"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("ធំ"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("មធ្យម"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("តូច"),
+        "chipTurnOnLights": MessageLookupByLibrary.simpleMessage("បើក​ភ្លើង"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("ម៉ាស៊ីន​បោកគក់"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("លឿងទុំ"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("ខៀវ"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("ប្រផេះ​ខៀវ"),
@@ -86,8 +109,91 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsRed": MessageLookupByLibrary.simpleMessage("ក្រហម"),
         "colorsTeal": MessageLookupByLibrary.simpleMessage("បៃតងចាស់"),
         "colorsYellow": MessageLookupByLibrary.simpleMessage("លឿង"),
-        "craneDescription":
-            MessageLookupByLibrary.simpleMessage("A personalized travel app"),
+        "craneDescription": MessageLookupByLibrary.simpleMessage(
+            "កម្មវិធីធ្វើដំណើរ​ដែលកំណត់ឱ្យស្រប​នឹងបុគ្គល"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("អាហារដ្ឋាន"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("នេផលស៍ អ៊ីតាលី"),
+        "craneEat1":
+            MessageLookupByLibrary.simpleMessage("ដាឡាស សហរដ្ឋ​អាមេរិក"),
+        "craneEat10":
+            MessageLookupByLibrary.simpleMessage("លីសបោន ព័រទុយហ្គាល់"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("ខរដូបា អាហ្សង់ទីន"),
+        "craneEat3":
+            MessageLookupByLibrary.simpleMessage("ផតឡែន សហរដ្ឋ​អាមេរិក"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("ប៉ារីស បារាំង"),
+        "craneEat5":
+            MessageLookupByLibrary.simpleMessage("សេអ៊ូល កូរ៉េ​ខាងត្បូង"),
+        "craneEat6":
+            MessageLookupByLibrary.simpleMessage("ស៊ីអាថល សហរដ្ឋ​អាមេរិក"),
+        "craneEat7":
+            MessageLookupByLibrary.simpleMessage("ណាសវីល សហរដ្ឋ​អាមេរិក"),
+        "craneEat8":
+            MessageLookupByLibrary.simpleMessage("អាត្លង់តា សហរដ្ឋ​អាមេរិក"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("ម៉ាឌ្រីដ អេស្ប៉ាញ"),
+        "craneEatRestaurants": m2,
+        "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
+            "ស្វែងរក​ភោជនីយ​ដ្ឋាន​តាម​គោលដៅ"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("ជើង​ហោះ​ហើរ"),
+        "craneFly0":
+            MessageLookupByLibrary.simpleMessage("អាស្ប៉ិន សហរដ្ឋ​អាមេរិក"),
+        "craneFly1":
+            MessageLookupByLibrary.simpleMessage("ប៊ីកសឺ សហរដ្ឋ​អាមេរិក"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("គែរ អេហ្ស៊ីប"),
+        "craneFly11":
+            MessageLookupByLibrary.simpleMessage("លីសបោន ព័រទុយហ្គាល់"),
+        "craneFly12":
+            MessageLookupByLibrary.simpleMessage("ណាប៉ា សហរដ្ឋ​អាមេរិក"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("បាលី ឥណ្ឌូណេស៊ី"),
+        "craneFly2":
+            MessageLookupByLibrary.simpleMessage("ជ្រលង​ខាំប៊្យូ នេប៉ាល់"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("ម៉ាឈូភីឈូ ប៉េរូ"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("ម៉ាល ម៉ាល់ឌីវ"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("វីតស្នោវ ស្វ៊ីស"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("ម៉ាឌ្រីដ អេស្ប៉ាញ"),
+        "craneFly7": MessageLookupByLibrary.simpleMessage(
+            "ភ្នំ​រ៉ាស្សម៉រ សហរដ្ឋ​អាមេរិក"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("សិង្ហបុរី"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("ឡាហាវ៉ាន គុយបា"),
+        "craneFlyStops": m3,
+        "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
+            "ស្វែងរក​ជើង​ហោះហើរ​តាម​គោលដៅ"),
+        "craneFormDate":
+            MessageLookupByLibrary.simpleMessage("ជ្រើសរើស​កាល​បរិច្ឆេទ"),
+        "craneFormDates":
+            MessageLookupByLibrary.simpleMessage("ជ្រើសរើស​កាល​បរិច្ឆេទ"),
+        "craneFormDestination":
+            MessageLookupByLibrary.simpleMessage("ជ្រើសរើស​គោលដៅ"),
+        "craneFormDiners":
+            MessageLookupByLibrary.simpleMessage("អ្នក​ទទួលទាន​អាហារ​ពេលល្ងាច"),
+        "craneFormLocation":
+            MessageLookupByLibrary.simpleMessage("ជ្រើស​រើសទីតាំង"),
+        "craneFormOrigin":
+            MessageLookupByLibrary.simpleMessage("ជ្រើសរើស​ប្រភពដើម"),
+        "craneFormTime":
+            MessageLookupByLibrary.simpleMessage("ជ្រើសរើស​ពេលវេលា"),
+        "craneFormTravelers":
+            MessageLookupByLibrary.simpleMessage("អ្នក​ធ្វើ​ដំណើរ"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("កន្លែង​គេង"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("ម៉ាល ម៉ាល់ឌីវ"),
+        "craneSleep1":
+            MessageLookupByLibrary.simpleMessage("អាស្ប៉ិន សហរដ្ឋ​អាមេរិក"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("គែរ អេហ្ស៊ីប"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("តៃប៉ិ តៃវ៉ាន់"),
+        "craneSleep2": MessageLookupByLibrary.simpleMessage("ម៉ាឈូភីឈូ ប៉េរូ"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("ឡាហាវ៉ាន គុយបា"),
+        "craneSleep4": MessageLookupByLibrary.simpleMessage("វីតស្នោវ ស្វ៊ីស"),
+        "craneSleep5":
+            MessageLookupByLibrary.simpleMessage("ប៊ីកសឺ សហរដ្ឋ​អាមេរិក"),
+        "craneSleep6":
+            MessageLookupByLibrary.simpleMessage("ណាប៉ា សហរដ្ឋ​អាមេរិក"),
+        "craneSleep7":
+            MessageLookupByLibrary.simpleMessage("ព័រតូ ព័រទុយហ្គាល់"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("ទូលូម ម៉ិកស៊ិក"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("លីសបោន ព័រទុយហ្គាល់"),
+        "craneSleepProperties": m4,
+        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
+            "ស្វែងរក​អចលន​ទ្រព្យ​តាម​គោលដៅ"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("អនុញ្ញាត"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("នំ​ប៉ោម"),
@@ -109,11 +215,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "អនុញ្ញាតឱ្យ \"ផែនទី\" ចូលប្រើ​ទីតាំង​របស់អ្នក នៅពេល​អ្នកកំពុង​ប្រើកម្មវិធីនេះ​ឬ?"),
         "cupertinoAlertTiramisu":
             MessageLookupByLibrary.simpleMessage("បង្អែម​អ៊ីតាលី"),
-        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("ប៊ូតុង"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("មាន​ផ្ទៃខាងក្រោយ"),
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("បង្ហាញ​ការជូនដំណឹង"),
+        "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
+            "ឈីប​សកម្មភាព​គឺជា​បណ្ដុំ​ជម្រើស ដែល​ជំរុញ​សកម្មភាព​ពាក់ព័ន្ធ​នឹង​ខ្លឹមសារ​ចម្បង​។ ឈីប​សកម្មភាព​គួរតែ​បង្ហាញ​ជា​បន្តបន្ទាប់ និង​តាម​បរិបទ​នៅក្នុង UI​។"),
+        "demoActionChipTitle":
+            MessageLookupByLibrary.simpleMessage("ឈីប​សកម្មភាព"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "ប្រអប់​ជូនដំណឹង​ជូនដំណឹង​ដល់អ្នកប្រើប្រាស់​អំពី​ស្ថានភាព ដែលតម្រូវឱ្យមាន​ការទទួលស្គាល់។ ប្រអប់​ជូនដំណឹង​មានចំណងជើង និង​បញ្ជី​សកម្មភាព​ដែលជាជម្រើស។"),
         "demoAlertDialogTitle":
@@ -121,41 +231,50 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("ជូនដំណឹង​រួមជាមួយ​ចំណងជើង"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
+            "របាររុករក​ខាងក្រោម​បង្ហាញគោលដៅបីទៅប្រាំ​នៅខាងក្រោម​អេក្រង់។ គោលដៅនីមួយៗ​ត្រូវបានតំណាង​ដោយរូបតំណាង និងស្លាកអក្សរ​ជាជម្រើស។ នៅពេលចុច​រូបរុករកខាងក្រោម អ្នកប្រើប្រាស់ត្រូវបាន​នាំទៅគោលដៅ​រុករកផ្នែកខាងលើ ដែលពាក់ព័ន្ធ​នឹងរូបតំណាងនោះ។"),
         "demoBottomNavigationPersistentLabels":
-            MessageLookupByLibrary.simpleMessage("Persistent labels"),
+            MessageLookupByLibrary.simpleMessage("ស្លាក​ជាអចិន្ត្រៃយ៍"),
         "demoBottomNavigationSelectedLabel":
-            MessageLookupByLibrary.simpleMessage("Selected label"),
+            MessageLookupByLibrary.simpleMessage("ស្លាកដែល​បានជ្រើសរើស"),
         "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation with cross-fading views"),
+            "ការរុករក​ខាងក្រោម​ដោយប្រើទិដ្ឋភាពរលុបឆ្នូត"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom navigation"),
-        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("ការរុករក​ខាងក្រោម"),
+        "demoBottomSheetAddLabel":
+            MessageLookupByLibrary.simpleMessage("បន្ថែម"),
         "demoBottomSheetButtonText":
-            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
-        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
-        "demoBottomSheetItem": m2,
+            MessageLookupByLibrary.simpleMessage("បង្ហាញ​សន្លឹកខាងក្រោម"),
+        "demoBottomSheetHeader":
+            MessageLookupByLibrary.simpleMessage("ក្បាលទំព័រ"),
+        "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
+            "សន្លឹកខាងក្រោម​លក្ខណៈម៉ូដលគឺ​ជាជម្រើស​សម្រាប់ម៉ឺនុយ ឬប្រអប់ និងទប់ស្កាត់​អ្នកប្រើប្រាស់មិនឱ្យធ្វើ​អន្តរកម្មជាមួយ​កម្មវិធីដែលនៅសល់។"),
         "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("សន្លឹកខាងក្រោម​លក្ខណៈម៉ូដល"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
-        "demoBottomSheetPersistentTitle":
-            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
+                "សន្លឹកខាងក្រោម​លក្ខណៈអចិន្ត្រៃយ៍​បង្ហាញព័ត៌មាន​ដែលបន្ថែមលើ​ខ្លឹមសារចម្បងនៃកម្មវិធី។ សន្លឹកខាងក្រោម​លក្ខណៈអចិន្ត្រៃយ៍​នៅតែអាចមើលឃើញ​ដដែល ទោះបីជានៅពេលអ្នកប្រើប្រាស់​ធ្វើអន្តរកម្ម​ជាមួយផ្នែកផ្សេងទៀតនៃ​កម្មវិធីក៏ដោយ។"),
+        "demoBottomSheetPersistentTitle": MessageLookupByLibrary.simpleMessage(
+            "សន្លឹកខាងក្រោម​លក្ខណៈអចិន្ត្រៃយ៍"),
         "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Persistent and modal bottom sheets"),
+            "សន្លឹកខាងក្រោម​លក្ខណៈម៉ូដល និងអចិន្ត្រៃយ៍"),
         "demoBottomSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("សន្លឹក​ខាងក្រោម"),
         "demoBottomTextFieldsTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("កន្លែងបញ្ចូលអក្សរ"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "ប៊ូតុង​រាបស្មើ ប៊ូតុង​ផុសឡើង ប៊ូតុង​មានបន្ទាត់ជុំវិញ និង​ច្រើនទៀត"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("ប៊ូតុង"),
+        "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
+            "ធាតុ​តូចៗ​ដែល​តំណាងឱ្យ​ធាតុ​បញ្ចូល លក្ខណៈ ឬ​សកម្មភាព"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("ឈីប"),
+        "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
+            "ឈីប​ជម្រើស​តំណាងឱ្យ​ជម្រើស​តែមួយ​ពី​បណ្ដុំ​មួយ​។ ឈីប​ជម្រើស​មាន​ប្រភេទ ឬ​អត្ថបទ​បែប​ពណ៌នា​ដែល​ពាក់ព័ន្ធ​។"),
+        "demoChoiceChipTitle":
+            MessageLookupByLibrary.simpleMessage("ឈីប​ជម្រើស"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("គំរូកូដ"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "Color and color swatch constants which represent Material Design\'s color palette."),
+            "តម្លៃថេរនៃ​គំរូពណ៌ និងពណ៌​ដែលតំណាងឱ្យ​ក្ដារលាយពណ៌​របស់​រចនាប័ទ្ម​សម្ភារ។"),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
             "ពណ៌ដែល​បានកំណត់​ជាមុន​ទាំងអស់"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("ពណ៌"),
@@ -170,9 +289,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
             "ប្រអប់​ជូនដំណឹង​ជូនដំណឹង​ដល់អ្នកប្រើប្រាស់​អំពី​ស្ថានភាព ដែលតម្រូវឱ្យមាន​ការទទួលស្គាល់។ ប្រអប់​ជូនដំណឹង​មានចំណងជើង ខ្លឹមសារ និងបញ្ជី​សកម្មភាព​ដែលជាជម្រើស។ ចំណងជើង​បង្ហាញ​នៅលើ​ខ្លឹមសារ ហើយ​សកម្មភាព​បង្ហាញនៅក្រោម​ខ្លឹមសារ។"),
         "demoCupertinoAlertTitle":
-            MessageLookupByLibrary.simpleMessage("Alert"),
+            MessageLookupByLibrary.simpleMessage("ការជូនដំណឹង"),
         "demoCupertinoAlertWithTitleTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage("ជូនដំណឹង​រួមជាមួយ​ចំណងជើង"),
         "demoCupertinoAlertsSubtitle": MessageLookupByLibrary.simpleMessage(
             "ប្រអប់​ជូនដំណឹង​ដែលមាន​រចនាប័ទ្ម iOS"),
         "demoCupertinoAlertsTitle":
@@ -182,12 +301,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("ប៊ូតុង​ដែលមាន​រចនាប័ទ្ម iOS"),
         "demoCupertinoButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Buttons"),
+            MessageLookupByLibrary.simpleMessage("ប៊ូតុង"),
+        "demoCupertinoSegmentedControlDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+        "demoCupertinoSegmentedControlSubtitle":
+            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+        "demoCupertinoSegmentedControlTitle":
+            MessageLookupByLibrary.simpleMessage("Segmented Control"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "ធម្មតា ការជូនដំណឹង និងពេញ​អេក្រង់"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("ប្រអប់"),
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("ឯកសារ API"),
+        "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
+            "ឈីប​តម្រង​ប្រើ​ស្លាក ឬ​ពាក្យ​បែប​ពណ៌នា​ជា​វិធី​ក្នុងការ​ត្រង​ខ្លឹមសារ​។"),
+        "demoFilterChipTitle":
+            MessageLookupByLibrary.simpleMessage("ឈីប​តម្រង"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "ប៊ូតុង​រាបស្មើ​បង្ហាញការសាចពណ៌​នៅពេលចុច ប៉ុន្តែ​មិនផុសឡើង​ទេ។ ប្រើប៊ូតុង​រាបស្មើ​នៅលើ​របារឧបករណ៍ នៅក្នុង​ប្រអប់ និង​ក្នុងជួរ​ជាមួយ​ចន្លោះ"),
         "demoFlatButtonTitle":
@@ -201,8 +331,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoFullscreenDialogTitle":
             MessageLookupByLibrary.simpleMessage("ពេញ​អេក្រង់"),
         "demoFullscreenTooltip":
-            MessageLookupByLibrary.simpleMessage("Full Screen"),
+            MessageLookupByLibrary.simpleMessage("អេក្រង់ពេញ"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("ព័ត៌មាន"),
+        "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
+            "ឈីប​ធាតុបញ្ចូល​តំណាងឱ្យ​ព័ត៌មាន​ដែល​ទាក់ទង​គ្នា ដូចជា​ស្ថាប័ន (មនុស្ស ទីកន្លែង ឬ​វត្ថុ) ឬ​អត្ថបទ​សន្ទនា ជា​ទម្រង់​ដែលមាន​ទំហំ​តូច​។"),
+        "demoInputChipTitle":
+            MessageLookupByLibrary.simpleMessage("ឈីប​ធាតុ​បញ្ចូល"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("មិនអាច​បង្ហាញ URL បានទេ៖"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("ជម្រើស"),
@@ -218,66 +352,70 @@ class MessageLookup extends MessageLookupByLibrary {
             "ប្រអប់ធម្មតា​ផ្ដល់ជូន​អ្នកប្រើប្រាស់​នូវជម្រើសមួយ​រវាង​ជម្រើស​មួយចំនួន។ ប្រអប់ធម្មតា​មាន​ចំណងជើង​ដែលជាជម្រើស ដែល​បង្ហាញនៅលើ​ជម្រើស។"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("ធម្មតា"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
-        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
+            "កន្លែងបញ្ចូលអក្សរ​អាចឱ្យអ្នកប្រើប្រាស់​បញ្ចូលអក្សរ​ទៅក្នុង UI។ ជាទូទៅ វាបង្ហាញ​ជាទម្រង់បែបបទ និងប្រអប់បញ្ចូល។"),
+        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("អ៊ីមែល"),
         "demoTextFieldEnterPassword":
-            MessageLookupByLibrary.simpleMessage("Please enter a password."),
+            MessageLookupByLibrary.simpleMessage("សូម​បញ្ចូល​ពាក្យ​សម្ងាត់​។"),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### - Enter a US phone number."),
+            "(###) ###-#### - បញ្ចូលលេខទូរសព្ទ​សហរដ្ឋអាមេរិក។"),
         "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
-            "Please fix the errors in red before submitting."),
+            "សូមដោះស្រាយ​បញ្ហាពណ៌ក្រហម មុនពេលដាក់​បញ្ជូន។"),
         "demoTextFieldHidePasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Hide password"),
+            MessageLookupByLibrary.simpleMessage("លាក់​ពាក្យ​សម្ងាត់"),
         "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
-            "Keep it short, this is just a demo."),
+            "សរសេរវាឱ្យខ្លី នេះគ្រាន់តែជា​ការសាកល្បងប៉ុណ្ណោះ។"),
         "demoTextFieldLifeStory":
-            MessageLookupByLibrary.simpleMessage("Life story"),
-        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
-        "demoTextFieldNameHasPhoneNumber": m3,
+            MessageLookupByLibrary.simpleMessage("រឿងរ៉ាវជីវិត"),
+        "demoTextFieldNameField":
+            MessageLookupByLibrary.simpleMessage("ឈ្មោះ*"),
+        "demoTextFieldNameHasPhoneNumber": m6,
         "demoTextFieldNameRequired":
-            MessageLookupByLibrary.simpleMessage("Name is required."),
+            MessageLookupByLibrary.simpleMessage("តម្រូវ​ឱ្យ​មាន​ឈ្មោះ។"),
         "demoTextFieldNoMoreThan":
-            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+            MessageLookupByLibrary.simpleMessage("មិនឱ្យ​លើសពី 8 តួអក្សរទេ។"),
         "demoTextFieldOnlyAlphabeticalChars":
             MessageLookupByLibrary.simpleMessage(
-                "Please enter only alphabetical characters."),
+                "សូមបញ្ចូលតួអក្សរ​តាមលំដាប់អក្ខរក្រម​តែប៉ុណ្ណោះ។"),
         "demoTextFieldPassword":
-            MessageLookupByLibrary.simpleMessage("Password*"),
+            MessageLookupByLibrary.simpleMessage("ពាក្យសម្ងាត់*"),
         "demoTextFieldPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+            MessageLookupByLibrary.simpleMessage("ពាក្យសម្ងាត់​មិនត្រូវគ្នាទេ"),
         "demoTextFieldPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("Phone number*"),
-        "demoTextFieldRequiredField":
-            MessageLookupByLibrary.simpleMessage("* indicates required field"),
-        "demoTextFieldRetypePassword":
-            MessageLookupByLibrary.simpleMessage("Re-type password*"),
-        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+            MessageLookupByLibrary.simpleMessage("លេខទូរសព្ទ*"),
+        "demoTextFieldRequiredField": MessageLookupByLibrary.simpleMessage(
+            "* បង្ហាញថាជាកន្លែងត្រូវបំពេញ"),
+        "demoTextFieldRetypePassword": MessageLookupByLibrary.simpleMessage(
+            "វាយបញ្ចូល​ពាក្យសម្ងាត់ឡើងវិញ*"),
+        "demoTextFieldSalary":
+            MessageLookupByLibrary.simpleMessage("ប្រាក់បៀវត្សរ៍"),
         "demoTextFieldShowPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Show password"),
-        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
+            MessageLookupByLibrary.simpleMessage("បង្ហាញពាក្យសម្ងាត់"),
+        "demoTextFieldSubmit":
+            MessageLookupByLibrary.simpleMessage("ដាក់​បញ្ជូន"),
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Single line of editable text and numbers"),
+            "បន្ទាត់តែមួយ​នៃអក្សរ និងលេខដែល​អាចកែបាន"),
         "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
+            "ប្រាប់យើង​អំពីខ្លួនអ្នក (ឧ. សរសេរអំពី​អ្វីដែលអ្នកធ្វើ ឬចំណូលចិត្តអ្វី​ដែលអ្នកមាន)"),
         "demoTextFieldTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
-        "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
+            MessageLookupByLibrary.simpleMessage("កន្លែងបញ្ចូលអក្សរ"),
+        "demoTextFieldUSD":
+            MessageLookupByLibrary.simpleMessage("ដុល្លារអាមេរិក"),
         "demoTextFieldWhatDoPeopleCallYou":
-            MessageLookupByLibrary.simpleMessage("What do people call you?"),
+            MessageLookupByLibrary.simpleMessage("តើអ្នកដទៃ​ហៅអ្នកថាម៉េច?"),
         "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
+            MessageLookupByLibrary.simpleMessage("តើយើងអាច​ទាក់ទងអ្នក​នៅទីណា?"),
         "demoTextFieldYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("Your email address"),
+            MessageLookupByLibrary.simpleMessage("អាសយដ្ឋាន​អ៊ីមែល​របស់អ្នក"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "អាចប្រើ​ប៊ូតុងបិទ/បើក ដើម្បី​ដាក់ជម្រើស​ដែលពាក់ព័ន្ធ​ជាក្រុមបាន។ ដើម្បីរំលេចក្រុមប៊ូតុងបិទ/បើកដែលពាក់ព័ន្ធ ក្រុមប៊ូតុងគួរតែប្រើទម្រង់ផ្ទុកទូទៅរួមគ្នា"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("ប៊ូតុងបិទ/បើក"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Definitions for the various typographical styles found in Material Design."),
+            "និយមន័យសម្រាប់​រចនាប័ទ្មនៃ​ការរចនាអក្សរ ដែលបានរកឃើញ​នៅក្នុងរចនាប័ទ្មសម្ភារ។"),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined text styles"),
+            "រចនាប័ទ្មអក្សរ​ដែលបានកំណត់​ជាមុនទាំងអស់"),
         "demoTypographyTitle":
-            MessageLookupByLibrary.simpleMessage("Typography"),
+            MessageLookupByLibrary.simpleMessage("ការរចនា​អក្សរ"),
         "dialogAddAccount": MessageLookupByLibrary.simpleMessage("បញ្ចូលគណនី"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("យល់ព្រម"),
         "dialogCancel": MessageLookupByLibrary.simpleMessage("បោះបង់"),
@@ -295,7 +433,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "ឱ្យ Google ជួយ​កម្មវិធី​ក្នុងការកំណត់​ទីតាំង។ មានន័យថា​ផ្ញើទិន្នន័យ​ទីតាំង​អនាមិក​ទៅ Google ទោះបីជា​មិនមាន​កម្មវិធី​កំពុងដំណើរការ​ក៏ដោយ។"),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "ប្រើ​សេវាកម្ម​ទីតាំង​របស់ Google?"),
-        "dialogSelectedOption": m4,
+        "dialogSelectedOption": m7,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("កំណត់​គណនី​បម្រុង​ទុក"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("បង្ហាញ​ប្រអប់"),
@@ -304,234 +442,248 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("ប្រភេទ"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("សាល​រូបភាព"),
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("Car Savings"),
+            MessageLookupByLibrary.simpleMessage("គណនី​សន្សំទិញរថយន្ត"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Checking"),
+            MessageLookupByLibrary.simpleMessage("គណនីមូលប្បទានបត្រ"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("Home Savings"),
+            MessageLookupByLibrary.simpleMessage("គណនីសន្សំទិញផ្ទះ"),
         "rallyAccountDataVacation":
-            MessageLookupByLibrary.simpleMessage("Vacation"),
+            MessageLookupByLibrary.simpleMessage("វិស្សមកាល"),
         "rallyAccountDetailDataAccountOwner":
-            MessageLookupByLibrary.simpleMessage("Account Owner"),
+            MessageLookupByLibrary.simpleMessage("ម្ចាស់​គណនី"),
         "rallyAccountDetailDataAnnualPercentageYield":
-            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+            MessageLookupByLibrary.simpleMessage("ចំណូល​ជាភាគរយ​ប្រចាំឆ្នាំ"),
         "rallyAccountDetailDataInterestPaidLastYear":
-            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+            MessageLookupByLibrary.simpleMessage(
+                "ការប្រាក់ដែល​បានបង់ពីឆ្នាំមុន"),
         "rallyAccountDetailDataInterestRate":
-            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+            MessageLookupByLibrary.simpleMessage("អត្រា​ការប្រាក់"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+            MessageLookupByLibrary.simpleMessage("ការប្រាក់ YTD"),
         "rallyAccountDetailDataNextStatement":
-            MessageLookupByLibrary.simpleMessage("Next Statement"),
-        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
-        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
-        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m5,
-        "rallyAlertsMessageCheckingAccount": m6,
-        "rallyAlertsMessageHeadsUpShopping": m7,
-        "rallyAlertsMessageSpentOnRestaurants": m8,
-        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
-        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+            MessageLookupByLibrary.simpleMessage("របាយការណ៍​បន្ទាប់"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("សរុប"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("គណនី"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("ការជូនដំណឹង"),
+        "rallyAlertsMessageATMFees": m8,
+        "rallyAlertsMessageCheckingAccount": m9,
+        "rallyAlertsMessageHeadsUpShopping": m10,
+        "rallyAlertsMessageSpentOnRestaurants": m11,
+        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("វិក្កយបត្រ"),
+        "rallyBillsDue":
+            MessageLookupByLibrary.simpleMessage("រយៈពេល​ផុតកំណត់"),
         "rallyBudgetCategoryClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
+            MessageLookupByLibrary.simpleMessage("សម្លៀក​បំពាក់"),
         "rallyBudgetCategoryCoffeeShops":
-            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+            MessageLookupByLibrary.simpleMessage("ហាង​កាហ្វេ"),
         "rallyBudgetCategoryGroceries":
-            MessageLookupByLibrary.simpleMessage("Groceries"),
+            MessageLookupByLibrary.simpleMessage("គ្រឿងទេស"),
         "rallyBudgetCategoryRestaurants":
-            MessageLookupByLibrary.simpleMessage("Restaurants"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
-        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
-        "rallyDescription":
-            MessageLookupByLibrary.simpleMessage("A personal finance app"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
-        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
-        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+            MessageLookupByLibrary.simpleMessage("ភោជនីយដ្ឋាន"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("នៅសល់"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("ថវិកា"),
+        "rallyDescription": MessageLookupByLibrary.simpleMessage(
+            "កម្មវិធីហិរញ្ញវត្ថុ​ផ្ទាល់ខ្លួន"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("នៅសល់"),
+        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("ចូល"),
+        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("ចូល"),
         "rallyLoginLoginToRally":
-            MessageLookupByLibrary.simpleMessage("Login to Rally"),
+            MessageLookupByLibrary.simpleMessage("ចូលទៅ Rally"),
         "rallyLoginNoAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("មិន​មាន​គណនី​មែន​ទេ?"),
+        "rallyLoginPassword":
+            MessageLookupByLibrary.simpleMessage("ពាក្យសម្ងាត់"),
         "rallyLoginRememberMe":
-            MessageLookupByLibrary.simpleMessage("Remember Me"),
-        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
-        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
-        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+            MessageLookupByLibrary.simpleMessage("ចងចាំខ្ញុំ"),
+        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("ចុះឈ្មោះ"),
+        "rallyLoginUsername":
+            MessageLookupByLibrary.simpleMessage("ឈ្មោះអ្នក​ប្រើប្រាស់"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("មើល​ទាំងអស់​"),
         "rallySettingsFindAtms":
-            MessageLookupByLibrary.simpleMessage("Find ATMs"),
-        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+            MessageLookupByLibrary.simpleMessage("ស្វែងរក ATM"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("ជំនួយ"),
         "rallySettingsManageAccounts":
-            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+            MessageLookupByLibrary.simpleMessage("គ្រប់គ្រង​គណនី"),
         "rallySettingsNotifications":
-            MessageLookupByLibrary.simpleMessage("Notifications"),
+            MessageLookupByLibrary.simpleMessage("ការជូនដំណឹង"),
         "rallySettingsPaperlessSettings":
-            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
+            MessageLookupByLibrary.simpleMessage("ការកំណត់​មិនប្រើក្រដាស"),
         "rallySettingsPasscodeAndTouchId":
-            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+            MessageLookupByLibrary.simpleMessage("លេខកូដសម្ងាត់ និង Touch ID"),
         "rallySettingsPersonalInformation":
-            MessageLookupByLibrary.simpleMessage("Personal Information"),
-        "rallySettingsSignOut":
-            MessageLookupByLibrary.simpleMessage("Sign out"),
+            MessageLookupByLibrary.simpleMessage("ព័ត៌មាន​ផ្ទាល់​ខ្លួន"),
+        "rallySettingsSignOut": MessageLookupByLibrary.simpleMessage("ចេញ"),
         "rallySettingsTaxDocuments":
-            MessageLookupByLibrary.simpleMessage("Tax Documents"),
-        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
-        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
-        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
-        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
-        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
+            MessageLookupByLibrary.simpleMessage("ឯកសារពន្ធ"),
+        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("គណនី"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("វិក្កយបត្រ"),
+        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("ថវិកា"),
+        "rallyTitleOverview":
+            MessageLookupByLibrary.simpleMessage("ទិដ្ឋភាពរួម"),
+        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("ការ​កំណត់"),
         "settingsAbout":
-            MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
+            MessageLookupByLibrary.simpleMessage("អំពី Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
-            "Designed by TOASTER in London"),
-        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
+            "រចនាដោយ TOASTER នៅក្នុង​ទីក្រុងឡុងដ៍"),
+        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("ងងឹត"),
         "settingsFeedback":
-            MessageLookupByLibrary.simpleMessage("Send feedback"),
-        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Light"),
-        "settingsLocale": MessageLookupByLibrary.simpleMessage("Locale"),
+            MessageLookupByLibrary.simpleMessage("ផ្ញើមតិកែលម្អ"),
+        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("ភ្លឺ"),
+        "settingsLocale": MessageLookupByLibrary.simpleMessage("ភាសា"),
         "settingsPlatformAndroid":
             MessageLookupByLibrary.simpleMessage("Android"),
         "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
-            MessageLookupByLibrary.simpleMessage("Platform mechanics"),
-        "settingsSlowMotion":
-            MessageLookupByLibrary.simpleMessage("Slow motion"),
-        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
+            MessageLookupByLibrary.simpleMessage("មេកានិច​ប្រព័ន្ធ"),
+        "settingsSlowMotion": MessageLookupByLibrary.simpleMessage("ចលនា​យឺត"),
+        "settingsSystemDefault":
+            MessageLookupByLibrary.simpleMessage("ប្រព័ន្ធ"),
         "settingsTextDirection":
-            MessageLookupByLibrary.simpleMessage("Text direction"),
-        "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
-        "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
+            MessageLookupByLibrary.simpleMessage("ទិស​អត្ថបទ"),
+        "settingsTextDirectionLTR":
+            MessageLookupByLibrary.simpleMessage("ពីឆ្វេង​ទៅស្ដាំ"),
+        "settingsTextDirectionLocaleBased":
+            MessageLookupByLibrary.simpleMessage("Based on locale"),
+        "settingsTextDirectionRTL":
+            MessageLookupByLibrary.simpleMessage("ពីស្ដាំ​ទៅឆ្វេង"),
         "settingsTextScaling":
-            MessageLookupByLibrary.simpleMessage("Text scaling"),
-        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
-        "settingsTextScalingLarge":
-            MessageLookupByLibrary.simpleMessage("Large"),
+            MessageLookupByLibrary.simpleMessage("ការធ្វើមាត្រដ្ឋានអក្សរ"),
+        "settingsTextScalingHuge":
+            MessageLookupByLibrary.simpleMessage("ធំសម្បើម"),
+        "settingsTextScalingLarge": MessageLookupByLibrary.simpleMessage("ធំ"),
         "settingsTextScalingNormal":
-            MessageLookupByLibrary.simpleMessage("Normal"),
-        "settingsTextScalingSmall":
-            MessageLookupByLibrary.simpleMessage("Small"),
-        "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("ធម្មតា"),
+        "settingsTextScalingSmall": MessageLookupByLibrary.simpleMessage("តូច"),
+        "settingsTheme": MessageLookupByLibrary.simpleMessage("រចនាប័ទ្ម"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("ការកំណត់"),
         "shrineCancelButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CANCEL"),
+            MessageLookupByLibrary.simpleMessage("បោះបង់"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m9,
-        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+            MessageLookupByLibrary.simpleMessage("សម្អាត​រទេះ"),
+        "shrineCartItemCount": m13,
+        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("រទេះ"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("Shipping:"),
+            MessageLookupByLibrary.simpleMessage("ការ​ដឹកជញ្ជូន៖"),
         "shrineCartSubtotalCaption":
-            MessageLookupByLibrary.simpleMessage("Subtotal:"),
-        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
-        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+            MessageLookupByLibrary.simpleMessage("សរុប​រង៖"),
+        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("ពន្ធ៖"),
+        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("សរុប"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("Accessories"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("All"),
+            MessageLookupByLibrary.simpleMessage("គ្រឿង​តុបតែង"),
+        "shrineCategoryNameAll":
+            MessageLookupByLibrary.simpleMessage("ទាំង​អស់"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("Home"),
+            MessageLookupByLibrary.simpleMessage("សម្លៀក​បំពាក់"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("ផ្ទះ"),
         "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+            MessageLookupByLibrary.simpleMessage("កម្មវិធី​លក់រាយ​ទាន់សម័យ"),
         "shrineLoginPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("ពាក្យសម្ងាត់"),
         "shrineLoginUsernameLabel":
-            MessageLookupByLibrary.simpleMessage("Username"),
+            MessageLookupByLibrary.simpleMessage("ឈ្មោះអ្នក​ប្រើប្រាស់"),
         "shrineLogoutButtonCaption":
-            MessageLookupByLibrary.simpleMessage("LOGOUT"),
-        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
-        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+            MessageLookupByLibrary.simpleMessage("ចេញ"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("ម៉ឺនុយ"),
+        "shrineNextButtonCaption":
+            MessageLookupByLibrary.simpleMessage("បន្ទាប់"),
         "shrineProductBlueStoneMug":
-            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
+            MessageLookupByLibrary.simpleMessage("ពែងថ្ម​ពណ៌ខៀវ"),
         "shrineProductCeriseScallopTee":
-            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+            MessageLookupByLibrary.simpleMessage("អាវយឺត​ពណ៌ក្រហមព្រឿងៗ"),
         "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+            MessageLookupByLibrary.simpleMessage("កន្សែង Chambray"),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+            MessageLookupByLibrary.simpleMessage("អាវ Chambray"),
         "shrineProductClassicWhiteCollar":
-            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+            MessageLookupByLibrary.simpleMessage("អាវ​ពណ៌សចាស់"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+            MessageLookupByLibrary.simpleMessage("អាវយឺត​ដៃវែង Clay"),
         "shrineProductCopperWireRack":
-            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+            MessageLookupByLibrary.simpleMessage("ធ្នើរស្ពាន់"),
         "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+            MessageLookupByLibrary.simpleMessage("អាវយឺត​ឆ្នូតៗ"),
         "shrineProductGardenStrand":
             MessageLookupByLibrary.simpleMessage("Garden strand"),
         "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+            MessageLookupByLibrary.simpleMessage("មួក Gatsby"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
+            MessageLookupByLibrary.simpleMessage("អាវក្រៅ Gentry"),
         "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+            MessageLookupByLibrary.simpleMessage("តុបីតាមទំហំ"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+            MessageLookupByLibrary.simpleMessage("កន្សែងបង់ក Ginger"),
         "shrineProductGreySlouchTank":
-            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+            MessageLookupByLibrary.simpleMessage("អាវវាលក្លៀក​ពណ៌ប្រផេះ"),
         "shrineProductHurrahsTeaSet":
-            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+            MessageLookupByLibrary.simpleMessage("ឈុតពែងតែ Hurrahs"),
         "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
+            MessageLookupByLibrary.simpleMessage("quattro ផ្ទះបាយ"),
         "shrineProductNavyTrousers":
-            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+            MessageLookupByLibrary.simpleMessage("ខោជើងវែង Navy"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m10,
-        "shrineProductQuantity": m11,
+        "shrineProductPrice": m14,
+        "shrineProductQuantity": m15,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Quartet table"),
+            MessageLookupByLibrary.simpleMessage("តុ Quartet"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+            MessageLookupByLibrary.simpleMessage("ទត្រងទឹក"),
         "shrineProductRamonaCrossover":
             MessageLookupByLibrary.simpleMessage("Ramona crossover"),
         "shrineProductSeaTunic":
             MessageLookupByLibrary.simpleMessage("Sea tunic"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
+            MessageLookupByLibrary.simpleMessage("អាវយឺតដៃវែង Seabreeze"),
         "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
+            MessageLookupByLibrary.simpleMessage("អាវយឺត​កធ្លាក់ពីស្មា"),
         "shrineProductShrugBag":
-            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+            MessageLookupByLibrary.simpleMessage("កាបូប Shrug"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
-        "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+            MessageLookupByLibrary.simpleMessage("ឈុតសេរ៉ាមិច Soothe"),
+        "shrineProductStellaSunglasses": MessageLookupByLibrary.simpleMessage(
+            "វ៉ែនតាការពារ​ពន្លឺថ្ងៃ Stella"),
         "shrineProductStrutEarrings":
-            MessageLookupByLibrary.simpleMessage("Strut earrings"),
+            MessageLookupByLibrary.simpleMessage("ក្រវិល Strut"),
         "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+            MessageLookupByLibrary.simpleMessage("រុក្ខជាតិ Succulent"),
         "shrineProductSunshirtDress":
-            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+            MessageLookupByLibrary.simpleMessage("សម្លៀកបំពាក់​ស្ដើងៗ"),
         "shrineProductSurfAndPerfShirt":
-            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+            MessageLookupByLibrary.simpleMessage("អាវ Surf and perf"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+            MessageLookupByLibrary.simpleMessage("កាបូប Vagabond"),
         "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+            MessageLookupByLibrary.simpleMessage("ស្រោមជើង Varsity"),
         "shrineProductWalterHenleyWhite":
-            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+            MessageLookupByLibrary.simpleMessage("Walter henley (ស)"),
         "shrineProductWeaveKeyring":
-            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+            MessageLookupByLibrary.simpleMessage("បន្តោង​សោក្រង"),
         "shrineProductWhitePinstripeShirt":
-            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+            MessageLookupByLibrary.simpleMessage("អាវឆ្នូតពណ៌ស"),
         "shrineProductWhitneyBelt":
-            MessageLookupByLibrary.simpleMessage("Whitney belt"),
-        "starterAppDescription":
-            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m12,
-        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
+            MessageLookupByLibrary.simpleMessage("ខ្សែក្រវ៉ាត់ Whitney"),
+        "starterAppDescription": MessageLookupByLibrary.simpleMessage(
+            "ស្រទាប់​ចាប់ផ្ដើមដែល​ឆ្លើយតបរហ័ស"),
+        "starterAppDrawerItem": m16,
+        "starterAppGenericBody":
+            MessageLookupByLibrary.simpleMessage("តួ​អត្ថបទ"),
         "starterAppGenericButton":
-            MessageLookupByLibrary.simpleMessage("BUTTON"),
+            MessageLookupByLibrary.simpleMessage("ប៊ូតុង"),
         "starterAppGenericHeadline":
-            MessageLookupByLibrary.simpleMessage("Headline"),
+            MessageLookupByLibrary.simpleMessage("ចំណង​ជើង"),
         "starterAppGenericSubtitle":
-            MessageLookupByLibrary.simpleMessage("Subtitle"),
-        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
-        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
-        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("ចំណងជើង​រង"),
+        "starterAppGenericTitle":
+            MessageLookupByLibrary.simpleMessage("ចំណង​ជើង"),
+        "starterAppTitle":
+            MessageLookupByLibrary.simpleMessage("កម្មវិធី​ចាប់ផ្ដើម"),
+        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("បន្ថែម"),
         "starterAppTooltipFavorite":
-            MessageLookupByLibrary.simpleMessage("Favorite"),
+            MessageLookupByLibrary.simpleMessage("សំណព្វ"),
         "starterAppTooltipSearch":
-            MessageLookupByLibrary.simpleMessage("Search"),
-        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
+            MessageLookupByLibrary.simpleMessage("ស្វែងរក"),
+        "starterAppTooltipShare":
+            MessageLookupByLibrary.simpleMessage("ចែករំលែក")
       };
 }
