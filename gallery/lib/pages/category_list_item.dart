@@ -3,7 +3,6 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-
 import 'package:gallery/data/demos.dart';
 import 'package:gallery/pages/demo.dart';
 
@@ -159,25 +158,26 @@ class _CategoryHeader extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     return Container(
       margin: margin,
-      height: height,
       child: Material(
         shape: RoundedRectangleBorder(borderRadius: borderRadius),
         color: colorScheme.onBackground,
         clipBehavior: Clip.antiAlias,
-        child: InkWell(
-          onTap: onTap,
-          child: Row(
-            children: [
-              Padding(
-                padding: imagePadding,
-                child: Image.asset(
-                  imageString,
-                  width: 64,
-                  height: 64,
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          child: InkWell(
+            onTap: onTap,
+            child: Wrap(
+              crossAxisAlignment: WrapCrossAlignment.center,
+              children: [
+                Padding(
+                  padding: imagePadding,
+                  child: Image.asset(
+                    imageString,
+                    width: 64,
+                    height: 64,
+                  ),
                 ),
-              ),
-              Expanded(
-                child: Padding(
+                Padding(
                   padding: const EdgeInsetsDirectional.only(start: 8),
                   child: Text(
                     title,
@@ -186,21 +186,21 @@ class _CategoryHeader extends StatelessWidget {
                         ),
                   ),
                 ),
-              ),
-              Opacity(
-                opacity: chevronOpacity,
-                child: Padding(
-                  padding: const EdgeInsetsDirectional.only(
-                    start: 8,
-                    end: 32,
-                  ),
-                  child: Icon(
-                    Icons.keyboard_arrow_up,
-                    color: colorScheme.onSurface,
+                Opacity(
+                  opacity: chevronOpacity,
+                  child: Padding(
+                    padding: const EdgeInsetsDirectional.only(
+                      start: 8,
+                      end: 32,
+                    ),
+                    child: Icon(
+                      Icons.keyboard_arrow_up,
+                      color: colorScheme.onSurface,
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
@@ -270,16 +270,12 @@ class CategoryDemoItem extends StatelessWidget {
                       demo.title,
                       style:
                           textTheme.subhead.apply(color: colorScheme.onSurface),
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 1,
                     ),
                     Text(
                       demo.subtitle,
                       style: textTheme.overline.apply(
                         color: colorScheme.onSurface.withOpacity(0.5),
                       ),
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 1,
                     ),
                     SizedBox(height: 20),
                     // TODO: This isn't appearing for some reason.
@@ -290,7 +286,7 @@ class CategoryDemoItem extends StatelessWidget {
                     ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),

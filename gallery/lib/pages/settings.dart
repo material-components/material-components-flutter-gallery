@@ -204,6 +204,8 @@ class SettingsAttribution extends StatelessWidget {
               fontSize: 12,
               color: Theme.of(context).colorScheme.onSecondary,
             ),
+        textAlign:
+            (isDisplayDesktop(context)) ? TextAlign.end : TextAlign.start,
       ),
     );
   }
@@ -244,6 +246,9 @@ class _SettingsLink extends StatelessWidget {
                   title,
                   style:
                       textTheme.subtitle.apply(color: colorScheme.onSecondary),
+                  textAlign: (isDisplayDesktop(context))
+                      ? TextAlign.end
+                      : TextAlign.start,
                 ),
               ),
             ),

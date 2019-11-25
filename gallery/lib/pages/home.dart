@@ -3,10 +3,12 @@
 // found in the LICENSE file.
 
 import 'dart:async';
-import 'package:flutter/material.dart';
+import 'dart:math' as math;
 
+import 'package:flutter/material.dart';
 import 'package:gallery/constants.dart';
 import 'package:gallery/data/demos.dart';
+import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/pages/category_list_item.dart';
@@ -22,7 +24,7 @@ import 'package:gallery/studies/starter/app.dart';
 const _horizontalPadding = 32.0;
 const _carouselItemMargin = 8.0;
 const _horizontalDesktopPadding = 81.0;
-const _carouselHeight = 200.0 + 2 * _carouselItemMargin;
+const _carouselHeightMin = 200.0 + 2 * _carouselItemMargin;
 
 const String shrineTitle = 'Shrine';
 const String rallyTitle = 'Rally';
@@ -33,6 +35,8 @@ const String homeCategoryCupertino = 'CUPERTINO';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var carouselHeight = _carouselHeight(.7, context);
+
     final carouselCards = <_CarouselCard>[
       _CarouselCard(
         title: shrineTitle,
@@ -98,7 +102,7 @@ class HomePage extends StatelessWidget {
             _GalleryHeader(),
             SizedBox(height: 11),
             Container(
-              height: _carouselHeight,
+              height: carouselHeight,
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -119,12 +123,13 @@ class HomePage extends StatelessWidget {
                 bottom: 81,
                 top: 109,
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+              child: Wrap(
+                crossAxisAlignment: WrapCrossAlignment.center,
+                alignment: WrapAlignment.end,
                 children: [
                   SettingsAbout(),
                   SettingsFeedback(),
-                  Flexible(child: SettingsAttribution()),
+                  SettingsAttribution(),
                 ],
               ),
             ),
@@ -342,33 +347,32 @@ class _DesktopCategoryHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     ColorScheme colorScheme = Theme.of(context).colorScheme;
-    return Container(
-      height: 88,
-      child: Material(
-        color: colorScheme.onBackground,
-        child: Row(
-          children: [
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Image.asset(
-                imageString,
-                width: 64,
-                height: 64,
+    return Material(
+      color: colorScheme.onBackground,
+      child: Row(
+        children: [
+          Padding(
+            padding: EdgeInsets.all(10),
+            child: Image.asset(
+              imageString,
+              width: 64,
+              height: 64,
+            ),
+          ),
+          Expanded(
+            child: Padding(
+              padding: EdgeInsetsDirectional.only(start: 8),
+              child: Text(
+                title,
+                style: Theme.of(context).textTheme.headline.apply(
+                      color: colorScheme.onSurface,
+                    ),
+                maxLines: 4,
+                overflow: TextOverflow.ellipsis,
               ),
             ),
-            Expanded(
-              child: Padding(
-                padding: EdgeInsetsDirectional.only(start: 8),
-                child: Text(
-                  title,
-                  style: Theme.of(context).textTheme.headline.apply(
-                        color: colorScheme.onSurface,
-                      ),
-                ),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -447,7 +451,7 @@ class _AnimatedCarousel extends StatelessWidget {
     return LayoutBuilder(builder: (context, constraints) {
       return Stack(
         children: [
-          SizedBox(height: _carouselHeight),
+          SizedBox(height: _carouselHeight(.4, context)),
           AnimatedBuilder(
             animation: controller,
             builder: (context, child) {
@@ -457,7 +461,7 @@ class _AnimatedCarousel extends StatelessWidget {
               );
             },
             child: Container(
-              height: _carouselHeight,
+              height: _carouselHeight(.4, context),
               width: constraints.maxWidth,
               child: child,
             ),
@@ -662,11 +666,13 @@ class _CarouselCard extends StatelessWidget {
                     Text(
                       title,
                       style: textTheme.caption.apply(color: textColor),
+                      maxLines: 3,
                       overflow: TextOverflow.ellipsis,
                     ),
                     Text(
                       subtitle,
                       style: textTheme.overline.apply(color: textColor),
+                      maxLines: 5,
                       overflow: TextOverflow.ellipsis,
                     ),
                   ],
@@ -679,3 +685,9 @@ class _CarouselCard extends StatelessWidget {
     );
   }
 }
+
+double _carouselHeight(double scaleFactor, BuildContext context) => math.max(
+    _carouselHeightMin *
+        GalleryOptions.of(context).textScaleFactor(context) *
+        scaleFactor,
+    _carouselHeightMin);
