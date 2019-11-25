@@ -114,14 +114,14 @@ class GalleryOptions {
       );
 
   static GalleryOptions of(BuildContext context) {
-    final _ModelBindingScope scope = context
-        .inheritFromWidgetOfExactType(_ModelBindingScope) as _ModelBindingScope;
+    final _ModelBindingScope scope =
+        context.dependOnInheritedWidgetOfExactType<_ModelBindingScope>();
     return scope.modelBindingState.currentModel;
   }
 
   static void update(BuildContext context, GalleryOptions newModel) {
-    final _ModelBindingScope scope = context
-        .inheritFromWidgetOfExactType(_ModelBindingScope) as _ModelBindingScope;
+    final _ModelBindingScope scope =
+        context.dependOnInheritedWidgetOfExactType<_ModelBindingScope>();
     scope.modelBindingState.updateModel(newModel);
   }
 }
