@@ -7,6 +7,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import 'package:gallery/constants.dart';
 import 'package:gallery/layout/adaptive.dart';
 
 class SplashPage extends StatefulWidget {
@@ -37,12 +38,19 @@ class _SplashPageState extends State<SplashPage>
   void initState() {
     super.initState();
     _controller = AnimationController(
-        duration: Duration(milliseconds: 100), value: 1, vsync: this)
+        duration: Duration(
+          milliseconds: splashPageAnimationDurationInMilliseconds,
+        ),
+        value: 1,
+        vsync: this)
       ..addListener(() {
         this.setState(() {});
       });
     if (widget.isAnimated) {
-      _launchTimer = Timer(const Duration(seconds: 2), () {
+      _launchTimer = Timer(
+          const Duration(
+            seconds: launchTimerDurationInSeconds,
+          ), () {
         _controller.fling(velocity: -1);
       });
     } else {

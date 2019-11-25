@@ -15,3 +15,9 @@ const double desktopSettingsWidth = 520;
 
 // Sentinel value for the system text scale factor option.
 const double systemTextScaleFactorOption = -1;
+
+// The launch timer duration (for which a Flutter logo is shown).
+const launchTimerDurationInSeconds = 2;
+
+// The splash page animation duration.
+const splashPageAnimationDurationInMilliseconds = 100;

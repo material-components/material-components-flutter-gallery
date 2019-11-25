@@ -2,7 +2,9 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'dart:async';
 import 'package:flutter/material.dart';
+
 import 'package:gallery/constants.dart';
 import 'package:gallery/data/demos.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
@@ -31,16 +33,6 @@ const String homeCategoryCupertino = 'CUPERTINO';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Widget galleryHeader() => Header(
-          color: Theme.of(context).colorScheme.primaryVariant,
-          text: GalleryLocalizations.of(context).homeHeaderGallery,
-        );
-
-    Widget categoriesHeader() => Header(
-          color: Theme.of(context).colorScheme.primary,
-          text: GalleryLocalizations.of(context).homeHeaderCategories,
-        );
-
     final carouselCards = <_CarouselCard>[
       _CarouselCard(
         title: shrineTitle,
@@ -103,7 +95,7 @@ class HomePage extends StatelessWidget {
             end: _horizontalDesktopPadding,
           ),
           children: [
-            galleryHeader(),
+            _GalleryHeader(),
             SizedBox(height: 11),
             Container(
               height: _carouselHeight,
@@ -113,7 +105,7 @@ class HomePage extends StatelessWidget {
                 children: spaceBetween(30, carouselCards),
               ),
             ),
-            categoriesHeader(),
+            _CategoriesHeader(),
             Container(
               height: 585,
               child: Row(
@@ -141,35 +133,8 @@ class HomePage extends StatelessWidget {
       );
     } else {
       return Scaffold(
-        body: ListView(
-          children: [
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: _horizontalPadding),
-              child: galleryHeader(),
-            ),
-            _Carousel(
-              children: carouselCards,
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: _horizontalPadding),
-              child: categoriesHeader(),
-            ),
-            CategoryListItem(
-              title: homeCategoryMaterial,
-              imageString: 'assets/icons/material/material.png',
-              demos: materialDemos(context),
-            ),
-            CategoryListItem(
-              title: homeCategoryCupertino,
-              imageString: 'assets/icons/cupertino/cupertino.png',
-              demos: cupertinoDemos(context),
-            ),
-            CategoryListItem(
-              title: GalleryLocalizations.of(context).homeCategoryReference,
-              imageString: 'assets/icons/reference/reference.png',
-              demos: referenceDemos(context),
-            ),
-          ],
+        body: _AnimatedHomePage(
+          carouselCards: carouselCards,
         ),
       );
     }
@@ -184,6 +149,26 @@ class HomePage extends StatelessWidget {
         if (index < children.length - 1) SizedBox(width: paddingBetween),
       ],
     ];
+  }
+}
+
+class _GalleryHeader extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Header(
+      color: Theme.of(context).colorScheme.primaryVariant,
+      text: GalleryLocalizations.of(context).homeHeaderGallery,
+    );
+  }
+}
+
+class _CategoriesHeader extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Header(
+      color: Theme.of(context).colorScheme.primary,
+      text: GalleryLocalizations.of(context).homeHeaderCategories,
+    );
   }
 }
 
@@ -208,6 +193,93 @@ class Header extends StatelessWidget {
                   isDisplayDesktop(context) ? desktopDisplay1FontDelta : 0,
             ),
       ),
+    );
+  }
+}
+
+class _AnimatedHomePage extends StatefulWidget {
+  const _AnimatedHomePage({Key key, this.carouselCards}) : super(key: key);
+
+  final List<Widget> carouselCards;
+
+  @override
+  _AnimatedHomePageState createState() => _AnimatedHomePageState();
+}
+
+class _AnimatedHomePageState extends State<_AnimatedHomePage>
+    with SingleTickerProviderStateMixin {
+  AnimationController _animationController;
+  Timer _launchTimer;
+
+  @override
+  void initState() {
+    super.initState();
+    _animationController = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 800),
+    );
+    // Wait for the splash page animation to be finished.
+    _launchTimer = Timer(
+        const Duration(
+          seconds: launchTimerDurationInSeconds,
+          milliseconds: splashPageAnimationDurationInMilliseconds,
+        ), () {
+      _animationController.forward();
+    });
+  }
+
+  @override
+  dispose() {
+    _animationController.dispose();
+    _launchTimer?.cancel();
+    _launchTimer = null;
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: [
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: _horizontalPadding),
+          child: _GalleryHeader(),
+        ),
+        _Carousel(
+          children: widget.carouselCards,
+          animationController: _animationController,
+        ),
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: _horizontalPadding),
+          child: _CategoriesHeader(),
+        ),
+        _AnimatedCategoryItem(
+          startDelayFraction: 0.00,
+          controller: _animationController,
+          child: CategoryListItem(
+            title: homeCategoryMaterial,
+            imageString: 'assets/icons/material/material.png',
+            demos: materialDemos(context),
+          ),
+        ),
+        _AnimatedCategoryItem(
+          startDelayFraction: 0.05,
+          controller: _animationController,
+          child: CategoryListItem(
+            title: homeCategoryCupertino,
+            imageString: 'assets/icons/cupertino/cupertino.png',
+            demos: cupertinoDemos(context),
+          ),
+        ),
+        _AnimatedCategoryItem(
+          startDelayFraction: 0.10,
+          controller: _animationController,
+          child: CategoryListItem(
+            title: GalleryLocalizations.of(context).homeCategoryReference,
+            imageString: 'assets/icons/reference/reference.png',
+            demos: referenceDemos(context),
+          ),
+        ),
+      ],
     );
   }
 }
@@ -302,16 +374,158 @@ class _DesktopCategoryHeader extends StatelessWidget {
   }
 }
 
+/// Animates the category item to stagger in. The [_AnimatedCategoryItem.startDelayFraction]
+/// gives a delay in the unit of a fraction of the whole animation duration,
+/// which is defined in [_AnimatedHomePageState].
+class _AnimatedCategoryItem extends StatelessWidget {
+  _AnimatedCategoryItem({
+    Key key,
+    double startDelayFraction,
+    @required this.controller,
+    @required this.child,
+  })  : topPaddingAnimation = Tween(
+          begin: 60.0,
+          end: 0.0,
+        ).animate(
+          CurvedAnimation(
+            parent: controller,
+            curve: Interval(
+              0.000 + startDelayFraction,
+              0.400 + startDelayFraction,
+              curve: Curves.ease,
+            ),
+          ),
+        ),
+        super(key: key);
+
+  final Widget child;
+  final AnimationController controller;
+  final Animation<double> topPaddingAnimation;
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: controller,
+      builder: (context, child) {
+        return Padding(
+          padding: EdgeInsets.only(top: topPaddingAnimation.value),
+          child: child,
+        );
+      },
+      child: child,
+    );
+  }
+}
+
+/// Animates the carousel to come in from the right.
+class _AnimatedCarousel extends StatelessWidget {
+  _AnimatedCarousel({
+    Key key,
+    @required this.child,
+    @required this.controller,
+  })  : startPositionAnimation = Tween(
+          begin: 1.0,
+          end: 0.0,
+        ).animate(
+          CurvedAnimation(
+            parent: controller,
+            curve: Interval(
+              0.200,
+              0.800,
+              curve: Curves.ease,
+            ),
+          ),
+        ),
+        super(key: key);
+
+  final Widget child;
+  final AnimationController controller;
+  final Animation<double> startPositionAnimation;
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, constraints) {
+      return Stack(
+        children: [
+          SizedBox(height: _carouselHeight),
+          AnimatedBuilder(
+            animation: controller,
+            builder: (context, child) {
+              return PositionedDirectional(
+                start: constraints.maxWidth * startPositionAnimation.value,
+                child: child,
+              );
+            },
+            child: Container(
+              height: _carouselHeight,
+              width: constraints.maxWidth,
+              child: child,
+            ),
+          ),
+        ],
+      );
+    });
+  }
+}
+
+/// Animates a carousel card to come in from the right.
+class _AnimatedCarouselCard extends StatelessWidget {
+  _AnimatedCarouselCard({
+    Key key,
+    @required this.child,
+    @required this.controller,
+  })  : startPaddingAnimation = Tween(
+          begin: _horizontalPadding,
+          end: 0.0,
+        ).animate(
+          CurvedAnimation(
+            parent: controller,
+            curve: Interval(
+              0.900,
+              1.000,
+              curve: Curves.ease,
+            ),
+          ),
+        ),
+        super(key: key);
+
+  final Widget child;
+  final AnimationController controller;
+  final Animation<double> startPaddingAnimation;
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: controller,
+      builder: (context, child) {
+        return Padding(
+          padding: EdgeInsetsDirectional.only(
+            start: startPaddingAnimation.value,
+          ),
+          child: child,
+        );
+      },
+      child: child,
+    );
+  }
+}
+
 class _Carousel extends StatefulWidget {
-  const _Carousel({Key key, this.children}) : super(key: key);
+  const _Carousel({
+    Key key,
+    this.children,
+    this.animationController,
+  }) : super(key: key);
 
   final List<Widget> children;
+  final AnimationController animationController;
 
   @override
   _CarouselState createState() => _CarouselState();
 }
 
-class _CarouselState extends State<_Carousel> {
+class _CarouselState extends State<_Carousel>
+    with SingleTickerProviderStateMixin {
   PageController _controller;
   int _currentPage = 0;
 
@@ -337,7 +551,7 @@ class _CarouselState extends State<_Carousel> {
   }
 
   Widget builder(int index) {
-    return AnimatedBuilder(
+    final carouselCard = AnimatedBuilder(
       animation: _controller,
       builder: (context, child) {
         double value;
@@ -362,12 +576,21 @@ class _CarouselState extends State<_Carousel> {
       },
       child: widget.children[index],
     );
+
+    // We only want the second card to be animated.
+    if (index == 1) {
+      return _AnimatedCarouselCard(
+        child: carouselCard,
+        controller: widget.animationController,
+      );
+    } else {
+      return carouselCard;
+    }
   }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: _carouselHeight,
+    return _AnimatedCarousel(
       child: PageView.builder(
         onPageChanged: (value) {
           setState(() {
@@ -378,6 +601,7 @@ class _CarouselState extends State<_Carousel> {
         itemCount: widget.children.length,
         itemBuilder: (context, index) => builder(index),
       ),
+      controller: widget.animationController,
     );
   }
 }
