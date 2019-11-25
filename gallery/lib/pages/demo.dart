@@ -35,6 +35,7 @@ class DemoPage extends StatefulWidget {
 class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
   _DemoState _state = _DemoState.normal;
   int _configIndex = 0;
+  bool _isDesktop;
 
   GalleryDemoConfiguration get _currentConfig {
     return widget.demo.configurations[_configIndex];
@@ -46,6 +47,14 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
     _state = widget.demo.configurations.length > 1
         ? _DemoState.options
         : _DemoState.normal;
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    if (_isDesktop == null) {
+      _isDesktop = isDisplayDesktop(context);
+    }
   }
 
   void _handleTap(_DemoState newState) {
@@ -98,6 +107,12 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
     } else if (_state == _DemoState.normal && isDesktop) {
       // Do not allow normal state for desktop.
       _state = _DemoState.info;
+    } else if (isDesktop != this._isDesktop) {
+      this._isDesktop = isDesktop;
+      // When going from desktop to mobile, return to normal state.
+      if (!isDesktop) {
+        _state = _DemoState.normal;
+      }
     }
   }
 
@@ -193,12 +208,11 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
     }
 
     Widget body;
+    Widget demoContent = DemoContent(
+      height: contentHeight,
+      buildRoute: _currentConfig.buildRoute,
+    );
     if (isDesktop) {
-      Widget demoContent = DemoContent(
-        height: contentHeight,
-        buildRoute: _currentConfig.buildRoute,
-      );
-
       // If the available width is not very wide, reduce the amount of space
       // between the demo content and the selected section.
       final spaceBetween =
@@ -235,9 +249,17 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
           physics: NeverScrollableScrollPhysics(),
           children: [
             section,
-            DemoContent(
-              height: contentHeight,
-              buildRoute: _currentConfig.buildRoute,
+            // Add a tap gesture to collapse the currently opened section.
+            GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onTap: _state != _DemoState.normal
+                  ? () {
+                      setState(() {
+                        _state = _DemoState.normal;
+                      });
+                    }
+                  : null,
+              child: demoContent,
             ),
             // Fake the safe area to ensure the animation looks correct.
             SizedBox(height: bottomSafeArea),
