@@ -236,6 +236,11 @@ class _DesktopCategoryItem extends StatelessWidget {
             title: title,
             imageString: imageString,
           ),
+          Divider(
+            height: 2,
+            thickness: 2,
+            color: colorScheme.background,
+          ),
           Flexible(
             child: ListView(
               children: [
