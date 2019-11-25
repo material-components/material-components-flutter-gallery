@@ -3,7 +3,6 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-
 import 'package:gallery/data/demos.dart';
 import 'package:gallery/pages/demo.dart';
 
@@ -95,29 +94,31 @@ class _CategoryListItemState extends State<CategoryListItem>
   }
 
   Widget _buildHeaderWithChildren(BuildContext context, Widget child) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        _CategoryHeader(
-          margin: _headerMargin.value,
-          imagePadding: _headerImagePadding.value,
-          borderRadius: _headerBorderRadius.value,
-          height: _headerHeight.value,
-          chevronOpacity: _headerChevronOpacity.value,
-          imageString: widget.imageString,
-          title: widget.title,
-          onTap: _handleTap,
-        ),
-        Padding(
-          padding: _childrenPadding.value,
-          child: ClipRect(
-            child: Align(
-              heightFactor: _childrenHeightFactor.value,
-              child: child,
+    return Flexible(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          _CategoryHeader(
+            margin: _headerMargin.value,
+            imagePadding: _headerImagePadding.value,
+            borderRadius: _headerBorderRadius.value,
+            height: _headerHeight.value,
+            chevronOpacity: _headerChevronOpacity.value,
+            imageString: widget.imageString,
+            title: widget.title,
+            onTap: _handleTap,
+          ),
+          Padding(
+            padding: _childrenPadding.value,
+            child: ClipRect(
+              child: Align(
+                heightFactor: _childrenHeightFactor.value,
+                child: child,
+              ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
@@ -184,6 +185,7 @@ class _CategoryHeader extends StatelessWidget {
                     style: Theme.of(context).textTheme.headline.apply(
                           color: colorScheme.onSurface,
                         ),
+                    overflow: TextOverflow.clip,
                   ),
                 ),
               ),

@@ -36,16 +36,15 @@ set deviceLocale(Locale locale) {
 class GalleryOptions {
   const GalleryOptions({
     this.themeMode,
-    double textScaleFactor,
+    this.textScaleFactor,
     this.customTextDirection,
     Locale locale,
     this.timeDilation,
     this.platform,
-  })  : _textScaleFactor = textScaleFactor,
-        _locale = locale;
+  }) : _locale = locale;
 
   final ThemeMode themeMode;
-  final double _textScaleFactor;
+  final double textScaleFactor;
   final CustomTextDirection customTextDirection;
   final Locale _locale;
   final double timeDilation;
@@ -53,8 +52,12 @@ class GalleryOptions {
 
   // A null text scale will use the system's text scale. We use -1 for the
   // option to be selectable in Settings.
-  double get textScaleFactor =>
-      _textScaleFactor == -1 ? null : _textScaleFactor;
+  double getTextScaleFactor(BuildContext context) {
+    print(MediaQuery.of(context).textScaleFactor);
+    return textScaleFactor == -1
+      ? MediaQuery.of(context).textScaleFactor
+      : textScaleFactor;
+  }
 
   Locale get locale => _locale ?? deviceLocale;
 
@@ -97,7 +100,7 @@ class GalleryOptions {
   bool operator ==(Object other) =>
       other is GalleryOptions &&
       themeMode == other.themeMode &&
-      _textScaleFactor == other._textScaleFactor &&
+      textScaleFactor == other.textScaleFactor &&
       customTextDirection == other.customTextDirection &&
       locale == other.locale &&
       timeDilation == other.timeDilation &&
@@ -106,7 +109,7 @@ class GalleryOptions {
   @override
   int get hashCode => hashValues(
         themeMode,
-        _textScaleFactor,
+        textScaleFactor,
         customTextDirection,
         locale,
         timeDilation,
@@ -139,7 +142,7 @@ class ApplyTextOptions extends StatelessWidget {
 
     Widget widget = MediaQuery(
       data: MediaQuery.of(context).copyWith(
-        textScaleFactor: options.textScaleFactor,
+        textScaleFactor: options.getTextScaleFactor(context),
       ),
       child: child,
     );

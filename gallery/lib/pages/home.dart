@@ -2,9 +2,12 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import 'package:gallery/constants.dart';
 import 'package:gallery/data/demos.dart';
+import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/pages/category_list_item.dart';
@@ -20,7 +23,6 @@ import 'package:gallery/studies/starter/app.dart';
 const _horizontalPadding = 32.0;
 const _carouselItemMargin = 8.0;
 const _horizontalDesktopPadding = 81.0;
-const _carouselHeight = 200.0 + 2 * _carouselItemMargin;
 
 const String shrineTitle = 'Shrine';
 const String rallyTitle = 'Rally';
@@ -31,6 +33,12 @@ const String homeCategoryCupertino = 'CUPERTINO';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var _carouselHeight = math.max(
+        (200.0 + 2 * _carouselItemMargin) *
+            (GalleryOptions.of(context).getTextScaleFactor(context) * .40),
+        200.0 + 2 * _carouselItemMargin);
+//        GalleryOptions.of(context).textScaleFactor /
+//        2;
     Widget galleryHeader() => Header(
           color: Theme.of(context).colorScheme.primaryVariant,
           text: GalleryLocalizations.of(context).homeHeaderGallery,
@@ -106,9 +114,13 @@ class HomePage extends StatelessWidget {
             galleryHeader(),
             SizedBox(height: 11),
             Container(
+//              constraints: BoxConstraints(
+//                minHeight: _carouselHeight,
+//                maxHeight: _carouselHeight,
+//              ),
               height: _carouselHeight,
               child: Row(
-                mainAxisSize: MainAxisSize.max,
+                mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: spaceBetween(30, carouselCards),
               ),
@@ -361,6 +373,13 @@ class _CarouselState extends State<_Carousel> {
 
   @override
   Widget build(BuildContext context) {
+    print("${MediaQuery.of(context).textScaleFactor} + HELLO WORLD");
+    var _carouselHeight = math.max(
+        (200.0 + 2 * _carouselItemMargin) *
+            (GalleryOptions.of(context).getTextScaleFactor(context) * .40),
+        200.0 + 2 * _carouselItemMargin);
+//        GalleryOptions.of(context).textScaleFactor /
+//        2;
     return Container(
       height: _carouselHeight,
       child: PageView.builder(
@@ -433,12 +452,12 @@ class _CarouselCard extends StatelessWidget {
                     Text(
                       title,
                       style: textTheme.caption.apply(color: textColor),
-                      overflow: TextOverflow.ellipsis,
+                      overflow: TextOverflow.clip,
                     ),
                     Text(
                       subtitle,
                       style: textTheme.overline.apply(color: textColor),
-                      overflow: TextOverflow.ellipsis,
+                      overflow: TextOverflow.clip,
                     ),
                   ],
                 ),
