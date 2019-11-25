@@ -12,3 +12,6 @@ const double desktopDisplay1FontDelta = 16;
 
 // The width of the settingsDesktop.
 const double desktopSettingsWidth = 520;
+
+// Sentinel value for the system text scale factor option.
+const double systemTextScaleFactorOption = -1;

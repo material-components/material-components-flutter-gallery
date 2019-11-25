@@ -7,6 +7,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
+import 'package:gallery/constants.dart';
 import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/pages/backdrop.dart';
@@ -38,7 +39,7 @@ class GalleryApp extends StatelessWidget {
     return ModelBinding(
       initialModel: GalleryOptions(
         themeMode: ThemeMode.system,
-        textScaleFactor: null,
+        textScaleFactor: systemTextScaleFactorOption,
         customTextDirection: CustomTextDirection.localeBased,
         locale: null,
         timeDilation: timeDilation,

@@ -62,10 +62,13 @@ class SettingsPage extends StatelessWidget {
             ),
             SettingsListItem<double>(
               title: GalleryLocalizations.of(context).settingsTextScaling,
-              selectedOption: options.textScaleFactor ?? -1,
+              selectedOption: options.textScaleFactor(
+                context,
+                useSentinel: true,
+              ),
               options: LinkedHashMap.of({
-                // Using a value of -1 to indicate the system setting.
-                -1: GalleryLocalizations.of(context).settingsSystemDefault,
+                systemTextScaleFactorOption:
+                    GalleryLocalizations.of(context).settingsSystemDefault,
                 0.8: GalleryLocalizations.of(context).settingsTextScalingSmall,
                 1.0: GalleryLocalizations.of(context).settingsTextScalingNormal,
                 2.0: GalleryLocalizations.of(context).settingsTextScalingLarge,

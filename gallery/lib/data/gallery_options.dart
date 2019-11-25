@@ -6,6 +6,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
+import 'package:gallery/constants.dart';
 
 enum CustomTextDirection {
   localeBased,
@@ -51,10 +52,18 @@ class GalleryOptions {
   final double timeDilation;
   final TargetPlatform platform;
 
-  // A null text scale will use the system's text scale. We use -1 for the
-  // option to be selectable in Settings.
-  double get textScaleFactor =>
-      _textScaleFactor == -1 ? null : _textScaleFactor;
+  // We use a sentinel value to indicate the system text scale option. By
+  // default, return the actual text scale factor, otherwise return the
+  // sentinel value.
+  double textScaleFactor(BuildContext context, {bool useSentinel = false}) {
+    if (_textScaleFactor == systemTextScaleFactorOption) {
+      return useSentinel
+          ? systemTextScaleFactorOption
+          : MediaQuery.of(context).textScaleFactor;
+    } else {
+      return _textScaleFactor;
+    }
+  }
 
   Locale get locale => _locale ?? deviceLocale;
 
@@ -85,7 +94,7 @@ class GalleryOptions {
   }) {
     return GalleryOptions(
       themeMode: themeMode ?? this.themeMode,
-      textScaleFactor: textScaleFactor ?? this.textScaleFactor,
+      textScaleFactor: textScaleFactor ?? this._textScaleFactor,
       customTextDirection: customTextDirection ?? this.customTextDirection,
       locale: locale ?? this.locale,
       timeDilation: timeDilation ?? this.timeDilation,
@@ -136,10 +145,11 @@ class ApplyTextOptions extends StatelessWidget {
   Widget build(BuildContext context) {
     final options = GalleryOptions.of(context);
     final textDirection = options.textDirection();
+    final textScaleFactor = options.textScaleFactor(context);
 
     Widget widget = MediaQuery(
       data: MediaQuery.of(context).copyWith(
-        textScaleFactor: options.textScaleFactor,
+        textScaleFactor: textScaleFactor,
       ),
       child: child,
     );
