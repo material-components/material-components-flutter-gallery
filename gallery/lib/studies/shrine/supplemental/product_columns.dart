@@ -21,42 +21,35 @@ class TwoProductCardColumn extends StatelessWidget {
   const TwoProductCardColumn({
     @required this.bottom,
     this.top,
+    @required this.imageAspectRatio,
   }) : assert(bottom != null);
 
+  static const double spacerHeight = 44;
+  static const double horizontalPadding = 28;
+
   final Product bottom, top;
+  final double imageAspectRatio;
 
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
-      const double spacerHeight = 44;
-
-      final double heightOfCards =
-          (constraints.biggest.height - spacerHeight) / 2;
-      final double availableHeightForImages =
-          heightOfCards - MobileProductCard.textBoxHeight;
-      // Ensure the cards take up the available space as long as the screen is
-      // sufficiently tall, otherwise fallback on a constant aspect ratio.
-      final double imageAspectRatio = availableHeightForImages >= 0
-          ? constraints.biggest.width / availableHeightForImages
-          : 49 / 33;
-
       return ListView(
         physics: const ClampingScrollPhysics(),
         children: [
           Padding(
-            padding: const EdgeInsetsDirectional.only(start: 28),
+            padding: const EdgeInsetsDirectional.only(start: horizontalPadding),
             child: top != null
                 ? MobileProductCard(
                     imageAspectRatio: imageAspectRatio,
                     product: top,
                   )
                 : SizedBox(
-                    height: heightOfCards > 0 ? heightOfCards : spacerHeight,
+                    height: spacerHeight,
                   ),
           ),
           const SizedBox(height: spacerHeight),
           Padding(
-            padding: const EdgeInsetsDirectional.only(end: 28),
+            padding: const EdgeInsetsDirectional.only(end: horizontalPadding),
             child: MobileProductCard(
               imageAspectRatio: imageAspectRatio,
               product: bottom,
@@ -69,15 +62,21 @@ class TwoProductCardColumn extends StatelessWidget {
 }
 
 class OneProductCardColumn extends StatelessWidget {
-  const OneProductCardColumn({this.product});
+  const OneProductCardColumn({
+    this.product,
+    @required this.reverse,
+  });
 
   final Product product;
+
+  // Whether the product column should align to the bottom.
+  final bool reverse;
 
   @override
   Widget build(BuildContext context) {
     return ListView(
       physics: const ClampingScrollPhysics(),
-      reverse: true,
+      reverse: reverse,
       children: [
         const SizedBox(
           height: 40,

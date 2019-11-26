@@ -150,58 +150,62 @@ class ShoppingCartSummary extends StatelessWidget {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    Text(
+                      GalleryLocalizations.of(context).shrineCartTotalCaption,
+                    ),
                     Expanded(
                       child: Text(
-                        GalleryLocalizations.of(context).shrineCartTotalCaption,
+                        formatter.format(model.totalCost),
+                        style: largeAmountStyle,
+                        textAlign: TextAlign.end,
                       ),
-                    ),
-                    Text(
-                      formatter.format(model.totalCost),
-                      style: largeAmountStyle,
                     ),
                   ],
                 ),
                 const SizedBox(height: 16),
                 Row(
                   children: [
+                    Text(
+                      GalleryLocalizations.of(context)
+                          .shrineCartSubtotalCaption,
+                    ),
                     Expanded(
                       child: Text(
-                        GalleryLocalizations.of(context)
-                            .shrineCartSubtotalCaption,
+                        formatter.format(model.subtotalCost),
+                        style: smallAmountStyle,
+                        textAlign: TextAlign.end,
                       ),
-                    ),
-                    Text(
-                      formatter.format(model.subtotalCost),
-                      style: smallAmountStyle,
                     ),
                   ],
                 ),
                 const SizedBox(height: 4),
                 Row(
                   children: [
+                    Text(
+                      GalleryLocalizations.of(context)
+                          .shrineCartShippingCaption,
+                    ),
                     Expanded(
                       child: Text(
-                        GalleryLocalizations.of(context)
-                            .shrineCartShippingCaption,
+                        formatter.format(model.shippingCost),
+                        style: smallAmountStyle,
+                        textAlign: TextAlign.end,
                       ),
-                    ),
-                    Text(
-                      formatter.format(model.shippingCost),
-                      style: smallAmountStyle,
                     ),
                   ],
                 ),
                 const SizedBox(height: 4),
                 Row(
                   children: [
+                    Text(
+                      GalleryLocalizations.of(context).shrineCartTaxCaption,
+                    ),
                     Expanded(
                       child: Text(
-                        GalleryLocalizations.of(context).shrineCartTaxCaption,
+                        formatter.format(model.tax),
+                        style: smallAmountStyle,
+                        textAlign: TextAlign.end,
                       ),
-                    ),
-                    Text(
-                      formatter.format(model.tax),
-                      style: smallAmountStyle,
                     ),
                   ],
                 ),

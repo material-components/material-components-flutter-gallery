@@ -362,8 +362,8 @@ class DesktopBackdrop extends StatelessWidget {
       children: [
         backLayer,
         Padding(
-          padding: const EdgeInsetsDirectional.only(
-            start: desktopCategoryMenuPageWidth,
+          padding: EdgeInsetsDirectional.only(
+            start: desktopCategoryMenuPageWidth(context: context),
           ),
           child: Material(
             elevation: 16,

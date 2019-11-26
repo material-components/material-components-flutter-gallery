@@ -15,15 +15,21 @@
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
+import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
+import 'package:gallery/layout/text_scale.dart';
 import 'package:gallery/studies/shrine/colors.dart';
 import 'package:gallery/studies/shrine/login.dart';
 import 'package:gallery/studies/shrine/model/app_state_model.dart';
 import 'package:gallery/studies/shrine/model/product.dart';
 import 'package:gallery/studies/shrine/triangle_category_indicator.dart';
 
-const desktopCategoryMenuPageWidth = 232.0;
+double desktopCategoryMenuPageWidth({
+  BuildContext context,
+}) {
+  return 232 * reducedTextScale(context);
+}
 
 class CategoryMenuPage extends StatelessWidget {
   const CategoryMenuPage({
@@ -44,8 +50,12 @@ class CategoryMenuPage extends StatelessWidget {
     );
   }
 
-  Widget _divider() {
-    return Container(width: 56, height: 1, color: Color(0xFF8F716D));
+  Widget _divider({BuildContext context}) {
+    return Container(
+      width: 56 * GalleryOptions.of(context).textScaleFactor(context),
+      height: 1,
+      color: Color(0xFF8F716D),
+    );
   }
 
   Widget _buildCategory(Category category, BuildContext context) {
@@ -61,8 +71,9 @@ class CategoryMenuPage extends StatelessWidget {
     final TextStyle unselectedCategoryTextStyle = selectedCategoryTextStyle
         .copyWith(color: shrineBrown900.withOpacity(0.6));
 
-    final double indicatorWidth = isDesktop ? 34 : 36.43;
-    final double indicatorHeight = isDesktop ? 28 : 30;
+    final double indicatorHeight = (isDesktop ? 28 : 30) *
+        GalleryOptions.of(context).textScaleFactor(context);
+    final double indicatorWidth = indicatorHeight * 34 / 28;
 
     return ScopedModelDescendant<AppStateModel>(
       builder: (context, child, model) => GestureDetector(
@@ -97,7 +108,7 @@ class CategoryMenuPage extends StatelessWidget {
       return Material(
         child: Container(
           color: shrinePink100,
-          width: desktopCategoryMenuPageWidth,
+          width: desktopCategoryMenuPageWidth(context: context),
           child: Column(
             children: [
               const SizedBox(height: 64),
@@ -110,7 +121,7 @@ class CategoryMenuPage extends StatelessWidget {
               const Spacer(),
               for (final category in categories)
                 _buildCategory(category, context),
-              _divider(),
+              _divider(context: context),
               GestureDetector(
                 onTap: () {
                   Navigator.push<void>(
@@ -144,7 +155,7 @@ class CategoryMenuPage extends StatelessWidget {
               for (final category in categories)
                 _buildCategory(category, context),
               Center(
-                child: _divider(),
+                child: _divider(context: context),
               ),
               GestureDetector(
                 onTap: () {

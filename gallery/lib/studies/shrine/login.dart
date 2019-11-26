@@ -12,13 +12,23 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/layout/adaptive.dart';
+import 'package:gallery/layout/text_scale.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/studies/shrine/colors.dart';
 
-const desktopLoginScreenMainAreaWidth = 360.0;
+const _horizontalPadding = 24.0;
+
+double desktopLoginScreenMainAreaWidth({BuildContext context}) {
+  return min(
+    360 * reducedTextScale(context),
+    MediaQuery.of(context).size.width - 2 * _horizontalPadding,
+  );
+}
 
 const _decoration = ShapeDecoration(
   shape: BeveledRectangleBorder(
@@ -39,23 +49,25 @@ class _LoginPageState extends State<LoginPage> {
 
     return ApplyTextOptions(
       child: isDesktop
-          ? Scaffold(
-              body: SafeArea(
-                child: Center(
-                  child: Container(
-                    width: desktopLoginScreenMainAreaWidth,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        _ShrineLogo(),
-                        SizedBox(height: 40),
-                        _UsernameTextField(),
-                        SizedBox(height: 16),
-                        _PasswordTextField(),
-                        SizedBox(height: 24),
-                        _CancelAndNextButtons(),
-                        SizedBox(height: 62),
-                      ],
+          ? LayoutBuilder(
+              builder: (context, constraints) => Scaffold(
+                body: SafeArea(
+                  child: Center(
+                    child: Container(
+                      width: desktopLoginScreenMainAreaWidth(context: context),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          _ShrineLogo(),
+                          SizedBox(height: 40),
+                          _UsernameTextField(),
+                          SizedBox(height: 16),
+                          _PasswordTextField(),
+                          SizedBox(height: 24),
+                          _CancelAndNextButtons(),
+                          SizedBox(height: 62),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -77,7 +89,9 @@ class _LoginPageState extends State<LoginPage> {
               ),
               body: SafeArea(
                 child: ListView(
-                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: _horizontalPadding,
+                  ),
                   children: const [
                     SizedBox(height: 80),
                     _ShrineLogo(),

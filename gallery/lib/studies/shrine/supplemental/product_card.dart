@@ -27,7 +27,7 @@ class MobileProductCard extends StatelessWidget {
   final double imageAspectRatio;
   final Product product;
 
-  static const double textBoxHeight = 65;
+  static const double defaultTextBoxHeight = 65;
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +73,7 @@ Widget _buildProductCard({
   final Image imageWidget = Image.asset(
     product.assetName,
     package: product.assetPackage,
-    fit: isDesktop ? null : BoxFit.cover,
+    fit: BoxFit.cover,
     width: isDesktop ? imageWidth : null,
   );
 
@@ -104,11 +104,14 @@ Widget _buildProductCard({
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(height: 23),
-                  Text(
-                    product == null ? '' : product.name(context),
-                    style: theme.textTheme.button,
-                    softWrap: true,
-                    textAlign: TextAlign.center,
+                  Container(
+                    width: imageWidth,
+                    child: Text(
+                      product == null ? '' : product.name(context),
+                      style: theme.textTheme.button,
+                      softWrap: true,
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                   const SizedBox(height: 4),
                   Text(

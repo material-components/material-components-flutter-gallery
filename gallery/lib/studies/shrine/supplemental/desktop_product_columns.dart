@@ -26,6 +26,8 @@ class DesktopProductCardColumn extends StatelessWidget {
     @required this.alignToEnd,
     @required this.startLarge,
     @required this.products,
+    @required this.largeImageWidth,
+    @required this.smallImageWidth,
   });
 
   final int columnCount;
@@ -34,6 +36,9 @@ class DesktopProductCardColumn extends StatelessWidget {
 
   final bool alignToEnd;
   final bool startLarge;
+
+  final double largeImageWidth;
+  final double smallImageWidth;
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +49,7 @@ class DesktopProductCardColumn extends StatelessWidget {
           max(2 * currentColumnProductCount - 1, 0);
 
       return Container(
-        width: 186,
+        width: largeImageWidth,
         child: Column(
           crossAxisAlignment:
               alignToEnd ? CrossAxisAlignment.end : CrossAxisAlignment.start,
@@ -59,8 +64,12 @@ class DesktopProductCardColumn extends StatelessWidget {
                   product:
                       products[productCardIndex * columnCount + currentColumn],
                   imageWidth: startLarge
-                      ? ((productCardIndex % 2 == 0) ? 186 : 162)
-                      : ((productCardIndex % 2 == 0) ? 162 : 186),
+                      ? ((productCardIndex % 2 == 0)
+                          ? largeImageWidth
+                          : smallImageWidth)
+                      : ((productCardIndex % 2 == 0)
+                          ? smallImageWidth
+                          : largeImageWidth),
                 );
               } else {
                 // This is just a divider.

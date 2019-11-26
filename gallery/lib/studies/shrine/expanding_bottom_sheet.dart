@@ -13,6 +13,7 @@
 // limitations under the License.
 
 import 'dart:async';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -20,6 +21,7 @@ import 'package:meta/meta.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 import 'package:gallery/layout/adaptive.dart';
+import 'package:gallery/layout/text_scale.dart';
 import 'package:gallery/studies/shrine/colors.dart';
 import 'package:gallery/studies/shrine/model/app_state_model.dart';
 import 'package:gallery/studies/shrine/model/product.dart';
@@ -32,17 +34,29 @@ const Cubic _decelerateCurve = Cubic(0.23, 0.94, 0.41, 1);
 const _peakVelocityTime = 0.248210;
 // Percent (as a decimal) of animation that should be completed at _peakVelocityTime
 const _peakVelocityProgress = 0.379146;
-const _cartHeight = 56.0;
 // Radius of the shape on the top start of the sheet for mobile layouts.
 const _mobileCornerRadius = 24.0;
 // Radius of the shape on the top start and bottom start of the sheet for mobile layouts.
 const _desktopCornerRadius = 12.0;
 // Width for just the cart icon and no thumbnails.
-const _widthForCartIcon = 64.0;
+const _cartIconWidth = 64.0;
+// Height for just the cart icon and no thumbnails.
+const _cartIconHeight = 56.0;
 // Height of a thumbnail.
-const _thumbnailHeight = 40.0;
+const _defaultThumbnailHeight = 40.0;
 // Gap between thumbnails.
 const _thumbnailGap = 16.0;
+
+// Maximum number of thumbnails shown in the cart.
+const _maxThumbnailCount = 3;
+
+double _thumbnailHeight(BuildContext context) {
+  return _defaultThumbnailHeight * reducedTextScale(context);
+}
+
+double _paddedThumbnailHeight(BuildContext context) {
+  return _thumbnailHeight(context) + _thumbnailGap;
+}
 
 class ExpandingBottomSheet extends StatefulWidget {
   const ExpandingBottomSheet(
@@ -136,8 +150,8 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
   // The width of the Material, calculated by _widthFor() & based on the number
   // of products in the cart. 64.0 is the width when there are 0 products
   // (_kWidthForZeroProducts)
-  double _width = _widthForCartIcon;
-  double _height = _cartHeight;
+  double _width = _cartIconWidth;
+  double _height = _cartIconHeight;
 
   // Controller for the opening and closing of the ExpandingBottomSheet
   AnimationController get _controller => widget.expandingController;
@@ -302,17 +316,43 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
   }
 
   // Returns the correct width of the ExpandingBottomSheet based on the number of
-  // products in the cart.
-  double _widthFor(int numProducts) {
-    final widths = <double>[_widthForCartIcon, 136, 192, 248];
-    return numProducts >= widths.length ? 278 : widths[numProducts];
+  // products and the text scaling options in the cart in the mobile layout.
+  double _mobileWidthFor(int numProducts, BuildContext context) {
+    final double cartThumbnailGap = numProducts > 0 ? 16 : 0;
+    final double thumbnailsWidth =
+        min(numProducts, _maxThumbnailCount) * _paddedThumbnailHeight(context);
+    final double overflowNumberWidth =
+        numProducts > _maxThumbnailCount ? 30 * cappedTextScale(context) : 0;
+    return _cartIconWidth +
+        cartThumbnailGap +
+        thumbnailsWidth +
+        overflowNumberWidth;
+  }
+
+  // Returns the correct height of the ExpandingBottomSheet based on the text scaling
+  // options in the mobile layout.
+  double _mobileHeightFor(BuildContext context) {
+    return _paddedThumbnailHeight(context);
+  }
+
+  // Returns the correct width of the ExpandingBottomSheet based on the text scaling
+  // options in the desktop layout.
+  double _desktopWidthFor(BuildContext context) {
+    return _paddedThumbnailHeight(context) + 8;
   }
 
   // Returns the correct height of the ExpandingBottomSheet based on the number of
-  // products in the cart.
-  double _heightFor(int numProducts) {
-    final heights = <double>[_cartHeight, 120, 176, 232];
-    return numProducts >= heights.length ? 260 : heights[numProducts];
+  // products and the text scaling options in the cart in the desktop layout.
+  double _desktopHeightFor(int numProducts, BuildContext context) {
+    final double cartThumbnailGap = numProducts > 0 ? 8 : 0;
+    final double thumbnailsHeight =
+        min(numProducts, _maxThumbnailCount) * _paddedThumbnailHeight(context);
+    final double overflowNumberHeight =
+        numProducts > _maxThumbnailCount ? 28 * reducedTextScale(context) : 0;
+    return _cartIconHeight +
+        cartThumbnailGap +
+        thumbnailsHeight +
+        overflowNumberHeight;
   }
 
   // Returns true if the cart is open or opening and false otherwise.
@@ -371,8 +411,8 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
           ),
           Container(
             width: _width,
-            height: (numProducts >= 3 ? 3 : numProducts) *
-                (_thumbnailHeight + _thumbnailGap),
+            height: min(numProducts, _maxThumbnailCount) *
+                _paddedThumbnailHeight(context),
             child: ProductThumbnailRow(),
           ),
           ExtraProductsNumber(),
@@ -390,8 +430,10 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
               ),
               Container(
                 // Accounts for the overflow number
-                width: numProducts > 3 ? _width - 94 : _width - 64,
-                height: _cartHeight,
+                width: min(numProducts, _maxThumbnailCount) *
+                        _paddedThumbnailHeight(context) +
+                    (numProducts > 0 ? _thumbnailGap : 0),
+                height: _height,
                 padding: const EdgeInsets.symmetric(vertical: 8),
                 child: ProductThumbnailRow(),
               ),
@@ -429,11 +471,17 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
     final double screenWidth = screenSize.width;
     final double screenHeight = screenSize.height;
 
-    final double expandedCartWidth = isDesktop ? 360 : screenWidth;
+    final double expandedCartWidth = isDesktop
+        ? (360 * cappedTextScale(context)).clamp(360, screenWidth).toDouble()
+        : screenWidth;
 
-    _width = isDesktop ? _widthForCartIcon : _widthFor(numProducts);
+    _width = isDesktop
+        ? _desktopWidthFor(context)
+        : _mobileWidthFor(numProducts, context);
     _widthAnimation = _getWidthAnimation(expandedCartWidth);
-    _height = isDesktop ? _heightFor(numProducts) : _cartHeight;
+    _height = isDesktop
+        ? _desktopHeightFor(numProducts, context)
+        : _mobileHeightFor(context);
     _heightAnimation = _getHeightAnimation(screenHeight);
     _topStartShapeAnimation = _getShapeTopStartAnimation(context);
     _bottomStartShapeAnimation = _getShapeBottomStartAnimation(context);
@@ -665,16 +713,14 @@ class ExtraProductsNumber extends StatelessWidget {
     final List<int> products = productMap.keys.toList();
     int overflow = 0;
     final int numProducts = products.length;
-    if (numProducts > 3) {
-      for (int i = 3; i < numProducts; i++) {
-        overflow += productMap[products[i]];
-      }
+    for (int i = _maxThumbnailCount; i < numProducts; i++) {
+      overflow += productMap[products[i]];
     }
     return overflow;
   }
 
   Widget _buildOverflow(AppStateModel model, BuildContext context) {
-    if (model.productsInCart.length <= 3) {
+    if (model.productsInCart.length <= _maxThumbnailCount) {
       return Container();
     }
 
@@ -714,8 +760,8 @@ class ProductThumbnail extends StatelessWidget {
       child: ScaleTransition(
         scale: animation,
         child: Container(
-          width: 40,
-          height: 40,
+          width: _thumbnailHeight(context),
+          height: _thumbnailHeight(context),
           decoration: BoxDecoration(
             image: DecorationImage(
               image: ExactAssetImage(

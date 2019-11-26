@@ -12,56 +12,114 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
+import 'package:gallery/data/gallery_options.dart';
+import 'package:gallery/layout/text_scale.dart';
 import 'package:gallery/studies/shrine/category_menu_page.dart';
 import 'package:gallery/studies/shrine/model/product.dart';
 import 'package:gallery/studies/shrine/supplemental/desktop_product_columns.dart';
 import 'package:gallery/studies/shrine/supplemental/product_columns.dart';
+import 'package:gallery/studies/shrine/supplemental/product_card.dart';
+
+const _topPadding = 34.0;
+const _bottomPadding = 44.0;
+
+const _cardToScreenWidthRatio = 0.59;
 
 class MobileAsymmetricView extends StatelessWidget {
   const MobileAsymmetricView({Key key, this.products}) : super(key: key);
 
   final List<Product> products;
 
-  List<Container> _buildColumns(BuildContext context) {
+  List<Container> _buildColumns(
+    BuildContext context,
+    BoxConstraints constraints,
+  ) {
     if (products == null || products.isEmpty) {
       return const [];
     }
 
-    // This will return a list of columns. It will oscillate between the two
-    // kinds of columns. Even cases of the index (0, 2, 4, etc) will be
-    // TwoProductCardColumn and the odd cases will be OneProductCardColumn.
-    //
-    // Each pair of columns will advance us 3 products forward (2 + 1). That's
-    // some kinda awkward math so we use _evenCasesIndex and _oddCasesIndex as
-    // helpers for creating the index of the product list that will correspond
-    // to the index of the list of columns.
-    return List<Container>.generate(_listItemCount(products.length), (index) {
-      double width = .59 * MediaQuery.of(context).size.width;
-      Widget column;
-      if (index % 2 == 0) {
-        /// Even cases
-        final int bottom = _evenCasesIndex(index);
-        column = TwoProductCardColumn(
-          bottom: products[bottom],
-          top: products.length - 1 >= bottom + 1 ? products[bottom + 1] : null,
+    // Decide whether the page size and text size allow 2-column products.
+
+    final double cardHeight = (constraints.biggest.height -
+            _topPadding -
+            _bottomPadding -
+            TwoProductCardColumn.spacerHeight) /
+        2;
+
+    final double imageWidth =
+        _cardToScreenWidthRatio * constraints.biggest.width -
+            TwoProductCardColumn.horizontalPadding;
+
+    final double imageHeight = cardHeight -
+        MobileProductCard.defaultTextBoxHeight *
+            GalleryOptions.of(context).textScaleFactor(context);
+
+    final bool shouldUseAlternatingLayout =
+        imageHeight > 0 && imageWidth / imageHeight < 49 / 33;
+
+    if (shouldUseAlternatingLayout) {
+      // Alternating layout: a layout of alternating 2-product
+      // and 1-product columns.
+      //
+      // This will return a list of columns. It will oscillate between the two
+      // kinds of columns. Even cases of the index (0, 2, 4, etc) will be
+      // TwoProductCardColumn and the odd cases will be OneProductCardColumn.
+      //
+      // Each pair of columns will advance us 3 products forward (2 + 1). That's
+      // some kinda awkward math so we use _evenCasesIndex and _oddCasesIndex as
+      // helpers for creating the index of the product list that will correspond
+      // to the index of the list of columns.
+
+      return List<Container>.generate(_listItemCount(products.length), (index) {
+        double width =
+            _cardToScreenWidthRatio * MediaQuery.of(context).size.width;
+        Widget column;
+        if (index % 2 == 0) {
+          /// Even cases
+          final int bottom = _evenCasesIndex(index);
+          column = TwoProductCardColumn(
+            bottom: products[bottom],
+            top:
+                products.length - 1 >= bottom + 1 ? products[bottom + 1] : null,
+            imageAspectRatio: imageWidth / imageHeight,
+          );
+          width += 32;
+        } else {
+          /// Odd cases
+          column = OneProductCardColumn(
+            product: products[_oddCasesIndex(index)],
+            reverse: true,
+          );
+        }
+        return Container(
+          width: width,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: column,
+          ),
         );
-        width += 32;
-      } else {
-        /// Odd cases
-        column = OneProductCardColumn(
-          product: products[_oddCasesIndex(index)],
-        );
-      }
-      return Container(
-        width: width,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: column,
-        ),
-      );
-    }).toList();
+      }).toList();
+    } else {
+      // Alternating layout: a layout of 1-product columns.
+
+      return [
+        for (final product in products)
+          Container(
+            width: _cardToScreenWidthRatio * MediaQuery.of(context).size.width,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: OneProductCardColumn(
+                product: product,
+                reverse: false,
+              ),
+            ),
+          )
+      ];
+    }
   }
 
   int _evenCasesIndex(int input) {
@@ -85,11 +143,20 @@ class MobileAsymmetricView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      scrollDirection: Axis.horizontal,
-      padding: const EdgeInsetsDirectional.fromSTEB(0, 34, 16, 44),
-      children: _buildColumns(context),
-      physics: const AlwaysScrollableScrollPhysics(),
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return ListView(
+          scrollDirection: Axis.horizontal,
+          padding: const EdgeInsetsDirectional.fromSTEB(
+            0,
+            _topPadding,
+            16,
+            _bottomPadding,
+          ),
+          children: _buildColumns(context, constraints),
+          physics: const AlwaysScrollableScrollPhysics(),
+        );
+      },
     );
   }
 }
@@ -104,18 +171,39 @@ class DesktopAsymmetricView extends StatelessWidget {
     final Widget _gap = Container(width: 24);
     final Widget _flex = Expanded(flex: 1, child: Container());
 
+    // Determine the scale factor for the desktop asymmetric view.
+
+    final double textScaleFactor =
+        GalleryOptions.of(context).textScaleFactor(context);
+
+    // When text is larger, the images becomes wider, but at half the rate.
+    final double imageScaleFactor = reducedTextScale(context);
+
+    // When text is larger, horizontal padding becomes smaller.
+    final double paddingScaleFactor = textScaleFactor >= 1.5 ? 0.25 : 1;
+
     // Calculate number of columns
 
-    final double sidebar = desktopCategoryMenuPageWidth;
-    final double minimumBoundaryWidth = 84;
-    final double columnWidth = 186;
-    final double columnGapWidth = 24;
+    final double sidebar = desktopCategoryMenuPageWidth(context: context);
+    final double minimumBoundaryWidth = 84 * paddingScaleFactor;
+    final double columnWidth = 186 * imageScaleFactor;
+    final double columnGapWidth = 24 * imageScaleFactor;
     final double windowWidth = MediaQuery.of(context).size.width;
 
-    final int columnCount =
-        ((windowWidth + columnGapWidth - 2 * minimumBoundaryWidth - sidebar) /
-                (columnWidth + columnGapWidth))
-            .floor();
+    final int columnCount = max(
+      1,
+      ((windowWidth + columnGapWidth - 2 * minimumBoundaryWidth - sidebar) /
+              (columnWidth + columnGapWidth))
+          .floor(),
+    );
+
+    // Limit column width to fit within window when there is only one column.
+    final double actualColumnWidth = columnCount == 1
+        ? min(
+            columnWidth,
+            windowWidth - sidebar - 2 * minimumBoundaryWidth,
+          )
+        : columnWidth;
 
     final List<DesktopProductCardColumn> productCardColumns =
         List<DesktopProductCardColumn>.generate(columnCount, (currentColumn) {
@@ -128,6 +216,9 @@ class DesktopAsymmetricView extends StatelessWidget {
         alignToEnd: alignToEnd,
         startLarge: startLarge,
         products: products,
+        largeImageWidth: actualColumnWidth,
+        smallImageWidth:
+            columnCount > 1 ? columnWidth - columnGapWidth : actualColumnWidth,
       );
     });
 
