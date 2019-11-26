@@ -20,9 +20,9 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'uz';
 
   static m0(value) =>
-      "To see the source code for this app, please visit the ${value}.";
+      "Bu ilovaning manba kodini koʻrish uchun oching: ${value}.";
 
-  static m1(title) => "Placeholder for ${title} tab";
+  static m1(title) => "${title} varagʻi uchun teg";
 
   static m2(totalRestaurants) =>
       "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
@@ -33,61 +33,71 @@ class MessageLookup extends MessageLookupByLibrary {
   static m4(totalProperties) =>
       "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(value) => "Item ${value}";
+  static m5(value) => "${value}";
 
-  static m6(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m6(name, phoneNumber) => "${name} telefoni raqami: ${phoneNumber}";
 
   static m7(value) => "Siz tanlagan qiymat: \"${value}\"";
 
-  static m8(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
 
-  static m9(percent) =>
-      "Good work! Your checking account is ${percent} higher than last month.";
+  static m9(amount) => "Siz bu oy bankomatlar uchun ${amount} sarfladingiz";
 
   static m10(percent) =>
-      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+      "Aʼlo! Bu oy hisobingizda oldingi oyga nisbatan ${percent} summa koʻp.";
 
-  static m11(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m11(percent) =>
+      "Diqqat! Bu oy byudjetingizdan ${percent} sarfladingiz.";
 
-  static m12(count) =>
+  static m12(amount) => "Bu hafta restoranlar uchun ${amount} sarfladingiz.";
+
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "x ${price}";
+  static m17(price) => "x ${price}";
 
-  static m15(quantity) => "Quantity: ${quantity}";
+  static m18(quantity) => "Soni: ${quantity}";
 
-  static m16(value) => "Item ${value}";
+  static m19(value) => "${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "aboutDialogDescription": m0,
-        "aboutFlutterSamplesRepo":
-            MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
+        "aboutFlutterSamplesRepo": MessageLookupByLibrary.simpleMessage(
+            "Github omboridan Flutter namunalari"),
         "bottomNavigationAccountTab":
-            MessageLookupByLibrary.simpleMessage("Account"),
+            MessageLookupByLibrary.simpleMessage("Hisob"),
         "bottomNavigationAlarmTab":
-            MessageLookupByLibrary.simpleMessage("Alarm"),
+            MessageLookupByLibrary.simpleMessage("Bildirishnoma"),
         "bottomNavigationCalendarTab":
-            MessageLookupByLibrary.simpleMessage("Calendar"),
+            MessageLookupByLibrary.simpleMessage("Taqvim"),
         "bottomNavigationCameraTab":
-            MessageLookupByLibrary.simpleMessage("Camera"),
+            MessageLookupByLibrary.simpleMessage("Kamera"),
         "bottomNavigationCommentsTab":
-            MessageLookupByLibrary.simpleMessage("Comments"),
+            MessageLookupByLibrary.simpleMessage("Fikrlar"),
         "bottomNavigationContentPlaceholder": m1,
-        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "buttonText": MessageLookupByLibrary.simpleMessage("TUGMA"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Yaratish"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
-        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
-        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
-        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
-        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
-        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Velosipedda"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Lift"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Kamin"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Katta"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Oʻrtacha"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Kichik"),
         "chipTurnOnLights":
-            MessageLookupByLibrary.simpleMessage("Turn on lights"),
-        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
+            MessageLookupByLibrary.simpleMessage("Chiroqlarni yoqish"),
+        "chipWasher":
+            MessageLookupByLibrary.simpleMessage("Kir yuvish mashinasi"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("QAHRABO RANG"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("KOʻK"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("MOVIY KULRANG"),
@@ -109,84 +119,83 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsRed": MessageLookupByLibrary.simpleMessage("QIZIL"),
         "colorsTeal": MessageLookupByLibrary.simpleMessage("MOVIY"),
         "colorsYellow": MessageLookupByLibrary.simpleMessage("SARIQ"),
-        "craneDescription":
-            MessageLookupByLibrary.simpleMessage("A personalized travel app"),
-        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
-        "craneEat1":
-            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
-        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
-        "craneEat3":
-            MessageLookupByLibrary.simpleMessage("Portland, United States"),
-        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
-        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
-        "craneEat6":
-            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
-        "craneEat7":
-            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
-        "craneEat8":
-            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
-        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneDescription": MessageLookupByLibrary.simpleMessage(
+            "Sayohatlar uchun moslangan ilova"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("OVQATLAR"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Neapol, Italiya"),
+        "craneEat1": MessageLookupByLibrary.simpleMessage("Dallas, AQSH"),
+        "craneEat10":
+            MessageLookupByLibrary.simpleMessage("Lissabon, Portugaliya"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("Kordova, Argentina"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage("Portlend, AQSH"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Parij, Fransiya"),
+        "craneEat5":
+            MessageLookupByLibrary.simpleMessage("Seul, Janubiy Koreya"),
+        "craneEat6": MessageLookupByLibrary.simpleMessage("Sietl, AQSH"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage("Neshvill, AQSH"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage("Atlanta, AQSH"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Ispaniya"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Restaurants by Destination"),
-        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
-        "craneFly0":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneFly1":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneFly12":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+            "Turli manzillardagi restoranlar"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("UCHISH"),
+        "craneFly0": MessageLookupByLibrary.simpleMessage("Aspen, AQSH"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage("Katta Sur, AQSH"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Qohira, Misr"),
+        "craneFly11":
+            MessageLookupByLibrary.simpleMessage("Lissabon, Portugaliya"),
+        "craneFly12": MessageLookupByLibrary.simpleMessage("Napa, AQSH"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indoneziya"),
         "craneFly2":
-            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
-        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+            MessageLookupByLibrary.simpleMessage("Xumbu vodiysi, Nepal"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu-Pikchu, Peru"),
+        "craneFly4":
+            MessageLookupByLibrary.simpleMessage("Male, Maldiv orollari"),
         "craneFly5":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
-        "craneFly7": MessageLookupByLibrary.simpleMessage(
-            "Mount Rushmore, United States"),
-        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
-        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            MessageLookupByLibrary.simpleMessage("Vitsnau, Shveytsariya"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Ispaniya"),
+        "craneFly7":
+            MessageLookupByLibrary.simpleMessage("Rashmor togʻi, AQSH"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapur"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Gavana, Kuba"),
         "craneFlyStops": m3,
-        "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Flights by Destination"),
-        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
-        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+        "craneFlySubhead":
+            MessageLookupByLibrary.simpleMessage("Turli manzillarga parvozlar"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("Sanani tanlang"),
+        "craneFormDates":
+            MessageLookupByLibrary.simpleMessage("Sanalarni tanlang"),
         "craneFormDestination":
-            MessageLookupByLibrary.simpleMessage("Choose Destination"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+            MessageLookupByLibrary.simpleMessage("Yakuniy manzilni tanlang"),
+        "craneFormDiners":
+            MessageLookupByLibrary.simpleMessage("Tamaddixonalar"),
         "craneFormLocation":
-            MessageLookupByLibrary.simpleMessage("Select Location"),
-        "craneFormOrigin":
-            MessageLookupByLibrary.simpleMessage("Choose Origin"),
-        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
-        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneSleep1":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+            MessageLookupByLibrary.simpleMessage("Joylashuvni tanlang"),
+        "craneFormOrigin": MessageLookupByLibrary.simpleMessage(
+            "Boshlangʻich manzilni tanlang"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("Vaqtni tanlang"),
+        "craneFormTravelers":
+            MessageLookupByLibrary.simpleMessage("Sayohatchilar"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("UYQU"),
+        "craneSleep0":
+            MessageLookupByLibrary.simpleMessage("Male, Maldiv orollari"),
+        "craneSleep1": MessageLookupByLibrary.simpleMessage("Aspen, AQSH"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Qohira, Misr"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taypey, Tayvan"),
         "craneSleep2":
-            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            MessageLookupByLibrary.simpleMessage("Machu-Pikchu, Peru"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Gavana, Kuba"),
         "craneSleep4":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneSleep5":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneSleep6":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
-        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
-        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("Vitsnau, Shveytsariya"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage("Katta Sur, AQSH"),
+        "craneSleep6": MessageLookupByLibrary.simpleMessage("Napa, AQSH"),
+        "craneSleep7":
+            MessageLookupByLibrary.simpleMessage("Porto, Portugaliya"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Meksika"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("Lissabon, Portugaliya"),
         "craneSleepProperties": m4,
-        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Properties by Destination"),
+        "craneSleepSubhead":
+            MessageLookupByLibrary.simpleMessage("Turli manzillardagi joylar"),
         "cupertinoAlertAllow":
             MessageLookupByLibrary.simpleMessage("Ruxsat berish"),
         "cupertinoAlertApplePie":
@@ -211,15 +220,15 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ilovalardan foydalanishdan oldin “Xaritalar” ilovasiga joylashuv axborotidan foydalanishga ruxsat berasizmi?"),
         "cupertinoAlertTiramisu":
             MessageLookupByLibrary.simpleMessage("Tiramisu"),
-        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Tugma"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("Orqa fon bilan"),
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Bildirishnomani koʻrsatish"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+            "Amal chiplari asosiy kontentga oid amallarni faollashtiradigan parametrlar toʻplamini ifodalaydi. Amal chiplari dinamik tarzda chiqib, inteyfeysni boyitadi."),
         "demoActionChipTitle":
-            MessageLookupByLibrary.simpleMessage("Action Chip"),
+            MessageLookupByLibrary.simpleMessage("Amal elementi"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Ogohlantiruvchi muloqot oynasi foydalanuvchini u eʼtibor qaratishi   lozim boʻlgan voqealar yuz berganda ogohlantiradi. Unda sarlavha va mavjud harakatlar roʻyxati boʻlishi mumkin."),
         "demoAlertDialogTitle":
@@ -227,48 +236,50 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Sarlavhali bildirishnoma"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
+            "Ekranning pastki qismidagi navigatsiya panelida xizmatning uchdan beshgacha qismini joylashtirish mumkin. Ularning har biriga alohida belgi va matn (ixtiyoriy) kiritiladi. Foydalanuvchi belgilardan biriga bossa, kerakli qism ochiladi."),
         "demoBottomNavigationPersistentLabels":
-            MessageLookupByLibrary.simpleMessage("Persistent labels"),
+            MessageLookupByLibrary.simpleMessage("Doimiy yorliqlar"),
         "demoBottomNavigationSelectedLabel":
-            MessageLookupByLibrary.simpleMessage("Selected label"),
+            MessageLookupByLibrary.simpleMessage("Tanlangan belgi"),
         "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation with cross-fading views"),
+            "Oson ochish uchun ekran pastidagi navigatsiya"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom navigation"),
-        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Ekran pastidagi navigatsiya"),
+        "demoBottomSheetAddLabel":
+            MessageLookupByLibrary.simpleMessage("Kiritish"),
         "demoBottomSheetButtonText":
-            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
-        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
+            MessageLookupByLibrary.simpleMessage("QUYI ROʻYXATNI KOʻRSATISH"),
+        "demoBottomSheetHeader":
+            MessageLookupByLibrary.simpleMessage("Yuqori sarlavha"),
         "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
+            "Quyi modal roʻyxatdan menyu va muloqot oynasi bilan birgalikda foydalanish mumkin. Bunday roʻyxat foydalanuvchiga kerakli qismni oson ochishiga yordam beradi."),
         "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Quyi modal sahifa"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
+                "Doimiy quyi roʻyxat ilovaning asosiy qismlarini koʻrsatadi. Bunday roʻyxat doim ekranning pastki qismida chiqadi (foydalanuvchi boshqa qismlar bilan ishlagan vaqtda ham)."),
         "demoBottomSheetPersistentTitle":
-            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Doimiy quyi roʻyxat"),
         "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Persistent and modal bottom sheets"),
+            "Quyi doimiy va modal roʻyxatlar"),
         "demoBottomSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Quyi roʻyxat"),
         "demoBottomTextFieldsTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Matn maydonchalari"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "Yassi, qavariq, atrofi chizilgan va turli xil"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Tugmalar"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Compact elements that represent an input, attribute, or action"),
-        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+            "Kiritish, xususiyat yoki amalni aks etuvchi ixcham elementlar"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Elementlar"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+            "Tanlov chiplari toʻplamdagi variantlardan birini aks ettiradi. Ular tavsif matni yoki turkumdan iborat boʻladi."),
         "demoChoiceChipTitle":
-            MessageLookupByLibrary.simpleMessage("Choice Chip"),
+            MessageLookupByLibrary.simpleMessage("Tanlov chipi"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Kod namunasi"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "Color and color swatch constants which represent Material Design\'s color palette."),
+            "Material Design ranglar majmuasini taqdim qiluvchi rang va gradiyentlar uchun konstantalar"),
         "demoColorsSubtitle":
             MessageLookupByLibrary.simpleMessage("Barcha standart ranglar"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("Ranglar"),
@@ -284,9 +295,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
             "Ogohlantiruvchi muloqot oynasi foydalanuvchini u eʼtibor qaratishi lozim boʻlgan voqealar yuz berganda ogohlantiradi. Unda sarlavha, kontent va mavjud harakatlar roʻyxati boʻlishi mumkin. Sarlavha matn tepasida, harakatlar esa ularning ostida joylashadi."),
         "demoCupertinoAlertTitle":
-            MessageLookupByLibrary.simpleMessage("Alert"),
+            MessageLookupByLibrary.simpleMessage("Bildirishnoma"),
         "demoCupertinoAlertWithTitleTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage("Sarlavhali bildirishnoma"),
         "demoCupertinoAlertsSubtitle": MessageLookupByLibrary.simpleMessage(
             "iOS uslubidagi bildirishnomali muloqot oynasi"),
         "demoCupertinoAlertsTitle":
@@ -296,7 +307,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS uslubidagi tugmalar"),
         "demoCupertinoButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Buttons"),
+            MessageLookupByLibrary.simpleMessage("Tugmalar"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
                 "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
@@ -311,9 +322,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API hujjatlari"),
         "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Filter chips use tags or descriptive words as a way to filter content."),
+            "Filtr chiplari kontentni teglar yoki tavsif soʻzlar bilan filtrlaydi."),
         "demoFilterChipTitle":
-            MessageLookupByLibrary.simpleMessage("Filter Chip"),
+            MessageLookupByLibrary.simpleMessage("Filtr chipi"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Tekis tugmalarni bossangiz, ular koʻtarilmaydi. Uning oʻrniga siyohli dogʻ paydo boʻladi. Bu tugmalardan asboblar panelida va muloqot oynalarida foydalaning yoki ularni maydonga kiriting"),
         "demoFlatButtonTitle":
@@ -327,12 +338,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoFullscreenDialogTitle":
             MessageLookupByLibrary.simpleMessage("Butun ekran"),
         "demoFullscreenTooltip":
-            MessageLookupByLibrary.simpleMessage("Full Screen"),
+            MessageLookupByLibrary.simpleMessage("Butun ekran"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Axborot"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
+            "Kiritish chiplari obyekt (shaxs, joy yoki narsa) haqida umumiy axborot beradi yoki chatdagi ixcham matn shaklida chiqaradi."),
         "demoInputChipTitle":
-            MessageLookupByLibrary.simpleMessage("Input Chip"),
+            MessageLookupByLibrary.simpleMessage("Kiritish chipi"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL ochilmadi:"),
         "demoOptionsTooltip":
@@ -348,67 +359,72 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Oddiy muloqot oynasida foydalanuvchiga tanlash uchun bir nechta variant beriladi. Oynada sarlavha boʻlsa, u variantlar ustida joylashadi."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Oddiy"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
-        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
+            "Matn kiritish maydonchalari yordamida foydalanuvchilar grafik interfeysga matn kirita olishadi. Ular odatda shakl va muloqot oynalari shaklida chiqadi."),
+        "demoTextFieldEmail":
+            MessageLookupByLibrary.simpleMessage("Email manzil"),
         "demoTextFieldEnterPassword":
-            MessageLookupByLibrary.simpleMessage("Please enter a password."),
+            MessageLookupByLibrary.simpleMessage("Parolni kiriting."),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### - Enter a US phone number."),
+            "(###) ###-#### - AQSH telefon raqamini kiriting."),
         "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
-            "Please fix the errors in red before submitting."),
+            "Yuborishdan oldin qizil bilan ajratilgan xatolarni tuzating."),
         "demoTextFieldHidePasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Hide password"),
+            MessageLookupByLibrary.simpleMessage("Parolni berkitish"),
         "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
-            "Keep it short, this is just a demo."),
+            "Qisqa yozing. Bu shunchaki matn namunasi."),
         "demoTextFieldLifeStory":
-            MessageLookupByLibrary.simpleMessage("Life story"),
-        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
+            MessageLookupByLibrary.simpleMessage("Tarjimayi hol"),
+        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Nomi*"),
         "demoTextFieldNameHasPhoneNumber": m6,
         "demoTextFieldNameRequired":
-            MessageLookupByLibrary.simpleMessage("Name is required."),
+            MessageLookupByLibrary.simpleMessage("Nomini kiriting."),
         "demoTextFieldNoMoreThan":
-            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+            MessageLookupByLibrary.simpleMessage("8 ta belgidan oshmasin."),
         "demoTextFieldOnlyAlphabeticalChars":
             MessageLookupByLibrary.simpleMessage(
-                "Please enter only alphabetical characters."),
-        "demoTextFieldPassword":
-            MessageLookupByLibrary.simpleMessage("Password*"),
+                "Faqat alifbodagi harflarni kiriting."),
+        "demoTextFieldPassword": MessageLookupByLibrary.simpleMessage("Parol*"),
         "demoTextFieldPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+            MessageLookupByLibrary.simpleMessage("Parollar bir xil emas"),
         "demoTextFieldPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("Phone number*"),
+            MessageLookupByLibrary.simpleMessage("Telefon raqami*"),
         "demoTextFieldRequiredField":
-            MessageLookupByLibrary.simpleMessage("* indicates required field"),
+            MessageLookupByLibrary.simpleMessage("* kiritish shart"),
         "demoTextFieldRetypePassword":
-            MessageLookupByLibrary.simpleMessage("Re-type password*"),
-        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+            MessageLookupByLibrary.simpleMessage("Parolni qayta kiriting*"),
+        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Maosh"),
         "demoTextFieldShowPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Show password"),
-        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
+            MessageLookupByLibrary.simpleMessage("Parolni koʻrsatish"),
+        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("YUBORISH"),
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Single line of editable text and numbers"),
+            "Harf va raqamlarni tahrirlash uchun bitta qator"),
         "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
+            "Oʻzingiz haqingizda aytib bering (masalan, nima ish qilishingiz yoki qanday hobbilaringiz borligini yozing)"),
         "demoTextFieldTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Matn maydonchalari"),
         "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
         "demoTextFieldWhatDoPeopleCallYou":
-            MessageLookupByLibrary.simpleMessage("What do people call you?"),
-        "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
+            MessageLookupByLibrary.simpleMessage("Ismingiz nima?"),
+        "demoTextFieldWhereCanWeReachYou": MessageLookupByLibrary.simpleMessage(
+            "Qaysi nomerga telefon qilib sizni topamiz?"),
         "demoTextFieldYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("Your email address"),
+            MessageLookupByLibrary.simpleMessage("Email manzilingiz"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Belgilash/olib tashlash tugmasi bilan oʻxshash parametrlarni guruhlash mumkin. Belgilash/olib tashlash tugmasiga aloqador guruhlar bitta umumiy konteynerda boʻlishi lozim."),
         "demoToggleButtonTitle": MessageLookupByLibrary.simpleMessage(
             "Belgilash/olib tashlash tugmalari"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Definitions for the various typographical styles found in Material Design."),
+            "Material Design ichida bor har xil shriftlar uchun izoh."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined text styles"),
+            "Barcha oldindan aniqlangan matn uslublari"),
         "demoTypographyTitle":
-            MessageLookupByLibrary.simpleMessage("Typography"),
+            MessageLookupByLibrary.simpleMessage("Matn sozlamalari"),
         "dialogAddAccount":
             MessageLookupByLibrary.simpleMessage("Hisob qoʻshish"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("ROZIMAN"),
@@ -436,238 +452,272 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Turkumlar"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Gallereya"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("Car Savings"),
+            MessageLookupByLibrary.simpleMessage("Avtomobil uchun jamgʻarma"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Checking"),
+            MessageLookupByLibrary.simpleMessage("Bank hisobi"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("Home Savings"),
+            MessageLookupByLibrary.simpleMessage("Uy uchun jamgʻarma"),
         "rallyAccountDataVacation":
-            MessageLookupByLibrary.simpleMessage("Vacation"),
+            MessageLookupByLibrary.simpleMessage("Taʼtil"),
         "rallyAccountDetailDataAccountOwner":
-            MessageLookupByLibrary.simpleMessage("Account Owner"),
+            MessageLookupByLibrary.simpleMessage("Hisob egasi"),
         "rallyAccountDetailDataAnnualPercentageYield":
-            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+            MessageLookupByLibrary.simpleMessage("Yillik foiz koʻrsatkichi"),
         "rallyAccountDetailDataInterestPaidLastYear":
-            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+            MessageLookupByLibrary.simpleMessage("Oʻtgan yilgi toʻlov foizi"),
         "rallyAccountDetailDataInterestRate":
-            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+            MessageLookupByLibrary.simpleMessage("Stavka foizi"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+            MessageLookupByLibrary.simpleMessage("Yil boshidan beri foizlar"),
         "rallyAccountDetailDataNextStatement":
-            MessageLookupByLibrary.simpleMessage("Next Statement"),
-        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
-        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
-        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
-        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
-        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+            MessageLookupByLibrary.simpleMessage("Keyingi hisob qaydnomasi"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Jami"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Hisoblar"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Bildirishnomalar"),
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("Hisob"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Muddati"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
+            MessageLookupByLibrary.simpleMessage("Kiyim-kechak"),
         "rallyBudgetCategoryCoffeeShops":
-            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+            MessageLookupByLibrary.simpleMessage("Qahvaxonalar"),
         "rallyBudgetCategoryGroceries":
-            MessageLookupByLibrary.simpleMessage("Groceries"),
+            MessageLookupByLibrary.simpleMessage("Baqqollik mollari"),
         "rallyBudgetCategoryRestaurants":
-            MessageLookupByLibrary.simpleMessage("Restaurants"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
-        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
-        "rallyDescription":
-            MessageLookupByLibrary.simpleMessage("A personal finance app"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
-        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
-        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+            MessageLookupByLibrary.simpleMessage("Restoranlar"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Qoldiq"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budjetlar"),
+        "rallyDescription": MessageLookupByLibrary.simpleMessage(
+            "Budjetni rejalashtirish uchun ilova"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("QOLDI"),
+        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("KIRISH"),
+        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Kirish"),
         "rallyLoginLoginToRally":
-            MessageLookupByLibrary.simpleMessage("Login to Rally"),
+            MessageLookupByLibrary.simpleMessage("Rally hisobiga kirish"),
         "rallyLoginNoAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Hisobingiz yoʻqmi?"),
+        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Parol"),
         "rallyLoginRememberMe":
-            MessageLookupByLibrary.simpleMessage("Remember Me"),
-        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
-        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
-        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+            MessageLookupByLibrary.simpleMessage("Eslab qolinsin"),
+        "rallyLoginSignUp":
+            MessageLookupByLibrary.simpleMessage("ROʻYXATDAN OʻTISH"),
+        "rallyLoginUsername":
+            MessageLookupByLibrary.simpleMessage("Foydalanuvchi nomi"),
+        "rallySeeAll":
+            MessageLookupByLibrary.simpleMessage("HAMMASINI KOʻRSATISH"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms":
-            MessageLookupByLibrary.simpleMessage("Find ATMs"),
-        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+            MessageLookupByLibrary.simpleMessage("Bankomatlarni topish"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Yordam"),
         "rallySettingsManageAccounts":
-            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+            MessageLookupByLibrary.simpleMessage("Hisoblarni boshqarish"),
         "rallySettingsNotifications":
-            MessageLookupByLibrary.simpleMessage("Notifications"),
+            MessageLookupByLibrary.simpleMessage("Bildirishnomalar"),
         "rallySettingsPaperlessSettings":
-            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
+            MessageLookupByLibrary.simpleMessage("Virtual sozlamalar"),
         "rallySettingsPasscodeAndTouchId":
-            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+            MessageLookupByLibrary.simpleMessage("Kirish kodi va Touch ID"),
         "rallySettingsPersonalInformation":
-            MessageLookupByLibrary.simpleMessage("Personal Information"),
-        "rallySettingsSignOut":
-            MessageLookupByLibrary.simpleMessage("Sign out"),
+            MessageLookupByLibrary.simpleMessage("Shaxsiy maʼlumotlar"),
+        "rallySettingsSignOut": MessageLookupByLibrary.simpleMessage("Chiqish"),
         "rallySettingsTaxDocuments":
-            MessageLookupByLibrary.simpleMessage("Tax Documents"),
-        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
-        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
-        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
-        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
-        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
+            MessageLookupByLibrary.simpleMessage("Soliq hujjatlari"),
+        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("HISOBLAR"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("HISOB"),
+        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDJETLAR"),
+        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("UMUMIY"),
+        "rallyTitleSettings":
+            MessageLookupByLibrary.simpleMessage("SOZLAMALAR"),
         "settingsAbout":
-            MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
-        "settingsAttribution": MessageLookupByLibrary.simpleMessage(
-            "Designed by TOASTER in London"),
-        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
+            MessageLookupByLibrary.simpleMessage("Flutter Gallery haqida"),
+        "settingsAttribution":
+            MessageLookupByLibrary.simpleMessage("Dizayn: TOASTER, London"),
+        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Tungi"),
         "settingsFeedback":
-            MessageLookupByLibrary.simpleMessage("Send feedback"),
-        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Light"),
-        "settingsLocale": MessageLookupByLibrary.simpleMessage("Locale"),
+            MessageLookupByLibrary.simpleMessage("Fikr-mulohaza"),
+        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Kunduzgi"),
+        "settingsLocale":
+            MessageLookupByLibrary.simpleMessage("Til va hudud kodi"),
         "settingsPlatformAndroid":
             MessageLookupByLibrary.simpleMessage("Android"),
         "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
-            MessageLookupByLibrary.simpleMessage("Platform mechanics"),
+            MessageLookupByLibrary.simpleMessage("Platforma"),
         "settingsSlowMotion":
-            MessageLookupByLibrary.simpleMessage("Slow motion"),
-        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
+            MessageLookupByLibrary.simpleMessage("Sekinlashuv"),
+        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("Tizim"),
         "settingsTextDirection":
-            MessageLookupByLibrary.simpleMessage("Text direction"),
-        "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
+            MessageLookupByLibrary.simpleMessage("Matn yoʻnalishi"),
+        "settingsTextDirectionLTR":
+            MessageLookupByLibrary.simpleMessage("Chapdan oʻngga"),
         "settingsTextDirectionLocaleBased":
             MessageLookupByLibrary.simpleMessage("Based on locale"),
-        "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
+        "settingsTextDirectionRTL":
+            MessageLookupByLibrary.simpleMessage("Oʻngdan chapga"),
         "settingsTextScaling":
-            MessageLookupByLibrary.simpleMessage("Text scaling"),
-        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
+            MessageLookupByLibrary.simpleMessage("Matn oʻlchami"),
+        "settingsTextScalingHuge":
+            MessageLookupByLibrary.simpleMessage("Juda katta"),
         "settingsTextScalingLarge":
-            MessageLookupByLibrary.simpleMessage("Large"),
+            MessageLookupByLibrary.simpleMessage("Yirik"),
         "settingsTextScalingNormal":
-            MessageLookupByLibrary.simpleMessage("Normal"),
+            MessageLookupByLibrary.simpleMessage("Odatdagi"),
         "settingsTextScalingSmall":
-            MessageLookupByLibrary.simpleMessage("Small"),
-        "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Kichkina"),
+        "settingsTheme": MessageLookupByLibrary.simpleMessage("Mavzu"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("Sozlamalar"),
         "shrineCancelButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CANCEL"),
+            MessageLookupByLibrary.simpleMessage("BEKOR QILISH"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m13,
-        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+            MessageLookupByLibrary.simpleMessage("SAVATCHANI TOZALASH"),
+        "shrineCartItemCount": m16,
+        "shrineCartPageCaption":
+            MessageLookupByLibrary.simpleMessage("SAVATCHA"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("Shipping:"),
+            MessageLookupByLibrary.simpleMessage("Yetkazib berish narxi:"),
         "shrineCartSubtotalCaption":
-            MessageLookupByLibrary.simpleMessage("Subtotal:"),
-        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
-        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+            MessageLookupByLibrary.simpleMessage("Oraliq summa:"),
+        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Soliq:"),
+        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("JAMI"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
+            MessageLookupByLibrary.simpleMessage("AKSESSUARLAR"),
+        "shrineCategoryNameAll":
+            MessageLookupByLibrary.simpleMessage("HAMMASI"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("CLOTHING"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
-        "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+            MessageLookupByLibrary.simpleMessage("KIYIMLAR"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("UY"),
+        "shrineDescription": MessageLookupByLibrary.simpleMessage(
+            "Zamonaviy buyumlarni sotib olish uchun ilova"),
         "shrineLoginPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Parol"),
         "shrineLoginUsernameLabel":
-            MessageLookupByLibrary.simpleMessage("Username"),
+            MessageLookupByLibrary.simpleMessage("Foydalanuvchi nomi"),
         "shrineLogoutButtonCaption":
-            MessageLookupByLibrary.simpleMessage("LOGOUT"),
-        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
-        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+            MessageLookupByLibrary.simpleMessage("CHIQISH"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENYU"),
+        "shrineNextButtonCaption":
+            MessageLookupByLibrary.simpleMessage("KEYINGI"),
         "shrineProductBlueStoneMug":
-            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
+            MessageLookupByLibrary.simpleMessage("Koʻk krujka"),
         "shrineProductCeriseScallopTee":
-            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+            MessageLookupByLibrary.simpleMessage("Shaftolirang futbolka"),
         "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+            MessageLookupByLibrary.simpleMessage("Paxtali sochiqlar"),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+            MessageLookupByLibrary.simpleMessage("Paxtali koʻylak"),
         "shrineProductClassicWhiteCollar":
-            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+            MessageLookupByLibrary.simpleMessage("Klassik oq bluzka"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+            MessageLookupByLibrary.simpleMessage("Och jigarrang sviter"),
         "shrineProductCopperWireRack":
-            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+            MessageLookupByLibrary.simpleMessage("Mis simli savat"),
         "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+            MessageLookupByLibrary.simpleMessage("Chiziqli kofta"),
         "shrineProductGardenStrand":
-            MessageLookupByLibrary.simpleMessage("Garden strand"),
+            MessageLookupByLibrary.simpleMessage("Gulchambar"),
         "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+            MessageLookupByLibrary.simpleMessage("Getsbi uslubidagi shlyapa"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
+            MessageLookupByLibrary.simpleMessage("Jentri uslubidagi kurtka"),
         "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+            MessageLookupByLibrary.simpleMessage("Stol jamlanmasi"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+            MessageLookupByLibrary.simpleMessage("Sariq sharf"),
         "shrineProductGreySlouchTank":
-            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+            MessageLookupByLibrary.simpleMessage("Kulrang mayka"),
         "shrineProductHurrahsTeaSet":
-            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+            MessageLookupByLibrary.simpleMessage("Choy ichish uchun jamlanma"),
         "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
+            MessageLookupByLibrary.simpleMessage("Oshxona jamlanmasi"),
         "shrineProductNavyTrousers":
-            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+            MessageLookupByLibrary.simpleMessage("Kalta klesh shimlari"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+            MessageLookupByLibrary.simpleMessage("Plaster tunika"),
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Quartet table"),
+            MessageLookupByLibrary.simpleMessage("Aylana stol"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+            MessageLookupByLibrary.simpleMessage("Yomgʻir suvi tarnovi"),
         "shrineProductRamonaCrossover":
-            MessageLookupByLibrary.simpleMessage("Ramona crossover"),
+            MessageLookupByLibrary.simpleMessage("Ayollar bluzkasi"),
         "shrineProductSeaTunic":
-            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+            MessageLookupByLibrary.simpleMessage("Yengil sviter"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
-        "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
+            MessageLookupByLibrary.simpleMessage("Yalpizli sviter"),
+        "shrineProductShoulderRollsTee": MessageLookupByLibrary.simpleMessage(
+            "Qoʻllar erkin harakatlanadigan futbolka"),
         "shrineProductShrugBag":
-            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+            MessageLookupByLibrary.simpleMessage("Hobo sumkasi"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
+            MessageLookupByLibrary.simpleMessage("Sopol idishlar jamlanmasi"),
         "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+            MessageLookupByLibrary.simpleMessage("Stella quyosh koʻzoynaklari"),
         "shrineProductStrutEarrings":
-            MessageLookupByLibrary.simpleMessage("Strut earrings"),
+            MessageLookupByLibrary.simpleMessage("Halqali zirak"),
         "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+            MessageLookupByLibrary.simpleMessage("Sukkulent oʻsimliklari"),
         "shrineProductSunshirtDress":
-            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
-        "shrineProductSurfAndPerfShirt":
-            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+            MessageLookupByLibrary.simpleMessage("Yozgi koʻylak"),
+        "shrineProductSurfAndPerfShirt": MessageLookupByLibrary.simpleMessage(
+            "Dengiz toʻlqinlari rangidagi futbolka"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+            MessageLookupByLibrary.simpleMessage("Vagabond sumkasi"),
         "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+            MessageLookupByLibrary.simpleMessage("Sport paypoqlari"),
         "shrineProductWalterHenleyWhite":
-            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+            MessageLookupByLibrary.simpleMessage("Oq yengil kofta"),
         "shrineProductWeaveKeyring":
-            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+            MessageLookupByLibrary.simpleMessage("Toʻqilgan jevak"),
         "shrineProductWhitePinstripeShirt":
-            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+            MessageLookupByLibrary.simpleMessage("Oq chiziqli koʻylak"),
         "shrineProductWhitneyBelt":
-            MessageLookupByLibrary.simpleMessage("Whitney belt"),
+            MessageLookupByLibrary.simpleMessage("Charm kamar"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription":
-            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m16,
-        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
+            MessageLookupByLibrary.simpleMessage("Moslashuvchan maket"),
+        "starterAppDrawerItem": m19,
+        "starterAppGenericBody":
+            MessageLookupByLibrary.simpleMessage("Asosiy qism"),
         "starterAppGenericButton":
-            MessageLookupByLibrary.simpleMessage("BUTTON"),
+            MessageLookupByLibrary.simpleMessage("TUGMA"),
         "starterAppGenericHeadline":
-            MessageLookupByLibrary.simpleMessage("Headline"),
+            MessageLookupByLibrary.simpleMessage("Sarlavha"),
         "starterAppGenericSubtitle":
-            MessageLookupByLibrary.simpleMessage("Subtitle"),
-        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
-        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
-        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Taglavha"),
+        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Nomi"),
+        "starterAppTitle":
+            MessageLookupByLibrary.simpleMessage("Boshlovchilar uchun ilova"),
+        "starterAppTooltipAdd":
+            MessageLookupByLibrary.simpleMessage("Kiritish"),
         "starterAppTooltipFavorite":
-            MessageLookupByLibrary.simpleMessage("Favorite"),
+            MessageLookupByLibrary.simpleMessage("Sevimli"),
         "starterAppTooltipSearch":
-            MessageLookupByLibrary.simpleMessage("Search"),
-        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
+            MessageLookupByLibrary.simpleMessage("Qidiruv"),
+        "starterAppTooltipShare":
+            MessageLookupByLibrary.simpleMessage("Ulashish")
       };
 }

@@ -38,25 +38,34 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "እርስዎ ይህን መርጠዋል፦ «${value}»";
 
-  static m8(amount) => "በዚህ ወር በኤቲኤም ክፍያዎች ላይ ${amount} አውጥተዋል";
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
 
-  static m9(percent) => "ጥሩ ስራ! የእርስዎ ተንቀሳቃሽ ሒሳብ ከባለፈው ወር በ${percent} ጨምሯል።";
+  static m9(amount) => "በዚህ ወር በኤቲኤም ክፍያዎች ላይ ${amount} አውጥተዋል";
 
-  static m10(percent) => "ማሳሰቢያ፣ የዚህ ወር የሸመታ ባጀትዎን ${percent} ተጠቅመዋል።";
+  static m10(percent) => "ጥሩ ስራ! የእርስዎ ተንቀሳቃሽ ሒሳብ ከባለፈው ወር በ${percent} ጨምሯል።";
 
-  static m11(amount) => "በዚህ ሳምንት በምግብ ቤቶች ላይ ${amount} አውጥተዋል።";
+  static m11(percent) => "ማሳሰቢያ፣ የዚህ ወር የሸመታ ባጀትዎን ${percent} ተጠቅመዋል።";
 
-  static m12(count) =>
+  static m12(amount) => "በዚህ ሳምንት በምግብ ቤቶች ላይ ${amount} አውጥተዋል።";
+
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "x ${price}";
+  static m17(price) => "x ${price}";
 
-  static m15(quantity) => "መጠን፦ ${quantity}";
+  static m18(quantity) => "መጠን፦ ${quantity}";
 
-  static m16(value) => "ንጥል ${value}";
+  static m19(value) => "ንጥል ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -76,15 +85,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("አዝራር"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("ይፍጠሩ"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
-        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
-        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
-        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
-        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
-        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
-        "chipTurnOnLights":
-            MessageLookupByLibrary.simpleMessage("Turn on lights"),
-        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("ቢስክሌት መንዳት"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("ሊፍት"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("የእሳት ቦታ"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("ትልቅ"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("መካከለኛ"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("ትንሽ"),
+        "chipTurnOnLights": MessageLookupByLibrary.simpleMessage("መብራቶቹን አብራ"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("ማጠቢያ ማሽን"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("አምበር"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("ሰማያዊ"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("ሰማያዊ ግራጫ"),
@@ -107,81 +115,63 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneDescription":
             MessageLookupByLibrary.simpleMessage("ግላዊነት የተላበሰ የጉዞ መተግበሪያ"),
         "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
-        "craneEat1":
-            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
-        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
-        "craneEat3":
-            MessageLookupByLibrary.simpleMessage("Portland, United States"),
-        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
-        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
-        "craneEat6":
-            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
-        "craneEat7":
-            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
-        "craneEat8":
-            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
-        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("ኔፕልስ፣ ጣልያን"),
+        "craneEat1": MessageLookupByLibrary.simpleMessage("ዳላስ፣ አሜሪካ"),
+        "craneEat10": MessageLookupByLibrary.simpleMessage("ሊዝበን፣ ፖርቱጋል"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("ኮርዶባ፣ አርጀንቲና"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage("ፖርትላንድ፣ አሜሪካ"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("ፓሪስ፣ ፈረንሳይ"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("ሲዮል፣ ደቡብ ኮሪያ"),
+        "craneEat6": MessageLookupByLibrary.simpleMessage("ሲያትል፣ አሜሪካ"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage("ናሽቪል፣ አሜሪካ"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage("አትላንታ፣ አሜሪካ"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("ማድሪድ፣ ስፔን"),
         "craneEatRestaurants": m2,
-        "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Restaurants by Destination"),
+        "craneEatSubhead":
+            MessageLookupByLibrary.simpleMessage("ምግብ ቤቶችን በመድረሻ ያስሱ"),
         "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
-        "craneFly0":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneFly1":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneFly12":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
-        "craneFly2":
-            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
-        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneFly5":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
-        "craneFly7": MessageLookupByLibrary.simpleMessage(
-            "Mount Rushmore, United States"),
-        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
-        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneFly0": MessageLookupByLibrary.simpleMessage("አስፐን፣ አሜሪካ"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage("ቢግ ሱር፣ አሜሪካ"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("ካይሮ፣ ግብጽ"),
+        "craneFly11": MessageLookupByLibrary.simpleMessage("ሊዝበን፣ ፖርቱጋል"),
+        "craneFly12": MessageLookupByLibrary.simpleMessage("ናፓ፣ አሜሪካ"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("ባሊ፣ ኢንዶኔዥያ"),
+        "craneFly2": MessageLookupByLibrary.simpleMessage("ኩምቡ ሸለቆ፣ ኔፓል"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("ማቹ ፒቹ፣ ፔሩ"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("ማሌ፣ ማልዲቭስ"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("ቪትዝናው፣ ስዊዘርላንድ"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("ማድሪድ፣ ስፔን"),
+        "craneFly7": MessageLookupByLibrary.simpleMessage("ራሽሞር ተራራ፣ አሜሪካ"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("ሲንጋፖር"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("ሃቫና፣ ኩባ"),
         "craneFlyStops": m3,
-        "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Flights by Destination"),
-        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
-        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+        "craneFlySubhead":
+            MessageLookupByLibrary.simpleMessage("በረራዎችን በመድረሻ ያስሱ"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("ቀን ይምረጡ"),
+        "craneFormDates": MessageLookupByLibrary.simpleMessage("ቀኖችን ይምረጡ"),
         "craneFormDestination":
-            MessageLookupByLibrary.simpleMessage("Choose Destination"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
-        "craneFormLocation":
-            MessageLookupByLibrary.simpleMessage("Select Location"),
-        "craneFormOrigin":
-            MessageLookupByLibrary.simpleMessage("Choose Origin"),
-        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
-        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneSleep1":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
-        "craneSleep2":
-            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
-        "craneSleep4":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneSleep5":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneSleep6":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
-        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
-        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("መድረሻ ይምረጡ"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("መመገቢያዎች"),
+        "craneFormLocation": MessageLookupByLibrary.simpleMessage("አካባቢ ምረጥ"),
+        "craneFormOrigin": MessageLookupByLibrary.simpleMessage("ምንጭ ይምረጡ"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("ጊዜ ምረጥ"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("ተጓዦች"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("እንቅልፍ"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("ማሌ፣ ማልዲቭስ"),
+        "craneSleep1": MessageLookupByLibrary.simpleMessage("አስፐን፣ አሜሪካ"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("ካይሮ፣ ግብጽ"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("ታይፔይ፣ ታይዋን"),
+        "craneSleep2": MessageLookupByLibrary.simpleMessage("ማቹ ፒቹ፣ ፔሩ"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("ሃቫና፣ ኩባ"),
+        "craneSleep4": MessageLookupByLibrary.simpleMessage("ቪትዝናው፣ ስዊዘርላንድ"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage("ቢግ ሱር፣ አሜሪካ"),
+        "craneSleep6": MessageLookupByLibrary.simpleMessage("ናፓ፣ አሜሪካ"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("ፖርቶ፣ ፖርቱጋል"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("ቱሉም፣ ሜክሲኮ"),
+        "craneSleep9": MessageLookupByLibrary.simpleMessage("ሊዝበን፣ ፖርቱጋል"),
         "craneSleepProperties": m4,
-        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Properties by Destination"),
+        "craneSleepSubhead":
+            MessageLookupByLibrary.simpleMessage("ንብረቶችን በመድረሻ ያስሱ"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("ፍቀድ"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("የፖም ፓይ"),
@@ -207,9 +197,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ከበስተጀርባ ጋር"),
         "cupertinoShowAlert": MessageLookupByLibrary.simpleMessage("ማንቂያን አሳይ"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
-        "demoActionChipTitle":
-            MessageLookupByLibrary.simpleMessage("Action Chip"),
+            "የእርምጃ ቺፖች ከዋና ይዘት ጋር በተገናኘት አንድ እርምጃን የሚቀሰቅሱ የአማራጮች ስብስብ ናቸው። የእርምጃ ቺፖች በአንድ ዩአይ ላይ በተለዋዋጭ እና አውዳዊ በሆነ መልኩ መታየት አለባቸው።"),
+        "demoActionChipTitle": MessageLookupByLibrary.simpleMessage("የእርምጃ ቺፕ"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "የማንቂያ ንግግር ተጠቃሚውን ስለ ዕውቅና መስጠት የሚያስፈልጋቸው ሁኔታዎች በተመለከተ መረጃ ይሰጣል። የማንቂያ ንግግር አማራጭ አርዕስት እና የድርጊቶች አማራጭ ዝርዝር አለው።"),
         "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("ማንቂያ"),
@@ -248,12 +237,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ዝርግ፣ ከፍ ያለ፣ ቢጋር እና ተጨማሪ"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("አዝራሮች"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Compact elements that represent an input, attribute, or action"),
-        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+            "አንድ ግቤት፣ አይነት ወይም እርምጃ የሚወክሉ እምቅ ክፍለ-አባላት"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("ቺፖች"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
-        "demoChoiceChipTitle":
-            MessageLookupByLibrary.simpleMessage("Choice Chip"),
+            "የምርጫ ቺፖች ከአንድ ስብስብ ውስጥ አንድ ነጠላ ምርጫን ይወክላሉ። የምርጫ ቺፖች ገላጭ ጽሑፍ ወይም ምድቦችን ይይዛሉ።"),
+        "demoChoiceChipTitle": MessageLookupByLibrary.simpleMessage("የምርጫ ቺፕ"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("የኮድ ናሙና"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "የቁስ ንድፍ ቀለም ቤተ ሥዕልን የሚወክሉ የቀለም እና የቀለም መደብ ቋሚዎች።"),
@@ -296,9 +284,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("የኤፒአይ ስነዳ"),
         "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Filter chips use tags or descriptive words as a way to filter content."),
-        "demoFilterChipTitle":
-            MessageLookupByLibrary.simpleMessage("Filter Chip"),
+            "የማጣሪያ ቺፖች መለያዎችን ወይም ገላጭ ቃላት እንደ ይዘት የሚያጣሩበት መንገድ ይጠቀሙባቸዋል።"),
+        "demoFilterChipTitle": MessageLookupByLibrary.simpleMessage("የማጣሪያ ቺፕ"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "ዝርግ አዝራር የቀለም መርጫ በመጫን ወቅት ያሳያል ሆኖም ግን አያነሳም። ከመደገፍ ጋር በንግግሮች እና በውስጠ መስመር ውስጥ በመሣሪያ አሞሌዎች ላይ ዝርግ አዝራሮችን ይጠቀሙ"),
         "demoFlatButtonTitle": MessageLookupByLibrary.simpleMessage("ዝርግ አዝራር"),
@@ -314,9 +301,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("የሙሉ ገጽ ዕይታ"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("መረጃ"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
-        "demoInputChipTitle":
-            MessageLookupByLibrary.simpleMessage("Input Chip"),
+            "የግቤት ቺፖች እንደ ህጋዊ አካል (ሰው፣ ቦታ ወይም ነገር) ውስብስብ ወይም የውይይት ጽሑፍ ያለ በእምቅ መልኩ ያለ ውስብስብ የመረጃ ክፍልን ይወክላሉ።"),
+        "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("የግቤት ቺፕ"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("ዩአርኤልን ማሳየት አልተቻለም፦"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("አማራጮች"),
@@ -331,6 +317,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "ቀላል ንግግር ለተጠቃሚው በበርካታ አማራጮች መካከል ምርጫን ያቀርባል። ቀላል ንግግር ከምርጫዎ በላይ የሚታይ አማራጭ አርዕስት አለው።"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("ቀላል"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "የጽሑፍ መስኮች ተጠቃሚዎች ቃላትን ወደ ዩአይ እንዲያስገቡ ያስችላቸዋል። በተለምዶ በቅጾች እና በመገናኛዎች ውስጥ ይታያሉ።"),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("ኢሜይል"),
@@ -415,6 +406,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("ምድቦች"),
         "homeHeaderGallery":
             MessageLookupByLibrary.simpleMessage("የሥነ ጥበብ ማዕከል"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("የመኪና ቁጠባ"),
         "rallyAccountDataChecking":
@@ -438,13 +430,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("ጠቅላላ"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("መለያዎች"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("ማንቂያዎች"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("ሒሳብ መጠየቂያዎች"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("የሚደርሰው"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("አልባሳት"),
         "rallyBudgetCategoryCoffeeShops":
@@ -469,6 +463,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("ተመዝገብ"),
         "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("የተጠቃሚ ስም"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("ሁሉንም ይመልከቱ"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ኤቲኤሞችን አግኝ"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("እገዛ"),
@@ -527,7 +527,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ይቅር"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("ጋሪን አጽዳ"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("ጋሪ"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("መላኪያ፦"),
@@ -536,11 +536,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("ግብር፦"),
         "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("ጠቅላላ"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
+            MessageLookupByLibrary.simpleMessage("ተቀጥላዎች"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ሁሉም"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("CLOTHING"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
+            MessageLookupByLibrary.simpleMessage("አልባሳት"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("መነሻ"),
         "shrineDescription":
             MessageLookupByLibrary.simpleMessage("የዘነጠ የችርቻሮ መተግበሪያ"),
         "shrineLoginPasswordLabel":
@@ -587,8 +587,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ኔቪ ሱሪ"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("ፕላስተር ሸማ"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("ባለአራት ጠረጴዛ"),
         "shrineProductRainwaterTray":
@@ -626,9 +626,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ነጭ ባለቀጭን መስመር ሸሚዝ"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney ቀበቶ"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("ምላሽ የሚሰጥ የጀማር አቀማመጥ"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("አካል"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("አዝራር"),
         "starterAppGenericHeadline":

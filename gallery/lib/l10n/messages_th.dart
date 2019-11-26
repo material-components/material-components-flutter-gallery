@@ -24,13 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "ตัวยึดตำแหน่งของแท็บ ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'ไม่มีร้านอาหาร', one: 'มีร้านอาหาร 1 แห่ง', other: 'มีร้านอาหาร ${totalRestaurants} แห่ง')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'บินตรง', one: '1 จุดพัก', other: '${numberOfStops} จุดพัก')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'ไม่มีตัวเลือกที่พัก', one: 'มีตัวเลือกที่พัก 1 แห่ง', other: 'มีตัวเลือกที่พัก ${totalProperties} แห่ง')}";
 
   static m5(value) => "รายการ ${value}";
 
@@ -39,26 +39,35 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "คุณเลือก \"${value}\"";
 
-  static m8(amount) => "เดือนนี้คุณจ่ายค่าธรรมเนียมการใช้ ATM ${amount}";
+  static m8(accountName, accountNumber, amount) =>
+      "บัญชี${accountName} เลขที่ ${accountNumber} จำนวน ${amount}";
 
-  static m9(percent) => "ดีมาก คุณมีเงินฝากมากกว่าเดือนที่แล้ว ${percent}";
+  static m9(amount) => "เดือนนี้คุณจ่ายค่าธรรมเนียมการใช้ ATM จำนวน ${amount}";
 
-  static m10(percent) =>
+  static m10(percent) => "ดีมาก คุณมีเงินฝากมากกว่าเดือนที่แล้ว ${percent}";
+
+  static m11(percent) =>
       "โปรดทราบ คุณใช้งบประมาณสำหรับการช็อปปิ้งของเดือนนี้ไปแล้ว ${percent}";
 
-  static m11(amount) => "สัปดาห์นี้คุณใช้จ่ายไปกับการทานอาหารในร้าน ${amount}";
+  static m12(amount) => "สัปดาห์นี้คุณใช้จ่ายไปกับการทานอาหารในร้าน ${amount}";
 
-  static m12(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+  static m13(count) =>
+      "${Intl.plural(count, one: 'เพิ่มโอกาสในการลดหย่อนภาษีของคุณ กำหนดหมวดหมู่ให้แก่ธุรกรรมที่ยังไม่มีหมวดหมู่ 1 รายการ', other: 'เพิ่มโอกาสในการลดหย่อนภาษีของคุณ กำหนดหมวดหมู่ให้แก่ธุรกรรมที่ยังไม่มีหมวดหมู่ ${count} รายการ')}";
 
-  static m13(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+  static m14(billName, date, amount) =>
+      "บิล${billName}ครบกำหนดชำระในวันที่ ${date} จำนวน ${amount}";
 
-  static m14(price) => "x ${price}";
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "ใช้งบประมาณ${budgetName}ไปแล้ว ${amountUsed} จากทั้งหมด ${amountTotal} เหลืออีก ${amountLeft}";
 
-  static m15(quantity) => "จำนวน: ${quantity}";
+  static m16(quantity) =>
+      "${Intl.plural(quantity, zero: 'ไม่มีสินค้า', one: 'มีสินค้า 1 รายการ', other: 'มีสินค้า ${quantity} รายการ')}";
 
-  static m16(value) => "รายการ ${value}";
+  static m17(price) => "x ${price}";
+
+  static m18(quantity) => "จำนวน: ${quantity}";
+
+  static m19(value) => "รายการ ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -218,15 +227,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("การแจ้งเตือนที่มีชื่อ"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "แถบนำทางด้านล่างแสดงปลายทาง 3-5 แห่งที่ด้านล่างของหน้าจอ ปลายทางแต่ละแห่งจะแสดงด้วยไอคอนและป้ายกำกับแบบข้อความที่ไม่บังคับ เมื่อผู้ใช้แตะไอคอนนำทางด้านล่าง ระบบจะนำไปที่ปลายทางของการนำทางระดับบนสุดที่เชื่อมโยงกับไอคอนนั้น"),
+            "แถบ Bottom Navigation จะแสดงปลายทาง 3-5 แห่งที่ด้านล่างของหน้าจอ ปลายทางแต่ละแห่งจะแสดงด้วยไอคอนและป้ายกำกับแบบข้อความที่ไม่บังคับ เมื่อผู้ใช้แตะไอคอน Bottom Navigation ระบบจะนำไปที่ปลายทางของการนำทางระดับบนสุดที่เชื่อมโยงกับไอคอนนั้น"),
         "demoBottomNavigationPersistentLabels":
             MessageLookupByLibrary.simpleMessage("ป้ายกำกับที่แสดงเสมอ"),
         "demoBottomNavigationSelectedLabel":
             MessageLookupByLibrary.simpleMessage("ป้ายกำกับที่เลือก"),
         "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "การนำทางด้านล่างที่มีมุมมองแบบค่อยๆ ปรากฏ"),
+            "Bottom Navigation ที่มีมุมมองแบบค่อยๆ ปรากฏ"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("การนำทางด้านล่าง"),
+            MessageLookupByLibrary.simpleMessage("Bottom Navigation"),
         "demoBottomSheetAddLabel":
             MessageLookupByLibrary.simpleMessage("เพิ่ม"),
         "demoBottomSheetButtonText":
@@ -291,11 +300,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ปุ่ม"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "ใช้เพื่อเลือกระหว่างตัวเลือกที่เฉพาะตัวเหมือนกัน การเลือกตัวเลือกหนึ่งในส่วนควบคุมที่แบ่งกลุ่มจะเป็นการยกเลิกการเลือกตัวเลือกอื่นๆ ในส่วนควบคุมที่แบ่งกลุ่มนั้น"),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "ส่วนควบคุมที่แบ่งกลุ่มแบบ iOS"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("ส่วนควบคุมที่แบ่งกลุ่ม"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "แบบง่าย การแจ้งเตือน และเต็มหน้าจอ"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("กล่องโต้ตอบ"),
@@ -338,8 +348,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "กล่องโต้ตอบแบบง่ายจะนำเสนอทางเลือกระหว่างตัวเลือกหลายๆ อย่าง โดยกล่องโต้ตอบแบบง่ายจะมีชื่อที่ไม่บังคับซึ่งจะแสดงเหนือทางเลือกต่างๆ"),
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("แบบง่าย"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "แท็บช่วยจัดระเบียบเนื้อหาในหน้าจอต่างๆ ชุดข้อมูล และการโต้ตอบอื่นๆ"),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "แท็บซึ่งมีมุมมองที่เลื่อนได้แบบอิสระ"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("แท็บ"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "ช่องข้อความให้ผู้ใช้ป้อนข้อความใน UI และมักปรากฏอยู่ในฟอร์มและกล่องโต้ตอบ"),
+            "ช่องข้อความให้ผู้ใช้ป้อนข้อความใน UI ซึ่งมักปรากฏอยู่ในฟอร์มและกล่องโต้ตอบ"),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("อีเมล"),
         "demoTextFieldEnterPassword":
             MessageLookupByLibrary.simpleMessage("โปรดป้อนรหัสผ่าน"),
@@ -378,7 +393,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("แสดงรหัสผ่าน"),
         "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("ส่ง"),
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "ข้อความและตัวเลขที่แก้ไขได้บรรทัดเดียว"),
+            "บรรทัดข้อความและตัวเลขที่แก้ไขได้"),
         "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
             "แนะนำตัวให้เรารู้จัก (เช่น เขียนว่าคุณทำงานอะไรหรือมีงานอดิเรกอะไรบ้าง)"),
         "demoTextFieldTitle":
@@ -387,7 +402,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldWhatDoPeopleCallYou":
             MessageLookupByLibrary.simpleMessage("ชื่อของคุณ"),
         "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("หมายเลขโทรศํพท์ของคุณ"),
+            MessageLookupByLibrary.simpleMessage("หมายเลขโทรศัพท์ของคุณ"),
         "demoTextFieldYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("อีเมลของคุณ"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
@@ -398,7 +413,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "คำจำกัดความของตัวอักษรรูปแบบต่างๆ ที่พบในดีไซน์ Material"),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
             "รูปแบบข้อความทั้งหมดที่กำหนดไว้ล่วงหน้า"),
-        "demoTypographyTitle": MessageLookupByLibrary.simpleMessage("การพิมพ์"),
+        "demoTypographyTitle":
+            MessageLookupByLibrary.simpleMessage("ตัวอย่างการพิมพ์"),
         "dialogAddAccount": MessageLookupByLibrary.simpleMessage("เพิ่มบัญชี"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("ยอมรับ"),
         "dialogCancel": MessageLookupByLibrary.simpleMessage("ยกเลิก"),
@@ -424,12 +440,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("หมวดหมู่"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("แกลเลอรี"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("เงินเก็บสำหรับรถ"),
+            MessageLookupByLibrary.simpleMessage("เงินเก็บสำหรับซื้อรถ"),
         "rallyAccountDataChecking":
             MessageLookupByLibrary.simpleMessage("กระแสรายวัน"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("เงินเก็บสำหรับบ้าน"),
+            MessageLookupByLibrary.simpleMessage("เงินเก็บสำหรับซื้อบ้าน"),
         "rallyAccountDataVacation":
             MessageLookupByLibrary.simpleMessage("วันหยุดพักผ่อน"),
         "rallyAccountDetailDataAccountOwner":
@@ -451,13 +468,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("รวม"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("บัญชี"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("การแจ้งเตือน"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("ใบเรียกเก็บเงิน"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("ครบกำหนด"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("เสื้อผ้า"),
         "rallyBudgetCategoryCoffeeShops":
@@ -466,11 +485,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ของชำ"),
         "rallyBudgetCategoryRestaurants":
             MessageLookupByLibrary.simpleMessage("ร้านอาหาร"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("ซ้าย"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("ที่เหลือ"),
         "rallyBudgets": MessageLookupByLibrary.simpleMessage("งบประมาณ"),
         "rallyDescription":
             MessageLookupByLibrary.simpleMessage("แอปการเงินส่วนบุคคล"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("ซ้าย"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("ที่เหลือ"),
         "rallyLoginButtonLogin":
             MessageLookupByLibrary.simpleMessage("เข้าสู่ระบบ"),
         "rallyLoginLabelLogin":
@@ -487,6 +506,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("ชื่อผู้ใช้"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("ดูทั้งหมด"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("ดูบัญชีทั้งหมด"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("ดูบิลทั้งหมด"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("ดูงบประมาณทั้งหมด"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ค้นหา ATM"),
         "rallySettingsHelp":
@@ -525,15 +550,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Android"),
         "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
-            MessageLookupByLibrary.simpleMessage("โครงสร้างของแพลตฟอร์ม"),
+            MessageLookupByLibrary.simpleMessage("กลไกการทำงานของแพลตฟอร์ม"),
         "settingsSlowMotion":
-            MessageLookupByLibrary.simpleMessage("เคลื่อนไหวช้า"),
+            MessageLookupByLibrary.simpleMessage("Slow Motion"),
         "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("ระบบ"),
         "settingsTextDirection":
             MessageLookupByLibrary.simpleMessage("ทิศทางข้อความ"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("อิงตามภาษา"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("อัตราส่วนข้อความ"),
@@ -551,7 +576,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ยกเลิก"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("ล้างรถเข็น"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("รถเข็น"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("การจัดส่ง:"),
@@ -598,9 +623,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductGatsbyHat":
             MessageLookupByLibrary.simpleMessage("หมวก Gatsby"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("แจ็กเก็ตแบบคนชั้นสูง"),
+            MessageLookupByLibrary.simpleMessage("แจ็กเก็ต Gentry"),
         "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("โต๊ะชุบทอง 3 ตัว"),
+            MessageLookupByLibrary.simpleMessage("โต๊ะขอบทอง 3 ตัว"),
         "shrineProductGingerScarf":
             MessageLookupByLibrary.simpleMessage("ผ้าพันคอสีเหลืองอมน้ำตาลแดง"),
         "shrineProductGreySlouchTank":
@@ -608,13 +633,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductHurrahsTeaSet":
             MessageLookupByLibrary.simpleMessage("ชุดน้ำชา Hurrahs"),
         "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("Quattro ห้องครัว"),
+            MessageLookupByLibrary.simpleMessage("Kitchen Quattro"),
         "shrineProductNavyTrousers":
             MessageLookupByLibrary.simpleMessage("กางเกงขายาวสีน้ำเงินเข้ม"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("เสื้อคลุมสีปูนปลาสเตอร์"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("โต๊ะสำหรับ 4 คน"),
         "shrineProductRainwaterTray":
@@ -654,9 +679,20 @@ class MessageLookup extends MessageLookupByLibrary {
                 "เสื้อเชิ้ตสีขาวลายทางแนวตั้ง"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("เข็มขัด Whitney"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("ปิดหน้ารถเข็น"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("ปิดเมนู"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("เปิดเมนู"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("นำสินค้าออก"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("ค้นหา"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("การตั้งค่า"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
-            "การจัดวางเริ่มต้นที่มีการตอบสนอง"),
-        "starterAppDrawerItem": m16,
+            "เลย์เอาต์เริ่มต้นที่มีการตอบสนอง"),
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("เนื้อความ"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("ปุ่ม"),

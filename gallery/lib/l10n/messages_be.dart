@@ -40,28 +40,37 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "Вы выбралі: \"${value}\"";
 
-  static m8(amount) =>
-      "У гэтым месяцы вы выдаткавалі ${amount} на аплату камісіі ў банкаматах";
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
 
-  static m9(percent) =>
-      "Выдатна! У гэтым месяцы на вашым разліковым рахунку засталося на ${percent} больш сродкаў, чым у мінулым.";
+  static m9(amount) =>
+      "У гэтым месяцы вы патрацілі ${amount} на аплату камісіі ў банкаматах";
 
   static m10(percent) =>
+      "Выдатна! У гэтым месяцы на вашым разліковым рахунку засталося на ${percent} больш сродкаў, чым у мінулым.";
+
+  static m11(percent) =>
       "Увага! Вы зрасходавалі ${percent} свайго месячнага бюджэту на пакупкі.";
 
-  static m11(amount) => "На гэтым тыдні вы выдаткавалі ${amount} на рэстараны.";
+  static m12(amount) => "На гэтым тыдні вы выдаткавалі ${amount} на рэстараны.";
 
-  static m12(count) =>
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "x ${price}";
+  static m17(price) => "x ${price}";
 
-  static m15(quantity) => "Колькасць: ${quantity}";
+  static m18(quantity) => "Колькасць: ${quantity}";
 
-  static m16(value) => "Элемент ${value}";
+  static m19(value) => "Элемент ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -81,15 +90,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("КНОПКА"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Стварыць"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
-        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
-        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
-        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
-        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
-        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipBiking":
+            MessageLookupByLibrary.simpleMessage("Язда на веласіпедзе"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Ліфт"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Камін"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Вялікі"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Сярэдні"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Малы"),
         "chipTurnOnLights":
-            MessageLookupByLibrary.simpleMessage("Turn on lights"),
-        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
+            MessageLookupByLibrary.simpleMessage("Уключыць святло"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Пральная машына"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("ЯНТАРНЫ"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("СІНІ"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("ШЫЗЫ"),
@@ -114,82 +124,73 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsYellow": MessageLookupByLibrary.simpleMessage("ЖОЎТЫ"),
         "craneDescription": MessageLookupByLibrary.simpleMessage(
             "Персаналізаваная праграма для падарожжаў"),
-        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
-        "craneEat1":
-            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
-        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
-        "craneEat3":
-            MessageLookupByLibrary.simpleMessage("Portland, United States"),
-        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
-        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
-        "craneEat6":
-            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
-        "craneEat7":
-            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
-        "craneEat8":
-            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
-        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("ЕЖА"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Неапаль, Італія"),
+        "craneEat1": MessageLookupByLibrary.simpleMessage("Далас, ЗША"),
+        "craneEat10":
+            MessageLookupByLibrary.simpleMessage("Лісабон, Партугалія"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("Кордава, Аргенціна"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage("Портланд, ЗША"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Парыж, Францыя"),
+        "craneEat5":
+            MessageLookupByLibrary.simpleMessage("Сеул, Паўднёвая Карэя"),
+        "craneEat6": MessageLookupByLibrary.simpleMessage("Сіэтл, ЗША"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage("Нашвіл, ЗША"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage("Атланта, ЗША"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Мадрыд, Іспанія"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Restaurants by Destination"),
-        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
-        "craneFly0":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneFly1":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneFly12":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
-        "craneFly2":
-            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
-        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneFly5":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
-        "craneFly7": MessageLookupByLibrary.simpleMessage(
-            "Mount Rushmore, United States"),
-        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
-        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            "Агляд рэстаранаў у пункце прызначэння"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("РЭЙС"),
+        "craneFly0": MessageLookupByLibrary.simpleMessage("Аспен, ЗША"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage("Біг-Сур, ЗША"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Каір, Егіпет"),
+        "craneFly11":
+            MessageLookupByLibrary.simpleMessage("Лісабон, Партугалія"),
+        "craneFly12": MessageLookupByLibrary.simpleMessage("Напа, ЗША"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Балі, Інданезія"),
+        "craneFly2": MessageLookupByLibrary.simpleMessage("Кхумбу, Непал"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("Мачу-Пікчу, Перу"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Мале, Мальдывы"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("Віцнау, Швейцарыя"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Мадрыд, Іспанія"),
+        "craneFly7": MessageLookupByLibrary.simpleMessage("Гара Рашмар, ЗША"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Сінгапур"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Гавана, Куба"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Flights by Destination"),
-        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
-        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+            "Агляд рэйсаў у пункт прызначэння"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("Выберыце дату"),
+        "craneFormDates": MessageLookupByLibrary.simpleMessage("Выберыце даты"),
         "craneFormDestination":
-            MessageLookupByLibrary.simpleMessage("Choose Destination"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+            MessageLookupByLibrary.simpleMessage("Выберыце пункт прызначэння"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Закусачныя"),
         "craneFormLocation":
-            MessageLookupByLibrary.simpleMessage("Select Location"),
+            MessageLookupByLibrary.simpleMessage("Выберыце месца"),
         "craneFormOrigin":
-            MessageLookupByLibrary.simpleMessage("Choose Origin"),
-        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
-        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneSleep1":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
-        "craneSleep2":
-            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            MessageLookupByLibrary.simpleMessage("Выберыце пункт адпраўлення"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("Выберыце час"),
+        "craneFormTravelers":
+            MessageLookupByLibrary.simpleMessage("Падарожнікі"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("НАЧЛЕГ"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("Мале, Мальдывы"),
+        "craneSleep1": MessageLookupByLibrary.simpleMessage("Аспен, ЗША"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Каір, Егіпет"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Тайбэй, Тайвань"),
+        "craneSleep2": MessageLookupByLibrary.simpleMessage("Мачу-Пікчу, Перу"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Гавана, Куба"),
         "craneSleep4":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneSleep5":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneSleep6":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
-        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
-        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("Віцнау, Швейцарыя"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage("Біг-Сур, ЗША"),
+        "craneSleep6": MessageLookupByLibrary.simpleMessage("Напа, ЗША"),
+        "craneSleep7":
+            MessageLookupByLibrary.simpleMessage("Порту, Партугалія"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Тулум, Мексіка"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("Лісабон, Партугалія"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Properties by Destination"),
+            "Агляд месцаў для пражывання ў пункце прызначэння"),
         "cupertinoAlertAllow":
             MessageLookupByLibrary.simpleMessage("Дазволіць"),
         "cupertinoAlertApplePie":
@@ -220,9 +221,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Паказаць абвестку"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+            "Чыпы дзеянняў – гэта набор параметраў, якія запускаюць дзеянне, звязанае з асноўным змесцівам. Чыпы дзеянняў паказваюцца ў карыстальніцкім інтэрфейсе дынамічна і ў залежнасці ад кантэксту."),
         "demoActionChipTitle":
-            MessageLookupByLibrary.simpleMessage("Action Chip"),
+            MessageLookupByLibrary.simpleMessage("Чып дзеяння"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Дыялогавае акно абвесткі інфармуе карыстальніка пра сітуацыі, для якіх патрабуецца пацвярджэнне. Дыялогавае акно абвесткі можа мець назву і спіс дзеянняў."),
         "demoAlertDialogTitle":
@@ -265,12 +266,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Плоская, выпуклая, с контурам і іншыя"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Кнопкі"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Compact elements that represent an input, attribute, or action"),
-        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+            "Кампактныя элементы, якія ўвасабляюць увод, атрыбут або дзеянне"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Чыпы"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+            "Чыпы выбару дазваляюць выбраць з набору адзін варыянт. Чыпы выбару змяшчаюць звязаны апісальны тэкст або катэгорыі."),
         "demoChoiceChipTitle":
-            MessageLookupByLibrary.simpleMessage("Choice Chip"),
+            MessageLookupByLibrary.simpleMessage("Чып выбару"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Прыклад кода"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Колеры і ўзоры колераў, якія прадстаўляюць палітру колераў матэрыялу."),
@@ -315,9 +316,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("Дакументацыя API"),
         "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Filter chips use tags or descriptive words as a way to filter content."),
+            "Чыпы фільтраў выкарыстоўваюць цэтлікі ці апісальныя словы для фільтравання змесціва."),
         "demoFilterChipTitle":
-            MessageLookupByLibrary.simpleMessage("Filter Chip"),
+            MessageLookupByLibrary.simpleMessage("Чып фільтра"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Пры націсканні плоскай кнопкі паказваецца эфект чарніла, і кнопка не падымаецца ўверх. Выкарыстоўвайце плоскія кнопкі на панэлі інструментаў, у дыялогавых вокнах і ў тэксце з палямі"),
         "demoFlatButtonTitle":
@@ -334,9 +335,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Поўнаэкранны рэжым"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Інфармацыя"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
-        "demoInputChipTitle":
-            MessageLookupByLibrary.simpleMessage("Input Chip"),
+            "Чыпы ўводу змяшчаюць у кампактнай форме складаныя элементы інфармацыі, такія як аб\'ект (асоба, месца або рэч) ці тэкст размовы."),
+        "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("Чып уводу"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Не ўдалося адлюстраваць URL-адрас:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Параметры"),
@@ -352,6 +352,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "Простае дыялогавае акно прапануе карыстальніку выбар паміж некалькімі варыянтамі. Простае дыялогавае акно можа мець назву, якая паказваецца над варыянтамі выбару."),
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Простае дыялогавае акно"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Тэкставыя палі дазваляюць карыстальнікам уводзіць тэкст у карыстальніцкі інтэрфейс. Звычайна яны паяўляюцца ў формах і дыялогавых вокнах."),
         "demoTextFieldEmail":
@@ -409,7 +414,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Кнопкі пераключэння"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Азначэнні для розных друкарскіх стыляў з каталогу матэрыяльнага дызайну."),
+            "Азначэнні для розных друкарскіх стыляў з каталога матэрыяльнага дызайну."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
             "Усе стандартныя стылі тэксту"),
         "demoTypographyTitle":
@@ -442,6 +447,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Катэгорыі"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Галерэя"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Зберажэнні на аўтамабіль"),
         "rallyAccountDataChecking":
@@ -470,14 +476,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccounts":
             MessageLookupByLibrary.simpleMessage("Уліковыя запісы"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Абвесткі"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Рахункі"),
         "rallyBillsDue":
             MessageLookupByLibrary.simpleMessage("Тэрмін пагашэння"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Адзенне"),
         "rallyBudgetCategoryCoffeeShops":
@@ -506,6 +514,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("Імя карыстальніка"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("ПРАГЛЕДЗЕЦЬ УСЁ"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Знайсці банкаматы"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Даведка"),
@@ -571,7 +585,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("СКАСАВАЦЬ"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("АЧЫСЦІЦЬ КОШЫК"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("КОШЫК"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Дастаўка:"),
@@ -581,11 +595,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Падатак:"),
         "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("УСЯГО"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
+            MessageLookupByLibrary.simpleMessage("АКСЕСУАРЫ"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("УСЕ"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("CLOTHING"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
+            MessageLookupByLibrary.simpleMessage("АДЗЕННЕ"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("ДОМ"),
         "shrineDescription": MessageLookupByLibrary.simpleMessage(
             "Праграма для куплі модных тавараў"),
         "shrineLoginPasswordLabel":
@@ -633,8 +647,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Цёмна-сінія штаны"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Крэмавая туніка"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Квадратны стол"),
         "shrineProductRainwaterTray":
@@ -673,9 +687,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Кашуля ў белую палоску"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Скураны рамень"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Адаптыўны макет запуску"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Асноўны тэкст"),
         "starterAppGenericButton":

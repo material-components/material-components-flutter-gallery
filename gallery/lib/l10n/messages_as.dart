@@ -38,27 +38,36 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "আপুনি এইটো বাছনি কৰিছে: \"${value}\"";
 
-  static m8(amount) => "আপুনি এই মাহত এটিএমৰ মাচুলৰ বাবদ ${amount} খৰচ কৰিছে";
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
 
-  static m9(percent) =>
-      "ভাল কাম কৰিছে! আপোনাৰ চেকিং একাউণ্ট যোৱা মাহতকৈ ${percent} বেছি।";
+  static m9(amount) => "আপুনি এই মাহত এটিএমৰ মাচুলৰ বাবদ ${amount} খৰচ কৰিছে";
 
   static m10(percent) =>
+      "ভাল কাম কৰিছে! আপোনাৰ চেকিং একাউণ্ট যোৱা মাহতকৈ ${percent} বেছি।";
+
+  static m11(percent) =>
       "জৰুৰী ঘোষণা, আপুনি এই মাহৰ বাবে আপোনাৰ শ্বপিং বাজেটৰ ${percent} খৰচ কৰিছে।";
 
-  static m11(amount) => "আপুনি এই সপ্তাহত ৰেষ্টুৰেণ্টত ${amount} খৰচ কৰিছে।";
+  static m12(amount) => "আপুনি এই সপ্তাহত ৰেষ্টুৰেণ্টত ${amount} খৰচ কৰিছে।";
 
-  static m12(count) =>
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "x ${price}";
+  static m17(price) => "x ${price}";
 
-  static m15(quantity) => "পৰিমাণ: ${quantity}";
+  static m18(quantity) => "পৰিমাণ: ${quantity}";
 
-  static m16(value) => "বস্তু ${value}";
+  static m19(value) => "বস্তু ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -78,15 +87,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("বুটাম"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("সৃষ্টি কৰক"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
-        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
-        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
-        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
-        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
-        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("বাইকিং"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("এলিভে\'টৰ"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("জুহাল আছে"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("ডাঙৰ"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("মধ্যমীয়া"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("সৰু"),
         "chipTurnOnLights":
-            MessageLookupByLibrary.simpleMessage("Turn on lights"),
-        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
+            MessageLookupByLibrary.simpleMessage("লাইটসমূহ অন কৰক"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("ৱাশ্বাৰ"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("এম্বাৰ"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("নীলা"),
         "colorsBlueGrey":
@@ -111,82 +120,88 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsYellow": MessageLookupByLibrary.simpleMessage("হালধীয়া"),
         "craneDescription": MessageLookupByLibrary.simpleMessage(
             "এটা ব্যক্তিগতকৃত ভ্ৰমণৰ এপ্‌"),
-        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
-        "craneEat1":
-            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
-        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
-        "craneEat3":
-            MessageLookupByLibrary.simpleMessage("Portland, United States"),
-        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
-        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
-        "craneEat6":
-            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
-        "craneEat7":
-            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
-        "craneEat8":
-            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
-        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("খোৱা"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("নেপলচ, ইটালী"),
+        "craneEat1": MessageLookupByLibrary.simpleMessage(
+            "ডাল্লাছ, মার্কিন যুক্তৰাষ্ট্ৰ"),
+        "craneEat10": MessageLookupByLibrary.simpleMessage("লিছবন, পর্তুগাল"),
+        "craneEat2":
+            MessageLookupByLibrary.simpleMessage("কৰড\'বা, আর্জেণ্টিনা"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage(
+            "পৰ্টলেণ্ড, মাৰ্কিন যুক্তৰাষ্ট্ৰ"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("পেৰিছ, ফ্ৰান্স"),
+        "craneEat5":
+            MessageLookupByLibrary.simpleMessage("ছিউল, দক্ষিণ কোৰিয়া"),
+        "craneEat6": MessageLookupByLibrary.simpleMessage(
+            "ছিট্টেল, আমেৰিকা যুক্তৰাষ্ট্ৰ"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage(
+            "নাশ্বভিল্লে, মার্কিন যুক্তৰাষ্ট্ৰ"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage(
+            "আটলাণ্টা, মাৰ্কিন যুক্তৰাষ্ট্ৰ"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("মাদ্ৰিদ, স্পেইন"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Restaurants by Destination"),
-        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
+            "গন্তব্যস্থান অনুসৰি ৰেষ্টুৰেণ্টসমূহ অন্বেষণ কৰক"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("উৰণ"),
         "craneFly0":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneFly1":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("এছপেন, মার্কিন যুক্তৰাষ্ট্ৰ"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage(
+            "বিগ ছুৰ, মাৰ্কিন যুক্তৰাষ্ট্ৰ"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("কাইৰ\', ঈজিপ্ত"),
+        "craneFly11": MessageLookupByLibrary.simpleMessage("লিছবন, পর্তুগাল"),
         "craneFly12":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
-        "craneFly2":
-            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
-        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+            MessageLookupByLibrary.simpleMessage("নাপা, মাৰ্কিন যুক্তৰাষ্ট্ৰ"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("বালি, ইণ্ডোনেছিয়া"),
+        "craneFly2": MessageLookupByLibrary.simpleMessage("খুমবু ভেলী, নেপাল"),
+        "craneFly3":
+            MessageLookupByLibrary.simpleMessage("মাশ্বু পিচশ্বু, পেৰু"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("মালে, মালদ্বীপ"),
         "craneFly5":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+            MessageLookupByLibrary.simpleMessage("ভিজনাও, ছুইজাৰলেণ্ড"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("মাদ্ৰিদ, স্পেইন"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
-            "Mount Rushmore, United States"),
-        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
-        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            "মাউণ্ট ৰাশ্বম\'ৰ, মাৰ্কিন যুক্তৰাষ্ট্ৰ"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("ছিংগাপুৰ"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("হানাভা, কিউবা"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Flights by Destination"),
-        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
-        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+            "গন্তব্যস্থানৰ অনুসৰি ফ্লাইটবোৰ অন্বেষণ কৰক"),
+        "craneFormDate":
+            MessageLookupByLibrary.simpleMessage("তাৰিখ বাছনি কৰক"),
+        "craneFormDates":
+            MessageLookupByLibrary.simpleMessage("তাৰিখবোৰ বাছনি কৰক"),
         "craneFormDestination":
-            MessageLookupByLibrary.simpleMessage("Choose Destination"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+            MessageLookupByLibrary.simpleMessage("গন্তব্যস্থান বাছনি কৰক"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("নৈশ আহাৰ"),
         "craneFormLocation":
-            MessageLookupByLibrary.simpleMessage("Select Location"),
-        "craneFormOrigin":
-            MessageLookupByLibrary.simpleMessage("Choose Origin"),
-        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
-        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+            MessageLookupByLibrary.simpleMessage("অৱস্থান বাছনি কৰক"),
+        "craneFormOrigin": MessageLookupByLibrary.simpleMessage(
+            "যাত্ৰা আৰম্ভ কৰাৰ স্থান বাছনি কৰক"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("সময় বাছনি কৰক"),
+        "craneFormTravelers":
+            MessageLookupByLibrary.simpleMessage("ভ্ৰমণকাৰীসকল"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("টোপনি"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("মালে, মালদ্বীপ"),
         "craneSleep1":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+            MessageLookupByLibrary.simpleMessage("এছপেন, মার্কিন যুক্তৰাষ্ট্ৰ"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("কাইৰ\', ঈজিপ্ত"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("তাইপেই, তাইৱান"),
         "craneSleep2":
-            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            MessageLookupByLibrary.simpleMessage("মাশ্বু পিচশ্বু, পেৰু"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("হানাভা, কিউবা"),
         "craneSleep4":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneSleep5":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
+            MessageLookupByLibrary.simpleMessage("ভিজনাও, ছুইজাৰলেণ্ড"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage(
+            "বিগ ছুৰ, মাৰ্কিন যুক্তৰাষ্ট্ৰ"),
         "craneSleep6":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
-        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
-        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("নাপা, মাৰ্কিন যুক্তৰাষ্ট্ৰ"),
+        "craneSleep7":
+            MessageLookupByLibrary.simpleMessage("প\'র্ট\', পর্তুগাল"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("টুলুম, মেক্সিকো"),
+        "craneSleep9": MessageLookupByLibrary.simpleMessage("লিছবন, পর্তুগাল"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Properties by Destination"),
+            "গন্তব্যস্থান অনুসৰি সম্পত্তিসমূহ অন্বেষণ কৰক"),
         "cupertinoAlertAllow":
             MessageLookupByLibrary.simpleMessage("অনুমতি দিয়ক"),
         "cupertinoAlertApplePie":
@@ -217,9 +232,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("সতর্কবার্তা দেখুৱাওক"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+            "কার্যৰ চিপসমূহ প্ৰাথমিক সমল সম্পর্কীয় কোনো কার্য সূচনা কৰা বিকল্পসমূহৰ এক ছেট। কার্যৰ চিপসমূহ কোনো ইউআইত পৰিৱৰ্তনশীলভাৱে আৰু প্ৰাসংগিতা অনুসৰি প্ৰদর্শন হোৱা উচিত।"),
         "demoActionChipTitle":
-            MessageLookupByLibrary.simpleMessage("Action Chip"),
+            MessageLookupByLibrary.simpleMessage("কার্যৰ চিপ"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "এটা সতর্কবার্তাৰ ডায়ল\'গে ব্যৱহাৰকাৰীক স্বীকৃতি আৱশ্যক হোৱা পৰিস্থিতিসমূহৰ বিষয়ে জনায়। এটা সতর্কবার্তাৰ ডায়ল\'গত এটা ঐচ্ছিক শিৰোনাম আৰু এখন কার্যসমূহৰ ঐচ্ছিক সূচী থাকে।"),
         "demoAlertDialogTitle":
@@ -261,12 +276,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "সমতল, উঠঙা, ৰূপৰেখা আৰু বহুতো"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("বুটামসমূহ"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Compact elements that represent an input, attribute, or action"),
-        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+            "কোনো ইনপুট, বৈশিষ্ট্য অথবা কার্য প্ৰতিনিধিত্ব কৰা সংক্ষিপ্ত উপাদানবোৰ"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("চিপসমূহ"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+            "পচন্দৰ চিপসমূহে এটা ছেটৰ পৰা এটা একক পচন্দ প্ৰতিনিধিত্ব কৰে। পচন্দৰ চিপসমূহত সমল সম্পর্কীয় বিৱৰণমূলক পাঠ অথবা শিতানসমূহ অন্তর্ভুক্ত হয়।"),
         "demoChoiceChipTitle":
-            MessageLookupByLibrary.simpleMessage("Choice Chip"),
+            MessageLookupByLibrary.simpleMessage("পচন্দৰ চিপ"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("ক\'ডৰ আর্হি"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Material Designৰ ৰঙৰ পেলেট প্ৰতিনিধিত্ব কৰা ৰং আৰু ৰঙৰ অপৰিৱর্তিত কণিকাসমূহ।"),
@@ -310,9 +325,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API নথি-পত্ৰ"),
         "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Filter chips use tags or descriptive words as a way to filter content."),
+            "ফিল্টাৰ চিপসমূহে সমল ফিল্টাৰ কৰাৰ উপায় হিচাপে টেগসমূহ অথবা বিৱৰণমূলক শব্দবোৰ ব্যৱহাৰ কৰে।"),
         "demoFilterChipTitle":
-            MessageLookupByLibrary.simpleMessage("Filter Chip"),
+            MessageLookupByLibrary.simpleMessage("ফিল্টাৰ চিপ"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "এটা সমতল বুটাম টিপিলে চিয়াঁহী পৰাৰ দৰে দৃশ্য প্ৰদর্শন কৰে কিন্তু তুলি নধৰে। সমতল বুটামসমূহ টুলবাৰসমূহত, ডায়ল’গসমূহত আৰু পেডিঙৰ সৈতে ইনলাইনত ব্যৱহাৰ কৰক"),
         "demoFlatButtonTitle":
@@ -329,9 +344,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("সম্পূৰ্ণ স্ক্ৰীন"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("তথ্য"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
+            "ইনপুট চিপসমূহে এক জটিল তথ্য সংক্ষিপ্ত ৰূপত প্ৰতিনিধিত্ব কৰে, যেনে এটা সত্ত্বা (লোক, ঠাই অথবা বস্তু) অথবা বার্তালাপৰ পাঠ।"),
         "demoInputChipTitle":
-            MessageLookupByLibrary.simpleMessage("Input Chip"),
+            MessageLookupByLibrary.simpleMessage("ইনপুট চ্চিপ"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "URL প্ৰদর্শন কৰিব পৰা নগ\'ল:"),
         "demoOptionsTooltip":
@@ -347,6 +362,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "এটা সৰল ডায়ল\'গে ব্যৱহাৰকাৰীক বিভিন্ন বিকল্পসমূহৰ পৰা বাছনি কৰাৰ সুবিধা দিয়ে। এটা সৰল ডায়ল\'গৰ বাছনি কৰাৰ বাবে থকা বিকল্পসমূহৰ ওপৰত প্ৰদর্শন কৰা এটা ঐচ্ছিক শিৰোনাম থাকে।"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("সৰল"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "পাঠ ক্ষেত্ৰসমূহে ব্যৱহাৰকাৰীসকলক এটা ইউআইত পাঠ ভৰাবলৈ দিয়ে। সেইবোৰ সাধাৰণতে ফর্ম আৰু ডায়ল’গসমূহত দেখা পোৱা যায়।"),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("ইমেইল"),
@@ -374,7 +394,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldPassword":
             MessageLookupByLibrary.simpleMessage("পাছৱৰ্ড*"),
         "demoTextFieldPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("পাছৱর্ডসমূহৰ মিলা নাই"),
+            MessageLookupByLibrary.simpleMessage("পাছৱর্ডসমূহ মিলা নাই"),
         "demoTextFieldPhoneNumber":
             MessageLookupByLibrary.simpleMessage("ফ’ন নম্বৰ*"),
         "demoTextFieldRequiredField": MessageLookupByLibrary.simpleMessage(
@@ -436,6 +456,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("শিতানসমূহ"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("গেলাৰী"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("গাড়ীৰ সঞ্চয়"),
         "rallyAccountDataChecking":
@@ -459,14 +480,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("সৰ্বমুঠ"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("একাউণ্টসমূহ"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("সতৰ্কবার্তাসমূহ"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("বিলসমূহ"),
         "rallyBillsDue":
             MessageLookupByLibrary.simpleMessage("সম্পূৰ্ণ কৰাৰ শেষ তাৰিখ"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("পোছাক"),
         "rallyBudgetCategoryCoffeeShops":
@@ -495,6 +518,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("ব্যৱহাৰকাৰীৰ নাম"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("সকলো চাওক"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("এটিএম বিচাৰক"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("সহায়"),
@@ -557,7 +586,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("বাতিল কৰক"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("কাৰ্টত থকা সমল মচক"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("কাৰ্ট"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("শ্বিপিং:"),
@@ -567,11 +596,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCartTotalCaption":
             MessageLookupByLibrary.simpleMessage("সর্বমুঠ"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
+            MessageLookupByLibrary.simpleMessage("আনুষংগিক সামগ্ৰী"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("সকলো"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("CLOTHING"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
+            MessageLookupByLibrary.simpleMessage("পোছাক"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("ঘৰ"),
         "shrineDescription": MessageLookupByLibrary.simpleMessage(
             "ফেশ্বনৰ লগত জড়িত এটা খুচৰা এপ্‌"),
         "shrineLoginPasswordLabel":
@@ -619,8 +648,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Navy trousers"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Quartet table"),
         "shrineProductRainwaterTray":
@@ -659,15 +688,26 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "এটা প্ৰতিক্ৰিয়াশীল ষ্টাৰ্টাৰ লে’আউট"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("মূল অংশ"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("বুটাম"),
         "starterAppGenericHeadline":
-            MessageLookupByLibrary.simpleMessage("শিৰোনাম"),
+            MessageLookupByLibrary.simpleMessage("শীৰ্ষ শিৰোনাম"),
         "starterAppGenericSubtitle":
             MessageLookupByLibrary.simpleMessage("ছাবটাইটেল"),
         "starterAppGenericTitle":

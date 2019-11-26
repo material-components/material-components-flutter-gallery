@@ -20,9 +20,9 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'eu';
 
   static m0(value) =>
-      "To see the source code for this app, please visit the ${value}.";
+      "Aplikazio honen iturburu-kodea ikusteko, joan hona: ${value}.";
 
-  static m1(title) => "Placeholder for ${title} tab";
+  static m1(title) => "${title} fitxaren leku-marka";
 
   static m2(totalRestaurants) =>
       "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
@@ -33,61 +33,72 @@ class MessageLookup extends MessageLookupByLibrary {
   static m4(totalProperties) =>
       "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(value) => "Item ${value}";
+  static m5(value) => "Elementua: ${value}";
 
-  static m6(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m6(name, phoneNumber) =>
+      "${name} erabiltzailearen telefono-zenbakia ${phoneNumber} da";
 
   static m7(value) => "Hau hautatu duzu: \"${value}\"";
 
-  static m8(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
 
-  static m9(percent) =>
-      "Good work! Your checking account is ${percent} higher than last month.";
+  static m9(amount) =>
+      "Hilabete honetan ${amount} gastatu duzu kutxazainetako komisioetan";
 
   static m10(percent) =>
-      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+      "Primeran. Joan den hilean baino ${percent} diru gehiago duzu kontu korrontean.";
 
-  static m11(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m11(percent) =>
+      "Adi: hilabete honetako erosketa-aurrekontuaren ${percent} erabili duzu.";
 
-  static m12(count) =>
+  static m12(amount) => "Aste honetan ${amount} gastatu duzu jatetxeetan.";
+
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "x ${price}";
+  static m17(price) => "x ${price}";
 
-  static m15(quantity) => "Quantity: ${quantity}";
+  static m18(quantity) => "Zenbatekoa: ${quantity}";
 
-  static m16(value) => "Item ${value}";
+  static m19(value) => "Elementua: ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "aboutDialogDescription": m0,
-        "aboutFlutterSamplesRepo":
-            MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
+        "aboutFlutterSamplesRepo": MessageLookupByLibrary.simpleMessage(
+            "Github irudi-biltegiko Flutter laginak"),
         "bottomNavigationAccountTab":
-            MessageLookupByLibrary.simpleMessage("Account"),
+            MessageLookupByLibrary.simpleMessage("Kontua"),
         "bottomNavigationAlarmTab":
-            MessageLookupByLibrary.simpleMessage("Alarm"),
+            MessageLookupByLibrary.simpleMessage("Alarma"),
         "bottomNavigationCalendarTab":
-            MessageLookupByLibrary.simpleMessage("Calendar"),
+            MessageLookupByLibrary.simpleMessage("Egutegia"),
         "bottomNavigationCameraTab":
-            MessageLookupByLibrary.simpleMessage("Camera"),
+            MessageLookupByLibrary.simpleMessage("Kamera"),
         "bottomNavigationCommentsTab":
-            MessageLookupByLibrary.simpleMessage("Comments"),
+            MessageLookupByLibrary.simpleMessage("Iruzkinak"),
         "bottomNavigationContentPlaceholder": m1,
-        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "buttonText": MessageLookupByLibrary.simpleMessage("BOTOIA"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Sortu"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
-        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
-        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
-        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
-        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
-        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Bizikletan"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Igogailua"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Tximinia"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Handia"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Ertaina"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Txikia"),
         "chipTurnOnLights":
-            MessageLookupByLibrary.simpleMessage("Turn on lights"),
-        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
+            MessageLookupByLibrary.simpleMessage("Piztu argiak"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Garbigailua"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("HORIXKA"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("URDINA"),
         "colorsBlueGrey":
@@ -109,84 +120,86 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsRed": MessageLookupByLibrary.simpleMessage("GORRIA"),
         "colorsTeal": MessageLookupByLibrary.simpleMessage("ANILA"),
         "colorsYellow": MessageLookupByLibrary.simpleMessage("HORIA"),
-        "craneDescription":
-            MessageLookupByLibrary.simpleMessage("A personalized travel app"),
-        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
-        "craneEat1":
-            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
-        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
-        "craneEat3":
-            MessageLookupByLibrary.simpleMessage("Portland, United States"),
-        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
-        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
-        "craneEat6":
-            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
-        "craneEat7":
-            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
-        "craneEat8":
-            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
-        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneDescription": MessageLookupByLibrary.simpleMessage(
+            "Bidaia-aplikazio pertsonalizatua"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("JATEKOAK"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Napoles (Italia)"),
+        "craneEat1": MessageLookupByLibrary.simpleMessage(
+            "Dallas (Ameriketako Estatu Batuak)"),
+        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisboa (Portugal)"),
+        "craneEat2":
+            MessageLookupByLibrary.simpleMessage("Córdoba (Argentina)"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage(
+            "Portland (Ameriketako Estatu Batuak)"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris (Frantzia)"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("Seul (Hego Korea)"),
+        "craneEat6": MessageLookupByLibrary.simpleMessage(
+            "Seattle (Ameriketako Estatu Batuak)"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage(
+            "Nashville (Ameriketako Estatu Batuak)"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage(
+            "Atlanta (Ameriketako Estatu Batuak)"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Madril (Espainia)"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Restaurants by Destination"),
-        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
-        "craneFly0":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneFly1":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneFly12":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+            "Arakatu jatetxeak helmugaren arabera"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("HEGALDIAK"),
+        "craneFly0": MessageLookupByLibrary.simpleMessage(
+            "Aspen (Ameriketako Estatu Batuak)"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage(
+            "Big Sur (Ameriketako Estatu Batuak)"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Kairo (Egipto)"),
+        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisboa (Portugal)"),
+        "craneFly12": MessageLookupByLibrary.simpleMessage(
+            "Napa (Ameriketako Estatu Batuak)"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali (Indonesia)"),
         "craneFly2":
-            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
-        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneFly5":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+            MessageLookupByLibrary.simpleMessage("Khumbu bailara (Nepal)"),
+        "craneFly3":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu (Peru)"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé (Maldivak)"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau (Suitza)"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Madril (Espainia)"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
-            "Mount Rushmore, United States"),
-        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
-        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            "Rushmore mendia (Ameriketako Estatu Batuak)"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapur"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Habana (Kuba)"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Flights by Destination"),
-        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
-        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+            "Arakatu hegaldiak helmugaren arabera"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("Hautatu data"),
+        "craneFormDates": MessageLookupByLibrary.simpleMessage("Hautatu datak"),
         "craneFormDestination":
-            MessageLookupByLibrary.simpleMessage("Choose Destination"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+            MessageLookupByLibrary.simpleMessage("Aukeratu helmuga"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Kafetegiak"),
         "craneFormLocation":
-            MessageLookupByLibrary.simpleMessage("Select Location"),
+            MessageLookupByLibrary.simpleMessage("Hautatu kokapena"),
         "craneFormOrigin":
-            MessageLookupByLibrary.simpleMessage("Choose Origin"),
-        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
-        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneSleep1":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+            MessageLookupByLibrary.simpleMessage("Aukeratu abiapuntua"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("Hautatu ordua"),
+        "craneFormTravelers":
+            MessageLookupByLibrary.simpleMessage("Bidaiariak"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("Lotarako tokia"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé (Maldivak)"),
+        "craneSleep1": MessageLookupByLibrary.simpleMessage(
+            "Aspen (Ameriketako Estatu Batuak)"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Kairo (Egipto)"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei (Taiwan)"),
         "craneSleep2":
-            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
-        "craneSleep4":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneSleep5":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneSleep6":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
-        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
-        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("Machu Picchu (Peru)"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Habana (Kuba)"),
+        "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau (Suitza)"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage(
+            "Big Sur (Ameriketako Estatu Batuak)"),
+        "craneSleep6": MessageLookupByLibrary.simpleMessage(
+            "Napa (Ameriketako Estatu Batuak)"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto (Portugal)"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum (Mexiko)"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("Lisboa (Portugal)"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Properties by Destination"),
+            "Arakatu jabetzak helmugaren arabera"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("Baimendu"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("Sagar-tarta"),
@@ -209,64 +222,66 @@ class MessageLookup extends MessageLookupByLibrary {
             "Aplikazioa erabili bitartean kokapena atzitzeko baimena eman nahi diozu Maps-i?"),
         "cupertinoAlertTiramisu":
             MessageLookupByLibrary.simpleMessage("Tiramisua"),
-        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Botoia"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("Atzeko planoarekin"),
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Erakutsi alerta"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+            "Ekintza-pilulak eduki nagusiarekin erlazionatutako ekintza bat abiarazten duten aukeren multzoa dira. Dinamikoki eta testuinguru egokian agertu behar dute."),
         "demoActionChipTitle":
-            MessageLookupByLibrary.simpleMessage("Action Chip"),
+            MessageLookupByLibrary.simpleMessage("Ekintza-pilula"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Kontuan hartu beharreko egoeren berri ematen diote alerta-leihoek erabiltzaileari. Aukeran, izenburua eta ekintza-zerrendak izan ditzakete alerta-leihoek."),
         "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("Alerta"),
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Alerta izenburuduna"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
+            "Beheko nabigazioak hiru eta bost helmuga artean bistaratzen ditu pantailaren beheko aldean. Ikono eta aukerako testu-etiketa bana ageri dira helmuga bakoitzeko. Beheko nabigazioko ikono bat sakatzean, ikono horri loturiko nabigazio-helmuga nagusira eramango da erabiltzailea."),
         "demoBottomNavigationPersistentLabels":
-            MessageLookupByLibrary.simpleMessage("Persistent labels"),
+            MessageLookupByLibrary.simpleMessage("Etiketa finkoak"),
         "demoBottomNavigationSelectedLabel":
-            MessageLookupByLibrary.simpleMessage("Selected label"),
+            MessageLookupByLibrary.simpleMessage("Hautatutako etiketa"),
         "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation with cross-fading views"),
+            "Modu gurutzatuan lausotzen diren ikuspegiak dituen beheko nabigazioa"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom navigation"),
-        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Beheko nabigazioa"),
+        "demoBottomSheetAddLabel":
+            MessageLookupByLibrary.simpleMessage("Gehitu"),
         "demoBottomSheetButtonText":
-            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
-        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
+            MessageLookupByLibrary.simpleMessage("ERAKUTSI BEHEKO ORRIA"),
+        "demoBottomSheetHeader":
+            MessageLookupByLibrary.simpleMessage("Goiburua"),
         "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
+            "Menu edo leiho baten ordez erabil daiteke beheko orri modala; horren bidez, erabiltzaileak ezingo ditu erabili aplikazioaren gainerako elementuak."),
         "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Beheko orri modala"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
+                "Aplikazioko eduki nagusia osatzea helburu duen informazioa erakusten du beheko orri finkoak. Beheko orri finkoa ikusgai dago beti, baita erabiltzailea aplikazioko beste elementu batzuk erabiltzen ari denean ere."),
         "demoBottomSheetPersistentTitle":
-            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Beheko orri finkoa"),
         "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Persistent and modal bottom sheets"),
+            "Beheko orri finko eta modalak"),
         "demoBottomSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("Beheko orria"),
         "demoBottomTextFieldsTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Testu-eremuak"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "Laua, goratua, ingeradaduna eta beste"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Botoiak"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Compact elements that represent an input, attribute, or action"),
-        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+            "Sarrera, atributu edo ekintza bat adierazten duten elementu trinkoak"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Pilulak"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+            "Aukera-pilulek multzo bateko aukera bakarra erakusten dute. Erlazionatutako testu deskribatzailea edo kategoriak ere badauzkate."),
         "demoChoiceChipTitle":
-            MessageLookupByLibrary.simpleMessage("Choice Chip"),
+            MessageLookupByLibrary.simpleMessage("Aukera-pilula"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Kodearen lagina"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "Color and color swatch constants which represent Material Design\'s color palette."),
+            "Material izeneko diseinuaren kolore-paleta irudikatzen duten koloreen eta kolore-aldaketen konstanteak."),
         "demoColorsSubtitle":
             MessageLookupByLibrary.simpleMessage("Kolore lehenetsi guztiak"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("Koloreak"),
@@ -281,9 +296,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
             "Kontuan hartu beharreko egoeren berri ematen diote alerta-leihoek erabiltzaileari. Aukeran, izenburua, edukia eta ekintza-zerrendak izan ditzakete alerta-leihoek. Izenburua edukiaren gainean bistaratuko da; ekintzak, berriz, edukiaren azpian."),
         "demoCupertinoAlertTitle":
-            MessageLookupByLibrary.simpleMessage("Alert"),
+            MessageLookupByLibrary.simpleMessage("Alerta"),
         "demoCupertinoAlertWithTitleTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage("Alerta izenburuduna"),
         "demoCupertinoAlertsSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS estiloko alerta-leihoak"),
         "demoCupertinoAlertsTitle":
@@ -293,7 +308,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS estiloko botoiak"),
         "demoCupertinoButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Buttons"),
+            MessageLookupByLibrary.simpleMessage("Botoiak"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
                 "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
@@ -307,9 +322,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("APIaren dokumentazioa"),
         "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Filter chips use tags or descriptive words as a way to filter content."),
+            "Iragazteko pilulek etiketak edo hitz deskribatzaileak erabiltzen dituzte edukia iragazteko."),
         "demoFilterChipTitle":
-            MessageLookupByLibrary.simpleMessage("Filter Chip"),
+            MessageLookupByLibrary.simpleMessage("Iragazteko pilula"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Botoi lauak kolorez aldatzen dira sakatzen dituztenean, baina ez dira altxatzen. Erabili botoi lauak tresna-barretan, leihoetan eta betegarriak txertatzean."),
         "demoFlatButtonTitle":
@@ -323,12 +338,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoFullscreenDialogTitle":
             MessageLookupByLibrary.simpleMessage("Pantaila osoa"),
         "demoFullscreenTooltip":
-            MessageLookupByLibrary.simpleMessage("Full Screen"),
+            MessageLookupByLibrary.simpleMessage("Pantaila osoa"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Informazioa"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
+            "Sarrera-pilulek informazio konplexua ematen dute modu trinkoan; adibidez, entitate bat (pertsona, toki edo gauza bat) edo elkarrizketa bateko testua."),
         "demoInputChipTitle":
-            MessageLookupByLibrary.simpleMessage("Input Chip"),
+            MessageLookupByLibrary.simpleMessage("Sarrera-pilula"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Ezin izan da bistaratu URLa:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Aukerak"),
@@ -344,67 +359,74 @@ class MessageLookup extends MessageLookupByLibrary {
             "Leiho arruntek hainbat aukera eskaintzen dizkiote erabiltzaileari, nahi duena aukera dezan. Aukeren gainean bistaratzen den izenburu bat izan dezakete leiho arruntek."),
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Arrunta"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
-        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
+            "Testu-eremuen bidez, erabiltzaileek testua idatz dezakete erabiltzaile-interfaze batean. Inprimaki eta leiho gisa agertu ohi dira."),
+        "demoTextFieldEmail":
+            MessageLookupByLibrary.simpleMessage("Helbide elektronikoa"),
         "demoTextFieldEnterPassword":
-            MessageLookupByLibrary.simpleMessage("Please enter a password."),
+            MessageLookupByLibrary.simpleMessage("Idatzi pasahitza."),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### - Enter a US phone number."),
+            "(###) ###-#### - Idatzi AEBko telefono-zenbaki bat."),
         "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
-            "Please fix the errors in red before submitting."),
+            "Bidali baino lehen, konpondu gorriz ageri diren erroreak."),
         "demoTextFieldHidePasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Hide password"),
+            MessageLookupByLibrary.simpleMessage("Ezkutatu pasahitza"),
         "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
-            "Keep it short, this is just a demo."),
+            "Ez luzatu; demo bat baino ez da."),
         "demoTextFieldLifeStory":
-            MessageLookupByLibrary.simpleMessage("Life story"),
-        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
+            MessageLookupByLibrary.simpleMessage("Biografia"),
+        "demoTextFieldNameField":
+            MessageLookupByLibrary.simpleMessage("Izena*"),
         "demoTextFieldNameHasPhoneNumber": m6,
         "demoTextFieldNameRequired":
-            MessageLookupByLibrary.simpleMessage("Name is required."),
+            MessageLookupByLibrary.simpleMessage("Izena behar da."),
         "demoTextFieldNoMoreThan":
-            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+            MessageLookupByLibrary.simpleMessage("Zortzi karaktere gehienez."),
         "demoTextFieldOnlyAlphabeticalChars":
             MessageLookupByLibrary.simpleMessage(
-                "Please enter only alphabetical characters."),
+                "Idatzi alfabetoko karaktereak soilik."),
         "demoTextFieldPassword":
-            MessageLookupByLibrary.simpleMessage("Password*"),
+            MessageLookupByLibrary.simpleMessage("Pasahitza*"),
         "demoTextFieldPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+            MessageLookupByLibrary.simpleMessage("Pasahitzak ez datoz bat"),
         "demoTextFieldPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("Phone number*"),
-        "demoTextFieldRequiredField":
-            MessageLookupByLibrary.simpleMessage("* indicates required field"),
+            MessageLookupByLibrary.simpleMessage("Telefono-zenbakia*"),
+        "demoTextFieldRequiredField": MessageLookupByLibrary.simpleMessage(
+            "* ikurrak derrigorrezko eremua dela adierazten du"),
         "demoTextFieldRetypePassword":
-            MessageLookupByLibrary.simpleMessage("Re-type password*"),
-        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+            MessageLookupByLibrary.simpleMessage("Idatzi pasahitza berriro*"),
+        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Soldata"),
         "demoTextFieldShowPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Show password"),
-        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
+            MessageLookupByLibrary.simpleMessage("Erakutsi pasahitza"),
+        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("BIDALI"),
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Single line of editable text and numbers"),
+            "Testu eta zenbakien lerro editagarri bakarra"),
         "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
+            "Esan zerbait zuri buruz (adibidez, zertan egiten duzun lan edo zer zaletasun dituzun)"),
         "demoTextFieldTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("Testu-eremuak"),
         "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
         "demoTextFieldWhatDoPeopleCallYou":
-            MessageLookupByLibrary.simpleMessage("What do people call you?"),
+            MessageLookupByLibrary.simpleMessage("Nola deitzen dizute?"),
         "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
+            MessageLookupByLibrary.simpleMessage("Non aurki zaitzakegu?"),
         "demoTextFieldYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("Your email address"),
+            MessageLookupByLibrary.simpleMessage("Zure helbide elektronikoa"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Erlazionatutako aukerak taldekatzeko erabil daitezke etengailuak. Erlazionatutako etengailuen talde bat nabarmentzeko, taldeak edukiontzi bera partekatu beharko luke."),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Etengailuak"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Definitions for the various typographical styles found in Material Design."),
+            "Material diseinuko estilo tipografikoen definizioak."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined text styles"),
+            "Testu-estilo lehenetsi guztiak"),
         "demoTypographyTitle":
-            MessageLookupByLibrary.simpleMessage("Typography"),
+            MessageLookupByLibrary.simpleMessage("Tipografia"),
         "dialogAddAccount":
             MessageLookupByLibrary.simpleMessage("Gehitu kontua"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("ONARTU"),
@@ -431,238 +453,280 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Kategoriak"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galeria"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("Car Savings"),
+            MessageLookupByLibrary.simpleMessage("Autorako aurrezkiak"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Checking"),
+            MessageLookupByLibrary.simpleMessage("Egiaztatzen"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("Home Savings"),
+            MessageLookupByLibrary.simpleMessage("Etxerako aurrezkiak"),
         "rallyAccountDataVacation":
-            MessageLookupByLibrary.simpleMessage("Vacation"),
+            MessageLookupByLibrary.simpleMessage("Oporrak"),
         "rallyAccountDetailDataAccountOwner":
-            MessageLookupByLibrary.simpleMessage("Account Owner"),
+            MessageLookupByLibrary.simpleMessage("Kontuaren jabea"),
         "rallyAccountDetailDataAnnualPercentageYield":
-            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+            MessageLookupByLibrary.simpleMessage(
+                "Urtean ordaindutako interesaren ehunekoa"),
         "rallyAccountDetailDataInterestPaidLastYear":
-            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+            MessageLookupByLibrary.simpleMessage(
+                "Joan den urtean ordaindutako interesa"),
         "rallyAccountDetailDataInterestRate":
-            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+            MessageLookupByLibrary.simpleMessage("Interes-tasa"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+            MessageLookupByLibrary.simpleMessage(
+                "Urte-hasieratik gaurdainoko interesak"),
         "rallyAccountDetailDataNextStatement":
-            MessageLookupByLibrary.simpleMessage("Next Statement"),
-        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
-        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
-        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
-        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
-        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+            MessageLookupByLibrary.simpleMessage("Hurrengo kontu-laburpena"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Guztira"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Kontuak"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alertak"),
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("Fakturak"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Epemuga:"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
+            MessageLookupByLibrary.simpleMessage("Arropa"),
         "rallyBudgetCategoryCoffeeShops":
-            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+            MessageLookupByLibrary.simpleMessage("Kafetegiak"),
         "rallyBudgetCategoryGroceries":
-            MessageLookupByLibrary.simpleMessage("Groceries"),
+            MessageLookupByLibrary.simpleMessage("Jan-edanak"),
         "rallyBudgetCategoryRestaurants":
-            MessageLookupByLibrary.simpleMessage("Restaurants"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
-        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
-        "rallyDescription":
-            MessageLookupByLibrary.simpleMessage("A personal finance app"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
-        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
-        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+            MessageLookupByLibrary.simpleMessage("Jatetxeak"),
+        "rallyBudgetLeft":
+            MessageLookupByLibrary.simpleMessage("Geratzen dena"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Aurrekontuak"),
+        "rallyDescription": MessageLookupByLibrary.simpleMessage(
+            "Finantza-aplikazio pertsonala"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("ERABILTZEKE"),
+        "rallyLoginButtonLogin":
+            MessageLookupByLibrary.simpleMessage("HASI SAIOA"),
+        "rallyLoginLabelLogin":
+            MessageLookupByLibrary.simpleMessage("Hasi saioa"),
         "rallyLoginLoginToRally":
-            MessageLookupByLibrary.simpleMessage("Login to Rally"),
+            MessageLookupByLibrary.simpleMessage("Hasi saioa Rally-n"),
         "rallyLoginNoAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Ez duzu konturik?"),
+        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Pasahitza"),
         "rallyLoginRememberMe":
-            MessageLookupByLibrary.simpleMessage("Remember Me"),
-        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
-        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
-        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
-        "rallySettingsFindAtms":
-            MessageLookupByLibrary.simpleMessage("Find ATMs"),
-        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+            MessageLookupByLibrary.simpleMessage("Gogora nazazu"),
+        "rallyLoginSignUp":
+            MessageLookupByLibrary.simpleMessage("ERREGISTRATU"),
+        "rallyLoginUsername":
+            MessageLookupByLibrary.simpleMessage("Erabiltzaile-izena"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("IKUSI GUZTIAK"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
+        "rallySettingsFindAtms": MessageLookupByLibrary.simpleMessage(
+            "Aurkitu kutxazain automatikoak"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Laguntza"),
         "rallySettingsManageAccounts":
-            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+            MessageLookupByLibrary.simpleMessage("Kudeatu kontuak"),
         "rallySettingsNotifications":
-            MessageLookupByLibrary.simpleMessage("Notifications"),
+            MessageLookupByLibrary.simpleMessage("Jakinarazpenak"),
         "rallySettingsPaperlessSettings":
-            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
+            MessageLookupByLibrary.simpleMessage("Paperik gabeko ezarpenak"),
         "rallySettingsPasscodeAndTouchId":
-            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+            MessageLookupByLibrary.simpleMessage("Pasakodea eta Touch ID"),
         "rallySettingsPersonalInformation":
-            MessageLookupByLibrary.simpleMessage("Personal Information"),
+            MessageLookupByLibrary.simpleMessage("Informazio pertsonala"),
         "rallySettingsSignOut":
-            MessageLookupByLibrary.simpleMessage("Sign out"),
+            MessageLookupByLibrary.simpleMessage("Amaitu saioa"),
         "rallySettingsTaxDocuments":
-            MessageLookupByLibrary.simpleMessage("Tax Documents"),
-        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
-        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
-        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
-        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
-        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
+            MessageLookupByLibrary.simpleMessage("Zergei buruzko dokumentuak"),
+        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("KONTUAK"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("FAKTURAK"),
+        "rallyTitleBudgets":
+            MessageLookupByLibrary.simpleMessage("AURREKONTUAK"),
+        "rallyTitleOverview":
+            MessageLookupByLibrary.simpleMessage("INFORMAZIO OROKORRA"),
+        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("EZARPENAK"),
         "settingsAbout":
-            MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
+            MessageLookupByLibrary.simpleMessage("Flutter Gallery-ri buruz"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
-            "Designed by TOASTER in London"),
-        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
+            "Londreseko TOASTER enpresak diseinatua"),
+        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Iluna"),
         "settingsFeedback":
-            MessageLookupByLibrary.simpleMessage("Send feedback"),
-        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Light"),
-        "settingsLocale": MessageLookupByLibrary.simpleMessage("Locale"),
+            MessageLookupByLibrary.simpleMessage("Bidali oharrak"),
+        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Argia"),
+        "settingsLocale":
+            MessageLookupByLibrary.simpleMessage("Lurraldeko ezarpenak"),
         "settingsPlatformAndroid":
             MessageLookupByLibrary.simpleMessage("Android"),
         "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
-            MessageLookupByLibrary.simpleMessage("Platform mechanics"),
+            MessageLookupByLibrary.simpleMessage("Plataformaren mekanika"),
         "settingsSlowMotion":
-            MessageLookupByLibrary.simpleMessage("Slow motion"),
-        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
+            MessageLookupByLibrary.simpleMessage("Kamera geldoa"),
+        "settingsSystemDefault":
+            MessageLookupByLibrary.simpleMessage("Sistema"),
         "settingsTextDirection":
-            MessageLookupByLibrary.simpleMessage("Text direction"),
-        "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
+            MessageLookupByLibrary.simpleMessage("Testuaren noranzkoa"),
+        "settingsTextDirectionLTR":
+            MessageLookupByLibrary.simpleMessage("Ezkerretik eskuinera"),
         "settingsTextDirectionLocaleBased":
             MessageLookupByLibrary.simpleMessage("Based on locale"),
-        "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
+        "settingsTextDirectionRTL":
+            MessageLookupByLibrary.simpleMessage("Eskuinetik ezkerrera"),
         "settingsTextScaling":
-            MessageLookupByLibrary.simpleMessage("Text scaling"),
-        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
+            MessageLookupByLibrary.simpleMessage("Testuaren tamaina"),
+        "settingsTextScalingHuge":
+            MessageLookupByLibrary.simpleMessage("Erraldoia"),
         "settingsTextScalingLarge":
-            MessageLookupByLibrary.simpleMessage("Large"),
+            MessageLookupByLibrary.simpleMessage("Handia"),
         "settingsTextScalingNormal":
-            MessageLookupByLibrary.simpleMessage("Normal"),
+            MessageLookupByLibrary.simpleMessage("Normala"),
         "settingsTextScalingSmall":
-            MessageLookupByLibrary.simpleMessage("Small"),
-        "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Txikia"),
+        "settingsTheme": MessageLookupByLibrary.simpleMessage("Gaia"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("Ezarpenak"),
         "shrineCancelButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CANCEL"),
+            MessageLookupByLibrary.simpleMessage("UTZI"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m13,
-        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+            MessageLookupByLibrary.simpleMessage("GARBITU SASKIA"),
+        "shrineCartItemCount": m16,
+        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("SASKIA"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("Shipping:"),
+            MessageLookupByLibrary.simpleMessage("Bidalketa:"),
         "shrineCartSubtotalCaption":
-            MessageLookupByLibrary.simpleMessage("Subtotal:"),
-        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
-        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+            MessageLookupByLibrary.simpleMessage("Guztizko partziala:"),
+        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Zerga:"),
+        "shrineCartTotalCaption":
+            MessageLookupByLibrary.simpleMessage("GUZTIRA"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
+            MessageLookupByLibrary.simpleMessage("OSAGARRIAK"),
+        "shrineCategoryNameAll":
+            MessageLookupByLibrary.simpleMessage("GUZTIAK"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("CLOTHING"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
-        "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+            MessageLookupByLibrary.simpleMessage("ARROPA"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("ETXEA"),
+        "shrineDescription": MessageLookupByLibrary.simpleMessage(
+            "Moda-modako salmenta-aplikazioa"),
         "shrineLoginPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("Pasahitza"),
         "shrineLoginUsernameLabel":
-            MessageLookupByLibrary.simpleMessage("Username"),
+            MessageLookupByLibrary.simpleMessage("Erabiltzaile-izena"),
         "shrineLogoutButtonCaption":
-            MessageLookupByLibrary.simpleMessage("LOGOUT"),
-        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
-        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+            MessageLookupByLibrary.simpleMessage("AMAITU SAIOA"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENUA"),
+        "shrineNextButtonCaption":
+            MessageLookupByLibrary.simpleMessage("HURRENGOA"),
         "shrineProductBlueStoneMug":
-            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
+            MessageLookupByLibrary.simpleMessage("Harrizko pitxer urdina"),
         "shrineProductCeriseScallopTee":
-            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
-        "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+            MessageLookupByLibrary.simpleMessage("Gerezi-koloreko elastikoa"),
+        "shrineProductChambrayNapkins": MessageLookupByLibrary.simpleMessage(
+            "Chambray estiloko ezpainzapiak"),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+            MessageLookupByLibrary.simpleMessage("Chambray estiloko alkandora"),
         "shrineProductClassicWhiteCollar":
-            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+            MessageLookupByLibrary.simpleMessage("Alkandora zuri klasikoa"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+            MessageLookupByLibrary.simpleMessage("Buztin-koloreko jertsea"),
         "shrineProductCopperWireRack":
-            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
-        "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+            MessageLookupByLibrary.simpleMessage("Kobrezko apalategia"),
+        "shrineProductFineLinesTee": MessageLookupByLibrary.simpleMessage(
+            "Marra finak dituen elastikoa"),
         "shrineProductGardenStrand":
-            MessageLookupByLibrary.simpleMessage("Garden strand"),
+            MessageLookupByLibrary.simpleMessage("Alez egindako lepokoa"),
         "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+            MessageLookupByLibrary.simpleMessage("Gatsby kapela"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
-        "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+            MessageLookupByLibrary.simpleMessage("Gentry jaka"),
+        "shrineProductGiltDeskTrio": MessageLookupByLibrary.simpleMessage(
+            "Urre-koloreko idazmahai-trioa"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
-        "shrineProductGreySlouchTank":
-            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
-        "shrineProductHurrahsTeaSet":
-            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+            MessageLookupByLibrary.simpleMessage("Bufanda gorrixka"),
+        "shrineProductGreySlouchTank": MessageLookupByLibrary.simpleMessage(
+            "Mahukarik gabeko elastiko gris zabala"),
+        "shrineProductHurrahsTeaSet": MessageLookupByLibrary.simpleMessage(
+            "Tea zerbitzatzeko Hurrahs sorta"),
         "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
+            MessageLookupByLibrary.simpleMessage("Sukaldeko tresnak"),
         "shrineProductNavyTrousers":
-            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+            MessageLookupByLibrary.simpleMessage("Galtza urdin ilunak"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+            MessageLookupByLibrary.simpleMessage("Igeltsu-koloreko tunika"),
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Quartet table"),
+            MessageLookupByLibrary.simpleMessage("Laurentzako mahaia"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+            MessageLookupByLibrary.simpleMessage("Euri-uretarako erretilua"),
         "shrineProductRamonaCrossover":
-            MessageLookupByLibrary.simpleMessage("Ramona crossover"),
+            MessageLookupByLibrary.simpleMessage("Ramona poltsa gurutzatua"),
         "shrineProductSeaTunic":
-            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+            MessageLookupByLibrary.simpleMessage("Tunika urdin argia"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
-        "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
+            MessageLookupByLibrary.simpleMessage("Jertse fina"),
+        "shrineProductShoulderRollsTee": MessageLookupByLibrary.simpleMessage(
+            "Sorbalda estaltzen ez duen elastikoa"),
         "shrineProductShrugBag":
-            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+            MessageLookupByLibrary.simpleMessage("Eskuko poltsa"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
-        "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+            MessageLookupByLibrary.simpleMessage("Zeramikazko sorta"),
+        "shrineProductStellaSunglasses": MessageLookupByLibrary.simpleMessage(
+            "Stella eguzkitako betaurrekoak"),
         "shrineProductStrutEarrings":
-            MessageLookupByLibrary.simpleMessage("Strut earrings"),
-        "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+            MessageLookupByLibrary.simpleMessage("Strut belarritakoak"),
+        "shrineProductSucculentPlanters": MessageLookupByLibrary.simpleMessage(
+            "Landare zukutsuetarako loreontziak"),
         "shrineProductSunshirtDress":
-            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+            MessageLookupByLibrary.simpleMessage("Udako soinekoa"),
         "shrineProductSurfAndPerfShirt":
-            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+            MessageLookupByLibrary.simpleMessage("Surf-estiloko alkandora"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
-        "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+            MessageLookupByLibrary.simpleMessage("Vagabond bizkar-zorroa"),
+        "shrineProductVarsitySocks": MessageLookupByLibrary.simpleMessage(
+            "Unibertsitateko taldeko galtzerdiak"),
         "shrineProductWalterHenleyWhite":
-            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+            MessageLookupByLibrary.simpleMessage("Walter Henley (zuria)"),
         "shrineProductWeaveKeyring":
-            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+            MessageLookupByLibrary.simpleMessage("Giltzatako txirikordatua"),
         "shrineProductWhitePinstripeShirt":
-            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+            MessageLookupByLibrary.simpleMessage(
+                "Marra fineko alkandora zuria"),
         "shrineProductWhitneyBelt":
-            MessageLookupByLibrary.simpleMessage("Whitney belt"),
-        "starterAppDescription":
-            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m16,
-        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
+            MessageLookupByLibrary.simpleMessage("Whitney gerrikoa"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
+        "starterAppDescription": MessageLookupByLibrary.simpleMessage(
+            "Hasierako diseinu sentikorra"),
+        "starterAppDrawerItem": m19,
+        "starterAppGenericBody":
+            MessageLookupByLibrary.simpleMessage("Gorputza"),
         "starterAppGenericButton":
-            MessageLookupByLibrary.simpleMessage("BUTTON"),
+            MessageLookupByLibrary.simpleMessage("BOTOIA"),
         "starterAppGenericHeadline":
-            MessageLookupByLibrary.simpleMessage("Headline"),
+            MessageLookupByLibrary.simpleMessage("Goiburua"),
         "starterAppGenericSubtitle":
-            MessageLookupByLibrary.simpleMessage("Subtitle"),
-        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
-        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
-        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("Azpititulua"),
+        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Izena"),
+        "starterAppTitle":
+            MessageLookupByLibrary.simpleMessage("Hasiberrientzako aplikazioa"),
+        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Gehitu"),
         "starterAppTooltipFavorite":
-            MessageLookupByLibrary.simpleMessage("Favorite"),
+            MessageLookupByLibrary.simpleMessage("Gogokoa"),
         "starterAppTooltipSearch":
-            MessageLookupByLibrary.simpleMessage("Search"),
-        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
+            MessageLookupByLibrary.simpleMessage("Bilatu"),
+        "starterAppTooltipShare":
+            MessageLookupByLibrary.simpleMessage("Partekatu")
       };
 }

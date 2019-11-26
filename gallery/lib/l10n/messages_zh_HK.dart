@@ -24,13 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "${title} 分頁嘅佔位符";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: '沒有餐廳', one: '1 間餐廳', other: '${totalRestaurants} 間餐廳')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: '直達航班', one: '1 次轉機', other: '${numberOfStops} 次轉機')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: '沒有空房', one: '1 間空房', other: '${totalProperties} 間空房')}";
 
   static m5(value) => "項目 ${value}";
 
@@ -38,25 +38,34 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "您已選取：「${value}」";
 
-  static m8(amount) => "您這個月已支付 ${amount} 的自動櫃員機費用";
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName}帳戶 ${accountNumber} 的存款金額為 ${amount}。";
 
-  static m9(percent) => "做得好！您的支票帳戶結餘比上個月多了 ${percent}。";
+  static m9(amount) => "您這個月已支付 ${amount} 的自動櫃員機費用";
 
-  static m10(percent) => "請注意，您在這個月已經使用了「購物」預算的 ${percent}。";
+  static m10(percent) => "做得好！您的支票帳戶結餘比上個月多了 ${percent}。";
 
-  static m11(amount) => "您這個星期已於「餐廳」方面花了 ${amount}。";
+  static m11(percent) => "請注意，您在這個月已經使用了「購物」預算的 ${percent}。";
 
-  static m12(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+  static m12(amount) => "您這個星期已於「餐廳」方面花了 ${amount}。";
 
-  static m13(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+  static m13(count) =>
+      "${Intl.plural(count, one: '提高可減免稅額的機率！請替 1 筆尚未指派類別的交易指派類別。', other: '提高可減免稅額的機率！請替 ${count} 筆尚未指派類別的交易指派類別。')}";
 
-  static m14(price) => "x ${price}";
+  static m14(billName, date, amount) =>
+      "${billName}帳單繳費期限為 ${date}，金額為 ${amount}。";
 
-  static m15(quantity) => "數量：${quantity}";
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName}預算金額為 ${amountTotal}，已使用 ${amountUsed}，還剩下 ${amountLeft}";
 
-  static m16(value) => "項目 ${value}";
+  static m16(quantity) =>
+      "${Intl.plural(quantity, zero: '沒有項目', one: '1 個項目', other: '${quantity} 個項目')}";
+
+  static m17(price) => "x ${price}";
+
+  static m18(quantity) => "數量：${quantity}";
+
+  static m19(value) => "項目 ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -74,7 +83,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("按鈕"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("建立"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("騎自行車"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("踏單車"),
         "chipElevator": MessageLookupByLibrary.simpleMessage("電梯"),
         "chipFireplace": MessageLookupByLibrary.simpleMessage("壁爐"),
         "chipLarge": MessageLookupByLibrary.simpleMessage("大"),
@@ -102,60 +111,60 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsTeal": MessageLookupByLibrary.simpleMessage("藍綠色"),
         "colorsYellow": MessageLookupByLibrary.simpleMessage("黃色"),
         "craneDescription": MessageLookupByLibrary.simpleMessage("個人化旅遊應用程式"),
-        "craneEat": MessageLookupByLibrary.simpleMessage("飲食"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("義大利那不勒斯"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("食肆"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("意大利那不勒斯"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("美國達拉斯"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("葡萄牙里斯本"),
-        "craneEat2": MessageLookupByLibrary.simpleMessage("阿根廷哥多華"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("阿根廷科爾多瓦"),
         "craneEat3": MessageLookupByLibrary.simpleMessage("美國波特蘭"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("法國巴黎"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("南韓首爾"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("美國西雅圖"),
-        "craneEat7": MessageLookupByLibrary.simpleMessage("美國納士維"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage("美國納什維爾"),
         "craneEat8": MessageLookupByLibrary.simpleMessage("美國亞特蘭大"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("西班牙馬德里"),
         "craneEatRestaurants": m2,
-        "craneEatSubhead": MessageLookupByLibrary.simpleMessage("依目的地瀏覽餐廳"),
+        "craneEatSubhead": MessageLookupByLibrary.simpleMessage("根據目的地探尋餐廳"),
         "craneFly": MessageLookupByLibrary.simpleMessage("航班"),
-        "craneFly0": MessageLookupByLibrary.simpleMessage("美國阿斯本"),
-        "craneFly1": MessageLookupByLibrary.simpleMessage("美國碧蘇爾"),
+        "craneFly0": MessageLookupByLibrary.simpleMessage("美國阿斯彭"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage("美國大蘇爾"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("埃及開羅"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("葡萄牙里斯本"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("美國納帕"),
-        "craneFly13": MessageLookupByLibrary.simpleMessage("印尼峇里省"),
-        "craneFly2": MessageLookupByLibrary.simpleMessage("尼泊爾坤布谷"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("印尼峇里"),
+        "craneFly2": MessageLookupByLibrary.simpleMessage("尼泊爾坤布山谷"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("秘魯馬丘比丘"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("馬爾地夫馬列"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("馬爾代夫馬累"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("瑞士維茨瑙"),
         "craneFly6": MessageLookupByLibrary.simpleMessage("西班牙馬德里"),
         "craneFly7": MessageLookupByLibrary.simpleMessage("美國拉什莫爾山"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("新加坡"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("古巴哈瓦那"),
         "craneFlyStops": m3,
-        "craneFlySubhead": MessageLookupByLibrary.simpleMessage("依目的地瀏覽航班"),
+        "craneFlySubhead": MessageLookupByLibrary.simpleMessage("根據目的地探索航班"),
         "craneFormDate": MessageLookupByLibrary.simpleMessage("選取日期"),
         "craneFormDates": MessageLookupByLibrary.simpleMessage("選取日期"),
-        "craneFormDestination": MessageLookupByLibrary.simpleMessage("選擇目的地"),
+        "craneFormDestination": MessageLookupByLibrary.simpleMessage("選取目的地"),
         "craneFormDiners": MessageLookupByLibrary.simpleMessage("用餐人數"),
-        "craneFormLocation": MessageLookupByLibrary.simpleMessage("選取地點"),
-        "craneFormOrigin": MessageLookupByLibrary.simpleMessage("選擇起點"),
+        "craneFormLocation": MessageLookupByLibrary.simpleMessage("選取位置"),
+        "craneFormOrigin": MessageLookupByLibrary.simpleMessage("選取出發點"),
         "craneFormTime": MessageLookupByLibrary.simpleMessage("選取時間"),
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("旅客人數"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("住宿"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("馬爾地夫馬列"),
-        "craneSleep1": MessageLookupByLibrary.simpleMessage("美國阿斯本"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("過夜"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("馬爾代夫馬累"),
+        "craneSleep1": MessageLookupByLibrary.simpleMessage("美國阿斯彭"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("埃及開羅"),
-        "craneSleep11": MessageLookupByLibrary.simpleMessage("台灣台北市"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("台灣台北"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("秘魯馬丘比丘"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("古巴哈瓦那"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("瑞士維茨瑙"),
-        "craneSleep5": MessageLookupByLibrary.simpleMessage("美國碧蘇爾"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage("美國大蘇爾"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("美國納帕"),
-        "craneSleep7": MessageLookupByLibrary.simpleMessage("葡萄牙波土"),
-        "craneSleep8": MessageLookupByLibrary.simpleMessage("墨西哥土魯母"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("葡萄牙波多"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("墨西哥圖盧姆"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("葡萄牙里斯本"),
         "craneSleepProperties": m4,
-        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage("依目的地瀏覽房源"),
+        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage("根據目的地探索住宿"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("允許"),
         "cupertinoAlertApplePie": MessageLookupByLibrary.simpleMessage("蘋果批"),
         "cupertinoAlertCancel": MessageLookupByLibrary.simpleMessage("取消"),
@@ -181,7 +190,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("設有背景"),
         "cupertinoShowAlert": MessageLookupByLibrary.simpleMessage("顯示通知"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "「動作方塊」是一組選項，可觸發與主要內容相關的動作。系統會根據 UI 中的內容動態顯示這種方塊。"),
+            "動作方塊列出一組選項，可觸發與主要內容相關的動作。動作方塊應在使用者介面上以動態和與內容相關的方式顯示。"),
         "demoActionChipTitle": MessageLookupByLibrary.simpleMessage("動作方塊"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "通知對話框會通知使用者目前發生要確認的情況。您可按需要為這類對話框設定標題和動作清單。"),
@@ -221,10 +230,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("平面、凸起、外框等等"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("按鈕"),
         "demoChipSubtitle":
-            MessageLookupByLibrary.simpleMessage("代表輸入內容、屬性或動作的精簡元素"),
+            MessageLookupByLibrary.simpleMessage("顯示輸入內容、屬性或動作的精簡元素"),
         "demoChipTitle": MessageLookupByLibrary.simpleMessage("方塊"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "「選擇方塊」代表某個組合中的單一選項，可提供相關的說明文字或類別。"),
+            "選擇方塊從一組選項中顯示單一選項。選擇方塊載有相關的說明文字或類別。"),
         "demoChoiceChipTitle": MessageLookupByLibrary.simpleMessage("選擇方塊"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("程式碼範本"),
         "demoColorsDescription":
@@ -255,17 +264,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsTitle": MessageLookupByLibrary.simpleMessage("按鈕"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "當有多個互斥項目時，用於選取其中一個項目。如果選取區隔控制元件中的其中一個選項，就無法選取區隔控制元件中的其他選項。"),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage("iOS 樣式的區隔控制元件"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("區隔控制元件"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage("簡單、通知和全螢幕"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("對話框"),
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API 說明文件"),
         "demoFilterChipDescription":
-            MessageLookupByLibrary.simpleMessage("「篩選器方塊」會利用標記或描述性字詞篩選內容。"),
+            MessageLookupByLibrary.simpleMessage("篩選器方塊使用標籤或說明文字篩選內容。"),
         "demoFilterChipTitle": MessageLookupByLibrary.simpleMessage("篩選器方塊"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "平面式按鈕，按下後會出現墨水擴散特效，但不會有升起效果。這類按鈕用於工具列、對話框和設有邊框間距的內嵌元素"),
@@ -281,7 +290,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoFullscreenTooltip": MessageLookupByLibrary.simpleMessage("全屏幕"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("資料"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "「輸入方塊」是一項經過簡化的複雜資訊 (例如人物、地點或事物這類實體) 或對話內容。"),
+            "輸入方塊以精簡的形式顯示複雜的資訊，如實體 (人物、地點或事物) 或對話文字。"),
         "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("輸入方塊"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage("無法顯示網址："),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("選項"),
@@ -294,6 +303,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "簡單對話框讓使用者在幾個選項之間選擇。您可按需要為簡單對話框設定標題 (標題會在選項上方顯示)。"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("簡單"),
+        "demoTabsDescription":
+            MessageLookupByLibrary.simpleMessage("使用分頁整理不同畫面、資料集和其他互動項目的內容。"),
+        "demoTabsSubtitle":
+            MessageLookupByLibrary.simpleMessage("含有個別捲動式檢視畫面的分頁"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("分頁"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "文字欄位讓使用者將文字輸入至使用者界面，通常在表格和對話框中出現。"),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("電郵"),
@@ -370,6 +384,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("參考樣式和媒體"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("類別"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("相片集"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("買車儲蓄"),
         "rallyAccountDataChecking":
@@ -392,13 +407,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("總計"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("帳戶"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("通知"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("帳單"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("到期"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("服飾"),
         "rallyBudgetCategoryCoffeeShops":
@@ -421,6 +438,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("申請"),
         "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("使用者名稱"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("查看全部"),
+        "rallySeeAllAccounts": MessageLookupByLibrary.simpleMessage("查看所有帳戶"),
+        "rallySeeAllBills": MessageLookupByLibrary.simpleMessage("查看所有帳單"),
+        "rallySeeAllBudgets": MessageLookupByLibrary.simpleMessage("查看所有預算"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("尋找自動櫃員機"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("說明"),
@@ -461,7 +481,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("由左至右顯示文字"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("根據地區設定"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("由右至左顯示文字"),
         "settingsTextScaling": MessageLookupByLibrary.simpleMessage("文字比例"),
@@ -474,7 +494,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCancelButtonCaption": MessageLookupByLibrary.simpleMessage("取消"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("清除購物車"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("購物車"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("運費："),
@@ -487,7 +507,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("全部"),
         "shrineCategoryNameClothing":
             MessageLookupByLibrary.simpleMessage("服飾"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("居家用品"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("家居"),
         "shrineDescription": MessageLookupByLibrary.simpleMessage("時尚零售應用程式"),
         "shrineLoginPasswordLabel": MessageLookupByLibrary.simpleMessage("密碼"),
         "shrineLoginUsernameLabel":
@@ -530,8 +550,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("軍藍色長褲"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("灰色長袍"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("4 座位桌子"),
         "shrineProductRainwaterTray":
@@ -568,9 +588,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("白色細條紋恤衫"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney 腰帶"),
+        "shrineTooltipCloseCart": MessageLookupByLibrary.simpleMessage("關閉購物車"),
+        "shrineTooltipCloseMenu": MessageLookupByLibrary.simpleMessage("關閉選單"),
+        "shrineTooltipOpenMenu": MessageLookupByLibrary.simpleMessage("開啟選單"),
+        "shrineTooltipRemoveItem": MessageLookupByLibrary.simpleMessage("移除項目"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("搜尋"),
+        "shrineTooltipSettings": MessageLookupByLibrary.simpleMessage("設定"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("回應式入門版面配置"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("內文"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("按鈕"),
         "starterAppGenericHeadline": MessageLookupByLibrary.simpleMessage("標題"),

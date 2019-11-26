@@ -20,9 +20,9 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'te';
 
   static m0(value) =>
-      "To see the source code for this app, please visit the ${value}.";
+      "ఈ యాప్ యొక్క సోర్స్ కోడ్‌ను చూడటానికి, దయచేసి ${value} లింక్‌ను సందర్శించండి.";
 
-  static m1(title) => "Placeholder for ${title} tab";
+  static m1(title) => "${title} ట్యాబ్‌కు సంబంధించిన ప్లేస్‌హోల్డర్";
 
   static m2(totalRestaurants) =>
       "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
@@ -33,61 +33,70 @@ class MessageLookup extends MessageLookupByLibrary {
   static m4(totalProperties) =>
       "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(value) => "Item ${value}";
+  static m5(value) => "వస్తువు ${value}";
 
-  static m6(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
+  static m6(name, phoneNumber) => "${name} యొక్క ఫోన్ నంబర్ ${phoneNumber}";
 
   static m7(value) => "మీరు ఎంపిక చేసింది: \"${value}\"";
 
-  static m8(amount) => "You’ve spent ${amount} in ATM fees this month";
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
 
-  static m9(percent) =>
-      "Good work! Your checking account is ${percent} higher than last month.";
+  static m9(amount) => "మీరు ఈ నెల ATM రుసుముల రూపంలో ${amount} ఖర్చు చేశారు";
 
   static m10(percent) =>
-      "Heads up, you’ve used up ${percent} of your Shopping budget for this month.";
+      "మంచి పని చేసారు! మీ చెకింగ్ ఖాతా గత నెల కంటే ${percent} అధికంగా ఉంది.";
 
-  static m11(amount) => "You’ve spent ${amount} on Restaurants this week.";
+  static m11(percent) =>
+      "జాగ్రత్త పడండి, ఈ నెలకు సరిపడ షాపింగ్ బడ్జెట్‌లో ${percent} ఖర్చు చేసేశారు.";
 
-  static m12(count) =>
+  static m12(amount) => "మీరు ఈ వారం రెస్టారెంట్‌లలో ${amount} ఖర్చు చేశారు.";
+
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "x ${price}";
+  static m17(price) => "x ${price}";
 
-  static m15(quantity) => "Quantity: ${quantity}";
+  static m18(quantity) => "సంఖ్య: ${quantity}";
 
-  static m16(value) => "Item ${value}";
+  static m19(value) => "వస్తువు ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "aboutDialogDescription": m0,
-        "aboutFlutterSamplesRepo":
-            MessageLookupByLibrary.simpleMessage("Flutter samples Github repo"),
+        "aboutFlutterSamplesRepo": MessageLookupByLibrary.simpleMessage(
+            "ఫ్లట్టర్ నమూనాలు జిట్‌హబ్ రెపొజిటరీ"),
         "bottomNavigationAccountTab":
-            MessageLookupByLibrary.simpleMessage("Account"),
+            MessageLookupByLibrary.simpleMessage("ఖాతా"),
         "bottomNavigationAlarmTab":
-            MessageLookupByLibrary.simpleMessage("Alarm"),
+            MessageLookupByLibrary.simpleMessage("అలారం"),
         "bottomNavigationCalendarTab":
-            MessageLookupByLibrary.simpleMessage("Calendar"),
+            MessageLookupByLibrary.simpleMessage("క్యాలెండర్"),
         "bottomNavigationCameraTab":
-            MessageLookupByLibrary.simpleMessage("Camera"),
+            MessageLookupByLibrary.simpleMessage("కెమెరా"),
         "bottomNavigationCommentsTab":
-            MessageLookupByLibrary.simpleMessage("Comments"),
+            MessageLookupByLibrary.simpleMessage("వ్యాఖ్యలు"),
         "bottomNavigationContentPlaceholder": m1,
-        "buttonText": MessageLookupByLibrary.simpleMessage("BUTTON"),
+        "buttonText": MessageLookupByLibrary.simpleMessage("బటన్"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("సృష్టించు"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
-        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
-        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
-        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
-        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
-        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("బైకింగ్"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("ఎలివేటర్"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("పొయ్యి"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("పెద్దది"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("మధ్యస్థం"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("చిన్నది"),
         "chipTurnOnLights":
-            MessageLookupByLibrary.simpleMessage("Turn on lights"),
-        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
+            MessageLookupByLibrary.simpleMessage("లైట్‌లను ఆన్ చేయండి"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("వాషర్"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("కాషాయరంగు"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("నీలం"),
         "colorsBlueGrey":
@@ -112,84 +121,92 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsRed": MessageLookupByLibrary.simpleMessage("ఎరుపు"),
         "colorsTeal": MessageLookupByLibrary.simpleMessage("నీలి ఆకుపచ్చ రంగు"),
         "colorsYellow": MessageLookupByLibrary.simpleMessage("పసుపు"),
-        "craneDescription":
-            MessageLookupByLibrary.simpleMessage("A personalized travel app"),
+        "craneDescription": MessageLookupByLibrary.simpleMessage(
+            "వ్యక్తిగతీకరించిన ట్రావెల్ యాప్"),
         "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("నాపల్స్, ఇటలీ"),
         "craneEat1":
-            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
-        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
-        "craneEat3":
-            MessageLookupByLibrary.simpleMessage("Portland, United States"),
-        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
-        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
+            MessageLookupByLibrary.simpleMessage("డల్లాస్, యునైటెడ్ స్టేట్స్"),
+        "craneEat10":
+            MessageLookupByLibrary.simpleMessage("లిస్బన్, పోర్చుగల్"),
+        "craneEat2":
+            MessageLookupByLibrary.simpleMessage("కొర్డొబా, అర్జెంటీనా"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage(
+            "పోర్ట్‌ల్యాండ్, యునైటెడ్ స్టేట్స్"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("పారిస్, ఫ్రాన్స్"),
+        "craneEat5":
+            MessageLookupByLibrary.simpleMessage("సియోల్, దక్షిణ కొరియా"),
         "craneEat6":
-            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
-        "craneEat7":
-            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
-        "craneEat8":
-            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
-        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+            MessageLookupByLibrary.simpleMessage("సీటెల్, యునైటెడ్ స్టేట్స్"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage(
+            "నాష్విల్లె, యునైటెడ్ స్టేట్స్"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage(
+            "అట్లాంటా, యునైటెడ్ స్టేట్స్"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("మాడ్రిడ్, స్పెయిన్"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Restaurants by Destination"),
+            "గమ్యస్థానం ఆధారంగా రెస్టారెంట్‌లను అన్వేషించండి"),
         "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
         "craneFly0":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
+            MessageLookupByLibrary.simpleMessage("ఆస్పెన్, యునైటెడ్ స్టేట్స్"),
         "craneFly1":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("బిగ్ సర్, యునైటెడ్ స్టేట్స్"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("కైరో, ఈజిప్ట్"),
+        "craneFly11":
+            MessageLookupByLibrary.simpleMessage("లిస్బన్, పోర్చుగల్"),
         "craneFly12":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
-        "craneFly2":
-            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
-        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+            MessageLookupByLibrary.simpleMessage("నాపా, యునైటెడ్ స్టేట్స్"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("బాలి, ఇండోనేషియా"),
+        "craneFly2": MessageLookupByLibrary.simpleMessage("ఖుంబు లోయ, నేపాల్"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("మాచు పిచ్చు, పెరూ"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("మాలే, మాల్దీవులు"),
         "craneFly5":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+            MessageLookupByLibrary.simpleMessage("విట్నావ్, స్విట్జర్లాండ్"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("మాడ్రిడ్, స్పెయిన్"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
-            "Mount Rushmore, United States"),
-        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
-        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            "మౌంట్ రష్మోర్, యునైటెడ్ స్టేట్స్"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("సింగపూర్"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("హవానా, క్యూబా"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Flights by Destination"),
-        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
-        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+            "గమ్యస్థానం ఆధారంగా విమానాలను అన్వేషించండి"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("తేదీ ఎంచుకోండి"),
+        "craneFormDates":
+            MessageLookupByLibrary.simpleMessage("తేదీలను ఎంచుకోండి"),
         "craneFormDestination":
-            MessageLookupByLibrary.simpleMessage("Choose Destination"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+            MessageLookupByLibrary.simpleMessage("గమ్యస్థానాన్ని ఎంచుకోండి"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("డైనర్స్"),
         "craneFormLocation":
-            MessageLookupByLibrary.simpleMessage("Select Location"),
-        "craneFormOrigin":
-            MessageLookupByLibrary.simpleMessage("Choose Origin"),
-        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
-        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+            MessageLookupByLibrary.simpleMessage("లొకేషన్‌ను ఎంచుకోండి"),
+        "craneFormOrigin": MessageLookupByLibrary.simpleMessage(
+            "బయలుదేరే ప్రదేశాన్ని ఎంచుకోండి"),
+        "craneFormTime":
+            MessageLookupByLibrary.simpleMessage("సమయాన్ని ఎంచుకోండి"),
+        "craneFormTravelers":
+            MessageLookupByLibrary.simpleMessage("ప్రయాణికులు"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("స్లీప్"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("మాలే, మాల్దీవులు"),
         "craneSleep1":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+            MessageLookupByLibrary.simpleMessage("ఆస్పెన్, యునైటెడ్ స్టేట్స్"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("కైరో, ఈజిప్ట్"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("తైపీ, తైవాన్"),
         "craneSleep2":
-            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            MessageLookupByLibrary.simpleMessage("మాచు పిచ్చు, పెరూ"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("హవానా, క్యూబా"),
         "craneSleep4":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
+            MessageLookupByLibrary.simpleMessage("విట్నావ్, స్విట్జర్లాండ్"),
         "craneSleep5":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
+            MessageLookupByLibrary.simpleMessage("బిగ్ సర్, యునైటెడ్ స్టేట్స్"),
         "craneSleep6":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
-        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
-        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("నాపా, యునైటెడ్ స్టేట్స్"),
+        "craneSleep7":
+            MessageLookupByLibrary.simpleMessage("పోర్టో, పోర్చుగల్"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("టలమ్, మెక్సికో"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("లిస్బన్, పోర్చుగల్"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Properties by Destination"),
+            "గమ్యస్థానం ఆధారంగా ప్రాపర్టీలను అన్వేషించండి"),
         "cupertinoAlertAllow":
             MessageLookupByLibrary.simpleMessage("అనుమతించు"),
         "cupertinoAlertApplePie":
@@ -214,63 +231,65 @@ class MessageLookup extends MessageLookupByLibrary {
             "యాప్‌ని ఉపయోగిస్తున్నప్పుడు మీ లొకేషన్‌ని యాక్సెస్ చేసేందుకు \"Maps\"ని అనుమతించాలా?"),
         "cupertinoAlertTiramisu":
             MessageLookupByLibrary.simpleMessage("తిరమిసు"),
-        "cupertinoButton": MessageLookupByLibrary.simpleMessage("Button"),
+        "cupertinoButton": MessageLookupByLibrary.simpleMessage("బటన్"),
         "cupertinoButtonWithBackground":
             MessageLookupByLibrary.simpleMessage("బ్యాక్‌గ్రౌండ్‌తో"),
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("అలర్ట్‌ని చూపించు"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+            "యాక్షన్ చిప్‌లు అనేవి ప్రాథమిక కంటెంట్‌కు సంబంధించిన చర్యను ట్రిగ్గర్ చేసే ఎంపికల సెట్. UIలో యాక్షన్ చిప్‌లు డైనమిక్‌గా, సందర్భానుసారంగా కనిపించాలి."),
         "demoActionChipTitle":
-            MessageLookupByLibrary.simpleMessage("Action Chip"),
+            MessageLookupByLibrary.simpleMessage("యాక్షన్ చిప్"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "అందినట్టుగా నిర్ధారణ అవసరమయ్యే పరిస్థితుల గురించి అలర్ట్ డైలాగ్ యూజర్‌కు తెలియజేస్తుంది. అలర్ట్ డైలాగ్‌లో ఐచ్ఛిక శీర్షిక, ఐచ్ఛిక చర్యలకు సంబంధించిన జాబితా ఉంటాయి."),
         "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("అలర్ట్"),
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("శీర్షికతో అలర్ట్"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation bars display three to five destinations at the bottom of a screen. Each destination is represented by an icon and an optional text label. When a bottom navigation icon is tapped, the user is taken to the top-level navigation destination associated with that icon."),
+            "కిందికి ఉండే నావిగేషన్ బార్‌లు స్క్రీన్ దిగువున మూడు నుండి ఐదు గమ్యస్థానాలను ప్రదర్శిస్తాయి. ప్రతి గమ్యస్థానం ఒక చిహ్నం, అలాగే ఐచ్ఛిక వచన లేబుల్ ఆధారంగా సూచించబడ్డాయి. కిందికి ఉండే నావిగేషన్ చిహ్నాన్ని నొక్కినప్పుడు, యూజర్ ఆ చిహ్నంతో అనుబంధితమైన అత్యంత ప్రధానమైన గమ్యస్థానం ఉన్న నావిగేషన్‌కు తీసుకెళ్లబడతారు."),
         "demoBottomNavigationPersistentLabels":
-            MessageLookupByLibrary.simpleMessage("Persistent labels"),
+            MessageLookupByLibrary.simpleMessage("స్థిరమైన లేబుల్‌లు"),
         "demoBottomNavigationSelectedLabel":
-            MessageLookupByLibrary.simpleMessage("Selected label"),
+            MessageLookupByLibrary.simpleMessage("లేబుల్ ఎంచుకోబడింది"),
         "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Bottom navigation with cross-fading views"),
+            "క్రాస్-ఫేడింగ్ వీక్షణలతో కిందివైపు నావిగేషన్"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom navigation"),
-        "demoBottomSheetAddLabel": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("కిందికి నావిగేషన్"),
+        "demoBottomSheetAddLabel":
+            MessageLookupByLibrary.simpleMessage("జోడిస్తుంది"),
         "demoBottomSheetButtonText":
-            MessageLookupByLibrary.simpleMessage("SHOW BOTTOM SHEET"),
-        "demoBottomSheetHeader": MessageLookupByLibrary.simpleMessage("Header"),
+            MessageLookupByLibrary.simpleMessage("దిగువున షీట్‌ను చూపు"),
+        "demoBottomSheetHeader":
+            MessageLookupByLibrary.simpleMessage("ముఖ్య శీర్షిక"),
         "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "A modal bottom sheet is an alternative to a menu or a dialog and prevents the user from interacting with the rest of the app."),
+            "నమూనా దిగువున ఉండే షీట్ అన్నది మెనూ లేదా డైలాగ్‌కు ప్రత్యామ్నాయం. ఇది యాప్‌లో మిగతా వాటితో ఇంటరాక్ట్ కాకుండా యూజర్‌ను నిరోధిస్తుంది."),
         "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("Modal bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("నమూనా దిగువున ఉండే షీట్"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "A persistent bottom sheet shows information that supplements the primary content of the app. A persistent bottom sheet remains visible even when the user interacts with other parts of the app."),
+                "దిగువున నిరంతరంగా ఉండే షీట్ అన్నది యాప్‌లోని ప్రాధమిక కంటెంట్‌కు పూరకంగా ఉండే అనుబంధ సమాచారాన్ని చూపుతుంది. యాప్‌లోని ఇతర భాగాలతో యూజర్ ఇంటరాక్ట్ అయినప్పుడు కూడా దిగువున నిరంతర షీట్ కనపడుతుంది."),
         "demoBottomSheetPersistentTitle":
-            MessageLookupByLibrary.simpleMessage("Persistent bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("నిరంతరం దిగువున ఉండే షీట్"),
         "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Persistent and modal bottom sheets"),
+            "స్థిరమైన నమూనా దిగువున ఉండే షిట్‌లు"),
         "demoBottomSheetTitle":
-            MessageLookupByLibrary.simpleMessage("Bottom sheet"),
+            MessageLookupByLibrary.simpleMessage("దిగువున ఉన్న షీట్"),
         "demoBottomTextFieldsTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("వచన ఫీల్డ్‌లు"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "ఫ్లాట్, పెరిగిన, అవుట్ లైన్ మరియు మరిన్ని"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("బటన్‌లు"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Compact elements that represent an input, attribute, or action"),
-        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+            "ఇన్‌పుట్, లక్షణం లేదా చర్యలను సూచించే సంక్షిప్త మూలకాలు"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("చిప్‌లు"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+            "ఎంపిక చిప్‌లు సెట్‌లోని ఒక ఎంపికను సూచిస్తాయి. ఎంపిక చిప్‌లు సంబంధిత వివరణాత్మక వచనం లేదా వర్గాలను కలిగి ఉంటాయి."),
         "demoChoiceChipTitle":
-            MessageLookupByLibrary.simpleMessage("Choice Chip"),
+            MessageLookupByLibrary.simpleMessage("ఎంపిక చిప్"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("కోడ్ నమూనా"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "Color and color swatch constants which represent Material Design\'s color palette."),
+            "మెటీరియల్ డిజైన్ రంగుల పాలెట్‌ను సూచించే రంగు మరియు రంగు స్వాచ్ కాన్‌స్టెంట్స్."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
             "అన్నీ ముందుగా నిర్వచించిన రంగులు"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("రంగులు"),
@@ -285,9 +304,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoAlertDescription": MessageLookupByLibrary.simpleMessage(
             "అందినట్టుగా నిర్ధారణ అవసరమయ్యే పరిస్థితుల గురించి అలర్ట్ డైలాగ్ యూజర్‌కు తెలియజేస్తుంది. అలర్ట్ డైలాగ్‌లో ఐచ్ఛిక శీర్షిక, ఐచ్ఛిక కంటెంట్, ఐచ్ఛిక చర్యలకు సంబంధించిన జాబితాలు ఉంటాయి శీర్షిక కంటెంట్ పైన ప్రదర్శించబడుతుంది అలాగే చర్యలు కంటెంట్ క్రింద ప్రదర్శించబడతాయి."),
         "demoCupertinoAlertTitle":
-            MessageLookupByLibrary.simpleMessage("Alert"),
+            MessageLookupByLibrary.simpleMessage("అలర్ట్"),
         "demoCupertinoAlertWithTitleTitle":
-            MessageLookupByLibrary.simpleMessage("Alert With Title"),
+            MessageLookupByLibrary.simpleMessage("శీర్షికతో అలర్ట్"),
         "demoCupertinoAlertsSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS-శైలి అలర్ట్ డైలాగ్‌లు"),
         "demoCupertinoAlertsTitle":
@@ -297,7 +316,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS-శైలి బటన్‌లు"),
         "demoCupertinoButtonsTitle":
-            MessageLookupByLibrary.simpleMessage("Buttons"),
+            MessageLookupByLibrary.simpleMessage("బటన్‌లు"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
                 "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
@@ -311,9 +330,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API డాక్యుమెంటేషన్"),
         "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Filter chips use tags or descriptive words as a way to filter content."),
+            "ఫిల్టర్ చిప్‌లు అనేవి కంటెంట్‌ను ఫిల్టర్ చేయడం కోసం ఒక మార్గంగా ట్యాగ్‌లు లేదా వివరణాత్మక పదాలను ఉపయోగిస్తాయి."),
         "demoFilterChipTitle":
-            MessageLookupByLibrary.simpleMessage("Filter Chip"),
+            MessageLookupByLibrary.simpleMessage("ఫిల్టర్ చిప్"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "ఫ్లాట్ బటన్‌ని నొక్కితే, అది సిరా చల్లినట్టుగా కనబడుతుంది, కానీ ఎత్తదు. టూల్‌బార్‌లలో, డైలాగ్‌లలో మరియు పాడింగ్‌తో ఇన్‌లైన్‌లో ఫ్లాట్ బటన్‌లను ఉపయోగించండి"),
         "demoFlatButtonTitle":
@@ -327,12 +346,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoFullscreenDialogTitle":
             MessageLookupByLibrary.simpleMessage("పూర్తి స్క్రీన్"),
         "demoFullscreenTooltip":
-            MessageLookupByLibrary.simpleMessage("Full Screen"),
+            MessageLookupByLibrary.simpleMessage("పూర్తి స్క్రీన్"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("సమాచారం"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
+            "ఇన్‌పుట్ చిప్‌లు సమాచారంలోని క్లిష్టమైన భాగం ప్రధానంగా పని చేస్తాయి. ఉదాహరణకు, ఎంటిటీ (వ్యక్తి, స్థలం లేదా వస్తువు) లేదా సంక్షిప్త రూపంలో సంభాషణ వచనం."),
         "demoInputChipTitle":
-            MessageLookupByLibrary.simpleMessage("Input Chip"),
+            MessageLookupByLibrary.simpleMessage("ఇన్‌పుట్ చిప్"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "URLని ప్రదర్శించడం సాధ్యపడలేదు:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("ఎంపికలు"),
@@ -347,67 +366,74 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "సరళమైన డైలాగ్ వినియోగదారుకు అనేక ఎంపికల మధ్య ఎంపికను అందిస్తుంది. సరళమైన డైలాగ్‌లో ఐచ్ఛిక శీర్షిక ఉంటుంది, అది ఎంపికల పైన ప్రదర్శించబడుతుంది."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("సాధారణ"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Text fields allow users to enter text into a UI. They typically appear in forms and dialogs."),
-        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
-        "demoTextFieldEnterPassword":
-            MessageLookupByLibrary.simpleMessage("Please enter a password."),
+            "వచన ఫీల్డ్‌లు అన్నవి వినియోగదారులు వచనాన్ని UIలో ఎంటర్ చేయడానికి వీలు కల్పిస్తాయి. అవి సాధారణంగా ఫారమ్‌లు, డైలాగ్‌లలో కనిపిస్తాయి."),
+        "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("ఇమెయిల్"),
+        "demoTextFieldEnterPassword": MessageLookupByLibrary.simpleMessage(
+            "దయచేసి పాస్‌వర్డ్‌ను ఎంటర్ చేయండి."),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### - Enter a US phone number."),
+            "(###) ###-#### - US ఫోన్ నంబర్‌ను ఎంటర్ చేయండి."),
         "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
-            "Please fix the errors in red before submitting."),
+            "సమర్పించే ముందు దయచేసి ఎరుపు రంగులో సూచించిన ఎర్రర్‌లను పరిష్కరించండి."),
         "demoTextFieldHidePasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Hide password"),
+            MessageLookupByLibrary.simpleMessage("పాస్‌వర్డ్‌ను దాస్తుంది"),
         "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
-            "Keep it short, this is just a demo."),
+            "చిన్నదిగా చేయండి, ఇది కేవలం డెమో మాత్రమే."),
         "demoTextFieldLifeStory":
-            MessageLookupByLibrary.simpleMessage("Life story"),
-        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Name*"),
+            MessageLookupByLibrary.simpleMessage("జీవిత కథ"),
+        "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("పేరు*"),
         "demoTextFieldNameHasPhoneNumber": m6,
         "demoTextFieldNameRequired":
-            MessageLookupByLibrary.simpleMessage("Name is required."),
+            MessageLookupByLibrary.simpleMessage("పేరు అవసరం."),
         "demoTextFieldNoMoreThan":
-            MessageLookupByLibrary.simpleMessage("No more than 8 characters."),
+            MessageLookupByLibrary.simpleMessage("8 అక్షరాలు మించకూడదు."),
         "demoTextFieldOnlyAlphabeticalChars":
             MessageLookupByLibrary.simpleMessage(
-                "Please enter only alphabetical characters."),
+                "దయచేసి కేవలం ఆల్ఫాబెటికల్ అక్షరాలను మాత్రమే ఎంటర్ చేయండి."),
         "demoTextFieldPassword":
-            MessageLookupByLibrary.simpleMessage("Password*"),
+            MessageLookupByLibrary.simpleMessage("పాస్‌వర్డ్*"),
         "demoTextFieldPasswordsDoNotMatch":
-            MessageLookupByLibrary.simpleMessage("The passwords don\'t match"),
+            MessageLookupByLibrary.simpleMessage("పాస్‌వర్డ్‌లు సరిపోలలేదు"),
         "demoTextFieldPhoneNumber":
-            MessageLookupByLibrary.simpleMessage("Phone number*"),
-        "demoTextFieldRequiredField":
-            MessageLookupByLibrary.simpleMessage("* indicates required field"),
-        "demoTextFieldRetypePassword":
-            MessageLookupByLibrary.simpleMessage("Re-type password*"),
-        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Salary"),
+            MessageLookupByLibrary.simpleMessage("ఫోన్ నంబర్*"),
+        "demoTextFieldRequiredField": MessageLookupByLibrary.simpleMessage(
+            "* అవసరమైన ఫీల్డ్‌ను సూచిస్తుంది"),
+        "demoTextFieldRetypePassword": MessageLookupByLibrary.simpleMessage(
+            "పాస్‌వర్డ్‌ను మళ్లీ టైప్ చేయండి*"),
+        "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("జీతం"),
         "demoTextFieldShowPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Show password"),
-        "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("SUBMIT"),
+            MessageLookupByLibrary.simpleMessage("పాస్‌వర్డ్‌ను చూపుతుంది"),
+        "demoTextFieldSubmit":
+            MessageLookupByLibrary.simpleMessage("సమర్పించు"),
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Single line of editable text and numbers"),
+            "సవరించదగిన వచనం, సంఖ్యలు కలిగి ఉన్న ఒకే పంక్తి"),
         "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "Tell us about yourself (e.g., write down what you do or what hobbies you have)"),
+            "మీ గురించి మాకు చెప్పండి (ఉదా., మీరు ఏమి చేస్తుంటారు, మీ అభిరుచులు ఏమిటి)"),
         "demoTextFieldTitle":
-            MessageLookupByLibrary.simpleMessage("Text fields"),
+            MessageLookupByLibrary.simpleMessage("వచన ఫీల్డ్‌లు"),
         "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
         "demoTextFieldWhatDoPeopleCallYou":
-            MessageLookupByLibrary.simpleMessage("What do people call you?"),
-        "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("Where can we reach you?"),
+            MessageLookupByLibrary.simpleMessage(
+                "అందరూ మిమ్మల్ని ఏమని పిలుస్తారు?"),
+        "demoTextFieldWhereCanWeReachYou": MessageLookupByLibrary.simpleMessage(
+            "మేము మిమ్మల్ని ఏ విధంగా సంప్రదించవచ్చు?"),
         "demoTextFieldYourEmailAddress":
-            MessageLookupByLibrary.simpleMessage("Your email address"),
+            MessageLookupByLibrary.simpleMessage("మీ ఇమెయిల్ చిరునామా"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "సంబంధిత ఎంపికలను సమూహపరచడానికి టోగుల్ బటన్‌లను ఉపయోగించవచ్చు. సంబంధిత టోగుల్ బటన్‌ల సమూహాలను నొక్కడానికి, సమూహం సాధారణ కంటైనర్‌ని షేర్ చేయాలి"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("టోగుల్ బటన్‌లు"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Definitions for the various typographical styles found in Material Design."),
+            "విశేష రూపకల్పనలో కనుగొన్న వివిధ రకాల టైపోగ్రాఫికల్ శైలుల యొక్క నిర్వచనాలు."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "All of the predefined text styles"),
+            "అన్ని పూర్వ నిర్వచిత వచన శైలలు"),
         "demoTypographyTitle":
-            MessageLookupByLibrary.simpleMessage("Typography"),
+            MessageLookupByLibrary.simpleMessage("టైపోగ్రఫీ"),
         "dialogAddAccount":
             MessageLookupByLibrary.simpleMessage("ఖాతాను జోడించు"),
         "dialogAgree":
@@ -436,238 +462,277 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("రిఫరెన్స్ స్టైల్స్ & మీడియా"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("వర్గాలు"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("గ్యాలరీ"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("Car Savings"),
+            MessageLookupByLibrary.simpleMessage("కారు సేవింగ్స్"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Checking"),
+            MessageLookupByLibrary.simpleMessage("తనిఖీ చేస్తోంది"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("Home Savings"),
+            MessageLookupByLibrary.simpleMessage("ఇంటి పొదుపులు"),
         "rallyAccountDataVacation":
-            MessageLookupByLibrary.simpleMessage("Vacation"),
+            MessageLookupByLibrary.simpleMessage("విహారయాత్ర"),
         "rallyAccountDetailDataAccountOwner":
-            MessageLookupByLibrary.simpleMessage("Account Owner"),
+            MessageLookupByLibrary.simpleMessage("ఖాతా యజమాని"),
         "rallyAccountDetailDataAnnualPercentageYield":
-            MessageLookupByLibrary.simpleMessage("Annual Percentage Yield"),
+            MessageLookupByLibrary.simpleMessage("వార్షిక రాబడి శాతం"),
         "rallyAccountDetailDataInterestPaidLastYear":
-            MessageLookupByLibrary.simpleMessage("Interest Paid Last Year"),
+            MessageLookupByLibrary.simpleMessage(
+                "గత సంవత్సరం చెల్లించిన వడ్డీ"),
         "rallyAccountDetailDataInterestRate":
-            MessageLookupByLibrary.simpleMessage("Interest Rate"),
+            MessageLookupByLibrary.simpleMessage("వడ్డీ రేటు"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("Interest YTD"),
+            MessageLookupByLibrary.simpleMessage("వడ్డీ YTD"),
         "rallyAccountDetailDataNextStatement":
-            MessageLookupByLibrary.simpleMessage("Next Statement"),
-        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
-        "rallyAccounts": MessageLookupByLibrary.simpleMessage("Accounts"),
-        "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerts"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
-        "rallyBills": MessageLookupByLibrary.simpleMessage("Bills"),
-        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Due"),
+            MessageLookupByLibrary.simpleMessage("తర్వాతి స్టేట్‌మెంట్"),
+        "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("మొత్తం"),
+        "rallyAccounts": MessageLookupByLibrary.simpleMessage("ఖాతాలు"),
+        "rallyAlerts": MessageLookupByLibrary.simpleMessage("అలర్ట్‌లు"),
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
+        "rallyBills": MessageLookupByLibrary.simpleMessage("బిల్లులు"),
+        "rallyBillsDue":
+            MessageLookupByLibrary.simpleMessage("బకాయి వున్న బిల్లు"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
-            MessageLookupByLibrary.simpleMessage("Clothing"),
+            MessageLookupByLibrary.simpleMessage("దుస్తులు"),
         "rallyBudgetCategoryCoffeeShops":
-            MessageLookupByLibrary.simpleMessage("Coffee Shops"),
+            MessageLookupByLibrary.simpleMessage("కాఫీ షాప్‌లు"),
         "rallyBudgetCategoryGroceries":
-            MessageLookupByLibrary.simpleMessage("Groceries"),
+            MessageLookupByLibrary.simpleMessage("కిరాణా సరుకులు"),
         "rallyBudgetCategoryRestaurants":
-            MessageLookupByLibrary.simpleMessage("Restaurants"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Left"),
-        "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgets"),
+            MessageLookupByLibrary.simpleMessage("రెస్టారెంట్‌లు"),
+        "rallyBudgetLeft":
+            MessageLookupByLibrary.simpleMessage("మిగిలిన మొత్తం"),
+        "rallyBudgets": MessageLookupByLibrary.simpleMessage("బడ్జెట్‌లు"),
         "rallyDescription":
-            MessageLookupByLibrary.simpleMessage("A personal finance app"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage(" LEFT"),
-        "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("LOGIN"),
-        "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Login"),
+            MessageLookupByLibrary.simpleMessage("పర్సనల్ ఫైనాన్స్ యాప్"),
+        "rallyFinanceLeft":
+            MessageLookupByLibrary.simpleMessage("మిగిలిన మొత్తం"),
+        "rallyLoginButtonLogin":
+            MessageLookupByLibrary.simpleMessage("లాగిన్ చేయి"),
+        "rallyLoginLabelLogin":
+            MessageLookupByLibrary.simpleMessage("లాగిన్ చేయి"),
         "rallyLoginLoginToRally":
-            MessageLookupByLibrary.simpleMessage("Login to Rally"),
+            MessageLookupByLibrary.simpleMessage("Rallyలో లాగిన్ చేయండి"),
         "rallyLoginNoAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
-        "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("ఖాతా లేదా?"),
+        "rallyLoginPassword":
+            MessageLookupByLibrary.simpleMessage("పాస్‌వర్డ్"),
         "rallyLoginRememberMe":
-            MessageLookupByLibrary.simpleMessage("Remember Me"),
-        "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("SIGN UP"),
-        "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Username"),
-        "rallySeeAll": MessageLookupByLibrary.simpleMessage("SEE ALL"),
+            MessageLookupByLibrary.simpleMessage("నన్ను గుర్తుంచుకో"),
+        "rallyLoginSignUp":
+            MessageLookupByLibrary.simpleMessage("సైన్ అప్ చేయి"),
+        "rallyLoginUsername":
+            MessageLookupByLibrary.simpleMessage("వినియోగదారు పేరు"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("అన్నీ చూడండి"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms":
-            MessageLookupByLibrary.simpleMessage("Find ATMs"),
-        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Help"),
+            MessageLookupByLibrary.simpleMessage("ATMలను కనుగొనండి"),
+        "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("సహాయం"),
         "rallySettingsManageAccounts":
-            MessageLookupByLibrary.simpleMessage("Manage Accounts"),
+            MessageLookupByLibrary.simpleMessage("ఖాతాలను నిర్వహించండి"),
         "rallySettingsNotifications":
-            MessageLookupByLibrary.simpleMessage("Notifications"),
-        "rallySettingsPaperlessSettings":
-            MessageLookupByLibrary.simpleMessage("Paperless Settings"),
+            MessageLookupByLibrary.simpleMessage("నోటిఫికేషన్‌లు"),
+        "rallySettingsPaperlessSettings": MessageLookupByLibrary.simpleMessage(
+            "కాగితం వినియోగం నివారణ సెట్టింగులు"),
         "rallySettingsPasscodeAndTouchId":
-            MessageLookupByLibrary.simpleMessage("Passcode and Touch ID"),
+            MessageLookupByLibrary.simpleMessage("పాస్‌కోడ్, టచ్ ID"),
         "rallySettingsPersonalInformation":
-            MessageLookupByLibrary.simpleMessage("Personal Information"),
+            MessageLookupByLibrary.simpleMessage("వ్యక్తిగత సమాచారం"),
         "rallySettingsSignOut":
-            MessageLookupByLibrary.simpleMessage("Sign out"),
+            MessageLookupByLibrary.simpleMessage("సైన్ అవుట్ చేయండి"),
         "rallySettingsTaxDocuments":
-            MessageLookupByLibrary.simpleMessage("Tax Documents"),
-        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ACCOUNTS"),
-        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("BILLS"),
-        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("BUDGETS"),
-        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("OVERVIEW"),
-        "rallyTitleSettings": MessageLookupByLibrary.simpleMessage("SETTINGS"),
+            MessageLookupByLibrary.simpleMessage("పన్ను పత్రాలు"),
+        "rallyTitleAccounts": MessageLookupByLibrary.simpleMessage("ఖాతాలు"),
+        "rallyTitleBills": MessageLookupByLibrary.simpleMessage("బిల్లులు"),
+        "rallyTitleBudgets": MessageLookupByLibrary.simpleMessage("బడ్జెట్‌లు"),
+        "rallyTitleOverview": MessageLookupByLibrary.simpleMessage("అవలోకనం"),
+        "rallyTitleSettings":
+            MessageLookupByLibrary.simpleMessage("సెట్టింగ్‌లు"),
         "settingsAbout":
-            MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
+            MessageLookupByLibrary.simpleMessage("\'Flutter Gallery\' పరిచయం"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
-            "Designed by TOASTER in London"),
-        "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
+            "లండన్‌లోని TOASTER ద్వారా డిజైన్ చేయబడింది"),
+        "settingsDarkTheme":
+            MessageLookupByLibrary.simpleMessage("ముదురు రంగు"),
         "settingsFeedback":
-            MessageLookupByLibrary.simpleMessage("Send feedback"),
-        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Light"),
-        "settingsLocale": MessageLookupByLibrary.simpleMessage("Locale"),
+            MessageLookupByLibrary.simpleMessage("అభిప్రాయాన్ని పంపు"),
+        "settingsLightTheme": MessageLookupByLibrary.simpleMessage("కాంతివంతం"),
+        "settingsLocale": MessageLookupByLibrary.simpleMessage("లొకేల్"),
         "settingsPlatformAndroid":
             MessageLookupByLibrary.simpleMessage("Android"),
         "settingsPlatformIOS": MessageLookupByLibrary.simpleMessage("iOS"),
         "settingsPlatformMechanics":
-            MessageLookupByLibrary.simpleMessage("Platform mechanics"),
+            MessageLookupByLibrary.simpleMessage("ప్లాట్‌ఫామ్ మెకానిక్స్"),
         "settingsSlowMotion":
-            MessageLookupByLibrary.simpleMessage("Slow motion"),
-        "settingsSystemDefault": MessageLookupByLibrary.simpleMessage("System"),
+            MessageLookupByLibrary.simpleMessage("నెమ్మది చలనం"),
+        "settingsSystemDefault":
+            MessageLookupByLibrary.simpleMessage("సిస్టమ్"),
         "settingsTextDirection":
-            MessageLookupByLibrary.simpleMessage("Text direction"),
+            MessageLookupByLibrary.simpleMessage("వచన దిశ"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
         "settingsTextDirectionLocaleBased":
             MessageLookupByLibrary.simpleMessage("Based on locale"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
-            MessageLookupByLibrary.simpleMessage("Text scaling"),
-        "settingsTextScalingHuge": MessageLookupByLibrary.simpleMessage("Huge"),
+            MessageLookupByLibrary.simpleMessage("వచన ప్రమాణం"),
+        "settingsTextScalingHuge":
+            MessageLookupByLibrary.simpleMessage("భారీగా"),
         "settingsTextScalingLarge":
-            MessageLookupByLibrary.simpleMessage("Large"),
+            MessageLookupByLibrary.simpleMessage("పెద్దవిగా"),
         "settingsTextScalingNormal":
-            MessageLookupByLibrary.simpleMessage("Normal"),
+            MessageLookupByLibrary.simpleMessage("సాధారణం"),
         "settingsTextScalingSmall":
-            MessageLookupByLibrary.simpleMessage("Small"),
-        "settingsTheme": MessageLookupByLibrary.simpleMessage("Theme"),
-        "settingsTitle": MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("చిన్నవిగా"),
+        "settingsTheme": MessageLookupByLibrary.simpleMessage("థీమ్"),
+        "settingsTitle": MessageLookupByLibrary.simpleMessage("సెట్టింగ్‌లు"),
         "shrineCancelButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CANCEL"),
+            MessageLookupByLibrary.simpleMessage("రద్దు చేయి"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("CLEAR CART"),
-        "shrineCartItemCount": m13,
-        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CART"),
+            MessageLookupByLibrary.simpleMessage("కార్ట్ అంతా క్లియర్ చేయి"),
+        "shrineCartItemCount": m16,
+        "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("కార్ట్"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("Shipping:"),
+            MessageLookupByLibrary.simpleMessage("షిప్పింగ్ ఖర్చు:"),
         "shrineCartSubtotalCaption":
-            MessageLookupByLibrary.simpleMessage("Subtotal:"),
-        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Tax:"),
-        "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
+            MessageLookupByLibrary.simpleMessage("ఉప మొత్తం:"),
+        "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("పన్ను:"),
+        "shrineCartTotalCaption":
+            MessageLookupByLibrary.simpleMessage("మొత్తం"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
+            MessageLookupByLibrary.simpleMessage("యాక్సెసరీలు"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("అన్నీ"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("CLOTHING"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
-        "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("A fashionable retail app"),
+            MessageLookupByLibrary.simpleMessage("దుస్తులు"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("ఇల్లు"),
+        "shrineDescription": MessageLookupByLibrary.simpleMessage(
+            "ఫ్యాషన్‌తో కూడిన రీటైల్ యాప్"),
         "shrineLoginPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Password"),
+            MessageLookupByLibrary.simpleMessage("పాస్‌వర్డ్"),
         "shrineLoginUsernameLabel":
-            MessageLookupByLibrary.simpleMessage("Username"),
+            MessageLookupByLibrary.simpleMessage("వినియోగదారు పేరు"),
         "shrineLogoutButtonCaption":
-            MessageLookupByLibrary.simpleMessage("LOGOUT"),
-        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("MENU"),
-        "shrineNextButtonCaption": MessageLookupByLibrary.simpleMessage("NEXT"),
+            MessageLookupByLibrary.simpleMessage("లాగ్ అవుట్ చేయి"),
+        "shrineMenuCaption": MessageLookupByLibrary.simpleMessage("మెను"),
+        "shrineNextButtonCaption":
+            MessageLookupByLibrary.simpleMessage("తర్వాత"),
         "shrineProductBlueStoneMug":
-            MessageLookupByLibrary.simpleMessage("Blue stone mug"),
+            MessageLookupByLibrary.simpleMessage("బ్లూ స్టోన్ మగ్"),
         "shrineProductCeriseScallopTee":
-            MessageLookupByLibrary.simpleMessage("Cerise scallop tee"),
+            MessageLookupByLibrary.simpleMessage("సెరిస్ స్కాల్లొప్ టీషర్ట్"),
         "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("Chambray napkins"),
+            MessageLookupByLibrary.simpleMessage("ఛాంబ్రే నాప్కిన్‌లు"),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("Chambray shirt"),
+            MessageLookupByLibrary.simpleMessage("ఛాంబ్రే షర్ట్"),
         "shrineProductClassicWhiteCollar":
-            MessageLookupByLibrary.simpleMessage("Classic white collar"),
+            MessageLookupByLibrary.simpleMessage("క్లాసిక్ వైట్ కాలర్"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Clay sweater"),
+            MessageLookupByLibrary.simpleMessage("క్లే స్వెటర్"),
         "shrineProductCopperWireRack":
-            MessageLookupByLibrary.simpleMessage("Copper wire rack"),
+            MessageLookupByLibrary.simpleMessage("కాపర్ వైర్ ర్యాక్"),
         "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("Fine lines tee"),
+            MessageLookupByLibrary.simpleMessage("సన్నని గీతల టీషర్ట్"),
         "shrineProductGardenStrand":
-            MessageLookupByLibrary.simpleMessage("Garden strand"),
+            MessageLookupByLibrary.simpleMessage("గార్డెన్ స్ట్రాండ్"),
         "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("Gatsby hat"),
+            MessageLookupByLibrary.simpleMessage("గాట్స్‌బి టోపీ"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("Gentry jacket"),
+            MessageLookupByLibrary.simpleMessage("మగాళ్లు ధరించే జాకట్"),
         "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Gilt desk trio"),
+            MessageLookupByLibrary.simpleMessage("గిల్ట్ డెస్క్ ట్రయో"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Ginger scarf"),
+            MessageLookupByLibrary.simpleMessage("జింజర్ స్కార్ఫ్"),
         "shrineProductGreySlouchTank":
-            MessageLookupByLibrary.simpleMessage("Grey slouch tank"),
+            MessageLookupByLibrary.simpleMessage("గ్రే స్లాచ్ ట్యాంక్"),
         "shrineProductHurrahsTeaSet":
-            MessageLookupByLibrary.simpleMessage("Hurrahs tea set"),
+            MessageLookupByLibrary.simpleMessage("హుర్రాస్ టీ సెట్"),
         "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("Kitchen quattro"),
+            MessageLookupByLibrary.simpleMessage("కిచెన్ క్వాట్రొ"),
         "shrineProductNavyTrousers":
-            MessageLookupByLibrary.simpleMessage("Navy trousers"),
+            MessageLookupByLibrary.simpleMessage("నేవీ ట్రౌజర్లు"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+            MessageLookupByLibrary.simpleMessage("ప్లాస్టర్ ట్యూనిక్"),
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Quartet table"),
+            MessageLookupByLibrary.simpleMessage("క్వార్టెట్ బల్ల"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("Rainwater tray"),
+            MessageLookupByLibrary.simpleMessage("రెయిన్ వాటర్ ట్రే"),
         "shrineProductRamonaCrossover":
-            MessageLookupByLibrary.simpleMessage("Ramona crossover"),
+            MessageLookupByLibrary.simpleMessage("రమోనా క్రాస్ఓవర్"),
         "shrineProductSeaTunic":
-            MessageLookupByLibrary.simpleMessage("Sea tunic"),
+            MessageLookupByLibrary.simpleMessage("సీ ట్యూనిక్"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Seabreeze sweater"),
+            MessageLookupByLibrary.simpleMessage("సీబ్రీజ్ స్వెటర్"),
         "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Shoulder rolls tee"),
+            MessageLookupByLibrary.simpleMessage("షోల్డర్ రోల్స్ టీ"),
         "shrineProductShrugBag":
-            MessageLookupByLibrary.simpleMessage("Shrug bag"),
+            MessageLookupByLibrary.simpleMessage("భుజాన వేసుకునే సంచి"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("Soothe ceramic set"),
+            MessageLookupByLibrary.simpleMessage("సూత్ సెరామిక్ సెట్"),
         "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("Stella sunglasses"),
+            MessageLookupByLibrary.simpleMessage("స్టెల్లా సన్‌గ్లాసెస్"),
         "shrineProductStrutEarrings":
-            MessageLookupByLibrary.simpleMessage("Strut earrings"),
-        "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("Succulent planters"),
+            MessageLookupByLibrary.simpleMessage("దారంతో వేలాడే చెవిపోగులు"),
+        "shrineProductSucculentPlanters": MessageLookupByLibrary.simpleMessage(
+            "కండ కలిగిన మొక్కలు ఉంచే ప్లాంటర్‌లు"),
         "shrineProductSunshirtDress":
-            MessageLookupByLibrary.simpleMessage("Sunshirt dress"),
+            MessageLookupByLibrary.simpleMessage("సన్‌షర్ట్ దుస్తులు"),
         "shrineProductSurfAndPerfShirt":
-            MessageLookupByLibrary.simpleMessage("Surf and perf shirt"),
+            MessageLookupByLibrary.simpleMessage("సర్ఫ్ అండ్ పర్ఫ్ షర్ట్"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Vagabond sack"),
+            MessageLookupByLibrary.simpleMessage("వెగాబాండ్ శాక్"),
         "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("Varsity socks"),
+            MessageLookupByLibrary.simpleMessage("వార్సిటి సాక్స్‌లు"),
         "shrineProductWalterHenleyWhite":
-            MessageLookupByLibrary.simpleMessage("Walter henley (white)"),
+            MessageLookupByLibrary.simpleMessage("వాల్టర్ హెనెలి (వైట్)"),
         "shrineProductWeaveKeyring":
-            MessageLookupByLibrary.simpleMessage("Weave keyring"),
+            MessageLookupByLibrary.simpleMessage("వీవ్ కీరింగ్"),
         "shrineProductWhitePinstripeShirt":
-            MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
+            MessageLookupByLibrary.simpleMessage(
+                "తెల్లని పిన్‌స్ట్రైప్ చొక్కా"),
         "shrineProductWhitneyBelt":
-            MessageLookupByLibrary.simpleMessage("Whitney belt"),
-        "starterAppDescription":
-            MessageLookupByLibrary.simpleMessage("A responsive starter layout"),
-        "starterAppDrawerItem": m16,
-        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Body"),
-        "starterAppGenericButton":
-            MessageLookupByLibrary.simpleMessage("BUTTON"),
+            MessageLookupByLibrary.simpleMessage("విట్నీ బెల్ట్"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
+        "starterAppDescription": MessageLookupByLibrary.simpleMessage(
+            "ప్రతిస్పందనాత్మక శైలిలోని స్టార్టర్ లేఅవుట్"),
+        "starterAppDrawerItem": m19,
+        "starterAppGenericBody":
+            MessageLookupByLibrary.simpleMessage("ప్రధాన భాగం"),
+        "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("బటన్"),
         "starterAppGenericHeadline":
-            MessageLookupByLibrary.simpleMessage("Headline"),
+            MessageLookupByLibrary.simpleMessage("ప్రధాన శీర్షిక"),
         "starterAppGenericSubtitle":
-            MessageLookupByLibrary.simpleMessage("Subtitle"),
-        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Title"),
-        "starterAppTitle": MessageLookupByLibrary.simpleMessage("Starter app"),
-        "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("Add"),
+            MessageLookupByLibrary.simpleMessage("ఉప శీర్షిక"),
+        "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("పేరు"),
+        "starterAppTitle":
+            MessageLookupByLibrary.simpleMessage("స్టార్టర్ యాప్"),
+        "starterAppTooltipAdd":
+            MessageLookupByLibrary.simpleMessage("జోడిస్తుంది"),
         "starterAppTooltipFavorite":
-            MessageLookupByLibrary.simpleMessage("Favorite"),
+            MessageLookupByLibrary.simpleMessage("ఇష్టమైనది"),
         "starterAppTooltipSearch":
-            MessageLookupByLibrary.simpleMessage("Search"),
-        "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("Share")
+            MessageLookupByLibrary.simpleMessage("వెతుకుతుంది"),
+        "starterAppTooltipShare":
+            MessageLookupByLibrary.simpleMessage("షేర్ చేస్తుంది")
       };
 }

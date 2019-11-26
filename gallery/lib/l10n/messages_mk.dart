@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Резервирано место за картичката ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Нема ресторани', one: '1 ресторан', other: '${totalRestaurants} ресторани')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Директен', one: '1 застанување', other: '${numberOfStops} застанувања')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Нема достапни сместувања', one: '1 достапно сместување', other: '${totalProperties} достапни сместувања')}";
 
   static m5(value) => "Ставка ${value}";
 
@@ -40,33 +40,42 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "Избравте: „${value}“";
 
-  static m8(amount) => "Потрошивте ${amount} на провизија за банкомат месецов";
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} сметка ${accountNumber} со ${amount}.";
 
-  static m9(percent) =>
-      "Одлично! Салдото на сметката ви е ${percent} поголемо од минатиот месец.";
+  static m9(amount) => "Потрошивте ${amount} на провизија за банкомат месецов";
 
   static m10(percent) =>
+      "Одлично! Салдото на сметката ви е ${percent} поголемо од минатиот месец.";
+
+  static m11(percent) =>
       "Внимавајте, сте искористиле ${percent} од буџетот за купување месецов.";
 
-  static m11(amount) => "Потрошивте ${amount} на ресторани седмицава.";
+  static m12(amount) => "Потрошивте ${amount} на ресторани седмицава.";
 
-  static m12(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+  static m13(count) =>
+      "${Intl.plural(count, one: 'Зголемете го потенцијалното одбивање данок! Назначете категории на 1 неназначена трансакција.', other: 'Зголемете го потенцијалното одбивање данок! Назначете категории на ${count} неназначени трансакции.')}";
 
-  static m13(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+  static m14(billName, date, amount) =>
+      "${billName} треба да се плати до ${date} и изнесува ${amount}.";
 
-  static m14(price) => "x ${price}";
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} буџет со искористени ${amountUsed} од ${amountTotal}, преостануваат ${amountLeft}";
 
-  static m15(quantity) => "Количина: ${quantity}";
+  static m16(quantity) =>
+      "${Intl.plural(quantity, zero: 'НЕМА СТАВКИ', one: '1 СТАВКА', other: '${quantity} СТАВКИ')}";
 
-  static m16(value) => "Ставка ${value}";
+  static m17(price) => "x ${price}";
+
+  static m18(quantity) => "Количина: ${quantity}";
+
+  static m19(value) => "Ставка ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
         "aboutDialogDescription": m0,
         "aboutFlutterSamplesRepo": MessageLookupByLibrary.simpleMessage(
-            "Примери за Flutter од сладиштето на Github"),
+            "Примери за Flutter од складиштето на Github"),
         "bottomNavigationAccountTab":
             MessageLookupByLibrary.simpleMessage("Сметка"),
         "bottomNavigationAlarmTab":
@@ -238,10 +247,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
             "Модалниот долен лист е алтернатива за мени или дијалог и го спречува корисникот да комуницира со остатокот од апликацијата."),
         "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("Моделен долен лист"),
+            MessageLookupByLibrary.simpleMessage("Модален долен лист"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Постојаниот долен лист прикажува информации што ги дополнуваат примарните содржини на апликацијата. Постојаниот долен лист останува видлив дури и кога корисникот комуницира со другите делови на апликацијата."),
+                "Постојаниот долен лист прикажува информации што ги дополнуваат примарните содржини на апликацијата. Постојаниот долен лист останува видлив дури и при интеракцијата на корисникот со другите делови на апликацијата."),
         "demoBottomSheetPersistentTitle":
             MessageLookupByLibrary.simpleMessage("Постојан долен лист"),
         "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -294,11 +303,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Копчиња"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Се користи за избирање помеѓу број на самостојни опции. Кога ќе се избере една опција во сегментираната контрола, ќе се поништи изборот на другите опции."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "Сегментирана контрола во iOS-стил"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Сегментирана контрола"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Едноставен, за предупредување и на цел екран"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Дијалози"),
@@ -342,8 +352,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "Едноставниот дијалог му нуди на корисникот избор помеѓу неколку опции. Едноставниот дијалог има изборен наслов прикажан над опциите."),
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Едноставен"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Картичките ги организираат содржините на различни екрани, збирови податоци и други интеракции."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Картички со прикази што се лизгаат неазависно еден од друг"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Картички"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Полињата за текст им овозможуваат на корисниците да внесуваат текст во корисничкиот интерфејс. Обично се појавуваат во форма на дијалози."),
+            "Полињата за текст им овозможуваат на корисниците да внесуваат текст во корисничкиот интерфејс. Обично се појавуваат во формулари и дијалози."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("Е-пошта"),
         "demoTextFieldEnterPassword":
             MessageLookupByLibrary.simpleMessage("Внесете лозинка."),
@@ -354,7 +369,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldHidePasswordLabel":
             MessageLookupByLibrary.simpleMessage("Сокријте ја лозинката"),
         "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
-            "Нека биде кратко, ова е само демо."),
+            "Нека биде кратко, ова е само пример."),
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Животна приказна"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Име*"),
@@ -397,7 +412,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Копчиња за префрлање"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "Дефиниции за различните типографски стилови во материјалниот дизајн."),
+            "Дефиниции за различните типографски стилови во Material Design."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
             "Сите однапред дефинирани стилови на текст"),
         "demoTypographyTitle":
@@ -430,12 +445,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Категории"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Галерија"),
-        "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("Заштеда на автомобил"),
+        "rallyAccountAmount": m8,
+        "rallyAccountDataCarSavings": MessageLookupByLibrary.simpleMessage(
+            "Штедна сметка за автомобилот"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Се проверува"),
+            MessageLookupByLibrary.simpleMessage("Тековна сметка"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("Домашна заштеда"),
+            MessageLookupByLibrary.simpleMessage("Штедна сметка за домот"),
         "rallyAccountDataVacation":
             MessageLookupByLibrary.simpleMessage("Одмор"),
         "rallyAccountDetailDataAccountOwner":
@@ -454,13 +470,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Вкупно"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Сметки"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Предупредувања"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Сметки"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Краен рок"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Облека"),
         "rallyBudgetCategoryCoffeeShops":
@@ -489,7 +507,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("РЕГИСТРИРАЈТЕ СЕ"),
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("Корисничко име"),
-        "rallySeeAll": MessageLookupByLibrary.simpleMessage("ВИДИ ГИ СИТЕ"),
+        "rallySeeAll": MessageLookupByLibrary.simpleMessage("ПРИКАЖИ СЀ"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("Прикажи ги сите сметки"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("Прикажи ги сите сметки"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("Прикажи ги сите буџети"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Најдете банкомати"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Помош"),
@@ -498,7 +522,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallySettingsNotifications":
             MessageLookupByLibrary.simpleMessage("Известувања"),
         "rallySettingsPaperlessSettings": MessageLookupByLibrary.simpleMessage(
-            "Поставки за некористење хартија"),
+            "Поставки за пошта без хартија"),
         "rallySettingsPasscodeAndTouchId":
             MessageLookupByLibrary.simpleMessage("Лозинка и ID на допир"),
         "rallySettingsPersonalInformation":
@@ -535,7 +559,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("Лево кон десно"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("Според локација"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("Десно кон лево"),
         "settingsTextScaling":
@@ -552,8 +576,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCancelButtonCaption":
             MessageLookupByLibrary.simpleMessage("ОТКАЖИ"),
         "shrineCartClearButtonCaption":
-            MessageLookupByLibrary.simpleMessage("ИСЧИСТИ КОШНИЧКА"),
-        "shrineCartItemCount": m13,
+            MessageLookupByLibrary.simpleMessage("ИСПРАЗНИ КОШНИЧКА"),
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("КОШНИЧКА"),
         "shrineCartShippingCaption":
@@ -582,91 +606,103 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineNextButtonCaption":
             MessageLookupByLibrary.simpleMessage("СЛЕДНО"),
         "shrineProductBlueStoneMug":
-            MessageLookupByLibrary.simpleMessage("Сина чаша од камен"),
+            MessageLookupByLibrary.simpleMessage("Сина камена шолја"),
         "shrineProductCeriseScallopTee":
-            MessageLookupByLibrary.simpleMessage("Порабена маица од Cerise"),
+            MessageLookupByLibrary.simpleMessage("Порабена маица Cerise"),
         "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("Салфети од Chambray"),
+            MessageLookupByLibrary.simpleMessage("Салфети Chambray"),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("Kошула од Chambray"),
+            MessageLookupByLibrary.simpleMessage("Kошула Chambray"),
         "shrineProductClassicWhiteCollar":
             MessageLookupByLibrary.simpleMessage("Класична бела јака"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Џемпер од Clay"),
+            MessageLookupByLibrary.simpleMessage("Џемпер Clay"),
         "shrineProductCopperWireRack":
             MessageLookupByLibrary.simpleMessage("Полица од бакарна жица"),
         "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("Маица од Fine lines"),
+            MessageLookupByLibrary.simpleMessage("Маица Fine lines"),
         "shrineProductGardenStrand":
             MessageLookupByLibrary.simpleMessage("Орнамент за во градина"),
         "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("Капа од Gatsby"),
+            MessageLookupByLibrary.simpleMessage("Капа Gatsby"),
         "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("Отмена јакна"),
+            MessageLookupByLibrary.simpleMessage("Јакна Gentry"),
         "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Три масички од Gilt"),
+            MessageLookupByLibrary.simpleMessage("Три масички Gilt"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Шал од Ginger"),
+            MessageLookupByLibrary.simpleMessage("Шал во боја на ѓумбир"),
         "shrineProductGreySlouchTank":
             MessageLookupByLibrary.simpleMessage("Сива маица без ракави"),
         "shrineProductHurrahsTeaSet":
             MessageLookupByLibrary.simpleMessage("Сет за чај Hurrahs"),
         "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("Кујна од Quattro"),
+            MessageLookupByLibrary.simpleMessage("Кујнски сет од 4 парчиња"),
         "shrineProductNavyTrousers":
             MessageLookupByLibrary.simpleMessage("Панталони во морско сина"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("Туника од Plaster"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+            MessageLookupByLibrary.simpleMessage("Туника Plaster"),
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Квадратна маса"),
+            MessageLookupByLibrary.simpleMessage("Маса Quartet"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("Корито за дождовница"),
+            MessageLookupByLibrary.simpleMessage("Послужавник Rainwater"),
         "shrineProductRamonaCrossover":
-            MessageLookupByLibrary.simpleMessage("Ramona crossover"),
+            MessageLookupByLibrary.simpleMessage("Женска блуза Ramona"),
         "shrineProductSeaTunic":
             MessageLookupByLibrary.simpleMessage("Туника во морски тонови"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Џемпер од Seabreeze"),
+            MessageLookupByLibrary.simpleMessage("Џемпер Seabreeze"),
         "shrineProductShoulderRollsTee":
             MessageLookupByLibrary.simpleMessage("Маица со спуштени ракави"),
         "shrineProductShrugBag":
-            MessageLookupByLibrary.simpleMessage("Чанта од Shrug"),
+            MessageLookupByLibrary.simpleMessage("Чанта Shrug"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("Керамички сет од Soothe"),
+            MessageLookupByLibrary.simpleMessage("Керамички сет Soothe"),
         "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("Очила за сонце од Stella"),
+            MessageLookupByLibrary.simpleMessage("Очила за сонце Stella"),
         "shrineProductStrutEarrings":
             MessageLookupByLibrary.simpleMessage("Обетки Strut"),
         "shrineProductSucculentPlanters":
             MessageLookupByLibrary.simpleMessage("Саксии за сукуленти"),
         "shrineProductSunshirtDress":
             MessageLookupByLibrary.simpleMessage("Фустан за на плажа"),
-        "shrineProductSurfAndPerfShirt": MessageLookupByLibrary.simpleMessage(
-            "Маица за суфање и перформанси"),
+        "shrineProductSurfAndPerfShirt":
+            MessageLookupByLibrary.simpleMessage("Маица Surf and perf"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Торбеста чанта од Vagabond"),
+            MessageLookupByLibrary.simpleMessage("Ранец Vagabond"),
         "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("Чорапи од Varsity"),
+            MessageLookupByLibrary.simpleMessage("Чорапи Varsity"),
         "shrineProductWalterHenleyWhite":
-            MessageLookupByLibrary.simpleMessage("Walter Henley (бело)"),
-        "shrineProductWeaveKeyring": MessageLookupByLibrary.simpleMessage(
-            "Привезок за клучеви од Weave"),
+            MessageLookupByLibrary.simpleMessage("Walter Henley (бела)"),
+        "shrineProductWeaveKeyring":
+            MessageLookupByLibrary.simpleMessage("Привезок за клучеви Weave"),
         "shrineProductWhitePinstripeShirt":
             MessageLookupByLibrary.simpleMessage("Бела кошула со риги"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Ремен Whitney"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Затворете ја кошничката"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Затворете го менито"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Отворете го менито"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Отстрани ја ставката"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Пребарај"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Поставки"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Распоред што овозможува брзо стартување"),
-        "starterAppDrawerItem": m16,
-        "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Тело"),
+        "starterAppDrawerItem": m19,
+        "starterAppGenericBody":
+            MessageLookupByLibrary.simpleMessage("Главен текст"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("КОПЧЕ"),
         "starterAppGenericHeadline":
             MessageLookupByLibrary.simpleMessage("Наслов"),
         "starterAppGenericSubtitle":
-            MessageLookupByLibrary.simpleMessage("Титл"),
+            MessageLookupByLibrary.simpleMessage("Поднаслов"),
         "starterAppGenericTitle":
             MessageLookupByLibrary.simpleMessage("Наслов"),
         "starterAppTitle":

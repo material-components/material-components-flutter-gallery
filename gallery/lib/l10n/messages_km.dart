@@ -25,42 +25,51 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "កន្លែងដាក់​សម្រាប់ផ្ទាំង ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'មិនមាន​ភោជនីយដ្ឋាន​ទេ', one: 'ភោជនីយដ្ឋាន 1', other: 'ភោជនីយដ្ឋាន ${totalRestaurants}')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'មិន​ឈប់', one: 'ការឈប់ 1 លើក', other: 'ការឈប់ ${numberOfStops} លើក')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'មិនមាន​អចលនទ្រព្យ​ដែលអាចជួល​បានទេ', one: 'មាន​អចលនទ្រព្យ 1 ដែលអាចជួល​បាន', other: 'មាន​អចលនទ្រព្យ​ ${totalProperties} ដែលអាចជួល​បាន')}";
 
-  static m5(value) => "ធាតុ ${value}";
+  static m5(value) => "ធាតុទី ${value}";
 
   static m6(name, phoneNumber) => "លេខទូរសព្ទ​របស់ ${name} គឺ ${phoneNumber}";
 
   static m7(value) => "អ្នកបាន​ជ្រើសរើស៖ \"${value}\"";
 
-  static m8(amount) => "អ្នកបានចំណាយ​អស់ ${amount} សម្រាប់ថ្លៃសេវា ATM នៅខែនេះ";
+  static m8(accountName, accountNumber, amount) =>
+      "គណនី ${accountName} ${accountNumber} ដែលមាន​ទឹកប្រាក់ ${amount}។";
 
-  static m9(percent) =>
-      "ល្អណាស់! គណនីមូលប្បទានបត្រ​របស់អ្នកគឺ​ខ្ពស់ជាង​ខែមុន ${percent}។";
+  static m9(amount) => "អ្នកបានចំណាយ​អស់ ${amount} សម្រាប់ថ្លៃសេវា ATM នៅខែនេះ";
 
   static m10(percent) =>
+      "ល្អណាស់! គណនីមូលប្បទានបត្រ​របស់អ្នកគឺ​ខ្ពស់ជាង​ខែមុន ${percent}។";
+
+  static m11(percent) =>
       "សូមប្រុងប្រយ័ត្ន អ្នកបានប្រើអស់ ${percent} នៃថវិកាទិញ​ទំនិញរបស់អ្នក​សម្រាប់ខែនេះ។";
 
-  static m11(amount) =>
+  static m12(amount) =>
       "អ្នកបាន​ចំណាយអស់ ${amount} លើភោជនីយដ្ឋាន​នៅសប្ដាហ៍នេះ។";
 
-  static m12(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+  static m13(count) =>
+      "${Intl.plural(count, one: 'បង្កើន​ការកាត់ពន្ធ​របស់អ្នក​ដែលអាច​មាន! កំណត់​ប្រភេទ​ទៅ​ប្រតិបត្តិការ 1 ដែលមិនបានកំណត់។', other: 'បង្កើន​ការកាត់ពន្ធ​របស់អ្នក​ដែលអាច​មាន! កំណត់​ប្រភេទ​ទៅ​ប្រតិបត្តិការ ${count} ដែលមិនបានកំណត់។')}";
 
-  static m13(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+  static m14(billName, date, amount) =>
+      "វិក្កយបត្រ ${billName} ដែលមានតម្លៃ ${amount} ផុតកំណត់​នៅថ្ងៃទី ${date}។";
 
-  static m14(price) => "x ${price}";
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "ថវិកា ${budgetName} ដែលចំណាយអស់ ${amountUsed} នៃទឹកប្រាក់សរុប ${amountTotal} ហើយនៅសល់ ${amountLeft}";
 
-  static m15(quantity) => "បរិមាណ៖ ${quantity}";
+  static m16(quantity) =>
+      "${Intl.plural(quantity, zero: 'មិនមាន​ទំនិញ​ទេ', one: 'ទំនិញ 1', other: 'ទំនិញ ${quantity}')}";
 
-  static m16(value) => "ធាតុ ${value}";
+  static m17(price) => "x ${price}";
+
+  static m18(quantity) => "បរិមាណ៖ ${quantity}";
+
+  static m19(value) => "ធាតុទី ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -153,7 +162,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "ភ្នំ​រ៉ាស្សម៉រ សហរដ្ឋ​អាមេរិក"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("សិង្ហបុរី"),
-        "craneFly9": MessageLookupByLibrary.simpleMessage("ឡាហាវ៉ាន គុយបា"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("ហាវ៉ាណា គុយបា"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "ស្វែងរក​ជើង​ហោះហើរ​តាម​គោលដៅ"),
@@ -180,7 +189,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneSleep10": MessageLookupByLibrary.simpleMessage("គែរ អេហ្ស៊ីប"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("តៃប៉ិ តៃវ៉ាន់"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("ម៉ាឈូភីឈូ ប៉េរូ"),
-        "craneSleep3": MessageLookupByLibrary.simpleMessage("ឡាហាវ៉ាន គុយបា"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("ហាវ៉ាណា គុយបា"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("វីតស្នោវ ស្វ៊ីស"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("ប៊ីកសឺ សហរដ្ឋ​អាមេរិក"),
@@ -248,16 +257,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ក្បាលទំព័រ"),
         "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "សន្លឹកខាងក្រោម​លក្ខណៈម៉ូដលគឺ​ជាជម្រើស​សម្រាប់ម៉ឺនុយ ឬប្រអប់ និងទប់ស្កាត់​អ្នកប្រើប្រាស់មិនឱ្យធ្វើ​អន្តរកម្មជាមួយ​កម្មវិធីដែលនៅសល់។"),
+            "សន្លឹកខាងក្រោម​លក្ខណៈម៉ូដលគឺ​ជាជម្រើស​ផ្សេងក្រៅពី​ម៉ឺនុយ ឬប្រអប់ និងទប់ស្កាត់​អ្នកប្រើប្រាស់មិនឱ្យធ្វើ​អន្តរកម្មជាមួយ​កម្មវិធីដែលនៅសល់។"),
         "demoBottomSheetModalTitle":
             MessageLookupByLibrary.simpleMessage("សន្លឹកខាងក្រោម​លក្ខណៈម៉ូដល"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "សន្លឹកខាងក្រោម​លក្ខណៈអចិន្ត្រៃយ៍​បង្ហាញព័ត៌មាន​ដែលបន្ថែមលើ​ខ្លឹមសារចម្បងនៃកម្មវិធី។ សន្លឹកខាងក្រោម​លក្ខណៈអចិន្ត្រៃយ៍​នៅតែអាចមើលឃើញ​ដដែល ទោះបីជានៅពេលអ្នកប្រើប្រាស់​ធ្វើអន្តរកម្ម​ជាមួយផ្នែកផ្សេងទៀតនៃ​កម្មវិធីក៏ដោយ។"),
+                "សន្លឹកខាងក្រោម​លក្ខណៈភើស៊ីស្ទើន​បង្ហាញព័ត៌មាន​ដែលបន្ថែមលើ​ខ្លឹមសារចម្បងនៃកម្មវិធី។ សន្លឹកខាងក្រោម​លក្ខណៈភើស៊ីស្ទើននៅតែអាចមើលឃើញ​ដដែល ទោះបីជានៅពេលអ្នកប្រើប្រាស់​ធ្វើអន្តរកម្ម​ជាមួយផ្នែកផ្សេងទៀតនៃ​កម្មវិធីក៏ដោយ។"),
         "demoBottomSheetPersistentTitle": MessageLookupByLibrary.simpleMessage(
-            "សន្លឹកខាងក្រោម​លក្ខណៈអចិន្ត្រៃយ៍"),
+            "សន្លឹកខាងក្រោម​លក្ខណៈភើស៊ីស្ទើន"),
         "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "សន្លឹកខាងក្រោម​លក្ខណៈម៉ូដល និងអចិន្ត្រៃយ៍"),
+            "សន្លឹកខាងក្រោម​លក្ខណៈម៉ូដល និងភើស៊ីស្ទើន"),
         "demoBottomSheetTitle":
             MessageLookupByLibrary.simpleMessage("សន្លឹក​ខាងក្រោម"),
         "demoBottomTextFieldsTitle":
@@ -266,7 +275,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "ប៊ូតុង​រាបស្មើ ប៊ូតុង​ផុសឡើង ប៊ូតុង​មានបន្ទាត់ជុំវិញ និង​ច្រើនទៀត"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("ប៊ូតុង"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "ធាតុ​តូចៗ​ដែល​តំណាងឱ្យ​ធាតុ​បញ្ចូល លក្ខណៈ ឬ​សកម្មភាព"),
+            "ធាតុ​ចង្អៀតដែល​តំណាងឱ្យ​ធាតុ​បញ្ចូល លក្ខណៈ ឬ​សកម្មភាព"),
         "demoChipTitle": MessageLookupByLibrary.simpleMessage("ឈីប"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
             "ឈីប​ជម្រើស​តំណាងឱ្យ​ជម្រើស​តែមួយ​ពី​បណ្ដុំ​មួយ​។ ឈីប​ជម្រើស​មាន​ប្រភេទ ឬ​អត្ថបទ​បែប​ពណ៌នា​ដែល​ពាក់ព័ន្ធ​។"),
@@ -304,11 +313,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ប៊ូតុង"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "ប្រើ​ដើម្បី​ជ្រើសរើស​រវាង​ជម្រើស​ដាច់ដោយឡែក​ផ្សេងៗគ្នា​មួយចំនួន។ នៅពេល​ជម្រើស​មួយ​នៅក្នុង​ការគ្រប់គ្រង​ដែលបែងចែក​ជាផ្នែក​ត្រូវបានជ្រើសរើស ជម្រើស​ផ្សេងទៀត​នៅក្នុង​ការគ្រប់គ្រង​ដែលបែងចែក​ជាផ្នែក​មិនត្រូវបានជ្រើសរើស​ទៀតទេ។"),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "ការគ្រប់គ្រង​ដែលបែងចែក​ជាផ្នែក​តាមរចនាប័ទ្ម iOS"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage(
+                "ការគ្រប់គ្រង​ដែល​បែងចែក​ជាផ្នែក"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "ធម្មតា ការជូនដំណឹង និងពេញ​អេក្រង់"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("ប្រអប់"),
@@ -334,7 +345,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("អេក្រង់ពេញ"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("ព័ត៌មាន"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "ឈីប​ធាតុបញ្ចូល​តំណាងឱ្យ​ព័ត៌មាន​ដែល​ទាក់ទង​គ្នា ដូចជា​ស្ថាប័ន (មនុស្ស ទីកន្លែង ឬ​វត្ថុ) ឬ​អត្ថបទ​សន្ទនា ជា​ទម្រង់​ដែលមាន​ទំហំ​តូច​។"),
+            "ឈីប​ធាតុបញ្ចូល​តំណាងឱ្យ​ព័ត៌មានដ៏ស្មុគស្មាញ ដូចជា​ធាតុ (មនុស្ស ទីកន្លែង ឬ​វត្ថុ) ឬ​អត្ថបទ​សន្ទនា ជា​ទម្រង់​ចង្អៀត។"),
         "demoInputChipTitle":
             MessageLookupByLibrary.simpleMessage("ឈីប​ធាតុ​បញ្ចូល"),
         "demoInvalidURL":
@@ -351,6 +362,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "ប្រអប់ធម្មតា​ផ្ដល់ជូន​អ្នកប្រើប្រាស់​នូវជម្រើសមួយ​រវាង​ជម្រើស​មួយចំនួន។ ប្រអប់ធម្មតា​មាន​ចំណងជើង​ដែលជាជម្រើស ដែល​បង្ហាញនៅលើ​ជម្រើស។"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("ធម្មតា"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "ផ្ទាំង​រៀបចំ​ខ្លឹមសារ​នៅលើ​អេក្រង់ សំណុំ​ទិន្នន័យ​ផ្សេងៗគ្នា និងអន្តរកម្ម​ផ្សេងទៀត។"),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "ផ្ទាំង​មាន​ទិដ្ឋភាព​ដាច់ពីគ្នា​ដែលអាច​រំកិលបាន"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("ផ្ទាំង"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "កន្លែងបញ្ចូលអក្សរ​អាចឱ្យអ្នកប្រើប្រាស់​បញ្ចូលអក្សរ​ទៅក្នុង UI។ ជាទូទៅ វាបង្ហាញ​ជាទម្រង់បែបបទ និងប្រអប់បញ្ចូល។"),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("អ៊ីមែល"),
@@ -441,6 +457,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("មេឌៀ និងរចនាប័ទ្ម​យោង"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("ប្រភេទ"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("សាល​រូបភាព"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("គណនី​សន្សំទិញរថយន្ត"),
         "rallyAccountDataChecking":
@@ -452,7 +469,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountDetailDataAccountOwner":
             MessageLookupByLibrary.simpleMessage("ម្ចាស់​គណនី"),
         "rallyAccountDetailDataAnnualPercentageYield":
-            MessageLookupByLibrary.simpleMessage("ចំណូល​ជាភាគរយ​ប្រចាំឆ្នាំ"),
+            MessageLookupByLibrary.simpleMessage("ផល​ជាភាគរយ​ប្រចាំឆ្នាំ"),
         "rallyAccountDetailDataInterestPaidLastYear":
             MessageLookupByLibrary.simpleMessage(
                 "ការប្រាក់ដែល​បានបង់ពីឆ្នាំមុន"),
@@ -465,14 +482,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("សរុប"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("គណនី"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("ការជូនដំណឹង"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("វិក្កយបត្រ"),
-        "rallyBillsDue":
-            MessageLookupByLibrary.simpleMessage("រយៈពេល​ផុតកំណត់"),
+        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("ចំនួនត្រូវបង់"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("សម្លៀក​បំពាក់"),
         "rallyBudgetCategoryCoffeeShops":
@@ -500,6 +518,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("ឈ្មោះអ្នក​ប្រើប្រាស់"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("មើល​ទាំងអស់​"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("មើល​គណនី​ទាំងអស់"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("មើល​វិក្កយបត្រ​ទាំងអស់"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("មើល​ថវិកា​ទាំងអស់"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ស្វែងរក ATM"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("ជំនួយ"),
@@ -544,7 +568,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("ពីឆ្វេង​ទៅស្ដាំ"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("ផ្អែកលើ​ភាសា"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("ពីស្ដាំ​ទៅឆ្វេង"),
         "settingsTextScaling":
@@ -561,7 +585,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("បោះបង់"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("សម្អាត​រទេះ"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("រទេះ"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("ការ​ដឹកជញ្ជូន៖"),
@@ -604,7 +628,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductFineLinesTee":
             MessageLookupByLibrary.simpleMessage("អាវយឺត​ឆ្នូតៗ"),
         "shrineProductGardenStrand":
-            MessageLookupByLibrary.simpleMessage("Garden strand"),
+            MessageLookupByLibrary.simpleMessage("ខ្សែ Garden"),
         "shrineProductGatsbyHat":
             MessageLookupByLibrary.simpleMessage("មួក Gatsby"),
         "shrineProductGentryJacket":
@@ -623,8 +647,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ខោជើងវែង Navy"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("តុ Quartet"),
         "shrineProductRainwaterTray":
@@ -663,9 +687,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("អាវឆ្នូតពណ៌ស"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("ខ្សែក្រវ៉ាត់ Whitney"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("បិទ​ទំព័រ​រទេះ"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("បិទ​ម៉ឺនុយ"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("បើកម៉ឺនុយ"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("ដក​ទំនិញ​ចេញ"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("ស្វែងរក"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("ការកំណត់"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "ស្រទាប់​ចាប់ផ្ដើមដែល​ឆ្លើយតបរហ័ស"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("តួ​អត្ថបទ"),
         "starterAppGenericButton":

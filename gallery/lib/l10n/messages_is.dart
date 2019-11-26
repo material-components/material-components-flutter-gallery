@@ -38,27 +38,36 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "Þú valdir: „${value}“";
 
-  static m8(amount) => "Þú hefur eytt ${amount} í hraðbankagjöld í mánuðinum";
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
 
-  static m9(percent) =>
-      "Vel gert! Þú átt ${percent} meira inni á veltureikningnum þínum en í síðasta mánuði.";
+  static m9(amount) => "Þú hefur eytt ${amount} í hraðbankagjöld í mánuðinum";
 
   static m10(percent) =>
+      "Vel gert! Þú átt ${percent} meira inni á veltureikningnum þínum en í síðasta mánuði.";
+
+  static m11(percent) =>
       "Athugaðu að þú ert búin(n) með ${percent} af kostnaðarhámarki mánaðarins.";
 
-  static m11(amount) => "Þú hefur eytt ${amount} á veitingastöðum í vikunni.";
+  static m12(amount) => "Þú hefur eytt ${amount} á veitingastöðum í vikunni.";
 
-  static m12(count) =>
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "x ${price}";
+  static m17(price) => "x ${price}";
 
-  static m15(quantity) => "Magn: ${quantity}";
+  static m18(quantity) => "Magn: ${quantity}";
 
-  static m16(value) => "Vara ${value}";
+  static m19(value) => "Vara ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -351,6 +360,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "Einfaldur gluggi býður notanda að velja á milli nokkurra valkosta. Einfaldur gluggi getur haft titil sem birtist fyrir ofan valkostina."),
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Einfalt"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Textareitir gera notendum kleift að slá texta inn í notendaviðmót. Þeir eru yfirleitt á eyðublöðum og í gluggum."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("Netfang"),
@@ -438,6 +452,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("TILVÍSUNARSTÍLAR OG EFNI"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("Flokkar"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Myndasafn"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Bílasparnaður"),
         "rallyAccountDataChecking":
@@ -461,13 +476,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Samtals"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Reikningar"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Tilkynningar"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Reikningar"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Til greiðslu"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Klæðnaður"),
         "rallyBudgetCategoryCoffeeShops":
@@ -497,6 +514,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("Notandanafn"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("SJÁ ALLT"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Finna hraðbanka"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Hjálp"),
@@ -561,7 +584,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("HÆTTA VIÐ"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("HREINSA KÖRFU"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("KARFA"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Sending:"),
@@ -624,8 +647,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Dökkbláar buxur"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Ljós skokkur"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Ferhyrnt borð"),
         "shrineProductRainwaterTray":
@@ -664,9 +687,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Hvít teinótt skyrta"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney belti"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Hraðvirkt upphafsútlit"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Meginmál"),
         "starterAppGenericButton":

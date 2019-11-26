@@ -40,29 +40,38 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "Ați selectat: „${value}”";
 
-  static m8(amount) =>
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
+
+  static m9(amount) =>
       "Luna aceasta ați cheltuit ${amount} pentru comisioanele de la bancomat";
 
-  static m9(percent) =>
+  static m10(percent) =>
       "Felicitări! Contul dvs. curent este cu ${percent} mai bogat decât luna trecută.";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Atenție, ați folosit ${percent} din bugetul de cumpărături pentru luna aceasta.";
 
-  static m11(amount) =>
+  static m12(amount) =>
       "Săptămâna aceasta ați cheltuit ${amount} în restaurante.";
 
-  static m12(count) =>
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "x ${price}";
+  static m17(price) => "x ${price}";
 
-  static m15(quantity) => "Cantitate: ${quantity}";
+  static m18(quantity) => "Cantitate: ${quantity}";
 
-  static m16(value) => "Articol ${value}";
+  static m19(value) => "Articol ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -82,15 +91,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("BUTON"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Creați"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
-        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
-        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
-        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
-        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
-        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Ciclism"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Lift"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Șemineu"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Mare"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Mediu"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Mic"),
         "chipTurnOnLights":
-            MessageLookupByLibrary.simpleMessage("Turn on lights"),
-        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
+            MessageLookupByLibrary.simpleMessage("Porniți luminile"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Mașină de spălat"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("CHIHLIMBAR"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("ALBASTRU"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("GRI-ALBĂSTRUI"),
@@ -115,82 +124,86 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsYellow": MessageLookupByLibrary.simpleMessage("GALBEN"),
         "craneDescription": MessageLookupByLibrary.simpleMessage(
             "O aplicație pentru călătorii personalizate"),
-        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("MÂNCARE"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Napoli, Italia"),
         "craneEat1":
-            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
-        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("Dallas, Statele Unite"),
+        "craneEat10":
+            MessageLookupByLibrary.simpleMessage("Lisabona, Portugalia"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
         "craneEat3":
-            MessageLookupByLibrary.simpleMessage("Portland, United States"),
-        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
-        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
+            MessageLookupByLibrary.simpleMessage("Portland, Statele Unite"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, Franța"),
+        "craneEat5":
+            MessageLookupByLibrary.simpleMessage("Seoul, Coreea de Sud"),
         "craneEat6":
-            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
+            MessageLookupByLibrary.simpleMessage("Seattle, Statele Unite"),
         "craneEat7":
-            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
+            MessageLookupByLibrary.simpleMessage("Nashville, Statele Unite"),
         "craneEat8":
-            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
-        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+            MessageLookupByLibrary.simpleMessage("Atlanta, Statele Unite"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spania"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Restaurants by Destination"),
-        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
+            "Explorați restaurantele după destinație"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("AVIOANE"),
         "craneFly0":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
+            MessageLookupByLibrary.simpleMessage("Aspen, Statele Unite"),
         "craneFly1":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("Big Sur, Statele Unite"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egipt"),
+        "craneFly11":
+            MessageLookupByLibrary.simpleMessage("Lisabona, Portugalia"),
         "craneFly12":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+            MessageLookupByLibrary.simpleMessage("Napa, Statele Unite"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonezia"),
         "craneFly2":
-            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
+            MessageLookupByLibrary.simpleMessage("Valea Khumbu, Nepal"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneFly5":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldive"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Elveția"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spania"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
-            "Mount Rushmore, United States"),
+            "Muntele Rushmore, Statele Unite"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Flights by Destination"),
-        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
-        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+            "Explorați zborurile după destinație"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("Selectați data"),
+        "craneFormDates":
+            MessageLookupByLibrary.simpleMessage("Selectați datele"),
         "craneFormDestination":
-            MessageLookupByLibrary.simpleMessage("Choose Destination"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+            MessageLookupByLibrary.simpleMessage("Alegeți destinația"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Clienți"),
         "craneFormLocation":
-            MessageLookupByLibrary.simpleMessage("Select Location"),
+            MessageLookupByLibrary.simpleMessage("Selectați o locație"),
         "craneFormOrigin":
-            MessageLookupByLibrary.simpleMessage("Choose Origin"),
-        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
-        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+            MessageLookupByLibrary.simpleMessage("Alegeți originea"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("Selectați ora"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Călători"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("SOMN"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldive"),
         "craneSleep1":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
+            MessageLookupByLibrary.simpleMessage("Aspen, Statele Unite"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egipt"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
-        "craneSleep4":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
+        "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, Elveția"),
         "craneSleep5":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
+            MessageLookupByLibrary.simpleMessage("Big Sur, Statele Unite"),
         "craneSleep6":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
-        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
-        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("Napa, Statele Unite"),
+        "craneSleep7":
+            MessageLookupByLibrary.simpleMessage("Porto, Portugalia"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexic"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("Lisabona, Portugalia"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Properties by Destination"),
+            "Explorați proprietățile după destinație"),
         "cupertinoAlertAllow":
             MessageLookupByLibrary.simpleMessage("Permiteți"),
         "cupertinoAlertApplePie":
@@ -220,9 +233,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Afișează alerta"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+            "Cipurile de acțiune sunt un set de opțiuni care declanșează o acțiune legată de conținutul principal. Ele trebuie să apară dinamic și contextual într-o IU."),
         "demoActionChipTitle":
-            MessageLookupByLibrary.simpleMessage("Action Chip"),
+            MessageLookupByLibrary.simpleMessage("Cip de acțiune"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Caseta de dialog pentru alerte informează utilizatorul despre situații care necesită confirmare. Caseta de dialog pentru alerte are un titlu opțional și o listă de acțiuni opțională."),
         "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("Alertă"),
@@ -263,12 +276,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Plate, ridicate, cu contur și altele"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Butoane"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Compact elements that represent an input, attribute, or action"),
-        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+            "Elemente compacte care reprezintă o intrare, un atribut sau o acțiune"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Cipuri"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+            "Cipurile de opțiune reprezintă o singură opțiune dintr-un set. Ele conțin categorii sau texte descriptive asociate."),
         "demoChoiceChipTitle":
-            MessageLookupByLibrary.simpleMessage("Choice Chip"),
+            MessageLookupByLibrary.simpleMessage("Cip de opțiune"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Exemplu de cod"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
@@ -314,9 +327,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("Documentație API"),
         "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Filter chips use tags or descriptive words as a way to filter content."),
+            "Cipurile de filtrare folosesc etichete sau termeni descriptivi pentru a filtra conținutul."),
         "demoFilterChipTitle":
-            MessageLookupByLibrary.simpleMessage("Filter Chip"),
+            MessageLookupByLibrary.simpleMessage("Cip de filtrare"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Butonul plat reacționează vizibil la apăsare, dar nu se ridică. Folosiți butoanele plate în bare de instrumente, casete de dialog și în linie cu chenarul interior."),
         "demoFlatButtonTitle":
@@ -333,9 +346,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ecran complet"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Informații"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
+            "Cipurile de intrare reprezintă informații complexe, cum ar fi o entitate (o persoană, o locație sau un obiect) sau un text conversațional, în formă compactă."),
         "demoInputChipTitle":
-            MessageLookupByLibrary.simpleMessage("Input Chip"),
+            MessageLookupByLibrary.simpleMessage("Cip de intrare"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Nu s-a putut afișa adresa URL:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opțiuni"),
@@ -350,6 +363,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Caseta de dialog simplă îi oferă utilizatorului posibilitatea de a alege dintre mai multe opțiuni. Caseta de dialog simplă are un titlu opțional, afișat deasupra opțiunilor."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Simplă"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Câmpurile de text le dau utilizatorilor posibilitatea de a introduce text pe o interfață de utilizare. Acestea apar de obicei în forme și casete de dialog."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
@@ -440,6 +458,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Categorii"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galerie"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Economii pentru mașină"),
         "rallyAccountDataChecking":
@@ -465,13 +484,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Conturi"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerte"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Facturi"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Data scadentă"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Îmbrăcăminte"),
         "rallyBudgetCategoryCoffeeShops":
@@ -502,6 +523,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Nume de utilizator"),
         "rallySeeAll":
             MessageLookupByLibrary.simpleMessage("VEDEȚI-LE PE TOATE"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Găsiți bancomate"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Ajutor"),
@@ -566,7 +593,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ANULAȚI"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("GOLIȚI COȘUL"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("COȘ DE CUMPĂRĂTURI"),
         "shrineCartShippingCaption":
@@ -576,11 +603,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Taxe:"),
         "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("TOTAL"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
+            MessageLookupByLibrary.simpleMessage("ACCESORII"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("TOATE"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("CLOTHING"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
+            MessageLookupByLibrary.simpleMessage("ÎMBRĂCĂMINTE"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("CASĂ"),
         "shrineDescription": MessageLookupByLibrary.simpleMessage(
             "O aplicație de vânzare cu amănuntul la modă"),
         "shrineLoginPasswordLabel":
@@ -628,8 +655,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Pantaloni bleumarin"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Tunică Plaster"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Masă Quartet"),
         "shrineProductRainwaterTray": MessageLookupByLibrary.simpleMessage(
@@ -668,9 +695,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Cămașă cu dungi fine albe"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Curea Whitney"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Un aspect adaptabil pentru Starter"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Corp"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("BUTON"),

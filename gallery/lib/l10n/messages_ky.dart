@@ -39,28 +39,37 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "Сиз төмөнкүнү тандадыңыз: \"${value}\"";
 
-  static m8(amount) =>
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
+
+  static m9(amount) =>
       "Бул айда банкомат сыйакылары катары ${amount} төлөдүңүз";
 
-  static m9(percent) =>
+  static m10(percent) =>
       "Азаматсыз! Текшерүү эсебиңиз акыркы айга салыштырмалуу ${percent} жогорураак болду.";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Көңүл буруңуз, бул айда Соода кылуу бюджетиңиздин ${percent} сарптадыңыз.";
 
-  static m11(amount) => "Бул аптада ресторандарда ${amount} сарптадыңыз.";
+  static m12(amount) => "Бул аптада ресторандарда ${amount} сарптадыңыз.";
 
-  static m12(count) =>
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "x ${price}";
+  static m17(price) => "x ${price}";
 
-  static m15(quantity) => "Саны: ${quantity}";
+  static m18(quantity) => "Саны: ${quantity}";
 
-  static m16(value) => "Нерсе ${value}";
+  static m19(value) => "Нерсе ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -80,15 +89,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("БАСКЫЧ"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Түзүү"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
-        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
-        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
-        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
-        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
-        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Велосипед тебүү"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Лифт"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Камин"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Чоң"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Орточо"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Кичине"),
         "chipTurnOnLights":
-            MessageLookupByLibrary.simpleMessage("Turn on lights"),
-        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
+            MessageLookupByLibrary.simpleMessage("Жарыкты күйгүзүү"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Жуугуч"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("ЯНТАРДАЙ"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("КӨК"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("КӨГҮШ БОЗ"),
@@ -112,82 +121,88 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsYellow": MessageLookupByLibrary.simpleMessage("САРЫ"),
         "craneDescription": MessageLookupByLibrary.simpleMessage(
             "Жекелештирилген саякат колдонмосу"),
-        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
-        "craneEat1":
-            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
-        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
-        "craneEat3":
-            MessageLookupByLibrary.simpleMessage("Portland, United States"),
-        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
-        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
-        "craneEat6":
-            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
-        "craneEat7":
-            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
-        "craneEat8":
-            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
-        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("ТАМАК-АШ"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Неаполь, Италия"),
+        "craneEat1": MessageLookupByLibrary.simpleMessage(
+            "Даллас, Америка Кошмо Штаттары"),
+        "craneEat10":
+            MessageLookupByLibrary.simpleMessage("Лиссабон, Португалия"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("Кордоба, Аргентина"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage(
+            "Портлэнд, Америка Кошмо Штаттары"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Париж, Франция"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("Сеул, Түштүк Корея"),
+        "craneEat6": MessageLookupByLibrary.simpleMessage(
+            "Сиетл, Америка Кошмо Штаттары"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage(
+            "Нашвилл, Америка Кошмо Штаттары"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage(
+            "Атланта, Америка Кошмо Штаттары"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Мадрид, Испания"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Restaurants by Destination"),
-        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
-        "craneFly0":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneFly1":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneFly12":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+            "Ресторандарды бара турган жер боюнча изилдөө"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("УЧУУ"),
+        "craneFly0": MessageLookupByLibrary.simpleMessage(
+            "Аспен, Америка Кошмо Штаттары"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage(
+            "Биг-Сур, Америка Кошмо Штаттары"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Каир, Египет"),
+        "craneFly11":
+            MessageLookupByLibrary.simpleMessage("Лиссабон, Португалия"),
+        "craneFly12": MessageLookupByLibrary.simpleMessage(
+            "Напа, Америка Кошмо Штаттары"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Бали, Индонезия"),
         "craneFly2":
-            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
-        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneFly5":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+            MessageLookupByLibrary.simpleMessage("Хумбу өрөөнү, Непал"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("Мачу-Пичу, Перу"),
+        "craneFly4":
+            MessageLookupByLibrary.simpleMessage("Мале, Мальдив аралдары"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("Витзнау, Швейцария"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Мадрид, Испания"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
-            "Mount Rushmore, United States"),
-        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
-        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            "Рашмор тоосу, Америка Кошмо Штаттары"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Сингапур"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Гавана, Куба"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Flights by Destination"),
-        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
-        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+            "Аба каттамдарын бара турган жер боюнча изилдөө"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("Күн тандоо"),
+        "craneFormDates":
+            MessageLookupByLibrary.simpleMessage("Күндөрдү тандоо"),
         "craneFormDestination":
-            MessageLookupByLibrary.simpleMessage("Choose Destination"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+            MessageLookupByLibrary.simpleMessage("Бара турган жерди тандоо"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Коноктор"),
         "craneFormLocation":
-            MessageLookupByLibrary.simpleMessage("Select Location"),
+            MessageLookupByLibrary.simpleMessage("Жайгашкан жерди тандоо"),
         "craneFormOrigin":
-            MessageLookupByLibrary.simpleMessage("Choose Origin"),
-        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
-        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneSleep1":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
-        "craneSleep2":
-            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            MessageLookupByLibrary.simpleMessage("Учуп чыккан шаарды тандоо"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("Убакыт тандоо"),
+        "craneFormTravelers":
+            MessageLookupByLibrary.simpleMessage("Жүргүнчүлөр"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("УКТОО"),
+        "craneSleep0":
+            MessageLookupByLibrary.simpleMessage("Мале, Мальдив аралдары"),
+        "craneSleep1": MessageLookupByLibrary.simpleMessage(
+            "Аспен, Америка Кошмо Штаттары"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Каир, Египет"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Тайпей, Тайвань"),
+        "craneSleep2": MessageLookupByLibrary.simpleMessage("Мачу-Пичу, Перу"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Гавана, Куба"),
         "craneSleep4":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneSleep5":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneSleep6":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
-        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
-        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("Витзнау, Швейцария"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage(
+            "Биг-Сур, Америка Кошмо Штаттары"),
+        "craneSleep6": MessageLookupByLibrary.simpleMessage(
+            "Напа, Америка Кошмо Штаттары"),
+        "craneSleep7":
+            MessageLookupByLibrary.simpleMessage("Порто, Португалия"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Тулум, Мексика"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("Лиссабон, Португалия"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Properties by Destination"),
+            "Жайларды бара турган жер боюнча изилдөө"),
         "cupertinoAlertAllow":
             MessageLookupByLibrary.simpleMessage("Уруксат берүү"),
         "cupertinoAlertApplePie":
@@ -217,9 +232,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Билдирмени көрсөтүү"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+            "Аракет чиптери негизги мазмунга тийиштүү аракетти ишке киргизүүчү параметрлердин топтому. Аракет чиптери колдонуучунун интерфейсинде динамикалык жана мазмундук формада көрүнүшү керек."),
         "demoActionChipTitle":
-            MessageLookupByLibrary.simpleMessage("Action Chip"),
+            MessageLookupByLibrary.simpleMessage("Аракет чиби"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Билдирме диалогу колдонуучуга анын ырастоосун талап кылган кырдаалдар тууралуу кабар берет. Билдирме диалогунун аталышы жана аракеттер тизмеси болушу мүмкүн."),
         "demoAlertDialogTitle":
@@ -262,12 +277,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Түз, көтөрүлгөн, четки сызыктар жана башкалар"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Баскычтар"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Compact elements that represent an input, attribute, or action"),
-        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+            "Киргизүүнү, атрибутту же аракетти көрсөткөн жыйнактуу элементтер"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Чиптер"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+            "Тандоо чиптери топтомдогу бир тандоону көрсөтөт. Тандоо чиптери тийиштүү сүрөттөөчү текстти же категорияларды камтыйт."),
         "demoChoiceChipTitle":
-            MessageLookupByLibrary.simpleMessage("Choice Chip"),
+            MessageLookupByLibrary.simpleMessage("Тандоо чиби"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Коддун үлгүсү"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
@@ -312,9 +327,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API документтери"),
         "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Filter chips use tags or descriptive words as a way to filter content."),
+            "Чыпка чиптери мазмунду чыпкалоо үчүн тэгдерди же сүрөттөөчү сөздөрдү колдонот."),
         "demoFilterChipTitle":
-            MessageLookupByLibrary.simpleMessage("Filter Chip"),
+            MessageLookupByLibrary.simpleMessage("Чыпкалоо чиби"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Түз баскычты басканда сыя чыгат, бирок баскыч көтөрүлбөйт. Түз баскычтарды куралдар тилкелеринде, диалогдордо жана кемтик менен бирге колдонуңуз"),
         "demoFlatButtonTitle":
@@ -331,9 +346,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Толук экран"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Маалымат"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
+            "Киргизүү чиптери объект (адам, жер же нерсе) же жазышуу тексти сыяктуу татаал маалыматты жыйнактуу формада көрсөтөт."),
         "demoInputChipTitle":
-            MessageLookupByLibrary.simpleMessage("Input Chip"),
+            MessageLookupByLibrary.simpleMessage("Киргизүү чиби"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "URL\'ди чагылдыруу мүмкүн эмес:"),
         "demoOptionsTooltip":
@@ -350,6 +365,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "Жөнөкөй диалог колдонуучуга бир нече варианттардын бирин тандоо мүмкүнчүлүгүн берет. Жөнөкөй диалогдо тандоолордун жогору жагында жайгашкан аталышы болушу мүмкүн."),
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Жөнөкөй"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Текст киргизилүүчү талаалар аркылуу колдонуучулар колдонуучу интерфейсине текст киргизе алышат. Адатта алар диалог формасында көрүнөт."),
         "demoTextFieldEmail":
@@ -440,6 +460,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Категориялар"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Галерея"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings": MessageLookupByLibrary.simpleMessage(
             "Унаага чогултулуп жаткан каражат"),
         "rallyAccountDataChecking":
@@ -463,13 +484,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Жалпы"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Аккаунттар"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Эскертүүлөр"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Эсептер"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Мөөнөтү"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Кийим-кече"),
         "rallyBudgetCategoryCoffeeShops":
@@ -497,6 +520,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("Колдонуучунун аты"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("БААРЫН КӨРҮҮ"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Банкоматтарды табуу"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Жардам"),
@@ -558,7 +587,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ЖОККО ЧЫГАРУУ"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("АРАБАНЫ ТАЗАЛОО"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("АРАБА"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Жеткирүү"),
@@ -567,11 +596,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Салык:"),
         "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("ЖАЛПЫ"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
+            MessageLookupByLibrary.simpleMessage("АКСЕССУАРЛАР"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("БААРЫ"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("CLOTHING"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
+            MessageLookupByLibrary.simpleMessage("КИЙИМ-КЕЧЕ"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("ҮЙ"),
         "shrineDescription": MessageLookupByLibrary.simpleMessage(
             "Саркеч кийимдерди сатуу колдонмосу"),
         "shrineLoginPasswordLabel":
@@ -619,8 +648,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Кара-көк шым"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Туника"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Квартет столу"),
         "shrineProductRainwaterTray":
@@ -659,9 +688,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ак сызыктуу көйнөк"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Уитни куру"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Адаптивдүү баштапкы калык"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Негизги текст"),
         "starterAppGenericButton":

@@ -39,28 +39,37 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "Ukhethe: \"${value}\"";
 
-  static m8(amount) => "Uchithe u-${amount} enkokhelweni ye-ATM kule nyanga";
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
 
-  static m9(percent) =>
-      "Umsebenzi omuhle! I-akhawunti yakho yokuhlola ngu-${percent} ngaphezulu kunenyanga edlule.";
+  static m9(amount) => "Uchithe u-${amount} enkokhelweni ye-ATM kule nyanga";
 
   static m10(percent) =>
+      "Umsebenzi omuhle! I-akhawunti yakho yokuhlola ngu-${percent} ngaphezulu kunenyanga edlule.";
+
+  static m11(percent) =>
       "Amakhanda phezulu, usebenzise u-${percent} webhajethi yakho yokuthenga kule nyanga.";
 
-  static m11(amount) =>
+  static m12(amount) =>
       "Usebenzise u-${amount} ezindaweni zokudlela kuleli viki.";
 
-  static m12(count) =>
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "x ${price}";
+  static m17(price) => "x ${price}";
 
-  static m15(quantity) => "Ubuningi: ${quantity}";
+  static m18(quantity) => "Ubuningi: ${quantity}";
 
-  static m16(value) => "Into ${value}";
+  static m19(value) => "Into ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -80,15 +89,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("INKINOBHO"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Dala"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
-        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
-        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
-        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
-        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
-        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipBiking":
+            MessageLookupByLibrary.simpleMessage("Ukuhamba ngamabhayisikili"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Ilifthi"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Iziko"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Okukhulu"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Maphakathi"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Okuncane"),
         "chipTurnOnLights":
-            MessageLookupByLibrary.simpleMessage("Turn on lights"),
-        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
+            MessageLookupByLibrary.simpleMessage("Vala amalambu"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Kokuwasha"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("I-AMBER"),
         "colorsBlue":
             MessageLookupByLibrary.simpleMessage("OKULUHLAZA OKWESIBHAKABHAKA"),
@@ -117,82 +127,93 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsYellow": MessageLookupByLibrary.simpleMessage("OKULIPHUZI"),
         "craneDescription": MessageLookupByLibrary.simpleMessage(
             "Uhlelo lokusebenza lokuhamba olwenziwe ngezifiso"),
-        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("I-EAT"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("I-Naples, Italy"),
         "craneEat1":
-            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
-        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
+            MessageLookupByLibrary.simpleMessage("I-Dallas, United States"),
+        "craneEat10":
+            MessageLookupByLibrary.simpleMessage("I-Lisbon, e-Portugal"),
+        "craneEat2":
+            MessageLookupByLibrary.simpleMessage("I-Córdoba, Argentina"),
         "craneEat3":
-            MessageLookupByLibrary.simpleMessage("Portland, United States"),
-        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
-        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
+            MessageLookupByLibrary.simpleMessage("I-Portland, United States"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("I-Paris, France"),
+        "craneEat5":
+            MessageLookupByLibrary.simpleMessage("I-Seoul, South Korea"),
         "craneEat6":
-            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
+            MessageLookupByLibrary.simpleMessage("I-Seattle, United States"),
         "craneEat7":
-            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
+            MessageLookupByLibrary.simpleMessage("I-Nashville, United States"),
         "craneEat8":
-            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
-        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+            MessageLookupByLibrary.simpleMessage("I-Atlanta, United States"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("I-Madrid, Spain"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Restaurants by Destination"),
-        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
+            "Hlola izindawo zokudlela ngendawo"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("I-FLY"),
         "craneFly0":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
+            MessageLookupByLibrary.simpleMessage("I-Aspen, United States"),
         "craneFly1":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("I-Big Sur, United States"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("I-Cairo, Egypt"),
+        "craneFly11":
+            MessageLookupByLibrary.simpleMessage("I-Lisbon, e-Portugal"),
         "craneFly12":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+            MessageLookupByLibrary.simpleMessage("I-Napa, United States"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("I-Bali, Indonesia"),
         "craneFly2":
-            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
-        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+            MessageLookupByLibrary.simpleMessage("I-Khumbu Valley, Nepal"),
+        "craneFly3":
+            MessageLookupByLibrary.simpleMessage("I-Machu Picchu, Peru"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("I-Malé, Maldives"),
         "craneFly5":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+            MessageLookupByLibrary.simpleMessage("I-Vitznau, Switzerland"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("I-Madrid, Spain"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
-            "Mount Rushmore, United States"),
-        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
-        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            "I-Mount Rushmore, United States"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("U-Singapore"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("I-Havana, Cuba"),
         "craneFlyStops": m3,
-        "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Flights by Destination"),
-        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
-        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+        "craneFlySubhead":
+            MessageLookupByLibrary.simpleMessage("Hlola izindiza ngendawo"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("Khetha idethi"),
+        "craneFormDates":
+            MessageLookupByLibrary.simpleMessage("Khetha amadethi"),
         "craneFormDestination":
-            MessageLookupByLibrary.simpleMessage("Choose Destination"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+            MessageLookupByLibrary.simpleMessage("Khetha indawo okuyiwa kuyo"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("I-Diners"),
         "craneFormLocation":
-            MessageLookupByLibrary.simpleMessage("Select Location"),
+            MessageLookupByLibrary.simpleMessage("Khetha indawo"),
         "craneFormOrigin":
-            MessageLookupByLibrary.simpleMessage("Choose Origin"),
-        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
-        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+            MessageLookupByLibrary.simpleMessage("Khetha okoqobo"),
+        "craneFormTime":
+            MessageLookupByLibrary.simpleMessage("Khetha isikhathi"),
+        "craneFormTravelers":
+            MessageLookupByLibrary.simpleMessage("Abavakashi"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("LALA"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("I-Malé, Maldives"),
         "craneSleep1":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+            MessageLookupByLibrary.simpleMessage("I-Aspen, United States"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("I-Cairo, Egypt"),
+        "craneSleep11":
+            MessageLookupByLibrary.simpleMessage("I-Taipei, Taiwan"),
         "craneSleep2":
-            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            MessageLookupByLibrary.simpleMessage("I-Machu Picchu, Peru"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("I-Havana, Cuba"),
         "craneSleep4":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
+            MessageLookupByLibrary.simpleMessage("I-Vitznau, Switzerland"),
         "craneSleep5":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
+            MessageLookupByLibrary.simpleMessage("I-Big Sur, United States"),
         "craneSleep6":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
-        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
-        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("I-Napa, United States"),
+        "craneSleep7":
+            MessageLookupByLibrary.simpleMessage("I-Porto, Portugal"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("I-Tulum, Mexico"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("I-Lisbon, e-Portugal"),
         "craneSleepProperties": m4,
-        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Properties by Destination"),
+        "craneSleepSubhead":
+            MessageLookupByLibrary.simpleMessage("Hlola izinto ngendawo"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("Vumela"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("Uphaya we-apula"),
@@ -221,9 +242,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Bonisa isexwayiso"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+            "Ama-chip ayisethi yezinketho acupha isenzo esiphathelene nokuqukethwe okuyinhloko. Ama-chip kufanele abonakale ngokubanzi nangokuqukethwe ku-UI."),
         "demoActionChipTitle":
-            MessageLookupByLibrary.simpleMessage("Action Chip"),
+            MessageLookupByLibrary.simpleMessage("I-Chip yesenzo"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Ibhokisi lesexwayiso lazisa umsebenzisi mayelana nezimo ezidinga ukuvunywa. Ibhokisi lesexwayiso linesihloko ongasikhetha kanye nohlu ongalukhetha lwezenzo."),
         "demoAlertDialogTitle":
@@ -266,12 +287,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Okuphansi, okuphakanyisiwe, uhlaka, nokuningi"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Izinkinobho"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Compact elements that represent an input, attribute, or action"),
-        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+            "Izinto ezihlangene ezimela ukungena, ukuchasisa, noma isenzo"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Amashipsi"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+            "Ama-chips amela inketho eyodwa kusuka kusethi. Ama-chip enketho aphathelene nombhalo wencazelo noma izigaba."),
         "demoChoiceChipTitle":
-            MessageLookupByLibrary.simpleMessage("Choice Chip"),
+            MessageLookupByLibrary.simpleMessage("I-Chip yenketho"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Isampuli yekhodi"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
@@ -317,9 +338,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("Amadokhumenti e-API"),
         "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Filter chips use tags or descriptive words as a way to filter content."),
+            "Hlunga ama-chip wokusebenzisa noma amagama okuchaza njengendlela yokuhlunga okuqukethwe."),
         "demoFilterChipTitle":
-            MessageLookupByLibrary.simpleMessage("Filter Chip"),
+            MessageLookupByLibrary.simpleMessage("I-chip yesihlungi"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Inkinobho ephansi ibonisa ukusaphazeka kweyinki ekucindezweni kodwa ayiphakami. Sebenzisa izinkinobho eziphansi kumabha wamathuluzi, kumabhokisi nangaphakathi kolayini ngokokugxusha"),
         "demoFlatButtonTitle":
@@ -336,9 +357,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Isikrini Esigcwele"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Ulwazi"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
+            "Ama-chip amela ucezu oluyingxube lolwazi, njengamabhizinisi (okomuntu, indawo, into) umbhalo wengxoxo ngendlela eminyene."),
         "demoInputChipTitle":
-            MessageLookupByLibrary.simpleMessage("Input Chip"),
+            MessageLookupByLibrary.simpleMessage("I-Chip yokungena"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Ayikwazanga ukubonisa i-URL:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Izinketho"),
@@ -353,6 +374,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Ibhokisi elilula linikeza umsebenzisi inketho ephakathi kwezinketho ezithile. Ibhokisi elilula linesihloko ongasikhetha esiboniswa ngaphezulu kwezinketho."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Kulula"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Izinkambu zombhalo zivumela abasebenzisi ukufaka umbhalo ku-UI. Ibonakala kumafomu nezingxoxo."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("I-imeyili"),
@@ -441,6 +467,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("IZITAYELA ZENKOMBA NEMIDIYA"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("Izigaba"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Igalari"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Ukulondoloza kwemoto"),
         "rallyAccountDataChecking":
@@ -466,13 +493,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Isamba"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Ama-akhawunti"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Izexwayiso"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Amabhili"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Ifuneka"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Izimpahla"),
         "rallyBudgetCategoryCoffeeShops":
@@ -503,6 +532,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("Igama lomsebenzisi"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("BONA KONKE"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Thola ama-ATMs"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Usizo"),
@@ -569,7 +604,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("KHANSELA"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("SULA INQOLA"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("IKALISHI"),
         "shrineCartShippingCaption":
@@ -580,11 +615,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCartTotalCaption":
             MessageLookupByLibrary.simpleMessage("ISAMBA"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
+            MessageLookupByLibrary.simpleMessage("IZINSIZA"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("KONKE"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("CLOTHING"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
+            MessageLookupByLibrary.simpleMessage("IZINGUBO"),
+        "shrineCategoryNameHome":
+            MessageLookupByLibrary.simpleMessage("IKHAYA"),
         "shrineDescription": MessageLookupByLibrary.simpleMessage(
             "Uhlelo lokusebenza lokuthenga lwemfashini"),
         "shrineLoginPasswordLabel":
@@ -632,8 +668,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Amabhulukwe anevi"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("I-Plaster tunic"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Ithebula lekota"),
         "shrineProductRainwaterTray":
@@ -673,9 +709,20 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Ishedi le-pinstripe elimhlophe"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Ibhande le-Whitney"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Isendlalelo sokuqalisa sokuphendula"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Umzimba"),
         "starterAppGenericButton":

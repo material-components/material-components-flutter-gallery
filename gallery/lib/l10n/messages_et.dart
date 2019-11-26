@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Vahelehe ${title} kohatäide";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Restorane pole', one: '1 restoran', other: '${totalRestaurants} restorani')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Otselend', one: '1 ümberistumine', other: '${numberOfStops} ümberistumist')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Saadaolevaid rendipindu ei ole', one: '1 saadaolev rendipind', other: '${totalProperties} saadaolevat rendipinda')}";
 
   static m5(value) => "Üksus ${value}";
 
@@ -40,28 +40,37 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "Teie valik: „${value}”";
 
-  static m8(amount) =>
+  static m8(accountName, accountNumber, amount) =>
+      "Konto ${accountName} (${accountNumber}) – ${amount}.";
+
+  static m9(amount) =>
       "Olete sel kuul pangaautomaatidest välja võtnud ${amount}";
 
-  static m9(percent) =>
+  static m10(percent) =>
       "Tubli! Teie deposiidikonto saldo on eelmise kuuga võrreldes ${percent} suurem.";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Tähelepanu! Olete sel kuu kulutanud ${percent} oma ostueelarvest.";
 
-  static m11(amount) => "Olete sel nädalal restoranides kulutanud ${amount}.";
+  static m12(amount) => "Olete sel nädalal restoranides kulutanud ${amount}.";
 
-  static m12(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+  static m13(count) =>
+      "${Intl.plural(count, one: 'Suurendage oma potentsiaalset maksuvabastust! Määrake kategooriad 1 määramata tehingule.', other: 'Suurendage oma potentsiaalset maksuvabastust! Määrake kategooriad ${count} määramata tehingule.')}";
 
-  static m13(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+  static m14(billName, date, amount) =>
+      "Arve ${billName} summas ${amount} tuleb tasuda kuupäevaks ${date}.";
 
-  static m14(price) => "x ${price}";
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "Eelarve ${budgetName} summast ${amountTotal} on kasutatud ${amountUsed}, järel on ${amountLeft}";
 
-  static m15(quantity) => "Kogus: ${quantity}";
+  static m16(quantity) =>
+      "${Intl.plural(quantity, zero: 'ÜKSUSI POLE', one: '1 ÜKSUS', other: '${quantity} ÜKSUST')}";
 
-  static m16(value) => "Üksus ${value}";
+  static m17(price) => "x ${price}";
+
+  static m18(quantity) => "Kogus: ${quantity}";
+
+  static m19(value) => "Üksus ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -299,11 +308,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Nupud"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Kasutatakse mitme üksteist välistava valiku vahel valimiseks. Kui segmenditud juhtimises on üks valik tehtud, siis teisi valikuid segmenditud juhtimises teha ei saa."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "iOS-i stiilis segmenditud juhtimine"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Segmenditud juhtimine"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Lihtne, hoiatus ja täisekraan"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dialoogid"),
@@ -346,6 +356,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Lihtne dialoog pakub kasutajale valikut mitme võimaluse vahel. Lihtsal dialoogil on valikuline pealkiri, mis kuvatakse valikute kohal."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Lihtne"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Vahekaartidega saab korrastada eri kuvadel, andkekogumites ja muudes interaktiivsetes asukohtades olevat sisu."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Eraldi keritavate kuvadega vahekaardid"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Vahekaardid"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Tekstiväljad võimaldavad kasutajatel kasutajaliideses teksti sisestada. Need kuvatakse tavaliselt vormides ja dialoogides."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-post"),
@@ -434,6 +449,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Kategooriad"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galerii"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Autolaenukonto"),
         "rallyAccountDataChecking":
@@ -459,13 +475,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Kokku"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Kontod"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Hoiatused"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Arved"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Maksta"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Riided"),
         "rallyBudgetCategoryCoffeeShops":
@@ -494,6 +512,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("Kasutajanimi"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("KUVA KÕIK"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("Kuva kõik kontod"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("Kuva kõik arved"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("Kuva kõik eelarved"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Otsige pangaautomaate"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Abi"),
@@ -538,7 +562,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("vasakult paremale"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("Põhineb lokaadil"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("Paremalt vasakule"),
         "settingsTextScaling":
@@ -557,7 +581,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("TÜHISTA"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("TÜHJENDA KORV"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("OSTUKORV"),
         "shrineCartShippingCaption":
@@ -619,8 +643,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Navy trousers"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Quartet table"),
         "shrineProductRainwaterTray":
@@ -659,9 +683,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Sule ostukorv"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Sule menüü"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Ava menüü"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Eemalda üksus"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Otsing"),
+        "shrineTooltipSettings": MessageLookupByLibrary.simpleMessage("Seaded"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Automaatselt kohanduva stardirakenduse paigutus"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Sisu"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("NUPP"),
         "starterAppGenericHeadline":

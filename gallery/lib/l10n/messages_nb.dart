@@ -21,7 +21,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m0(value) => "For å se kildekoden for denne appen, gå til ${value}.";
 
-  static m1(title) => "Plassholder for ${title}-fane";
+  static m1(title) => "Plassholder for ${title}-fanen";
 
   static m2(totalRestaurants) =>
       "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
@@ -39,28 +39,37 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "Du valgte «${value}»";
 
-  static m8(amount) =>
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
+
+  static m9(amount) =>
       "Du har brukt ${amount} på minibankgebyrer denne måneden";
 
-  static m9(percent) =>
-      "Godt gjort! Brukskontoen din er ${percent} høyere enn forrige måned.";
-
   static m10(percent) =>
+      "Godt gjort! Det er ${percent} mer på brukskontoen din nå enn forrige måned.";
+
+  static m11(percent) =>
       "Obs! Du har brukt ${percent} av handlebudsjettet ditt for denne måneden.";
 
-  static m11(amount) => "Du har brukt ${amount} på restauranter denne uken.";
+  static m12(amount) => "Du har brukt ${amount} på restauranter denne uken.";
 
-  static m12(count) =>
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "x ${price}";
+  static m17(price) => "x ${price}";
 
-  static m15(quantity) => "Antall: ${quantity}";
+  static m18(quantity) => "Antall: ${quantity}";
 
-  static m16(value) => "Vare ${value}";
+  static m19(value) => "Vare ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -80,15 +89,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("KNAPP"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Opprett"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
-        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
-        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
-        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
-        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
-        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Sykling"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Heis"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Peis"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Stor"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Middels"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Liten"),
         "chipTurnOnLights":
-            MessageLookupByLibrary.simpleMessage("Turn on lights"),
-        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
+            MessageLookupByLibrary.simpleMessage("Slå på lyset"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Vaskemaskin"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("RAVGUL"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("BLÅ"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("BLÅGRÅ"),
@@ -111,82 +120,71 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsYellow": MessageLookupByLibrary.simpleMessage("GUL"),
         "craneDescription": MessageLookupByLibrary.simpleMessage(
             "En reiseapp med personlig preg"),
-        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
-        "craneEat1":
-            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
-        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("SPIS"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Napoli, Italia"),
+        "craneEat1": MessageLookupByLibrary.simpleMessage("Dallas, USA"),
+        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisboa, Portugal"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
-        "craneEat3":
-            MessageLookupByLibrary.simpleMessage("Portland, United States"),
-        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
-        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
-        "craneEat6":
-            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
-        "craneEat7":
-            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
-        "craneEat8":
-            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
-        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage("Portland, USA"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, Frankrike"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, Sør-Korea"),
+        "craneEat6": MessageLookupByLibrary.simpleMessage("Seattle, USA"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage("Nashville, USA"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage("Atlanta, USA"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spania"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Restaurants by Destination"),
+            "Utforsk restauranter etter reisemål"),
         "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
-        "craneFly0":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneFly1":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneFly12":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
+        "craneFly0": MessageLookupByLibrary.simpleMessage("Aspen, USA"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage("Big Sur, USA"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Kairo, Egypt"),
+        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisboa, Portugal"),
+        "craneFly12": MessageLookupByLibrary.simpleMessage("Napa, USA"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneFly5":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
-        "craneFly7": MessageLookupByLibrary.simpleMessage(
-            "Mount Rushmore, United States"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldivene"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Sveits"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spania"),
+        "craneFly7":
+            MessageLookupByLibrary.simpleMessage("Mount Rushmore, USA"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Flights by Destination"),
-        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
-        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+            "Utforsk flyvninger etter reisemål"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("Velg dato"),
+        "craneFormDates": MessageLookupByLibrary.simpleMessage("Velg datoer"),
         "craneFormDestination":
-            MessageLookupByLibrary.simpleMessage("Choose Destination"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+            MessageLookupByLibrary.simpleMessage("Velg et reisemål"),
+        "craneFormDiners":
+            MessageLookupByLibrary.simpleMessage("Restaurantgjester"),
         "craneFormLocation":
-            MessageLookupByLibrary.simpleMessage("Select Location"),
+            MessageLookupByLibrary.simpleMessage("Velg et sted"),
         "craneFormOrigin":
-            MessageLookupByLibrary.simpleMessage("Choose Origin"),
-        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
-        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneSleep1":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
+            MessageLookupByLibrary.simpleMessage("Velg avreisested"),
+        "craneFormTime":
+            MessageLookupByLibrary.simpleMessage("Velg klokkeslett"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Reisende"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("SOV"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldivene"),
+        "craneSleep1": MessageLookupByLibrary.simpleMessage("Aspen, USA"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Kairo, Egypt"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
-        "craneSleep4":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneSleep5":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneSleep6":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
+        "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, Sveits"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage("Big Sur, USA"),
+        "craneSleep6": MessageLookupByLibrary.simpleMessage("Napa, USA"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
-        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisboa, Portugal"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Properties by Destination"),
+            "Utforsk eiendommer etter reisemål"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("Tillat"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("Eplekake"),
@@ -215,9 +213,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Vis varsel"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+            "Handlingsbrikker er et sett med alternativer som utløser en handling knyttet til primærinnhold. Handlingsbrikekr skal vises dynamisk og kontekstuelt i et UI."),
         "demoActionChipTitle":
-            MessageLookupByLibrary.simpleMessage("Action Chip"),
+            MessageLookupByLibrary.simpleMessage("Handlingsbrikke"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "En varseldialogboks som informerer brukeren om situasjoner som krever bekreftelse. Varseldialogbokser har en valgfri tittel og en valgfri liste over handlinger."),
         "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("Varsel"),
@@ -259,12 +257,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Flatt, hevet, omriss med mer"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Knapper"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Compact elements that represent an input, attribute, or action"),
-        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+            "Kompakte elementer som representerer inndata, egenskaper eller handlinger"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Brikker"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+            "Valgbrikker representerer et enkelt valg fra et sett. Valgbrikker inneholder tilknyttet beskrivende tekst eller kategorier."),
         "demoChoiceChipTitle":
-            MessageLookupByLibrary.simpleMessage("Choice Chip"),
+            MessageLookupByLibrary.simpleMessage("Valgbrikke"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Kodeeksempel"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Konstante farger og fargekart som representerer fargepaletten for «material design»."),
@@ -308,9 +306,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API-dokumentasjon"),
         "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Filter chips use tags or descriptive words as a way to filter content."),
+            "Filterbrikker bruker etiketter eller beskrivende ord for å filtrere innhold."),
         "demoFilterChipTitle":
-            MessageLookupByLibrary.simpleMessage("Filter Chip"),
+            MessageLookupByLibrary.simpleMessage("Filterbrikke"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "En flat knapp viser en blekkflekk når den trykkes, men løftes ikke. Bruk flate knapper i verktøyrader, dialogbokser og innebygd i utfylling"),
         "demoFlatButtonTitle":
@@ -327,9 +325,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Fullskjerm"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Informasjon"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
+            "Inndatabrikker representerer en komplisert informasjonsdel, for eksempel en enhet (person, sted eller gjenstand) eller samtaletekst, i kompakt form."),
         "demoInputChipTitle":
-            MessageLookupByLibrary.simpleMessage("Input Chip"),
+            MessageLookupByLibrary.simpleMessage("Inndatabrikke"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Kunne ikke vise nettadressen:"),
         "demoOptionsTooltip":
@@ -345,6 +343,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "En enkel dialogboks gir brukeren et valg mellom flere alternativer. En enkel dialogboks har en valgfri tittel som vises over valgene."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Enkel"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Tekstfelt lar brukere skrive inn tekst i et UI. De vises vanligvis i skjemaer og dialogbokser."),
         "demoTextFieldEmail":
@@ -352,7 +355,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldEnterPassword":
             MessageLookupByLibrary.simpleMessage("Skriv inn et passord."),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### – Angi et amerikansk telefonnummer."),
+            "(###) ###-#### – angi et amerikansk telefonnummer."),
         "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
             "Rett opp problemene i rødt før du sender inn."),
         "demoTextFieldHidePasswordLabel":
@@ -377,7 +380,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldPhoneNumber":
             MessageLookupByLibrary.simpleMessage("Telefonnummer*"),
         "demoTextFieldRequiredField": MessageLookupByLibrary.simpleMessage(
-            "* angir et obligatorisk felt"),
+            "* indikerer at feltet er obligatorisk"),
         "demoTextFieldRetypePassword": MessageLookupByLibrary.simpleMessage(
             "Skriv inn passordet på nytt*"),
         "demoTextFieldSalary": MessageLookupByLibrary.simpleMessage("Lønn"),
@@ -387,7 +390,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
             "Enkel linje med redigerbar tekst og redigerbare tall"),
         "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "Fortell oss om deg (f.eks. skriv ned det du gjør, eller hvilke hobbyer du har)"),
+            "Fortell oss om deg selv (f.eks. skriv ned det du gjør, eller hvilke hobbyer du har)"),
         "demoTextFieldTitle":
             MessageLookupByLibrary.simpleMessage("Tekstfelter"),
         "demoTextFieldUSD": MessageLookupByLibrary.simpleMessage("USD"),
@@ -433,6 +436,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Kategorier"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galleri"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Sparekonto for bil"),
         "rallyAccountDataChecking":
@@ -450,19 +454,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountDetailDataInterestRate":
             MessageLookupByLibrary.simpleMessage("Rentesats"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("Rente til nå i år"),
+            MessageLookupByLibrary.simpleMessage("Renter så langt i år"),
         "rallyAccountDetailDataNextStatement":
             MessageLookupByLibrary.simpleMessage("Neste kontoutskrift"),
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Sum"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Kontoer"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Varsler"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Regninger"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Skyldig"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Klær"),
         "rallyBudgetCategoryCoffeeShops":
@@ -491,6 +497,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("Brukernavn"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("SE ALLE"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Finn minibanker"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Hjelp"),
@@ -552,7 +564,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("AVBRYT"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("TØM HANDLEKURVEN"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("HANDLEKURV"),
         "shrineCartShippingCaption":
@@ -563,13 +575,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Avgifter:"),
         "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("SUM"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
+            MessageLookupByLibrary.simpleMessage("TILBEHØR"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALLE"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("CLOTHING"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
-        "shrineDescription": MessageLookupByLibrary.simpleMessage(
-            "En moteriktig detaljhandelsapp"),
+            MessageLookupByLibrary.simpleMessage("KLÆR"),
+        "shrineCategoryNameHome":
+            MessageLookupByLibrary.simpleMessage("HJEMME"),
+        "shrineDescription":
+            MessageLookupByLibrary.simpleMessage("En moteriktig handleapp"),
         "shrineLoginPasswordLabel":
             MessageLookupByLibrary.simpleMessage("Passord"),
         "shrineLoginUsernameLabel":
@@ -615,8 +628,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Marineblå bukser"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Gipsfarget bluse"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Quartet-bord"),
         "shrineProductRainwaterTray":
@@ -655,9 +668,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Hvit nålestripet skjorte"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney-belte"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription":
-            MessageLookupByLibrary.simpleMessage("En responsive startlayout"),
-        "starterAppDrawerItem": m16,
+            MessageLookupByLibrary.simpleMessage("En responsiv startlayout"),
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Brødtekst"),
         "starterAppGenericButton":

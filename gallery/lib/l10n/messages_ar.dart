@@ -33,34 +33,43 @@ class MessageLookup extends MessageLookupByLibrary {
   static m4(totalProperties) =>
       "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
 
-  static m5(value) => "العنصر ${value}";
+  static m5(value) => "السلعة ${value}";
 
   static m6(name, phoneNumber) => "رقم هاتف ${name} هو ${phoneNumber}.";
 
   static m7(value) => "لقد اخترت القيمة التالية: \"${value}\"";
 
-  static m8(amount) => "أنفقت ${amount} كرسوم لأجهزة الصراف الآلي هذا الشهر";
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
 
-  static m9(percent) =>
-      "عمل رائع! القيمة الموجودة في حسابك الجاري أعلى بنسبة ${percent} من الشهر الماضي.";
+  static m9(amount) => "أنفقت ${amount} كرسوم لأجهزة الصراف الآلي هذا الشهر";
 
   static m10(percent) =>
-      "انتبه، لقد استهلكت ${percent} من ميزانية التسوق لهذا الشهر.";
+      "عمل رائع! الرصيد الحالي في حسابك الجاري أعلى بنسبة ${percent} من الشهر الماضي.";
 
-  static m11(amount) =>
+  static m11(percent) =>
+      "تنبيه: لقد استهلكت ${percent} من ميزانية التسوّق لهذا الشهر.";
+
+  static m12(amount) =>
       "أنفقت هذا الشهر مبلغ ${amount} على تناول الطعام في المطاعم.";
 
-  static m12(count) =>
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "x ‏${price}";
+  static m17(price) => "x ‏${price}";
 
-  static m15(quantity) => "الكمية: ${quantity}";
+  static m18(quantity) => "الكمية: ${quantity}";
 
-  static m16(value) => "العنصر ${value}";
+  static m19(value) => "السلعة ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -80,15 +89,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("زر"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("إنشاء"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
-        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
-        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
-        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
-        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
-        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("ركوب الدراجة"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("مصعَد"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("موقد"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("كبير"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("متوسط"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("صغير"),
         "chipTurnOnLights":
-            MessageLookupByLibrary.simpleMessage("Turn on lights"),
-        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
+            MessageLookupByLibrary.simpleMessage("تشغيل الأضواء"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("غسّالة"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("كهرماني"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("أزرق"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("أزرق رمادي"),
@@ -112,82 +121,82 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsYellow": MessageLookupByLibrary.simpleMessage("أصفر"),
         "craneDescription":
             MessageLookupByLibrary.simpleMessage("تطبيق سفر مُخصَّص"),
-        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("المأكولات"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("نابولي، إيطاليا"),
         "craneEat1":
-            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
-        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
+            MessageLookupByLibrary.simpleMessage("دالاس، الولايات المتحدة"),
+        "craneEat10": MessageLookupByLibrary.simpleMessage("لشبونة، البرتغال"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("قرطبة، الأرجنتين"),
         "craneEat3":
-            MessageLookupByLibrary.simpleMessage("Portland, United States"),
-        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
-        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
+            MessageLookupByLibrary.simpleMessage("بورتلاند، الولايات المتحدة"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("باريس، فرنسا"),
+        "craneEat5":
+            MessageLookupByLibrary.simpleMessage("سول، كوريا الجنوبية"),
         "craneEat6":
-            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
+            MessageLookupByLibrary.simpleMessage("سياتل، الولايات المتحدة"),
         "craneEat7":
-            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
+            MessageLookupByLibrary.simpleMessage("ناشفيل، الولايات المتحدة"),
         "craneEat8":
-            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
-        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+            MessageLookupByLibrary.simpleMessage("أتلانتا، الولايات المتحدة"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("مدريد، إسبانيا"),
         "craneEatRestaurants": m2,
-        "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Restaurants by Destination"),
-        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
+        "craneEatSubhead":
+            MessageLookupByLibrary.simpleMessage("استكشاف المطاعم حسب الوجهة"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("الطيران"),
         "craneFly0":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
+            MessageLookupByLibrary.simpleMessage("أسبن، الولايات المتحدة"),
         "craneFly1":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("بيغ سور، الولايات المتحدة"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("القاهرة، مصر"),
+        "craneFly11": MessageLookupByLibrary.simpleMessage("لشبونة، البرتغال"),
         "craneFly12":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
-        "craneFly2":
-            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
-        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneFly5":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+            MessageLookupByLibrary.simpleMessage("نابا، الولايات المتحدة"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("بالي، إندونيسيا"),
+        "craneFly2": MessageLookupByLibrary.simpleMessage("وادي خومبو، نيبال"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("ماتشو بيتشو، بيرو"),
+        "craneFly4":
+            MessageLookupByLibrary.simpleMessage("ماليه، جزر المالديف"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("فيتزناو، سويسرا"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("مدريد، إسبانيا"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
-            "Mount Rushmore, United States"),
-        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
-        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            "جبل راشمور، الولايات المتحدة"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("سنغافورة"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("هافانا، كوبا"),
         "craneFlyStops": m3,
-        "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Flights by Destination"),
-        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
-        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+        "craneFlySubhead":
+            MessageLookupByLibrary.simpleMessage("استكشاف الرحلات حسب الوجهة"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("اختيار التاريخ"),
+        "craneFormDates": MessageLookupByLibrary.simpleMessage("اختيار تواريخ"),
         "craneFormDestination":
-            MessageLookupByLibrary.simpleMessage("Choose Destination"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+            MessageLookupByLibrary.simpleMessage("اختيار الوجهة"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("مطاعم صغيرة"),
         "craneFormLocation":
-            MessageLookupByLibrary.simpleMessage("Select Location"),
+            MessageLookupByLibrary.simpleMessage("اختيار الموقع جغرافي"),
         "craneFormOrigin":
-            MessageLookupByLibrary.simpleMessage("Choose Origin"),
-        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
-        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+            MessageLookupByLibrary.simpleMessage("اختيار نقطة انطلاق الرحلة"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("اختيار الوقت"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("المسافرون"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("السكون"),
+        "craneSleep0":
+            MessageLookupByLibrary.simpleMessage("ماليه، جزر المالديف"),
         "craneSleep1":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+            MessageLookupByLibrary.simpleMessage("أسبن، الولايات المتحدة"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("القاهرة، مصر"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("تايبيه، تايوان"),
         "craneSleep2":
-            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
-        "craneSleep4":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
+            MessageLookupByLibrary.simpleMessage("ماتشو بيتشو، بيرو"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("هافانا، كوبا"),
+        "craneSleep4": MessageLookupByLibrary.simpleMessage("فيتزناو، سويسرا"),
         "craneSleep5":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
+            MessageLookupByLibrary.simpleMessage("بيغ سور، الولايات المتحدة"),
         "craneSleep6":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
-        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
-        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("نابا، الولايات المتحدة"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("بورتو، البرتغال"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("تولوم، المكسيك"),
+        "craneSleep9": MessageLookupByLibrary.simpleMessage("لشبونة، البرتغال"),
         "craneSleepProperties": m4,
-        "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Properties by Destination"),
+        "craneSleepSubhead":
+            MessageLookupByLibrary.simpleMessage("استكشاف العقارات حسب الوجهة"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("السماح"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("فطيرة التفاح"),
@@ -215,59 +224,59 @@ class MessageLookup extends MessageLookupByLibrary {
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("عرض التنبيه"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+            "شرائح الإجراءات هي مجموعة من الخيارات التي تشغّل إجراءً ذا صلة بالمحتوى الأساسي. ينبغي أن يكون ظهور شرائح الإجراءات في واجهة المستخدم ديناميكيًا ومناسبًا للسياق."),
         "demoActionChipTitle":
-            MessageLookupByLibrary.simpleMessage("Action Chip"),
+            MessageLookupByLibrary.simpleMessage("شريحة الإجراءات"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "يخبر مربع حوار التنبيهات المستخدم بالحالات التي تتطلب تأكيد الاستلام. ويشتمل مربع حوار التنبيهات على عنوان اختياري وقائمة إجراءات اختيارية."),
         "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("التنبيه"),
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("تنبيه مزوّد بعنوان"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "تعرض أشرطة التنقل السفلية من ثلاث إلى خمس وجهات في الجزء السفلي من الشاشة. ويتم تمثيل كل وجهة برمز ووسم نصي اختياري. عند النقر على رمز التنقل السفلي، يتم نقل المستخدم إلى وجهة التنقل ذات المستوى الأعلى المرتبطة بذلك الرمز."),
+            "تعرض أشرطة التنقل السفلية بين ثلاث وخمس وجهات في الجزء السفلي من الشاشة. ويتم تمثيل كل وجهة برمز ووسم نصي اختياري. عند النقر على رمز التنقل السفلي، يتم نقل المستخدم إلى وجهة التنقل ذات المستوى الأعلى المرتبطة بذلك الرمز."),
         "demoBottomNavigationPersistentLabels":
             MessageLookupByLibrary.simpleMessage("التصنيفات المستمرة"),
         "demoBottomNavigationSelectedLabel":
             MessageLookupByLibrary.simpleMessage("الملصق المُختار"),
-        "demoBottomNavigationSubtitle": MessageLookupByLibrary.simpleMessage(
-            "التنقل السفلي للمشاهدات التي تتلاشى"),
+        "demoBottomNavigationSubtitle":
+            MessageLookupByLibrary.simpleMessage("شريط تنقّل سفلي شبه مرئي"),
         "demoBottomNavigationTitle":
-            MessageLookupByLibrary.simpleMessage("التنقل السفلي"),
+            MessageLookupByLibrary.simpleMessage("شريط التنقل السفلي"),
         "demoBottomSheetAddLabel":
             MessageLookupByLibrary.simpleMessage("إضافة"),
         "demoBottomSheetButtonText":
-            MessageLookupByLibrary.simpleMessage("عرض الورقة السفلية"),
+            MessageLookupByLibrary.simpleMessage("عرض البطاقة السفلية"),
         "demoBottomSheetHeader":
             MessageLookupByLibrary.simpleMessage("العنوان"),
         "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "تعتبر الورقة السفلية النمطية بديلاً لقائمة أو مربع حوار وتمنع المستخدم من التفاعل مع باقي أجزاء التطبيق."),
+            "تعتبر البطاقة السفلية المقيِّدة بديلاً لقائمة أو مربّع حوار ولا تسمح للمستخدم بالتفاعل مع المحتوى الآخر على الشاشة."),
         "demoBottomSheetModalTitle":
-            MessageLookupByLibrary.simpleMessage("الورقة السفلية النمطية"),
+            MessageLookupByLibrary.simpleMessage("البطاقة السفلية المقيِّدة"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "تعرض الورقة السفلية المستمرة المعلومات التي تعتبر تكملة للمحتوى الأساسي للتطبيق. وتظل الورقة السفلية المستمرة مرئية حتى عندما يتفاعل المستخدم مع الأجزاء الأخرى من التطبيق."),
+                "تعرض البطاقة السفلية العادية معلومات تكميلية للمحتوى الأساسي للتطبيق. ولا تختفي هذه البطاقة عندما يتفاعل المستخدم مع المحتوى الآخر على الشاشة."),
         "demoBottomSheetPersistentTitle":
-            MessageLookupByLibrary.simpleMessage("الورقة السفلية المستمرة"),
+            MessageLookupByLibrary.simpleMessage("البطاقة السفلية العادية"),
         "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
-            "الأوراق السفلية النمطية والمستمرة"),
+            "البطاقات السفلية المقيِّدة والعادية"),
         "demoBottomSheetTitle":
-            MessageLookupByLibrary.simpleMessage("الورقة السفلية"),
+            MessageLookupByLibrary.simpleMessage("البطاقة السفلية"),
         "demoBottomTextFieldsTitle":
             MessageLookupByLibrary.simpleMessage("حقول النص"),
         "demoButtonSubtitle": MessageLookupByLibrary.simpleMessage(
             "أزرار منبسطة وبارزة ومخطَّطة وغيرها"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("الأزرار"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Compact elements that represent an input, attribute, or action"),
-        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+            "العناصر المضغوطة التي تمثل إدخال أو سمة أو إجراء"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("الشرائح"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+            "تمثل شرائح الخيارات خيارًا واحدًا من بين مجموعة. تتضمن شرائح الخيارات النصوص الوصفية ذات الصلة أو الفئات."),
         "demoChoiceChipTitle":
-            MessageLookupByLibrary.simpleMessage("Choice Chip"),
+            MessageLookupByLibrary.simpleMessage("شريحة الخيارات"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("نموذج رمز"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
-            "ثوابت اللون وعينات الألوان التي تُمثل لوحة ألوان التصميم متعدد الأبعاد."),
+            "ثوابت اللون وعينات الألوان التي تُمثل لوحة ألوان التصميم المتعدد الأبعاد"),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
             "جميع الألوان المحدّدة مسبقًا"),
         "demoColorsTitle": MessageLookupByLibrary.simpleMessage("الألوان"),
@@ -284,7 +293,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoAlertTitle":
             MessageLookupByLibrary.simpleMessage("تنبيه"),
         "demoCupertinoAlertWithTitleTitle":
-            MessageLookupByLibrary.simpleMessage("تنبيه مزوّد بعنوان"),
+            MessageLookupByLibrary.simpleMessage("تنبيه يتضمّن عنوانًا"),
         "demoCupertinoAlertsSubtitle": MessageLookupByLibrary.simpleMessage(
             "مربعات حوار التنبيهات المستوحاة من نظام التشغيل iOS"),
         "demoCupertinoAlertsTitle":
@@ -309,9 +318,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("وثائق واجهة برمجة التطبيقات"),
         "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Filter chips use tags or descriptive words as a way to filter content."),
+            "تستخدم شرائح الفلتر العلامات أو الكلمات الوصفية باعتبارها طريقة لفلترة المحتوى."),
         "demoFilterChipTitle":
-            MessageLookupByLibrary.simpleMessage("Filter Chip"),
+            MessageLookupByLibrary.simpleMessage("شريحة الفلتر"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "يتلوّن الزر المنبسط عند الضغط عليه ولكن لا يرتفع. ينصح باستخدام الأزرار المنبسطة على أشرطة الأدوات وفي مربعات الحوار وداخل المساحة المتروكة"),
         "demoFlatButtonTitle":
@@ -328,9 +337,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ملء الشاشة"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("معلومات"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
+            "تمثل شرائح الإدخالات معلومة معقدة، مثل كيان (شخص، مكان، أو شئ) أو نص محادثة، في نمط مضغوط."),
         "demoInputChipTitle":
-            MessageLookupByLibrary.simpleMessage("Input Chip"),
+            MessageLookupByLibrary.simpleMessage("شريحة الإدخال"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("تعذّر عرض عنوان URL:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("الخيارات"),
@@ -345,16 +354,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "يتيح مربع الحوار البسيط للمستخدم إمكانية الاختيار من بين عدة خيارات. ويشتمل مربع الحوار البسيط على عنوان اختياري يتم عرضه أعلى هذه الخيارات."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("بسيط"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "تسمح حقول النص للمستخدمين بإدخال نص في واجهة مستخدم. وتظهر عادةً في النماذج ومربعات الحوار."),
+            "تسمح حقول النص للمستخدمين بإدخال نص في واجهة مستخدم. وتظهر عادةً في النماذج ومربّعات الحوار."),
         "demoTextFieldEmail":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
         "demoTextFieldEnterPassword":
             MessageLookupByLibrary.simpleMessage("يرجى إدخال كلمة مرور."),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(###) ###-#### - الرجاء إدخال رقم هاتف صالح في الولايات المتحدة."),
+            "(###) ###-#### - يُرجى إدخال رقم هاتف صالح في الولايات المتحدة."),
         "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
-            "الرجاء تصحيح الأخطاء باللون الأحمر قبل الإرسال."),
+            "يُرجى تصحيح الأخطاء باللون الأحمر قبل الإرسال."),
         "demoTextFieldHidePasswordLabel":
             MessageLookupByLibrary.simpleMessage("إخفاء كلمة المرور"),
         "demoTextFieldKeepItShort": MessageLookupByLibrary.simpleMessage(
@@ -367,7 +381,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("الاسم مطلوب."),
         "demoTextFieldNoMoreThan":
-            MessageLookupByLibrary.simpleMessage("يجب ألا يزيد عن 8 أحرف."),
+            MessageLookupByLibrary.simpleMessage("يجب ألا تزيد عن 8 أحرف."),
         "demoTextFieldOnlyAlphabeticalChars":
             MessageLookupByLibrary.simpleMessage(
                 "يُرجى إدخال حروف أبجدية فقط."),
@@ -386,16 +400,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("عرض كلمة المرور"),
         "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("إرسال"),
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
-            "سطر واحد من النص القابل للتعديل والأرقام"),
+            "سطر واحد من النص والأرقام القابلة للتعديل"),
         "demoTextFieldTellUsAboutYourself": MessageLookupByLibrary.simpleMessage(
-            "أخبرنا عن نفسك (على سبيل المثال، دوّن ما تفعله أو هواياتك التي تفضلها)"),
+            "أخبِرنا عن نفسك (مثلاً ما هي هواياتك المفضّلة أو ما هو مجال عملك؟)"),
         "demoTextFieldTitle": MessageLookupByLibrary.simpleMessage("حقول النص"),
         "demoTextFieldUSD":
             MessageLookupByLibrary.simpleMessage("دولار أمريكي"),
         "demoTextFieldWhatDoPeopleCallYou":
-            MessageLookupByLibrary.simpleMessage("أي لقب يناديك به الأشخاص؟"),
-        "demoTextFieldWhereCanWeReachYou":
-            MessageLookupByLibrary.simpleMessage("أين يمكننا التواصل معك؟"),
+            MessageLookupByLibrary.simpleMessage("بأي اسم يناديك الآخرون؟"),
+        "demoTextFieldWhereCanWeReachYou": MessageLookupByLibrary.simpleMessage(
+            "على أي رقم يمكننا التواصل معك؟"),
         "demoTextFieldYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("عنوان بريدك الإلكتروني"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
@@ -403,11 +417,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("أزرار التبديل"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
-            "تعريفات للأنماط المطبعية المختلفة الموجودة في التصميم المتعدد الأبعاد."),
+            "تعريف أساليب الخط المختلفة في التصميم المتعدد الأبعاد"),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
             "جميع أنماط النص المحدّدة مسبقًا"),
         "demoTypographyTitle":
-            MessageLookupByLibrary.simpleMessage("فن الطباعة"),
+            MessageLookupByLibrary.simpleMessage("أسلوب الخط"),
         "dialogAddAccount": MessageLookupByLibrary.simpleMessage("إضافة حساب"),
         "dialogAgree": MessageLookupByLibrary.simpleMessage("موافق"),
         "dialogCancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
@@ -432,10 +446,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الأنماط والوسائط المرجعية"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("الفئات"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("معرض الصور"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("المدّخرات المخصّصة للسيارة"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("حساب شيكات"),
+            MessageLookupByLibrary.simpleMessage("الحساب الجاري"),
         "rallyAccountDataHomeSavings":
             MessageLookupByLibrary.simpleMessage("المدخرات المنزلية"),
         "rallyAccountDataVacation":
@@ -451,31 +466,36 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountDetailDataInterestRate":
             MessageLookupByLibrary.simpleMessage("سعر الفائدة"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("فائدة السنة حتى تاريخه"),
+            MessageLookupByLibrary.simpleMessage(
+                "الفائدة منذ بداية العام حتى اليوم"),
         "rallyAccountDetailDataNextStatement":
             MessageLookupByLibrary.simpleMessage("كشف الحساب التالي"),
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("الإجمالي"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("الحسابات"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("التنبيهات"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("الفواتير"),
-        "rallyBillsDue": MessageLookupByLibrary.simpleMessage("مستحق"),
+        "rallyBillsDue":
+            MessageLookupByLibrary.simpleMessage("الفواتير المستحقة"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("الملابس"),
         "rallyBudgetCategoryCoffeeShops":
-            MessageLookupByLibrary.simpleMessage("مقاهٍ"),
+            MessageLookupByLibrary.simpleMessage("المقاهي"),
         "rallyBudgetCategoryGroceries":
             MessageLookupByLibrary.simpleMessage("متاجر البقالة"),
         "rallyBudgetCategoryRestaurants":
             MessageLookupByLibrary.simpleMessage("المطاعم"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("المتبقي"),
+        "rallyBudgetLeft":
+            MessageLookupByLibrary.simpleMessage("الميزانية المتبقية"),
         "rallyBudgets": MessageLookupByLibrary.simpleMessage("الميزانيات"),
         "rallyDescription":
-            MessageLookupByLibrary.simpleMessage("تطبيق التمويل الشخصي"),
+            MessageLookupByLibrary.simpleMessage("تطبيق للتمويل الشخصي"),
         "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("المتبقي"),
         "rallyLoginButtonLogin":
             MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
@@ -493,6 +513,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms": MessageLookupByLibrary.simpleMessage(
             "العثور على مواقع أجهزة الصراف الآلي"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("المساعدة"),
@@ -555,7 +581,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إلغاء"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("محو سلة التسوق"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("سلة التسوّق"),
         "shrineCartShippingCaption":
@@ -567,13 +593,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCartTotalCaption":
             MessageLookupByLibrary.simpleMessage("الإجمالي"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
+            MessageLookupByLibrary.simpleMessage("الإكسسوارات"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("الكل"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("CLOTHING"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
+            MessageLookupByLibrary.simpleMessage("الملابس"),
+        "shrineCategoryNameHome":
+            MessageLookupByLibrary.simpleMessage("المنزل"),
         "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("تطبيق البيع بالتجزئة العصري"),
+            MessageLookupByLibrary.simpleMessage("تطبيق عصري للبيع بالتجزئة"),
         "shrineLoginPasswordLabel":
             MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "shrineLoginUsernameLabel":
@@ -586,71 +613,71 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductBlueStoneMug":
             MessageLookupByLibrary.simpleMessage("قدح حجري أزرق"),
         "shrineProductCeriseScallopTee": MessageLookupByLibrary.simpleMessage(
-            "سترة نسائية باللون الأحمر الكرزي"),
+            "قميص قصير الأكمام باللون الكرزي الفاتح"),
         "shrineProductChambrayNapkins":
-            MessageLookupByLibrary.simpleMessage("مناديل شامبراي"),
+            MessageLookupByLibrary.simpleMessage("مناديل \"شامبراي\""),
         "shrineProductChambrayShirt":
-            MessageLookupByLibrary.simpleMessage("قميص شامبراي"),
+            MessageLookupByLibrary.simpleMessage("قميص من نوع \"شامبراي\""),
         "shrineProductClassicWhiteCollar":
             MessageLookupByLibrary.simpleMessage("ياقة بيضاء كلاسيكية"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("سترة بلون داكن"),
+            MessageLookupByLibrary.simpleMessage("بلوزة بلون الطين"),
         "shrineProductCopperWireRack":
             MessageLookupByLibrary.simpleMessage("رف سلكي نحاسي"),
         "shrineProductFineLinesTee":
-            MessageLookupByLibrary.simpleMessage("قميص بخطوط دقيقة"),
+            MessageLookupByLibrary.simpleMessage("قميص بخطوط رفيعة"),
         "shrineProductGardenStrand":
-            MessageLookupByLibrary.simpleMessage("خيوط مجدولة حدائقية"),
+            MessageLookupByLibrary.simpleMessage("خيوط زينة للحدائق"),
         "shrineProductGatsbyHat":
-            MessageLookupByLibrary.simpleMessage("قبعة غاتسبي"),
-        "shrineProductGentryJacket":
-            MessageLookupByLibrary.simpleMessage("سترة جنتري"),
+            MessageLookupByLibrary.simpleMessage("قبعة \"غاتسبي\""),
+        "shrineProductGentryJacket": MessageLookupByLibrary.simpleMessage(
+            "سترة رجالية باللون الأخضر الداكن"),
         "shrineProductGiltDeskTrio": MessageLookupByLibrary.simpleMessage(
-            "طاولة مطلية باللون الذهبي مكّونة من ثلاث قطع"),
+            "طقم أدوات مكتبية ذهبية اللون من 3 قطع"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("وشاح من ماركة جينجر"),
+            MessageLookupByLibrary.simpleMessage("وشاح بألوان الزنجبيل"),
         "shrineProductGreySlouchTank":
-            MessageLookupByLibrary.simpleMessage("قميص نسائي رمادي"),
+            MessageLookupByLibrary.simpleMessage("قميص رمادي اللون"),
         "shrineProductHurrahsTeaSet":
-            MessageLookupByLibrary.simpleMessage("طقم الشاي العجيب"),
-        "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("مطبخ كواترو"),
+            MessageLookupByLibrary.simpleMessage("طقم شاي مميّز"),
+        "shrineProductKitchenQuattro": MessageLookupByLibrary.simpleMessage(
+            "طقم أدوات للمطبخ من أربع قطع"),
         "shrineProductNavyTrousers":
-            MessageLookupByLibrary.simpleMessage("سراويل بلون أزرق داكن"),
+            MessageLookupByLibrary.simpleMessage("سروال بلون أزرق داكن"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("سترة نسائية بلاستر"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+            MessageLookupByLibrary.simpleMessage("بلوزة من نوع \"بلاستر\""),
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("طاولة رباعية"),
+            MessageLookupByLibrary.simpleMessage("طاولة رباعية الأرجل"),
         "shrineProductRainwaterTray":
-            MessageLookupByLibrary.simpleMessage("مصارف مياه الأمطار"),
-        "shrineProductRamonaCrossover":
-            MessageLookupByLibrary.simpleMessage("كروس أوفر رامونا"),
+            MessageLookupByLibrary.simpleMessage("صينية عميقة"),
+        "shrineProductRamonaCrossover": MessageLookupByLibrary.simpleMessage(
+            "قميص \"رامونا\" على شكل الحرف X"),
         "shrineProductSeaTunic":
-            MessageLookupByLibrary.simpleMessage("سترة نسائية شاطئية"),
+            MessageLookupByLibrary.simpleMessage("بلوزة بلون أزرق فاتح"),
         "shrineProductSeabreezeSweater":
             MessageLookupByLibrary.simpleMessage("سترة بلون أزرق بحري"),
         "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("قميص متدلي من على الكتفين"),
+            MessageLookupByLibrary.simpleMessage("قميص واسعة بأكمام قصيرة"),
         "shrineProductShrugBag":
             MessageLookupByLibrary.simpleMessage("حقيبة كتف"),
-        "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("طقم سيراميك ماركة Soothe"),
+        "shrineProductSootheCeramicSet": MessageLookupByLibrary.simpleMessage(
+            "طقم سيراميك باللون الأبيض الراقي"),
         "shrineProductStellaSunglasses":
-            MessageLookupByLibrary.simpleMessage("نظارات شمس ستيلا"),
+            MessageLookupByLibrary.simpleMessage("نظارات شمس من نوع \"ستيلا\""),
         "shrineProductStrutEarrings":
             MessageLookupByLibrary.simpleMessage("أقراط فاخرة"),
         "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("النبات كثيف الأوراق"),
+            MessageLookupByLibrary.simpleMessage("أحواض عصرية للنباتات"),
         "shrineProductSunshirtDress":
-            MessageLookupByLibrary.simpleMessage("فستان مميز برسمة الشمس"),
+            MessageLookupByLibrary.simpleMessage("فستان يعكس أشعة الشمس"),
         "shrineProductSurfAndPerfShirt":
             MessageLookupByLibrary.simpleMessage("قميص سيرف آند بيرف"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("حقيبة فاجابوند"),
+            MessageLookupByLibrary.simpleMessage("حقيبة من ماركة Vagabond"),
         "shrineProductVarsitySocks":
-            MessageLookupByLibrary.simpleMessage("جوارب فارسيتي"),
+            MessageLookupByLibrary.simpleMessage("جوارب من نوع \"فارسيتي\""),
         "shrineProductWalterHenleyWhite":
             MessageLookupByLibrary.simpleMessage("والتر هينلي (أبيض)"),
         "shrineProductWeaveKeyring":
@@ -658,10 +685,21 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitePinstripeShirt":
             MessageLookupByLibrary.simpleMessage("قميص ذو خطوط بيضاء"),
         "shrineProductWhitneyBelt":
-            MessageLookupByLibrary.simpleMessage("حزام ويتناي"),
+            MessageLookupByLibrary.simpleMessage("حزام \"ويتني\""),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
-            "تنسيق تطبيق Starter التفاعلي"),
-        "starterAppDrawerItem": m16,
+            "تطبيق نموذجي يتضمّن تنسيقًا تفاعليًا"),
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("النص"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("زر"),
         "starterAppGenericHeadline":
@@ -670,11 +708,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("العنوان الفرعي"),
         "starterAppGenericTitle":
             MessageLookupByLibrary.simpleMessage("العنوان"),
-        "starterAppTitle":
-            MessageLookupByLibrary.simpleMessage("تطبيق Starter"),
+        "starterAppTitle": MessageLookupByLibrary.simpleMessage("تطبيق نموذجي"),
         "starterAppTooltipAdd": MessageLookupByLibrary.simpleMessage("إضافة"),
         "starterAppTooltipFavorite":
-            MessageLookupByLibrary.simpleMessage("وضع في المفضلة"),
+            MessageLookupByLibrary.simpleMessage("الإضافة إلى السلع المفضّلة"),
         "starterAppTooltipSearch":
             MessageLookupByLibrary.simpleMessage("البحث"),
         "starterAppTooltipShare": MessageLookupByLibrary.simpleMessage("مشاركة")

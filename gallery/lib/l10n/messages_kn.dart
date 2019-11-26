@@ -40,28 +40,37 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "ನೀವು ಆಯ್ಕೆಮಾಡಿದ್ದೀರಿ: \"${value}\"";
 
-  static m8(amount) => "ನೀವು ಈ ತಿಂಗಳು ATM ಶುಲ್ಕಗಳಲ್ಲಿ ${amount} ವ್ಯಯಿಸಿದ್ದೀರಿ";
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
 
-  static m9(percent) =>
-      "ಒಳ್ಳೆಯ ಕೆಲಸ ಮಾಡಿದ್ದೀರಿ! ನಿಮ್ಮ ಪರಿಶೀಲನೆ ಖಾತೆಯು ಹಿಂದಿನ ತಿಂಗಳಿಗಿಂತ ಶೇಕಡಾ ${percent} ಹೆಚ್ಚಿದೆ.";
+  static m9(amount) => "ನೀವು ಈ ತಿಂಗಳು ATM ಶುಲ್ಕಗಳಲ್ಲಿ ${amount} ವ್ಯಯಿಸಿದ್ದೀರಿ";
 
   static m10(percent) =>
+      "ಒಳ್ಳೆಯ ಕೆಲಸ ಮಾಡಿದ್ದೀರಿ! ನಿಮ್ಮ ಪರಿಶೀಲನೆ ಖಾತೆಯು ಹಿಂದಿನ ತಿಂಗಳಿಗಿಂತ ಶೇಕಡಾ ${percent} ಹೆಚ್ಚಿದೆ.";
+
+  static m11(percent) =>
       "ಗಮನಿಸಿ, ಈ ತಿಂಗಳ ನಿಮ್ಮ ಶಾಪಿಂಗ್ ಬಜೆಟ್‌ನಲ್ಲಿ ನೀವು ಶೇಕಡಾ ${percent} ಬಳಸಿದ್ದೀರಿ.";
 
-  static m11(amount) =>
+  static m12(amount) =>
       "ನೀವು ಈ ವಾರ ರೆಸ್ಟೋರೆಂಟ್‌ಗಳಲ್ಲಿ ${amount} ಖರ್ಚುಮಾಡಿದ್ದೀರಿ.";
 
-  static m12(count) =>
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "x ${price}";
+  static m17(price) => "x ${price}";
 
-  static m15(quantity) => "ಪ್ರಮಾಣ: ${quantity}";
+  static m18(quantity) => "ಪ್ರಮಾಣ: ${quantity}";
 
-  static m16(value) => "ಐಟಂ ${value}";
+  static m19(value) => "ಐಟಂ ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -81,15 +90,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("ಬಟನ್"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("ರಚಿಸಿ"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
-        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
-        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
-        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
-        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
-        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("ಬೈಕಿಂಗ್"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("ಎಲಿವೇಟರ್"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("ಫೈರ್‌ಪ್ಲೇಸ್"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("ದೊಡ್ಡದು"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("ಮಧ್ಯಮ"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("ಸಣ್ಣದು"),
         "chipTurnOnLights":
-            MessageLookupByLibrary.simpleMessage("Turn on lights"),
-        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
+            MessageLookupByLibrary.simpleMessage("ಲೈಟ್‌ಗಳನ್ನು ಆನ್ ಮಾಡಿ"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("ವಾಷರ್"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("ಆಂಬರ್"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("ನೀಲಿ ಬಣ್ಣ"),
         "colorsBlueGrey":
@@ -117,81 +126,90 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneDescription": MessageLookupByLibrary.simpleMessage(
             "ವೈಯಕ್ತೀಕರಿಸಿರುವ ಪ್ರಯಾಣದ ಆ್ಯಪ್"),
         "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("ನಪ್ಲೆಸ್, ಇಟಲಿ"),
         "craneEat1":
-            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
-        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
-        "craneEat3":
-            MessageLookupByLibrary.simpleMessage("Portland, United States"),
-        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
-        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
+            MessageLookupByLibrary.simpleMessage("ಡಲ್ಲಾಸ್, ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್"),
+        "craneEat10":
+            MessageLookupByLibrary.simpleMessage("ಲಿಸ್ಬನ್, ಪೋರ್ಚುಗಲ್"),
+        "craneEat2":
+            MessageLookupByLibrary.simpleMessage("ಕಾರ್ಡೋಬಾ, ಅರ್ಜೆಂಟೀನಾ"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage(
+            "ಪೋರ್ಟ್‌ಲ್ಯಾಂಡ್, ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್"),
+        "craneEat4":
+            MessageLookupByLibrary.simpleMessage("ಪ್ಯಾರಿಸ್‌, ಫ್ರಾನ್ಸ್‌‌"),
+        "craneEat5":
+            MessageLookupByLibrary.simpleMessage("ಸಿಯೊಲ್, ದಕ್ಷಿಣ ಕೊರಿಯಾ"),
         "craneEat6":
-            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
-        "craneEat7":
-            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
+            MessageLookupByLibrary.simpleMessage("ಸಿಯಾಟಲ್, ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage(
+            "ನ್ಯಾಶ್ವಿಲ್ಲೆ, ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್"),
         "craneEat8":
-            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
-        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+            MessageLookupByLibrary.simpleMessage("ಅಟ್ಲಾಂಟಾ, ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("ಮ್ಯಾಡ್ರಿಡ್, ಸ್ಪೇನ್"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Restaurants by Destination"),
-        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
+            "ತಲುಪಬೇಕಾದ ಸ್ಥಳದಲ್ಲಿರುವ ರೆಸ್ಟೋರೆಂಟ್‌ಗಳನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡಿ"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("ಪ್ರಯಾಣಿಸಿ"),
         "craneFly0":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneFly1":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("ಆಸ್ಪೆನ್, ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage(
+            "ಬಿಗ್ ಸುರ್, ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("ಕೈರೊ, ಈಜಿಪ್ಟ್"),
+        "craneFly11":
+            MessageLookupByLibrary.simpleMessage("ಲಿಸ್ಬನ್, ಪೋರ್ಚುಗಲ್"),
         "craneFly12":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
-        "craneFly2":
-            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
-        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+            MessageLookupByLibrary.simpleMessage("ನಾಪಾ, ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("ಬಾಲಿ, ಇಂಡೋನೇಷ್ಯಾ"),
+        "craneFly2": MessageLookupByLibrary.simpleMessage("ಖುಂಬು ಕಣಿವೆ, ನೇಪಾಳ"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("ಮಾಚು ಪಿಚು, ಪೆರು"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("ಮಾಲೆ, ಮಾಲ್ಡೀವ್ಸ್"),
         "craneFly5":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+            MessageLookupByLibrary.simpleMessage("ವಿಟ್ಜನೌ, ಸ್ವಿಟ್ಜರ್‌ಲ್ಯಾಂಡ್"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("ಮ್ಯಾಡ್ರಿಡ್, ಸ್ಪೇನ್"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
-            "Mount Rushmore, United States"),
-        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
-        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            "ಮೌಂಟ್ ರಶ್ಮೋರ್, ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("ಸಿಂಗಾಪುರ್"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("ಹವಾನಾ, ಕ್ಯೂಬಾ"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Flights by Destination"),
-        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
-        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
-        "craneFormDestination":
-            MessageLookupByLibrary.simpleMessage("Choose Destination"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+            "ತಲುಪಬೇಕಾದ ಸ್ಥಳಕ್ಕೆ ಹೋಗುವ ಫ್ಲೈಟ್‌ಗಳನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡಿ"),
+        "craneFormDate":
+            MessageLookupByLibrary.simpleMessage("ದಿನಾಂಕವನ್ನು ಆಯ್ಕೆಮಾಡಿ"),
+        "craneFormDates":
+            MessageLookupByLibrary.simpleMessage("ದಿನಾಂಕಗಳನ್ನು ಆಯ್ಕೆಮಾಡಿ"),
+        "craneFormDestination": MessageLookupByLibrary.simpleMessage(
+            "ತಲುಪಬೇಕಾದ ಸ್ಥಳವನ್ನು ಆಯ್ಕೆಮಾಡಿ"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("ಡೈನರ್ಸ್"),
         "craneFormLocation":
-            MessageLookupByLibrary.simpleMessage("Select Location"),
+            MessageLookupByLibrary.simpleMessage("ಸ್ಥಳವನ್ನು ಆಯ್ಕೆಮಾಡಿ"),
         "craneFormOrigin":
-            MessageLookupByLibrary.simpleMessage("Choose Origin"),
-        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
-        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+            MessageLookupByLibrary.simpleMessage("ಆರಂಭದ ಸ್ಥಳವನ್ನು ಆಯ್ಕೆಮಾಡಿ"),
+        "craneFormTime":
+            MessageLookupByLibrary.simpleMessage("ಸಮಯವನ್ನು ಆಯ್ಕೆಮಾಡಿ"),
+        "craneFormTravelers":
+            MessageLookupByLibrary.simpleMessage("ಪ್ರಯಾಣಿಕರು"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("ನಿದ್ರಾವಸ್ಥೆ"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("ಮಾಲೆ, ಮಾಲ್ಡೀವ್ಸ್"),
         "craneSleep1":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
-        "craneSleep2":
-            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            MessageLookupByLibrary.simpleMessage("ಆಸ್ಪೆನ್, ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("ಕೈರೊ, ಈಜಿಪ್ಟ್"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("ತೈಪೆ, ತೈವಾನ್"),
+        "craneSleep2": MessageLookupByLibrary.simpleMessage("ಮಾಚು ಪಿಚು, ಪೆರು"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("ಹವಾನಾ, ಕ್ಯೂಬಾ"),
         "craneSleep4":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneSleep5":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
+            MessageLookupByLibrary.simpleMessage("ವಿಟ್ಜನೌ, ಸ್ವಿಟ್ಜರ್‌ಲ್ಯಾಂಡ್"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage(
+            "ಬಿಗ್ ಸುರ್, ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್"),
         "craneSleep6":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
-        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
-        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("ನಾಪಾ, ಯುನೈಟೆಡ್ ಸ್ಟೇಟ್ಸ್"),
+        "craneSleep7":
+            MessageLookupByLibrary.simpleMessage("ಪೋರ್ಟೊ, ಪೋರ್ಚುಗಲ್"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("ತುಲುಮ್, ಮೆಕ್ಸಿಕೊ"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("ಲಿಸ್ಬನ್, ಪೋರ್ಚುಗಲ್"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Properties by Destination"),
+            "ತಲುಪಬೇಕಾದ ಸ್ಥಳದಲ್ಲಿನ ಸ್ವತ್ತುಗಳನ್ನು ಎಕ್ಸ್‌ಪ್ಲೋರ್ ಮಾಡಿ"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("ಅನುಮತಿಸಿ"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("Apple Pie"),
@@ -220,9 +238,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ಹಿನ್ನೆಲೆ ಒಳಗೊಂಡಂತೆ"),
         "cupertinoShowAlert": MessageLookupByLibrary.simpleMessage("ಶೋ ಅಲರ್ಟ್"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+            "ಆ್ಯಕ್ಷನ್ ಚಿಪ್‌ಗಳು ಎನ್ನುವುದು ಪ್ರಾಥಮಿಕ ವಿಷಯಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಕ್ರಿಯೆಯನ್ನು ಟ್ರಿಗರ್ ಮಾಡುವ ಆಯ್ಕೆಗಳ ಒಂದು ಗುಂಪಾಗಿದೆ. ಆ್ಯಕ್ಷನ್ ಚಿಪ್‌ಗಳು UI ನಲ್ಲಿ ಕ್ರಿಯಾತ್ಮಕವಾಗಿ ಮತ್ತು ಸಂದರ್ಭೋಚಿತವಾಗಿ ಗೋಚರಿಸಬೇಕು."),
         "demoActionChipTitle":
-            MessageLookupByLibrary.simpleMessage("Action Chip"),
+            MessageLookupByLibrary.simpleMessage("ಆ್ಯಕ್ಷನ್ ಚಿಪ್"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "ಅಲರ್ಟ್ ಡೈಲಾಗ್ ಸ್ವೀಕೃತಿ ಅಗತ್ಯವಿರುವ ಸಂದರ್ಭಗಳ ಬಗ್ಗೆ ಬಳಕೆದಾರರಿಗೆ ತಿಳಿಸುತ್ತದೆ. ಅಲರ್ಟ್ ಡೈಲಾಗ್ ಐಚ್ಛಿಕ ಶೀರ್ಷಿಕೆ ಮತ್ತು ಐಚ್ಛಿಕ ಆ್ಯಕ್ಷನ್‌ಗಳ ಪಟ್ಟಿಯನ್ನು ಹೊಂದಿದೆ."),
         "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("ಅಲರ್ಟ್"),
@@ -246,7 +264,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ಶಿರೋಲೇಖ"),
         "demoBottomSheetItem": m5,
         "demoBottomSheetModalDescription": MessageLookupByLibrary.simpleMessage(
-            "ಮೋಡಲ್ ಬಾಟಮ್ ಶೀಟ್ ಎನ್ನುವುದು ಮೆನು ಅಥವಾ ಡೈಲಾಗ್‌ನ ಪರ್ಯಾಯವಾಗಿದೆ ಮತ್ತು ಬಳಕೆದಾರರು ಉಳಿದ ಆ್ಯಪ್ ಜೊತೆಗೆ ಸಂವಹನ ಮಾಡುವುದನ್ನು ತಡೆಯುತ್ತದೆ."),
+            "ಮೋಡಲ್ ಬಾಟಮ್ ಶೀಟ್ ಎನ್ನುವುದು ಮೆನು ಅಥವಾ ಡೈಲಾಗ್‌ಗೆ ಬದಲಿಯಾಗಿದೆ ಮತ್ತು ಬಳಕೆದಾರರು ಉಳಿದ ಆ್ಯಪ್ ಜೊತೆಗೆ ಸಂವಹನ ಮಾಡುವುದನ್ನು ತಡೆಯುತ್ತದೆ."),
         "demoBottomSheetModalTitle":
             MessageLookupByLibrary.simpleMessage("ಮೋಡಲ್ ಬಾಟಮ್ ಶೀಟ್"),
         "demoBottomSheetPersistentDescription":
@@ -264,12 +282,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "ಫ್ಲಾಟ್, ಉಬ್ಬುವ, ಔಟ್‌ಲೈನ್ ಮತ್ತು ಇನ್ನಷ್ಟು"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("ಬಟನ್‌ಗಳು"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Compact elements that represent an input, attribute, or action"),
-        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+            "ಇನ್‌ಪುಟ್, ಗುಣಲಕ್ಷಣ ಅಥವಾ ಕ್ರಿಯೆಯನ್ನು ಪ್ರತಿನಿಧಿಸುವ ನಿಬಿಡ ಅಂಶಗಳು"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("ಚಿಪ್‌ಗಳು"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+            "ಚಾಯ್ಸ್ ಚಿಪ್‌ಗಳು ಗುಂಪೊಂದರಲ್ಲಿನ ಒಂದೇ ಆಯ್ಕೆಯನ್ನು ಪ್ರತಿನಿಧಿಸುತ್ತವೆ. ಚಾಯ್ಸ್ ಚಿಪ್‌ಗಳು ಸಂಬಂಧಿತ ವಿವರಣಾತ್ಮಕ ಪಠ್ಯ ಅಥವಾ ವರ್ಗಗಳನ್ನು ಒಳಗೊಂಡಿರುತ್ತವೆ."),
         "demoChoiceChipTitle":
-            MessageLookupByLibrary.simpleMessage("Choice Chip"),
+            MessageLookupByLibrary.simpleMessage("ಚಾಯ್ಸ್ ಚಿಪ್"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("ಕೋಡ್‌ ಮಾದರಿ"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "ವಸ್ತು ವಿನ್ಯಾಸದ ಬಣ್ಣ ಫಲಕವನ್ನು ಪ್ರತಿನಿಧಿಸುವ ಬಣ್ಣ ಮತ್ತು ಬಣ್ಣದ ಸ್ಥಿರಾಂಕಗಳು."),
@@ -313,9 +331,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API ಡಾಕ್ಯುಮೆಂಟೇಶನ್"),
         "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Filter chips use tags or descriptive words as a way to filter content."),
+            "ಫಿಲ್ಟರ್ ಚಿಪ್‌ಗಳು ವಿಷಯವನ್ನು ಫಿಲ್ಟರ್ ಮಾಡುವ ಸಲುವಾಗಿ ಟ್ಯಾಗ್‌ಗಳು ಅಥವಾ ವಿವರಣಾತ್ಮಕ ಶಬ್ಧಗಳನ್ನು ಬಳಸುತ್ತವೆ."),
         "demoFilterChipTitle":
-            MessageLookupByLibrary.simpleMessage("Filter Chip"),
+            MessageLookupByLibrary.simpleMessage("ಫಿಲ್ಟರ್ ಚಿಪ್"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "ಫ್ಲಾಟ್ ಬಟನ್ ಒತ್ತಿದಾಗ ಇಂಕ್ ಸ್ಪ್ಲಾಷ್ ಅನ್ನು ಡಿಸ್‌ಪ್ಲೇ ಮಾಡುತ್ತದೆ ಆದರೆ ಲಿಫ್ಟ್ ಮಾಡುವುದಿಲ್ಲ. ಪರಿಕರ ಪಟ್ಟಿಗಳಲ್ಲಿ, ಡೈಲಾಗ್‌ಗಳಲ್ಲಿ ಮತ್ತು ಪ್ಯಾಡಿಂಗ್‌ ಇನ್‌ಲೈನ್‌ನಲ್ಲಿ ಫ್ಲಾಟ್ ಬಟನ್‌ಗಳನ್ನು ಬಳಸಿ"),
         "demoFlatButtonTitle":
@@ -332,9 +350,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ಪೂರ್ಣ ಪರದೆ"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("ಮಾಹಿತಿ"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
+            "ಇನ್‌ಪುಟ್ ಚಿಪ್‌ಗಳು, ಒಂದು ಘಟಕ (ವ್ಯಕ್ತಿ, ಸ್ಥಳ ಅಥವಾ ವಸ್ತು) ಅಥವಾ ಸಂವಾದಾತ್ಮಕ ಪಠ್ಯದಂತಹ ಸಂಕೀರ್ಣವಾದ ಮಾಹಿತಿಯನ್ನು ಸಂಕ್ಷಿಪ್ತ ರೂಪದಲ್ಲಿ ಪ್ರತಿನಿಧಿಸುತ್ತವೆ."),
         "demoInputChipTitle":
-            MessageLookupByLibrary.simpleMessage("Input Chip"),
+            MessageLookupByLibrary.simpleMessage("ಇನ್‌ಪುಟ್ ಚಿಪ್"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "URL ಅನ್ನು ಡಿಸ್‌ಪ್ಲೇ ಮಾಡಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("ಆಯ್ಕೆಗಳು"),
@@ -349,6 +367,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "ಸರಳ ಡೈಲಾಗ್ ಬಳಕೆದಾರರಿಗೆ ಹಲವಾರು ಆಯ್ಕೆಗಳ ನಡುವೆ ಒಂದು ಆಯ್ಕೆಯನ್ನು ನೀಡುತ್ತದೆ. ಸರಳ ಡೈಲಾಗ್ ಐಚ್ಛಿಕ ಶೀರ್ಷಿಕೆಯನ್ನು ಹೊಂದಿದೆ, ಅದನ್ನು ಆಯ್ಕೆಗಳ ಮೇಲೆ ಡಿಸ್‌ಪ್ಲೇ ಮಾಡಲಾಗುತ್ತದೆ."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("ಸರಳ"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "ಪಠ್ಯ ಫೀಲ್ಡ್‌ಗಳು, ಬಳಕೆದಾರರಿಗೆ UI ನಲ್ಲಿ ಪಠ್ಯವನ್ನು ನಮೂದಿಸಲು ಅನುಮತಿಸುತ್ತದೆ. ಅವುಗಳು ಸಾಮಾನ್ಯವಾಗಿ ಫಾರ್ಮ್‌ಗಳು ಮತ್ತು ಡೈಲಾಗ್‌ಗಳಲ್ಲಿ ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತವೆ."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("ಇಮೇಲ್"),
@@ -438,6 +461,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ಉಲ್ಲೇಖ ಶೈಲಿಗಳು ಮತ್ತು ಮಾಧ್ಯಮ"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("ವರ್ಗಗಳು"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("ಗ್ಯಾಲರಿ"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("ಕಾರ್ ಉಳಿತಾಯ"),
         "rallyAccountDataChecking":
@@ -461,13 +485,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("ಒಟ್ಟು"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("ಖಾತೆಗಳು"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("ಅಲರ್ಟ್‌ಗಳು"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("ಬಿಲ್‌ಗಳು"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("ಅಂತಿಮ ದಿನಾಂಕ"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("ಉಡುಗೆ"),
         "rallyBudgetCategoryCoffeeShops":
@@ -499,6 +525,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ಬಳಕೆದಾರರ ಹೆಸರು"),
         "rallySeeAll":
             MessageLookupByLibrary.simpleMessage("ಎಲ್ಲವನ್ನು ವೀಕ್ಷಿಸಿ"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ATM ಗಳನ್ನು ಹುಡುಕಿ"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("ಸಹಾಯ"),
@@ -563,7 +595,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ರದ್ದುಗೊಳಿಸಿ"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("ಕಾರ್ಟ್ ತೆರವುಗೊಳಿಸಿ"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("ಕಾರ್ಟ್"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("ಶಿಪ್ಪಿಂಗ್:"),
@@ -572,11 +604,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("ತೆರಿಗೆ:"),
         "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("ಒಟ್ಟು"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
+            MessageLookupByLibrary.simpleMessage("ಪರಿಕರಗಳು"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ಎಲ್ಲಾ"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("CLOTHING"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
+            MessageLookupByLibrary.simpleMessage("ಉಡುಗೆ"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("ಮನೆ"),
         "shrineDescription": MessageLookupByLibrary.simpleMessage(
             "ಫ್ಯಾಷನ್‌ಗೆ ಸಂಬಂಧಿಸಿದ ರಿಟೇಲ್ ಆ್ಯಪ್"),
         "shrineLoginPasswordLabel":
@@ -624,8 +656,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ನೇವಿ ಟ್ರೌಸರ್ಸ್"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("ಪ್ಲಾಸ್ಟರ್ ಟ್ಯೂನಿಕ್"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("ಕ್ವಾರ್ಟೆಟ್ ಟೇಬಲ್"),
         "shrineProductRainwaterTray":
@@ -664,9 +696,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ವೈಟ್ ಪಿನ್‌ಸ್ಟ್ರೈಪ್ ಶರ್ಟ್"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("ವಿಟ್ನೀ ಬೆಲ್ಟ್"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("ಸ್ಪಂದನಾಶೀಲ ಸ್ಟಾರ್ಟರ್ ಲೇಔಟ್"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("ಮುಖ್ಯ ಭಾಗ"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("ಬಟನ್"),

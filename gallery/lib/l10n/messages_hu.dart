@@ -39,28 +39,37 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "Az Ön által választott érték: „${value}”";
 
-  static m8(amount) =>
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
+
+  static m9(amount) =>
       "${amount} összeget költött ATM-díjakra ebben a hónapban";
 
-  static m9(percent) =>
+  static m10(percent) =>
       "Nagyszerű! Folyószámlája ${percent}-kal magasabb, mint múlt hónapban.";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Előrejelzés: Az e havi Shopping-költségkeret ${percent}-át használta fel.";
 
-  static m11(amount) => "${amount} összeget költött éttermekre ezen a héten.";
+  static m12(amount) => "${amount} összeget költött éttermekre ezen a héten.";
 
-  static m12(count) =>
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "× ${price}";
+  static m17(price) => "× ${price}";
 
-  static m15(quantity) => "Mennyiség: ${quantity}";
+  static m18(quantity) => "Mennyiség: ${quantity}";
 
-  static m16(value) => "${value} elem";
+  static m19(value) => "${value} elem";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -80,15 +89,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("GOMB"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Létrehozás"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
-        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
-        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
-        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
-        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
-        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Kerékpározás"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Lift"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Kandalló"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Nagy"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Közepes"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Kicsi"),
         "chipTurnOnLights":
-            MessageLookupByLibrary.simpleMessage("Turn on lights"),
-        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
+            MessageLookupByLibrary.simpleMessage("Világítás bekapcsolása"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Mosógép"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("BOROSTYÁNSÁRGA"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("KÉK"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("KÉKESSZÜRKE"),
@@ -111,82 +120,94 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsYellow": MessageLookupByLibrary.simpleMessage("SÁRGA"),
         "craneDescription": MessageLookupByLibrary.simpleMessage(
             "Személyre szabott utazási alkalmazás"),
-        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
-        "craneEat1":
-            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
-        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
-        "craneEat3":
-            MessageLookupByLibrary.simpleMessage("Portland, United States"),
-        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
-        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
-        "craneEat6":
-            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
-        "craneEat7":
-            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
-        "craneEat8":
-            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
-        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("ÉTKEZÉS"),
+        "craneEat0":
+            MessageLookupByLibrary.simpleMessage("Nápoly, Olaszország"),
+        "craneEat1": MessageLookupByLibrary.simpleMessage(
+            "Dallas, Amerikai Egyesült Államok"),
+        "craneEat10":
+            MessageLookupByLibrary.simpleMessage("Lisszabon, Portugália"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentína"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage(
+            "Portland, Amerikai Egyesült Államok"),
+        "craneEat4":
+            MessageLookupByLibrary.simpleMessage("Párizs, Franciaország"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("Szöul, Dél-Korea"),
+        "craneEat6": MessageLookupByLibrary.simpleMessage(
+            "Seattle, Amerikai Egyesült Államok"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage(
+            "Nashville, Amerikai Egyesült Államok"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage(
+            "Atlanta, Amerikai Egyesült Államok"),
+        "craneEat9":
+            MessageLookupByLibrary.simpleMessage("Madrid, Spanyolország"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Restaurants by Destination"),
-        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
-        "craneFly0":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneFly1":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneFly12":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+            "Fedezzen fel éttermeket úti cél szerint"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("REPÜLÉS"),
+        "craneFly0": MessageLookupByLibrary.simpleMessage(
+            "Aspen, Amerikai Egyesült Államok"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage(
+            "Big Sur, Amerikai Egyesült Államok"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Kairó, Egyiptom"),
+        "craneFly11":
+            MessageLookupByLibrary.simpleMessage("Lisszabon, Portugália"),
+        "craneFly12": MessageLookupByLibrary.simpleMessage(
+            "Napa, Amerikai Egyesült Államok"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonézia"),
         "craneFly2":
-            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
+            MessageLookupByLibrary.simpleMessage("Khumbu-völgy, Nepál"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneFly5":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneFly4":
+            MessageLookupByLibrary.simpleMessage("Malé, Maldív-szigetek"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Svájc"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("Madrid, Spanyolország"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
-            "Mount Rushmore, United States"),
-        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
-        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            "Rushmore-hegy, Amerikai Egyesült Államok"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Szingapúr"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Havanna, Kuba"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Flights by Destination"),
-        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
-        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+            "Fedezzen fel repülőjáratokat úti cél szerint"),
+        "craneFormDate":
+            MessageLookupByLibrary.simpleMessage("Dátum kiválasztása"),
+        "craneFormDates": MessageLookupByLibrary.simpleMessage(
+            "Válassza ki a dátumtartományt"),
         "craneFormDestination":
-            MessageLookupByLibrary.simpleMessage("Choose Destination"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+            MessageLookupByLibrary.simpleMessage("Válasszon úti célt"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Falatozók"),
         "craneFormLocation":
-            MessageLookupByLibrary.simpleMessage("Select Location"),
-        "craneFormOrigin":
-            MessageLookupByLibrary.simpleMessage("Choose Origin"),
-        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
-        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneSleep1":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+            MessageLookupByLibrary.simpleMessage("Hely kiválasztása"),
+        "craneFormOrigin": MessageLookupByLibrary.simpleMessage(
+            "Kiindulási pont kiválasztása"),
+        "craneFormTime":
+            MessageLookupByLibrary.simpleMessage("Időpont kiválasztása"),
+        "craneFormTravelers":
+            MessageLookupByLibrary.simpleMessage("Utasok száma"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("ALVÁS"),
+        "craneSleep0":
+            MessageLookupByLibrary.simpleMessage("Malé, Maldív-szigetek"),
+        "craneSleep1": MessageLookupByLibrary.simpleMessage(
+            "Aspen, Amerikai Egyesült Államok"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Kairó, Egyiptom"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Tajpej, Tajvan"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
-        "craneSleep4":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneSleep5":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneSleep6":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
-        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
-        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havanna, Kuba"),
+        "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, Svájc"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage(
+            "Big Sur, Amerikai Egyesült Államok"),
+        "craneSleep6": MessageLookupByLibrary.simpleMessage(
+            "Napa, Amerikai Egyesült Államok"),
+        "craneSleep7":
+            MessageLookupByLibrary.simpleMessage("Porto, Portugália"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexikó"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("Lisszabon, Portugália"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Properties by Destination"),
+            "Fedezzen fel ingatlanokat úti cél szerint"),
         "cupertinoAlertAllow":
             MessageLookupByLibrary.simpleMessage("Engedélyezés"),
         "cupertinoAlertApplePie":
@@ -216,9 +237,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Értesítés megjelenítése"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+            "A műveletszelvények olyan beállításcsoportokat jelentenek, amelyek aktiválnak valamilyen műveletet az elsődleges tartalommal kapcsolatban. A műveletszelvényeknek dinamikusan, a kontextusnak megfelelően kell megjelenniük a kezelőfelületen."),
         "demoActionChipTitle":
-            MessageLookupByLibrary.simpleMessage("Action Chip"),
+            MessageLookupByLibrary.simpleMessage("Műveletszelvény"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Egy párbeszédpanel tájékoztatja a felhasználót a figyelmét igénylő helyzetekről. Az értesítési párbeszédpanel nem kötelező címmel és nem kötelező műveletlistával rendelkezik."),
         "demoAlertDialogTitle":
@@ -260,12 +281,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lapos, kiemelkedő, körülrajzolt és továbbiak"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Gombok"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Compact elements that represent an input, attribute, or action"),
-        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+            "Kompakt elemek, amelyek bevitelt, tulajdonságot vagy műveletet jelölnek"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Szelvények"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+            "A választószelvények egy konkrét választást jelölnek egy csoportból. A választószelvények kapcsolódó leíró szöveget vagy kategóriákat is tartalmaznak."),
         "demoChoiceChipTitle":
-            MessageLookupByLibrary.simpleMessage("Choice Chip"),
+            MessageLookupByLibrary.simpleMessage("Választószelvény"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Kódminta"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Színek és állandó színkorongok, amelyek az anyagszerű megjelenés színpalettáját képviselik."),
@@ -310,9 +331,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API-dokumentáció"),
         "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Filter chips use tags or descriptive words as a way to filter content."),
+            "A szűrőszelvények címkék vagy leíró jellegű szavak segítségével szűrik a tartalmat."),
         "demoFilterChipTitle":
-            MessageLookupByLibrary.simpleMessage("Filter Chip"),
+            MessageLookupByLibrary.simpleMessage("Szűrőszelvény"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Egy lapos gomb megnyomásakor megjelenik rajta egy tintafolt, de nem emelkedik fel. Lapos gombokat használhat eszköztárakban, párbeszédpaneleken és kitöltéssel szövegen belül is"),
         "demoFlatButtonTitle":
@@ -329,9 +350,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Teljes képernyő"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Információ"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
+            "A beviteli szelvények összetett információt jelentenek kompakt formában például egy adott entitásról (személyről, helyről vagy dologról) vagy egy adott beszélgetés szövegéről."),
         "demoInputChipTitle":
-            MessageLookupByLibrary.simpleMessage("Input Chip"),
+            MessageLookupByLibrary.simpleMessage("Beviteli szelvény"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Nem sikerült a következő URL megjelenítése:"),
         "demoOptionsTooltip":
@@ -348,6 +369,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "Egy egyszerű párbeszédpanel választást kínál a felhasználónak több lehetőség közül. Az egyszerű párbeszédpanel nem kötelező címmel rendelkezik, amely a választási lehetőségek felett jelenik meg."),
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Egyszerű"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "A szöveges mezők segítségével a felhasználók szöveget adhatnak meg egy kezelőfelületen. Jellemzően az űrlapokon és párbeszédpanelekben jelennek meg."),
         "demoTextFieldEmail":
@@ -438,6 +464,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Kategóriák"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galéria"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings": MessageLookupByLibrary.simpleMessage(
             "Autóval kapcsolatos megtakarítások"),
         "rallyAccountDataChecking":
@@ -461,13 +488,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Összesen"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Fiókok"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Értesítések"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Számlák"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Esedékes"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Ruházat"),
         "rallyBudgetCategoryCoffeeShops":
@@ -498,6 +527,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Felhasználónév"),
         "rallySeeAll":
             MessageLookupByLibrary.simpleMessage("ÖSSZES MEGTEKINTÉSE"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ATM-ek keresése"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Súgó"),
@@ -566,7 +601,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("MÉGSE"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("KOSÁR TÖRLÉSE"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("KOSÁR"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Szállítás:"),
@@ -576,11 +611,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCartTotalCaption":
             MessageLookupByLibrary.simpleMessage("ÖSSZES"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
+            MessageLookupByLibrary.simpleMessage("KIEGÉSZÍTŐK"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ÖSSZES"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("CLOTHING"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
+            MessageLookupByLibrary.simpleMessage("RUHÁZAT"),
+        "shrineCategoryNameHome":
+            MessageLookupByLibrary.simpleMessage("OTTHON"),
         "shrineDescription": MessageLookupByLibrary.simpleMessage(
             "Divatos kiskereskedelmi alkalmazás"),
         "shrineLoginPasswordLabel":
@@ -628,8 +664,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Matrózkék nadrág"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("„Plaster” tunika"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Négyzet alakú asztal"),
         "shrineProductRainwaterTray":
@@ -667,9 +703,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Fehér csíkos ing"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("„Whitney” öv"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Interaktív kezdő elrendezés"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Szövegtörzs"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("GOMB"),

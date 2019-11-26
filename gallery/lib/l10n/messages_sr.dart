@@ -39,28 +39,37 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "Изабрали сте: „${value}“";
 
-  static m8(amount) =>
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
+
+  static m9(amount) =>
       "Овог месеца сте потрошили ${amount} на накнаде за банкомате";
 
-  static m9(percent) =>
+  static m10(percent) =>
       "Одлично! На текућем рачуну имате ${percent} више него прошлог месеца.";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Пажња! Искористили сте ${percent} буџета за куповину за овај месец.";
 
-  static m11(amount) => "Ове недеље сте потрошили ${amount} на ресторане.";
+  static m12(amount) => "Ове недеље сте потрошили ${amount} на ресторане.";
 
-  static m12(count) =>
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "x ${price}";
+  static m17(price) => "x ${price}";
 
-  static m15(quantity) => "Количина: ${quantity}";
+  static m18(quantity) => "Количина: ${quantity}";
 
-  static m16(value) => "Ставка: ${value}";
+  static m19(value) => "Ставка: ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -80,15 +89,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("ДУГМЕ"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Направите"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
-        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
-        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
-        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
-        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
-        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Вожња бицикла"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Лифт"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Камин"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Велика"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Средња"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Мала"),
         "chipTurnOnLights":
-            MessageLookupByLibrary.simpleMessage("Turn on lights"),
-        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
+            MessageLookupByLibrary.simpleMessage("Укључи светла"),
+        "chipWasher":
+            MessageLookupByLibrary.simpleMessage("Машина за прање веша"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("ЖУТОБРАОН"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("ПЛАВА"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("ПЛАВОСИВА"),
@@ -113,82 +123,88 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsYellow": MessageLookupByLibrary.simpleMessage("ЖУТА"),
         "craneDescription": MessageLookupByLibrary.simpleMessage(
             "Персонализована апликација за путовања"),
-        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
-        "craneEat1":
-            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
-        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
-        "craneEat3":
-            MessageLookupByLibrary.simpleMessage("Portland, United States"),
-        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
-        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
-        "craneEat6":
-            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
-        "craneEat7":
-            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
-        "craneEat8":
-            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
-        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("ИСХРАНА"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Напуљ, Италија"),
+        "craneEat1": MessageLookupByLibrary.simpleMessage(
+            "Далас, Сједињене Америчке Државе"),
+        "craneEat10":
+            MessageLookupByLibrary.simpleMessage("Лисабон, Португалија"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("Кордоба, Аргентина"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage(
+            "Портланд, Сједињене Америчке Државе"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Париз, Француска"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("Сеул, Јужна Кореја"),
+        "craneEat6": MessageLookupByLibrary.simpleMessage(
+            "Сијетл, Сједињене Америчке Државе"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage(
+            "Нешвил, Сједињене Америчке Државе"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage(
+            "Атланта, Сједињене Америчке Државе"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Мадрид, Шпанија"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Restaurants by Destination"),
-        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
-        "craneFly0":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneFly1":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneFly12":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+            "Истражујте ресторане према одредишту"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("ЛЕТ"),
+        "craneFly0": MessageLookupByLibrary.simpleMessage(
+            "Аспен, Сједињене Америчке Државе"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage(
+            "Биг Сур, Сједињене Америчке Државе"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Каиро, Египат"),
+        "craneFly11":
+            MessageLookupByLibrary.simpleMessage("Лисабон, Португалија"),
+        "craneFly12": MessageLookupByLibrary.simpleMessage(
+            "Напа, Сједињене Америчке Државе"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Бали, Индонезија"),
         "craneFly2":
-            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
-        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneFly5":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+            MessageLookupByLibrary.simpleMessage("Долина Кумбу, Непал"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("Мачу Пикчу, Перу"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Мале, Малдиви"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("Вицнау, Швајцарска"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Мадрид, Шпанија"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
-            "Mount Rushmore, United States"),
-        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
-        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            "Маунт Рашмор, Сједињене Америчке Државе"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Сингапур"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Хавана, Куба"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Flights by Destination"),
-        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
-        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+            "Истражујте летове према дестинацији"),
+        "craneFormDate":
+            MessageLookupByLibrary.simpleMessage("Изаберите датум"),
+        "craneFormDates":
+            MessageLookupByLibrary.simpleMessage("Изаберите датуме"),
         "craneFormDestination":
-            MessageLookupByLibrary.simpleMessage("Choose Destination"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+            MessageLookupByLibrary.simpleMessage("Одаберите одредиште"),
+        "craneFormDiners":
+            MessageLookupByLibrary.simpleMessage("Експрес ресторани"),
         "craneFormLocation":
-            MessageLookupByLibrary.simpleMessage("Select Location"),
+            MessageLookupByLibrary.simpleMessage("Изаберите локацију"),
         "craneFormOrigin":
-            MessageLookupByLibrary.simpleMessage("Choose Origin"),
-        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
-        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneSleep1":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
-        "craneSleep2":
-            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            MessageLookupByLibrary.simpleMessage("Одаберите место поласка"),
+        "craneFormTime":
+            MessageLookupByLibrary.simpleMessage("Изаберите време"),
+        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Путници"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("НОЋЕЊЕ"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("Мале, Малдиви"),
+        "craneSleep1": MessageLookupByLibrary.simpleMessage(
+            "Аспен, Сједињене Америчке Државе"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Каиро, Египат"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Тајпеј, Тајван"),
+        "craneSleep2": MessageLookupByLibrary.simpleMessage("Мачу Пикчу, Перу"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Хавана, Куба"),
         "craneSleep4":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneSleep5":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneSleep6":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
-        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
-        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("Вицнау, Швајцарска"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage(
+            "Биг Сур, Сједињене Америчке Државе"),
+        "craneSleep6": MessageLookupByLibrary.simpleMessage(
+            "Напа, Сједињене Америчке Државе"),
+        "craneSleep7":
+            MessageLookupByLibrary.simpleMessage("Порто, Португалија"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Тулум, Мексико"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("Лисабон, Португалија"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Properties by Destination"),
+            "Истражујте смештајне објекте према одредишту"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("Дозволи"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("Пита од јабука"),
@@ -216,9 +232,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Прикажи обавештење"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+            "Чипови радњи су скуп опција које покрећу радњу повезану са примарним садржајем. Чипови радњи треба да се појављују динамички и контекстуално у корисничком интерфејсу."),
         "demoActionChipTitle":
-            MessageLookupByLibrary.simpleMessage("Action Chip"),
+            MessageLookupByLibrary.simpleMessage("Чип радњи"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Дијалог обавештења информише кориснике о ситуацијама које захтевају њихову пажњу. Дијалог обавештења има опционални наслов и опционалну листу радњи."),
         "demoAlertDialogTitle":
@@ -261,12 +277,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Равна, издигнута, оивичена и друга"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Дугмад"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Compact elements that represent an input, attribute, or action"),
-        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+            "Компактни елементи који представљају унос, атрибут или радњу"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Чипови"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+            "Чипови избора представљају појединачну изабрану ставку из скупа. Чипови избора садрже повезани описни текст или категорије."),
         "demoChoiceChipTitle":
-            MessageLookupByLibrary.simpleMessage("Choice Chip"),
+            MessageLookupByLibrary.simpleMessage("Чип избора"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Узорак кода"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Боје и шема боја које представљају палету боја материјалног дизајна."),
@@ -310,9 +326,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("Документација о API-јима"),
         "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Filter chips use tags or descriptive words as a way to filter content."),
+            "Чипови филтера користе ознаке или описне речи као начин да филтрирају садржај."),
         "demoFilterChipTitle":
-            MessageLookupByLibrary.simpleMessage("Filter Chip"),
+            MessageLookupByLibrary.simpleMessage("Чип филтера"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Када се притисне, равно дугме приказује мрљу боје, али се не подиже. Равну дугмад користите на тракама с алаткама, у дијалозима и у тексту са размаком"),
         "demoFlatButtonTitle":
@@ -329,9 +345,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Цео екран"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Информације"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
-        "demoInputChipTitle":
-            MessageLookupByLibrary.simpleMessage("Input Chip"),
+            "Чипови уноса представљају сложене информације, попут ентитета (особе, места или ствари) или текста из говорног језика, у компактном облику."),
+        "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("Чип уноса"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Приказивање URL-а није успело:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Опције"),
@@ -347,6 +362,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "Једноставан дијалог кориснику нуди избор између неколико опција. Једноставан дијалог има опционални наслов који се приказује изнад тих избора."),
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Једноставан"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Поља за унос текста омогућавају корисницима да унесу текст у кориснички интерфејс. Обично се приказују у облику образаца и дијалога."),
         "demoTextFieldEmail":
@@ -434,6 +454,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Категорије"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Галерија"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings": MessageLookupByLibrary.simpleMessage(
             "Штедња за куповину аутомобила"),
         "rallyAccountDataChecking":
@@ -459,14 +480,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Укупно"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Налози"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Обавештења"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Обрачуни"),
         "rallyBillsDue":
             MessageLookupByLibrary.simpleMessage("Доспева на наплату"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Одећа"),
         "rallyBudgetCategoryCoffeeShops":
@@ -496,6 +519,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("Корисничко име"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("ПРИКАЖИ СВЕ"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Пронађите банкомате"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Помоћ"),
@@ -560,7 +589,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ОТКАЖИ"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("ОБРИШИ СВЕ ИЗ КОРПЕ"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("КОРПА"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Испорука:"),
@@ -570,11 +599,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCartTotalCaption":
             MessageLookupByLibrary.simpleMessage("УКУПНО"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
+            MessageLookupByLibrary.simpleMessage("ДОДАЦИ"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("СВЕ"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("CLOTHING"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
+            MessageLookupByLibrary.simpleMessage("ОДЕЋА"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("КУЋА"),
         "shrineDescription": MessageLookupByLibrary.simpleMessage(
             "Модерна апликација за малопродају"),
         "shrineLoginPasswordLabel":
@@ -621,8 +650,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Тамноплаве панталоне"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Туника боје гипса"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Сто за четири особе"),
         "shrineProductRainwaterTray":
@@ -661,9 +690,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Бела кошуља са пругама"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Каиш Whitney"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Изглед апликације за покретање која реагује"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Главни текст"),
         "starterAppGenericButton":

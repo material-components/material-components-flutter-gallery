@@ -40,27 +40,36 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "Şunu seçtiniz: \"${value}\"";
 
-  static m8(amount) => "Bu ay ${amount} tutarında ATM komisyonu ödediniz.";
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
 
-  static m9(percent) =>
-      "Harika! Çek hesabınız geçen aya göre ${percent} daha fazla.";
+  static m9(amount) => "Bu ay ${amount} tutarında ATM komisyonu ödediniz.";
 
   static m10(percent) =>
+      "Harika! Çek hesabınız geçen aya göre ${percent} daha fazla.";
+
+  static m11(percent) =>
       "Dikkat! Bu ayın Alışveriş bütçenizi ${percent} oranında harcadınız.";
 
-  static m11(amount) => "Bu hafta Restoranlarda ${amount} harcadınız.";
+  static m12(amount) => "Bu hafta Restoranlarda ${amount} harcadınız.";
 
-  static m12(count) =>
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "x ${price}";
+  static m17(price) => "x ${price}";
 
-  static m15(quantity) => "Miktar: ${quantity}";
+  static m18(quantity) => "Miktar: ${quantity}";
 
-  static m16(value) => "Ürün ${value}";
+  static m19(value) => "Ürün ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -80,15 +89,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("DÜĞME"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Oluştur"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
-        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
-        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
-        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
-        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
-        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
-        "chipTurnOnLights":
-            MessageLookupByLibrary.simpleMessage("Turn on lights"),
-        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Bisiklet"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Asansör"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Şömine"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Büyük"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Orta"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Küçük"),
+        "chipTurnOnLights": MessageLookupByLibrary.simpleMessage("Işıkları aç"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Çamaşır makinesi"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("KEHRİBAR RENNGİ"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("MAVİ"),
         "colorsBlueGrey":
@@ -112,82 +120,71 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsYellow": MessageLookupByLibrary.simpleMessage("SARI"),
         "craneDescription": MessageLookupByLibrary.simpleMessage(
             "Kişiselleştirilmiş seyahat uygulaması"),
-        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
-        "craneEat1":
-            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
-        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
-        "craneEat3":
-            MessageLookupByLibrary.simpleMessage("Portland, United States"),
-        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
-        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
-        "craneEat6":
-            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
-        "craneEat7":
-            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
-        "craneEat8":
-            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
-        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("YEME"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Napoli, İtalya"),
+        "craneEat1": MessageLookupByLibrary.simpleMessage("Dallas, ABD"),
+        "craneEat10": MessageLookupByLibrary.simpleMessage("Lizbon, Portekiz"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Arjantin"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage("Portland, ABD"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, Fransa"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("Seul, Güney Kore"),
+        "craneEat6": MessageLookupByLibrary.simpleMessage("Seattle, ABD"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage("Nashville, ABD"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage("Atlanta, ABD"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, İspanya"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Restaurants by Destination"),
-        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
-        "craneFly0":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneFly1":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneFly12":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+            "Varış Noktasına Göre Restoran Araştırma"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("UÇUŞ"),
+        "craneFly0": MessageLookupByLibrary.simpleMessage("Aspen, ABD"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage("Big Sur, ABD"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Kahire, Mısır"),
+        "craneFly11": MessageLookupByLibrary.simpleMessage("Lizbon, Portekiz"),
+        "craneFly12": MessageLookupByLibrary.simpleMessage("Napa, ABD"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Endonezya"),
         "craneFly2":
-            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
+            MessageLookupByLibrary.simpleMessage("Khumbu Vadisi, Nepal"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneFly5":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
-        "craneFly7": MessageLookupByLibrary.simpleMessage(
-            "Mount Rushmore, United States"),
-        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
-        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldivler"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, İsviçre"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, İspanya"),
+        "craneFly7": MessageLookupByLibrary.simpleMessage("Rushmore Dağı, ABD"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapur"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Küba"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Flights by Destination"),
-        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
-        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+            "Varış Noktasına Göre Uçuş Araştırma"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("Tarih Seçin"),
+        "craneFormDates":
+            MessageLookupByLibrary.simpleMessage("Tarihleri Seçin"),
         "craneFormDestination":
-            MessageLookupByLibrary.simpleMessage("Choose Destination"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+            MessageLookupByLibrary.simpleMessage("Varış Noktası Seçin"),
+        "craneFormDiners":
+            MessageLookupByLibrary.simpleMessage("Lokanta sayısı"),
         "craneFormLocation":
-            MessageLookupByLibrary.simpleMessage("Select Location"),
+            MessageLookupByLibrary.simpleMessage("Konum Seçin"),
         "craneFormOrigin":
-            MessageLookupByLibrary.simpleMessage("Choose Origin"),
-        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
-        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneSleep1":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+            MessageLookupByLibrary.simpleMessage("Kalkış Noktası Seçin"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("Saat Seçin"),
+        "craneFormTravelers":
+            MessageLookupByLibrary.simpleMessage("Yolcu sayısı"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("UYKU"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldivler"),
+        "craneSleep1": MessageLookupByLibrary.simpleMessage("Aspen, ABD"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Kahire, Mısır"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Tayvan"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
-        "craneSleep4":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneSleep5":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneSleep6":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
-        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
-        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Küba"),
+        "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, İsviçre"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage("Big Sur, ABD"),
+        "craneSleep6": MessageLookupByLibrary.simpleMessage("Napa, ABD"),
+        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portekiz"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Meksika"),
+        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lizbon, Portekiz"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Properties by Destination"),
+            "Varış Noktasına Göre Mülk Araştırma"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("İzin ver"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("Elmalı Turta"),
@@ -215,9 +212,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Uyarıyı Göster"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+            "İşlem çipleri, asıl içerikle ilgili bir işlemi tetikleyen bir dizi seçenektir. İşlem çipleri, kullanıcı arayüzünde dinamik ve içeriğe dayalı olarak görünmelidir."),
         "demoActionChipTitle":
-            MessageLookupByLibrary.simpleMessage("Action Chip"),
+            MessageLookupByLibrary.simpleMessage("İşlem Çipi"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Uyarı iletişim kutusu, kullanıcıyı onay gerektiren durumlar hakkında bilgilendirir. Uyarı iletişim kutusunun isteğe bağlı başlığı ve isteğe bağlı işlemler listesi vardır."),
         "demoAlertDialogTitle": MessageLookupByLibrary.simpleMessage("Uyarı"),
@@ -258,12 +255,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Düz, yükseltilmiş, dış çizgili ve fazlası"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Düğmeler"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Compact elements that represent an input, attribute, or action"),
-        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+            "Giriş, özellik ve işlem temsil eden kompakt öğeler"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Çipler"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+            "Seçenek çipleri, bir dizi seçenekten tek bir seçeneği temsil eder. Seçenek çipleri ilgili açıklayıcı metin veya kategoriler içerir."),
         "demoChoiceChipTitle":
-            MessageLookupByLibrary.simpleMessage("Choice Chip"),
+            MessageLookupByLibrary.simpleMessage("Seçenek Çipi"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Kod Örneği"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Materyal Tasarımın renk paletini temsil eden renk ve renk örneği sabitleri."),
@@ -308,9 +305,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API Dokümanları"),
         "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Filter chips use tags or descriptive words as a way to filter content."),
+            "Filtre çipleri, içeriği filtreleme yöntemi olarak etiketler ve açıklayıcı kelimeler kullanır."),
         "demoFilterChipTitle":
-            MessageLookupByLibrary.simpleMessage("Filter Chip"),
+            MessageLookupByLibrary.simpleMessage("Filtre çipi"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Basıldığında mürekkep sıçraması görüntüleyen ancak basıldıktan sonra yukarı kalkmayan düz düğme. Düz düğmeleri araç çubuklarında, iletişim kutularında ve dolgulu satır içinde kullanın"),
         "demoFlatButtonTitle":
@@ -327,9 +324,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Tam Ekran"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Bilgi"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
+            "Giriş çipleri, bir varlık (kişi, yer veya şey) gibi karmaşık bir bilgi parçasını ya da kompakt bir formda konuşma dili metnini temsil eder."),
         "demoInputChipTitle":
-            MessageLookupByLibrary.simpleMessage("Input Chip"),
+            MessageLookupByLibrary.simpleMessage("Giriş Çipi"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL görüntülenemedi:"),
         "demoOptionsTooltip":
@@ -345,6 +342,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Basit iletişim kutusu, kullanıcıya birkaç seçenek arasından seçim yapma olanağı sunar. Basit iletişim kutusunun seçeneklerin üzerinde görüntülenen isteğe bağlı bir başlığı vardır."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Basit"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Metin alanları, kullanıcıların bir kullanıcı arayüzüne metin girmesini sağlar. Genellikle formlarda ve iletişim kutularında görünürler."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-posta"),
@@ -433,6 +435,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Kategoriler"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galeri"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Araba İçin Biriktirilen"),
         "rallyAccountDataChecking":
@@ -456,14 +459,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Toplam"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Hesaplar"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Uyarılar"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Faturalar"),
         "rallyBillsDue":
             MessageLookupByLibrary.simpleMessage("Ödenecek tutar:"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Giyim"),
         "rallyBudgetCategoryCoffeeShops":
@@ -492,6 +497,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("Kullanıcı adı"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("TÜMÜNÜ GÖSTER"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ATMi bul"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Yardım"),
@@ -554,7 +565,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("İPTAL"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("ALIŞVERİŞ SEPETİNİ BOŞALT"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("ALIŞVERİŞ SEPETİ"),
         "shrineCartShippingCaption":
@@ -565,11 +576,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCartTotalCaption":
             MessageLookupByLibrary.simpleMessage("TOPLAM"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
+            MessageLookupByLibrary.simpleMessage("AKSESUARLAR"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("TÜMÜ"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("CLOTHING"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
+            MessageLookupByLibrary.simpleMessage("GİYİM"),
+        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("EV"),
         "shrineDescription": MessageLookupByLibrary.simpleMessage(
             "Şık bir perakende uygulaması"),
         "shrineLoginPasswordLabel":
@@ -617,8 +628,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Lacivert pantolon"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("İnce tunik"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Dört kişilik masa"),
         "shrineProductRainwaterTray":
@@ -657,9 +668,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("İnce çizgili beyaz gömlek"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney kemer"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Duyarlı başlangıç düzeni"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Gövde"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("DÜĞME"),

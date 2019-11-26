@@ -24,13 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "“${title}”标签页的占位符";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: '无餐厅', one: '1 家餐厅', other: '${totalRestaurants} 家餐厅')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: '直达', one: '经停 1 次', other: '经停 ${numberOfStops} 次')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: '无可租赁的房屋', one: '1 处可租赁的房屋', other: '${totalProperties} 处可租赁的房屋')}";
 
   static m5(value) => "项 ${value}";
 
@@ -38,25 +38,34 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "您已选择：“${value}”";
 
-  static m8(amount) => "本月您已支付 ${amount}的 ATM 取款手续费";
+  static m8(accountName, accountNumber, amount) =>
+      "账号为 ${accountNumber} 的${accountName}账户中的存款金额为 ${amount}。";
 
-  static m9(percent) => "做得好！您的支票帐号余额比上个月多 ${percent}。";
+  static m9(amount) => "本月您已支付 ${amount}的 ATM 取款手续费";
 
-  static m10(percent) => "注意，您已使用本月购物预算的 ${percent}。";
+  static m10(percent) => "做得好！您的支票帐号余额比上个月多 ${percent}。";
 
-  static m11(amount) => "本周您已在餐馆花费 ${amount}。";
+  static m11(percent) => "注意，您已使用本月购物预算的 ${percent}。";
 
-  static m12(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+  static m12(amount) => "本周您已在餐馆花费 ${amount}。";
 
-  static m13(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+  static m13(count) =>
+      "${Intl.plural(count, one: '提高您可能获享的减免税额！只需为 1 笔未指定类别的交易指定类别即可。', other: '提高您可能获享的减免税额！只需为 ${count} 笔未指定类别的交易指定类别即可。')}";
 
-  static m14(price) => "x ${price}";
+  static m14(billName, date, amount) =>
+      "${billName}帐单的付款日期为 ${date}，应付金额为 ${amount}。";
 
-  static m15(quantity) => "数量：${quantity}";
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName}预算的总金额为 ${amountTotal}，已用 ${amountUsed}，还余 ${amountLeft}";
 
-  static m16(value) => "项 ${value}";
+  static m16(quantity) =>
+      "${Intl.plural(quantity, zero: '无商品', one: '1 件商品', other: '${quantity} 件商品')}";
+
+  static m17(price) => "x ${price}";
+
+  static m18(quantity) => "数量：${quantity}";
+
+  static m19(value) => "项 ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -254,11 +263,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsTitle": MessageLookupByLibrary.simpleMessage("按钮"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "用于在多个互斥的选项之间做选择。分段控件中的任一选项被选中后，该控件中的其余选项便无法被选中。"),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage("iOS 样式的分段控件"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("分段控件"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage("简易、提醒和全屏"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("对话框"),
         "demoDocumentationTooltip":
@@ -292,6 +301,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "简易对话框可以让用户在多个选项之间做选择。您可以选择性地为简易对话框提供标题（标题会显示在选项上方）。"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("简洁"),
+        "demoTabsDescription":
+            MessageLookupByLibrary.simpleMessage("标签页用于整理各个屏幕、数据集和其他互动中的内容。"),
+        "demoTabsSubtitle":
+            MessageLookupByLibrary.simpleMessage("包含可单独滚动的视图的标签页"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("标签页"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "文本字段可让用户在界面中输入文本。这些字段通常出现在表单和对话框中。"),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("电子邮件"),
@@ -368,6 +382,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("参考资料样式和媒体"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("类别"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("图库"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("购车储蓄"),
         "rallyAccountDataChecking":
@@ -390,13 +405,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("总计"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("帐号"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("提醒"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("帐单"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("应付"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("服饰"),
         "rallyBudgetCategoryCoffeeShops":
@@ -420,6 +437,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("注册"),
         "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("用户名"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("查看全部"),
+        "rallySeeAllAccounts": MessageLookupByLibrary.simpleMessage("查看所有账户"),
+        "rallySeeAllBills": MessageLookupByLibrary.simpleMessage("查看所有帐单"),
+        "rallySeeAllBudgets": MessageLookupByLibrary.simpleMessage("查看所有预算"),
         "rallySettingsFindAtms": MessageLookupByLibrary.simpleMessage("查找 ATM"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("帮助"),
         "rallySettingsManageAccounts":
@@ -459,7 +479,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("从左到右"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("根据语言区域"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("从右到左"),
         "settingsTextScaling": MessageLookupByLibrary.simpleMessage("文字缩放"),
@@ -472,7 +492,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCancelButtonCaption": MessageLookupByLibrary.simpleMessage("取消"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("清空购物车"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("购物车"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("运费："),
@@ -527,8 +547,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("海军蓝裤子"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("石膏色束腰外衣"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("四方桌"),
         "shrineProductRainwaterTray":
@@ -566,9 +586,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("白色细条纹衬衫"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney 皮带"),
+        "shrineTooltipCloseCart": MessageLookupByLibrary.simpleMessage("关闭购物车"),
+        "shrineTooltipCloseMenu": MessageLookupByLibrary.simpleMessage("关闭菜单"),
+        "shrineTooltipOpenMenu": MessageLookupByLibrary.simpleMessage("打开菜单"),
+        "shrineTooltipRemoveItem": MessageLookupByLibrary.simpleMessage("移除商品"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("搜索"),
+        "shrineTooltipSettings": MessageLookupByLibrary.simpleMessage("设置"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("自适应入门布局"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("正文"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("按钮"),
         "starterAppGenericHeadline": MessageLookupByLibrary.simpleMessage("标题"),

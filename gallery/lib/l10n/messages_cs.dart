@@ -39,28 +39,37 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "Vybrali jste: „${value}“";
 
-  static m8(amount) =>
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
+
+  static m9(amount) =>
       "Tento měsíc jste utratili ${amount} za poplatky za bankomat";
 
-  static m9(percent) =>
+  static m10(percent) =>
       "Dobrá práce! Na běžném účtu máte o ${percent} vyšší zůstatek než minulý měsíc.";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Pozor, už jste využili ${percent} rozpočtu na nákupy na tento měsíc.";
 
-  static m11(amount) => "Tento týden jste utratili ${amount} za restaurace";
+  static m12(amount) => "Tento týden jste utratili ${amount} za restaurace";
 
-  static m12(count) =>
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "× ${price}";
+  static m17(price) => "× ${price}";
 
-  static m15(quantity) => "Počet: ${quantity}";
+  static m18(quantity) => "Počet: ${quantity}";
 
-  static m16(value) => "Položka ${value}";
+  static m19(value) => "Položka ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -80,15 +89,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("TLAČÍTKO"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("Vytvořit"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
-        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
-        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
-        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
-        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
-        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipBiking": MessageLookupByLibrary.simpleMessage("Cyklistika"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("Výtah"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("Krb"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("Velký"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("Střední"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("Malý"),
         "chipTurnOnLights":
-            MessageLookupByLibrary.simpleMessage("Turn on lights"),
-        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
+            MessageLookupByLibrary.simpleMessage("Zapnout osvětlení"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("Pračka"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("JANTAROVÁ"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("MODRÁ"),
         "colorsBlueGrey": MessageLookupByLibrary.simpleMessage("ŠEDOMODRÁ"),
@@ -113,82 +122,77 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsYellow": MessageLookupByLibrary.simpleMessage("ŽLUTÁ"),
         "craneDescription": MessageLookupByLibrary.simpleMessage(
             "Personalizovaná cestovní aplikace"),
-        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
-        "craneEat1":
-            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
-        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("JÍDLO"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("Neapol, Itálie"),
+        "craneEat1": MessageLookupByLibrary.simpleMessage("Dallas, USA"),
+        "craneEat10":
+            MessageLookupByLibrary.simpleMessage("Lisabon, Portugalsko"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
-        "craneEat3":
-            MessageLookupByLibrary.simpleMessage("Portland, United States"),
-        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
-        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
-        "craneEat6":
-            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
-        "craneEat7":
-            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
-        "craneEat8":
-            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
-        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage("Portland, USA"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("Paříž, Francie"),
+        "craneEat5": MessageLookupByLibrary.simpleMessage("Soul, Jižní Korea"),
+        "craneEat6": MessageLookupByLibrary.simpleMessage("Seattle, USA"),
+        "craneEat7": MessageLookupByLibrary.simpleMessage("Nashville, USA"),
+        "craneEat8": MessageLookupByLibrary.simpleMessage("Atlanta, USA"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Španělsko"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Restaurants by Destination"),
-        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
-        "craneFly0":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneFly1":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneFly12":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+            "Objevte restaurace podle destinace"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("LÉTÁNÍ"),
+        "craneFly0": MessageLookupByLibrary.simpleMessage("Aspen, USA"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage("Big Sur, USA"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("Káhira, Egypt"),
+        "craneFly11":
+            MessageLookupByLibrary.simpleMessage("Lisabon, Portugalsko"),
+        "craneFly12": MessageLookupByLibrary.simpleMessage("Napa, USA"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonésie"),
         "craneFly2":
-            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
+            MessageLookupByLibrary.simpleMessage("Údolí Khumbu, Nepál"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneFly5":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
-        "craneFly7": MessageLookupByLibrary.simpleMessage(
-            "Mount Rushmore, United States"),
-        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
-        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maledivy"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Švýcarsko"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Španělsko"),
+        "craneFly7":
+            MessageLookupByLibrary.simpleMessage("Mount Rushmore, USA"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapur"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Flights by Destination"),
-        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
-        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+            "Objevte lety podle destinace"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("Vyberte datum"),
+        "craneFormDates": MessageLookupByLibrary.simpleMessage("Zvolte data"),
         "craneFormDestination":
-            MessageLookupByLibrary.simpleMessage("Choose Destination"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+            MessageLookupByLibrary.simpleMessage("Zvolte cíl"),
+        "craneFormDiners":
+            MessageLookupByLibrary.simpleMessage("Bary s občerstvením"),
         "craneFormLocation":
-            MessageLookupByLibrary.simpleMessage("Select Location"),
+            MessageLookupByLibrary.simpleMessage("Vyberte místo"),
         "craneFormOrigin":
-            MessageLookupByLibrary.simpleMessage("Choose Origin"),
-        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
-        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneSleep1":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+            MessageLookupByLibrary.simpleMessage("Vyberte počátek cesty"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("Vyberte čas"),
+        "craneFormTravelers":
+            MessageLookupByLibrary.simpleMessage("Cestovatelé"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("SPÁNEK"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maledivy"),
+        "craneSleep1": MessageLookupByLibrary.simpleMessage("Aspen, USA"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("Káhira, Egypt"),
+        "craneSleep11":
+            MessageLookupByLibrary.simpleMessage("Tchaj-pej, Tchaj-wan"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
         "craneSleep4":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneSleep5":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneSleep6":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
-        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
-        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("Vitznau, Švýcarsko"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage("Big Sur, USA"),
+        "craneSleep6": MessageLookupByLibrary.simpleMessage("Napa, USA"),
+        "craneSleep7":
+            MessageLookupByLibrary.simpleMessage("Porto, Portugalsko"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexiko"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("Lisabon, Portugalsko"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Properties by Destination"),
+            "Objevte ubytování podle destinace"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("Povolit"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("Jablečný koláč"),
@@ -217,9 +221,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("Zobrazit upozornění"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+            "Prvky akce jsou sada možností, které spustí akci související s primárním obsahem. Měly by se objevovat dynamicky a kontextově v uživatelském rozhraní."),
         "demoActionChipTitle":
-            MessageLookupByLibrary.simpleMessage("Action Chip"),
+            MessageLookupByLibrary.simpleMessage("Prvek akce"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Dialogové okno s upozorněním uživatele informuje o situacích, které vyžadují pozornost. Dialogové okno s upozorněním má volitelný název a volitelný seznam akcí."),
         "demoAlertDialogTitle":
@@ -262,12 +266,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ploché, zvýšené, obrysové a další"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("Tlačítka"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Compact elements that represent an input, attribute, or action"),
-        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+            "Kompaktní prvky představující vstup, atribut nebo akci"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Prvky"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+            "Prvky volby představují jednu volbu ze sady. Obsahují související popisný text nebo kategorie."),
         "demoChoiceChipTitle":
-            MessageLookupByLibrary.simpleMessage("Choice Chip"),
+            MessageLookupByLibrary.simpleMessage("Prvek volby"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Ukázka kódu"),
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Konstanty barvy a vzorníku barev, které představují barevnou škálu vzhledu Material Design."),
@@ -313,9 +317,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("Dokumentace API"),
         "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Filter chips use tags or descriptive words as a way to filter content."),
+            "Prvky filtru filtrují obsah pomocí značek nebo popisných slov."),
         "demoFilterChipTitle":
-            MessageLookupByLibrary.simpleMessage("Filter Chip"),
+            MessageLookupByLibrary.simpleMessage("Prvek filtru"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Ploché tlačítko při stisknutí zobrazí inkoustovou kaňku, ale nezvedne se. Plochá tlačítka používejte na lištách, v dialogových oknech a v textu s odsazením"),
         "demoFlatButtonTitle":
@@ -332,9 +336,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Celá obrazovka"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("Informace"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
+            "Prvky vstupu představují komplexní informaci v kompaktní podobě, např. entitu (osobu, místo či věc) nebo text konverzace."),
         "demoInputChipTitle":
-            MessageLookupByLibrary.simpleMessage("Input Chip"),
+            MessageLookupByLibrary.simpleMessage("Prvek vstupu"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("Adresu URL nelze zobrazit:"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Možnosti"),
@@ -350,6 +354,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "Jednoduché dialogové okno nabízí uživateli na výběr mezi několika možnostmi. Jednoduché dialogové okno má volitelný název, který je zobrazen nad možnostmi."),
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Jednoduché"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Textová pole uživatelům umožňují zadat do uživatelského rozhraní text. Obvykle se vyskytují ve formulářích a dialogových oknech."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
@@ -437,6 +446,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Kategorie"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galerie"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Úspory na auto"),
         "rallyAccountDataChecking":
@@ -461,13 +471,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Celkem"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Účty"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Upozornění"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Faktury"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Splatnost"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Oblečení"),
         "rallyBudgetCategoryCoffeeShops":
@@ -497,6 +509,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("Uživatelské jméno"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("ZOBRAZIT VŠE"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Najít bankomaty"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Nápověda"),
@@ -560,7 +578,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ZRUŠIT"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("VYSYPAT KOŠÍK"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("KOŠÍK"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Doprava:"),
@@ -570,11 +588,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCartTotalCaption":
             MessageLookupByLibrary.simpleMessage("CELKEM"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
+            MessageLookupByLibrary.simpleMessage("DOPLŇKY"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("VŠE"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("CLOTHING"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
+            MessageLookupByLibrary.simpleMessage("OBLEČENÍ"),
+        "shrineCategoryNameHome":
+            MessageLookupByLibrary.simpleMessage("DOMÁCNOST"),
         "shrineDescription": MessageLookupByLibrary.simpleMessage(
             "Elegantní maloobchodní aplikace"),
         "shrineLoginPasswordLabel":
@@ -622,8 +641,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Kalhoty barvy námořnické modři"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Tělová tunika"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Stůl pro čtyři"),
         "shrineProductRainwaterTray":
@@ -663,9 +682,20 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Košile s úzkým bílým proužkem"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Pásek Whitney"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Responzivní rozvržení úvodní aplikace"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Text"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("TLAČÍTKO"),

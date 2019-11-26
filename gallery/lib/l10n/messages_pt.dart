@@ -39,28 +39,37 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "Você selecionou: \"${value}\"";
 
-  static m8(amount) =>
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
+
+  static m9(amount) =>
       "Você gastou ${amount} em taxas de caixa eletrônico neste mês";
 
-  static m9(percent) =>
+  static m10(percent) =>
       "Bom trabalho! Sua conta corrente está ${percent} maior do que no mês passado.";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Atenção, você usou ${percent} do seu Orçamento de compras para este mês.";
 
-  static m11(amount) => "Você gastou ${amount} em Restaurantes nesta semana.";
+  static m12(amount) => "Você gastou ${amount} em Restaurantes nesta semana.";
 
-  static m12(count) =>
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "x ${price}";
+  static m17(price) => "x ${price}";
 
-  static m15(quantity) => "Quantidade: ${quantity}";
+  static m18(quantity) => "Quantidade: ${quantity}";
 
-  static m16(value) => "Item ${value}";
+  static m19(value) => "Item ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -352,13 +361,18 @@ class MessageLookup extends MessageLookupByLibrary {
             "Uma caixa de diálogo simples oferece ao usuário uma escolha entre várias opções. A caixa de diálogo simples tem um título opcional que é exibido acima das opções."),
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Simples"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Os campos de texto permitem que o usuário digite texto em uma IU. Eles geralmente aparecem em formulários e caixas de diálogo."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
         "demoTextFieldEnterPassword":
             MessageLookupByLibrary.simpleMessage("Insira uma senha."),
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
-            "(##) ###-#### - Digite um número de telefone brasileiro."),
+            "(##) ###-#### - Digite um número de telefone dos EUA."),
         "demoTextFieldFormErrors": MessageLookupByLibrary.simpleMessage(
             "Corrija os erros em vermelho antes de enviar."),
         "demoTextFieldHidePasswordLabel":
@@ -440,10 +454,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Categorias"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galeria"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Economia em transporte"),
         "rallyAccountDataChecking":
-            MessageLookupByLibrary.simpleMessage("Verificando"),
+            MessageLookupByLibrary.simpleMessage("Conta corrente"),
         "rallyAccountDataHomeSavings":
             MessageLookupByLibrary.simpleMessage("Economias domésticas"),
         "rallyAccountDataVacation":
@@ -464,13 +479,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Contas"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alertas"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Faturas"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("A pagar"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Roupas"),
         "rallyBudgetCategoryCoffeeShops":
@@ -479,7 +496,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Supermercado"),
         "rallyBudgetCategoryRestaurants":
             MessageLookupByLibrary.simpleMessage("Restaurantes"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Restante"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Restantes"),
         "rallyBudgets": MessageLookupByLibrary.simpleMessage("Orçamentos"),
         "rallyDescription":
             MessageLookupByLibrary.simpleMessage("Um app de finanças pessoais"),
@@ -500,6 +517,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("Nome de usuário"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("VER TUDO"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms": MessageLookupByLibrary.simpleMessage(
             "Encontrar caixas eletrônicos"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Ajuda"),
@@ -563,7 +586,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("CANCELAR"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("LIMPAR CARRINHO"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("CARRINHO"),
         "shrineCartShippingCaption":
@@ -601,7 +624,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductClassicWhiteCollar":
             MessageLookupByLibrary.simpleMessage("Gola branca clássica"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Agasalho argila"),
+            MessageLookupByLibrary.simpleMessage("Suéter na cor argila"),
         "shrineProductCopperWireRack":
             MessageLookupByLibrary.simpleMessage("Prateleira de fios de cobre"),
         "shrineProductFineLinesTee":
@@ -612,34 +635,34 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Chapéu Gatsby"),
         "shrineProductGentryJacket":
             MessageLookupByLibrary.simpleMessage("Casaco chique"),
-        "shrineProductGiltDeskTrio":
-            MessageLookupByLibrary.simpleMessage("Trio de mesas Gilt"),
+        "shrineProductGiltDeskTrio": MessageLookupByLibrary.simpleMessage(
+            "Trio de acessórios dourados para escritório"),
         "shrineProductGingerScarf":
             MessageLookupByLibrary.simpleMessage("Cachecol laranja"),
         "shrineProductGreySlouchTank":
             MessageLookupByLibrary.simpleMessage("Regata larga cinza"),
         "shrineProductHurrahsTeaSet":
             MessageLookupByLibrary.simpleMessage("Jogo de chá Hurrahs"),
-        "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("Quadro para a cozinha"),
+        "shrineProductKitchenQuattro": MessageLookupByLibrary.simpleMessage(
+            "Conjunto com quatro itens para cozinha"),
         "shrineProductNavyTrousers":
             MessageLookupByLibrary.simpleMessage("Calças azul-marinho"),
         "shrineProductPlasterTunic":
-            MessageLookupByLibrary.simpleMessage("Túnica gesso"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+            MessageLookupByLibrary.simpleMessage("Túnica na cor gesso"),
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
-            MessageLookupByLibrary.simpleMessage("Mesa de quatro lugares"),
+            MessageLookupByLibrary.simpleMessage("Mesa de quatro pernas"),
         "shrineProductRainwaterTray": MessageLookupByLibrary.simpleMessage(
             "Recipiente para água da chuva"),
-        "shrineProductRamonaCrossover":
-            MessageLookupByLibrary.simpleMessage("Crossover da Ramona"),
+        "shrineProductRamonaCrossover": MessageLookupByLibrary.simpleMessage(
+            "Camiseta estilo crossover Ramona"),
         "shrineProductSeaTunic":
             MessageLookupByLibrary.simpleMessage("Túnica azul-mar"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Agasalho brisa do mar"),
-        "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Camiseta de ombro caído"),
+            MessageLookupByLibrary.simpleMessage("Suéter na cor brisa do mar"),
+        "shrineProductShoulderRollsTee": MessageLookupByLibrary.simpleMessage(
+            "Camiseta com mangas dobradas"),
         "shrineProductShrugBag":
             MessageLookupByLibrary.simpleMessage("Bolsa Shrug"),
         "shrineProductSootheCeramicSet":
@@ -649,26 +672,37 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductStrutEarrings":
             MessageLookupByLibrary.simpleMessage("Brincos Strut"),
         "shrineProductSucculentPlanters":
-            MessageLookupByLibrary.simpleMessage("Produtores de suculentas"),
+            MessageLookupByLibrary.simpleMessage("Vasos de suculentas"),
         "shrineProductSunshirtDress":
             MessageLookupByLibrary.simpleMessage("Vestido Sunshirt"),
         "shrineProductSurfAndPerfShirt":
             MessageLookupByLibrary.simpleMessage("Camiseta de surfista"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("Sacola Vagabond"),
+            MessageLookupByLibrary.simpleMessage("Mochila Vagabond"),
         "shrineProductVarsitySocks":
             MessageLookupByLibrary.simpleMessage("Meias Varsity"),
         "shrineProductWalterHenleyWhite": MessageLookupByLibrary.simpleMessage(
-            "Camisa com botões Walter (branca)"),
+            "Camiseta de manga longa (branca)"),
         "shrineProductWeaveKeyring":
             MessageLookupByLibrary.simpleMessage("Chaveiro trançado"),
         "shrineProductWhitePinstripeShirt":
             MessageLookupByLibrary.simpleMessage("Camisa branca listrada"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Cinto Whitney"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Um layout inicial responsivo"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Corpo"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("BOTÃO"),

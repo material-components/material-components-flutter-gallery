@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "ჩანაცვლების ველი ჩანართისთვის „${title}“";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'რესტორნები არ არის', one: '1 რესტორანი', other: '${totalRestaurants} რესტორნები')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'პირდაპირი', one: '1 გადაჯდომა', other: '${numberOfStops} გადაჯდომა')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'ხელმისაწვდომი საკუთრება არ არის', one: '1 ხელმისაწვდომი საკუთრება', other: '${totalProperties} ხელმისაწვდომი საკუთრება')}";
 
   static m5(value) => "ერთეული ${value}";
 
@@ -39,28 +39,37 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "თქვენ აირჩიეთ: „${value}“";
 
-  static m8(amount) =>
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} ანგარიში ${accountNumber}, თანხა ${amount}.";
+
+  static m9(amount) =>
       "ამ თვეში ბანკომატების გადასახადებში დახარჯული გაქვთ ${amount}";
 
-  static m9(percent) =>
+  static m10(percent) =>
       "კარგია! თქვენს მიმდინარე ანგარიშზე ნაშთი გასულ თვესთან შედარებით ${percent}-ით მეტია.";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "გატყობინებთ, რომ ამ თვეში უკვე დახარჯული გაქვთ საყიდლებისთვის განკუთვნილი ბიუჯეტის ${percent}.";
 
-  static m11(amount) => "რესტორნებში ამ კვირაში დახარჯული გაქვთ ${amount}.";
+  static m12(amount) => "რესტორნებში ამ კვირაში დახარჯული გაქვთ ${amount}.";
 
-  static m12(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+  static m13(count) =>
+      "${Intl.plural(count, one: 'გაზარდეთ თქვენი პოტენციური საგადასახადო გამოქვითვა! მიანიჭეთ კატეგორია 1 მიუმაგრებელ ტრანსაქციას.', other: 'გაზარდეთ თქვენი პოტენციური საგადასახადო გამოქვითვა! მიანიჭეთ კატეგორია ${count} მიუმაგრებელ ტრანსაქციას.')}";
 
-  static m13(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+  static m14(billName, date, amount) =>
+      "${billName} ანგარიშის გასწორების ვადაა ${date}, თანხა: ${amount}.";
 
-  static m14(price) => "x ${price}";
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} ბიუჯეტი, დახარჯული თანხა: ${amountUsed} / ${amountTotal}-დან, დარჩენილი თანხა: ${amountLeft}";
 
-  static m15(quantity) => "რაოდენობა: ${quantity}";
+  static m16(quantity) =>
+      "${Intl.plural(quantity, zero: 'ერთეულები არ არის', one: '1 ერთეული', other: '${quantity} ერთეული')}";
 
-  static m16(value) => "ერთეული ${value}";
+  static m17(price) => "x ${price}";
+
+  static m18(quantity) => "რაოდენობა: ${quantity}";
+
+  static m19(value) => "ერთეული ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -80,15 +89,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "bottomNavigationContentPlaceholder": m1,
         "buttonText": MessageLookupByLibrary.simpleMessage("ღილაკი"),
         "buttonTextCreate": MessageLookupByLibrary.simpleMessage("შექმნა"),
-        "chipBiking": MessageLookupByLibrary.simpleMessage("Biking"),
-        "chipElevator": MessageLookupByLibrary.simpleMessage("Elevator"),
-        "chipFireplace": MessageLookupByLibrary.simpleMessage("Fireplace"),
-        "chipLarge": MessageLookupByLibrary.simpleMessage("Large"),
-        "chipMedium": MessageLookupByLibrary.simpleMessage("Medium"),
-        "chipSmall": MessageLookupByLibrary.simpleMessage("Small"),
+        "chipBiking":
+            MessageLookupByLibrary.simpleMessage("ველოსიპედით სეირნობა"),
+        "chipElevator": MessageLookupByLibrary.simpleMessage("ლიფტი"),
+        "chipFireplace": MessageLookupByLibrary.simpleMessage("ბუხარი"),
+        "chipLarge": MessageLookupByLibrary.simpleMessage("დიდი"),
+        "chipMedium": MessageLookupByLibrary.simpleMessage("საშუალო"),
+        "chipSmall": MessageLookupByLibrary.simpleMessage("პატარა"),
         "chipTurnOnLights":
-            MessageLookupByLibrary.simpleMessage("Turn on lights"),
-        "chipWasher": MessageLookupByLibrary.simpleMessage("Washer"),
+            MessageLookupByLibrary.simpleMessage("შუქის ჩართვა"),
+        "chipWasher": MessageLookupByLibrary.simpleMessage("სარეცხი მანქანა"),
         "colorsAmber": MessageLookupByLibrary.simpleMessage("ქარვისფერი"),
         "colorsBlue": MessageLookupByLibrary.simpleMessage("ლურჯი"),
         "colorsBlueGrey":
@@ -113,82 +123,87 @@ class MessageLookup extends MessageLookupByLibrary {
         "colorsYellow": MessageLookupByLibrary.simpleMessage("ყვითელი"),
         "craneDescription": MessageLookupByLibrary.simpleMessage(
             "პერსონალიზებული სამოგზაურო აპი"),
-        "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
-        "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
+        "craneEat": MessageLookupByLibrary.simpleMessage("ჭამა24"),
+        "craneEat0": MessageLookupByLibrary.simpleMessage("ნეაპოლი, იტალია"),
         "craneEat1":
-            MessageLookupByLibrary.simpleMessage("Dallas, United States"),
-        "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
-        "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
-        "craneEat3":
-            MessageLookupByLibrary.simpleMessage("Portland, United States"),
-        "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
-        "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
+            MessageLookupByLibrary.simpleMessage("დალასი, შეერთებული შტატები"),
+        "craneEat10":
+            MessageLookupByLibrary.simpleMessage("ლისაბონი, პორტუგალია"),
+        "craneEat2": MessageLookupByLibrary.simpleMessage("კორდობა, არგენტინა"),
+        "craneEat3": MessageLookupByLibrary.simpleMessage(
+            "პორტლენდი, შეერთებული შტატები"),
+        "craneEat4": MessageLookupByLibrary.simpleMessage("პარიზი, საფრანგეთი"),
+        "craneEat5":
+            MessageLookupByLibrary.simpleMessage("სეული, სამხრეთ კორეა"),
         "craneEat6":
-            MessageLookupByLibrary.simpleMessage("Seattle, United States"),
+            MessageLookupByLibrary.simpleMessage("სიეტლი, შეერთებული შტატები"),
         "craneEat7":
-            MessageLookupByLibrary.simpleMessage("Nashville, United States"),
+            MessageLookupByLibrary.simpleMessage("ნეშვილი, შეერთებული შტატები"),
         "craneEat8":
-            MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
-        "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+            MessageLookupByLibrary.simpleMessage("ატლანტა, შეერთებული შტატები"),
+        "craneEat9": MessageLookupByLibrary.simpleMessage("მადრიდი, ესპანეთი"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Restaurants by Destination"),
-        "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
+            "აღმოაჩინეთ რესტორნები დანიშნულების ადგილის მიხედვით"),
+        "craneFly": MessageLookupByLibrary.simpleMessage("ფრენა"),
         "craneFly0":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneFly1":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
-        "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("ასპენი, შეერთებული შტატები"),
+        "craneFly1": MessageLookupByLibrary.simpleMessage(
+            "ბიგ სური, შეერთებული შტატები"),
+        "craneFly10": MessageLookupByLibrary.simpleMessage("კაირო, ეგვიპტე"),
+        "craneFly11":
+            MessageLookupByLibrary.simpleMessage("ლისაბონი, პორტუგალია"),
         "craneFly12":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+            MessageLookupByLibrary.simpleMessage("ნაპა, შეერთებული შტატები"),
+        "craneFly13": MessageLookupByLibrary.simpleMessage("ბალი, ინდონეზია"),
         "craneFly2":
-            MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
-        "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
-        "craneFly5":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+            MessageLookupByLibrary.simpleMessage("კუმბუს მინდორი, ნეპალი"),
+        "craneFly3": MessageLookupByLibrary.simpleMessage("მაჩუ-პიკჩუ, პერუ"),
+        "craneFly4": MessageLookupByLibrary.simpleMessage("მალე, მალდივები"),
+        "craneFly5": MessageLookupByLibrary.simpleMessage("ვიცნაუ, შვეიცარია"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("მადრიდი, ესპანეთი"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
-            "Mount Rushmore, United States"),
-        "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
-        "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            "რუშმორის მთა, შეერთებული შტატები"),
+        "craneFly8": MessageLookupByLibrary.simpleMessage("სინგაპური"),
+        "craneFly9": MessageLookupByLibrary.simpleMessage("ჰავანა, კუბა"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Flights by Destination"),
-        "craneFormDate": MessageLookupByLibrary.simpleMessage("Select Date"),
-        "craneFormDates": MessageLookupByLibrary.simpleMessage("Select Dates"),
+            "აღმოაჩინეთ ფრენები დანიშნულების ადგილის მიხედვით"),
+        "craneFormDate": MessageLookupByLibrary.simpleMessage("აირჩიეთ თარიღი"),
+        "craneFormDates":
+            MessageLookupByLibrary.simpleMessage("თარიღების არჩევა"),
         "craneFormDestination":
-            MessageLookupByLibrary.simpleMessage("Choose Destination"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Diners"),
+            MessageLookupByLibrary.simpleMessage("აირჩიეთ დანიშნულების ადგილი"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("სასასდილოები"),
         "craneFormLocation":
-            MessageLookupByLibrary.simpleMessage("Select Location"),
-        "craneFormOrigin":
-            MessageLookupByLibrary.simpleMessage("Choose Origin"),
-        "craneFormTime": MessageLookupByLibrary.simpleMessage("Select Time"),
-        "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Travelers"),
-        "craneSleep": MessageLookupByLibrary.simpleMessage("SLEEP"),
-        "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+            MessageLookupByLibrary.simpleMessage("მდებარეობის არჩევა"),
+        "craneFormOrigin": MessageLookupByLibrary.simpleMessage(
+            "აირჩიეთ მგზავრობის დაწყების ადგილი"),
+        "craneFormTime": MessageLookupByLibrary.simpleMessage("აირჩიეთ დრო"),
+        "craneFormTravelers":
+            MessageLookupByLibrary.simpleMessage("მოგზაურები"),
+        "craneSleep": MessageLookupByLibrary.simpleMessage("ძილი"),
+        "craneSleep0": MessageLookupByLibrary.simpleMessage("მალე, მალდივები"),
         "craneSleep1":
-            MessageLookupByLibrary.simpleMessage("Aspen, United States"),
-        "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
-        "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
-        "craneSleep2":
-            MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
-        "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+            MessageLookupByLibrary.simpleMessage("ასპენი, შეერთებული შტატები"),
+        "craneSleep10": MessageLookupByLibrary.simpleMessage("კაირო, ეგვიპტე"),
+        "craneSleep11": MessageLookupByLibrary.simpleMessage("ტაიპეი, ტაივანი"),
+        "craneSleep2": MessageLookupByLibrary.simpleMessage("მაჩუ-პიკჩუ, პერუ"),
+        "craneSleep3": MessageLookupByLibrary.simpleMessage("ჰავანა, კუბა"),
         "craneSleep4":
-            MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneSleep5":
-            MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
+            MessageLookupByLibrary.simpleMessage("ვიცნაუ, შვეიცარია"),
+        "craneSleep5": MessageLookupByLibrary.simpleMessage(
+            "ბიგ სური, შეერთებული შტატები"),
         "craneSleep6":
-            MessageLookupByLibrary.simpleMessage("Napa, United States"),
-        "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
-        "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
-        "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+            MessageLookupByLibrary.simpleMessage("ნაპა, შეერთებული შტატები"),
+        "craneSleep7":
+            MessageLookupByLibrary.simpleMessage("პორტო, პორტუგალია"),
+        "craneSleep8": MessageLookupByLibrary.simpleMessage("ტულუმი, მექსიკა"),
+        "craneSleep9":
+            MessageLookupByLibrary.simpleMessage("ლისაბონი, პორტუგალია"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
-            "Explore Properties by Destination"),
+            "აღმოაჩინეთ უძრავი ქონება დანიშნულების ადგილის მიხედვით"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("დაშვება"),
         "cupertinoAlertApplePie":
             MessageLookupByLibrary.simpleMessage("ვაშლის ღვეზელი"),
@@ -218,9 +233,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "cupertinoShowAlert":
             MessageLookupByLibrary.simpleMessage("გაფრთხილების ჩვენება"),
         "demoActionChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Action chips are a set of options which trigger an action related to primary content. Action chips should appear dynamically and contextually in a UI."),
+            "მოქმედების ჩიპები ოფციების ნაკრებია, რომელიც უშვებს ქმედებასთან დაკავშირებულ პირველად შემცველობას. მოქმედების ჩიპები დინამიურად და კონტექსტუალურად უნდა გამოჩნდეს UI-ს სახით."),
         "demoActionChipTitle":
-            MessageLookupByLibrary.simpleMessage("Action Chip"),
+            MessageLookupByLibrary.simpleMessage("მოქმედების ჩიპი"),
         "demoAlertDialogDescription": MessageLookupByLibrary.simpleMessage(
             "გამაფრთხილებელი დიალოგი აცნობებს მომხმარებელს ისეთი სიტუაციების შესახებ, რომლებიც ყურადღების მიქცევას საჭიროებს. სურვილისამებრ, გამაფრთხილებელ დიალოგს შეიძლება ჰქონდეს სათაური და ქმედებათა სია."),
         "demoAlertDialogTitle":
@@ -263,10 +278,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "ბრტყელი, ამოწეული, კონტურული და სხვა"),
         "demoButtonTitle": MessageLookupByLibrary.simpleMessage("ღილაკები"),
         "demoChipSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Compact elements that represent an input, attribute, or action"),
-        "demoChipTitle": MessageLookupByLibrary.simpleMessage("Chips"),
+            "კომპაქტური ელემენტები, რომლებიც წარმოადგენენ შენატანს, ატრიბუტს ან ქმედებას"),
+        "demoChipTitle": MessageLookupByLibrary.simpleMessage("ჩიპები"),
         "demoChoiceChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Choice chips represent a single choice from a set. Choice chips contain related descriptive text or categories."),
+            "არჩევანის ჩიპები წარმოადგენს ნაკრებიდან ერთ არჩევანს. არჩევანის ჩიპები შეიცავს დაკავშირებულ აღმნიშვნელ ტექსტს ან კატეგორიას."),
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("Choice Chip"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("კოდის ნიმუში"),
@@ -302,20 +317,21 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ღილაკები"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "გამოიყენება რამდენიმე ურთიერთგამომრიცხავ ვარიანტს შორის არჩევისთვის. როდესაც სეგმენტირებულ მართვაში ერთ ვარიანტს ირჩევთ, სხვა ვარიანტების არჩევა უქმდება."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "iOS-სტილის სეგმენტირებული მართვა"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("სეგმენტირებული მართვა"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "მარტივი, გამაფრთხილებელი და სრულეკრანიანი"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("დიალოგები"),
         "demoDocumentationTooltip":
             MessageLookupByLibrary.simpleMessage("API დოკუმენტაცია"),
         "demoFilterChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Filter chips use tags or descriptive words as a way to filter content."),
+            "ფილტრის ჩიპები იყენებს თეფებს ან აღმნიშვნელ სიტყვებს, შემცველობის დასაფილტრად."),
         "demoFilterChipTitle":
-            MessageLookupByLibrary.simpleMessage("Filter Chip"),
+            MessageLookupByLibrary.simpleMessage("ფილტრის ჩიპი"),
         "demoFlatButtonDescription": MessageLookupByLibrary.simpleMessage(
             "დაჭერისას ბრტყელი ღილაკი აჩვენებს მელნის შხეფებს, მაგრამ არ იწევა. გამოიყენეთ ბრტყელი ღილაკები ხელსაწყოთა ზოლებში, დიალოგებში და ჩართული სახით დაშორებით"),
         "demoFlatButtonTitle":
@@ -332,9 +348,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("სრულ ეკრანზე"),
         "demoInfoTooltip": MessageLookupByLibrary.simpleMessage("ინფორმაცია"),
         "demoInputChipDescription": MessageLookupByLibrary.simpleMessage(
-            "Input chips represent a complex piece of information, such as an entity (person, place, or thing) or conversational text, in a compact form."),
+            "ჩიპის შეუყვანა წარმოადგენს ინფორმაციის კომპლექსურ ნაწილს, როგორიც არის ერთეული (პიროვნება, ადგილი ან საგანი) ან საუბრის ტექსტი კომპაქტურ ფორმაში."),
         "demoInputChipTitle":
-            MessageLookupByLibrary.simpleMessage("Input Chip"),
+            MessageLookupByLibrary.simpleMessage("შეყვანის ჩიპი"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "URL-ის ჩვენება ვერ მოხერხდა:"),
         "demoOptionsTooltip":
@@ -351,6 +367,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "მარტივი დიალოგი მომხმარებელს რამდენიმე ვარიანტს შორის არჩევანის გაკეთების საშუალებას აძლევს. სურვილისამებრ, მარტივ დიალოგს შეიძლება ჰქონდეს სათაური, რომელიც გამოჩნდება არჩევანის ზემოთ."),
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("მარტივი"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "ჩანართების მეშვეობით ხდება კონტენტის ორგანიზება სხვადასხვა ეკრანის, მონაცემთა ნაკრების და სხვა ინტერაქციების ფარგლებში."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "ჩანართები ცალ-ცალკე გადაადგილებადი ხედებით"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("ჩანართები"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "ტექსტური ველები მომხმარებლებს UI-ში ტექსტის შეყვანის საშუალებას აძლევს. როგორც წესი, ისინი ჩნდება ფორმებსა და დიალოგებში."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("ელფოსტა"),
@@ -440,6 +461,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("კატეგორიები"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("გალერეა"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("დანაზოგები მანქანისთვის"),
         "rallyAccountDataChecking":
@@ -465,13 +487,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("სულ"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("ანგარიშები"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("გაფრთხილებები"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("გადასახადები"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("გადასახდელია"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("ტანსაცმელი"),
         "rallyBudgetCategoryCoffeeShops":
@@ -498,6 +522,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("მომხმარებლის სახელი"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("ყველას ნახვა"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("ყველა ანგარიშის ნახვა"),
+        "rallySeeAllBills": MessageLookupByLibrary.simpleMessage(
+            "ყველა გადასახდელი ანგარიშის ნახვა"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("ყველა ბიუჯეტის ნახვა"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ბანკომატების პოვნა"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("დახმარება"),
@@ -524,7 +554,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsAbout":
             MessageLookupByLibrary.simpleMessage("Flutter Gallery-ს შესახებ"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
-            "შექმნილია TOASTER-ს მიერ ლონდონში"),
+            "შექმნილია TOASTER-ის მიერ ლონდონში"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("მუქი"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("გამოხმაურების გაგზავნა"),
@@ -544,7 +574,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage(
             "მარცხნიდან მარჯვნივ დამწერლობებისათვის"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("ლოკალის მიხედვით"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage(
             "მარჯვნიდან მარცხნივ დამწერლობებისათვის"),
         "settingsTextScaling":
@@ -563,7 +593,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("გაუქმება"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("კალათის გასუფთავება"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("კალათა"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("მიწოდება:"),
@@ -573,11 +603,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("გადასახადი:"),
         "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("სულ"),
         "shrineCategoryNameAccessories":
-            MessageLookupByLibrary.simpleMessage("ACCESSORIES"),
-        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ALL"),
+            MessageLookupByLibrary.simpleMessage("აქსესუარები"),
+        "shrineCategoryNameAll": MessageLookupByLibrary.simpleMessage("ყველა"),
         "shrineCategoryNameClothing":
-            MessageLookupByLibrary.simpleMessage("CLOTHING"),
-        "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("HOME"),
+            MessageLookupByLibrary.simpleMessage("ტანსაცმელი"),
+        "shrineCategoryNameHome":
+            MessageLookupByLibrary.simpleMessage("მთავარი"),
         "shrineDescription": MessageLookupByLibrary.simpleMessage(
             "მოდური აპი საცალო მოვაჭრეებისთვის"),
         "shrineLoginPasswordLabel":
@@ -625,8 +656,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("მუქი ლურჯი შარვალი"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("თაბაშირისფერი ტუნიკა"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Quartet-ის მაგიდა"),
         "shrineProductRainwaterTray":
@@ -665,9 +696,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("თეთრი ზოლებიანი მაისური"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney-ს ქამარი"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("კალათის დახურვა"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("მენიუს დახურვა"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("მენიუს გახსნა"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("ერთეულის ამოშლა"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("ძიება"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("პარამეტრები"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "ადაპტირებადი საწყისი განლაგება"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("ძირითადი ტექსტი"),
         "starterAppGenericButton":

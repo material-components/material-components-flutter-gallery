@@ -39,27 +39,36 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "\"${value}\" seçdiniz";
 
-  static m8(amount) => "Bu ay ATM rüsumları üçün ${amount} xərcləmisiniz";
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName} account ${accountNumber} with ${amount}.";
 
-  static m9(percent) =>
-      "Afərin! Ödəniş hesabınızın balansı keçən ayla müqayisədə ${percent} çoxdur.";
+  static m9(amount) => "Bu ay bankomat rüsumları üçün ${amount} xərcləmisiniz";
 
   static m10(percent) =>
+      "Afərin! Ödəniş hesabınızın balansı keçən ayla müqayisədə ${percent} çoxdur.";
+
+  static m11(percent) =>
       "Nəzərə alın ki, bu aylıq Alış-veriş büdcənizin ${percent} qədərindən çoxunu istifadə etmisiniz.";
 
-  static m11(amount) => "Bu həftə restoranlarda ${amount} xərcləmisiniz.";
+  static m12(amount) => "Bu həftə restoranlarda ${amount} xərcləmisiniz.";
 
-  static m12(count) =>
+  static m13(count) =>
       "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
 
-  static m13(quantity) =>
+  static m14(billName, date, amount) =>
+      "${billName} bill due ${date} for ${amount}.";
+
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+
+  static m16(quantity) =>
       "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
-  static m14(price) => "x ${price}";
+  static m17(price) => "x ${price}";
 
-  static m15(quantity) => "Miqdar: ${quantity}";
+  static m18(quantity) => "Miqdar: ${quantity}";
 
-  static m16(value) => "Element ${value}";
+  static m19(value) => "Element ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -341,6 +350,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Sadə dialoq istifadəçiyə bir neçə seçim təqdim edir. Sadə dialoqda seçimlərin yuxarısında göstərilən şərti başlıq olur."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Sadə"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "Tabs organize content across different screens, data sets, and other interactions."),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Tabs with independently scrollable views"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Mətn sahələri istifadəçilərə İstifadəçi İnterfeysinə mətn daxil etmək imkanı verir. Onlar, əsasən, forma və dialoqlarda görünür."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-poçt"),
@@ -397,7 +411,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Material Dizaynındakı müxtəlif tipoqrafik üslubların izahları."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "Əvvəlcədən müəyyənləşdirilmiş bütün mətn üslubları"),
+            "Əvvəldən müəyyənləşdirilmiş bütün mətn üslubları"),
         "demoTypographyTitle":
             MessageLookupByLibrary.simpleMessage("Tipoqrafiya"),
         "dialogAddAccount":
@@ -427,6 +441,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Kateqoriyalar"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Qalereya"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Avtomobil Qənaəti"),
         "rallyAccountDataChecking":
@@ -450,13 +465,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Cəmi"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Hesablar"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Xəbərdarlıqlar"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Hesablar"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Son tarix"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Geyim"),
         "rallyBudgetCategoryCoffeeShops":
@@ -473,7 +490,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginButtonLogin": MessageLookupByLibrary.simpleMessage("GİRİŞ"),
         "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("Giriş"),
         "rallyLoginLoginToRally":
-            MessageLookupByLibrary.simpleMessage("Rally\'a daxil olun"),
+            MessageLookupByLibrary.simpleMessage("Rally\'ya daxil olun"),
         "rallyLoginNoAccount":
             MessageLookupByLibrary.simpleMessage("Hesabınız yoxdur?"),
         "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("Parol"),
@@ -484,8 +501,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("İstifadəçi adı"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("HAMISINA BAXIN"),
+        "rallySeeAllAccounts":
+            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllBills":
+            MessageLookupByLibrary.simpleMessage("See all bills"),
+        "rallySeeAllBudgets":
+            MessageLookupByLibrary.simpleMessage("See all budgets"),
         "rallySettingsFindAtms":
-            MessageLookupByLibrary.simpleMessage("ATM\'lər tapın"),
+            MessageLookupByLibrary.simpleMessage("Bankomatlar tapın"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Kömək"),
         "rallySettingsManageAccounts":
             MessageLookupByLibrary.simpleMessage("Hesabları idarə edin"),
@@ -547,12 +570,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("LƏĞV EDİN"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("SƏBƏTİ TƏMİZLƏYİN"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("SƏBƏT"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Göndərmə:"),
         "shrineCartSubtotalCaption":
-            MessageLookupByLibrary.simpleMessage("Aralıqcəm:"),
+            MessageLookupByLibrary.simpleMessage("Aralıq cəm:"),
         "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("Vergi:"),
         "shrineCartTotalCaption": MessageLookupByLibrary.simpleMessage("CƏMİ"),
         "shrineCategoryNameAccessories":
@@ -589,7 +612,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductFineLinesTee":
             MessageLookupByLibrary.simpleMessage("T formalı, cızıqlı koftalar"),
         "shrineProductGardenStrand":
-            MessageLookupByLibrary.simpleMessage("\"Garden strand\""),
+            MessageLookupByLibrary.simpleMessage("Garden strand"),
         "shrineProductGatsbyHat":
             MessageLookupByLibrary.simpleMessage("Yastı papaq"),
         "shrineProductGentryJacket":
@@ -597,19 +620,19 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductGiltDeskTrio":
             MessageLookupByLibrary.simpleMessage("Üçlü masa dəsti"),
         "shrineProductGingerScarf":
-            MessageLookupByLibrary.simpleMessage("Zəncəfil rəngdə şərf"),
+            MessageLookupByLibrary.simpleMessage("Zəncəfil rəngində şərf"),
         "shrineProductGreySlouchTank":
             MessageLookupByLibrary.simpleMessage("Qolsuz boz kofta"),
         "shrineProductHurrahsTeaSet":
             MessageLookupByLibrary.simpleMessage("Əla çay dəsti"),
         "shrineProductKitchenQuattro":
-            MessageLookupByLibrary.simpleMessage("\"Quattro\" mətbəxi"),
+            MessageLookupByLibrary.simpleMessage("Quattro mətbəxi"),
         "shrineProductNavyTrousers":
             MessageLookupByLibrary.simpleMessage("Tünd mavi şalvar"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Açıq rəngli kofta"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Dörbucaq masa"),
         "shrineProductRainwaterTray":
@@ -618,14 +641,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ramona krossover"),
         "shrineProductSeaTunic":
             MessageLookupByLibrary.simpleMessage("Dəniz koftası"),
-        "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Dəniz mavisi rəngdə sviter"),
+        "shrineProductSeabreezeSweater": MessageLookupByLibrary.simpleMessage(
+            "Dəniz mavisi rəngində sviter"),
         "shrineProductShoulderRollsTee": MessageLookupByLibrary.simpleMessage(
             "Çiyni dəyirmi formada açıq olan kofta"),
         "shrineProductShrugBag":
             MessageLookupByLibrary.simpleMessage("Çiyin çantası"),
         "shrineProductSootheCeramicSet":
-            MessageLookupByLibrary.simpleMessage("\"Soothe\" keramika dəsti"),
+            MessageLookupByLibrary.simpleMessage("Soothe keramika dəsti"),
         "shrineProductStellaSunglasses":
             MessageLookupByLibrary.simpleMessage("Stella gün eynəkləri"),
         "shrineProductStrutEarrings":
@@ -637,7 +660,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductSurfAndPerfShirt":
             MessageLookupByLibrary.simpleMessage("Sörf koftası"),
         "shrineProductVagabondSack":
-            MessageLookupByLibrary.simpleMessage("\"Vegabond\" çantası"),
+            MessageLookupByLibrary.simpleMessage("Vegabond çantası"),
         "shrineProductVarsitySocks":
             MessageLookupByLibrary.simpleMessage("Kollec corabları"),
         "shrineProductWalterHenleyWhite":
@@ -648,9 +671,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Cızıqlı ağ köynək"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Vitni kəməri"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("Close menu"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("Open menu"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("Remove item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+        "shrineTooltipSettings":
+            MessageLookupByLibrary.simpleMessage("Settings"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Responsiv starter tətbiq düzəni"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Əsas"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("DÜYMƏ"),

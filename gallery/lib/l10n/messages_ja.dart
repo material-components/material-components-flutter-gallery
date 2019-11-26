@@ -24,13 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "${title} タブのプレースホルダ";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'レストランなし', one: '1 件のレストラン', other: '${totalRestaurants} 件のレストラン')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: '直行便', one: '乗継: 1 回', other: '乗継: ${numberOfStops} 回')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: '短期賃貸物件なし', one: '1 件の短期賃貸物件', other: '${totalProperties} 件の短期賃貸物件')}";
 
   static m5(value) => "項目 ${value}";
 
@@ -38,25 +38,34 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m7(value) => "「${value}」を選択しました";
 
-  static m8(amount) => "今月は ATM 手数料に ${amount} 使いました";
+  static m8(accountName, accountNumber, amount) =>
+      "${accountName}、口座番号 ${accountNumber}、残高 ${amount}。";
 
-  static m9(percent) => "がんばりました！当座預金口座額が先月より ${percent} 増えました。";
+  static m9(amount) => "今月は ATM 手数料に ${amount} 使いました";
 
-  static m10(percent) => "今月のショッピング予算の ${percent} を使いました。";
+  static m10(percent) => "がんばりました！当座預金口座の残高が先月より ${percent} 増えました。";
 
-  static m11(amount) => "今週はレストランに ${amount} 使いました。";
+  static m11(percent) => "今月のショッピング予算の ${percent} を使いました。";
 
-  static m12(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+  static m12(amount) => "今週はレストランに ${amount} 使いました。";
 
-  static m13(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+  static m13(count) =>
+      "${Intl.plural(count, one: '税額控除を受けられる可能性を高めましょう。1 件の未割り当ての取引にカテゴリを割り当ててください。', other: '税額控除を受けられる可能性を高めましょう。${count} 件の未割り当ての取引にカテゴリを割り当ててください。')}";
 
-  static m14(price) => "x ${price}";
+  static m14(billName, date, amount) =>
+      "${billName}、支払い期限 ${date}、金額 ${amount}。";
 
-  static m15(quantity) => "数量: ${quantity}";
+  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+      "${budgetName}、使用済み予算 ${amountUsed}、総予算 ${amountTotal}、予算残高 ${amountLeft}";
 
-  static m16(value) => "項目 ${value}";
+  static m16(quantity) =>
+      "${Intl.plural(quantity, zero: 'アイテムなし', one: '1 件のアイテム', other: '${quantity} 件のアイテム')}";
+
+  static m17(price) => "x ${price}";
+
+  static m18(quantity) => "数量: ${quantity}";
+
+  static m19(value) => "項目 ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -194,7 +203,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoAlertTitleDialogTitle":
             MessageLookupByLibrary.simpleMessage("タイトル付きアラート"),
         "demoBottomNavigationDescription": MessageLookupByLibrary.simpleMessage(
-            "ボトム ナビゲーション バーでは、画面の一番下に 3～5 つの移動先が表示されます。各移動先はアイコンとテキストラベル（省略可）で表されます。ボトム ナビゲーション アイコンをタップすると、そのアイコンに関連付けられている最上位の移動先に移動します。"),
+            "画面の下部には、ボトム ナビゲーション バーに 3～5 件の移動先が表示されます。各移動先はアイコンとテキストラベル（省略可）で表されます。ボトム ナビゲーション アイコンをタップすると、そのアイコンに関連付けられた移動先のトップレベルに移動します。"),
         "demoBottomNavigationPersistentLabels":
             MessageLookupByLibrary.simpleMessage("永続ラベル"),
         "demoBottomNavigationSelectedLabel":
@@ -262,11 +271,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ボタン"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "相互に排他的な複数のオプションから選択する場合に使用します。セグメンテッド コントロール内の 1 つのオプションが選択されると、そのセグメンテッド コントロール内の他のオプションは選択されなくなります。"),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage("iOS スタイルのセグメンテッド コントロール"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("セグメンテッド コントロール"),
         "demoDialogSubtitle":
             MessageLookupByLibrary.simpleMessage("シンプル、アラート、全画面表示"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("ダイアログ"),
@@ -305,6 +314,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "シンプル ダイアログでは、ユーザーに複数の選択肢を提示できます。必要に応じて、選択肢の上に表示するタイトルを設定できます。"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("シンプル"),
+        "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
+            "タブを使うことで、さまざまな画面、データセットや、その他のインタラクションにまたがるコンテンツを整理できます。"),
+        "demoTabsSubtitle":
+            MessageLookupByLibrary.simpleMessage("個別にスクロール可能なビューを含むタブ"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("タブ"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "テキスト欄では、ユーザーが UI にテキストを入力できます。一般にフォームやダイアログで表示されます。"),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("メールアドレス"),
@@ -313,7 +327,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldEnterUSPhoneNumber": MessageLookupByLibrary.simpleMessage(
             "（###）###-#### - 米国の電話番号を入力してください。"),
         "demoTextFieldFormErrors":
-            MessageLookupByLibrary.simpleMessage("送信する前に赤のエラーを修正してください。"),
+            MessageLookupByLibrary.simpleMessage("送信する前に赤色で表示されたエラーを修正してください。"),
         "demoTextFieldHidePasswordLabel":
             MessageLookupByLibrary.simpleMessage("パスワードを隠す"),
         "demoTextFieldKeepItShort":
@@ -385,11 +399,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("リファレンス スタイルとメディア"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("カテゴリ"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("ギャラリー"),
+        "rallyAccountAmount": m8,
         "rallyAccountDataCarSavings":
-            MessageLookupByLibrary.simpleMessage("車の節約"),
-        "rallyAccountDataChecking": MessageLookupByLibrary.simpleMessage("当座"),
+            MessageLookupByLibrary.simpleMessage("マイカー貯金"),
+        "rallyAccountDataChecking":
+            MessageLookupByLibrary.simpleMessage("当座預金"),
         "rallyAccountDataHomeSavings":
-            MessageLookupByLibrary.simpleMessage("家計の節約"),
+            MessageLookupByLibrary.simpleMessage("マイホーム貯金"),
         "rallyAccountDataVacation":
             MessageLookupByLibrary.simpleMessage("バケーション"),
         "rallyAccountDetailDataAccountOwner":
@@ -399,21 +415,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountDetailDataInterestPaidLastYear":
             MessageLookupByLibrary.simpleMessage("昨年の利息"),
         "rallyAccountDetailDataInterestRate":
-            MessageLookupByLibrary.simpleMessage("利息の率"),
+            MessageLookupByLibrary.simpleMessage("利率"),
         "rallyAccountDetailDataInterestYtd":
-            MessageLookupByLibrary.simpleMessage("過去 1 年間の利息"),
+            MessageLookupByLibrary.simpleMessage("年累計利息"),
         "rallyAccountDetailDataNextStatement":
-            MessageLookupByLibrary.simpleMessage("次回の取引明細"),
+            MessageLookupByLibrary.simpleMessage("次回の取引明細書発行日"),
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("合計"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("口座"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("アラート"),
-        "rallyAlertsMessageATMFees": m8,
-        "rallyAlertsMessageCheckingAccount": m9,
-        "rallyAlertsMessageHeadsUpShopping": m10,
-        "rallyAlertsMessageSpentOnRestaurants": m11,
-        "rallyAlertsMessageUnassignedTransactions": m12,
+        "rallyAlertsMessageATMFees": m9,
+        "rallyAlertsMessageCheckingAccount": m10,
+        "rallyAlertsMessageHeadsUpShopping": m11,
+        "rallyAlertsMessageSpentOnRestaurants": m12,
+        "rallyAlertsMessageUnassignedTransactions": m13,
+        "rallyBillAmount": m14,
         "rallyBills": MessageLookupByLibrary.simpleMessage("請求"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("期限"),
+        "rallyBudgetAmount": m15,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("衣料品"),
         "rallyBudgetCategoryCoffeeShops":
@@ -430,14 +448,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginLabelLogin": MessageLookupByLibrary.simpleMessage("ログイン"),
         "rallyLoginLoginToRally":
             MessageLookupByLibrary.simpleMessage("Rally にログイン"),
-        "rallyLoginNoAccount":
-            MessageLookupByLibrary.simpleMessage("口座をお持ちですか？"),
+        "rallyLoginNoAccount": MessageLookupByLibrary.simpleMessage("口座を開設する"),
         "rallyLoginPassword": MessageLookupByLibrary.simpleMessage("パスワード"),
         "rallyLoginRememberMe":
             MessageLookupByLibrary.simpleMessage("次回から入力を省略する"),
         "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("登録"),
         "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("ユーザー名"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("すべて表示"),
+        "rallySeeAllAccounts": MessageLookupByLibrary.simpleMessage("口座をすべて表示"),
+        "rallySeeAllBills": MessageLookupByLibrary.simpleMessage("請求をすべて表示"),
+        "rallySeeAllBudgets": MessageLookupByLibrary.simpleMessage("予算をすべて表示"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ATM を探す"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("ヘルプ"),
@@ -478,7 +498,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("テキストの向き"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("言語 / 地域に基づく"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("テキストの拡大縮小"),
@@ -492,7 +512,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("キャンセル"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("カートをクリア"),
-        "shrineCartItemCount": m13,
+        "shrineCartItemCount": m16,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("カート"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("送料:"),
@@ -506,8 +526,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCategoryNameClothing":
             MessageLookupByLibrary.simpleMessage("ファッション"),
         "shrineCategoryNameHome": MessageLookupByLibrary.simpleMessage("家"),
-        "shrineDescription":
-            MessageLookupByLibrary.simpleMessage("ファッショナブルなお店のアプリ"),
+        "shrineDescription": MessageLookupByLibrary.simpleMessage("お洒落なお店のアプリ"),
         "shrineLoginPasswordLabel":
             MessageLookupByLibrary.simpleMessage("パスワード"),
         "shrineLoginUsernameLabel":
@@ -552,8 +571,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ズボン（ネイビー）"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("チュニック（パステル）"),
-        "shrineProductPrice": m14,
-        "shrineProductQuantity": m15,
+        "shrineProductPrice": m17,
+        "shrineProductQuantity": m18,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("カルテット テーブル"),
         "shrineProductRainwaterTray":
@@ -592,9 +611,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ホワイト ピンストライプ シャツ"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("ホイットニー ベルト"),
+        "shrineTooltipCloseCart":
+            MessageLookupByLibrary.simpleMessage("カートを閉じます"),
+        "shrineTooltipCloseMenu":
+            MessageLookupByLibrary.simpleMessage("メニューを閉じます"),
+        "shrineTooltipOpenMenu":
+            MessageLookupByLibrary.simpleMessage("メニューを開きます"),
+        "shrineTooltipRemoveItem":
+            MessageLookupByLibrary.simpleMessage("アイテムを削除します"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("検索"),
+        "shrineTooltipSettings": MessageLookupByLibrary.simpleMessage("設定"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("レスポンシブ スターター レイアウト"),
-        "starterAppDrawerItem": m16,
+        "starterAppDrawerItem": m19,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("本文"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("ボタン"),
         "starterAppGenericHeadline":
