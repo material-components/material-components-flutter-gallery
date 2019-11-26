@@ -155,7 +155,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
     GalleryDemo(
       title: GalleryLocalizations.of(context).demoChipTitle,
       icon: GalleryIcons.chips,
-      subtitle: GalleryLocalizations.of(context).demoInputChipDescription,
+      subtitle: GalleryLocalizations.of(context).demoChipSubtitle,
       configurations: [
         GalleryDemoConfiguration(
           title: GalleryLocalizations.of(context).demoActionChipTitle,
