@@ -16,9 +16,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:gallery/data/gallery_options.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/layout/text_scale.dart';
-import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/studies/shrine/colors.dart';
 
 const _horizontalPadding = 24.0;
@@ -83,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                     // The login screen is immediately displayed on top of the Shrine
                     // home screen using onGenerateRoute and so rootNavigator must be
                     // set to true in order to get out of Shrine completely.
-                    Navigator.of(context, rootNavigator: true).pop();
+                    Navigator.of(context, rootNavigator: true).maybePop();
                   },
                 ),
               ),

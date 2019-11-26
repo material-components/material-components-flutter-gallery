@@ -27,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
             icon: const BackButtonIcon(),
             tooltip: MaterialLocalizations.of(context).backButtonTooltip,
             onPressed: () {
-              Navigator.of(context, rootNavigator: true).pop();
+              Navigator.of(context, rootNavigator: true).maybePop();
             },
           ),
         ),
