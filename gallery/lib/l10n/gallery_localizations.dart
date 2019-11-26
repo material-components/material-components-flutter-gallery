@@ -2261,6 +2261,22 @@ class GalleryLocalizations {
             r'Title for attribution (TOASTER is a proper name and should remain in English).');
   }
 
+  String get settingsButtonCloseLabel {
+    return Intl.message(r'Close settings',
+        locale: _localeName,
+        name: 'settingsButtonCloseLabel',
+        desc:
+            r'Accessibility label for the settings button when settings are showing.');
+  }
+
+  String get settingsButtonLabel {
+    return Intl.message(r'Settings',
+        locale: _localeName,
+        name: 'settingsButtonLabel',
+        desc:
+            r'Accessibility label for the settings button when settings are not showing.');
+  }
+
   String get settingsDarkTheme {
     return Intl.message(r'Dark',
         locale: _localeName,

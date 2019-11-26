@@ -290,6 +290,14 @@
     description="Title for the settings screen."
     >Settings</string>
   <string
+    name="settingsButtonLabel"
+    description="Accessibility label for the settings button when settings are not showing."
+    >Settings</string>
+  <string
+    name="settingsButtonCloseLabel"
+    description="Accessibility label for the settings button when settings are showing."
+    >Close settings</string>
+  <string
     name="settingsSystemDefault"
     description="Option label to indicate the system default will be used."
     >System</string>

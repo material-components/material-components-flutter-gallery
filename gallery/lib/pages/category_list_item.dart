@@ -171,10 +171,12 @@ class _CategoryHeader extends StatelessWidget {
               children: [
                 Padding(
                   padding: imagePadding,
-                  child: Image.asset(
-                    imageString,
-                    width: 64,
-                    height: 64,
+                  child: ExcludeSemantics(
+                    child: Image.asset(
+                      imageString,
+                      width: 64,
+                      height: 64,
+                    ),
                   ),
                 ),
                 Padding(

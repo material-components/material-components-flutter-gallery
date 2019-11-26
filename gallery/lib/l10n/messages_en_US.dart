@@ -530,6 +530,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("About Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Designed by TOASTER in London"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Close settings"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("Settings"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dark"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Send feedback"),

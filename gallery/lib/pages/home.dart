@@ -567,7 +567,7 @@ class _CarouselState extends State<_Carousel>
         }
         // We want the peeking cards to be 160 in height and 0.38 helps
         // achieve that.
-        value = (1 - (value.abs() * .38)).clamp(0, 1) as double;
+        value = (1 - (value.abs() * .38)).clamp(0, 1).toDouble();
         value = Curves.easeOut.transform(value);
 
         return Center(

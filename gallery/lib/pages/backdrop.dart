@@ -8,6 +8,7 @@ import 'package:flare_flutter/flare_actor.dart';
 import 'package:flare_flutter/flare_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:gallery/constants.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 
 class Backdrop extends StatefulWidget {
@@ -95,18 +96,27 @@ class _BackdropState extends State<Backdrop>
   Widget _buildStack(BuildContext context, BoxConstraints constraints) {
     final Animation<RelativeRect> animation = _getPanelAnimation(constraints);
 
+    final Widget frontLayer = ExcludeSemantics(
+      child: widget.frontLayer,
+      excluding: _isPanelVisible,
+    );
+    final Widget backLayer = ExcludeSemantics(
+      child: widget.backLayer,
+      excluding: !_isPanelVisible,
+    );
+
     return Container(
       child: Stack(
         children: [
           if (!isDisplayDesktop(context)) ...[
-            widget.frontLayer,
+            frontLayer,
             PositionedTransition(
               rect: animation,
-              child: widget.backLayer,
+              child: backLayer,
             ),
           ],
           if (isDisplayDesktop(context)) ...[
-            widget.backLayer,
+            backLayer,
             ScaleTransition(
               alignment: Directionality.of(context) == TextDirection.ltr
                   ? Alignment.topRight
@@ -127,7 +137,7 @@ class _BackdropState extends State<Backdrop>
                       maxWidth: desktopSettingsWidth,
                       minWidth: desktopSettingsWidth,
                     ),
-                    child: widget.frontLayer,
+                    child: frontLayer,
                   ),
                 ),
               ),
@@ -136,33 +146,39 @@ class _BackdropState extends State<Backdrop>
           Align(
             alignment: AlignmentDirectional.topEnd,
             child: SafeArea(
-              child: SizedBox(
-                width: 64,
-                height: isDisplayDesktop(context) ? 56 : 40,
-                child: GestureDetector(
-                  onTap: () {
-                    _controller.fling(velocity: _isPanelVisible ? -1 : 1);
-                    _desktopController.fling(
-                        velocity: _isPanelVisible ? -1 : 1);
-                  },
-                  child: Material(
-                    borderRadius: BorderRadiusDirectional.only(
-                      bottomStart: Radius.circular(10),
-                    ),
-                    color: _isPanelVisible
-                        ? Theme.of(context).colorScheme.secondaryVariant
-                        : Colors.transparent,
-                    child: FlareActor(
-                      Theme.of(context).colorScheme.brightness ==
-                              Brightness.light
-                          ? 'assets/icons/settings/settings_light.flr'
-                          : 'assets/icons/settings/settings_dark.flr',
-                      alignment: Directionality.of(context) == TextDirection.ltr
-                          ? Alignment.bottomLeft
-                          : Alignment.bottomRight,
-                      animation: 'Animations',
-                      fit: BoxFit.contain,
-                      controller: this,
+              child: Semantics(
+                label: _isPanelVisible
+                    ? GalleryLocalizations.of(context).settingsButtonLabel
+                    : GalleryLocalizations.of(context).settingsButtonCloseLabel,
+                child: SizedBox(
+                  width: 64,
+                  height: isDisplayDesktop(context) ? 56 : 40,
+                  child: GestureDetector(
+                    onTap: () {
+                      _controller.fling(velocity: _isPanelVisible ? -1 : 1);
+                      _desktopController.fling(
+                          velocity: _isPanelVisible ? -1 : 1);
+                    },
+                    child: Material(
+                      borderRadius: BorderRadiusDirectional.only(
+                        bottomStart: Radius.circular(10),
+                      ),
+                      color: _isPanelVisible
+                          ? Theme.of(context).colorScheme.secondaryVariant
+                          : Colors.transparent,
+                      child: FlareActor(
+                        Theme.of(context).colorScheme.brightness ==
+                                Brightness.light
+                            ? 'assets/icons/settings/settings_light.flr'
+                            : 'assets/icons/settings/settings_dark.flr',
+                        alignment:
+                            Directionality.of(context) == TextDirection.ltr
+                                ? Alignment.bottomLeft
+                                : Alignment.bottomRight,
+                        animation: 'Animations',
+                        fit: BoxFit.contain,
+                        controller: this,
+                      ),
                     ),
                   ),
                 ),

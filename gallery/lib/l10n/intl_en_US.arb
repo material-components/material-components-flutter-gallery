@@ -320,6 +320,14 @@
   "@settingsTitle": {
     "description": "Title for the settings screen."
   },
+  "settingsButtonLabel": "Settings",
+  "@settingsButtonLabel": {
+    "description": "Accessibility label for the settings button when settings are not showing."
+  },
+  "settingsButtonCloseLabel": "Close settings",
+  "@settingsButtonCloseLabel": {
+    "description": "Accessibility label for the settings button when settings are showing."
+  },
   "settingsSystemDefault": "System",
   "@settingsSystemDefault": {
     "description": "Option label to indicate the system default will be used."
