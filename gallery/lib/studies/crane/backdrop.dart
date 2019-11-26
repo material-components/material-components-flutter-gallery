@@ -16,14 +16,15 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+
 import 'package:meta/meta.dart';
 
+import 'package:gallery/data/gallery_options.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/crane/border_tab_indicator.dart';
 import 'package:gallery/studies/crane/colors.dart';
-import 'package:gallery/studies/crane/model/data.dart';
-import 'package:gallery/studies/crane/model/destination.dart';
-import 'package:gallery/l10n/gallery_localizations.dart';
+import 'package:gallery/studies/crane/item_cards.dart';
 
 class _FrontLayer extends StatelessWidget {
   const _FrontLayer({
@@ -63,85 +64,6 @@ class _FrontLayer extends StatelessWidget {
         ],
       ),
     );
-  }
-}
-
-class ItemCards extends StatefulWidget {
-  final int index;
-
-  const ItemCards({Key key, this.index}) : super(key: key);
-
-  static const totalColumns = 4;
-
-  @override
-  _ItemCardsState createState() => _ItemCardsState();
-}
-
-class _ItemCardsState extends State<ItemCards> {
-  List<Destination> flyDestinations;
-  List<Destination> sleepDestinations;
-  List<Destination> eatDestinations;
-
-  List<Widget> _buildFlightCards({int listIndex}) {
-    final List<Destination> destinations = [
-      if (listIndex == 0) ...flyDestinations,
-      if (listIndex == 1) ...sleepDestinations,
-      if (listIndex == 2) ...eatDestinations,
-    ];
-
-    return destinations.map((d) => _DestinationCard(destination: d)).toList();
-  }
-
-  @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    flyDestinations = getFlyDestinations(context)..shuffle();
-    sleepDestinations = getSleepDestinations(context)..shuffle();
-    eatDestinations = getEatDestinations(context)..shuffle();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final List<Widget> destinationCards =
-        _buildFlightCards(listIndex: widget.index);
-    final isDesktop = isDisplayDesktop(context);
-
-    if (isDesktop) {
-      // Based on totalColumns, generate columnCounts, which lists the number
-      // of items per column. e.g. [n, n, n, ... n - 1, n - 1]
-      final fullColumns = (destinationCards.length % ItemCards.totalColumns);
-      final incompleteColumnCount =
-          (destinationCards.length / ItemCards.totalColumns).floor();
-      final fullColumnCount = incompleteColumnCount + 1;
-      final columnCounts = List.filled(fullColumns, fullColumnCount) +
-          List.filled(
-              ItemCards.totalColumns - fullColumns, incompleteColumnCount);
-
-      List<List<Widget>> columns = [];
-      var currentIndex = 0;
-      for (var count in columnCounts) {
-        columns
-            .add(destinationCards.sublist(currentIndex, currentIndex + count));
-        currentIndex += count;
-      }
-
-      return Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          for (var column in columns)
-            Expanded(
-              child: Padding(
-                padding: const EdgeInsets.only(right: 16),
-                child: Column(
-                  children: column,
-                ),
-              ),
-            )
-        ],
-      );
-    } else {
-      return Column(children: destinationCards);
-    }
   }
 }
 
@@ -207,6 +129,8 @@ class _BackdropState extends State<Backdrop> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
+    final textDirection = GalleryOptions.of(context).textDirection();
+    final textScaleFactor = GalleryOptions.of(context).textScaleFactor(context);
 
     return Material(
       color: cranePurple800,
@@ -220,13 +144,16 @@ class _BackdropState extends State<Backdrop> with TickerProviderStateMixin {
             titleSpacing: 0,
             leading: Align(
               child: Transform.translate(
-                offset: Offset(isDesktop ? 0 : -4, -8),
+                offset: Offset(
+                    isDesktop ? 0 : textDirection == TextDirection.rtl ? 4 : -4,
+                    -8),
                 child: Image(
                   image: AssetImage('assets/crane/menu.png'),
+                  matchTextDirection: true,
                   height: 20,
                 ),
               ),
-              alignment: Alignment.centerLeft,
+              alignment: AlignmentDirectional.centerStart,
             ),
             flexibleSpace: CraneAppBar(
               tabController: _tabController,
@@ -240,7 +167,11 @@ class _BackdropState extends State<Backdrop> with TickerProviderStateMixin {
                 backLayers: widget.backLayer,
               ),
               Container(
-                margin: EdgeInsets.only(top: isDesktop ? 70 : 246),
+                margin: EdgeInsets.only(
+                  top: isDesktop
+                      ? 60 + 20 * textScaleFactor / 2
+                      : 175 + 140 * textScaleFactor / 2,
+                ),
                 child: TabBarView(
                   physics: isDesktop
                       ? NeverScrollableScrollPhysics()
@@ -299,16 +230,10 @@ class _BackLayerState extends State<BackLayer> {
   }
 
   @override
-  void dispose() {
-    widget.tabController.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return AnimatedSwitcher(
-      child: widget.backLayers[widget.tabController.index],
-      duration: const Duration(milliseconds: 300),
+    return IndexedStack(
+      index: widget.tabController.index,
+      children: widget.backLayers,
     );
   }
 }
@@ -328,6 +253,7 @@ class _CraneAppBarState extends State<CraneAppBar> {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
+    final textScaleFactor = GalleryOptions.of(context).textScaleFactor(context);
 
     return SafeArea(
       child: Padding(
@@ -342,32 +268,34 @@ class _CraneAppBarState extends State<CraneAppBar> {
             ),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.only(left: 24),
-                child: TabBar(
-                  indicator: BorderTabIndicator(isDesktop ? 28 : 32),
-                  controller: widget.tabController,
-                  labelPadding: EdgeInsets.zero,
-                  isScrollable: isDesktop, // left-align tabs on web
-                  tabs: [
-                    _NavigationTab(
-                      title: GalleryLocalizations.of(context).craneFly,
-                      tabHandler: widget.tabHandler,
-                      tabController: widget.tabController,
-                      index: 0,
+                padding: const EdgeInsetsDirectional.only(start: 24),
+                child: Theme(
+                  data: Theme.of(context).copyWith(
+                    splashColor: Colors.transparent,
+                  ),
+                  child: TabBar(
+                    indicator: BorderTabIndicator(
+                      indicatorHeight: isDesktop ? 28 : 32,
+                      textScaleFactor: textScaleFactor,
                     ),
-                    _NavigationTab(
-                      title: GalleryLocalizations.of(context).craneSleep,
-                      tabHandler: widget.tabHandler,
-                      tabController: widget.tabController,
-                      index: 1,
+                    controller: widget.tabController,
+                    labelPadding: isDesktop
+                        ? const EdgeInsets.symmetric(horizontal: 32)
+                        : EdgeInsets.zero,
+                    isScrollable: isDesktop, // left-align tabs on desktop
+                    labelStyle: Theme.of(context).textTheme.button,
+                    labelColor: cranePrimaryWhite,
+                    unselectedLabelColor: cranePrimaryWhite.withOpacity(.6),
+                    onTap: (index) => widget.tabController.animateTo(
+                      index,
+                      duration: const Duration(milliseconds: 300),
                     ),
-                    _NavigationTab(
-                      title: GalleryLocalizations.of(context).craneEat,
-                      tabHandler: widget.tabHandler,
-                      tabController: widget.tabController,
-                      index: 2,
-                    ),
-                  ],
+                    tabs: [
+                      Tab(text: GalleryLocalizations.of(context).craneFly),
+                      Tab(text: GalleryLocalizations.of(context).craneSleep),
+                      Tab(text: GalleryLocalizations.of(context).craneEat),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -375,115 +303,5 @@ class _CraneAppBarState extends State<CraneAppBar> {
         ),
       ),
     );
-  }
-}
-
-class _NavigationTab extends StatefulWidget {
-  final String title;
-  final Function tabHandler;
-  final TabController tabController;
-  final int index;
-
-  const _NavigationTab(
-      {Key key, this.title, this.tabHandler, this.tabController, this.index})
-      : super(key: key);
-
-  @override
-  _NavigationTabState createState() => _NavigationTabState();
-}
-
-class _NavigationTabState extends State<_NavigationTab> {
-  @override
-  void initState() {
-    super.initState();
-    widget.tabController.addListener(() => setState(() {}));
-  }
-
-  @override
-  void dispose() {
-    widget.tabController.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return FlatButton(
-      splashColor: Colors.transparent,
-      highlightColor: Colors.transparent,
-      child: Text(
-        widget.title,
-        style: Theme.of(context).textTheme.button.copyWith(
-              color: widget.tabController.index == widget.index
-                  ? cranePrimaryWhite
-                  : cranePrimaryWhite.withOpacity(.6),
-            ),
-      ),
-      onPressed: () => widget.tabHandler(widget.index),
-    );
-  }
-}
-
-class _DestinationCard extends StatelessWidget {
-  _DestinationCard({this.destination}) : assert(destination != null);
-  final Destination destination;
-
-  @override
-  Widget build(BuildContext context) {
-    final imageWidget = Image.asset(
-      destination.assetName,
-      fit: BoxFit.cover,
-    );
-
-    final isDesktop = isDisplayDesktop(context);
-
-    if (isDesktop) {
-      return Padding(
-        padding: const EdgeInsets.only(bottom: 40),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            ClipRRect(
-              borderRadius: const BorderRadius.all(Radius.circular(4)),
-              child: imageWidget,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 20, bottom: 10),
-              child: Text(
-                destination.destination,
-                style: Theme.of(context).textTheme.subhead,
-              ),
-            ),
-            Text(
-              destination.subtitle(context),
-              style: Theme.of(context).textTheme.subtitle,
-            ),
-          ],
-        ),
-      );
-    } else {
-      return Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          ListTile(
-            contentPadding: EdgeInsets.only(right: 8),
-            leading: ClipRRect(
-              borderRadius: const BorderRadius.all(Radius.circular(4)),
-              child: SizedBox(
-                height: 60,
-                width: 60,
-                child: imageWidget,
-              ),
-            ),
-            title: Text(destination.destination,
-                style: Theme.of(context).textTheme.subhead),
-            subtitle: Text(
-              destination.subtitle(context),
-              style: Theme.of(context).textTheme.subtitle,
-            ),
-          ),
-          Divider(),
-        ],
-      );
-    }
   }
 }

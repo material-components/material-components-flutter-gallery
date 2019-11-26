@@ -16,34 +16,41 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class BorderTabIndicator extends Decoration {
-  BorderTabIndicator(this.indicatorHeight) : super();
+  BorderTabIndicator({this.indicatorHeight, this.textScaleFactor}) : super();
 
   final double indicatorHeight;
+  final double textScaleFactor;
 
   @override
   _BorderPainter createBoxPainter([VoidCallback onChanged]) {
-    return _BorderPainter(this, indicatorHeight, onChanged);
+    return _BorderPainter(
+        this, indicatorHeight, this.textScaleFactor, onChanged);
   }
 }
 
 class _BorderPainter extends BoxPainter {
-  _BorderPainter(this.decoration, this.indicatorHeight, VoidCallback onChanged)
-      : assert(decoration != null),
+  _BorderPainter(
+    this.decoration,
+    this.indicatorHeight,
+    this.textScaleFactor,
+    VoidCallback onChanged,
+  )   : assert(decoration != null),
         assert(indicatorHeight >= 0),
         super(onChanged);
 
   final BorderTabIndicator decoration;
   final double indicatorHeight;
+  final double textScaleFactor;
 
   @override
   void paint(Canvas canvas, Offset offset, ImageConfiguration configuration) {
     assert(configuration != null);
     assert(configuration.size != null);
-    final double horizontalInset = 12;
-    final Rect rect = Offset(offset.dx + horizontalInset,
+    final horizontalInset = 16 - 4 * textScaleFactor;
+    final rect = Offset(offset.dx + horizontalInset,
             (configuration.size.height / 2) - indicatorHeight / 2 - 1) &
         Size(configuration.size.width - 2 * horizontalInset, indicatorHeight);
-    final Paint paint = Paint();
+    final paint = Paint();
     paint.color = Colors.white;
     paint.style = PaintingStyle.stroke;
     paint.strokeWidth = 2;

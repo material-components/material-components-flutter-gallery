@@ -14,6 +14,7 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:gallery/data/gallery_options.dart';
 
 import '../../../l10n/gallery_localizations.dart';
 
@@ -52,7 +53,14 @@ class FlyDestination extends Destination {
 
   String subtitle(BuildContext context) {
     final stopsText = GalleryLocalizations.of(context).craneFlyStops(stops);
-    return duration == null ? stopsText : '$stopsText · $duration';
+    final textDirection = GalleryOptions.of(context).textDirection();
+    if (duration == null) {
+      return stopsText;
+    } else {
+      return textDirection == TextDirection.ltr
+          ? '$stopsText · $duration'
+          : '$duration · $stopsText';
+    }
   }
 }
 

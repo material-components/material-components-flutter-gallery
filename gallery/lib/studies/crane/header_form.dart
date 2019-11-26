@@ -13,7 +13,6 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
-
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/crane/colors.dart';
 
@@ -37,22 +36,27 @@ class HeaderForm extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: isDesktop ? 120 : 24),
       child: isDesktop
-          ? Row(children: [
-              for (final field in fields)
-                Flexible(
-                  child: Padding(
-                    padding: const EdgeInsets.only(right: 16),
+          ? Row(
+              children: [
+                for (final field in fields)
+                  Flexible(
+                    child: Padding(
+                      padding: const EdgeInsetsDirectional.only(end: 16),
+                      child: _HeaderTextField(field: field),
+                    ),
+                  )
+              ],
+            )
+          : Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                for (final field in fields)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
                     child: _HeaderTextField(field: field),
-                  ),
-                )
-            ])
-          : Column(children: [
-              for (final field in fields)
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 8),
-                  child: _HeaderTextField(field: field),
-                )
-            ]),
+                  )
+              ],
+            ),
     );
   }
 }
