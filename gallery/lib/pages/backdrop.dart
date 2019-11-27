@@ -128,12 +128,14 @@ class _BackdropState extends State<Backdrop>
               ),
               child: Align(
                 alignment: AlignmentDirectional.topEnd,
-                child: ClipRRect(
+                child: Material(
+                  elevation: 8,
+                  clipBehavior: Clip.antiAlias,
                   borderRadius: BorderRadius.circular(40),
+                  color: Theme.of(context).colorScheme.secondaryVariant,
                   child: Container(
-                    color: Theme.of(context).colorScheme.secondaryVariant,
                     constraints: const BoxConstraints(
-                      maxHeight: 768,
+                      maxHeight: 560,
                       maxWidth: desktopSettingsWidth,
                       minWidth: desktopSettingsWidth,
                     ),
