@@ -654,6 +654,30 @@
     description="Generic item placeholder."
     >Item {value}</string>
   <string
+    name="demoListsTitle"
+    description="Title for lists demo."
+    >Lists</string>
+  <string
+    name="demoListsSubtitle"
+    description="Subtitle for lists demo."
+    >Scrolling list layouts</string>
+  <string
+    name="demoListsDescription"
+    description="Description for lists demo. This describes what a single row in a list consists of."
+    >A single fixed-height row that typically contains some text as well as a leading or trailing icon.</string>
+  <string
+    name="demoOneLineListsTitle"
+    description="Title for lists demo with only one line of text per row."
+    >One Line</string>
+  <string
+    name="demoTwoLineListsTitle"
+    description="Title for lists demo with two lines of text per row."
+    >Two Lines</string>
+  <string
+    name="demoListsSecondary"
+    description="Text that appears in the second line of a list item."
+    >Secondary text</string>
+  <string
     name="demoTabsTitle"
     description="Title for tabs demo."
     >Tabs</string>

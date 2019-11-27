@@ -337,6 +337,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Input Chip"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("Couldn\'t display URL:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "A single fixed-height row that typically contains some text as well as a leading or trailing icon."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Secondary text"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("Scrolling list layouts"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Lists"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("One Line"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Options"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Outline buttons become opaque and elevate when pressed. They are often paired with raised buttons to indicate an alternative, secondary action."),
@@ -409,6 +418,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Toggle buttons can be used to group related options. To emphasize groups of related toggle buttons, a group should share a common container"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Toggle Buttons"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Two Lines"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Definitions for the various typographical styles found in Material Design."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(

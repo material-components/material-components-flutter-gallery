@@ -689,6 +689,30 @@
       }
     }
   },
+  "demoListsTitle": "Lists",
+  "@demoListsTitle": {
+    "description": "Title for lists demo."
+  },
+  "demoListsSubtitle": "Scrolling list layouts",
+  "@demoListsSubtitle": {
+    "description": "Subtitle for lists demo."
+  },
+  "demoListsDescription": "A single fixed-height row that typically contains some text as well as a leading or trailing icon.",
+  "@demoListsDescription": {
+    "description": "Description for lists demo. This describes what a single row in a list consists of."
+  },
+  "demoOneLineListsTitle": "One Line",
+  "@demoOneLineListsTitle": {
+    "description": "Title for lists demo with only one line of text per row."
+  },
+  "demoTwoLineListsTitle": "Two Lines",
+  "@demoTwoLineListsTitle": {
+    "description": "Title for lists demo with two lines of text per row."
+  },
+  "demoListsSecondary": "Secondary text",
+  "@demoListsSecondary": {
+    "description": "Text that appears in the second line of a list item."
+  },
   "demoTabsTitle": "Tabs",
   "@demoTabsTitle": {
     "description": "Title for tabs demo."

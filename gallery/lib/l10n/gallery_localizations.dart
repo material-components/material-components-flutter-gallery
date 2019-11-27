@@ -1361,6 +1361,43 @@ class GalleryLocalizations {
         desc: r'Error message when opening the URL for a demo.');
   }
 
+  String get demoListsDescription {
+    return Intl.message(
+        r'A single fixed-height row that typically contains some text as well as a leading or trailing icon.',
+        locale: _localeName,
+        name: 'demoListsDescription',
+        desc:
+            r'Description for lists demo. This describes what a single row in a list consists of.');
+  }
+
+  String get demoListsSecondary {
+    return Intl.message(r'Secondary text',
+        locale: _localeName,
+        name: 'demoListsSecondary',
+        desc: r'Text that appears in the second line of a list item.');
+  }
+
+  String get demoListsSubtitle {
+    return Intl.message(r'Scrolling list layouts',
+        locale: _localeName,
+        name: 'demoListsSubtitle',
+        desc: r'Subtitle for lists demo.');
+  }
+
+  String get demoListsTitle {
+    return Intl.message(r'Lists',
+        locale: _localeName,
+        name: 'demoListsTitle',
+        desc: r'Title for lists demo.');
+  }
+
+  String get demoOneLineListsTitle {
+    return Intl.message(r'One Line',
+        locale: _localeName,
+        name: 'demoOneLineListsTitle',
+        desc: r'Title for lists demo with only one line of text per row.');
+  }
+
   String get demoOptionsTooltip {
     return Intl.message(r'Options',
         locale: _localeName,
@@ -1655,6 +1692,13 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'demoToggleButtonTitle',
         desc: r'Title for the toggle buttons component demo.');
+  }
+
+  String get demoTwoLineListsTitle {
+    return Intl.message(r'Two Lines',
+        locale: _localeName,
+        name: 'demoTwoLineListsTitle',
+        desc: r'Title for lists demo with two lines of text per row.');
   }
 
   String get demoTypographyDescription {

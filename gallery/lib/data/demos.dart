@@ -14,6 +14,7 @@ import 'package:gallery/demos/material/bottom_sheet_demo.dart';
 import 'package:gallery/demos/material/button_demo.dart';
 import 'package:gallery/demos/material/chip_demo.dart';
 import 'package:gallery/demos/material/dialog_demo.dart';
+import 'package:gallery/demos/material/list_demo.dart';
 import 'package:gallery/demos/material/tabs_demo.dart';
 import 'package:gallery/demos/material/text_field_demo.dart';
 import 'package:gallery/demos/reference/colors_demo.dart';
@@ -227,6 +228,27 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/widgets/PageRoute/fullscreenDialog.html',
           buildRoute: (_) => DialogDemo(type: DialogDemoType.fullscreen),
+        ),
+      ],
+    ),
+    GalleryDemo(
+      title: GalleryLocalizations.of(context).demoListsTitle,
+      icon: GalleryIcons.listAlt,
+      subtitle: GalleryLocalizations.of(context).demoListsSubtitle,
+      configurations: [
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoOneLineListsTitle,
+          description: GalleryLocalizations.of(context).demoListsDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/ListTile-class.html',
+          buildRoute: (context) => ListDemo(type: ListDemoType.oneLine),
+        ),
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context).demoTwoLineListsTitle,
+          description: GalleryLocalizations.of(context).demoListsDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/ListTile-class.html',
+          buildRoute: (context) => ListDemo(type: ListDemoType.twoLine),
         ),
       ],
     ),
