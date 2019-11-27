@@ -166,40 +166,48 @@ class _CategoryHeader extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           child: InkWell(
             onTap: onTap,
-            child: Wrap(
-              crossAxisAlignment: WrapCrossAlignment.center,
+            child: Row(
               children: [
-                Padding(
-                  padding: imagePadding,
-                  child: ExcludeSemantics(
-                    child: Image.asset(
-                      imageString,
-                      width: 64,
-                      height: 64,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsetsDirectional.only(start: 8),
-                  child: Text(
-                    title,
-                    style: Theme.of(context).textTheme.headline.apply(
-                          color: colorScheme.onSurface,
+                Expanded(
+                  child: Wrap(
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    children: [
+                      Padding(
+                        padding: imagePadding,
+                        child: ExcludeSemantics(
+                          child: Image.asset(
+                            imageString,
+                            width: 64,
+                            height: 64,
+                          ),
                         ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsetsDirectional.only(start: 8),
+                        child: Text(
+                          title,
+                          style: Theme.of(context).textTheme.headline.apply(
+                                color: colorScheme.onSurface,
+                              ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 Opacity(
                   opacity: chevronOpacity,
-                  child: Padding(
-                    padding: const EdgeInsetsDirectional.only(
-                      start: 8,
-                      end: 32,
-                    ),
-                    child: Icon(
-                      Icons.keyboard_arrow_up,
-                      color: colorScheme.onSurface,
-                    ),
-                  ),
+                  child: chevronOpacity != 0
+                      ? Padding(
+                          padding: const EdgeInsetsDirectional.only(
+                            start: 8,
+                            end: 32,
+                          ),
+                          child: Icon(
+                            Icons.keyboard_arrow_up,
+                            color: colorScheme.onSurface,
+                          ),
+                        )
+                      : null,
                 ),
               ],
             ),
