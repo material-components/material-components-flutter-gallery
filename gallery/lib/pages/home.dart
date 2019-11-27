@@ -6,6 +6,8 @@ import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
+
 import 'package:gallery/constants.dart';
 import 'package:gallery/data/demos.dart';
 import 'package:gallery/data/gallery_options.dart';
@@ -646,7 +648,7 @@ class _CarouselCard extends StatelessWidget {
           onTap: () {
             Navigator.of(context).push<void>(
               MaterialPageRoute(
-                builder: (context) => study,
+                builder: (context) => _StudyWrapper(study: study),
               ),
             );
           },
@@ -691,3 +693,50 @@ double _carouselHeight(double scaleFactor, BuildContext context) => math.max(
         GalleryOptions.of(context).textScaleFactor(context) *
         scaleFactor,
     _carouselHeightMin);
+
+/// Wrap the studies with this to display a back button and allow the user to
+/// exit them at any time.
+class _StudyWrapper extends StatelessWidget {
+  const _StudyWrapper({Key key, this.study}) : super(key: key);
+
+  final Widget study;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
+
+    return ApplyTextOptions(
+      child: Stack(
+        children: [
+          Semantics(
+            sortKey: OrdinalSortKey(1),
+            child: study,
+          ),
+          Semantics(
+            sortKey: OrdinalSortKey(0),
+            child: Align(
+              alignment: AlignmentDirectional.bottomStart,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: FloatingActionButton.extended(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  icon: IconTheme(
+                    data: IconThemeData(color: colorScheme.onPrimary),
+                    child: BackButtonIcon(),
+                  ),
+                  label: Text(
+                    MaterialLocalizations.of(context).backButtonTooltip,
+                    style: textTheme.button.apply(color: colorScheme.onPrimary),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

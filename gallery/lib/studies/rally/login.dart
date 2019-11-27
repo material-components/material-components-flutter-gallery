@@ -22,16 +22,6 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return ApplyTextOptions(
       child: Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          leading: IconButton(
-            icon: const BackButtonIcon(),
-            tooltip: MaterialLocalizations.of(context).backButtonTooltip,
-            onPressed: () {
-              Navigator.of(context, rootNavigator: true).pop();
-            },
-          ),
-        ),
         body: SafeArea(
           child: _MainView(
             usernameController: _usernameController,
@@ -134,6 +124,7 @@ class _TopBar extends StatelessWidget {
     final spacing = const SizedBox(width: 30);
     return Container(
       width: double.infinity,
+      margin: const EdgeInsets.only(top: 8),
       padding: EdgeInsets.symmetric(horizontal: 30),
       child: Wrap(
         alignment: WrapAlignment.spaceBetween,
