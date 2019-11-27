@@ -2,13 +2,14 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'dart:math';
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
+import 'package:gallery/layout/text_scale.dart';
 import 'package:gallery/studies/rally/charts/line_chart.dart';
 import 'package:gallery/studies/rally/charts/pie_chart.dart';
 import 'package:gallery/studies/rally/charts/vertical_fraction_bar.dart';
@@ -34,6 +35,7 @@ class FinancialEntityView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final maxWidth = pieChartMaxSize + (cappedTextScale(context) - 1.0) * 100.0;
     return LayoutBuilder(builder: (context, constraints) {
       return Column(
         children: [
@@ -42,8 +44,10 @@ class FinancialEntityView extends StatelessWidget {
               // We decrease the max height to ensure the [RallyPieChart] does
               // not take up the full height when it is smaller than
               // [kPieChartMaxSize].
-              maxHeight:
-                  min(constraints.biggest.shortestSide * 0.9, kPieChartMaxSize),
+              maxHeight: math.min(
+                constraints.biggest.shortestSide * 0.9,
+                maxWidth,
+              ),
             ),
             child: RallyPieChart(
               heroLabel: heroLabel,
@@ -55,14 +59,13 @@ class FinancialEntityView extends StatelessWidget {
           const SizedBox(height: 24),
           Container(
             height: 1,
-            constraints: const BoxConstraints(maxWidth: kPieChartMaxSize),
+            constraints: BoxConstraints(maxWidth: maxWidth),
             color: RallyColors.inputBackground,
           ),
           Container(
-            constraints: const BoxConstraints(maxWidth: kPieChartMaxSize),
+            constraints: BoxConstraints(maxWidth: maxWidth),
             color: RallyColors.cardBackground,
-            child: ListView(
-              shrinkWrap: true,
+            child: Column(
               children: financialEntityCards,
             ),
           ),
@@ -94,6 +97,7 @@ class FinancialEntityCategoryView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return Semantics.fromProperties(
       properties: SemanticsProperties(
         button: true,
@@ -109,60 +113,66 @@ class FinancialEntityCategoryView extends StatelessWidget {
             ),
           );
         },
-        child: SizedBox(
-          height: 68,
-          child: Column(
-            children: [
-              Expanded(
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 12, right: 12),
-                      child: VerticalFractionBar(
-                        color: indicatorColor,
-                        fraction: indicatorFraction,
-                      ),
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.symmetric(vertical: 16),
+              child: Row(
+                children: [
+                  Container(
+                    alignment: Alignment.center,
+                    height: 32 + 60 * (cappedTextScale(context) - 1),
+                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                    child: VerticalFractionBar(
+                      color: indicatorColor,
+                      fraction: indicatorFraction,
                     ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                  ),
+                  Expanded(
+                    child: Wrap(
+                      alignment: WrapAlignment.spaceBetween,
+                      crossAxisAlignment: WrapCrossAlignment.center,
                       children: [
-                        Text(
-                          title,
-                          style: Theme.of(context)
-                              .textTheme
-                              .body1
-                              .copyWith(fontSize: 16),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              title,
+                              style: textTheme.body1.copyWith(fontSize: 16),
+                            ),
+                            Text(
+                              subtitle,
+                              style: textTheme.body1
+                                  .copyWith(color: RallyColors.gray60),
+                            ),
+                          ],
                         ),
                         Text(
-                          subtitle,
-                          style: Theme.of(context)
-                              .textTheme
-                              .body1
-                              .copyWith(color: RallyColors.gray60),
+                          amount,
+                          style: textTheme.body2.copyWith(
+                            fontSize: 20,
+                            color: RallyColors.gray,
+                          ),
                         ),
                       ],
                     ),
-                    const Spacer(),
-                    Text(
-                      amount,
-                      style: Theme.of(context)
-                          .textTheme
-                          .body2
-                          .copyWith(fontSize: 20, color: RallyColors.gray),
-                    ),
-                    SizedBox(width: 32, child: suffix),
-                  ],
-                ),
+                  ),
+                  Container(
+                    constraints: BoxConstraints(minWidth: 32),
+                    padding: EdgeInsetsDirectional.only(start: 12),
+                    child: suffix,
+                  ),
+                ],
               ),
-              const Divider(
-                height: 1,
-                indent: 16,
-                endIndent: 16,
-                color: Color(0xAA282828),
-              ),
-            ],
-          ),
+            ),
+            const Divider(
+              height: 1,
+              indent: 16,
+              endIndent: 16,
+              color: Color(0xAA282828),
+            ),
+          ],
         ),
       ),
     );
@@ -307,26 +317,28 @@ class FinancialEntityCategoryDetailsPage extends StatelessWidget {
       );
     }).toList();
 
-    return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        centerTitle: true,
-        title: Text(
-          GalleryLocalizations.of(context).rallyAccountDataChecking,
-          style: Theme.of(context).textTheme.body1.copyWith(fontSize: 18),
+    return ApplyTextOptions(
+      child: Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          centerTitle: true,
+          title: Text(
+            GalleryLocalizations.of(context).rallyAccountDataChecking,
+            style: Theme.of(context).textTheme.body1.copyWith(fontSize: 18),
+          ),
         ),
-      ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 200,
-            width: double.infinity,
-            child: RallyLineChart(events: items),
-          ),
-          Flexible(
-            child: ListView(shrinkWrap: true, children: cards),
-          ),
-        ],
+        body: Column(
+          children: [
+            SizedBox(
+              height: 200,
+              width: double.infinity,
+              child: RallyLineChart(events: items),
+            ),
+            Expanded(
+              child: ListView(shrinkWrap: true, children: cards),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -346,55 +358,48 @@ class _DetailedEventCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-    final textDirection = GalleryOptions.of(context).textDirection();
     return FlatButton(
       onPressed: () {},
-      child: SizedBox(
-        height: 68,
-        child: Column(
-          children: [
-            SizedBox(
-              height: 67,
-              child: Row(
-                textDirection: textDirection,
-                children: [
-                  Column(
-                    textDirection: textDirection,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        title,
-                        style: textTheme.body1.copyWith(fontSize: 16),
-                      ),
-                      Text(
-                        shortDateFormat(context).format(date),
-                        semanticsLabel: longDateFormat(context).format(date),
-                        style:
-                            textTheme.body1.copyWith(color: RallyColors.gray60),
-                      )
-                    ],
-                  ),
-                  const Spacer(),
-                  Text(
-                    usdWithSignFormat(context).format(amount),
-                    style: textTheme.body2
-                        .copyWith(fontSize: 20, color: RallyColors.gray),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16),
-              child: SizedBox(
-                height: 1,
-                child: Container(
-                  color: const Color(0xAA282828),
+      padding: EdgeInsets.symmetric(horizontal: 16),
+      child: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 16),
+            width: double.infinity,
+            child: Wrap(
+              alignment: WrapAlignment.spaceBetween,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      title,
+                      style: textTheme.body1.copyWith(fontSize: 16),
+                    ),
+                    Text(
+                      shortDateFormat(context).format(date),
+                      semanticsLabel: longDateFormat(context).format(date),
+                      style:
+                          textTheme.body1.copyWith(color: RallyColors.gray60),
+                    ),
+                  ],
                 ),
-              ),
+                Text(
+                  usdWithSignFormat(context).format(amount),
+                  style: textTheme.body2
+                      .copyWith(fontSize: 20, color: RallyColors.gray),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+          SizedBox(
+            height: 1,
+            child: Container(
+              color: const Color(0xAA282828),
+            ),
+          ),
+        ],
       ),
     );
   }

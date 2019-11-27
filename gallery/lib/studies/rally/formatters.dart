@@ -39,6 +39,6 @@ DateFormat longDateFormat(BuildContext context) =>
 DateFormat dateFormatAbbreviatedMonthDay(BuildContext context) =>
     DateFormat.MMMd(locale(context));
 
-/// Date formatter with year and full month.
+/// Date formatter with year and abbreviated month.
 DateFormat dateFormatMonthYear(BuildContext context) =>
-    DateFormat.yMMMM(locale(context));
+    DateFormat.yMMM(locale(context));

@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
+import 'package:gallery/layout/text_scale.dart';
 import 'package:gallery/studies/rally/tabs/accounts.dart';
 import 'package:gallery/studies/rally/tabs/bills.dart';
 import 'package:gallery/studies/rally/tabs/budgets.dart';
@@ -56,7 +57,7 @@ class _HomePageState extends State<HomePage>
       tabBarView = Row(
         children: [
           Container(
-            width: 150,
+            width: 150 + 50 * (cappedTextScale(context) - 1),
             alignment: Alignment.topCenter,
             padding: const EdgeInsets.symmetric(vertical: 32),
             child: Column(
@@ -317,8 +318,8 @@ class _RallyTabState extends State<_RallyTab>
     const expandedTitleWidthMultiplier = 2;
     final unitWidth = width / (tabCount + expandedTitleWidthMultiplier);
 
-    return SizedBox(
-      height: 56,
+    return ConstrainedBox(
+      constraints: BoxConstraints(minHeight: 56),
       child: Row(
         children: [
           FadeTransition(
@@ -332,7 +333,9 @@ class _RallyTabState extends State<_RallyTab>
             child: SizeTransition(
               child: SizedBox(
                 width: unitWidth * expandedTitleWidthMultiplier,
-                child: Center(child: ExcludeSemantics(child: widget.titleText)),
+                child: Center(
+                  child: ExcludeSemantics(child: widget.titleText),
+                ),
               ),
               axis: Axis.horizontal,
               axisAlignment: -1,

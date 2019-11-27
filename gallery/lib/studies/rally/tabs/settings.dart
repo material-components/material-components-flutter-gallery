@@ -19,13 +19,11 @@ class _SettingsViewState extends State<SettingsView> {
     final items = DummyDataService.getSettingsTitles(context)
         .map((title) => _SettingsItem(title))
         .toList();
-    return SingleChildScrollView(
-      child: Container(
-        padding: isDisplayDesktop(context) ? EdgeInsets.only(top: 24) : null,
-        child: ListView(
-          shrinkWrap: true,
-          children: items,
-        ),
+    return Container(
+      padding: EdgeInsets.only(top: isDisplayDesktop(context) ? 24 : 0),
+      child: ListView(
+        shrinkWrap: true,
+        children: items,
       ),
     );
   }
@@ -40,11 +38,10 @@ class _SettingsItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return FlatButton(
       textColor: Colors.white,
-      child: SizedBox(
-        height: 60,
-        child: Row(children: <Widget>[
-          Text(title),
-        ]),
+      child: Container(
+        alignment: AlignmentDirectional.centerStart,
+        padding: EdgeInsets.symmetric(vertical: 24, horizontal: 12),
+        child: Text(title),
       ),
       onPressed: () {
         Navigator.push<void>(

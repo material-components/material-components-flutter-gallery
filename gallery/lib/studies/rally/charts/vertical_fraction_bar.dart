@@ -12,23 +12,25 @@ class VerticalFractionBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 32,
-      width: 4,
-      child: Column(
-        children: [
-          SizedBox(
-            height: (1 - fraction) * 32,
-            child: Container(
-              color: Colors.black,
+    return LayoutBuilder(builder: (context, constraints) {
+      return SizedBox(
+        height: constraints.maxHeight,
+        width: 4,
+        child: Column(
+          children: [
+            SizedBox(
+              height: (1 - fraction) * constraints.maxHeight,
+              child: Container(
+                color: Colors.black,
+              ),
             ),
-          ),
-          SizedBox(
-            height: fraction * 32,
-            child: Container(color: color),
-          ),
-        ],
-      ),
-    );
+            SizedBox(
+              height: fraction * constraints.maxHeight,
+              child: Container(color: color),
+            ),
+          ],
+        ),
+      );
+    });
   }
 }
