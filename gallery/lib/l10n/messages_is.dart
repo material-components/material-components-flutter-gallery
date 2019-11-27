@@ -24,13 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Staðgengill fyrir flipann ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Engir veitingastaðir', one: '1 veitingastaður', other: '${totalRestaurants} veitingastaðir')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Engar millilendingar', one: 'Ein millilending', other: '${numberOfStops} millilendingar')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Engar tiltækar eignir', one: '1 tiltæk eign', other: '${totalProperties} tiltækar eignir')}";
 
   static m5(value) => "Vara ${value}";
 
@@ -39,7 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Þú valdir: „${value}“";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${accountName}, reikningur ${accountNumber}, að upphæð ${amount}.";
 
   static m9(amount) => "Þú hefur eytt ${amount} í hraðbankagjöld í mánuðinum";
 
@@ -52,16 +52,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "Þú hefur eytt ${amount} á veitingastöðum í vikunni.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Auktu hugsanlegan frádrátt frá skatti! Úthluta flokkum á 1 óúthlutaða færslu.', other: 'Auktu hugsanlegan frádrátt frá skatti! Úthluta flokkum á ${count} óúthlutaðar færslur.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "${billName}, gjalddagi ${date}, að upphæð ${amount}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "${budgetName} kostnaðarhámark þar sem ${amountUsed} er notað af ${amountTotal} og ${amountLeft} er eftir";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'ENGIN ATRIÐI', one: '1 ATRIÐI', other: '${quantity} ATRIÐI')}";
 
   static m17(price) => "x ${price}";
 
@@ -313,11 +313,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Hnappar"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Notað til að velja á milli valkosta sem útiloka hvern annan. Þegar einn valkostur í hlutavali er valinn er ekki lengur hægt að velja hina valkostina."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage("Hlutaval með iOS-stíl"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Hlutaval"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Einfaldur, tilkynning og allur skjárinn"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Gluggar"),
@@ -361,10 +361,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Einfalt"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Flipar raða efni á mismunandi skjái, mismunandi gagnasöfn og önnur samskipti."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Flipar með sjálfstæðu yfirliti sem hægt er að fletta um"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Flipar"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Textareitir gera notendum kleift að slá texta inn í notendaviðmót. Þeir eru yfirleitt á eyðublöðum og í gluggum."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("Netfang"),
@@ -515,11 +515,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Notandanafn"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("SJÁ ALLT"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Sjá alla reikninga"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Sjá alla reikninga"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Sjá allt kostnaðarhámark"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Finna hraðbanka"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Hjálp"),
@@ -565,7 +565,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("Vinstri til hægri"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("Byggt á staðsetningu"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("Hægri til vinstri"),
         "settingsTextScaling":
@@ -688,16 +688,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney belti"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Loka körfu"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Loka valmynd"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Opna valmynd"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Fjarlægja atriði"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Leita"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Stillingar"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Hraðvirkt upphafsútlit"),
         "starterAppDrawerItem": m19,

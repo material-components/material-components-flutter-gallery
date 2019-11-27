@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "${title} fitxaren leku-marka";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Ez dauka jatetxerik', one: '1 jatetxe', other: '${totalRestaurants} jatetxe')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Geldialdirik gabekoa', one: '1 geldialdi', other: '${numberOfStops} geldialdi')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Ez dauka jabetzarik erabilgarri', one: '1 jabetza erabilgarri', other: '${totalProperties} jabetza erabilgarri')}";
 
   static m5(value) => "Elementua: ${value}";
 
@@ -41,7 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Hau hautatu duzu: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${accountName} bankuko ${accountNumber} kontua (${amount}).";
 
   static m9(amount) =>
       "Hilabete honetan ${amount} gastatu duzu kutxazainetako komisioetan";
@@ -55,16 +55,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "Aste honetan ${amount} gastatu duzu jatetxeetan.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Zerga-kenkari potentzial handiagoa! Esleitu kategoriak esleitu gabeko transakzio bati.', other: 'Zerga-kenkari potentzial handiagoa! Esleitu kategoriak esleitu gabeko ${count} transakziori.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "${billName} faktura (${amount}) data honetan ordaindu behar da: ${date}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "\"${budgetName}\" izeneko aurrekontua: ${amountUsed}/${amountTotal} erabilita; ${amountLeft} gelditzen da";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'EZ DAGO PRODUKTURIK', one: '1 PRODUKTU', other: '${quantity} PRODUKTU')}";
 
   static m17(price) => "x ${price}";
 
@@ -171,7 +171,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormDates": MessageLookupByLibrary.simpleMessage("Hautatu datak"),
         "craneFormDestination":
             MessageLookupByLibrary.simpleMessage("Aukeratu helmuga"),
-        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Kafetegiak"),
+        "craneFormDiners": MessageLookupByLibrary.simpleMessage("Mahaikideak"),
         "craneFormLocation":
             MessageLookupByLibrary.simpleMessage("Hautatu kokapena"),
         "craneFormOrigin":
@@ -311,11 +311,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Botoiak"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Bata bestearen baztergarri diren zenbait aukeraren artean hautatzeko erabiltzen da. Segmentatutako kontroleko aukera bat hautatzen denean, segmentatutako kontroleko gainerako aukerak desautatu egiten dira."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "iOS estiloarekin segmentatutako kontrola"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Segmentatutako kontrola"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Arrunta, alerta eta pantaila osoa"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Leihoak"),
@@ -360,10 +361,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Arrunta"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Fitxei esker, edukia antolatuta dago pantailetan, datu multzoetan eta bestelako elkarrekintza sortetan."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Independenteki gora eta behera mugi daitezkeen fitxak"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Fitxak"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Testu-eremuen bidez, erabiltzaileek testua idatz dezakete erabiltzaile-interfaze batean. Inprimaki eta leiho gisa agertu ohi dira."),
         "demoTextFieldEmail":
@@ -520,11 +521,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Erabiltzaile-izena"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("IKUSI GUZTIAK"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Ikusi kontu guztiak"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Ikusi faktura guztiak"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Ikusi aurrekontu guztiak"),
         "rallySettingsFindAtms": MessageLookupByLibrary.simpleMessage(
             "Aurkitu kutxazain automatikoak"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Laguntza"),
@@ -573,7 +574,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("Ezkerretik eskuinera"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage(
+                "Lurraldeko ezarpenetan oinarrituta"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("Eskuinetik ezkerrera"),
         "settingsTextScaling":
@@ -697,16 +699,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney gerrikoa"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Itxi saskia"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Itxi menua"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Ireki menua"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Kendu produktua"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Bilatu"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Ezarpenak"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Hasierako diseinu sentikorra"),
         "starterAppDrawerItem": m19,

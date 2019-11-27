@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "${title} ටැබය සඳහා තැන් දරණුව";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'අවන්හල් නැත', one: 'අවන්හල් 1', other: 'අවන්හල් ${totalRestaurants}')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'අඛණ්ඩ', one: 'නැවතුම් 1', other: 'නැවතුම් ${numberOfStops}ක්')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'ලබා ගත හැකි කුලී නිවාස නැත', one: 'ලබා ගත හැකි කුලී නිවාස 1', other: 'ලබා ගත හැකි කුලී නිවාස ${totalProperties}')}";
 
   static m5(value) => "අයිතමය ${value}";
 
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "ඔබ මෙය තෝරා ඇත: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${accountName} ගිණුම ${accountNumber} ${amount}කි.";
 
   static m9(amount) => "ඔබ මේ මාසයේ ATM ගාස්තු සඳහා ${amount} වියදම් කර ඇත";
 
@@ -53,16 +53,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "ඔබ මේ සතියේ අවන්හල් සඳහා ${amount} වියදම් කර ඇත";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'ඔබේ විය හැකි බදු අඩු කිරීම වැඩි කරන්න! නොපවරන ලද ගනුදෙනු 1කට වර්ගීකරණ පවරන්න.', other: 'ඔබේ විය හැකි බදු අඩු කිරීම වැඩි කරන්න! නොපවරන ලද ගනුදෙනු ${count}කට වර්ගීකරණ පවරන්න.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "${billName} බිල්පත ${date} දිනට ${amount}කි.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "${amountTotal} කින් ${amountUsed}ක් භාවිත කළ ${budgetName} අයවැය, ඉතිරි ${amountLeft}";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'අයිතම නැත', one: 'අයිතම 1', other: 'අයිතම ${quantity}')}";
 
   static m17(price) => "x {මිල}";
 
@@ -314,11 +314,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("බොත්තම්"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "අන්‍යෝන්‍ය වශයෙන් බහිෂ්කාර විකල්ප ගණනාවක් අතර තෝරා ගැනීමට භාවිත කරයි. කොටස් කළ පාලනයේ එක් විකල්පයක් තෝරා ගත් විට, කොටස් කළ පාලනයේ අනෙක් විකල්ප තෝරා ගැනීම නතර වේ."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage("iOS-විලාස කොටස් කළ පාලනය"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("කොටස් කළ පාලනය"),
         "demoDialogSubtitle":
             MessageLookupByLibrary.simpleMessage("සරල, ඇඟවීම සහ පූර්ණ තිරය"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("සංවාද"),
@@ -361,10 +361,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "සරල සංවාදයක් විකල්ප කීපයක් අතර තෝරා ගැනීමක් පිරිනමයි. සරල සංවාදයක තෝරා ගැනීම් ඉහළ සංදර්ශනය වන විකල්ප මාතෘකාවක් ඇත."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("සරල"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "ටැබ විවිධ තිර, දත්ත කට්ටල සහ වෙනත් අන්තර්ක්‍රියා හරහා අන්තර්ගතය සංවිධානය කරයි."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "ස්වාධීනව අනුචලනය කළ හැකි දසුන් සහිත ටැබ"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("ටැබ"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "පෙළ ක්ෂේත්‍ර පරිශීලකයන්ට පෙළ UI එකකට ඇතුළු කිරීමට ඉඩ දෙයි. ඒවා සාමාන්‍යයෙන් ආකෘති සහ සංවාදවල දිස් වේ."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("ඉ-තැපෑල"),
@@ -516,11 +516,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("පරිශීලක නම"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("සියල්ල බලන්න"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("සියලු ගිණුම් බලන්න"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("සියලු බිල්පත් බලන්න"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("සියලු අයවැය බලන්න"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ATMs සොයන්න"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("උදව්"),
@@ -565,7 +565,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("පෙළ දිශාව"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("පෙදෙසිය මත පදනම්"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("පෙළ පරිමාණ කිරීම"),
@@ -684,16 +684,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("බහලුම වසන්න"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("මෙනුව වසන්න"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("මෙනුව විවෘත කරන්න"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("අයිතමය ඉවත් කරන්න"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("සෙවීම"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("සැකසීම්"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("ප්‍රතිචාරාත්මක පිරිසැලසුමක්"),
         "starterAppDrawerItem": m19,

@@ -24,13 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "${title} қойындысына арналған толтырғыш белгі";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Мейрамханалар жоқ', one: '1 мейрамхана', other: '${totalRestaurants} мейрамхана')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Тікелей рейс', one: '1 ауысып міну', other: '${numberOfStops} аялдама')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Қолжетімді қонақүйлер жоқ', one: '1 қолжетімді қонақүй', other: '${totalProperties} қолжетімді қонақүй')}";
 
   static m5(value) => "${value}";
 
@@ -39,7 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Таңдалған мән: \"${value}\".";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${accountNumber} нөмірлі ${accountName} банк шотында ${amount} сома бар.";
 
   static m9(amount) =>
       "Осы айда банкоматтардың комиссиялық алымына ${amount} жұмсадыңыз.";
@@ -53,16 +53,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "Осы аптада мейрамханаларға ${amount} жұмсадыңыз.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Салықтың шегерілетін сомасын арттырыңыз! 1 тағайындалмаған транзакцияға санаттар тағайындаңыз.', other: 'Салықтың шегерілетін сомасын арттырыңыз! ${count} тағайындалмаған транзакцияға санаттар тағайындаңыз.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "${amount} сомасындағы ${billName} төлемі ${date} күні төленуі керек.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "${budgetName} бюджеті: пайдаланылғаны: ${amountUsed}/${amountTotal}, қалғаны: ${amountLeft}";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'ЭЛЕМЕНТТЕР ЖОҚ', one: '1 ЭЛЕМЕНТ', other: '${quantity} ЭЛЕМЕНТ')}";
 
   static m17(price) => "x ${price}";
 
@@ -299,11 +299,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Түймелер"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Бірнеше өзара жалғыз опциялар арасында таңдауға пайдаланылады. Сегменттелген басқаруда бір опция талдалса, ондағы басқа опциялар таңдалмайды."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "iOS стильді сегменттелген басқару"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Cегменттелген басқару"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Қарапайым, ескерту және толық экран"),
         "demoDialogTitle":
@@ -349,10 +350,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Қарапайым"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Қойындылар түрлі экрандардағы, деректер жинағындағы және тағы басқа өзара қатынастардағы мазмұнды реттейді."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Жеке айналмалы көріністері бар қойындылар"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Қойындылар"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Мәтін өрістері арқылы пайдаланушы интерфейсіне мәтін енгізуге болады. Әдетте олар үлгілер мен диалогтік терезелерге шығады."),
         "demoTextFieldEmail":
@@ -502,12 +503,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("Пайдаланушы аты"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("БАРЛЫҒЫН КӨРУ"),
-        "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllAccounts": MessageLookupByLibrary.simpleMessage(
+            "Барлық есептік жазбаларды көру"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Барлық төлемдерді көру"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Барлық бюджеттерді көру"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Банкоматтар табу"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Анықтама"),
@@ -553,7 +554,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("СОЛДАН ОҢҒА"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("Тіл негізінде"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("ОҢНАН СОЛҒА"),
         "settingsTextScaling":
@@ -676,16 +677,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Былғары белдік"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Себетті жабу"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Мәзірді жабу"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Мәзірді ашу"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Элементті өшіру"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Іздеу"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Параметрлер"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Адаптивті бастау үлгісі"),
         "starterAppDrawerItem": m19,

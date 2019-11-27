@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Placeholder for ${title} tab";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'No restaurants', one: '1 restaurant', other: '${totalRestaurants} restaurants')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Non-stop', one: '1 stop', other: '${numberOfStops} stops')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'No available properties', one: '1 available property', other: '${totalProperties} available properties')}";
 
   static m5(value) => "Item ${value}";
 
@@ -45,10 +45,10 @@ class MessageLookup extends MessageLookupByLibrary {
   static m9(amount) => "You’ve spent ${amount} in ATM fees this month";
 
   static m10(percent) =>
-      "Good work! Your current account is {per cent} higher than last month.";
+      "Good work! Your current account is ${percent} higher than last month.";
 
   static m11(percent) =>
-      "Beware: you’ve used up {per cent} of your shopping budget for this month.";
+      "Beware: you’ve used up ${percent} of your shopping budget for this month.";
 
   static m12(amount) => "You’ve spent ${amount} on restaurants this week.";
 
@@ -307,7 +307,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoSegmentedControlSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Segmented control"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Simple, alert and full-screen"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dialogues"),
@@ -351,7 +351,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "A simple dialogue offers the user a choice between several options. A simple dialogue has an optional title that is displayed above the choices."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Simple"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Tabs organise content across different screens, data sets and other interactions."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
             "Tabs with independently scrollable views"),
         "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
@@ -666,7 +666,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Close basket"),
         "shrineTooltipCloseMenu":
             MessageLookupByLibrary.simpleMessage("Close menu"),
         "shrineTooltipOpenMenu":

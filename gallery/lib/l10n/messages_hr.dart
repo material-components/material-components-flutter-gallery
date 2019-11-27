@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Rezervirano mjesto za karticu ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Nema restorana', one: 'Jedan restoran', few: '${totalRestaurants} restorana', other: '${totalRestaurants} restorana')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Direktni', one: 'Jedna stanica', few: '${numberOfStops} stanice', other: '${numberOfStops} stanica')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Nema dostupnih entiteta', one: 'Jedan dostupan entitet', few: '${totalProperties} dostupna entita', other: '${totalProperties} dostupnih entiteta')}";
 
   static m5(value) => "Stavka ${value}";
 
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Odabrali ste vrijednost: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${accountName} račun ${accountNumber} s iznosom od ${amount}.";
 
   static m9(amount) =>
       "Ovaj ste mjesec potrošili ${amount} za naknade za bankomate";
@@ -54,16 +54,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "Ovaj ste mjesec potrošili ${amount} u restoranima";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Možda možete dobiti veći povrat poreza! Dodijelite kategorije jednoj nedodijeljenoj transakciji.', few: 'Možda možete dobiti veći povrat poreza! Dodijelite kategorije za ${count} nedodijeljene transakcije.', other: 'Možda možete dobiti veći povrat poreza! Dodijelite kategorije za ${count} nedodijeljenih transakcija.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "Račun ${billName} na iznos ${amount} dospijeva ${date}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "${budgetName} proračun, iskorišteno: ${amountUsed} od ${amountTotal}, preostalo: ${amountLeft}";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'NEMA STAVKI', one: 'JEDNA STAVKA', few: '${quantity} STAVKE', other: '${quantity} STAVKI')}";
 
   static m17(price) => "x ${price}";
 
@@ -314,11 +314,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Gumbi"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Koristi se za odabir između nekoliko opcija koje se međusobno isključuju. Kad se u segmentiranom upravljanju odabere jedna opcija, poništava se odabir ostalih opcija."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "Segmentirano upravljanje u stilu iOS-a"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Segmentirano upravljanje"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Jednostavni, upozorenje i na cijelom zaslonu"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dijalozi"),
@@ -362,10 +363,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Jednostavni"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Kartice organiziraju sadržaj s različitih zaslona, iz različitih skupova podataka i drugih interakcija."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Kartice s prikazima koji se mogu pomicati neovisno"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Kartice"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Tekstualna polja omogućuju korisnicima da unesu tekst u korisničko sučelje. Obično su u obliku obrazaca i dijaloga."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-adresa"),
@@ -516,11 +517,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Korisničko ime"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("PRIKAŽI SVE"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Prikaži sve račune"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Prikaži sve račune"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Prikaži sve proračune"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Pronađite bankomate"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Pomoć"),
@@ -565,7 +566,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("Slijeva udesno"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage(
+                "Na temelju oznake zemlje/jezika"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("Zdesna ulijevo"),
         "settingsTextScaling":
@@ -688,16 +690,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Pojas Whitney"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Zatvorite košaricu"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Zatvorite izbornik"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Otvorite izbornik"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Uklonite stavku"),
+        "shrineTooltipSearch":
+            MessageLookupByLibrary.simpleMessage("Pretražite"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Postavke"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Responzivni izgled aplikacije za pokretanje"),
         "starterAppDrawerItem": m19,

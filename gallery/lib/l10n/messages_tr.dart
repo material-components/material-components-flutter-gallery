@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "${title} sekmesi için yer tutucu";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Restoran Yok', one: '1 Restoran', other: '${totalRestaurants} Restoran')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Aktarmasız', one: '1 aktarma', other: '${numberOfStops} aktarma')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Müsait Mülk Yok', one: 'Kullanılabilir 1 Özellik', other: 'Kullanılabilir ${totalProperties} Özellik')}";
 
   static m5(value) => "Ürün ${value}";
 
@@ -41,7 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Şunu seçtiniz: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "Bakiyesi ${amount} olan ${accountNumber} numaralı ${accountName} hesabı.";
 
   static m9(amount) => "Bu ay ${amount} tutarında ATM komisyonu ödediniz.";
 
@@ -54,16 +54,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "Bu hafta Restoranlarda ${amount} harcadınız.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Olası vergi iadenizi artırın. 1 atanmamış işleme kategoriler atayın.', other: 'Olası vergi iadenizi artırın. ${count} atanmamış işleme kategoriler atayın.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "Son ödeme tarihi ${date} olan ${amount} tutarındaki ${billName} faturası.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "Toplamı ${amountTotal} olan ve ${amountUsed} kullanıldıktan sonra ${amountLeft} kalan ${budgetName} bütçesi";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'ÖĞE YOK', one: '1 ÖĞE', other: '${quantity} ÖĞE')}";
 
   static m17(price) => "x ${price}";
 
@@ -293,11 +293,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Düğmeler"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Birbirini dışlayan bir dizi seçenek arasında seçim yapmak için kullanıldı. Segmentlere ayrılmış kontrolde bir seçenek belirlendiğinde, segmentlere ayrılmış denetimdeki diğer seçenek belirlenemez."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "iOS-tarzı bölümlere ayrılmış kontrol"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Bölümlere Ayrılmış Kontrol"),
         "demoDialogSubtitle":
             MessageLookupByLibrary.simpleMessage("Basit, uyarı ve tam ekran"),
         "demoDialogTitle":
@@ -343,10 +344,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Basit iletişim kutusu, kullanıcıya birkaç seçenek arasından seçim yapma olanağı sunar. Basit iletişim kutusunun seçeneklerin üzerinde görüntülenen isteğe bağlı bir başlığı vardır."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Basit"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Sekmeler farklı ekranlarda, veri kümelerinde ve diğer etkileşimlerde bulunan içeriği düzenler."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Bağımsız olarak kaydırılabilen görünümlü sekmeler"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Sekmeler"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Metin alanları, kullanıcıların bir kullanıcı arayüzüne metin girmesini sağlar. Genellikle formlarda ve iletişim kutularında görünürler."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-posta"),
@@ -498,11 +499,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Kullanıcı adı"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("TÜMÜNÜ GÖSTER"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Tüm hesapları göster"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Tüm faturaları göster"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Tüm bütçeleri göster"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ATMi bul"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Yardım"),
@@ -547,7 +548,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Metin yönü"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("Yerel ayara göre"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("Metin ölçekleme"),
@@ -669,16 +670,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney kemer"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Alışveriş sepetini kapat"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Menüyü kapat"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Menüyü aç"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Öğeyi kaldır"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Ara"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Ayarlar"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Duyarlı başlangıç düzeni"),
         "starterAppDrawerItem": m19,

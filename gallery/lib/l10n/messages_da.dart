@@ -24,13 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Pladsholder for fanen ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Ingen restauranter', one: '1 restaurant', other: '${totalRestaurants} restauranter')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Direkte', one: '1 mellemlanding', other: '${numberOfStops} mellemlandinger')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Ingen ledige ejendomme', one: '1 ledig ejendom', other: '${totalProperties} ledige ejendomme')}";
 
   static m5(value) => "Vare ${value}";
 
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Du valgte: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "Kontoen \"${accountName}\" ${accountNumber} med saldoen ${amount}.";
 
   static m9(amount) =>
       "Du har brugt ${amount} på hæveautomatsgebyrer i denne måned";
@@ -55,16 +55,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Du har brugt ${amount} på restaurantbesøg i denne uge.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Hæv dit potentielle skattefradrag. Tildel kategorier til 1 transaktion, som ingen har.', other: 'Hæv dit potentielle skattefradrag. Tildel kategorier til ${count} transaktioner, som ingen har.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "Regningen ${billName} på ${amount}, som skal betales ${date}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "Budgettet ${budgetName}, hvor ${amountUsed} ud af ${amountTotal} er brugt, og der er ${amountLeft} tilbage";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'INGEN VARER', one: '1 VARE', other: '${quantity} VARER')}";
 
   static m17(price) => "x ${price}";
 
@@ -296,11 +296,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Knapper"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Bruges til at vælge mellem et antal muligheder, som gensidigt udelukker hinanden. Når én af mulighederne i den segmenterede styring er valgt, er de øvrige muligheder i den segmenterede styring ikke valgt."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "Segmenteret styring i iOS-stil"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Segmenteret styring"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Enkel, underretning og fuld skærm"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dialogbokse"),
@@ -344,10 +345,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "En enkel dialogboks giver brugeren et valg mellem flere muligheder. En enkel dialogboks har en valgfri titel, der vises oven over valgmulighederne."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Enkel"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Med faner kan indhold fra forskellige skærme, datasæt og andre interaktioner organiseres."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Faner med visninger, der kan rulle uafhængigt af hinanden"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Faner"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Tekstfelterne giver brugerne mulighed for at angive tekst i en brugerflade. De vises normalt i formularer og dialogbokse."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("Mail"),
@@ -496,11 +497,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Brugernavn"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("SE ALLE"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Se alle konti"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Se alle regninger"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Se alle budgetter"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Find hæveautomater"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Hjælp"),
@@ -544,7 +545,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Tekstretning"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("VTH"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("Baseret på landestandard"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("HTV"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("Skalering af tekst"),
@@ -666,16 +667,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney-bælte"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Luk kurven"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Luk menuen"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Åbn menuen"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Fjern varen"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Søg"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Indstillinger"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Et responsivt opstartslayout"),
         "starterAppDrawerItem": m19,

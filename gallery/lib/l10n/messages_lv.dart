@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Vietturis ${title} cilnei";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Nav restorānu', one: '1 restorāns', other: '${totalRestaurants} restorāni')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Tiešais lidojums', one: '1 pārsēšanās', other: '${numberOfStops} pārsēšanās')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Nav pieejamu īpašumu', one: '1 pieejams īpašums', other: '${totalProperties} pieejami īpašumi')}";
 
   static m5(value) => "Vienums ${value}";
 
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Jūs atlasījāt: “${value}”";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "Kontā (${accountName}; numurs: ${accountNumber}) ir šāda summa: ${amount}.";
 
   static m9(amount) => "Šomēnes esat iztērējis ${amount} par maksu bankomātos";
 
@@ -53,16 +53,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "Šonedēļ esat iztērējis ${amount} restorānos.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, zero: 'Palieliniet nodokļu atmaksas iespējas! Pievienojiet kategorijas ${count} darījumiem, kuriem vēl nav pievienotas kategorijas.', one: 'Palieliniet nodokļu atmaksas iespējas! Pievienojiet kategorijas 1 darījumam, kuram vēl nav pievienota kategorija.', other: 'Palieliniet nodokļu atmaksas iespējas! Pievienojiet kategorijas ${count} darījumiem, kuriem vēl nav pievienotas kategorijas.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "Rēķins (${billName}) par summu ${amount} ir jāapmaksā līdz šādam datumam: ${date}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "Budžets ${budgetName} ar iztērētu summu ${amountUsed} no ${amountTotal}, atlikusī summa: ${amountLeft}";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'NAV VIENUMU', one: '1 VIENUMS', other: '${quantity} VIENUMI')}";
 
   static m17(price) => "x ${price}";
 
@@ -301,11 +301,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Pogas"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Izmanto, lai atlasītu kādu no savstarpēji izslēdzošām iespējām. Kad ir atlasīta iespēja segmentētajā pārvaldībā, citas iespējas tajā vairs netiek atlasītas."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "iOS stila segmentēta pārvaldība"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Segmentēta pārvaldība"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Vienkārši, brīdinājuma un pilnekrāna režīma"),
         "demoDialogTitle":
@@ -351,10 +352,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Vienkāršs"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Cilnēs saturs ir sakārtots vairākos ekrānos, datu kopās un citos mijiedarbības veidos."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Cilnes ar neatkarīgi ritināmiem skatiem"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Cilnes"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Izmantojot teksta laukus, lietotāji var ievadīt lietotāja saskarnē tekstu. Parasti tie tiek rādīti veidlapās vai dialoglodziņos."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-pasts"),
@@ -509,11 +510,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Lietotājvārds"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("SKATĪT VISUS"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Skatīt visus kontus"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Skatīt visus rēķinus"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Skatīt visus budžetus"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Atrast bankomātus"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Palīdzība"),
@@ -559,7 +560,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Teksta virziens"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage(
+                "Pamatojoties uz lokalizāciju"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage(
             "No labās puses uz kreiso pusi"),
         "settingsTextScaling":
@@ -681,16 +683,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney josta"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Aizvērt grozu"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Aizvērt izvēlni"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Atvērt izvēlni"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Noņemt vienumu"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Meklēt"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Iestatījumi"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Adaptīvs sākuma izkārtojums"),
         "starterAppDrawerItem": m19,

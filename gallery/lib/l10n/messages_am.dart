@@ -24,13 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "የ${title} ትር ቦታ ያዥ";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'ምግብ ቤቶች የሉም', one: '1 ምግብ ቤት', other: '${totalRestaurants} ምግብ ቤቶች')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'ያለማቋረጥ', one: '1 ማቆሚያ', other: '${numberOfStops} ማቆሚያዎች')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'ምንም የሚገኙ ንብረቶች የሉም', one: '1 የሚገኙ ንብረቶች', other: '${totalProperties} የሚገኙ ንብረቶች')}";
 
   static m5(value) => "ንጥል ${value}";
 
@@ -39,7 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "እርስዎ ይህን መርጠዋል፦ «${value}»";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${accountName} መለያ ${accountNumber} በ ${amount}።";
 
   static m9(amount) => "በዚህ ወር በኤቲኤም ክፍያዎች ላይ ${amount} አውጥተዋል";
 
@@ -50,16 +50,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "በዚህ ሳምንት በምግብ ቤቶች ላይ ${amount} አውጥተዋል።";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'የእርስዎን ሊቀነስ የሚችል ግብር ይጨምሩ! ወደ 1 ያልተመደበ ግብይት ምድቦችን ይመድቡ።', other: 'የእርስዎን ሊቀነስ የሚችል ግብር ይጨምሩ! ወደ ${count} ያልተመደቡ ግብይቶች ምድቦችን ይመድቡ።')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "የ${billName} ${amount} መክፈያ ጊዜ ${date} ደርሷል።";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "${budgetName} በጀት ${amountUsed} ከ${amountTotal} ጥቅም ላይ ውሏል፣ ${amountLeft} ይቀራል";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'ምንም ንጥሎች የሉም', one: '1 ንጥል', other: '${quantity} ንጥሎች')}";
 
   static m17(price) => "x ${price}";
 
@@ -273,11 +273,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("አዝራሮች"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "በአንድ ላይ በልዩ ሁኔታ ከሚታዩ አማራጮች ቁጥር መካከል ለመምረጥ ጥቅም ላይ ይውላል። በተከፋፈለው መቆጣጠሪያ ውስጥ አንድ አማራጭ ሲመረጥ፣ በተከፋፈለው መቆጣጠሪያ ውስጥ ያሉት ሌሎች አማራጮች መመረጥ ያቆማሉ።"),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage("በiOS-ቅጥ የተከፋፈለ መቆጣጠሪያ"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("የተከፋፈለ መቆጣጠሪያ"),
         "demoDialogSubtitle":
             MessageLookupByLibrary.simpleMessage("ቀላል፣ ማንቂያ እና ሙሉ ማያ ገጽ"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("ንግግሮች"),
@@ -318,10 +318,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "ቀላል ንግግር ለተጠቃሚው በበርካታ አማራጮች መካከል ምርጫን ያቀርባል። ቀላል ንግግር ከምርጫዎ በላይ የሚታይ አማራጭ አርዕስት አለው።"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("ቀላል"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "ትሮች በተለያዩ ማያ ገጾች፣ የውሂብ ስብስቦች እና ሌሎች መስተጋብሮች ዙሪያ ይዘትን ያደራጃል"),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "ትሮች ራሳቸውን ከቻሉ ተሸብላይ ዕይታዎች ጋር"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("ትሮች"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "የጽሑፍ መስኮች ተጠቃሚዎች ቃላትን ወደ ዩአይ እንዲያስገቡ ያስችላቸዋል። በተለምዶ በቅጾች እና በመገናኛዎች ውስጥ ይታያሉ።"),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("ኢሜይል"),
@@ -464,11 +464,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("የተጠቃሚ ስም"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("ሁሉንም ይመልከቱ"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("ሁሉንም መለያዎች ይመልከቱ"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("ሁሉንም ክፍያ መጠየቂያዎች ይመልከቱ"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("ሁሉንም በጀቶች ይመልከቱ"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ኤቲኤሞችን አግኝ"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("እገዛ"),
@@ -511,7 +511,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("ግራ-ወደ-ቀኝ"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("በአካባቢ ላይ በመመርኮዝ"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("ቀኝ-ወደ-ግራ"),
         "settingsTextScaling":
@@ -627,16 +627,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney ቀበቶ"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("ጋሪን ዝጋ"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("ምናሌን ዝጋ"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("ምናሌ ክፈት"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
-        "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("ንጥል ያስወግዱ"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("ፍለጋ"),
+        "shrineTooltipSettings": MessageLookupByLibrary.simpleMessage("ቅንብሮች"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("ምላሽ የሚሰጥ የጀማር አቀማመጥ"),
         "starterAppDrawerItem": m19,

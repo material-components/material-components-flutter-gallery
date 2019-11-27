@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Plekhouer vir ${title}-oortjie";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Geen restaurante nie', one: '1 restaurant', other: '${totalRestaurants} restaurante')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Stopvry', one: '1 stop', other: '${numberOfStops} stoppe')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Geen beskikbare eiendomme nie', one: '1 beskikbare eiendom', other: '${totalProperties} beskikbare eiendomme')}";
 
   static m5(value) => "Item ${value}";
 
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Jy het gekies: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${accountName}-rekening ${accountNumber} met ${amount}.";
 
   static m9(amount) => "Jy het hierdie maand OTM-fooie van ${amount} betaal";
 
@@ -53,16 +53,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "Jy het hierdie week ${amount} by restaurante bestee.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Verhoog jou potensiële belastingaftrekking! Wys kategorieë toe aan 1 ontoegewysde transaksie.', other: 'Verhoog jou potensiële belastingaftrekking! Wys kategorieë toe aan ${count} ontoegewysde transaksies.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "${billName}-rekening van ${amount} is betaalbaar op ${date}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "${budgetName}-begroting met ${amountUsed} gebruik van ${amountTotal}; ${amountLeft} oor";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'GEEN ITEMS NIE', one: '1 ITEM', other: '${quantity} ITEMS')}";
 
   static m17(price) => "x ${price}";
 
@@ -312,11 +312,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Knoppies"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Word gebruik om tussen \'n aantal wedersyds eksklusiewe opsies te kies. As een opsie in die gesegmenteerde kontrole gekies is, sal die ander opsies in die gesegmenteerde kontrole nie meer gekies wees nie."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "Gesegmenteerde kontrole in iOS-styl"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Gesegmenteerde kontrole"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Eenvoudig, opletberig, en volskerm"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dialoë"),
@@ -361,10 +362,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Eenvoudig"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Oortjies organiseer inhoud oor verskillende skerms, datastelle, en ander interaksies heen."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Oortjies met aansigte waardeur jy onafhanklik kan rollees"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Oortjies"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Teksvelde laat gebruikers toe om teks by UI te voeg. Dit verskyn gewoonlik in vorms en dialoë."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-pos"),
@@ -516,11 +517,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Gebruikernaam"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("SIEN ALLES"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Sien alle rekeninge"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Sien alle rekeninge"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Sien alle begrotings"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Soek OTM\'e"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Hulp"),
@@ -566,7 +567,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("L.N.R."),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("Gegrond op locale"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("R.N.L."),
         "settingsTextScaling":
@@ -690,16 +691,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney-belt"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Maak mandjie toe"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Maak kieslys toe"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Maak kieslys oop"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Verwyder item"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Soek"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Instellings"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "\'n Beginneruitleg wat goed reageer"),
         "starterAppDrawerItem": m19,

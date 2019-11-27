@@ -24,13 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "${title} 탭 자리표시자";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: '음식점 없음', one: '음식점 1개', other: '음식점 ${totalRestaurants}개')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: '직항', one: '경유 1회', other: '경유 ${numberOfStops}회')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: '이용 가능한 숙박업체 없음', one: '이용 가능한 숙박업체 1개', other: '이용 가능한 숙박업체 ${totalProperties}개')}";
 
   static m5(value) => "항목 ${value}";
 
@@ -39,7 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "\'${value}\'을(를) 선택했습니다.";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${accountName} 계좌 ${accountNumber}의 잔액은 ${amount}입니다.";
 
   static m9(amount) => "이번 달에 ATM 수수료로 ${amount}을(를) 사용했습니다.";
 
@@ -50,16 +50,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "이번 주에 음식점에서 ${amount}을(를) 사용했습니다.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: '세금 공제 가능액을 늘릴 수 있습니다. 1개의 미할당 거래에 카테고리를 지정하세요.', other: '세금 공제 가능액을 늘릴 수 있습니다. ${count}개의 미할당 거래에 카테고리를 지정하세요.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "${billName} 청구서(${amount}) 결제 기한은 ${date}입니다.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "${budgetName} 예산 ${amountTotal} 중 ${amountUsed} 사용, ${amountLeft} 남음";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: '항목 없음', one: '항목 1개', other: '항목 ${quantity}개')}";
 
   static m17(price) => "x ${price}";
 
@@ -268,11 +268,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsTitle": MessageLookupByLibrary.simpleMessage("버튼"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "여러 개의 상호 배타적인 옵션 중에 선택할 때 사용됩니다. 세그먼트 컨트롤에서 하나의 옵션을 선택하면 세그먼트 컨트롤에 포함된 다른 옵션은 선택이 해제됩니다."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage("iOS 스타일 세그먼트 컨트롤"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("세그먼트 컨트롤"),
         "demoDialogSubtitle":
             MessageLookupByLibrary.simpleMessage("단순함, 알림, 전체 화면"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("대화상자"),
@@ -310,10 +310,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "단순 대화상자는 사용자가 택일할 몇 가지 옵션을 제공합니다. 단순 대화상자에는 옵션 위에 표시되는 제목이 선택사항으로 포함됩니다."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("단순함"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
-        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "탭을 사용하면 다양한 화면, 데이터 세트 및 기타 상호작용에서 콘텐츠를 정리할 수 있습니다."),
+        "demoTabsSubtitle":
+            MessageLookupByLibrary.simpleMessage("개별적으로 스크롤 가능한 뷰가 있는 탭"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("탭"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "사용자는 입력란을 통해 UI에 텍스트를 입력할 수 있습니다. 일반적으로 양식 및 대화상자로 표시됩니다."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("이메일"),
@@ -447,12 +447,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginSignUp": MessageLookupByLibrary.simpleMessage("가입"),
         "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("사용자 이름"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("모두 보기"),
-        "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
-        "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
-        "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+        "rallySeeAllAccounts": MessageLookupByLibrary.simpleMessage("모든 계좌 보기"),
+        "rallySeeAllBills": MessageLookupByLibrary.simpleMessage("모든 청구서 보기"),
+        "rallySeeAllBudgets": MessageLookupByLibrary.simpleMessage("모든 예산 보기"),
         "rallySettingsFindAtms": MessageLookupByLibrary.simpleMessage("ATM 찾기"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("도움말"),
         "rallySettingsManageAccounts":
@@ -492,7 +489,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("왼쪽에서 오른쪽으로"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("언어 기준"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("오른쪽에서 왼쪽으로"),
         "settingsTextScaling":
@@ -605,16 +602,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("휘트니 벨트"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
-        "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
-        "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("장바구니 닫기"),
+        "shrineTooltipCloseMenu": MessageLookupByLibrary.simpleMessage("메뉴 닫기"),
+        "shrineTooltipOpenMenu": MessageLookupByLibrary.simpleMessage("메뉴 열기"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
-        "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("항목 삭제"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("검색"),
+        "shrineTooltipSettings": MessageLookupByLibrary.simpleMessage("설정"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("반응형 스타터 레이아웃"),
         "starterAppDrawerItem": m19,

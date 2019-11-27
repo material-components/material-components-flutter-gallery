@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Placeholder untuk tab ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Tidak Ada Restoran', one: '1 Restoran', other: '${totalRestaurants} Restoran')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 transit', other: '${numberOfStops} transit')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Tidak Ada Properti yang Tersedia', one: '1 Properti Tersedia', other: '${totalProperties} Properti Tersedia')}";
 
   static m5(value) => "Item ${value}";
 
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Anda memilih: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "Rekening atas nama ${accountName} dengan nomor ${accountNumber} sejumlah ${amount}.";
 
   static m9(amount) =>
       "Anda telah menghabiskan ${amount} biaya penggunaan ATM bulan ini";
@@ -54,16 +54,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "Anda menghabiskan ${amount} di Restoran minggu ini.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Tingkatkan potensi potongan pajak Anda. Tetapkan kategori untuk 1 transaksi yang belum ditetapkan.', other: 'Tingkatkan potensi potongan pajak Anda. Tetapkan kategori untuk ${count} transaksi yang belum ditetapkan.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "Tagihan ${billName} jatuh tempo pada ${date} sejumlah ${amount}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "Anggaran ${budgetName} dengan ${amountUsed} yang digunakan dari jumlah total ${amountTotal}, tersisa ${amountLeft}";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'TIDAK ADA ITEM', one: '1 ITEM', other: '${quantity} ITEM')}";
 
   static m17(price) => "x ${price}";
 
@@ -303,11 +303,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Tombol"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Digunakan untuk memilih sejumlah opsi yang sama eksklusifnya. Ketika satu opsi di kontrol tersegmen dipilih, opsi lain di kontrol tersegmen tidak lagi tersedia untuk dipilih."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage("Kontrol tersegmen gaya iOS"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Kontrol Tersegmen"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Sederhana, notifikasi, dan layar penuh"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dialog"),
@@ -352,10 +352,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Sederhana"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Tab yang mengatur konten di beragam jenis layar, set data, dan interaksi lainnya."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Tab dengan tampilan yang dapat di-scroll secara terpisah"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tab"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Kolom teks memungkinkan pengguna memasukkan teks menjadi UI. UI tersebut biasanya muncul dalam bentuk formulir dan dialog."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("Email"),
@@ -502,11 +502,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Nama pengguna"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("LIHAT SEMUA"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Lihat semua rekening"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Lihat semua tagihan"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Lihat semua anggaran"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Temukan ATM"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Bantuan"),
@@ -549,7 +549,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Arah teks"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("Berdasarkan lokal"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("Penskalaan teks"),
@@ -670,16 +670,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Sabuk Whitney"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Tutup keranjang"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Tutup menu"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Buka menu"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Hapus item"),
+        "shrineTooltipSearch":
+            MessageLookupByLibrary.simpleMessage("Penelusuran"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Setelan"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Tata letak awal yang responsif"),
         "starterAppDrawerItem": m19,

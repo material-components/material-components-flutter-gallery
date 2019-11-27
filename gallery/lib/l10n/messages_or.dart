@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "${title} ଟାବ୍ ପାଇଁ ପ୍ଲେସ୍‌ହୋଲ୍ଡର୍";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'କୌଣସି ରେଷ୍ଟୁରାଣ୍ଟ ନାହିଁ', one: '1ଟି ରେଷ୍ଟୁରାଣ୍ଟ', other: '${totalRestaurants}ଟି ରେଷ୍ଟୁରାଣ୍ଟ')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'ନନ୍‌ଷ୍ଟପ୍', one: '1ଟି ରହଣି', other: '${numberOfStops}ଟି ରହଣି')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'କୌଣସି ପ୍ରୋପର୍ଟି ଉପଲବ୍ଧ ନାହିଁ', one: '1ଟି ଉପଲବ୍ଧ ଥିବା ପ୍ରୋପର୍ଟି', other: '${totalProperties}ଟି ଉପଲବ୍ଧ ଥିବା ପ୍ରୋପର୍ଟି')}";
 
   static m5(value) => "ଆଇଟମ୍ ${value}";
 
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "ଆପଣ ଏହା ଚୟନ କରିଛନ୍ତି: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${accountName}ଙ୍କ ଆକାଉଣ୍ଟ ନମ୍ବର ${accountNumber}ରେ ${amount} ଜମା କରାଯାଇଛି।";
 
   static m9(amount) => "ଆପଣ ଏହି ମାସରେ ATM ଶୁଳ୍କରେ ${amount} ଖର୍ଚ୍ଚ କରିଛନ୍ତି";
 
@@ -54,16 +54,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "ଆପଣ ଏହି ମାସରେ ରେଷ୍ଟୁରାଣ୍ଟଗୁଡ଼ିକରେ ${amount} ଖର୍ଚ୍ଚ କରିଛନ୍ତି।";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'ଆପଣଙ୍କର କରରେ ସମ୍ଭାବ୍ୟ ଛାଡ଼କୁ ବଢ଼ାନ୍ତୁ! 1ଟି ଆସାଇନ୍ କରାଯାଇନଥିବା ଟ୍ରଞ୍ଜାକ୍ସନ୍‌ରେ ବର୍ଗଗୁଡ଼ିକୁ ଆସାଇନ୍ କରନ୍ତୁ।', other: 'ଆପଣଙ୍କର କରରେ ସମ୍ଭାବ୍ୟ ଛାଡ଼କୁ ବଢ଼ାନ୍ତୁ! ${count}ଟି ଆସାଇନ୍ କରାଯାଇନଥିବା ଟ୍ରଞ୍ଜାକ୍ସନ୍‌ରେ ବର୍ଗଗୁଡ଼ିକୁ ଆସାଇନ୍ କରନ୍ତୁ।')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "${billName} ପାଇଁ ${amount} ପେମେଣ୍ଟ କରିବାର ଧାର୍ଯ୍ୟ ସମୟ ${date} ଅଟେ।";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "${budgetName} ବଜେଟ୍‌ରେ ${amountTotal}ରୁ ${amountUsed} ବ୍ୟବହୃତ ହୋଇଛି, ${amountLeft} ବାକି ଅଛି";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'କୌଣସି ଆଇଟମ୍ ନାହିଁ', one: '1ଟି ଆଇଟମ୍', other: '${quantity}ଟି ଆଇଟମ୍')}";
 
   static m17(price) => "x ${price}";
 
@@ -316,11 +316,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ବଟନ୍‍ଗୁଡ଼ିକ"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "ପରସ୍ପର ଅନନ୍ୟ ବିକଳ୍ପଗୁଡ଼ିକ ମଧ୍ୟରୁ ଗୋଟିଏ ନମ୍ବରକୁ ଚୟନ କରିବା ପାଇଁ ଏହା ବ୍ୟବହାର କରାଯାଏ। ଯେତେବେଳେ ବର୍ଗୀକୃତ ନିୟନ୍ତ୍ରଣରୁ ଗୋଟିଏ ବିକଳ୍ପ ଚୟନ କରାଯାଏ, ସେତେବେଳେ ସେହି ବର୍ଗୀକୃତ ନିୟନ୍ତ୍ରଣରୁ ଅନ୍ୟ ବିକଳ୍ପ ଚୟନ କରିହେବ ନାହିଁ।"),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "iOS-ଶୈଳୀର ବର୍ଗୀକୃତ ନିୟନ୍ତ୍ରଣ"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("ବର୍ଗୀକୃତ ନିୟନ୍ତ୍ରଣ"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "ସରଳ, ଆଲର୍ଟ ଏବଂ ପୂର୍ଣ୍ଣ ସ୍କ୍ରିନ୍"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("ଡାଏଲଗ୍‍ଗୁଡ଼ିକ"),
@@ -365,10 +366,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "ଏକ ସରଳ ଡାଏଲଗ୍ ଉପଯୋଗକର୍ତ୍ତାଙ୍କୁ ବିଭିନ୍ନ ବିକଳ୍ପଗୁଡ଼ିକ ମଧ୍ୟରୁ ଏକ ପସନ୍ଦ ପ୍ରଦାନ କରେ। ଏକ ସରଳ ଡାଏଲଗ୍‍‍ରେ ଏକ ଇଚ୍ଛାଧୀନ ଟାଇଟେଲ୍ ଥାଏ ଯାହା ପସନ୍ଦଗୁଡ଼ିକ ଉପରେ ପ୍ରଦର୍ଶିତ ହୁଏ।"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("ସରଳ"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "ଟାବ୍, ଭିନ୍ନ ସ୍କ୍ରିନ୍, ଡାଟା ସେଟ୍ ଏବଂ ଅନ୍ୟ ଇଣ୍ଟରାକ୍ସନ୍‌ଗୁଡ଼ିକରେ ବିଷୟବସ୍ତୁ ସଂଗଠିତ କରେ।"),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "ସ୍ବତନ୍ତ୍ରଭାବରେ ସ୍କ୍ରୋଲ୍ ଯୋଗ୍ୟ ଭ୍ୟୁଗୁଡ଼ିକର ଟାବ୍"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("ଟାବ୍‌ଗୁଡ଼ିକ"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "ଟେକ୍ସଟ୍ ଫିଲ୍ଡ ଉପଯୋଗକର୍ତ୍ତାଙ୍କୁ ଏକ UIରେ ଟେକ୍ସଟ୍ ଲେଖିବାକୁ ଅନୁମତି ଦେଇଥାଏ। ସେମାନେ ସାଧାରଣତଃ ଫର୍ମ ଏବଂ ଡାଇଲଗ୍‌ରେ ଦେଖାଯାଆନ୍ତି।"),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("ଇ-ମେଲ୍"),
@@ -523,11 +524,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ଉପଯୋଗକର୍ତ୍ତାଙ୍କ ନାମ"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("ସବୁ ଦେଖନ୍ତୁ"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("ସବୁ ଆକାଉଣ୍ଟ ଦେଖନ୍ତୁ"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("ସବୁ ବିଲ୍ ଦେଖନ୍ତୁ"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("ସବୁ ବଜେଟ୍ ଦେଖନ୍ତୁ"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ATM ଖୋଜନ୍ତୁ"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("ସାହାଯ୍ୟ"),
@@ -573,7 +574,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ଟେକ୍ସଟ୍ ଦିଗ"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("ସ୍ଥାନର ଆଧାରରେ"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("ଟେକ୍ସଟ୍ ସ୍କେଲିଂ"),
@@ -691,16 +692,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("ହ୍ୱିଟ୍‌ନେ ବେଲ୍ଟ"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("କାର୍ଟ ବନ୍ଦ କରନ୍ତୁ"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("ମେନୁ ବନ୍ଦ କରନ୍ତୁ"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("ମେନୁ ଖୋଲନ୍ତୁ"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("ଆଇଟମ୍ କାଢ଼ି ଦିଅନ୍ତୁ"),
+        "shrineTooltipSearch":
+            MessageLookupByLibrary.simpleMessage("ସନ୍ଧାନ କରନ୍ତୁ"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("ସେଟିଂସ୍"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "ଏକ ପ୍ରତିକ୍ରିୟାଶୀଳ ଷ୍ଟାର୍ଟର୍ ଲେଆଉଟ୍"),
         "starterAppDrawerItem": m19,

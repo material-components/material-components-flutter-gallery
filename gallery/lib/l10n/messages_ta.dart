@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "${title} தாவலுக்கான ஒதுக்கிடம்";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'உணவகங்கள் இல்லை', one: 'ஒரு உணவகம்', other: '${totalRestaurants} உணவகங்கள்')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'நிறுத்தம் எதுவுமில்லை', one: 'ஒரு நிறுத்தம்', other: '${numberOfStops} நிறுத்தங்கள்')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'பிராப்பர்ட்டி எதுவும் இல்லை', one: 'ஒரு பிராப்பர்ட்டி உள்ளது', other: '${totalProperties} பிராப்பர்ட்டிகள் உள்ளன')}";
 
   static m5(value) => "${value} பொருள்";
 
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "You selected: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${amount} பேலன்ஸைக் கொண்ட ${accountName} அக்கவுண்ட் எண்: ${accountNumber}.";
 
   static m9(amount) =>
       "இந்த மாதம் ATM கட்டணங்களாக ${amount} செலவிட்டுள்ளீர்கள்";
@@ -55,16 +55,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "இந்த வாரத்தில் உணவகங்களில் ${amount} செலவழித்துள்ளீர்கள்.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'உங்களுக்குரிய சாத்தியமான வரிக் கழிவை அதிகரித்துக்கொள்ளுங்கள்! ஒரு பொறுப்புமாற்றப்படாத பணப் பரிமாற்றத்திற்கான வகைகளைச் சேருங்கள்.', other: 'உங்களுக்குரிய சாத்தியமான வரிக் கழிவை அதிகரித்துக்கொள்ளுங்கள்! ${count} பொறுப்புமாற்றப்படாத பணப் பரிமாற்றங்களுக்கான வகைகளைச் சேருங்கள்.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "${amount}க்கான ${billName} பில்லின் நிலுவைத் தேதி: ${date}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "${amountTotal}க்கான ${budgetName} பட்ஜெட்டில் பயன்படுத்தப்பட்ட தொகை: ${amountUsed}, மீதமுள்ள தொகை: ${amountLeft}";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'எதுவும் இல்லை', one: 'ஒரு பொருள்', other: '${quantity} பொருட்கள்')}";
 
   static m17(price) => "x ${price}";
 
@@ -317,11 +317,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("பட்டன்கள்"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "பல பரஸ்பர பிரத்தியேக விருப்பங்களில் இருந்து தேவையானதைத் தேர்வுசெய்யப் பயன்படுகிறது. பகுதிப் பிரிப்பிற்கான கட்டுப்பாட்டில் ஒரு விருப்பத்தைத் தேர்வுசெய்துவிட்டால் அதிலுள்ள மற்ற விருப்பங்களைத் தேர்வுசெய்ய இயலாது."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "iOS-ஸ்டைல் பகுதிப் பிரிப்பிற்கான கட்டுப்பாடு"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage(
+                "பகுதிப் பிரிப்பிற்கான கட்டுப்பாடு"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Simple, alert, and fullscreen"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dialogs"),
@@ -365,10 +367,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Simple"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "தாவல்கள் என்பவை வெவ்வேறு திரைகள், தரவுத் தொகுப்புகள் மற்றும் பிற தொடர்புகளுக்கான உள்ளடக்கத்தை ஒழுங்கமைக்கின்றன."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "சார்பின்றி நகர்த்திப் பார்க்கும் வசதியுடைய தாவல்கள்"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("தாவல்கள்"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "உரைப் புலங்கள் பயனர்களை UIயில் உரையை உள்ளிட அனுமதிக்கும். அவை வழக்கமாகப் படிவங்களாகவும் உரையாடல்களாகவும் தோன்றும்."),
         "demoTextFieldEmail":
@@ -519,12 +521,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("பயனர்பெயர்"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("எல்லாம் காட்டு"),
-        "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
-        "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
-        "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+        "rallySeeAllAccounts": MessageLookupByLibrary.simpleMessage(
+            "அனைத்து அக்கவுண்ட்டுகளையும் காட்டு"),
+        "rallySeeAllBills": MessageLookupByLibrary.simpleMessage(
+            "அனைத்துப் பில்களையும் காட்டு"),
+        "rallySeeAllBudgets": MessageLookupByLibrary.simpleMessage(
+            "அனைத்து பட்ஜெட்களையும் காட்டு"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ATMகளைக் கண்டறி"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("உதவி"),
@@ -571,7 +573,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("இடமிருந்து வலம்"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage(
+                "வட்டார மொழியின் அடிப்படையில்"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("வலமிருந்து இடம்"),
         "settingsTextScaling":
@@ -695,16 +698,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("விட்னி பெல்ட்"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("கார்ட்டை மூடுவதற்கான பட்டன்"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
-        "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("மெனுவை மூடுவதற்கான பட்டன்"),
+        "shrineTooltipOpenMenu": MessageLookupByLibrary.simpleMessage(
+            "மெனுவைத் திறப்பதற்கான பட்டன்"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("பொருளை அகற்றுவதற்கான பட்டன்"),
+        "shrineTooltipSearch":
+            MessageLookupByLibrary.simpleMessage("தேடலுக்கான பட்டன்"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("அமைப்புகளுக்கான பட்டன்"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "திரைக்கு ஏற்ப மாறும் ஸ்டார்ட்டர் தளவமைப்பு"),
         "starterAppDrawerItem": m19,

@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Vendmbajtësi për skedën ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Asnjë restorant', one: '1 restorant', other: '${totalRestaurants} restorante')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Pa ndalesa', one: '1 ndalesë', other: '${numberOfStops} ndalesa')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Nuk ka prona të disponueshme', one: '1 pronë e disponueshme', other: '${totalProperties} prona të disponueshme')}";
 
   static m5(value) => "Artikulli ${value}";
 
@@ -41,7 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Zgjodhe: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "Llogaria ${accountName} ${accountNumber} me ${amount}.";
 
   static m9(amount) => "Ke shpenzuar ${amount} në tarifa bankomati këtë muaj";
 
@@ -54,16 +54,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "Ke shpenzuar ${amount} për restorante këtë javë.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Rrit nivelin e mundshëm të zbritjes nga taksat! Cakto kategoritë për 1 transaksion të pacaktuar.', other: 'Rrit nivelin e mundshëm të zbritjes nga taksat! Cakto kategoritë për ${count} transaksione të pacaktuara.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "Fatura ${billName} me afat ${date} për ${amount}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "Buxheti ${budgetName} me ${amountUsed} të përdorura nga ${amountTotal}, ${amountLeft} të mbetura";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'ASNJË ARTIKULL', one: '1 ARTIKULL', other: '${quantity} ARTIKUJ')}";
 
   static m17(price) => "x ${price}";
 
@@ -312,11 +312,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Butonat"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Përdoret për të zgjedhur nga një numër opsionesh ekskluzive në mënyrë reciproke. Kur zgjidhet një opsion në kontrollin e segmentuar, zgjedhja e opsioneve të tjera në kontrollin e segmentuar ndalon."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "Kontrolli i segmentuar në stilin e iOS"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Kontrolli i segmentuar"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "I thjeshtë, sinjalizim dhe ekran i plotë"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dialogët"),
@@ -361,10 +362,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("I thjeshtë"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Skedat i organizojnë përmbajtjet në ekrane të ndryshme, grupime të dhënash dhe ndërveprime të tjera."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Skedat me pamje që mund të lëvizen në mënyrë të pavarur"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Skedat"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Fushat me tekst i lejojnë përdoruesit të fusin tekst në një ndërfaqe përdoruesi. Ato normalisht shfaqen në formularë dhe dialogë."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("Email-i"),
@@ -518,11 +519,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallySeeAll":
             MessageLookupByLibrary.simpleMessage("SHIKOJI TË GJITHË"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Shiko të gjitha llogaritë"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Shiko të gjitha faturat"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Shiko të gjitha buxhetet"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Gjej bankomate"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Ndihma"),
@@ -569,7 +570,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Drejtimi i tekstit"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("Bazuar në cilësimet lokale"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("Shkallëzimi i tekstit"),
@@ -693,16 +694,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Rrip Whitney"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Mbyll karrocën"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Mbyll menynë"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Hap menynë"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Hiq artikullin"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Kërko"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Cilësimet"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Strukturë reaguese për aplikacionin nisës"),
         "starterAppDrawerItem": m19,

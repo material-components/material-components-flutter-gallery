@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Helyőrző a(z) ${title} lapnak";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Nincs étterem', one: '1 étterem', other: '${totalRestaurants} étterem')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Közvetlen járat', one: '1 megálló', other: '${numberOfStops} megálló')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Nincs rendelkezésre álló ingatlan', one: '1 rendelkezésre álló ingatlan van', other: '${totalProperties} rendelkezésre álló ingatlan van')}";
 
   static m5(value) => "${value} elem";
 
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Az Ön által választott érték: „${value}”";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${accountName} bankszámla (${accountNumber}) ${amount} összeggel.";
 
   static m9(amount) =>
       "${amount} összeget költött ATM-díjakra ebben a hónapban";
@@ -54,16 +54,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "${amount} összeget költött éttermekre ezen a héten.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Növelje a lehetséges adókedvezményt! Rendeljen kategóriát 1 hozzárendelés nélküli tranzakcióhoz.', other: 'Növelje a lehetséges adókedvezményt! Rendeljen kategóriákat ${count} hozzárendelés nélküli tranzakcióhoz.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "${amount} összegű ${billName} számla esedékességi dátuma: ${date}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "${amountTotal} összegű ${budgetName} költségkeret, amelyből felhasználásra került ${amountUsed}, és maradt ${amountLeft}";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'NINCSENEK TÉTELEK', one: '1 TÉTEL', other: '${quantity} TÉTEL')}";
 
   static m17(price) => "× ${price}";
 
@@ -319,11 +319,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Gombok"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Több, egymást kölcsönösen kizáró lehetőség közüli választásra szolgál. Amikor a felhasználó kiválasztja valamelyik lehetőséget a szegmentált vezérlésben, a többi lehetőség nem lesz választható."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "iOS-stílusú szegmentált vezérlés"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Szegmentált vezérlés"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Egyszerű, értesítő és teljes képernyős"),
         "demoDialogTitle":
@@ -370,10 +371,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Egyszerű"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "A lapok rendszerezik a tartalmakat különböző képernyőkön, adathalmazokban és egyéb interakciók során."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Lapok egymástól függetlenül görgethető nézettel"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Lapok"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "A szöveges mezők segítségével a felhasználók szöveget adhatnak meg egy kezelőfelületen. Jellemzően az űrlapokon és párbeszédpanelekben jelennek meg."),
         "demoTextFieldEmail":
@@ -527,12 +528,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Felhasználónév"),
         "rallySeeAll":
             MessageLookupByLibrary.simpleMessage("ÖSSZES MEGTEKINTÉSE"),
-        "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+        "rallySeeAllAccounts": MessageLookupByLibrary.simpleMessage(
+            "Összes bankszámla megtekintése"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
-        "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Összes számla megtekintése"),
+        "rallySeeAllBudgets": MessageLookupByLibrary.simpleMessage(
+            "Összes költségkeret megtekintése"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ATM-ek keresése"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Súgó"),
@@ -582,7 +583,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("Balról jobbra"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage(
+                "A nyelv- és országbeállítás alapján"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("Jobbról balra"),
         "settingsTextScaling":
@@ -704,16 +706,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("„Whitney” öv"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Kosár bezárása"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Menü bezárása"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Menü megnyitása"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Tétel eltávolítása"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Keresés"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Beállítások"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Interaktív kezdő elrendezés"),
         "starterAppDrawerItem": m19,

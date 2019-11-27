@@ -24,13 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "${title} টেবৰ বাবে প্লে’চহ’ল্ডাৰ";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'কোনো ৰেষ্টুৰেণ্ট নাই', one: '১ খন ৰেষ্টুৰেণ্ট', other: '${totalRestaurants} খন ৰেষ্টুৰেণ্ট')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'কোনো আস্থান নাই', one: '১ টা আস্থান', other: '${numberOfStops} টা আস্থান')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'কোনো উপলব্ধ সম্পত্তি নাই', one: '১ টা উপলব্ধ সম্পত্তি', other: '${totalProperties} টা উপলব্ধ সম্পত্তি')}";
 
   static m5(value) => "বস্তু ${value}";
 
@@ -39,7 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "আপুনি এইটো বাছনি কৰিছে: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${accountName} একাউণ্ট ${accountNumber}ত ${amount} জমা কৰা হৈছে।";
 
   static m9(amount) => "আপুনি এই মাহত এটিএমৰ মাচুলৰ বাবদ ${amount} খৰচ কৰিছে";
 
@@ -52,16 +52,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "আপুনি এই সপ্তাহত ৰেষ্টুৰেণ্টত ${amount} খৰচ কৰিছে।";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'আপোনাৰ সম্ভাব্য কৰ কটাৰ পৰিমাণ বৃদ্ধি কৰক! ১ টা আবণ্টন নকৰা লেনদেনত শিতানসমূহ আবণ্টন কৰক।', other: 'আপোনাৰ সম্ভাব্য কৰ কটাৰ পৰিমাণ বৃদ্ধি কৰক! ${count} টা আবণ্টন নকৰা লেনদেনত শিতানসমূহ আবণ্টন কৰক।')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "${billName} বিল ${amount} পৰিশোধ কৰাৰ শেষ তাৰিখ ${date}।";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "${budgetName}ৰ ${amountTotal}ৰ ভিতৰত ${amountUsed} ব্যৱহাৰ কৰা হৈছে, ${amountLeft} বাকী আছে";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'কোনো বস্তু নাই', one: '১ টা বস্তু', other: '${quantity} টা বস্তু')}";
 
   static m17(price) => "x ${price}";
 
@@ -314,11 +314,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("বুটামসমূহ"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "এটা ব্যৱহাৰ কৰাৰ সময়ত অন্য এটা ব্যৱহাৰ কৰিব নোৱাৰা বিকল্পসমূহৰ মাজৰ পৰা বাছনি কৰিবলৈ ব্যৱহাৰ কৰা হয়। বিভাজিত নিয়ন্ত্ৰণত এটা বিকল্প বাছনি কৰিলে, বিভাজিত নিয়ন্ত্ৰণত অন্য বিকল্পসমূহ বাছনি কৰিব নোৱাৰা হয়।"),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage("iOS-শৈলীৰ বিভাজিত নিয়ন্ত্ৰণ"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("বিভাজিত নিয়ন্ত্ৰণ"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "সৰল, সতর্কবার্তা আৰু সম্পূর্ণ স্ক্ৰীন"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("ডায়ল’গসমূহ"),
@@ -363,10 +363,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "এটা সৰল ডায়ল\'গে ব্যৱহাৰকাৰীক বিভিন্ন বিকল্পসমূহৰ পৰা বাছনি কৰাৰ সুবিধা দিয়ে। এটা সৰল ডায়ল\'গৰ বাছনি কৰাৰ বাবে থকা বিকল্পসমূহৰ ওপৰত প্ৰদর্শন কৰা এটা ঐচ্ছিক শিৰোনাম থাকে।"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("সৰল"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "টেবসমূহে সমলক বিভিন্ন স্ক্ৰীনসমূহত, ডেটা ছেটসমূহত আৰু অন্য ভাব-বিনিময়সমূহত সংগঠিত কৰে।"),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "স্বতন্ত্ৰভাৱে স্ক্ৰ’ল কৰিবপৰা ভিউসমূহৰ সৈতে টেবসমূহ"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("টেবসমূহ"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "পাঠ ক্ষেত্ৰসমূহে ব্যৱহাৰকাৰীসকলক এটা ইউআইত পাঠ ভৰাবলৈ দিয়ে। সেইবোৰ সাধাৰণতে ফর্ম আৰু ডায়ল’গসমূহত দেখা পোৱা যায়।"),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("ইমেইল"),
@@ -519,11 +519,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ব্যৱহাৰকাৰীৰ নাম"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("সকলো চাওক"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("সকলো একাউণ্ট চাওক"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("সকলো বিল চাওক"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("সকলো বাজেট চাওক"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("এটিএম বিচাৰক"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("সহায়"),
@@ -569,7 +569,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("বাওঁফালৰ পৰা সোঁফাললৈ"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("ল’কেল ভিত্তিক"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("সোঁফালৰ পৰা বাওঁফাললৈ"),
         "settingsTextScaling":
@@ -689,16 +689,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("কাৰ্ট বন্ধ কৰক"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("মেনু বন্ধ কৰক"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("মেনু খোলক"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("বস্তু আঁতৰাওক"),
+        "shrineTooltipSearch":
+            MessageLookupByLibrary.simpleMessage("সন্ধান কৰক"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("ছেটিংসমূহ"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "এটা প্ৰতিক্ৰিয়াশীল ষ্টাৰ্টাৰ লে’আউট"),
         "starterAppDrawerItem": m19,

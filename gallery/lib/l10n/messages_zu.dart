@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Isimeli sethebhu ye-${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Awekho amarestshurenti', one: '1 irestshurenti', other: '${totalRestaurants} Amarestshurenti')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Ukungami', one: '1 isitobhi', other: '${numberOfStops} izitobhi')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Azikho izici ezitholakalayo', one: '1 isici esitholakalayo', other: '${totalProperties} Izici ezitholakalayo')}";
 
   static m5(value) => "Into ${value}";
 
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Ukhethe: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${accountName} i-akhawunti engu-${accountNumber} enokungu-${amount}.";
 
   static m9(amount) => "Uchithe u-${amount} enkokhelweni ye-ATM kule nyanga";
 
@@ -54,16 +54,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Usebenzise u-${amount} ezindaweni zokudlela kuleli viki.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Khuphula amandla akho okudonselwa intela! Nikeza izigaba kumsebenzi ongu-1 ongenasigaba.', other: 'Khuphula amandla akho okudonselwa intela! Nikeza izigaba kumisebenzi enganikeziwe engu-${count}.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "${billName} inkokhelo ifuneka ngomhla ka-${date} ngokungu-${amount}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "${budgetName} ibhajethi enokungu-${amountUsed} okusetshenzisiwe kokungu-${amountTotal}, ${amountLeft} okusele";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'AZIKHO IZINTO', one: '1 INTO', other: '${quantity} IZINTO')}";
 
   static m17(price) => "x ${price}";
 
@@ -327,11 +327,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Izinkinobho"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Kusetshenziselwe ukukhetha phakathi kwenombolo yezinketho ezikhethekile ngokufanayo. Uma inketho eyodwa ekulawulweni okwenziwe isegmenti ikhethwa, ezinye izinketho ekulawulweni okwenziwe isegmenti ziyayeka ukukhethwa."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "ulawulo olwenziwe isegmenti lwesitayela se-iOS"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Ulawulo olufakwe kusegmenti"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Ilula, isexwayiso, nesikrini esigcwele"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Amabhokisi"),
@@ -375,10 +376,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ibhokisi elilula linikeza umsebenzisi inketho ephakathi kwezinketho ezithile. Ibhokisi elilula linesihloko ongasikhetha esiboniswa ngaphezulu kwezinketho."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Kulula"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Amathebhu ahlela okuqukethwe kuzikrini ezihlukile zokuqukethwe, amasethi edatha, nokunye ukuhlanganyela."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Amathebhu anokubuka okuzimele okuskrolekayo"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Amathebhu"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Izinkambu zombhalo zivumela abasebenzisi ukufaka umbhalo ku-UI. Ibonakala kumafomu nezingxoxo."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("I-imeyili"),
@@ -533,11 +534,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Igama lomsebenzisi"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("BONA KONKE"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Bona wonke ama-akhawunti"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Bona zonke izinkokhelo"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Bona wonke amabhajethi"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Thola ama-ATMs"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Usizo"),
@@ -586,7 +587,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Isiqondisindlela sombhalo"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("Kususelwa kokwasendaweni"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("Ukukalwa kombhalo"),
@@ -710,16 +711,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Ibhande le-Whitney"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Vala ikalishi"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Vala imenyu"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Vula imenyu"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Susa into"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Sesha"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Izilungiselelo"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Isendlalelo sokuqalisa sokuphendula"),
         "starterAppDrawerItem": m19,

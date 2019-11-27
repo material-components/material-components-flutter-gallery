@@ -24,13 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "ຕົວແທນບ່ອນສຳລັບແຖບ ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'ບໍ່ມີຮ້ານອາຫານ', one: 'ຮ້ານອາຫານ 1 ຮ້ານ', other: 'ຮ້ານອາຫານ ${totalRestaurants} ຮ້ານ')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'ບໍ່ຈອດ', one: '1 ຈຸດຈອດ', other: '${numberOfStops} ຈຸດຈອດ')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'ບໍ່ມີຕົວເລືອກບ່ອນພັກ', one: 'ມີ 1 ຕົວເລືອກບ່ອນພັກ', other: 'ມີ ${totalProperties} ຕົວເລືອກບ່ອນພັກ')}";
 
   static m5(value) => "ລາຍການ ${value}";
 
@@ -39,7 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "ທ່ານເລືອກ: \"${value}\" ແລ້ວ";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "ບັນຊີ ${accountName} ໝາຍເລກ ${accountNumber} ຈຳນວນ ${amount}.";
 
   static m9(amount) => "ທ່ານຈ່າຍຄ່າທຳນຽມ ATM ໃນເດືອນນີ້ໄປ ${amount}";
 
@@ -52,16 +52,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "ທ່ານໃຊ້ເງິນຢູ່ຮ້ານອາຫານໃນອາທິດນີ້ໄປແລ້ວ ${amount}.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'ເພີ່ມການຫຼຸດພາສີທີ່ເປັນໄປໄດ້ຂອງທ່ານ! ມອບໝາຍໝວດໝູ່ໃຫ້ 1 ທຸລະກຳທີ່ຍັງບໍ່ໄດ້ຮັບມອບໝາຍເທື່ອ.', other: 'ເພີ່ມການຫຼຸດພາສີທີ່ເປັນໄປໄດ້ຂອງທ່ານ! ມອບໝາຍໝວດໝູ່ໃຫ້ ${count} ທຸລະກຳທີ່ຍັງບໍ່ໄດ້ຮັບມອບໝາຍເທື່ອ.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "ບິນ ${billName} ຮອດກຳນົດ ${date} ຈຳນວນ ${amount}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "ງົບປະມານ ${budgetName} ໃຊ້ໄປແລ້ວ ${amountUsed} ຈາກຈຳນວນ ${amountTotal}, ເຫຼືອ ${amountLeft}";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'ບໍ່ມີລາຍການ', one: '1 ລາຍການ', other: '${quantity} ລາຍການ')}";
 
   static m17(price) => "x ${price}";
 
@@ -291,11 +291,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ປຸ່ມ"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "ໃຊ້ເພື່ອເລືອກລະຫວ່າງຕົວເລືອກທີ່ສະເພາະຕົວຄືກັນ. ການເລືອກຕົວເລືອກໜຶ່ງໃນສ່ວນຄວບຄຸມທີ່ແບ່ງບກຸ່ມຈະເປັນການຍົກເລີກການເລືອກຕົວເລືອກອື່ນໆໃນສ່ວນຄວບຄຸມທີ່ແບ່ງກຸ່ມນັ້ນ."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage("ການຄວບຄຸມແຍກສ່ວນແບບ iOS"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("ການຄວບຄຸມແບບແຍກສ່ວນ"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "ງ່າຍໆ, ການແຈ້ງເຕືອນ ແລະ ເຕັມຈໍ"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("ກ່ອງໂຕ້ຕອບ"),
@@ -337,10 +337,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "ກ່ອງໂຕ້ຕອບງ່າຍໆທີ່ສະເໜີຕົວເລືອກໃຫ້ຜູ້ໃຊ້ລະຫວ່າງຫຼາຍໆຕົວເລືອກ. ກ່ອງໂຕ້ຕອບແບບງ່າຍໆຈະມີຊື່ແບບບໍ່ບັງຄັບທີ່ສະແດງທາງເທິງຕົວເລືອກ."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("ງ່າຍໆ"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "ແຖບຕ່າງໆຈະເປັນການຈັດລະບຽບເນື້ອຫາໃນແຕ່ລະໜ້າຈໍ, ຊຸດຂໍ້ມູນ ແລະ ການໂຕ້ຕອບອື່ນໆ."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "ແຖບຕ່າງໆທີ່ມີມຸມມອງແບບເລື່ອນໄດ້ຂອງຕົນເອງ"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("ແຖບ"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "ຊ່ອງຂໍ້ຄວາມຈະເຮັດໃຫ້ຜູ້ໃຊ້ສາມາດພິມຂໍ້ຄວາມໄປໃສ່ສ່ວນຕິດຕໍ່ຜູ້ໃຊ້ໄດ້. ປົກກະຕິພວກມັນຈະປາກົດໃນແບບຟອມ ແລະ ກ່ອງໂຕ້ຕອບຕ່າງໆ."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("ອີເມວ"),
@@ -490,11 +490,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("ຊື່ຜູ້ໃຊ້"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("ເບິ່ງທັງໝົດ"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("ເບິ່ງບັນຊີທັງໝົດ"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("ເບິ່ງບິນທັງໝົດ"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("ເບິ່ງງົບປະມານທັງໝົດ"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ຊອກຫາຕູ້ ATM"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("ຊ່ວຍເຫຼືອ"),
@@ -538,7 +538,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ທິດທາງຂໍ້ຄວາມ"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("ອ້າງອີງຈາກພາສາ"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("​ການ​ຂະ​ຫຍາຍ​ຂໍ້​ຄວາມ"),
@@ -658,16 +658,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("ສາຍແອວ Whitney"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("ປິດກະຕ່າ"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("ປິດເມນູ"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("ເປີດເມນູ"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("ລຶບລາຍການ"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("ຊອກຫາ"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("ການຕັ້ງຄ່າ"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "ໂຄງຮ່າງເລີ່ມຕົ້ນທີ່ມີການຕອບສະໜອງ"),
         "starterAppDrawerItem": m19,

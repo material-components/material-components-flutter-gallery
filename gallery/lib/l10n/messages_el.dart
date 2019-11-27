@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Placeholder για την καρτέλα ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Κανένα εστιατόριο', one: '1 εστιατόριο', other: '${totalRestaurants} εστιατόρια')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Απευθείας', one: '1 στάση', other: '${numberOfStops} στάσεις')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Καμία διαθέσιμη ιδιοκτησία', one: '1 διαθέσιμη ιδιοκτησία', other: '${totalProperties} διαθέσιμες ιδιότητες')}";
 
   static m5(value) => "Στοιχείο ${value}";
 
@@ -41,7 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Επιλέξατε \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "Λογαριασμός ${accountName} με αριθμό ${accountNumber} και ποσό ${amount}.";
 
   static m9(amount) => "Δαπανήσατε ${amount} σε προμήθειες ATM αυτόν τον μήνα.";
 
@@ -55,16 +55,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Δαπανήσατε ${amount} σε εστιατόρια αυτήν την εβδομάδα.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Αυξήστε την πιθανή έκπτωση φόρου! Εκχωρήστε κατηγορίες σε 1 μη εκχωρημένη συναλλαγή.', other: 'Αυξήστε την πιθανή έκπτωση φόρου! Εκχωρήστε κατηγορίες σε ${count} μη εκχωρημένες συναλλαγές.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "Λογαριασμός ${billName} με προθεσμία στις ${date} και ποσό ${amount}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "Προϋπολογισμός ${budgetName} από τον οποίο έχουν χρησιμοποιηθεί ${amountUsed} από το συνολικό ποσό των ${amountTotal}, απομένουν ${amountLeft}";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'ΚΑΝΕΝΑ ΣΤΟΙΧΕΙΟ', one: '1 ΣΤΟΙΧΕΙΟ', other: '${quantity} ΣΤΟΙΧΕΙΑ')}";
 
   static m17(price) => "x ${price}";
 
@@ -318,11 +318,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Κουμπιά"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Χρησιμοποιείται για τον ορισμό μιας επιλογής μέσα από έναν αριθμό επιλογών που αποκλείουν η μία την άλλη. Όταν ορίζεται μία επιλογή στον τμηματοποιημένο έλεγχο, καταργείται ο ορισμός των άλλων επιλογών στον τμηματοποιημένο έλεγχο."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "Τμηματοποιημένος έλεγχος σε στιλ iOS"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Τμηματοποιημένος έλεγχος"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Απλό, ειδοποίηση και σε πλήρη οθόνη"),
         "demoDialogTitle":
@@ -367,10 +368,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ένα απλό παράθυρο διαλόγου που προσφέρει στον χρήστη τη δυνατότητα επιλογής μεταξύ διαφόρων επιλογών. Ένα απλό παράθυρο διαλόγου με προαιρετικό τίτλο που εμφανίζεται πάνω από τις επιλογές."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Απλό"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Οι καρτέλες οργανώνουν το περιεχόμενο σε διαφορετικές οθόνες, σύνολα δεδομένων και άλλες αλληλεπιδράσεις."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Καρτέλες με προβολές ανεξάρτητης κύλισης"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Καρτέλες"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Τα πεδία κειμένου επιτρέπουν στους χρήστες να εισάγουν κείμενο σε μια διεπαφή χρήστη. Συνήθως, εμφανίζονται σε φόρμες και παράθυρα διαλόγου."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage(
@@ -525,12 +526,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername":
             MessageLookupByLibrary.simpleMessage("Όνομα χρήστη"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("ΠΡΟΒΟΛΗ ΟΛΩΝ"),
-        "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
-        "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
-        "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+        "rallySeeAllAccounts": MessageLookupByLibrary.simpleMessage(
+            "Εμφάνιση όλων των λογαριασμών"),
+        "rallySeeAllBills": MessageLookupByLibrary.simpleMessage(
+            "Εμφάνιση όλων των λογαριασμών"),
+        "rallySeeAllBudgets": MessageLookupByLibrary.simpleMessage(
+            "Εμφάνιση όλων των προϋπολογισμών"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Εύρεση ATM"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Βοήθεια"),
@@ -579,7 +580,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Κατεύθυνση κειμένου"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage(
+                "Με βάση τις τοπικές ρυθμίσεις"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("Κλιμάκωση κειμένου"),
@@ -700,16 +702,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Ζώνη Whitney"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Κλείσιμο καλαθιού"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Κλείσιμο μενού"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Άνοιγμα μενού"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Κατάργηση στοιχείου"),
+        "shrineTooltipSearch":
+            MessageLookupByLibrary.simpleMessage("Αναζήτηση"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Ρυθμίσεις"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Μια αποκριτική διάταξη για την εφαρμογή Starter"),
         "starterAppDrawerItem": m19,

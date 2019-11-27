@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Phần giữ chỗ cho tab ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Không có nhà hàng nào', one: '1 nhà hàng', other: '${totalRestaurants} nhà hàng')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Bay thẳng', one: '1 điểm dừng', other: '${numberOfStops} điểm dừng')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Không có khách sạn nào', one: 'Có 1 khách sạn', other: 'Có ${totalProperties} khách sạn')}";
 
   static m5(value) => "Mặt hàng số ${value}";
 
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Bạn đã chọn: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "Số dư tài khoản ${accountName} ${accountNumber} là ${amount}.";
 
   static m9(amount) =>
       "Bạn đã chi tiêu ${amount} cho phí sử dụng ATM trong tháng này";
@@ -55,16 +55,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Bạn đã chi tiêu ${amount} cho Nhà hàng trong tuần này.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Tăng khoản khấu trừ thuế bạn có thể được hưởng! Gán danh mục cho 1 giao dịch chưa chỉ định.', other: 'Tăng khoản khấu trừ thuế bạn có thể được hưởng! Gán danh mục cho ${count} giao dịch chưa chỉ định.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "Hóa đơn ${billName} ${amount} đến hạn vào ${date}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "Đã dùng hết ${amountUsed}/${amountTotal} ngân sách ${budgetName}, số tiền còn lại là ${amountLeft}";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'KHÔNG CÓ MẶT HÀNG NÀO', one: '1 MẶT HÀNG', other: '${quantity} MẶT HÀNG')}";
 
   static m17(price) => "x ${price}";
 
@@ -302,11 +302,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Nút"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Dùng để chọn trong một số các tùy chọn loại trừ tương hỗ. Khi chọn 1 tùy chọn trong chế độ kiểm soát được phân đoạn, bạn sẽ không thể chọn các tùy chọn khác trong chế độ đó."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "Chế độ kiểm soát được phân đoạn theo kiểu iOS"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage(
+                "Chế độ kiểm soát được phân đoạn"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Hộp thoại đơn giản, cảnh báo và toàn màn hình"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Hộp thoại"),
@@ -350,10 +352,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Hộp thoại đơn giản"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Các tab sắp xếp nội dung trên nhiều màn hình, tập dữ liệu và hoạt động tương tác khác."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Các tab có chế độ xem có thể di chuyển độc lập"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tab"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Các trường văn bản cho phép người dùng nhập văn bản vào giao diện người dùng. Những trường này thường xuất hiện trong các biểu mẫu và hộp thoại."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("Email"),
@@ -507,11 +509,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Tên người dùng"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("XEM TẤT CẢ"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Xem tất cả các tài khoản"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Xem tất cả các hóa đơn"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Xem tất cả ngân sách"),
         "rallySettingsFindAtms": MessageLookupByLibrary.simpleMessage(
             "Tìm máy rút tiền tự động (ATM)"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Trợ giúp"),
@@ -557,7 +559,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("TRÁI SANG PHẢI"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("Dựa trên vị trí"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("Phải qua trái"),
         "settingsTextScaling":
@@ -680,16 +682,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Thắt lưng Whitney"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Đóng giỏ hàng"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Đóng trình đơn"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Mở trình đơn"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Xóa mặt hàng"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Tìm kiếm"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Cài đặt"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Bố cục thích ứng cho ứng dụng cơ bản"),
         "starterAppDrawerItem": m19,
