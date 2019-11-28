@@ -7,7 +7,9 @@ import 'package:flare_flutter/flare.dart';
 import 'package:flare_flutter/flare_actor.dart';
 import 'package:flare_flutter/flare_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:gallery/constants.dart';
+import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 
@@ -93,6 +95,23 @@ class _BackdropState extends State<Backdrop>
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.linear));
   }
 
+  List<Widget> _galleryHeader() {
+    return [
+      if (_isPanelVisible)
+        Semantics(
+          sortKey: OrdinalSortKey(
+            GalleryOptions.of(context).textDirection() == TextDirection.ltr
+                ? 1.0
+                : 2.0,
+            name: 'header',
+          ),
+          excludeSemantics: !_isPanelVisible,
+          label: GalleryLocalizations.of(context).homeHeaderGallery,
+          child: Container(),
+        ),
+    ];
+  }
+
   Widget _buildStack(BuildContext context, BoxConstraints constraints) {
     final Animation<RelativeRect> animation = _getPanelAnimation(constraints);
 
@@ -109,6 +128,7 @@ class _BackdropState extends State<Backdrop>
       child: Stack(
         children: [
           if (!isDisplayDesktop(context)) ...[
+            ..._galleryHeader(),
             frontLayer,
             PositionedTransition(
               rect: animation,
@@ -116,7 +136,28 @@ class _BackdropState extends State<Backdrop>
             ),
           ],
           if (isDisplayDesktop(context)) ...[
+            ..._galleryHeader(),
             backLayer,
+            if (!_isPanelVisible) ...[
+              ModalBarrier(
+                semanticsLabel:
+                    MaterialLocalizations.of(context).modalBarrierDismissLabel,
+                dismissible: true,
+              ),
+              Semantics(
+                label:
+                    MaterialLocalizations.of(context).modalBarrierDismissLabel,
+                child: GestureDetector(
+                  onTap: () {
+                    if (!_isPanelVisible) {
+                      _controller.fling(velocity: _isPanelVisible ? -1 : 1);
+                      _desktopController.fling(
+                          velocity: _isPanelVisible ? -1 : 1);
+                    }
+                  },
+                ),
+              )
+            ],
             ScaleTransition(
               alignment: Directionality.of(context) == TextDirection.ltr
                   ? Alignment.topRight
@@ -147,11 +188,19 @@ class _BackdropState extends State<Backdrop>
           ],
           Align(
             alignment: AlignmentDirectional.topEnd,
-            child: SafeArea(
-              child: Semantics(
-                label: _isPanelVisible
-                    ? GalleryLocalizations.of(context).settingsButtonLabel
-                    : GalleryLocalizations.of(context).settingsButtonCloseLabel,
+            child: Semantics(
+              sortKey: OrdinalSortKey(
+                GalleryOptions.of(context).textDirection() == TextDirection.ltr
+                    ? 2.0
+                    : 1.0,
+                name: 'header',
+              ),
+              button: true,
+              label: _isPanelVisible
+                  ? GalleryLocalizations.of(context).settingsButtonLabel
+                  : GalleryLocalizations.of(context).settingsButtonCloseLabel,
+              excludeSemantics: !_isPanelVisible,
+              child: SafeArea(
                 child: SizedBox(
                   width: 64,
                   height: isDisplayDesktop(context) ? 56 : 40,

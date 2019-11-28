@@ -252,53 +252,54 @@ class CategoryDemoItem extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     return Material(
       color: Theme.of(context).colorScheme.surface,
-      child: InkWell(
-        onTap: () {
-          Navigator.push<void>(
-            context,
-            MaterialPageRoute(builder: (context) => DemoPage(demo: demo)),
-          );
-        },
-        child: Padding(
-          padding: EdgeInsetsDirectional.only(
-            start: 32,
-            top: 20,
-            end: isDisplayDesktop(context) ? 16 : 8,
-          ),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Icon(
-                demo.icon,
-                color: colorScheme.primary,
-              ),
-              SizedBox(width: 40),
-              Flexible(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      demo.title,
-                      style:
-                          textTheme.subhead.apply(color: colorScheme.onSurface),
-                    ),
-                    Text(
-                      demo.subtitle,
-                      style: textTheme.overline.apply(
-                        color: colorScheme.onSurface.withOpacity(0.5),
-                      ),
-                    ),
-                    SizedBox(height: 20),
-                    // TODO: This isn't appearing for some reason.
-                    Divider(
-                      thickness: 1,
-                      height: 1,
-                      color: Theme.of(context).colorScheme.background,
-                    ),
-                  ],
+      child: MergeSemantics(
+        child: InkWell(
+          onTap: () {
+            Navigator.push<void>(
+              context,
+              MaterialPageRoute(builder: (context) => DemoPage(demo: demo)),
+            );
+          },
+          child: Padding(
+            padding: EdgeInsetsDirectional.only(
+              start: 32,
+              top: 20,
+              end: isDisplayDesktop(context) ? 16 : 8,
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Icon(
+                  demo.icon,
+                  color: colorScheme.primary,
                 ),
-              ),
-            ],
+                SizedBox(width: 40),
+                Flexible(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        demo.title,
+                        style: textTheme.subhead
+                            .apply(color: colorScheme.onSurface),
+                      ),
+                      Text(
+                        demo.subtitle,
+                        style: textTheme.overline.apply(
+                          color: colorScheme.onSurface.withOpacity(0.5),
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      Divider(
+                        thickness: 1,
+                        height: 1,
+                        color: Theme.of(context).colorScheme.background,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

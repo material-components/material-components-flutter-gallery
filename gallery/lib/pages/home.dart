@@ -6,6 +6,7 @@ import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/semantics.dart';
 import 'package:gallery/constants.dart';
 import 'package:gallery/data/demos.dart';
@@ -101,7 +102,7 @@ class HomePage extends StatelessWidget {
           ),
           children: [
             SizedBox(height: 5),
-            _GalleryHeader(),
+            ExcludeSemantics(child: _GalleryHeader()),
             SizedBox(height: 11),
             Container(
               height: carouselHeight,
@@ -120,8 +121,8 @@ class HomePage extends StatelessWidget {
                 children: spaceBetween(28, desktopCategoryItems),
               ),
             ),
-            Container(
-              margin: const EdgeInsetsDirectional.only(
+            Padding(
+              padding: const EdgeInsetsDirectional.only(
                 bottom: 81,
                 top: 109,
               ),
@@ -131,7 +132,9 @@ class HomePage extends StatelessWidget {
                 children: [
                   SettingsAbout(),
                   SettingsFeedback(),
-                  SettingsAttribution(),
+                  MergeSemantics(
+                    child: SettingsAttribution(),
+                  ),
                 ],
               ),
             ),
@@ -250,7 +253,7 @@ class _AnimatedHomePageState extends State<_AnimatedHomePage>
         SizedBox(height: 8),
         Container(
           margin: EdgeInsets.symmetric(horizontal: _horizontalPadding),
-          child: _GalleryHeader(),
+          child: ExcludeSemantics(child: _GalleryHeader()),
         ),
         _Carousel(
           children: widget.carouselCards,
@@ -310,30 +313,33 @@ class _DesktopCategoryItem extends StatelessWidget {
       borderRadius: BorderRadius.circular(10),
       clipBehavior: Clip.antiAlias,
       color: colorScheme.surface,
-      child: Column(
-        children: [
-          _DesktopCategoryHeader(
-            title: title,
-            imageString: imageString,
-          ),
-          Divider(
-            height: 2,
-            thickness: 2,
-            color: colorScheme.background,
-          ),
-          Flexible(
-            child: ListView(
-              children: [
-                const SizedBox(height: 12),
-                for (GalleryDemo demo in demos)
-                  CategoryDemoItem(
-                    demo: demo,
-                  ),
-                SizedBox(height: 12),
-              ],
+      child: Semantics(
+        container: true,
+        child: Column(
+          children: [
+            _DesktopCategoryHeader(
+              title: title,
+              imageString: imageString,
             ),
-          ),
-        ],
+            Divider(
+              height: 2,
+              thickness: 2,
+              color: colorScheme.background,
+            ),
+            Flexible(
+              child: ListView(
+                children: [
+                  const SizedBox(height: 12),
+                  for (GalleryDemo demo in demos)
+                    CategoryDemoItem(
+                      demo: demo,
+                    ),
+                  SizedBox(height: 12),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -360,18 +366,22 @@ class _DesktopCategoryHeader extends StatelessWidget {
               imageString,
               width: 64,
               height: 64,
+              excludeFromSemantics: true,
             ),
           ),
-          Expanded(
+          Flexible(
             child: Padding(
               padding: EdgeInsetsDirectional.only(start: 8),
-              child: Text(
-                title,
-                style: Theme.of(context).textTheme.headline.apply(
-                      color: colorScheme.onSurface,
-                    ),
-                maxLines: 4,
-                overflow: TextOverflow.ellipsis,
+              child: Semantics(
+                header: true,
+                child: Text(
+                  title,
+                  style: Theme.of(context).textTheme.headline.apply(
+                        color: colorScheme.onSurface,
+                      ),
+                  maxLines: 4,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
             ),
           ),
