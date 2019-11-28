@@ -29,6 +29,7 @@ class _OverviewViewState extends State<OverviewView> {
     final alerts = DummyDataService.getAlerts(context);
 
     if (isDisplayDesktop(context)) {
+      const sortKeyName = 'Overview';
       return SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 24),
@@ -37,14 +38,20 @@ class _OverviewViewState extends State<OverviewView> {
             children: [
               Flexible(
                 flex: 7,
-                child: _OverviewGrid(spacing: 24),
+                child: Semantics(
+                  sortKey: const OrdinalSortKey(1, name: sortKeyName),
+                  child: _OverviewGrid(spacing: 24),
+                ),
               ),
               SizedBox(width: 24),
               Flexible(
                 flex: 3,
                 child: Container(
                   width: 400,
-                  child: _AlertsView(alerts: alerts),
+                  child: Semantics(
+                    sortKey: const OrdinalSortKey(2, name: sortKeyName),
+                    child: _AlertsView(alerts: alerts),
+                  ),
                 ),
               ),
             ],
