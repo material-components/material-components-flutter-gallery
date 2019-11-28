@@ -41,7 +41,13 @@ class _ItemCardsState extends State<ItemCards> {
       if (listIndex == 2) ...eatDestinations,
     ];
 
-    return destinations.map((d) => _DestinationCard(destination: d)).toList();
+    return destinations
+        .map(
+          (d) => RepaintBoundary(
+            child: _DestinationCard(destination: d),
+          ),
+        )
+        .toList();
   }
 
   @override
