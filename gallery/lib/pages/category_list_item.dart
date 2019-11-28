@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:gallery/data/demos.dart';
+import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/pages/demo.dart';
 
 class CategoryListItem extends StatefulWidget {
@@ -259,10 +260,10 @@ class CategoryDemoItem extends StatelessWidget {
           );
         },
         child: Padding(
-          padding: const EdgeInsetsDirectional.only(
+          padding: EdgeInsetsDirectional.only(
             start: 32,
             top: 20,
-            end: 8,
+            end: isDisplayDesktop(context) ? 16 : 8,
           ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,

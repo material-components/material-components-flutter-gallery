@@ -7,7 +7,6 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
-
 import 'package:gallery/constants.dart';
 import 'package:gallery/data/demos.dart';
 import 'package:gallery/data/gallery_options.dart';
@@ -101,6 +100,7 @@ class HomePage extends StatelessWidget {
             end: _horizontalDesktopPadding,
           ),
           children: [
+            SizedBox(height: 5),
             _GalleryHeader(),
             SizedBox(height: 11),
             Container(
@@ -189,8 +189,8 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        top: isDisplayDesktop(context) ? 63 : 4,
-        bottom: 27,
+        top: isDisplayDesktop(context) ? 63 : 29,
+        bottom: isDisplayDesktop(context) ? 21 : 11,
       ),
       child: Text(
         text,
@@ -247,6 +247,7 @@ class _AnimatedHomePageState extends State<_AnimatedHomePage>
   Widget build(BuildContext context) {
     return ListView(
       children: [
+        SizedBox(height: 8),
         Container(
           margin: EdgeInsets.symmetric(horizontal: _horizontalPadding),
           child: _GalleryHeader(),
@@ -323,12 +324,12 @@ class _DesktopCategoryItem extends StatelessWidget {
           Flexible(
             child: ListView(
               children: [
-                const SizedBox(height: 27),
+                const SizedBox(height: 12),
                 for (GalleryDemo demo in demos)
                   CategoryDemoItem(
                     demo: demo,
                   ),
-                SizedBox(height: 27),
+                SizedBox(height: 12),
               ],
             ),
           ),
