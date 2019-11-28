@@ -76,20 +76,26 @@ class CategoryMenuPage extends StatelessWidget {
     final double indicatorWidth = indicatorHeight * 34 / 28;
 
     return ScopedModelDescendant<AppStateModel>(
-      builder: (context, child, model) => GestureDetector(
-        onTap: () {
-          model.setCategory(category);
-          if (onCategoryTap != null) {
-            onCategoryTap();
-          }
-        },
-        child: model.selectedCategory == category
-            ? CustomPaint(
-                painter:
-                    TriangleCategoryIndicator(indicatorWidth, indicatorHeight),
-                child: _buttonText(categoryString, selectedCategoryTextStyle),
-              )
-            : _buttonText(categoryString, unselectedCategoryTextStyle),
+      builder: (context, child, model) => Semantics(
+        label: category.name(context),
+        selected: model.selectedCategory == category,
+        child: GestureDetector(
+          onTap: () {
+            model.setCategory(category);
+            if (onCategoryTap != null) {
+              onCategoryTap();
+            }
+          },
+          child: model.selectedCategory == category
+              ? CustomPaint(
+                  painter: TriangleCategoryIndicator(
+                    indicatorWidth,
+                    indicatorHeight,
+                  ),
+                  child: _buttonText(categoryString, selectedCategoryTextStyle),
+                )
+              : _buttonText(categoryString, unselectedCategoryTextStyle),
+        ),
       ),
     );
   }
