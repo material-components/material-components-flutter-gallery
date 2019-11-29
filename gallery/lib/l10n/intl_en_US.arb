@@ -1574,7 +1574,7 @@
   "@craneFly5": {
     "description": "Label for city."
   },
-  "craneFly6": "Madrid, Spain",
+  "craneFly6": "Mexico City, Mexico",
   "@craneFly6": {
     "description": "Label for city."
   },
@@ -1697,5 +1697,153 @@
   "craneEat10": "Lisbon, Portugal",
   "@craneEat10": {
     "description": "Label for city."
+  },
+  "craneFly0SemanticLabel": "Chalet in a snowy landscape with evergreen trees",
+  "@craneFly0SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly1SemanticLabel": "Tent in a field",
+  "@craneFly1SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly2SemanticLabel": "Prayer flags in front of snowy mountain",
+  "@craneFly2SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly3SemanticLabel": "Machu Picchu citadel",
+  "@craneFly3SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly4SemanticLabel": "Overwater bungalows",
+  "@craneFly4SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly5SemanticLabel": "Lake-side hotel in front of mountains",
+  "@craneFly5SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly6SemanticLabel": "Aerial view of Palacio de Bellas Artes",
+  "@craneFly6SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly7SemanticLabel": "Mount Rushmore",
+  "@craneFly7SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly8SemanticLabel": "Supertree Grove",
+  "@craneFly8SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly9SemanticLabel": "Man leaning on an antique blue car",
+  "@craneFly9SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly10SemanticLabel": "Al-Azhar Mosque towers during sunset",
+  "@craneFly10SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly11SemanticLabel": "Brick lighthouse at sea",
+  "@craneFly11SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly12SemanticLabel": "Pool with palm trees",
+  "@craneFly12SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly13SemanticLabel": "Sea-side pool with palm trees",
+  "@craneFly13SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep0SemanticLabel": "Overwater bungalows",
+  "@craneSleep0SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep1SemanticLabel": "Chalet in a snowy landscape with evergreen trees",
+  "@craneSleep1SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep2SemanticLabel": "Machu Picchu citadel",
+  "@craneSleep2SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep3SemanticLabel": "Man leaning on an antique blue car",
+  "@craneSleep3SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep4SemanticLabel": "Lake-side hotel in front of mountains",
+  "@craneSleep4SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep5SemanticLabel": "Tent in a field",
+  "@craneSleep5SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep6SemanticLabel": "Pool with palm trees",
+  "@craneSleep6SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep7SemanticLabel": "Colorful apartments at Riberia Square",
+  "@craneSleep7SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep8SemanticLabel": "Mayan ruins on a cliff above a beach",
+  "@craneSleep8SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep9SemanticLabel": "Brick lighthouse at sea",
+  "@craneSleep9SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep10SemanticLabel": "Al-Azhar Mosque towers during sunset",
+  "@craneSleep10SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep11SemanticLabel": "Taipei 101 skyscraper",
+  "@craneSleep11SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat0SemanticLabel": "Pizza in a wood-fired oven",
+  "@craneEat0SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat1SemanticLabel": "Empty bar with diner-style stools",
+  "@craneEat1SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat2SemanticLabel": "Burger",
+  "@craneEat2SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat3SemanticLabel": "Korean taco",
+  "@craneEat3SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat4SemanticLabel": "Chocolate desert",
+  "@craneEat4SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat5SemanticLabel": "Artsy restaurant seating area",
+  "@craneEat5SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat6SemanticLabel": "Shrimp dish",
+  "@craneEat6SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat7SemanticLabel": "Bakery entrance",
+  "@craneEat7SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat8SemanticLabel": "Plate of crawfish",
+  "@craneEat8SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat9SemanticLabel": "Cafe counter with pastries",
+  "@craneEat9SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat10SemanticLabel": "Woman holding huge pastrami sandwich",
+  "@craneEat10SemanticLabel": {
+    "description": "Semantic label for an image."
   }
 }

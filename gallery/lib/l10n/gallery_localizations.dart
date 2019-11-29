@@ -493,6 +493,13 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneEat0', desc: r'Label for city.');
   }
 
+  String get craneEat0SemanticLabel {
+    return Intl.message(r'Pizza in a wood-fired oven',
+        locale: _localeName,
+        name: 'craneEat0SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneEat1 {
     return Intl.message(r'Dallas, United States',
         locale: _localeName, name: 'craneEat1', desc: r'Label for city.');
@@ -503,9 +510,30 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneEat10', desc: r'Label for city.');
   }
 
+  String get craneEat10SemanticLabel {
+    return Intl.message(r'Woman holding huge pastrami sandwich',
+        locale: _localeName,
+        name: 'craneEat10SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
+  String get craneEat1SemanticLabel {
+    return Intl.message(r'Empty bar with diner-style stools',
+        locale: _localeName,
+        name: 'craneEat1SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneEat2 {
     return Intl.message(r'Córdoba, Argentina',
         locale: _localeName, name: 'craneEat2', desc: r'Label for city.');
+  }
+
+  String get craneEat2SemanticLabel {
+    return Intl.message(r'Burger',
+        locale: _localeName,
+        name: 'craneEat2SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneEat3 {
@@ -513,9 +541,23 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneEat3', desc: r'Label for city.');
   }
 
+  String get craneEat3SemanticLabel {
+    return Intl.message(r'Korean taco',
+        locale: _localeName,
+        name: 'craneEat3SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneEat4 {
     return Intl.message(r'Paris, France',
         locale: _localeName, name: 'craneEat4', desc: r'Label for city.');
+  }
+
+  String get craneEat4SemanticLabel {
+    return Intl.message(r'Chocolate desert',
+        locale: _localeName,
+        name: 'craneEat4SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneEat5 {
@@ -523,9 +565,23 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneEat5', desc: r'Label for city.');
   }
 
+  String get craneEat5SemanticLabel {
+    return Intl.message(r'Artsy restaurant seating area',
+        locale: _localeName,
+        name: 'craneEat5SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneEat6 {
     return Intl.message(r'Seattle, United States',
         locale: _localeName, name: 'craneEat6', desc: r'Label for city.');
+  }
+
+  String get craneEat6SemanticLabel {
+    return Intl.message(r'Shrimp dish',
+        locale: _localeName,
+        name: 'craneEat6SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneEat7 {
@@ -533,14 +589,35 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneEat7', desc: r'Label for city.');
   }
 
+  String get craneEat7SemanticLabel {
+    return Intl.message(r'Bakery entrance',
+        locale: _localeName,
+        name: 'craneEat7SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneEat8 {
     return Intl.message(r'Atlanta, United States',
         locale: _localeName, name: 'craneEat8', desc: r'Label for city.');
   }
 
+  String get craneEat8SemanticLabel {
+    return Intl.message(r'Plate of crawfish',
+        locale: _localeName,
+        name: 'craneEat8SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneEat9 {
     return Intl.message(r'Madrid, Spain',
         locale: _localeName, name: 'craneEat9', desc: r'Label for city.');
+  }
+
+  String get craneEat9SemanticLabel {
+    return Intl.message(r'Cafe counter with pastries',
+        locale: _localeName,
+        name: 'craneEat9SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String craneEatRestaurants(int totalRestaurants) {
@@ -571,6 +648,13 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneFly0', desc: r'Label for city.');
   }
 
+  String get craneFly0SemanticLabel {
+    return Intl.message(r'Chalet in a snowy landscape with evergreen trees',
+        locale: _localeName,
+        name: 'craneFly0SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneFly1 {
     return Intl.message(r'Big Sur, United States',
         locale: _localeName, name: 'craneFly1', desc: r'Label for city.');
@@ -581,9 +665,23 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneFly10', desc: r'Label for city.');
   }
 
+  String get craneFly10SemanticLabel {
+    return Intl.message(r'Al-Azhar Mosque towers during sunset',
+        locale: _localeName,
+        name: 'craneFly10SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneFly11 {
     return Intl.message(r'Lisbon, Portugal',
         locale: _localeName, name: 'craneFly11', desc: r'Label for city.');
+  }
+
+  String get craneFly11SemanticLabel {
+    return Intl.message(r'Brick lighthouse at sea',
+        locale: _localeName,
+        name: 'craneFly11SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneFly12 {
@@ -591,9 +689,30 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneFly12', desc: r'Label for city.');
   }
 
+  String get craneFly12SemanticLabel {
+    return Intl.message(r'Pool with palm trees',
+        locale: _localeName,
+        name: 'craneFly12SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneFly13 {
     return Intl.message(r'Bali, Indonesia',
         locale: _localeName, name: 'craneFly13', desc: r'Label for city.');
+  }
+
+  String get craneFly13SemanticLabel {
+    return Intl.message(r'Sea-side pool with palm trees',
+        locale: _localeName,
+        name: 'craneFly13SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
+  String get craneFly1SemanticLabel {
+    return Intl.message(r'Tent in a field',
+        locale: _localeName,
+        name: 'craneFly1SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneFly2 {
@@ -601,9 +720,23 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneFly2', desc: r'Label for city.');
   }
 
+  String get craneFly2SemanticLabel {
+    return Intl.message(r'Prayer flags in front of snowy mountain',
+        locale: _localeName,
+        name: 'craneFly2SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneFly3 {
     return Intl.message(r'Machu Picchu, Peru',
         locale: _localeName, name: 'craneFly3', desc: r'Label for city.');
+  }
+
+  String get craneFly3SemanticLabel {
+    return Intl.message(r'Machu Picchu citadel',
+        locale: _localeName,
+        name: 'craneFly3SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneFly4 {
@@ -611,14 +744,35 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneFly4', desc: r'Label for city.');
   }
 
+  String get craneFly4SemanticLabel {
+    return Intl.message(r'Overwater bungalows',
+        locale: _localeName,
+        name: 'craneFly4SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneFly5 {
     return Intl.message(r'Vitznau, Switzerland',
         locale: _localeName, name: 'craneFly5', desc: r'Label for city.');
   }
 
+  String get craneFly5SemanticLabel {
+    return Intl.message(r'Lake-side hotel in front of mountains',
+        locale: _localeName,
+        name: 'craneFly5SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneFly6 {
-    return Intl.message(r'Madrid, Spain',
+    return Intl.message(r'Mexico City, Mexico',
         locale: _localeName, name: 'craneFly6', desc: r'Label for city.');
+  }
+
+  String get craneFly6SemanticLabel {
+    return Intl.message(r'Aerial view of Palacio de Bellas Artes',
+        locale: _localeName,
+        name: 'craneFly6SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneFly7 {
@@ -626,14 +780,35 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneFly7', desc: r'Label for city.');
   }
 
+  String get craneFly7SemanticLabel {
+    return Intl.message(r'Mount Rushmore',
+        locale: _localeName,
+        name: 'craneFly7SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneFly8 {
     return Intl.message(r'Singapore',
         locale: _localeName, name: 'craneFly8', desc: r'Label for city.');
   }
 
+  String get craneFly8SemanticLabel {
+    return Intl.message(r'Supertree Grove',
+        locale: _localeName,
+        name: 'craneFly8SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneFly9 {
     return Intl.message(r'Havana, Cuba',
         locale: _localeName, name: 'craneFly9', desc: r'Label for city.');
+  }
+
+  String get craneFly9SemanticLabel {
+    return Intl.message(r'Man leaning on an antique blue car',
+        locale: _localeName,
+        name: 'craneFly9SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String craneFlyStops(int numberOfStops) {
@@ -721,6 +896,13 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneSleep0', desc: r'Label for city.');
   }
 
+  String get craneSleep0SemanticLabel {
+    return Intl.message(r'Overwater bungalows',
+        locale: _localeName,
+        name: 'craneSleep0SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneSleep1 {
     return Intl.message(r'Aspen, United States',
         locale: _localeName, name: 'craneSleep1', desc: r'Label for city.');
@@ -731,9 +913,30 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneSleep10', desc: r'Label for city.');
   }
 
+  String get craneSleep10SemanticLabel {
+    return Intl.message(r'Al-Azhar Mosque towers during sunset',
+        locale: _localeName,
+        name: 'craneSleep10SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneSleep11 {
     return Intl.message(r'Taipei, Taiwan',
         locale: _localeName, name: 'craneSleep11', desc: r'Label for city.');
+  }
+
+  String get craneSleep11SemanticLabel {
+    return Intl.message(r'Taipei 101 skyscraper',
+        locale: _localeName,
+        name: 'craneSleep11SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
+  String get craneSleep1SemanticLabel {
+    return Intl.message(r'Chalet in a snowy landscape with evergreen trees',
+        locale: _localeName,
+        name: 'craneSleep1SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneSleep2 {
@@ -741,9 +944,23 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneSleep2', desc: r'Label for city.');
   }
 
+  String get craneSleep2SemanticLabel {
+    return Intl.message(r'Machu Picchu citadel',
+        locale: _localeName,
+        name: 'craneSleep2SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneSleep3 {
     return Intl.message(r'Havana, Cuba',
         locale: _localeName, name: 'craneSleep3', desc: r'Label for city.');
+  }
+
+  String get craneSleep3SemanticLabel {
+    return Intl.message(r'Man leaning on an antique blue car',
+        locale: _localeName,
+        name: 'craneSleep3SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneSleep4 {
@@ -751,9 +968,23 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneSleep4', desc: r'Label for city.');
   }
 
+  String get craneSleep4SemanticLabel {
+    return Intl.message(r'Lake-side hotel in front of mountains',
+        locale: _localeName,
+        name: 'craneSleep4SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneSleep5 {
     return Intl.message(r'Big Sur, United States',
         locale: _localeName, name: 'craneSleep5', desc: r'Label for city.');
+  }
+
+  String get craneSleep5SemanticLabel {
+    return Intl.message(r'Tent in a field',
+        locale: _localeName,
+        name: 'craneSleep5SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneSleep6 {
@@ -761,9 +992,23 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneSleep6', desc: r'Label for city.');
   }
 
+  String get craneSleep6SemanticLabel {
+    return Intl.message(r'Pool with palm trees',
+        locale: _localeName,
+        name: 'craneSleep6SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneSleep7 {
     return Intl.message(r'Porto, Portugal',
         locale: _localeName, name: 'craneSleep7', desc: r'Label for city.');
+  }
+
+  String get craneSleep7SemanticLabel {
+    return Intl.message(r'Colorful apartments at Riberia Square',
+        locale: _localeName,
+        name: 'craneSleep7SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneSleep8 {
@@ -771,9 +1016,23 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneSleep8', desc: r'Label for city.');
   }
 
+  String get craneSleep8SemanticLabel {
+    return Intl.message(r'Mayan ruins on a cliff above a beach',
+        locale: _localeName,
+        name: 'craneSleep8SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneSleep9 {
     return Intl.message(r'Lisbon, Portugal',
         locale: _localeName, name: 'craneSleep9', desc: r'Label for city.');
+  }
+
+  String get craneSleep9SemanticLabel {
+    return Intl.message(r'Brick lighthouse at sea',
+        locale: _localeName,
+        name: 'craneSleep9SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String craneSleepProperties(int totalProperties) {

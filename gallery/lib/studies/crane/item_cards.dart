@@ -34,7 +34,7 @@ class _ItemCardsState extends State<ItemCards> {
   List<Destination> sleepDestinations;
   List<Destination> eatDestinations;
 
-  List<Widget> _buildFlightCards({int listIndex}) {
+  List<Widget> _buildDestinationCards({int listIndex}) {
     final List<Destination> destinations = [
       if (listIndex == 0) ...flyDestinations,
       if (listIndex == 1) ...sleepDestinations,
@@ -65,27 +65,26 @@ class _ItemCardsState extends State<ItemCards> {
 
   @override
   Widget build(BuildContext context) {
-    final List<Widget> destinationCards =
-        _buildFlightCards(listIndex: widget.index);
     final isDesktop = isDisplayDesktop(context);
+    final List<Widget> destinationCards =
+        _buildDestinationCards(listIndex: widget.index);
 
     if (isDesktop) {
-      // Based on totalColumns, generate columnCounts, which lists the number
-      // of items per column. e.g. [n, n, n, ... n - 1, n - 1]
-      final fullColumns = (destinationCards.length % ItemCards.totalColumns);
-      final incompleteColumnCount =
-          (destinationCards.length / ItemCards.totalColumns).floor();
-      final fullColumnCount = incompleteColumnCount + 1;
-      final columnCounts = List.filled(fullColumns, fullColumnCount) +
-          List.filled(
-              ItemCards.totalColumns - fullColumns, incompleteColumnCount);
+      var columns = List<List<Widget>>(ItemCards.totalColumns);
+      for (var i = 0; i < destinationCards.length; i++) {
+        final col = i % ItemCards.totalColumns;
 
-      List<List<Widget>> columns = [];
-      var currentIndex = 0;
-      for (var count in columnCounts) {
-        columns
-            .add(destinationCards.sublist(currentIndex, currentIndex + count));
-        currentIndex += count;
+        if (columns[col] == null) {
+          columns[col] = List<Widget>();
+        }
+
+        columns[col].add(
+          // TODO: determine why this is isn't always respected
+          Semantics(
+            sortKey: OrdinalSortKey(i.toDouble(), name: 'destination'),
+            child: destinationCards[i],
+          ),
+        );
       }
 
       return Row(
@@ -114,9 +113,14 @@ class _DestinationCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final imageWidget = Image.asset(
-      destination.assetName,
-      fit: BoxFit.cover,
+    final imageWidget = Semantics(
+      child: ExcludeSemantics(
+        child: Image.asset(
+          destination.assetName,
+          fit: BoxFit.cover,
+        ),
+      ),
+      label: destination.assetSemanticLabel,
     );
 
     final isDesktop = isDisplayDesktop(context);
@@ -125,25 +129,29 @@ class _DestinationCard extends StatelessWidget {
     if (isDesktop) {
       return Padding(
         padding: const EdgeInsets.only(bottom: 40),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            ClipRRect(
-              borderRadius: const BorderRadius.all(Radius.circular(4)),
-              child: imageWidget,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 20, bottom: 10),
-              child: Text(
-                destination.destination,
-                style: textTheme.subhead,
+        child: Semantics(
+          container: true,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ClipRRect(
+                borderRadius: const BorderRadius.all(Radius.circular(4)),
+                child: imageWidget,
               ),
-            ),
-            Text(
-              destination.subtitle(context),
-              style: textTheme.subtitle,
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.only(top: 20, bottom: 10),
+                child: Text(
+                  destination.destination,
+                  style: textTheme.subhead,
+                ),
+              ),
+              Text(
+                destination.subtitle(context),
+                semanticsLabel: destination.subtitleSemantics(context),
+                style: textTheme.subtitle,
+              ),
+            ],
+          ),
         ),
       );
     } else {
@@ -163,6 +171,7 @@ class _DestinationCard extends StatelessWidget {
             title: Text(destination.destination, style: textTheme.subhead),
             subtitle: Text(
               destination.subtitle(context),
+              semanticsLabel: destination.subtitleSemantics(context),
               style: textTheme.subtitle,
             ),
           ),

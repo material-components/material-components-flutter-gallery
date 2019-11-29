@@ -1480,7 +1480,7 @@
   <string
     name="craneFly6"
     description="Label for city."
-    >Madrid, Spain</string>
+    >Mexico City, Mexico</string>
   <string
     name="craneFly7"
     description="Label for city."
@@ -1601,4 +1601,152 @@
     name="craneEat10"
     description="Label for city."
     >Lisbon, Portugal</string>
+  <string
+    name="craneFly0SemanticLabel"
+    description="Semantic label for an image."
+    >Chalet in a snowy landscape with evergreen trees</string>
+  <string
+    name="craneFly1SemanticLabel"
+    description="Semantic label for an image."
+    >Tent in a field</string>
+  <string
+    name="craneFly2SemanticLabel"
+    description="Semantic label for an image."
+    >Prayer flags in front of snowy mountain</string>
+  <string
+    name="craneFly3SemanticLabel"
+    description="Semantic label for an image."
+    >Machu Picchu citadel</string>
+  <string
+    name="craneFly4SemanticLabel"
+    description="Semantic label for an image."
+    >Overwater bungalows</string>
+  <string
+    name="craneFly5SemanticLabel"
+    description="Semantic label for an image."
+    >Lake-side hotel in front of mountains</string>
+  <string
+    name="craneFly6SemanticLabel"
+    description="Semantic label for an image."
+    >Aerial view of Palacio de Bellas Artes</string>
+  <string
+    name="craneFly7SemanticLabel"
+    description="Semantic label for an image."
+    >Mount Rushmore</string>
+  <string
+    name="craneFly8SemanticLabel"
+    description="Semantic label for an image."
+    >Supertree Grove</string>
+  <string
+    name="craneFly9SemanticLabel"
+    description="Semantic label for an image."
+    >Man leaning on an antique blue car</string>
+  <string
+    name="craneFly10SemanticLabel"
+    description="Semantic label for an image."
+    >Al-Azhar Mosque towers during sunset</string>
+  <string
+    name="craneFly11SemanticLabel"
+    description="Semantic label for an image."
+    >Brick lighthouse at sea</string>
+  <string
+    name="craneFly12SemanticLabel"
+    description="Semantic label for an image."
+    >Pool with palm trees</string>
+  <string
+    name="craneFly13SemanticLabel"
+    description="Semantic label for an image."
+    >Sea-side pool with palm trees</string>
+  <string
+    name="craneSleep0SemanticLabel"
+    description="Semantic label for an image."
+    >Overwater bungalows</string>
+  <string
+    name="craneSleep1SemanticLabel"
+    description="Semantic label for an image."
+    >Chalet in a snowy landscape with evergreen trees</string>
+  <string
+    name="craneSleep2SemanticLabel"
+    description="Semantic label for an image."
+    >Machu Picchu citadel</string>
+  <string
+    name="craneSleep3SemanticLabel"
+    description="Semantic label for an image."
+    >Man leaning on an antique blue car</string>
+  <string
+    name="craneSleep4SemanticLabel"
+    description="Semantic label for an image."
+    >Lake-side hotel in front of mountains</string>
+  <string
+    name="craneSleep5SemanticLabel"
+    description="Semantic label for an image."
+    >Tent in a field</string>
+  <string
+    name="craneSleep6SemanticLabel"
+    description="Semantic label for an image."
+    >Pool with palm trees</string>
+  <string
+    name="craneSleep7SemanticLabel"
+    description="Semantic label for an image."
+    >Colorful apartments at Riberia Square</string>
+  <string
+    name="craneSleep8SemanticLabel"
+    description="Semantic label for an image."
+    >Mayan ruins on a cliff above a beach</string>
+  <string
+    name="craneSleep9SemanticLabel"
+    description="Semantic label for an image."
+    >Brick lighthouse at sea</string>
+  <string
+    name="craneSleep10SemanticLabel"
+    description="Semantic label for an image."
+    >Al-Azhar Mosque towers during sunset</string>
+  <string
+    name="craneSleep11SemanticLabel"
+    description="Semantic label for an image."
+    >Taipei 101 skyscraper</string>
+  <string
+    name="craneEat0SemanticLabel"
+    description="Semantic label for an image."
+    >Pizza in a wood-fired oven</string>
+  <string
+    name="craneEat1SemanticLabel"
+    description="Semantic label for an image."
+    >Empty bar with diner-style stools</string>
+  <string
+    name="craneEat2SemanticLabel"
+    description="Semantic label for an image."
+    >Burger</string>
+  <string
+    name="craneEat3SemanticLabel"
+    description="Semantic label for an image."
+    >Korean taco</string>
+  <string
+    name="craneEat4SemanticLabel"
+    description="Semantic label for an image."
+    >Chocolate desert</string>
+  <string
+    name="craneEat5SemanticLabel"
+    description="Semantic label for an image."
+    >Artsy restaurant seating area</string>
+  <string
+    name="craneEat6SemanticLabel"
+    description="Semantic label for an image."
+    >Shrimp dish</string>
+  <string
+    name="craneEat7SemanticLabel"
+    description="Semantic label for an image."
+    >Bakery entrance</string>
+  <string
+    name="craneEat8SemanticLabel"
+    description="Semantic label for an image."
+    >Plate of crawfish</string>
+  <string
+    name="craneEat9SemanticLabel"
+    description="Semantic label for an image."
+    >Cafe counter with pastries</string>
+  <string
+    name="craneEat10SemanticLabel"
+    description="Semantic label for an image."
+    >Woman holding huge pastrami sandwich</string>
 </resources>

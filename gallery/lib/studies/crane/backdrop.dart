@@ -248,9 +248,11 @@ class _CraneAppBarState extends State<CraneAppBar> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(
-              'assets/crane/logo.png',
-              fit: BoxFit.cover,
+            ExcludeSemantics(
+              child: Image.asset(
+                'assets/crane/logo.png',
+                fit: BoxFit.cover,
+              ),
             ),
             Expanded(
               child: Padding(
