@@ -23,6 +23,7 @@ import 'package:gallery/studies/shrine/expanding_bottom_sheet.dart';
 import 'package:gallery/studies/shrine/home.dart';
 import 'package:gallery/studies/shrine/login.dart';
 import 'package:gallery/studies/shrine/model/app_state_model.dart';
+import 'package:gallery/studies/shrine/page_status.dart';
 import 'package:gallery/studies/shrine/scrim.dart';
 import 'package:gallery/studies/shrine/supplemental/cut_corners_border.dart';
 import 'package:scoped_model/scoped_model.dart';
@@ -75,7 +76,7 @@ class _ShrineAppState extends State<ShrineApp> with TickerProviderStateMixin {
   }
 
   Widget desktopBackdrop() {
-    return const DesktopBackdrop(
+    return DesktopBackdrop(
       frontLayer: ProductPage(),
       backLayer: CategoryMenuPage(),
     );
@@ -92,12 +93,16 @@ class _ShrineAppState extends State<ShrineApp> with TickerProviderStateMixin {
       child: MaterialApp(
         title: 'Shrine',
         debugShowCheckedModeBanner: false,
-        home: HomePage(
-          backdrop: backdrop,
-          scrim: Scrim(controller: _expandingController),
-          expandingBottomSheet: ExpandingBottomSheet(
-            hideController: _controller,
-            expandingController: _expandingController,
+        home: PageStatus(
+          menuController: _controller,
+          cartController: _expandingController,
+          child: HomePage(
+            backdrop: backdrop,
+            scrim: Scrim(controller: _expandingController),
+            expandingBottomSheet: ExpandingBottomSheet(
+              hideController: _controller,
+              expandingController: _expandingController,
+            ),
           ),
         ),
         initialRoute: '/login',

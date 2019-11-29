@@ -68,6 +68,11 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m18(quantity) => "Quantity: ${quantity}";
 
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Shopping cart, no items', one: 'Shopping cart, 1 item', other: 'Shopping cart, ${quantity} items')}";
+
+  static m21(product) => "Remove ${product}";
+
   static m19(value) => "Item ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
@@ -772,6 +777,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderCartClearedAndClosed":
+            MessageLookupByLibrary.simpleMessage("Cart cleared and closed"),
+        "shrineScreenReaderItemRemoved":
+            MessageLookupByLibrary.simpleMessage("Removed"),
+        "shrineScreenReaderProductAddedToCart":
+            MessageLookupByLibrary.simpleMessage("Added to cart"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Close cart"),
         "shrineTooltipCloseMenu":

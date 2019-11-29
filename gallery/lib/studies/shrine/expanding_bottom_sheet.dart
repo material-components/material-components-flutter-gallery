@@ -22,9 +22,11 @@ import 'package:scoped_model/scoped_model.dart';
 
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/layout/text_scale.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/studies/shrine/colors.dart';
 import 'package:gallery/studies/shrine/model/app_state_model.dart';
 import 'package:gallery/studies/shrine/model/product.dart';
+import 'package:gallery/studies/shrine/page_status.dart';
 import 'package:gallery/studies/shrine/shopping_cart.dart';
 
 // These curves define the emphasized easing curve.
@@ -459,7 +461,7 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
     );
   }
 
-  Widget _buildCart(BuildContext context, Widget child) {
+  Widget _buildCart(BuildContext context) {
     // numProducts is the number of different products in the cart (does not
     // include multiples of the same product).
     final bool isDesktop = isDisplayDesktop(context);
@@ -490,30 +492,41 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
     _gapAnimation =
         isDesktop ? _getDesktopGapAnimation(116) : AlwaysStoppedAnimation(0);
 
-    return Padding(
-      padding: EdgeInsets.only(top: _gapAnimation.value),
-      child: Semantics(
-        button: true,
-        value: 'Shopping cart, $totalCartQuantity items',
-        child: Container(
-          width: _widthAnimation.value,
-          height: _heightAnimation.value,
-          child: Material(
-            animationDuration: const Duration(milliseconds: 0),
-            shape: BeveledRectangleBorder(
-              borderRadius: BorderRadiusDirectional.only(
-                topStart: Radius.circular(_topStartShapeAnimation.value),
-                bottomStart: Radius.circular(_bottomStartShapeAnimation.value),
-              ),
-            ),
-            elevation: 4,
-            color: shrinePink50,
-            child: _cartIsVisible
-                ? _buildShoppingCartPage()
-                : _buildThumbnails(context, numProducts),
+    final Widget child = Container(
+      width: _widthAnimation.value,
+      height: _heightAnimation.value,
+      child: Material(
+        animationDuration: const Duration(milliseconds: 0),
+        shape: BeveledRectangleBorder(
+          borderRadius: BorderRadiusDirectional.only(
+            topStart: Radius.circular(_topStartShapeAnimation.value),
+            bottomStart: Radius.circular(_bottomStartShapeAnimation.value),
           ),
         ),
+        elevation: 4,
+        color: shrinePink50,
+        child: _cartIsVisible
+            ? _buildShoppingCartPage()
+            : _buildThumbnails(context, numProducts),
       ),
+    );
+
+    final Widget childWithInteraction = productPageIsVisible(context)
+        ? Semantics(
+            button: true,
+            value: GalleryLocalizations.of(context)
+                .shrineScreenReaderCart(totalCartQuantity),
+            child: GestureDetector(
+              behavior: HitTestBehavior.opaque,
+              onTap: open,
+              child: child,
+            ),
+          )
+        : child;
+
+    return Padding(
+      padding: EdgeInsets.only(top: _gapAnimation.value),
+      child: childWithInteraction,
     );
   }
 
@@ -566,17 +579,11 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
         onWillPop: _onWillPop,
         child: AnimatedBuilder(
           animation: widget.hideController,
-          builder: _buildSlideAnimation,
-          child: GestureDetector(
-            behavior: HitTestBehavior.opaque,
-            onTap: open,
-            child: ScopedModelDescendant<AppStateModel>(
-              builder: (context, child, model) {
-                return AnimatedBuilder(
-                  builder: _buildCart,
-                  animation: _controller,
-                );
-              },
+          builder: (context, child) => AnimatedBuilder(
+            animation: widget.expandingController,
+            builder: (context, child) => ScopedModelDescendant<AppStateModel>(
+              builder: (context, child, model) =>
+                  _buildSlideAnimation(context, _buildCart(context)),
             ),
           ),
         ),

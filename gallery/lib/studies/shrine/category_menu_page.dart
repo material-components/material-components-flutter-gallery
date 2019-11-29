@@ -23,6 +23,7 @@ import 'package:gallery/studies/shrine/colors.dart';
 import 'package:gallery/studies/shrine/login.dart';
 import 'package:gallery/studies/shrine/model/app_state_model.dart';
 import 'package:gallery/studies/shrine/model/product.dart';
+import 'package:gallery/studies/shrine/page_status.dart';
 import 'package:gallery/studies/shrine/triangle_category_indicator.dart';
 
 double desktopCategoryMenuPageWidth({
@@ -77,8 +78,8 @@ class CategoryMenuPage extends StatelessWidget {
 
     return ScopedModelDescendant<AppStateModel>(
       builder: (context, child, model) => Semantics(
-        label: category.name(context),
         selected: model.selectedCategory == category,
+        button: true,
         child: GestureDetector(
           onTap: () {
             model.setCategory(category);
@@ -111,74 +112,105 @@ class CategoryMenuPage extends StatelessWidget {
             );
 
     if (isDesktop) {
-      return Material(
-        child: Container(
-          color: shrinePink100,
-          width: desktopCategoryMenuPageWidth(context: context),
-          child: Column(
-            children: [
-              const SizedBox(height: 64),
-              Image.asset('packages/shrine_images/diamond.png'),
-              const SizedBox(height: 16),
-              Text(
-                'SHRINE',
-                style: Theme.of(context).textTheme.headline,
+      return AnimatedBuilder(
+        animation: PageStatus.of(context).cartController,
+        builder: (context, child) => ExcludeSemantics(
+          excluding: !menuPageIsVisible(context),
+          child: Material(
+            child: Container(
+              color: shrinePink100,
+              width: desktopCategoryMenuPageWidth(context: context),
+              child: Column(
+                children: [
+                  const SizedBox(height: 64),
+                  ExcludeSemantics(
+                    child: Image.asset('packages/shrine_images/diamond.png'),
+                  ),
+                  const SizedBox(height: 16),
+                  ExcludeSemantics(
+                    child: Text(
+                      'SHRINE',
+                      style: Theme.of(context).textTheme.headline,
+                    ),
+                  ),
+                  const Spacer(),
+                  for (final category in categories)
+                    _buildCategory(category, context),
+                  _divider(context: context),
+                  Semantics(
+                    button: true,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push<void>(
+                          context,
+                          MaterialPageRoute<void>(
+                            builder: (context) => LoginPage(),
+                          ),
+                        );
+                      },
+                      child: _buttonText(
+                        GalleryLocalizations.of(context)
+                            .shrineLogoutButtonCaption,
+                        logoutTextStyle,
+                      ),
+                    ),
+                  ),
+                  const Spacer(),
+                  IconButton(
+                    icon: const Icon(Icons.search),
+                    tooltip:
+                        GalleryLocalizations.of(context).shrineTooltipSearch,
+                    onPressed: () {},
+                  ),
+                  const SizedBox(height: 72),
+                ],
               ),
-              const Spacer(),
-              for (final category in categories)
-                _buildCategory(category, context),
-              _divider(context: context),
-              GestureDetector(
-                onTap: () {
-                  Navigator.push<void>(
-                    context,
-                    MaterialPageRoute<void>(builder: (context) => LoginPage()),
-                  );
-                },
-                child: _buttonText(
-                  GalleryLocalizations.of(context).shrineLogoutButtonCaption,
-                  logoutTextStyle,
-                ),
-              ),
-              const Spacer(),
-              IconButton(
-                icon: const Icon(Icons.search),
-                tooltip: GalleryLocalizations.of(context).shrineTooltipSearch,
-                onPressed: () {},
-              ),
-              const SizedBox(height: 72),
-            ],
+            ),
           ),
         ),
       );
     } else {
-      return Center(
-        child: Container(
-          padding: const EdgeInsets.only(top: 40),
-          color: shrinePink100,
-          child: ListView(
-            children: [
-              for (final category in categories)
-                _buildCategory(category, context),
-              Center(
-                child: _divider(context: context),
-              ),
-              GestureDetector(
-                onTap: () {
-                  if (onCategoryTap != null) {
-                    onCategoryTap();
-                  }
-                  Navigator.push<void>(
-                    context,
-                    MaterialPageRoute<void>(builder: (context) => LoginPage()),
-                  );
-                },
-                child: _buttonText(
-                  GalleryLocalizations.of(context).shrineLogoutButtonCaption,
-                  logoutTextStyle,
+      return AnimatedBuilder(
+        animation: PageStatus.of(context).cartController,
+        builder: (context, child) => AnimatedBuilder(
+          animation: PageStatus.of(context).menuController,
+          builder: (context, child) => ExcludeSemantics(
+            excluding: !menuPageIsVisible(context),
+            child: Center(
+              child: Container(
+                padding: const EdgeInsets.only(top: 40),
+                color: shrinePink100,
+                child: ListView(
+                  children: [
+                    for (final category in categories)
+                      _buildCategory(category, context),
+                    Center(
+                      child: _divider(context: context),
+                    ),
+                    Semantics(
+                      button: true,
+                      child: GestureDetector(
+                        onTap: () {
+                          if (onCategoryTap != null) {
+                            onCategoryTap();
+                          }
+                          Navigator.push<void>(
+                            context,
+                            MaterialPageRoute<void>(
+                                builder: (context) => LoginPage()),
+                          );
+                        },
+                        child: _buttonText(
+                          GalleryLocalizations.of(context)
+                              .shrineLogoutButtonCaption,
+                          logoutTextStyle,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ],
+            ),
           ),
         ),
       );

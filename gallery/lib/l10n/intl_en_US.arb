@@ -1445,27 +1445,57 @@
   },
   "shrineTooltipSearch": "Search",
   "@shrineTooltipSearch": {
-    "description": "The tooltip text for a search button. Also used as a semantic label, used by screen readers / VoiceOver."
+    "description": "The tooltip text for a search button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
   },
   "shrineTooltipSettings": "Settings",
   "@shrineTooltipSettings": {
-    "description": "The tooltip text for a settings button. Also used as a semantic label, used by screen readers / VoiceOver."
+    "description": "The tooltip text for a settings button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
   },
   "shrineTooltipOpenMenu": "Open menu",
   "@shrineTooltipOpenMenu": {
-    "description": "The tooltip text for a menu button. Also used as a semantic label, used by screen readers / VoiceOver."
+    "description": "The tooltip text for a menu button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
   },
   "shrineTooltipCloseMenu": "Close menu",
   "@shrineTooltipCloseMenu": {
-    "description": "The tooltip text for a button to close a menu. Also used as a semantic label, used by screen readers / VoiceOver."
+    "description": "The tooltip text for a button to close a menu. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
   },
   "shrineTooltipCloseCart": "Close cart",
   "@shrineTooltipCloseCart": {
-    "description": "The tooltip text for a button to close the shopping cart page. Also used as a semantic label, used by screen readers / VoiceOver."
+    "description": "The tooltip text for a button to close the shopping cart page. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
+  },
+  "shrineScreenReaderCart": "{quantity, plural, =0{Shopping cart, no items} =1{Shopping cart, 1 item} other{Shopping cart, {quantity} items}}",
+  "@shrineScreenReaderCart": {
+    "description": "The description of a shopping cart button containing some products. Used by screen readers, such as TalkBack and VoiceOver.",
+    "placeholders": {
+      "quantity": {
+        "example": "3"
+      }
+    }
+  },
+  "shrineScreenReaderItemRemoved": "Removed",
+  "@shrineScreenReaderItemRemoved": {
+    "description": "An announcement made by screen readers, such as TalkBack and VoiceOver when an item is removed from the shopping cart."
+  },
+  "shrineScreenReaderCartClearedAndClosed": "Cart cleared and closed",
+  "@shrineScreenReaderCartClearedAndClosed": {
+    "description": "An announcement made by screen readers, such as TalkBack and VoiceOver when the shopping cart is cleared and closed."
+  },
+  "shrineScreenReaderProductAddedToCart": "Added to cart",
+  "@shrineScreenReaderProductAddedToCart": {
+    "description": "An announcement made by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart."
+  },
+  "shrineScreenReaderRemoveProductButton": "Remove {product}",
+  "@shrineScreenReaderRemoveProductButton": {
+    "description": "A tooltip for a button to remove a product. This will be read by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart.",
+    "placeholders": {
+      "product": {
+        "example": "Ginger scarf"
+      }
+    }
   },
   "shrineTooltipRemoveItem": "Remove item",
   "@shrineTooltipRemoveItem": {
-    "description": "The tooltip text for a button to remove an item (a product) in a shopping cart. Also used as a semantic label, used by screen readers / VoiceOver."
+    "description": "The tooltip text for a button to remove an item (a product) in a shopping cart. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
   },
   "craneFormDiners": "Diners",
   "@craneFormDiners": {

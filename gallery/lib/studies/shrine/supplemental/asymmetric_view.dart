@@ -20,6 +20,7 @@ import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/layout/text_scale.dart';
 import 'package:gallery/studies/shrine/category_menu_page.dart';
 import 'package:gallery/studies/shrine/model/product.dart';
+import 'package:gallery/studies/shrine/page_status.dart';
 import 'package:gallery/studies/shrine/supplemental/desktop_product_columns.dart';
 import 'package:gallery/studies/shrine/supplemental/product_columns.dart';
 import 'package:gallery/studies/shrine/supplemental/product_card.dart';
@@ -143,20 +144,29 @@ class MobileAsymmetricView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        return ListView(
-          scrollDirection: Axis.horizontal,
-          padding: const EdgeInsetsDirectional.fromSTEB(
-            0,
-            _topPadding,
-            16,
-            _bottomPadding,
+    return AnimatedBuilder(
+      animation: PageStatus.of(context).cartController,
+      builder: (context, child) => AnimatedBuilder(
+        animation: PageStatus.of(context).menuController,
+        builder: (context, child) => ExcludeSemantics(
+          excluding: !productPageIsVisible(context),
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              return ListView(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsetsDirectional.fromSTEB(
+                  0,
+                  _topPadding,
+                  16,
+                  _bottomPadding,
+                ),
+                children: _buildColumns(context, constraints),
+                physics: const AlwaysScrollableScrollPhysics(),
+              );
+            },
           ),
-          children: _buildColumns(context, constraints),
-          physics: const AlwaysScrollableScrollPhysics(),
-        );
-      },
+        ),
+      ),
     );
   }
 }
@@ -222,30 +232,36 @@ class DesktopAsymmetricView extends StatelessWidget {
       );
     });
 
-    return ListView(
-      scrollDirection: Axis.vertical,
-      children: [
-        Container(height: 60),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
+    return AnimatedBuilder(
+      animation: PageStatus.of(context).cartController,
+      builder: (context, child) => ExcludeSemantics(
+        excluding: !productPageIsVisible(context),
+        child: ListView(
+          scrollDirection: Axis.vertical,
           children: [
-            _flex,
-            ...List<Widget>.generate(
-              2 * columnCount - 1,
-              (generalizedColumnIndex) {
-                if (generalizedColumnIndex % 2 == 0) {
-                  return productCardColumns[generalizedColumnIndex ~/ 2];
-                } else {
-                  return _gap;
-                }
-              },
+            Container(height: 60),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _flex,
+                ...List<Widget>.generate(
+                  2 * columnCount - 1,
+                  (generalizedColumnIndex) {
+                    if (generalizedColumnIndex % 2 == 0) {
+                      return productCardColumns[generalizedColumnIndex ~/ 2];
+                    } else {
+                      return _gap;
+                    }
+                  },
+                ),
+                _flex,
+              ],
             ),
-            _flex,
+            Container(height: 60),
           ],
+          physics: const AlwaysScrollableScrollPhysics(),
         ),
-        Container(height: 60),
-      ],
-      physics: const AlwaysScrollableScrollPhysics(),
+      ),
     );
   }
 }

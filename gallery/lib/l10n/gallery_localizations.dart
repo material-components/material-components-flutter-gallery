@@ -3200,12 +3200,57 @@ class GalleryLocalizations {
         desc: r'Name of the product ' "'" r'Whitney belt' "'" r'.');
   }
 
+  String shrineScreenReaderCart(int quantity) {
+    return Intl.plural(quantity,
+        locale: _localeName,
+        name: 'shrineScreenReaderCart',
+        desc:
+            r'The description of a shopping cart button containing some products. Used by screen readers, such as TalkBack and VoiceOver.',
+        args: <Object>[quantity],
+        zero: 'Shopping cart, no items',
+        one: 'Shopping cart, 1 item',
+        other: 'Shopping cart, $quantity items');
+  }
+
+  String get shrineScreenReaderCartClearedAndClosed {
+    return Intl.message(r'Cart cleared and closed',
+        locale: _localeName,
+        name: 'shrineScreenReaderCartClearedAndClosed',
+        desc:
+            r'An announcement made by screen readers, such as TalkBack and VoiceOver when the shopping cart is cleared and closed.');
+  }
+
+  String get shrineScreenReaderItemRemoved {
+    return Intl.message(r'Removed',
+        locale: _localeName,
+        name: 'shrineScreenReaderItemRemoved',
+        desc:
+            r'An announcement made by screen readers, such as TalkBack and VoiceOver when an item is removed from the shopping cart.');
+  }
+
+  String get shrineScreenReaderProductAddedToCart {
+    return Intl.message(r'Added to cart',
+        locale: _localeName,
+        name: 'shrineScreenReaderProductAddedToCart',
+        desc:
+            r'An announcement made by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart.');
+  }
+
+  String shrineScreenReaderRemoveProductButton(Object product) {
+    return Intl.message(r'Remove $product',
+        locale: _localeName,
+        name: 'shrineScreenReaderRemoveProductButton',
+        desc:
+            r'A tooltip for a button to remove a product. This will be read by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart.',
+        args: <Object>[product]);
+  }
+
   String get shrineTooltipCloseCart {
     return Intl.message(r'Close cart',
         locale: _localeName,
         name: 'shrineTooltipCloseCart',
         desc:
-            r'The tooltip text for a button to close the shopping cart page. Also used as a semantic label, used by screen readers / VoiceOver.');
+            r'The tooltip text for a button to close the shopping cart page. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver.');
   }
 
   String get shrineTooltipCloseMenu {
@@ -3213,7 +3258,7 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'shrineTooltipCloseMenu',
         desc:
-            r'The tooltip text for a button to close a menu. Also used as a semantic label, used by screen readers / VoiceOver.');
+            r'The tooltip text for a button to close a menu. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver.');
   }
 
   String get shrineTooltipOpenMenu {
@@ -3221,7 +3266,7 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'shrineTooltipOpenMenu',
         desc:
-            r'The tooltip text for a menu button. Also used as a semantic label, used by screen readers / VoiceOver.');
+            r'The tooltip text for a menu button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver.');
   }
 
   String get shrineTooltipRemoveItem {
@@ -3229,7 +3274,7 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'shrineTooltipRemoveItem',
         desc:
-            r'The tooltip text for a button to remove an item (a product) in a shopping cart. Also used as a semantic label, used by screen readers / VoiceOver.');
+            r'The tooltip text for a button to remove an item (a product) in a shopping cart. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver.');
   }
 
   String get shrineTooltipSearch {
@@ -3237,7 +3282,7 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'shrineTooltipSearch',
         desc:
-            r'The tooltip text for a search button. Also used as a semantic label, used by screen readers / VoiceOver.');
+            r'The tooltip text for a search button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver.');
   }
 
   String get shrineTooltipSettings {
@@ -3245,7 +3290,7 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'shrineTooltipSettings',
         desc:
-            r'The tooltip text for a settings button. Also used as a semantic label, used by screen readers / VoiceOver.');
+            r'The tooltip text for a settings button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver.');
   }
 
   String get starterAppDescription {

@@ -1363,27 +1363,47 @@
     >Fine lines tee</string>
   <string
     name="shrineTooltipSearch"
-    description="The tooltip text for a search button. Also used as a semantic label, used by screen readers / VoiceOver."
+    description="The tooltip text for a search button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
     >Search</string>
   <string
     name="shrineTooltipSettings"
-    description="The tooltip text for a settings button. Also used as a semantic label, used by screen readers / VoiceOver."
+    description="The tooltip text for a settings button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
     >Settings</string>
   <string
     name="shrineTooltipOpenMenu"
-    description="The tooltip text for a menu button. Also used as a semantic label, used by screen readers / VoiceOver."
+    description="The tooltip text for a menu button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
     >Open menu</string>
   <string
     name="shrineTooltipCloseMenu"
-    description="The tooltip text for a button to close a menu. Also used as a semantic label, used by screen readers / VoiceOver."
+    description="The tooltip text for a button to close a menu. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
     >Close menu</string>
   <string
     name="shrineTooltipCloseCart"
-    description="The tooltip text for a button to close the shopping cart page. Also used as a semantic label, used by screen readers / VoiceOver."
+    description="The tooltip text for a button to close the shopping cart page. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
     >Close cart</string>
   <string
+    name="shrineScreenReaderCart"
+    description="The description of a shopping cart button containing some products. Used by screen readers, such as TalkBack and VoiceOver."
+    >{quantity, plural, =0{Shopping cart, no items} =1{Shopping cart, 1 item} other{Shopping cart, {quantity} items}}</string>
+  <string
+    name="shrineScreenReaderItemRemoved"
+    description="An announcement made by screen readers, such as TalkBack and VoiceOver when an item is removed from the shopping cart."
+    >Removed</string>
+  <string
+    name="shrineScreenReaderCartClearedAndClosed"
+    description="An announcement made by screen readers, such as TalkBack and VoiceOver when the shopping cart is cleared and closed."
+    >Cart cleared and closed</string>
+  <string
+    name="shrineScreenReaderProductAddedToCart"
+    description="An announcement made by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart."
+    >Added to cart</string>
+  <string
+    name="shrineScreenReaderRemoveProductButton"
+    description="A tooltip for a button to remove a product. This will be read by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart."
+    >Remove {product}</string>
+  <string
     name="shrineTooltipRemoveItem"
-    description="The tooltip text for a button to remove an item (a product) in a shopping cart. Also used as a semantic label, used by screen readers / VoiceOver."
+    description="The tooltip text for a button to remove an item (a product) in a shopping cart. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
     >Remove item</string>
   <string
     name="craneFormDiners"
