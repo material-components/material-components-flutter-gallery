@@ -15,6 +15,7 @@ import 'package:gallery/demos/material/button_demo.dart';
 import 'package:gallery/demos/material/chip_demo.dart';
 import 'package:gallery/demos/material/dialog_demo.dart';
 import 'package:gallery/demos/material/list_demo.dart';
+import 'package:gallery/demos/material/selection_controls_demo.dart';
 import 'package:gallery/demos/material/tabs_demo.dart';
 import 'package:gallery/demos/material/text_field_demo.dart';
 import 'package:gallery/demos/reference/colors_demo.dart';
@@ -249,6 +250,46 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/material/ListTile-class.html',
           buildRoute: (context) => ListDemo(type: ListDemoType.twoLine),
+        ),
+      ],
+    ),
+    GalleryDemo(
+      title: GalleryLocalizations.of(context).demoSelectionControlsTitle,
+      icon: GalleryIcons.checkBox,
+      subtitle: GalleryLocalizations.of(context).demoSelectionControlsSubtitle,
+      configurations: [
+        GalleryDemoConfiguration(
+          title: GalleryLocalizations.of(context)
+              .demoSelectionControlsCheckboxTitle,
+          description: GalleryLocalizations.of(context)
+              .demoSelectionControlsCheckboxDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/Checkbox-class.html',
+          buildRoute: (context) => SelectionControlsDemo(
+            type: SelectionControlsDemoType.checkbox,
+          ),
+        ),
+        GalleryDemoConfiguration(
+          title:
+              GalleryLocalizations.of(context).demoSelectionControlsRadioTitle,
+          description: GalleryLocalizations.of(context)
+              .demoSelectionControlsRadioDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/Radio-class.html',
+          buildRoute: (context) => SelectionControlsDemo(
+            type: SelectionControlsDemoType.radio,
+          ),
+        ),
+        GalleryDemoConfiguration(
+          title:
+              GalleryLocalizations.of(context).demoSelectionControlsSwitchTitle,
+          description: GalleryLocalizations.of(context)
+              .demoSelectionControlsSwitchDescription,
+          documentationUrl:
+              'https://api.flutter.dev/flutter/material/Switch-class.html',
+          buildRoute: (context) => SelectionControlsDemo(
+            type: SelectionControlsDemoType.switches,
+          ),
         ),
       ],
     ),

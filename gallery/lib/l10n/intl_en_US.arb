@@ -725,6 +725,38 @@
   "@demoTabsDescription": {
     "description": "Description for tabs demo."
   },
+  "demoSelectionControlsTitle": "Selection controls",
+  "@demoSelectionControlsTitle": {
+    "description": "Title for selection controls demo."
+  },
+  "demoSelectionControlsSubtitle": "Checkboxes, radio buttons, and switches",
+  "@demoSelectionControlsSubtitle": {
+    "description": "Subtitle for selection controls demo."
+  },
+  "demoSelectionControlsCheckboxTitle": "Checkbox",
+  "@demoSelectionControlsCheckboxTitle": {
+    "description": "Title for the checkbox (selection controls) demo."
+  },
+  "demoSelectionControlsCheckboxDescription": "Checkboxes allow the user to select multiple options from a set. A normal checkbox's value is true or false and a tristate checkbox's value can also be null.",
+  "@demoSelectionControlsCheckboxDescription": {
+    "description": "Description for the checkbox (selection controls) demo."
+  },
+  "demoSelectionControlsRadioTitle": "Radio",
+  "@demoSelectionControlsRadioTitle": {
+    "description": "Title for the radio button (selection controls) demo."
+  },
+  "demoSelectionControlsRadioDescription": "Radio buttons allow the user to select one option from a set. Use radio buttons for exclusive selection if you think that the user needs to see all available options side-by-side.",
+  "@demoSelectionControlsRadioDescription": {
+    "description": "Description for the radio button (selection controls) demo."
+  },
+  "demoSelectionControlsSwitchTitle": "Switch",
+  "@demoSelectionControlsSwitchTitle": {
+    "description": "Title for the switches (selection controls) demo."
+  },
+  "demoSelectionControlsSwitchDescription": "On/off switches toggle the state of a single settings option. The option that the switch controls, as well as the state it’s in, should be made clear from the corresponding inline label.",
+  "@demoSelectionControlsSwitchDescription": {
+    "description": "Description for the switches (selection controls) demo."
+  },
   "demoBottomTextFieldsTitle": "Text fields",
   "@demoBottomTextFieldsTitle": {
     "description": "Title for text fields demo."

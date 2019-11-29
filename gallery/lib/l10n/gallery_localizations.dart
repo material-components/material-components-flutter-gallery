@@ -1435,6 +1435,69 @@ class GalleryLocalizations {
         desc: r'Title for the raised button component demo.');
   }
 
+  String get demoSelectionControlsCheckboxDescription {
+    return Intl.message(
+        r'Checkboxes allow the user to select multiple options from a set. A normal checkbox'
+        "'"
+        r's value is true or false and a tristate checkbox'
+        "'"
+        r's value can also be null.',
+        locale: _localeName,
+        name: 'demoSelectionControlsCheckboxDescription',
+        desc: r'Description for the checkbox (selection controls) demo.');
+  }
+
+  String get demoSelectionControlsCheckboxTitle {
+    return Intl.message(r'Checkbox',
+        locale: _localeName,
+        name: 'demoSelectionControlsCheckboxTitle',
+        desc: r'Title for the checkbox (selection controls) demo.');
+  }
+
+  String get demoSelectionControlsRadioDescription {
+    return Intl.message(
+        r'Radio buttons allow the user to select one option from a set. Use radio buttons for exclusive selection if you think that the user needs to see all available options side-by-side.',
+        locale: _localeName,
+        name: 'demoSelectionControlsRadioDescription',
+        desc: r'Description for the radio button (selection controls) demo.');
+  }
+
+  String get demoSelectionControlsRadioTitle {
+    return Intl.message(r'Radio',
+        locale: _localeName,
+        name: 'demoSelectionControlsRadioTitle',
+        desc: r'Title for the radio button (selection controls) demo.');
+  }
+
+  String get demoSelectionControlsSubtitle {
+    return Intl.message(r'Checkboxes, radio buttons, and switches',
+        locale: _localeName,
+        name: 'demoSelectionControlsSubtitle',
+        desc: r'Subtitle for selection controls demo.');
+  }
+
+  String get demoSelectionControlsSwitchDescription {
+    return Intl.message(
+        r'On/off switches toggle the state of a single settings option. The option that the switch controls, as well as the state it’s in, should be made clear from the corresponding inline label.',
+        locale: _localeName,
+        name: 'demoSelectionControlsSwitchDescription',
+        desc: r'Description for the switches (selection controls) demo.');
+  }
+
+  String get demoSelectionControlsSwitchTitle {
+    return Intl.message(r'Switch',
+        locale: _localeName,
+        name: 'demoSelectionControlsSwitchTitle',
+        desc: r'Title for the switches (selection controls) demo.');
+  }
+
+  String get demoSelectionControlsTitle {
+    return Intl.message(r'Selection controls',
+        locale: _localeName,
+        name: 'demoSelectionControlsTitle',
+        desc: r'Title for selection controls demo.');
+  }
+
   String get demoSimpleDialogDescription {
     return Intl.message(
         r'A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices.',

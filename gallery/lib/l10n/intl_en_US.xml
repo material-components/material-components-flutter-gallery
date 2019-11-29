@@ -690,6 +690,38 @@
     description="Description for tabs demo."
     >Tabs organize content across different screens, data sets, and other interactions.</string>
   <string
+    name="demoSelectionControlsTitle"
+    description="Title for selection controls demo."
+    >Selection controls</string>
+  <string
+    name="demoSelectionControlsSubtitle"
+    description="Subtitle for selection controls demo."
+    >Checkboxes, radio buttons, and switches</string>
+  <string
+    name="demoSelectionControlsCheckboxTitle"
+    description="Title for the checkbox (selection controls) demo."
+    >Checkbox</string>
+  <string
+    name="demoSelectionControlsCheckboxDescription"
+    description="Description for the checkbox (selection controls) demo."
+    >Checkboxes allow the user to select multiple options from a set. A normal checkbox&apos;s value is true or false and a tristate checkbox&apos;s value can also be null.</string>
+  <string
+    name="demoSelectionControlsRadioTitle"
+    description="Title for the radio button (selection controls) demo."
+    >Radio</string>
+  <string
+    name="demoSelectionControlsRadioDescription"
+    description="Description for the radio button (selection controls) demo."
+    >Radio buttons allow the user to select one option from a set. Use radio buttons for exclusive selection if you think that the user needs to see all available options side-by-side.</string>
+  <string
+    name="demoSelectionControlsSwitchTitle"
+    description="Title for the switches (selection controls) demo."
+    >Switch</string>
+  <string
+    name="demoSelectionControlsSwitchDescription"
+    description="Description for the switches (selection controls) demo."
+    >On/off switches toggle the state of a single settings option. The option that the switch controls, as well as the state it’s in, should be made clear from the corresponding inline label.</string>
+  <string
     name="demoBottomTextFieldsTitle"
     description="Title for text fields demo."
     >Text fields</string>
