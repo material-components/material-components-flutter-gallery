@@ -14,7 +14,32 @@ import 'package:gallery/pages/home.dart';
 import 'package:gallery/pages/settings_list_item.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class SettingsPage extends StatelessWidget {
+enum _ExpandableSetting {
+  textScale,
+  textDirection,
+  locale,
+  platform,
+  theme,
+}
+
+class SettingsPage extends StatefulWidget {
+  @override
+  _SettingsPageState createState() => _SettingsPageState();
+}
+
+class _SettingsPageState extends State<SettingsPage> {
+  _ExpandableSetting expandedSettingId;
+
+  void onTapSetting(_ExpandableSetting settingId) {
+    setState(() {
+      if (expandedSettingId == settingId) {
+        expandedSettingId = null;
+      } else {
+        expandedSettingId = settingId;
+      }
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     Widget settingsHeader() => Header(
@@ -78,6 +103,8 @@ class SettingsPage extends StatelessWidget {
                 context,
                 options.copyWith(textScaleFactor: newTextScale),
               ),
+              onTapSetting: () => onTapSetting(_ExpandableSetting.textScale),
+              isExpanded: expandedSettingId == _ExpandableSetting.textScale,
             ),
             SettingsListItem<CustomTextDirection>(
               title: GalleryLocalizations.of(context).settingsTextDirection,
@@ -95,6 +122,9 @@ class SettingsPage extends StatelessWidget {
                 context,
                 options.copyWith(customTextDirection: newTextDirection),
               ),
+              onTapSetting: () =>
+                  onTapSetting(_ExpandableSetting.textDirection),
+              isExpanded: expandedSettingId == _ExpandableSetting.textDirection,
             ),
             SettingsListItem<Locale>(
               title: GalleryLocalizations.of(context).settingsLocale,
@@ -111,6 +141,8 @@ class SettingsPage extends StatelessWidget {
                   options.copyWith(locale: newLocale),
                 );
               },
+              onTapSetting: () => onTapSetting(_ExpandableSetting.locale),
+              isExpanded: expandedSettingId == _ExpandableSetting.locale,
             ),
             SettingsListItem<TargetPlatform>(
               title: GalleryLocalizations.of(context).settingsPlatformMechanics,
@@ -125,6 +157,8 @@ class SettingsPage extends StatelessWidget {
                 context,
                 options.copyWith(platform: newPlatform),
               ),
+              onTapSetting: () => onTapSetting(_ExpandableSetting.platform),
+              isExpanded: expandedSettingId == _ExpandableSetting.platform,
             ),
             SettingsListItem<ThemeMode>(
               title: GalleryLocalizations.of(context).settingsTheme,
@@ -141,6 +175,8 @@ class SettingsPage extends StatelessWidget {
                 context,
                 options.copyWith(themeMode: newThemeMode),
               ),
+              onTapSetting: () => onTapSetting(_ExpandableSetting.theme),
+              isExpanded: expandedSettingId == _ExpandableSetting.theme,
             ),
             SlowMotionSetting(),
             if (!isDesktop) ...[
