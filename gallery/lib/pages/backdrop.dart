@@ -17,8 +17,11 @@ class Backdrop extends StatefulWidget {
   final Widget frontLayer;
   final Widget backLayer;
 
-  Backdrop({Key key, @required this.frontLayer, @required this.backLayer})
-      : assert(frontLayer != null),
+  Backdrop({
+    Key key,
+    @required this.frontLayer,
+    @required this.backLayer,
+  })  : assert(frontLayer != null),
         assert(backLayer != null),
         super(key: key);
 
@@ -28,15 +31,18 @@ class Backdrop extends StatefulWidget {
 
 class _BackdropState extends State<Backdrop>
     with TickerProviderStateMixin, FlareController {
-  AnimationController _controller;
+  AnimationController _mobileController;
   AnimationController _desktopController;
 
   double _speed = 4;
   double _settingsAnimationProgress = 0;
   ActorAnimation _settingsAnimation;
+  double settingsButtonWidth = 64;
+  double desktopHeight = 56;
+  double mobileHeight = 40;
 
   bool get _isPanelVisible {
-    final AnimationStatus status = _controller.status;
+    final AnimationStatus status = _mobileController.status;
     return status == AnimationStatus.completed ||
         status == AnimationStatus.forward;
   }
@@ -44,7 +50,7 @@ class _BackdropState extends State<Backdrop>
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(
+    _mobileController = AnimationController(
         duration: Duration(milliseconds: 100), value: 1, vsync: this)
       ..addListener(() {
         this.setState(() {});
@@ -55,7 +61,7 @@ class _BackdropState extends State<Backdrop>
 
   @override
   void dispose() {
-    _controller.dispose();
+    _mobileController.dispose();
     _desktopController.dispose();
     super.dispose();
   }
@@ -92,7 +98,7 @@ class _BackdropState extends State<Backdrop>
     return RelativeRectTween(
       begin: RelativeRect.fromLTRB(0, top, 0, bottom),
       end: RelativeRect.fromLTRB(0, 0, 0, 0),
-    ).animate(CurvedAnimation(parent: _controller, curve: Curves.linear));
+    ).animate(CurvedAnimation(parent: _mobileController, curve: Curves.linear));
   }
 
   List<Widget> _galleryHeader() {
@@ -116,7 +122,14 @@ class _BackdropState extends State<Backdrop>
     final Animation<RelativeRect> animation = _getPanelAnimation(constraints);
 
     final Widget frontLayer = ExcludeSemantics(
-      child: widget.frontLayer,
+      child: InheritedBackdrop(
+        mobileController: _mobileController,
+        desktopController: _desktopController,
+        child: widget.frontLayer,
+        settingsButtonWidth: settingsButtonWidth,
+        desktopSettingsButtonHeight: desktopHeight,
+        mobileSettingsButtonHeight: mobileHeight,
+      ),
       excluding: _isPanelVisible,
     );
     final Widget backLayer = ExcludeSemantics(
@@ -139,10 +152,10 @@ class _BackdropState extends State<Backdrop>
             ..._galleryHeader(),
             backLayer,
             if (!_isPanelVisible) ...[
-              ModalBarrier(
-                semanticsLabel:
-                    MaterialLocalizations.of(context).modalBarrierDismissLabel,
-                dismissible: true,
+              ExcludeSemantics(
+                child: ModalBarrier(
+                  dismissible: true,
+                ),
               ),
               Semantics(
                 label:
@@ -150,7 +163,8 @@ class _BackdropState extends State<Backdrop>
                 child: GestureDetector(
                   onTap: () {
                     if (!_isPanelVisible) {
-                      _controller.fling(velocity: _isPanelVisible ? -1 : 1);
+                      _mobileController.fling(
+                          velocity: _isPanelVisible ? -1 : 1);
                       _desktopController.fling(
                           velocity: _isPanelVisible ? -1 : 1);
                     }
@@ -188,47 +202,53 @@ class _BackdropState extends State<Backdrop>
           ],
           Align(
             alignment: AlignmentDirectional.topEnd,
-            child: Semantics(
-              sortKey: OrdinalSortKey(
-                GalleryOptions.of(context).textDirection() == TextDirection.ltr
-                    ? 2.0
-                    : 1.0,
-                name: 'header',
-              ),
-              button: true,
-              label: _isPanelVisible
-                  ? GalleryLocalizations.of(context).settingsButtonLabel
-                  : GalleryLocalizations.of(context).settingsButtonCloseLabel,
-              excludeSemantics: !_isPanelVisible,
-              child: SafeArea(
-                child: SizedBox(
-                  width: 64,
-                  height: isDisplayDesktop(context) ? 56 : 40,
-                  child: GestureDetector(
-                    onTap: () {
-                      _controller.fling(velocity: _isPanelVisible ? -1 : 1);
-                      _desktopController.fling(
-                          velocity: _isPanelVisible ? -1 : 1);
-                    },
-                    child: Material(
-                      borderRadius: BorderRadiusDirectional.only(
-                        bottomStart: Radius.circular(10),
-                      ),
-                      color: _isPanelVisible
-                          ? Theme.of(context).colorScheme.secondaryVariant
-                          : Colors.transparent,
-                      child: FlareActor(
-                        Theme.of(context).colorScheme.brightness ==
-                                Brightness.light
-                            ? 'assets/icons/settings/settings_light.flr'
-                            : 'assets/icons/settings/settings_dark.flr',
-                        alignment:
-                            Directionality.of(context) == TextDirection.ltr
-                                ? Alignment.bottomLeft
-                                : Alignment.bottomRight,
-                        animation: 'Animations',
-                        fit: BoxFit.contain,
-                        controller: this,
+            child: ExcludeSemantics(
+              excluding: !_isPanelVisible,
+              child: Semantics(
+                sortKey: OrdinalSortKey(
+                  GalleryOptions.of(context).textDirection() ==
+                          TextDirection.ltr
+                      ? 2.0
+                      : 1.0,
+                  name: 'header',
+                ),
+                button: true,
+                label: _isPanelVisible
+                    ? GalleryLocalizations.of(context).settingsButtonLabel
+                    : GalleryLocalizations.of(context).settingsButtonCloseLabel,
+                child: SafeArea(
+                  child: SizedBox(
+                    width: settingsButtonWidth,
+                    height: isDisplayDesktop(context)
+                        ? desktopHeight
+                        : mobileHeight,
+                    child: GestureDetector(
+                      onTap: () {
+                        _mobileController.fling(
+                            velocity: _isPanelVisible ? -1 : 1);
+                        _desktopController.fling(
+                            velocity: _isPanelVisible ? -1 : 1);
+                      },
+                      child: Material(
+                        borderRadius: BorderRadiusDirectional.only(
+                          bottomStart: Radius.circular(10),
+                        ),
+                        color: _isPanelVisible
+                            ? Theme.of(context).colorScheme.secondaryVariant
+                            : Colors.transparent,
+                        child: FlareActor(
+                          Theme.of(context).colorScheme.brightness ==
+                                  Brightness.light
+                              ? 'assets/icons/settings/settings_light.flr'
+                              : 'assets/icons/settings/settings_dark.flr',
+                          alignment:
+                              Directionality.of(context) == TextDirection.ltr
+                                  ? Alignment.bottomLeft
+                                  : Alignment.bottomRight,
+                          animation: 'Animations',
+                          fit: BoxFit.contain,
+                          controller: this,
+                        ),
                       ),
                     ),
                   ),
@@ -248,5 +268,31 @@ class _BackdropState extends State<Backdrop>
         builder: _buildStack,
       ),
     );
+  }
+}
+
+class InheritedBackdrop extends InheritedWidget {
+  final AnimationController mobileController;
+  final AnimationController desktopController;
+  final double settingsButtonWidth;
+  final double desktopSettingsButtonHeight;
+  final double mobileSettingsButtonHeight;
+
+  InheritedBackdrop({
+    this.mobileController,
+    this.desktopController,
+    this.settingsButtonWidth,
+    this.desktopSettingsButtonHeight,
+    this.mobileSettingsButtonHeight,
+    Widget child,
+  }) : super(child: child);
+
+  @override
+  bool updateShouldNotify(InheritedWidget oldWidget) {
+    return true;
+  }
+
+  static InheritedBackdrop of(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType();
   }
 }

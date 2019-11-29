@@ -10,6 +10,7 @@ import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/pages/about.dart' as about;
+import 'package:gallery/pages/backdrop.dart';
 import 'package:gallery/pages/home.dart';
 import 'package:gallery/pages/settings_list_item.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -76,6 +77,7 @@ class _SettingsPageState extends State<SettingsPage> {
       child: Center(
         child: ListView(
           children: [
+            _CloseSettingsSemantics(),
             Padding(
               padding: EdgeInsetsDirectional.only(
                 start: 32,
@@ -289,6 +291,35 @@ class _SettingsLink extends StatelessWidget {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class _CloseSettingsSemantics extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var backdrop = InheritedBackdrop.of(context);
+    return Align(
+      alignment: AlignmentDirectional.topEnd,
+      child: Semantics(
+        button: true,
+        label: GalleryLocalizations.of(context).settingsButtonCloseLabel,
+        child: SafeArea(
+          child: SizedBox(
+            width: backdrop.settingsButtonWidth,
+            height: isDisplayDesktop(context)
+                ? backdrop.desktopSettingsButtonHeight
+                : backdrop.mobileSettingsButtonHeight,
+            child: GestureDetector(
+              onTap: () {
+                backdrop.mobileController.fling(velocity: 1);
+                backdrop.desktopController.fling(velocity: -1);
+              },
+              child: Container(),
+            ),
+          ),
         ),
       ),
     );
