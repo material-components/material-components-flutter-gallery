@@ -16,6 +16,9 @@ import 'package:gallery/pages/settings.dart';
 import 'package:gallery/pages/splash.dart';
 import 'package:gallery/themes/gallery_theme_data.dart';
 
+// Flag to enable the ability to pull down on home screen to view splash screen.
+const _enablePullToSplash = false;
+
 void setOverrideForDesktop() {
   if (kIsWeb) return;
 
@@ -42,7 +45,9 @@ class GalleryApp extends StatelessWidget {
       builder: (context, scrollController) {
         return Backdrop(
           frontLayer: SettingsPage(),
-          backLayer: HomePage(scrollController: scrollController),
+          backLayer: HomePage(
+            scrollController: _enablePullToSplash ? scrollController : null,
+          ),
         );
       },
     );
