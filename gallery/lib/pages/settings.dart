@@ -313,10 +313,7 @@ class _CloseSettingsSemantics extends StatelessWidget {
                 ? backdrop.desktopSettingsButtonHeight
                 : backdrop.mobileSettingsButtonHeight,
             child: GestureDetector(
-              onTap: () {
-                backdrop.mobileController.fling(velocity: 1);
-                backdrop.desktopController.fling(velocity: -1);
-              },
+              onTap: backdrop.toggleSettings,
               child: Container(),
             ),
           ),
