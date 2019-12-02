@@ -65,7 +65,7 @@ class GalleryOptions {
     }
   }
 
-  Locale get locale => _locale ?? deviceLocale;
+  Locale get locale => _locale ?? deviceLocale ?? Locale('en', 'US');
 
   /// Returns the text direction based on the [CustomTextDirection] setting.
   /// If the locale cannot be determined, returns null.
