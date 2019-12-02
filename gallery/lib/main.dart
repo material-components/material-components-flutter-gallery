@@ -17,7 +17,7 @@ import 'package:gallery/pages/splash.dart';
 import 'package:gallery/themes/gallery_theme_data.dart';
 
 // Flag to enable the ability to pull down on home screen to view splash screen.
-const _enablePullToSplash = false;
+const _enablePullToSplash = true;
 
 void setOverrideForDesktop() {
   if (kIsWeb) return;
