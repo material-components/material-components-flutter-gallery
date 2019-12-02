@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:gallery/data/demos.dart';
+import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/pages/demo.dart';
 
 class CategoryListItem extends StatefulWidget {
@@ -166,40 +167,48 @@ class _CategoryHeader extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
           child: InkWell(
             onTap: onTap,
-            child: Wrap(
-              crossAxisAlignment: WrapCrossAlignment.center,
+            child: Row(
               children: [
-                Padding(
-                  padding: imagePadding,
-                  child: ExcludeSemantics(
-                    child: Image.asset(
-                      imageString,
-                      width: 64,
-                      height: 64,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsetsDirectional.only(start: 8),
-                  child: Text(
-                    title,
-                    style: Theme.of(context).textTheme.headline.apply(
-                          color: colorScheme.onSurface,
+                Expanded(
+                  child: Wrap(
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    children: [
+                      Padding(
+                        padding: imagePadding,
+                        child: ExcludeSemantics(
+                          child: Image.asset(
+                            imageString,
+                            width: 64,
+                            height: 64,
+                          ),
                         ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsetsDirectional.only(start: 8),
+                        child: Text(
+                          title,
+                          style: Theme.of(context).textTheme.headline.apply(
+                                color: colorScheme.onSurface,
+                              ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 Opacity(
                   opacity: chevronOpacity,
-                  child: Padding(
-                    padding: const EdgeInsetsDirectional.only(
-                      start: 8,
-                      end: 32,
-                    ),
-                    child: Icon(
-                      Icons.keyboard_arrow_up,
-                      color: colorScheme.onSurface,
-                    ),
-                  ),
+                  child: chevronOpacity != 0
+                      ? Padding(
+                          padding: const EdgeInsetsDirectional.only(
+                            start: 8,
+                            end: 32,
+                          ),
+                          child: Icon(
+                            Icons.keyboard_arrow_up,
+                            color: colorScheme.onSurface,
+                          ),
+                        )
+                      : null,
                 ),
               ],
             ),
@@ -243,53 +252,54 @@ class CategoryDemoItem extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     return Material(
       color: Theme.of(context).colorScheme.surface,
-      child: InkWell(
-        onTap: () {
-          Navigator.push<void>(
-            context,
-            MaterialPageRoute(builder: (context) => DemoPage(demo: demo)),
-          );
-        },
-        child: Padding(
-          padding: const EdgeInsetsDirectional.only(
-            start: 32,
-            top: 20,
-            end: 8,
-          ),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Icon(
-                demo.icon,
-                color: colorScheme.primary,
-              ),
-              SizedBox(width: 40),
-              Flexible(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      demo.title,
-                      style:
-                          textTheme.subhead.apply(color: colorScheme.onSurface),
-                    ),
-                    Text(
-                      demo.subtitle,
-                      style: textTheme.overline.apply(
-                        color: colorScheme.onSurface.withOpacity(0.5),
-                      ),
-                    ),
-                    SizedBox(height: 20),
-                    // TODO: This isn't appearing for some reason.
-                    Divider(
-                      thickness: 1,
-                      height: 1,
-                      color: Theme.of(context).colorScheme.background,
-                    ),
-                  ],
+      child: MergeSemantics(
+        child: InkWell(
+          onTap: () {
+            Navigator.push<void>(
+              context,
+              MaterialPageRoute(builder: (context) => DemoPage(demo: demo)),
+            );
+          },
+          child: Padding(
+            padding: EdgeInsetsDirectional.only(
+              start: 32,
+              top: 20,
+              end: isDisplayDesktop(context) ? 16 : 8,
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Icon(
+                  demo.icon,
+                  color: colorScheme.primary,
                 ),
-              ),
-            ],
+                SizedBox(width: 40),
+                Flexible(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        demo.title,
+                        style: textTheme.subhead
+                            .apply(color: colorScheme.onSurface),
+                      ),
+                      Text(
+                        demo.subtitle,
+                        style: textTheme.overline.apply(
+                          color: colorScheme.onSurface.withOpacity(0.5),
+                        ),
+                      ),
+                      SizedBox(height: 20),
+                      Divider(
+                        thickness: 1,
+                        height: 1,
+                        color: Theme.of(context).colorScheme.background,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

@@ -27,10 +27,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "${Intl.plural(totalRestaurants, zero: '沒有餐廳', one: '1 間餐廳', other: '${totalRestaurants} 間餐廳')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: '直達航班', one: '1 次轉機', other: '${numberOfStops} 次轉機')}";
+      "${Intl.plural(numberOfStops, zero: '直航', one: '1 個中轉站', other: '${numberOfStops} 個中轉站')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: '沒有空房', one: '1 間空房', other: '${totalProperties} 間空房')}";
+      "${Intl.plural(totalProperties, zero: '沒有住宿', one: '1 個可短租的住宿', other: '${totalProperties} 個可短租的住宿')}";
 
   static m5(value) => "項目 ${value}";
 
@@ -39,7 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "您已選取：「${value}」";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName}帳戶 ${accountNumber} 的存款金額為 ${amount}。";
+      "${accountName}帳戶 (${accountNumber}) 存入 ${amount}。";
 
   static m9(amount) => "您這個月已支付 ${amount} 的自動櫃員機費用";
 
@@ -50,13 +50,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "您這個星期已於「餐廳」方面花了 ${amount}。";
 
   static m13(count) =>
-      "${Intl.plural(count, one: '提高可減免稅額的機率！請替 1 筆尚未指派類別的交易指派類別。', other: '提高可減免稅額的機率！請替 ${count} 筆尚未指派類別的交易指派類別。')}";
+      "${Intl.plural(count, one: '增加您可能獲得的稅務減免！為 1 個未指定的交易指定類別。', other: '增加您可能獲得的稅務減免！為 ${count} 個未指定的交易指定類別。')}";
 
   static m14(billName, date, amount) =>
-      "${billName}帳單繳費期限為 ${date}，金額為 ${amount}。";
+      "${billName}帳單於 ${date} 到期，金額為 ${amount}。";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName}預算金額為 ${amountTotal}，已使用 ${amountUsed}，還剩下 ${amountLeft}";
+      "${budgetName}財務預算已使用 ${amountTotal} 中的 ${amountUsed}，尚餘 ${amountLeft}";
 
   static m16(quantity) =>
       "${Intl.plural(quantity, zero: '沒有項目', one: '1 個項目', other: '${quantity} 個項目')}";
@@ -264,11 +264,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoCupertinoButtonsTitle": MessageLookupByLibrary.simpleMessage("按鈕"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "當有多個互斥項目時，用於選取其中一個項目。如果選取區隔控制元件中的其中一個選項，就無法選取區隔控制元件中的其他選項。"),
+                "用以在多個互相排斥的選項之間進行選擇。選擇了劃分控制的其中一個選項後，便將無法選擇其他劃分控制選項。"),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS 樣式的區隔控制元件"),
+            MessageLookupByLibrary.simpleMessage("iOS 樣式的劃分控制"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("區隔控制元件"),
+            MessageLookupByLibrary.simpleMessage("劃分控制"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage("簡單、通知和全螢幕"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("對話框"),
         "demoDocumentationTooltip":
@@ -304,9 +304,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "簡單對話框讓使用者在幾個選項之間選擇。您可按需要為簡單對話框設定標題 (標題會在選項上方顯示)。"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("簡單"),
         "demoTabsDescription":
-            MessageLookupByLibrary.simpleMessage("使用分頁整理不同畫面、資料集和其他互動項目的內容。"),
-        "demoTabsSubtitle":
-            MessageLookupByLibrary.simpleMessage("含有個別捲動式檢視畫面的分頁"),
+            MessageLookupByLibrary.simpleMessage("分頁可整理不同畫面、資料集及其他互動的內容。"),
+        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage("可獨立捲動檢視的分頁"),
         "demoTabsTitle": MessageLookupByLibrary.simpleMessage("分頁"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "文字欄位讓使用者將文字輸入至使用者界面，通常在表格和對話框中出現。"),
@@ -440,7 +439,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("查看全部"),
         "rallySeeAllAccounts": MessageLookupByLibrary.simpleMessage("查看所有帳戶"),
         "rallySeeAllBills": MessageLookupByLibrary.simpleMessage("查看所有帳單"),
-        "rallySeeAllBudgets": MessageLookupByLibrary.simpleMessage("查看所有預算"),
+        "rallySeeAllBudgets": MessageLookupByLibrary.simpleMessage("查看所有財務預算"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("尋找自動櫃員機"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("說明"),
@@ -481,7 +480,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("由左至右顯示文字"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("根據地區設定"),
+            MessageLookupByLibrary.simpleMessage("根據語言代碼設定"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("由右至左顯示文字"),
         "settingsTextScaling": MessageLookupByLibrary.simpleMessage("文字比例"),
@@ -588,9 +587,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("白色細條紋恤衫"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney 腰帶"),
-        "shrineTooltipCloseCart": MessageLookupByLibrary.simpleMessage("關閉購物車"),
-        "shrineTooltipCloseMenu": MessageLookupByLibrary.simpleMessage("關閉選單"),
-        "shrineTooltipOpenMenu": MessageLookupByLibrary.simpleMessage("開啟選單"),
+        "shrineTooltipCloseCart": MessageLookupByLibrary.simpleMessage("閂埋購物車"),
+        "shrineTooltipCloseMenu": MessageLookupByLibrary.simpleMessage("閂埋選單"),
+        "shrineTooltipOpenMenu": MessageLookupByLibrary.simpleMessage("打開選單"),
         "shrineTooltipRemoveItem": MessageLookupByLibrary.simpleMessage("移除項目"),
         "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("搜尋"),
         "shrineTooltipSettings": MessageLookupByLibrary.simpleMessage("設定"),

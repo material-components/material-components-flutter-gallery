@@ -13,7 +13,6 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
-import 'package:flutter/semantics.dart';
 
 import 'package:gallery/studies/shrine/colors.dart';
 
@@ -51,20 +50,6 @@ class TriangleCategoryIndicator extends CustomPainter {
       );
     Paint myPaint = Paint()..color = shrinePink400;
     canvas.drawPath(myPath, myPaint);
-  }
-
-  @override
-  SemanticsBuilderCallback get semanticsBuilder {
-    return (size) {
-      return [
-        CustomPainterSemantics(
-          rect: Offset.zero & size,
-          properties: SemanticsProperties(
-            label: 'Current category',
-          ),
-        )
-      ];
-    };
   }
 
   @override

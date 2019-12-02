@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "${title} टैब के लिए प्लेसहोल्डर टैब";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'कोई रेस्टोरेंट नहीं है', one: '1 रेस्टोरेंट', other: '${totalRestaurants} रेस्टोरेंट')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'नॉनस्टॉप', one: '1 स्टॉप', other: '${numberOfStops} स्टॉप')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'किराये पर लेने के लिए जगह उपलब्ध नहीं है', one: 'किराये पर लेने के लिए एक जगह उपलब्ध है', other: 'किराये पर लेने के लिए ${totalProperties} जगह उपलब्ध हैं')}";
 
   static m5(value) => "आइटम ${value}";
 
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "आपने चुना है: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${amount} की रकम ${accountName} के खाता संख्या ${accountNumber} में जमा की गई.";
 
   static m9(amount) => "आपने इस महीने ${amount} का एटीएम शुल्क दिया है";
 
@@ -53,16 +53,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "आपने इस हफ़्ते रेस्टोरेंट में ${amount} खर्च किए.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'अपने टैक्स में संभावित छूट को बढ़ाएं! असाइन नहीं किए गए 1 लेन-देन के लिए श्रेणियां असाइन करें.', other: 'अपने टैक्स में संभावित छूट को बढ़ाएं! असाइन नहीं किए गए ${count} लेन-देन के लिए श्रेणियां असाइन करें.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "${billName} के बिल के ${amount} चुकाने की आखिरी तारीख ${date} है.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "${budgetName} के बजट ${amountTotal} में से ${amountUsed} इस्तेमाल हुए हैं और ${amountLeft} बचे हैं";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'कोई आइटम नहीं है', one: '1 आइटम', other: '${quantity} आइटम')}";
 
   static m17(price) => "x ${price}";
 
@@ -295,11 +295,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("बटन"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "इसका इस्तेमाल कई खास विकल्पों में से चुनने के लिए किया जाता है. अगर सेगमेंट में दिए नियंत्रण में किसी एक विकल्प को चुना गया है, तो उस नियंत्रण से दूसरे विकल्प नहीं चुने जा सकते."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "iOS की शैली वाले सेगमेंट में दिया नियंत्रण"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("सेगमेंट में दिया नियंत्रण"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "सादा, सूचनाएं, और फ़ुल स्क्रीन"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("डायलॉग"),
@@ -341,10 +342,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "एक सादा डायलॉग, उपयोगकर्ता को कई विकल्पों में से किसी एक को चुनने की सुविधा देता है. एक सादे डायलॉग में दूसरा शीर्षक होता है जो दिए गए विकल्पों के ऊपर होता है."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("सरल"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "टैब की मदद से अलग-अलग स्क्रीन, डेटा सेट, और दूसरे इंटरैक्शन पर सामग्री को व्यवस्थित किया जाता है."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "स्क्रोल करने पर अलग-अलग व्यू देने वाले टैब"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("टैब"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "टेक्स्ट फ़ील्ड, उपयोगकर्ताओं को यूज़र इंटरफ़ेस (यूआई) में टेक्स्ट डालने की सुविधा देता है. ये फ़ॉर्म या डायलॉग की तरह दिखाई देते हैं."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("ईमेल"),
@@ -498,11 +499,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("उपयोगकर्ता नाम"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("सभी देखें"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("सभी खाते देखें"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("सभी बिल देखें"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("सभी बजट देखें"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("एटीएम ढूंढें"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("सहायता"),
@@ -548,7 +549,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("बाएं से दाएं"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("स्थानीय भाषा के हिसाब से"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("दाएं से बाएं"),
         "settingsTextScaling":
@@ -671,16 +672,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("व्हिटनी बेल्ट"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("कार्ट बंद करें"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("मेन्यू बंद करें"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("मेन्यू खोलें"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
-        "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("आइटम हटाएं"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("खोजें"),
+        "shrineTooltipSettings": MessageLookupByLibrary.simpleMessage("सेटिंग"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "शुरू करने पर तुरंत प्रतिक्रिया देने वाला लेआउट"),
         "starterAppDrawerItem": m19,

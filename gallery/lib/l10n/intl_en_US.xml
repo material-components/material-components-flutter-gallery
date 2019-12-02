@@ -654,6 +654,30 @@
     description="Generic item placeholder."
     >Item {value}</string>
   <string
+    name="demoListsTitle"
+    description="Title for lists demo."
+    >Lists</string>
+  <string
+    name="demoListsSubtitle"
+    description="Subtitle for lists demo."
+    >Scrolling list layouts</string>
+  <string
+    name="demoListsDescription"
+    description="Description for lists demo. This describes what a single row in a list consists of."
+    >A single fixed-height row that typically contains some text as well as a leading or trailing icon.</string>
+  <string
+    name="demoOneLineListsTitle"
+    description="Title for lists demo with only one line of text per row."
+    >One Line</string>
+  <string
+    name="demoTwoLineListsTitle"
+    description="Title for lists demo with two lines of text per row."
+    >Two Lines</string>
+  <string
+    name="demoListsSecondary"
+    description="Text that appears in the second line of a list item."
+    >Secondary text</string>
+  <string
     name="demoTabsTitle"
     description="Title for tabs demo."
     >Tabs</string>
@@ -665,6 +689,38 @@
     name="demoTabsDescription"
     description="Description for tabs demo."
     >Tabs organize content across different screens, data sets, and other interactions.</string>
+  <string
+    name="demoSelectionControlsTitle"
+    description="Title for selection controls demo."
+    >Selection controls</string>
+  <string
+    name="demoSelectionControlsSubtitle"
+    description="Subtitle for selection controls demo."
+    >Checkboxes, radio buttons, and switches</string>
+  <string
+    name="demoSelectionControlsCheckboxTitle"
+    description="Title for the checkbox (selection controls) demo."
+    >Checkbox</string>
+  <string
+    name="demoSelectionControlsCheckboxDescription"
+    description="Description for the checkbox (selection controls) demo."
+    >Checkboxes allow the user to select multiple options from a set. A normal checkbox&apos;s value is true or false and a tristate checkbox&apos;s value can also be null.</string>
+  <string
+    name="demoSelectionControlsRadioTitle"
+    description="Title for the radio button (selection controls) demo."
+    >Radio</string>
+  <string
+    name="demoSelectionControlsRadioDescription"
+    description="Description for the radio button (selection controls) demo."
+    >Radio buttons allow the user to select one option from a set. Use radio buttons for exclusive selection if you think that the user needs to see all available options side-by-side.</string>
+  <string
+    name="demoSelectionControlsSwitchTitle"
+    description="Title for the switches (selection controls) demo."
+    >Switch</string>
+  <string
+    name="demoSelectionControlsSwitchDescription"
+    description="Description for the switches (selection controls) demo."
+    >On/off switches toggle the state of a single settings option. The option that the switch controls, as well as the state it’s in, should be made clear from the corresponding inline label.</string>
   <string
     name="demoBottomTextFieldsTitle"
     description="Title for text fields demo."
@@ -1307,27 +1363,47 @@
     >Fine lines tee</string>
   <string
     name="shrineTooltipSearch"
-    description="The tooltip text for a search button. Also used as a semantic label, used by screen readers / VoiceOver."
+    description="The tooltip text for a search button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
     >Search</string>
   <string
     name="shrineTooltipSettings"
-    description="The tooltip text for a settings button. Also used as a semantic label, used by screen readers / VoiceOver."
+    description="The tooltip text for a settings button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
     >Settings</string>
   <string
     name="shrineTooltipOpenMenu"
-    description="The tooltip text for a menu button. Also used as a semantic label, used by screen readers / VoiceOver."
+    description="The tooltip text for a menu button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
     >Open menu</string>
   <string
     name="shrineTooltipCloseMenu"
-    description="The tooltip text for a button to close a menu. Also used as a semantic label, used by screen readers / VoiceOver."
+    description="The tooltip text for a button to close a menu. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
     >Close menu</string>
   <string
     name="shrineTooltipCloseCart"
-    description="The tooltip text for a button to close the shopping cart page. Also used as a semantic label, used by screen readers / VoiceOver."
+    description="The tooltip text for a button to close the shopping cart page. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
     >Close cart</string>
   <string
+    name="shrineScreenReaderCart"
+    description="The description of a shopping cart button containing some products. Used by screen readers, such as TalkBack and VoiceOver."
+    >{quantity, plural, =0{Shopping cart, no items} =1{Shopping cart, 1 item} other{Shopping cart, {quantity} items}}</string>
+  <string
+    name="shrineScreenReaderItemRemoved"
+    description="An announcement made by screen readers, such as TalkBack and VoiceOver when an item is removed from the shopping cart."
+    >Removed</string>
+  <string
+    name="shrineScreenReaderCartClearedAndClosed"
+    description="An announcement made by screen readers, such as TalkBack and VoiceOver when the shopping cart is cleared and closed."
+    >Cart cleared and closed</string>
+  <string
+    name="shrineScreenReaderProductAddedToCart"
+    description="An announcement made by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart."
+    >Added to cart</string>
+  <string
+    name="shrineScreenReaderRemoveProductButton"
+    description="A tooltip for a button to remove a product. This will be read by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart."
+    >Remove {product}</string>
+  <string
     name="shrineTooltipRemoveItem"
-    description="The tooltip text for a button to remove an item (a product) in a shopping cart. Also used as a semantic label, used by screen readers / VoiceOver."
+    description="The tooltip text for a button to remove an item (a product) in a shopping cart. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
     >Remove item</string>
   <string
     name="craneFormDiners"
@@ -1424,7 +1500,7 @@
   <string
     name="craneFly6"
     description="Label for city."
-    >Madrid, Spain</string>
+    >Mexico City, Mexico</string>
   <string
     name="craneFly7"
     description="Label for city."
@@ -1545,4 +1621,152 @@
     name="craneEat10"
     description="Label for city."
     >Lisbon, Portugal</string>
+  <string
+    name="craneFly0SemanticLabel"
+    description="Semantic label for an image."
+    >Chalet in a snowy landscape with evergreen trees</string>
+  <string
+    name="craneFly1SemanticLabel"
+    description="Semantic label for an image."
+    >Tent in a field</string>
+  <string
+    name="craneFly2SemanticLabel"
+    description="Semantic label for an image."
+    >Prayer flags in front of snowy mountain</string>
+  <string
+    name="craneFly3SemanticLabel"
+    description="Semantic label for an image."
+    >Machu Picchu citadel</string>
+  <string
+    name="craneFly4SemanticLabel"
+    description="Semantic label for an image."
+    >Overwater bungalows</string>
+  <string
+    name="craneFly5SemanticLabel"
+    description="Semantic label for an image."
+    >Lake-side hotel in front of mountains</string>
+  <string
+    name="craneFly6SemanticLabel"
+    description="Semantic label for an image."
+    >Aerial view of Palacio de Bellas Artes</string>
+  <string
+    name="craneFly7SemanticLabel"
+    description="Semantic label for an image."
+    >Mount Rushmore</string>
+  <string
+    name="craneFly8SemanticLabel"
+    description="Semantic label for an image."
+    >Supertree Grove</string>
+  <string
+    name="craneFly9SemanticLabel"
+    description="Semantic label for an image."
+    >Man leaning on an antique blue car</string>
+  <string
+    name="craneFly10SemanticLabel"
+    description="Semantic label for an image."
+    >Al-Azhar Mosque towers during sunset</string>
+  <string
+    name="craneFly11SemanticLabel"
+    description="Semantic label for an image."
+    >Brick lighthouse at sea</string>
+  <string
+    name="craneFly12SemanticLabel"
+    description="Semantic label for an image."
+    >Pool with palm trees</string>
+  <string
+    name="craneFly13SemanticLabel"
+    description="Semantic label for an image."
+    >Sea-side pool with palm trees</string>
+  <string
+    name="craneSleep0SemanticLabel"
+    description="Semantic label for an image."
+    >Overwater bungalows</string>
+  <string
+    name="craneSleep1SemanticLabel"
+    description="Semantic label for an image."
+    >Chalet in a snowy landscape with evergreen trees</string>
+  <string
+    name="craneSleep2SemanticLabel"
+    description="Semantic label for an image."
+    >Machu Picchu citadel</string>
+  <string
+    name="craneSleep3SemanticLabel"
+    description="Semantic label for an image."
+    >Man leaning on an antique blue car</string>
+  <string
+    name="craneSleep4SemanticLabel"
+    description="Semantic label for an image."
+    >Lake-side hotel in front of mountains</string>
+  <string
+    name="craneSleep5SemanticLabel"
+    description="Semantic label for an image."
+    >Tent in a field</string>
+  <string
+    name="craneSleep6SemanticLabel"
+    description="Semantic label for an image."
+    >Pool with palm trees</string>
+  <string
+    name="craneSleep7SemanticLabel"
+    description="Semantic label for an image."
+    >Colorful apartments at Riberia Square</string>
+  <string
+    name="craneSleep8SemanticLabel"
+    description="Semantic label for an image."
+    >Mayan ruins on a cliff above a beach</string>
+  <string
+    name="craneSleep9SemanticLabel"
+    description="Semantic label for an image."
+    >Brick lighthouse at sea</string>
+  <string
+    name="craneSleep10SemanticLabel"
+    description="Semantic label for an image."
+    >Al-Azhar Mosque towers during sunset</string>
+  <string
+    name="craneSleep11SemanticLabel"
+    description="Semantic label for an image."
+    >Taipei 101 skyscraper</string>
+  <string
+    name="craneEat0SemanticLabel"
+    description="Semantic label for an image."
+    >Pizza in a wood-fired oven</string>
+  <string
+    name="craneEat1SemanticLabel"
+    description="Semantic label for an image."
+    >Empty bar with diner-style stools</string>
+  <string
+    name="craneEat2SemanticLabel"
+    description="Semantic label for an image."
+    >Burger</string>
+  <string
+    name="craneEat3SemanticLabel"
+    description="Semantic label for an image."
+    >Korean taco</string>
+  <string
+    name="craneEat4SemanticLabel"
+    description="Semantic label for an image."
+    >Chocolate desert</string>
+  <string
+    name="craneEat5SemanticLabel"
+    description="Semantic label for an image."
+    >Artsy restaurant seating area</string>
+  <string
+    name="craneEat6SemanticLabel"
+    description="Semantic label for an image."
+    >Shrimp dish</string>
+  <string
+    name="craneEat7SemanticLabel"
+    description="Semantic label for an image."
+    >Bakery entrance</string>
+  <string
+    name="craneEat8SemanticLabel"
+    description="Semantic label for an image."
+    >Plate of crawfish</string>
+  <string
+    name="craneEat9SemanticLabel"
+    description="Semantic label for an image."
+    >Cafe counter with pastries</string>
+  <string
+    name="craneEat10SemanticLabel"
+    description="Semantic label for an image."
+    >Woman holding huge pastrami sandwich</string>
 </resources>

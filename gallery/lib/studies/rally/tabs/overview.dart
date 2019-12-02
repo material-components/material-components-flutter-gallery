@@ -2,13 +2,16 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'dart:math';
+import 'dart:math' as math;
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:gallery/data/gallery_options.dart';
 
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
+import 'package:gallery/layout/text_scale.dart';
 import 'package:gallery/studies/rally/colors.dart';
 import 'package:gallery/studies/rally/data.dart';
 import 'package:gallery/studies/rally/finance.dart';
@@ -26,6 +29,7 @@ class _OverviewViewState extends State<OverviewView> {
     final alerts = DummyDataService.getAlerts(context);
 
     if (isDisplayDesktop(context)) {
+      const sortKeyName = 'Overview';
       return SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 24),
@@ -34,14 +38,20 @@ class _OverviewViewState extends State<OverviewView> {
             children: [
               Flexible(
                 flex: 7,
-                child: _OverviewGrid(spacing: 24),
+                child: Semantics(
+                  sortKey: const OrdinalSortKey(1, name: sortKeyName),
+                  child: _OverviewGrid(spacing: 24),
+                ),
               ),
               SizedBox(width: 24),
               Flexible(
                 flex: 3,
                 child: Container(
                   width: 400,
-                  child: _AlertsView(alerts: alerts),
+                  child: Semantics(
+                    sortKey: const OrdinalSortKey(2, name: sortKeyName),
+                    child: _AlertsView(alerts: alerts),
+                  ),
                 ),
               ),
             ],
@@ -77,8 +87,15 @@ class _OverviewGrid extends StatelessWidget {
     final budgetDataList = DummyDataService.getBudgetDataList(context);
 
     return LayoutBuilder(builder: (context, constraints) {
-      final hasMultipleColumns =
-          isDisplayDesktop(context) && constraints.maxWidth > 600;
+      final textScaleFactor =
+          GalleryOptions.of(context).textScaleFactor(context);
+
+      // Only display multiple columns when the constraints allow it and we
+      // have a regular text scale factor.
+      final minWidthForTwoColumns = 600;
+      final hasMultipleColumns = isDisplayDesktop(context) &&
+          constraints.maxWidth > minWidthForTwoColumns &&
+          textScaleFactor <= 2;
       final boxWidth = hasMultipleColumns
           ? constraints.maxWidth / 2 - spacing / 2
           : double.infinity;
@@ -137,10 +154,12 @@ class _AlertsView extends StatelessWidget {
       child: Column(
         children: [
           Container(
+            width: double.infinity,
             padding: isDesktop ? EdgeInsets.symmetric(vertical: 16) : null,
             child: MergeSemantics(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: Wrap(
+                alignment: WrapAlignment.spaceBetween,
+                crossAxisAlignment: WrapCrossAlignment.center,
                 children: [
                   Text(GalleryLocalizations.of(context).rallyAlerts),
                   if (!isDesktop)
@@ -235,7 +254,7 @@ class _FinancialView extends StatelessWidget {
                   child: Text(
                     usdWithSignFormat(context).format(total),
                     style: theme.textTheme.body2.copyWith(
-                      fontSize: 44,
+                      fontSize: 44 / reducedTextScale(context),
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -243,7 +262,8 @@ class _FinancialView extends StatelessWidget {
               ],
             ),
           ),
-          ...financialItemViews.sublist(0, min(financialItemViews.length, 3)),
+          ...financialItemViews.sublist(
+              0, math.min(financialItemViews.length, 3)),
           FlatButton(
             child: Text(
               GalleryLocalizations.of(context).rallySeeAll,

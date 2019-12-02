@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Placeholder לכרטיסייה ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'אין מסעדות', one: 'מסעדה אחת', two: '${totalRestaurants} מסעדות', many: '${totalRestaurants} מסעדות', other: '${totalRestaurants} מסעדות')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'ישירה', one: 'עצירת ביניים אחת', two: '${numberOfStops} עצירות', many: '${numberOfStops} עצירות', other: '${numberOfStops} עצירות')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'אין נכסים זמינים', one: 'נכס אחד זמין', two: '${totalProperties} נכסים זמינים', many: '${totalProperties} נכסים זמינים', other: '${totalProperties} נכסים זמינים')}";
 
   static m5(value) => "פריט ${value}";
 
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "בחרת: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "בחשבון ${accountName} עם המספר ${accountNumber} יש ${amount}.";
 
   static m9(amount) => "הוצאת ${amount} על עמלות כספומטים החודש";
 
@@ -53,16 +53,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "הוצאת ${amount} על ארוחות במסעדות החודש.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'רוצה להגדיל את ההנחה הפוטנציאלית שלך במס? יש להקצות קטגוריות לעסקה אחת שלא הוקצתה.', two: 'רוצה להגדיל את ההנחה הפוטנציאלית שלך במס? יש להקצות קטגוריות ל-${count} עסקאות שלא הוקצו.', many: 'רוצה להגדיל את ההנחה הפוטנציאלית שלך במס? יש להקצות קטגוריות ל-${count} עסקאות שלא הוקצו.', other: 'רוצה להגדיל את ההנחה הפוטנציאלית שלך במס? יש להקצות קטגוריות ל-${count} עסקאות שלא הוקצו.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "יש לשלם את החיוב על ${billName} בסך ${amount} בתאריך ${date}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "בתקציב ${budgetName} הייתה הוצאה של ${amountUsed} מתוך ${amountTotal} ונותר הסכום ${amountLeft}";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'אין פריטים', one: 'פריט אחד', two: '${quantity} פריטים', many: '${quantity} פריטים', other: '${quantity} פריטים')}";
 
   static m17(price) => "x ${price}";
 
@@ -296,11 +296,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("לחצנים"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "משמשת לבחירה באפשרות אחת בלבד מתוך מספר אפשרויות. לאחר הבחירה באפשרות אחת בבקרה המחולקת, תתבטל הבחירה בשאר האפשרויות בבקרה המחולקת."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage("בקרה מחולקת בסגנון iOS"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("בקרה מחולקת"),
         "demoDialogSubtitle":
             MessageLookupByLibrary.simpleMessage("פשוטה, עם התראה ובמסך מלא"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("תיבות דו-שיח"),
@@ -342,10 +342,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "תיבת דו-שיח פשוטה מציעה למשתמש בחירה מבין מספר אפשרויות. לתיבת דו-שיח יש כותרת אופציונלית שמוצגת מעל אפשרויות הבחירה."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("פשוטה"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "כרטיסיות שמארגנות תוכן במספר מסכים נפרדים, קבוצות נתונים שונות ואינטראקציות נוספות."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "כרטיסיות עם תצוגות שניתן לגלול בהן בנפרד"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("כרטיסיות"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "שדות טקסט מאפשרים למשתמשים להזין טקסט לממשק משתמש. לרוב הם מופיעים בטפסים ובתיבות דו-שיח."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("אימייל"),
@@ -492,11 +492,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("שם משתמש"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("הצגת הכול"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("הצגת כל החשבונות"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("הצגת כל החיובים"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("הצגת כל התקציבים"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("חיפוש כספומטים"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("עזרה"),
@@ -540,7 +540,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("משמאל לימין"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("על סמך לוקאל"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("מימין לשמאל"),
         "settingsTextScaling":
@@ -659,16 +659,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("חגורת Whitney"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("סגירת העגלה"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("סגירת התפריט"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("פתיחת תפריט"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
-        "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("הסרת פריט"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("חיפוש"),
+        "shrineTooltipSettings": MessageLookupByLibrary.simpleMessage("הגדרות"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("פריסה התחלתית רספונסיבית"),
         "starterAppDrawerItem": m19,

@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Запаўняльнік для ўкладкі ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Няма рэстаранаў', one: '1 рэстаран', few: '${totalRestaurants} рэстараны', many: '${totalRestaurants} рэстаранаў', other: '${totalRestaurants} рэстарана')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Без перасадак', one: '1 перасадка', few: '${numberOfStops} перасадкі', many: '${numberOfStops} перасадак', other: '${numberOfStops} перасадкі')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Няма даступных месцаў для пражывання', one: 'Даступна 1 месца для пражывання', few: 'Даступна ${totalProperties} месцы для пражывання', many: 'Даступна ${totalProperties} месцаў для пражывання', other: 'Даступна ${totalProperties} месца для пражывання')}";
 
   static m5(value) => "Элемент ${value}";
 
@@ -41,7 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Вы выбралі: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "Рахунак ${accountName} ${accountNumber} з ${amount}.";
 
   static m9(amount) =>
       "У гэтым месяцы вы патрацілі ${amount} на аплату камісіі ў банкаматах";
@@ -55,16 +55,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "На гэтым тыдні вы выдаткавалі ${amount} на рэстараны.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Павялічце свой патэнцыяльны падатковы вылік! Прызначце катэгорыі для 1 непрызначанай трансакцыі.', few: 'Павялічце свой патэнцыяльны падатковы вылік! Прызначце катэгорыі для ${count} непрызначаных трансакцый.', many: 'Павялічце свой патэнцыяльны падатковы вылік! Прызначце катэгорыі для ${count} непрызначаных трансакцый.', other: 'Павялічце свой патэнцыяльны падатковы вылік! Прызначце катэгорыі для ${count} непрызначаных трансакцый.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "${billName}: трэба заплаціць ${amount} да ${date}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "Бюджэт ${budgetName}: выкарыстана ${amountUsed} з ${amountTotal}, засталося ${amountLeft}";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'НЯМА ЭЛЕМЕНТАЎ', one: '1 ЭЛЕМЕНТ', few: '${quantity} ЭЛЕМЕНТЫ', many: '${quantity} ЭЛЕМЕНТАЎ', other: '${quantity} ЭЛЕМЕНТА')}";
 
   static m17(price) => "x ${price}";
 
@@ -304,11 +304,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Кнопкі"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Выкарыстоўваецца для выбару з некалькіх узаемавыключальных варыянтаў. Калі ў сегментаваным элеменце кіравання выбраны адзін з варыянтаў, іншыя варыянты будуць недаступныя для выбару ў гэтым элеменце."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "Сегментаваныя элементы кіравання ў стылі iOS"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage(
+                "Сегментаваныя элементы кіравання"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Простае дыялогавае акно, абвестка і поўнаэкраннае акно"),
         "demoDialogTitle":
@@ -353,10 +355,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Простае дыялогавае акно"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Укладкі групуюць змесціва па розных экранах для прагляду, па розных наборах даных і іншых узаемадзеяннях."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Укладкі, якія можна праглядаць асобна"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Укладкі"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Тэкставыя палі дазваляюць карыстальнікам уводзіць тэкст у карыстальніцкі інтэрфейс. Звычайна яны паяўляюцца ў формах і дыялогавых вокнах."),
         "demoTextFieldEmail":
@@ -515,11 +517,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Імя карыстальніка"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("ПРАГЛЕДЗЕЦЬ УСЁ"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Прагледзець усе рахункі"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Паказаць усе рахункі"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Прагледзець усе бюджэты"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Знайсці банкаматы"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Даведка"),
@@ -566,7 +568,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("Злева направа"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage(
+                "На падставе рэгіянальных налад"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("Справа налева"),
         "settingsTextScaling":
@@ -688,16 +691,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Скураны рамень"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Закрыць кошык"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Закрыць меню"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Адкрыць меню"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
-        "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Выдаліць элемент"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Пошук"),
+        "shrineTooltipSettings": MessageLookupByLibrary.simpleMessage("Налады"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Адаптыўны макет запуску"),
         "starterAppDrawerItem": m19,

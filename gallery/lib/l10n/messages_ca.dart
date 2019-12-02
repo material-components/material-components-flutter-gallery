@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Espai reservat per a la pestanya ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Cap restaurant', one: '1 restaurant', other: '${totalRestaurants} restaurants')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Sense escales', one: '1 escala', other: '${numberOfStops} escales')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Cap propietat disponible', one: '1 propietat disponible', other: '${totalProperties} propietats disponibles')}";
 
   static m5(value) => "Article ${value}";
 
@@ -41,7 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Has seleccionat: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "Import al compte ${accountName} amb el número ${accountNumber}: ${amount}.";
 
   static m9(amount) =>
       "Has gastat ${amount} en comissions de caixers automàtics aquest mes";
@@ -55,16 +55,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "Has gastat ${amount} en restaurants aquesta setmana.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Augmenta la teva possible deducció fiscal. Assigna categories a 1 transacció sense assignar.', other: 'Augmenta la teva possible deducció fiscal. Assigna categories a ${count} transaccions sense assignar.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "Data de venciment de la factura ${billName} (${amount}): ${date}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "Has gastat ${amountUsed} de ${amountTotal} del pressupost ${budgetName}; import restant: ${amountLeft}";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'CAP ARTICLE', one: '1 ARTICLE', other: '${quantity} ARTICLES')}";
 
   static m17(price) => "x ${price}";
 
@@ -313,11 +313,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Botons"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "S\'utilitza per triar una opció d\'entre diverses que són excloents entre si. Quan se selecciona una opció al control segmentat, les altres deixen d\'estar disponibles."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "Control segmentat d\'estil iOS"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Control segmentat"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Simple, alerta i pantalla completa"),
         "demoDialogTitle":
@@ -362,10 +363,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Senzill"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Les pestanyes organitzen el contingut en diferents pantalles, conjunts de dades i altres interaccions."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Pestanyes amb visualitzacions desplaçables de manera independent"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Pestanyes"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Els camps de text permeten als usuaris introduir text en una interfície d\'usuari. Normalment s\'inclouen en formularis i quadres de diàleg."),
         "demoTextFieldEmail":
@@ -522,11 +523,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Nom d\'usuari"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("MOSTRA-HO TOT"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Mostra tots els comptes"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
-        "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Mostra totes les factures"),
+        "rallySeeAllBudgets": MessageLookupByLibrary.simpleMessage(
+            "Mostra tots els pressupostos"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Troba un caixer automàtic"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Ajuda"),
@@ -576,7 +577,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("Text d\'esquerra a dreta"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage(
+                "Segons la configuració regional"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("Dreta a esquerra"),
         "settingsTextScaling":
@@ -633,14 +635,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductClassicWhiteCollar":
             MessageLookupByLibrary.simpleMessage("Coll blanc clàssic"),
         "shrineProductClaySweater":
-            MessageLookupByLibrary.simpleMessage("Jersey color teula"),
+            MessageLookupByLibrary.simpleMessage("Jersei color teula"),
         "shrineProductCopperWireRack": MessageLookupByLibrary.simpleMessage(
             "Cistella de reixeta de coure"),
         "shrineProductFineLinesTee":
             MessageLookupByLibrary.simpleMessage("Samarreta a ratlles fines"),
         "shrineProductGardenStrand":
             MessageLookupByLibrary.simpleMessage("Collarets de granadura"),
-        "shrineProductGatsbyHat": MessageLookupByLibrary.simpleMessage("Boina"),
+        "shrineProductGatsbyHat":
+            MessageLookupByLibrary.simpleMessage("Barret Gatsby"),
         "shrineProductGentryJacket":
             MessageLookupByLibrary.simpleMessage("Jaqueta noble"),
         "shrineProductGiltDeskTrio": MessageLookupByLibrary.simpleMessage(
@@ -664,11 +667,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductRainwaterTray":
             MessageLookupByLibrary.simpleMessage("Safata"),
         "shrineProductRamonaCrossover":
-            MessageLookupByLibrary.simpleMessage("Camisa creuada Ramona"),
+            MessageLookupByLibrary.simpleMessage("Camisa encreuada Ramona"),
         "shrineProductSeaTunic":
             MessageLookupByLibrary.simpleMessage("Samarreta llarga blau clar"),
         "shrineProductSeabreezeSweater":
-            MessageLookupByLibrary.simpleMessage("Jersei de color blau clar"),
+            MessageLookupByLibrary.simpleMessage("Jersei color blau clar"),
         "shrineProductShoulderRollsTee": MessageLookupByLibrary.simpleMessage(
             "Samarreta amb muscle descobert"),
         "shrineProductShrugBag": MessageLookupByLibrary.simpleMessage("Bossa"),
@@ -697,16 +700,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Cinturó Whitney"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Tanca el carretó"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Tanca el menú"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Obre el menú"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Suprimeix l\'article"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Cerca"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Configuració"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Un disseny d\'inici responsiu"),
         "starterAppDrawerItem": m19,

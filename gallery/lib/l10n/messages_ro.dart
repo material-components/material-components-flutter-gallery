@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Substituent pentru fila ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Niciun restaurant', one: 'Un restaurant', few: '${totalRestaurants} restaurante', other: '${totalRestaurants} de restaurante')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Fără escală', one: 'O escală', few: '${numberOfStops} escale', other: '${numberOfStops} de escale')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Nicio proprietate disponibilă', one: 'O proprietate disponibilă', few: '${totalProperties} proprietăți disponibile', other: '${totalProperties} de proprietăți disponibile')}";
 
   static m5(value) => "Articol ${value}";
 
@@ -41,7 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Ați selectat: „${value}”";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "Contul ${accountName} ${accountNumber} cu ${amount}.";
 
   static m9(amount) =>
       "Luna aceasta ați cheltuit ${amount} pentru comisioanele de la bancomat";
@@ -56,16 +56,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Săptămâna aceasta ați cheltuit ${amount} în restaurante.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Creșteți-vă potențiala deducere fiscală! Atribuiți categorii unei tranzacții neatribuite.', few: 'Creșteți-vă potențiala deducere fiscală! Atribuiți categorii pentru ${count} tranzacții neatribuite.', other: 'Creșteți-vă potențiala deducere fiscală! Atribuiți categorii pentru ${count} de tranzacții neatribuite.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "Factura ${billName} în valoare de ${amount} este scadentă pe ${date}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "Bugetul pentru ${budgetName} cu ${amountUsed} cheltuiți din ${amountTotal}, ${amountLeft} rămași";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'NICIUN ARTICOL', one: 'UN ARTICOL', few: '${quantity} ARTICOLE', other: '${quantity} ARTICOLE')}";
 
   static m17(price) => "x ${price}";
 
@@ -315,11 +315,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Butoane"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Folosit pentru a alege opțiuni care se exclud reciproc. Când selectați o opțiune din controlul segmentat, celelalte opțiuni sunt deselectate."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "Control segmentat în stil iOS"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Control segmentat"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Simple, pentru alerte și pe ecran complet"),
         "demoDialogTitle":
@@ -364,10 +365,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Caseta de dialog simplă îi oferă utilizatorului posibilitatea de a alege dintre mai multe opțiuni. Caseta de dialog simplă are un titlu opțional, afișat deasupra opțiunilor."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Simplă"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Filele organizează conținutul pe ecrane, în seturi de date diferite și în alte interacțiuni."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "File cu vizualizări care se derulează independent"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("File"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Câmpurile de text le dau utilizatorilor posibilitatea de a introduce text pe o interfață de utilizare. Acestea apar de obicei în forme și casete de dialog."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
@@ -524,11 +525,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallySeeAll":
             MessageLookupByLibrary.simpleMessage("VEDEȚI-LE PE TOATE"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Vedeți toate conturile"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Vedeți toate facturile"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Vedeți toate bugetele"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Găsiți bancomate"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Ajutor"),
@@ -575,7 +576,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("De la stânga la dreapta"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("În funcție de codul local"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("De la dreapta la stânga"),
         "settingsTextScaling":
@@ -695,17 +696,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Cămașă cu dungi fine albe"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Curea Whitney"),
-        "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+        "shrineTooltipCloseCart": MessageLookupByLibrary.simpleMessage(
+            "Închideți coșul de cumpărături"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Închideți meniul"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Deschideți meniul"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
-        "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Eliminați articolul"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Căutați"),
+        "shrineTooltipSettings": MessageLookupByLibrary.simpleMessage("Setări"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Un aspect adaptabil pentru Starter"),
         "starterAppDrawerItem": m19,

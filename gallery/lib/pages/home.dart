@@ -6,6 +6,8 @@ import 'dart:async';
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/semantics.dart';
 import 'package:gallery/constants.dart';
 import 'package:gallery/data/demos.dart';
 import 'package:gallery/data/gallery_options.dart';
@@ -99,7 +101,8 @@ class HomePage extends StatelessWidget {
             end: _horizontalDesktopPadding,
           ),
           children: [
-            _GalleryHeader(),
+            SizedBox(height: 5),
+            ExcludeSemantics(child: _GalleryHeader()),
             SizedBox(height: 11),
             Container(
               height: carouselHeight,
@@ -118,8 +121,8 @@ class HomePage extends StatelessWidget {
                 children: spaceBetween(28, desktopCategoryItems),
               ),
             ),
-            Container(
-              margin: const EdgeInsetsDirectional.only(
+            Padding(
+              padding: const EdgeInsetsDirectional.only(
                 bottom: 81,
                 top: 109,
               ),
@@ -129,7 +132,9 @@ class HomePage extends StatelessWidget {
                 children: [
                   SettingsAbout(),
                   SettingsFeedback(),
-                  SettingsAttribution(),
+                  MergeSemantics(
+                    child: SettingsAttribution(),
+                  ),
                 ],
               ),
             ),
@@ -187,8 +192,8 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        top: isDisplayDesktop(context) ? 63 : 4,
-        bottom: 27,
+        top: isDisplayDesktop(context) ? 63 : 29,
+        bottom: isDisplayDesktop(context) ? 21 : 11,
       ),
       child: Text(
         text,
@@ -245,9 +250,10 @@ class _AnimatedHomePageState extends State<_AnimatedHomePage>
   Widget build(BuildContext context) {
     return ListView(
       children: [
+        SizedBox(height: 8),
         Container(
           margin: EdgeInsets.symmetric(horizontal: _horizontalPadding),
-          child: _GalleryHeader(),
+          child: ExcludeSemantics(child: _GalleryHeader()),
         ),
         _Carousel(
           children: widget.carouselCards,
@@ -307,30 +313,33 @@ class _DesktopCategoryItem extends StatelessWidget {
       borderRadius: BorderRadius.circular(10),
       clipBehavior: Clip.antiAlias,
       color: colorScheme.surface,
-      child: Column(
-        children: [
-          _DesktopCategoryHeader(
-            title: title,
-            imageString: imageString,
-          ),
-          Divider(
-            height: 2,
-            thickness: 2,
-            color: colorScheme.background,
-          ),
-          Flexible(
-            child: ListView(
-              children: [
-                const SizedBox(height: 27),
-                for (GalleryDemo demo in demos)
-                  CategoryDemoItem(
-                    demo: demo,
-                  ),
-                SizedBox(height: 27),
-              ],
+      child: Semantics(
+        container: true,
+        child: Column(
+          children: [
+            _DesktopCategoryHeader(
+              title: title,
+              imageString: imageString,
             ),
-          ),
-        ],
+            Divider(
+              height: 2,
+              thickness: 2,
+              color: colorScheme.background,
+            ),
+            Flexible(
+              child: ListView(
+                children: [
+                  const SizedBox(height: 12),
+                  for (GalleryDemo demo in demos)
+                    CategoryDemoItem(
+                      demo: demo,
+                    ),
+                  SizedBox(height: 12),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -357,18 +366,22 @@ class _DesktopCategoryHeader extends StatelessWidget {
               imageString,
               width: 64,
               height: 64,
+              excludeFromSemantics: true,
             ),
           ),
-          Expanded(
+          Flexible(
             child: Padding(
               padding: EdgeInsetsDirectional.only(start: 8),
-              child: Text(
-                title,
-                style: Theme.of(context).textTheme.headline.apply(
-                      color: colorScheme.onSurface,
-                    ),
-                maxLines: 4,
-                overflow: TextOverflow.ellipsis,
+              child: Semantics(
+                header: true,
+                child: Text(
+                  title,
+                  style: Theme.of(context).textTheme.headline.apply(
+                        color: colorScheme.onSurface,
+                      ),
+                  maxLines: 4,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
             ),
           ),
@@ -646,7 +659,7 @@ class _CarouselCard extends StatelessWidget {
           onTap: () {
             Navigator.of(context).push<void>(
               MaterialPageRoute(
-                builder: (context) => study,
+                builder: (context) => _StudyWrapper(study: study),
               ),
             );
           },
@@ -691,3 +704,50 @@ double _carouselHeight(double scaleFactor, BuildContext context) => math.max(
         GalleryOptions.of(context).textScaleFactor(context) *
         scaleFactor,
     _carouselHeightMin);
+
+/// Wrap the studies with this to display a back button and allow the user to
+/// exit them at any time.
+class _StudyWrapper extends StatelessWidget {
+  const _StudyWrapper({Key key, this.study}) : super(key: key);
+
+  final Widget study;
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
+
+    return ApplyTextOptions(
+      child: Stack(
+        children: [
+          Semantics(
+            sortKey: OrdinalSortKey(1),
+            child: study,
+          ),
+          Semantics(
+            sortKey: OrdinalSortKey(0),
+            child: Align(
+              alignment: AlignmentDirectional.bottomStart,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: FloatingActionButton.extended(
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  icon: IconTheme(
+                    data: IconThemeData(color: colorScheme.onPrimary),
+                    child: BackButtonIcon(),
+                  ),
+                  label: Text(
+                    MaterialLocalizations.of(context).backButtonTooltip,
+                    style: textTheme.button.apply(color: colorScheme.onPrimary),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

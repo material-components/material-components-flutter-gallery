@@ -24,13 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Տեղապահ «${title}» ներդիրի համար";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Ռեստորաններ չկան', one: '1 ռեստորան', other: '${totalRestaurants} ռեստորան')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Առանց կանգառի', one: '1 կանգառ', other: '${numberOfStops} կանգառ')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Հասանելի հյուրանոցներ չկան', one: '1 հասանելի հյուրանոց', other: '${totalProperties} հասանելի հյուրանոց')}";
 
   static m5(value) => "${value}";
 
@@ -39,7 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Դուք ընտրել եք՝ «${value}»";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${amount} գումարի ${accountName} հաշիվ (${accountNumber})։";
 
   static m9(amount) =>
       "Այս ամիս դուք բանկոմատների միջնորդավճարների վրա ծախսել եք ${amount}։";
@@ -53,16 +53,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "Դուք այս շաբաթ ռեստորաններում ծախսել եք ${amount}։";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Ավելացրեք հարկային հնարավոր նվազեցման գումարը։ Նշանակեք կատեգորիաներ 1 չբաշխված գործարքի համար։', other: 'Ավելացրեք հարկային հնարավոր նվազեցման գումարը։ Նշանակեք կատեգորիաներ ${count} չբաշխված գործարքի համար։')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "${amount} գումարի ${billName} հաշիվը պետք է վճարվի՝ ${date}։";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "Բյուջե՝ ${budgetName}։ Ծախսվել է ${amountUsed}՝ ${amountTotal}-ից։ Մնացել է՝ ${amountLeft}։";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'ԱՊՐԱՆՔՆԵՐ ՉԿԱՆ', one: '1 ԱՊՐԱՆՔ', other: '${quantity} ԱՊՐԱՆՔ')}";
 
   static m17(price) => "x ${price}";
 
@@ -306,11 +306,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Կոճակներ"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Թույլ է տալիս ընտրություն անել մի քանի իրար բացառող տարբերակների միջև։ Երբ սեգմենտավորված կառավարման տարրում մեկ տարբերակ է ընտրված, մյուս տարբերակները չեն ընդծգվում։"),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "iOS-ի ոճով սեգմենտավորված կառավարման տարր"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage(
+                "Սեգմենտավորված կառավարման տարր"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Պարզ, ծանուցումներով և լիաէկրան"),
         "demoDialogTitle":
@@ -357,10 +359,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Սովորական երկխոսության պատուհանում օգտատիրոջն առաջարկվում է ընտրության մի քանի տարբերակ։ Եթե պատուհանն ունի վերնագիր, այն ցուցադրվում է տարբերակների վերևում։"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Պարզ"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
-        "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Ներդիրները թույլ են տալիս դասավորել էկրանների, տվյալակազմերի բովանդակությունը և այլն։"),
+        "demoTabsSubtitle":
+            MessageLookupByLibrary.simpleMessage("Առանձին ոլորվող ներդիրներ"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Ներդիրներ"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Տեքստային դաշտերի օգնությամբ օգտատերերը կարող են լրացնել ձևեր և մուտքագրել տվյալներ երկխոսության պատուհաններում։"),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("Էլ․ հասցե"),
@@ -398,7 +400,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldSalary":
             MessageLookupByLibrary.simpleMessage("Աշխատավարձ"),
         "demoTextFieldShowPasswordLabel":
-            MessageLookupByLibrary.simpleMessage("Ցուցադրել գաղտնաբառը"),
+            MessageLookupByLibrary.simpleMessage("Ցույց տալ գաղտնաբառը"),
         "demoTextFieldSubmit": MessageLookupByLibrary.simpleMessage("ՈՒՂԱՐԿԵԼ"),
         "demoTextFieldSubtitle": MessageLookupByLibrary.simpleMessage(
             "Տեքստի և թվերի խմբագրման մեկ տող"),
@@ -512,11 +514,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyLoginUsername": MessageLookupByLibrary.simpleMessage("Օգտանուն"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("ՏԵՍՆԵԼ ԲՈԼՈՐԸ"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Դիտել բոլոր հաշիվները"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Դիտել բոլոր վճարումները"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Դիտել բոլոր բյուջեները"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Գտնել բանկոմատներ"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Օգնություն"),
@@ -564,7 +566,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("Ձախից աջ"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage(
+                "Տարածաշրջանային կարգավորումներ"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("Աջից ձախ"),
         "settingsTextScaling":
@@ -657,7 +660,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductSeabreezeSweater":
             MessageLookupByLibrary.simpleMessage("Ծովի ալիքների գույնի սվիտեր"),
         "shrineProductShoulderRollsTee":
-            MessageLookupByLibrary.simpleMessage("Բաց թևքով շապիկ"),
+            MessageLookupByLibrary.simpleMessage("Ազատ թևքով շապիկ"),
         "shrineProductShrugBag":
             MessageLookupByLibrary.simpleMessage("Հոբո պայուսակ"),
         "shrineProductSootheCeramicSet": MessageLookupByLibrary.simpleMessage(
@@ -685,16 +688,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Կաշվե գոտի"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Փակել զամբյուղը"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Փակել ընտրացանկը"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Բացել ընտրացանկը"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Հեռացնել ապրանքը"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Որոնել"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Կարգավորումներ"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Հարմարվողական մոդել"),
         "starterAppDrawerItem": m19,
@@ -708,7 +711,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ենթավերնագիր"),
         "starterAppGenericTitle": MessageLookupByLibrary.simpleMessage("Անուն"),
         "starterAppTitle":
-            MessageLookupByLibrary.simpleMessage("Starter հավելված"),
+            MessageLookupByLibrary.simpleMessage("Գործարկման հավելված"),
         "starterAppTooltipAdd":
             MessageLookupByLibrary.simpleMessage("Ավելացնել"),
         "starterAppTooltipFavorite":

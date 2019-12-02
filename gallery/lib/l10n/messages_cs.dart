@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Zástupný symbol karty ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Žádné restaurace', one: '1 restaurace', few: '${totalRestaurants} restaurace', many: '${totalRestaurants} restaurace', other: '${totalRestaurants} restaurací')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Bez mezipřistání', one: '1 mezipřistání', few: '${numberOfStops} mezipřistání', many: '${numberOfStops} mezipřistání', other: '${numberOfStops} mezipřistání')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Žádné dostupné služby', one: '1 dostupná služba', few: '${totalProperties} dostupné služby', many: '${totalProperties} dostupné služby', other: '${totalProperties} dostupných služeb')}";
 
   static m5(value) => "Položka ${value}";
 
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Vybrali jste: „${value}“";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "Účet ${accountName} č. ${accountNumber} s částkou ${amount}.";
 
   static m9(amount) =>
       "Tento měsíc jste utratili ${amount} za poplatky za bankomat";
@@ -54,16 +54,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "Tento týden jste utratili ${amount} za restaurace";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Zvyšte potenciální odečet z daní! Přiřaďte k 1 nezařazené transakci kategorie.', few: 'Zvyšte potenciální odečet z daní! Přiřaďte ke ${count} nezařazeným transakcím kategorie.', many: 'Zvyšte potenciální odečet z daní! Přiřaďte k ${count} nezařazené transakce kategorie.', other: 'Zvyšte potenciální odečet z daní! Přiřaďte k ${count} nezařazeným transakcím kategorie.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "Faktura ${billName} ve výši ${amount} je splatná do ${date}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "Rozpočet ${budgetName}: využito ${amountUsed} z ${amountTotal}, zbývá ${amountLeft}";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'ŽÁDNÉ POLOŽKY', one: '1 POLOŽKA', few: '${quantity} POLOŽKY', many: '${quantity} POLOŽKY', other: '${quantity} POLOŽEK')}";
 
   static m17(price) => "× ${price}";
 
@@ -305,11 +305,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Tlačítka"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Slouží k výběru mezi možnostmi, které se vzájemně vylučují. Výběrem jedné možnosti segmentové kontroly zrušíte výběr ostatních možností."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "Segmentová kontrola ve stylu iOS"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Segmentová kontrola"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Jednoduché, s upozorněním a na celou obrazovku"),
         "demoDialogTitle":
@@ -355,10 +356,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoSimpleDialogTitle":
             MessageLookupByLibrary.simpleMessage("Jednoduché"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Karty třídí obsah z různých obrazovek, datových sad a dalších interakcí."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Karty se zobrazením, která lze nezávisle na sobě posouvat"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Karty"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Textová pole uživatelům umožňují zadat do uživatelského rozhraní text. Obvykle se vyskytují ve formulářích a dialogových oknech."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-mail"),
@@ -510,11 +511,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Uživatelské jméno"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("ZOBRAZIT VŠE"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Zobrazit všechny účty"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Zobrazit všechny faktury"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Zobrazit všechny rozpočty"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Najít bankomaty"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Nápověda"),
@@ -559,7 +560,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("Zleva doprava"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("Podle jazyka"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("Zprava doleva"),
         "settingsTextScaling":
@@ -683,16 +684,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Pásek Whitney"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Zavřít košík"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Zavřít nabídku"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Otevřít nabídku"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Odstranit položku"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Hledat"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Nastavení"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Responzivní rozvržení úvodní aplikace"),
         "starterAppDrawerItem": m19,

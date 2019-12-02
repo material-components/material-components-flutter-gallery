@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "عنصر نائب لعلامة تبويب ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'ما مِن مطاعم.', one: 'مطعم واحد', two: 'مطعمان (${totalRestaurants})', few: '${totalRestaurants} مطاعم', many: '${totalRestaurants} مطعمًا', other: '${totalRestaurants} مطعم')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'بدون توقف', one: 'محطة واحدة', two: 'محطتان (${numberOfStops})', few: '${numberOfStops}‏ محطات', many: '${numberOfStops}‏ محطة', other: '${numberOfStops}‏ محطة')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'ليس هناك مواقع متاحة.', one: 'هناك موقع واحد متاح.', two: 'هناك موقعان (${totalProperties}) متاحان.', few: 'هناك ${totalProperties} مواقع متاحة.', many: 'هناك ${totalProperties} موقعًا متاحًا.', other: 'هناك ${totalProperties} موقع متاح.')}";
 
   static m5(value) => "السلعة ${value}";
 
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "لقد اخترت القيمة التالية: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "الحساب ${accountName} رقم ${accountNumber} بمبلغ ${amount}.";
 
   static m9(amount) => "أنفقت ${amount} كرسوم لأجهزة الصراف الآلي هذا الشهر";
 
@@ -54,16 +54,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "أنفقت هذا الشهر مبلغ ${amount} على تناول الطعام في المطاعم.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, zero: 'يمكنك زيادة خصم الضرائب المحتملة. ضبط الفئات على ${count} معاملة لم يتم ضبطها.', one: 'يمكنك زيادة خصم الضرائب المحتملة. ضبط الفئات على معاملة واحدة لم يتم ضبطها.', two: 'يمكنك زيادة خصم الضرائب المحتملة. ضبط الفئات على معاملتين (${count}) لم يتم ضبطهما.', few: 'يمكنك زيادة خصم الضرائب المحتملة. ضبط الفئات على ${count} معاملات لم يتم ضبطها.', many: 'يمكنك زيادة خصم الضرائب المحتملة. ضبط الفئات على ${count} معاملة لم يتم ضبطها.', other: 'يمكنك زيادة خصم الضرائب المحتملة. ضبط الفئات على ${count} معاملة لم يتم ضبطها.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "تاريخ استحقاق الفاتورة ${billName} التي تبلغ ${amount} هو ${date}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "ميزانية ${budgetName} مع استخدام ${amountUsed} من إجمالي ${amountTotal}، المبلغ المتبقي ${amountLeft}";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'ما مِن عناصر.', one: 'عنصر واحد', two: 'عنصران (${quantity})', few: '${quantity} عناصر', many: '${quantity} عنصرًا', other: '${quantity} عنصر')}";
 
   static m17(price) => "x ‏${price}";
 
@@ -306,11 +306,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الأزرار"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "يُستخدَم للاختيار بين عدد من الخيارات يستبعد أحدها الآخر. عند اختيار خيار في عنصر تحكّم الشريحة، يتم إلغاء اختيار العنصر الآخر في عنصر تحكّم الشريحة."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage("عنصر تحكّم شريحة بنمط iOS"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("عنصر تحكّم شريحة"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "مربعات حوار بسيطة ومخصّصة للتنبيهات وبملء الشاشة"),
         "demoDialogTitle":
@@ -355,10 +355,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "يتيح مربع الحوار البسيط للمستخدم إمكانية الاختيار من بين عدة خيارات. ويشتمل مربع الحوار البسيط على عنوان اختياري يتم عرضه أعلى هذه الخيارات."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("بسيط"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "تساعد علامات التبويب على تنظيم المحتوى في الشاشات المختلفة ومجموعات البيانات والتفاعلات الأخرى."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "علامات تبويب تحتوي على عروض يمكن التنقّل خلالها بشكل مستقل"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("علامات التبويب"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "تسمح حقول النص للمستخدمين بإدخال نص في واجهة مستخدم. وتظهر عادةً في النماذج ومربّعات الحوار."),
         "demoTextFieldEmail":
@@ -514,11 +514,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("عرض جميع الحسابات"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("عرض كل الفواتير"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("عرض جميع الميزانيات"),
         "rallySettingsFindAtms": MessageLookupByLibrary.simpleMessage(
             "العثور على مواقع أجهزة الصراف الآلي"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("المساعدة"),
@@ -563,7 +563,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("من اليسار إلى اليمين"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("بناءً على اللغة"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("من اليمين إلى اليسار"),
         "settingsTextScaling":
@@ -687,16 +687,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("حزام \"ويتني\""),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("إغلاق سلة التسوق"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("إغلاق القائمة"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("فتح القائمة"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("إزالة العنصر"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("بحث"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "تطبيق نموذجي يتضمّن تنسيقًا تفاعليًا"),
         "starterAppDrawerItem": m19,

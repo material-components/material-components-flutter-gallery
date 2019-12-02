@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 
 import 'package:gallery/data/gallery_options.dart';
+import 'package:gallery/layout/text_scale.dart';
 import 'package:gallery/studies/rally/colors.dart';
 import 'package:gallery/studies/rally/data.dart';
 import 'package:gallery/studies/rally/formatters.dart';
@@ -26,6 +27,7 @@ class RallyLineChart extends StatelessWidget {
         events: events,
         labelStyle: Theme.of(context).textTheme.body1,
         textDirection: GalleryOptions.of(context).textDirection(),
+        textScaleFactor: reducedTextScale(context),
       ),
     );
   }
@@ -38,13 +40,17 @@ class RallyLineChartPainter extends CustomPainter {
     @required this.events,
     @required this.labelStyle,
     @required this.textDirection,
+    @required this.textScaleFactor,
   });
 
   // The style for the labels.
   final TextStyle labelStyle;
 
-  // The text direction for the texts.
+  // The text direction for the text.
   final TextDirection textDirection;
+
+  // The text scale factor for the text.
+  final double textScaleFactor;
 
   // The format for the dates.
   final intl.DateFormat dateFormat;
@@ -83,19 +89,21 @@ class RallyLineChartPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final ticksTop = size.height - space * 5;
-    final labelsTop = size.height - space * 2;
+    final labelHeight = space + space * (textScaleFactor - 1);
+    final ticksHeight = 3 * space;
+    final ticksTop = size.height - labelHeight - ticksHeight - space;
+    final labelsTop = size.height - labelHeight;
     _drawLine(
       canvas,
-      Rect.fromLTWH(0, 0, size.width, ticksTop),
+      Rect.fromLTWH(0, 0, size.width, size.height - labelHeight - ticksHeight),
     );
     _drawXAxisTicks(
       canvas,
-      Rect.fromLTWH(0, ticksTop, size.width, labelsTop - ticksTop),
+      Rect.fromLTWH(0, ticksTop, size.width, ticksHeight),
     );
     _drawXAxisLabels(
       canvas,
-      Rect.fromLTWH(0, labelsTop, size.width, size.height - labelsTop),
+      Rect.fromLTWH(0, labelsTop, size.width, labelHeight),
     );
   }
 
@@ -227,10 +235,12 @@ class RallyLineChartPainter extends CustomPainter {
   void _drawXAxisLabels(Canvas canvas, Rect rect) {
     final selectedLabelStyle = labelStyle.copyWith(
       fontWeight: FontWeight.w700,
+      fontSize: labelStyle.fontSize * textScaleFactor,
     );
     final unselectedLabelStyle = labelStyle.copyWith(
       fontWeight: FontWeight.w700,
       color: RallyColors.gray25,
+      fontSize: labelStyle.fontSize * textScaleFactor,
     );
 
     // We use toUpperCase to format the dates. This function uses the language
@@ -243,7 +253,7 @@ class RallyLineChartPainter extends CustomPainter {
       textDirection: textDirection,
     );
     leftLabel.layout();
-    leftLabel.paint(canvas, Offset(rect.left + space / 2, rect.center.dy));
+    leftLabel.paint(canvas, Offset(rect.left + space / 2, rect.topCenter.dy));
 
     final centerLabel = TextPainter(
       text: TextSpan(
@@ -256,7 +266,7 @@ class RallyLineChartPainter extends CustomPainter {
     );
     centerLabel.layout();
     final x = (rect.width - centerLabel.width) / 2;
-    final y = rect.center.dy;
+    final y = rect.topCenter.dy;
     centerLabel.paint(canvas, Offset(x, y));
 
     final rightLabel = TextPainter(
@@ -271,7 +281,7 @@ class RallyLineChartPainter extends CustomPainter {
     rightLabel.layout();
     rightLabel.paint(
       canvas,
-      Offset(rect.right - centerLabel.width - space / 2, rect.center.dy),
+      Offset(rect.right - centerLabel.width - space / 2, rect.topCenter.dy),
     );
   }
 }

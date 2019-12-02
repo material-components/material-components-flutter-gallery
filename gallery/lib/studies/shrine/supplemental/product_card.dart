@@ -13,6 +13,8 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:intl/intl.dart';
 import 'package:scoped_model/scoped_model.dart';
 
@@ -82,6 +84,11 @@ Widget _buildProductCard({
       return GestureDetector(
         onTap: () {
           model.addProductToCart(product.id);
+          SemanticsService.announce(
+            GalleryLocalizations.of(context)
+                .shrineScreenReaderProductAddedToCart,
+            Directionality.of(context),
+          );
         },
         child: child,
       );

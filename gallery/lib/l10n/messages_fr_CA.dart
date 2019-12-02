@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Marque substitutive pour l\'onglet ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Aucun restaurant', one: '1 restaurant', other: '${totalRestaurants} restaurants')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Direct', one: '1 escale', other: '${numberOfStops} escales')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Aucune propriété n\'est disponible', one: '1 propriété est disponible', other: '${totalProperties} propriétés sont disponibles')}";
 
   static m5(value) => "Élément ${value}";
 
@@ -41,7 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Vous avez sélectionné : \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "Compte ${accountName} ${accountNumber} dont le solde est de ${amount}.";
 
   static m9(amount) =>
       "Vos frais liés à l\'utilisation de guichets automatiques s\'élèvent à ${amount} ce mois-ci";
@@ -56,16 +56,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Vos dépenses en restaurants s\'élèvent à ${amount} cette semaine.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Augmentez vos déductions fiscales potentielles! Attribuez des catégories à 1 transaction non attribuée.', other: 'Augmentez vos déductions fiscales potentielles! Attribuez des catégories à ${count} transactions non attribuées.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "La facture de ${billName} de ${amount} est due le ${date}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "Dans le budget ${budgetName}, ${amountUsed} a été utilisé sur ${amountTotal} (il reste ${amountLeft})";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'AUCUN ÉLÉMENT', one: '1 ÉLÉMENT', other: '${quantity} ÉLÉMENTS')}";
 
   static m17(price) => "x ${price}";
 
@@ -312,11 +312,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Boutons"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Utilisé pour faire une sélection parmi un nombre d\'options mutuellement exclusives. Lorsqu\'une option dans le contrôle segmenté est sélectionné, les autres options du contrôle segmenté ne le sont plus."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "Contrôle segmenté de style iOS"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Contrôle segmenté"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Simple, alerte et plein écran"),
         "demoDialogTitle":
@@ -361,10 +362,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Une boîte de dialogue simple offre à un utilisateur le choix entre plusieurs options. Une boîte de dialogue simple a un titre optionnel affiché au-dessus des choix."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Simple"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Les onglets permettent d\'organiser le contenu sur divers écrans, ensembles de données et d\'autres interactions."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Onglets avec affichage à défilement indépendant"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Onglets"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Les champs de texte permettent aux utilisateurs d\'entrer du texte dans une interface utilisateur. Ils figurent généralement dans des formulaires et des boîtes de dialogue."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("Courriel"),
@@ -522,11 +523,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Nom d\'utilisateur"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("TOUT AFFICHER"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Voir tous les comptes"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Voir toutes les factures"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Voir tous les budgets"),
         "rallySettingsFindAtms": MessageLookupByLibrary.simpleMessage(
             "Trouver des guichets automatiques"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Aide"),
@@ -573,7 +574,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("De gauche à droite"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("Selon le lieu"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("De droite à gauche"),
         "settingsTextScaling":
@@ -696,16 +697,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Ceinture Whitney"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Fermer le panier"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Fermer le menu"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Ouvrir le menu"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Supprimer l\'élément"),
+        "shrineTooltipSearch":
+            MessageLookupByLibrary.simpleMessage("Rechercher"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Paramètres"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Une mise en page de base réactive"),
         "starterAppDrawerItem": m19,

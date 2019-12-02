@@ -13,6 +13,7 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:intl/intl.dart';
 import 'package:scoped_model/scoped_model.dart';
 
@@ -38,6 +39,10 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
             quantity: model.productsInCart[id],
             onPressed: () {
               model.removeItemFromCart(id);
+              SemanticsService.announce(
+                GalleryLocalizations.of(context).shrineScreenReaderItemRemoved,
+                Directionality.of(context),
+              );
             },
           ),
         )
@@ -70,16 +75,22 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                                   .shrineTooltipCloseCart,
                             ),
                           ),
-                          Text(
-                            GalleryLocalizations.of(context)
-                                .shrineCartPageCaption,
-                            style: localTheme.textTheme.subhead
-                                .copyWith(fontWeight: FontWeight.w600),
+                          MergeSemantics(
+                            child: Text(
+                              GalleryLocalizations.of(context)
+                                  .shrineCartPageCaption,
+                              style: localTheme.textTheme.subhead
+                                  .copyWith(fontWeight: FontWeight.w600),
+                            ),
                           ),
                           const SizedBox(width: 16),
-                          Text(
-                            GalleryLocalizations.of(context)
-                                .shrineCartItemCount(model.totalCartQuantity),
+                          MergeSemantics(
+                            child: Text(
+                              GalleryLocalizations.of(context)
+                                  .shrineCartItemCount(
+                                model.totalCartQuantity,
+                              ),
+                            ),
                           ),
                         ],
                       ),
@@ -111,6 +122,11 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                       onPressed: () {
                         model.clearCart();
                         ExpandingBottomSheet.of(context).close();
+                        SemanticsService.announce(
+                          GalleryLocalizations.of(context)
+                              .shrineScreenReaderCartClearedAndClosed,
+                          Directionality.of(context),
+                        );
                       },
                     ),
                   ),
@@ -147,67 +163,75 @@ class ShoppingCartSummary extends StatelessWidget {
             padding: const EdgeInsetsDirectional.only(end: 16),
             child: Column(
               children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      GalleryLocalizations.of(context).shrineCartTotalCaption,
-                    ),
-                    Expanded(
-                      child: Text(
-                        formatter.format(model.totalCost),
-                        style: largeAmountStyle,
-                        textAlign: TextAlign.end,
+                MergeSemantics(
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        GalleryLocalizations.of(context).shrineCartTotalCaption,
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Text(
+                          formatter.format(model.totalCost),
+                          style: largeAmountStyle,
+                          textAlign: TextAlign.end,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 const SizedBox(height: 16),
-                Row(
-                  children: [
-                    Text(
-                      GalleryLocalizations.of(context)
-                          .shrineCartSubtotalCaption,
-                    ),
-                    Expanded(
-                      child: Text(
-                        formatter.format(model.subtotalCost),
-                        style: smallAmountStyle,
-                        textAlign: TextAlign.end,
+                MergeSemantics(
+                  child: Row(
+                    children: [
+                      Text(
+                        GalleryLocalizations.of(context)
+                            .shrineCartSubtotalCaption,
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Text(
+                          formatter.format(model.subtotalCost),
+                          style: smallAmountStyle,
+                          textAlign: TextAlign.end,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 const SizedBox(height: 4),
-                Row(
-                  children: [
-                    Text(
-                      GalleryLocalizations.of(context)
-                          .shrineCartShippingCaption,
-                    ),
-                    Expanded(
-                      child: Text(
-                        formatter.format(model.shippingCost),
-                        style: smallAmountStyle,
-                        textAlign: TextAlign.end,
+                MergeSemantics(
+                  child: Row(
+                    children: [
+                      Text(
+                        GalleryLocalizations.of(context)
+                            .shrineCartShippingCaption,
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Text(
+                          formatter.format(model.shippingCost),
+                          style: smallAmountStyle,
+                          textAlign: TextAlign.end,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 const SizedBox(height: 4),
-                Row(
-                  children: [
-                    Text(
-                      GalleryLocalizations.of(context).shrineCartTaxCaption,
-                    ),
-                    Expanded(
-                      child: Text(
-                        formatter.format(model.tax),
-                        style: smallAmountStyle,
-                        textAlign: TextAlign.end,
+                MergeSemantics(
+                  child: Row(
+                    children: [
+                      Text(
+                        GalleryLocalizations.of(context).shrineCartTaxCaption,
                       ),
-                    ),
-                  ],
+                      Expanded(
+                        child: Text(
+                          formatter.format(model.tax),
+                          style: smallAmountStyle,
+                          textAlign: TextAlign.end,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -243,12 +267,20 @@ class ShoppingCartRow extends StatelessWidget {
         key: ValueKey<int>(product.id),
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
-            width: _startColumnWidth,
-            child: IconButton(
-              icon: const Icon(Icons.remove_circle_outline),
-              onPressed: onPressed,
-              tooltip: GalleryLocalizations.of(context).shrineTooltipRemoveItem,
+          Semantics(
+            label: GalleryLocalizations.of(context)
+                .shrineScreenReaderRemoveProductButton(product.name(context)),
+            button: true,
+            child: ExcludeSemantics(
+              child: SizedBox(
+                width: _startColumnWidth,
+                child: IconButton(
+                  icon: const Icon(Icons.remove_circle_outline),
+                  onPressed: onPressed,
+                  tooltip:
+                      GalleryLocalizations.of(context).shrineTooltipRemoveItem,
+                ),
+              ),
             ),
           ),
           Expanded(
@@ -259,39 +291,46 @@ class ShoppingCartRow extends StatelessWidget {
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Image.asset(
-                        product.assetName,
-                        package: product.assetPackage,
-                        fit: BoxFit.cover,
-                        width: 75,
-                        height: 75,
+                      ExcludeSemantics(
+                        child: Image.asset(
+                          product.assetName,
+                          package: product.assetPackage,
+                          fit: BoxFit.cover,
+                          width: 75,
+                          height: 75,
+                        ),
                       ),
                       const SizedBox(width: 16),
                       Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              children: [
-                                Expanded(
-                                  child: Text(
-                                    GalleryLocalizations.of(context)
-                                        .shrineProductQuantity(quantity),
-                                  ),
+                        child: MergeSemantics(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              MergeSemantics(
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: Text(
+                                        GalleryLocalizations.of(context)
+                                            .shrineProductQuantity(quantity),
+                                      ),
+                                    ),
+                                    Text(
+                                      GalleryLocalizations.of(context)
+                                          .shrineProductPrice(
+                                        formatter.format(product.price),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                                Text(
-                                  GalleryLocalizations.of(context)
-                                      .shrineProductPrice(
-                                          formatter.format(product.price)),
-                                ),
-                              ],
-                            ),
-                            Text(
-                              product.name(context),
-                              style: localTheme.textTheme.subhead
-                                  .copyWith(fontWeight: FontWeight.w600),
-                            ),
-                          ],
+                              ),
+                              Text(
+                                product.name(context),
+                                style: localTheme.textTheme.subhead
+                                    .copyWith(fontWeight: FontWeight.w600),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],

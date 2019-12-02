@@ -74,19 +74,6 @@ class _LoginPageState extends State<LoginPage> {
               ),
             )
           : Scaffold(
-              appBar: AppBar(
-                elevation: 0,
-                backgroundColor: Colors.white,
-                brightness: Brightness.light,
-                leading: BackButton(
-                  onPressed: () {
-                    // The login screen is immediately displayed on top of the Shrine
-                    // home screen using onGenerateRoute and so rootNavigator must be
-                    // set to true in order to get out of Shrine completely.
-                    Navigator.of(context, rootNavigator: true).maybePop();
-                  },
-                ),
-              ),
               body: SafeArea(
                 child: ListView(
                   padding: const EdgeInsets.symmetric(
@@ -113,15 +100,17 @@ class _ShrineLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image.asset('packages/shrine_images/diamond.png'),
-        const SizedBox(height: 16),
-        Text(
-          'SHRINE',
-          style: Theme.of(context).textTheme.headline,
-        ),
-      ],
+    return ExcludeSemantics(
+      child: Column(
+        children: [
+          Image.asset('packages/shrine_images/diamond.png'),
+          const SizedBox(height: 16),
+          Text(
+            'SHRINE',
+            style: Theme.of(context).textTheme.headline,
+          ),
+        ],
+      ),
     );
   }
 }

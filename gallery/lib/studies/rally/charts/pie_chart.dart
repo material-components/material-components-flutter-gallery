@@ -2,10 +2,12 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'dart:math';
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
+import 'package:gallery/data/gallery_options.dart';
+import 'package:gallery/layout/text_scale.dart';
 import 'package:gallery/studies/rally/colors.dart';
 import 'package:gallery/studies/rally/data.dart';
 import 'package:gallery/studies/rally/formatters.dart';
@@ -19,7 +21,7 @@ class RallyPieChartSegment {
 }
 
 /// The max height and width of the [RallyPieChart].
-const kPieChartMaxSize = 500.0;
+const pieChartMaxSize = 500.0;
 
 List<RallyPieChartSegment> buildSegmentsFromAccountItems(
     List<AccountData> items) {
@@ -146,6 +148,18 @@ class _AnimatedRallyPieChart extends AnimatedWidget {
     );
 
     return LayoutBuilder(builder: (context, constraints) {
+      // When the widget is larger, we increase the font size.
+      TextStyle headlineStyle = constraints.maxHeight >= pieChartMaxSize
+          ? textTheme.headline.copyWith(fontSize: 70)
+          : textTheme.headline;
+
+      // With a large text scale factor, we set a max font size.
+      if (GalleryOptions.of(context).textScaleFactor(context) > 1.0) {
+        headlineStyle = headlineStyle.copyWith(
+          fontSize: (headlineStyle.fontSize / reducedTextScale(context)),
+        );
+      }
+
       return DecoratedBox(
         decoration: _RallyPieChartOutlineDecoration(
           maxFraction: animation.value,
@@ -164,10 +178,7 @@ class _AnimatedRallyPieChart extends AnimatedWidget {
               ),
               Text(
                 usdWithSignFormat(context).format(centerAmount),
-                // When the widget is larger, we increase the font size.
-                style: constraints.maxHeight >= kPieChartMaxSize
-                    ? textTheme.headline.copyWith(fontSize: 70)
-                    : textTheme.headline,
+                style: headlineStyle,
               ),
             ],
           ),
@@ -202,7 +213,7 @@ class _RallyPieChartOutlineBoxPainter extends BoxPainter {
   final double maxFraction;
   final double wholeAmount;
   final List<RallyPieChartSegment> segments;
-  static const double wholeRadians = 2 * pi;
+  static const double wholeRadians = 2 * math.pi;
   static const double spaceRadians = wholeRadians / 180;
 
   @override
@@ -210,7 +221,7 @@ class _RallyPieChartOutlineBoxPainter extends BoxPainter {
     // Create two padded reacts to draw arcs in: one for colored arcs and one for
     // inner bg arc.
     const strokeWidth = 4.0;
-    final outerRadius = min(
+    final outerRadius = math.min(
           configuration.size.width,
           configuration.size.height,
         ) /
@@ -249,7 +260,7 @@ class _RallyPieChartOutlineBoxPainter extends BoxPainter {
     // Paint a smaller inner circle to cover the painted arcs, so they are
     // display as segments.
     final bgPaint = Paint()..color = RallyColors.primaryBackground;
-    canvas.drawArc(innerRect, 0, 2 * pi, true, bgPaint);
+    canvas.drawArc(innerRect, 0, 2 * math.pi, true, bgPaint);
   }
 
   double _calculateAngle(double amount, double offset) {
@@ -260,7 +271,7 @@ class _RallyPieChartOutlineBoxPainter extends BoxPainter {
   }
 
   double _calculateStartAngle(double total, double offset) =>
-      _calculateAngle(total, offset) - pi / 2;
+      _calculateAngle(total, offset) - math.pi / 2;
 
   double _calculateSweepAngle(double total, double offset) =>
       _calculateAngle(total, offset);

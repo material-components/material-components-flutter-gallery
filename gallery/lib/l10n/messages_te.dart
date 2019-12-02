@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "${title} ట్యాబ్‌కు సంబంధించిన ప్లేస్‌హోల్డర్";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'రెస్టారెంట్‌లు లేవు', one: '1 రెస్టారెంట్', other: '${totalRestaurants} రెస్టారెంట్‌లు')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'నాన్‌స్టాప్', one: '1 స్టాప్', other: '${numberOfStops} స్టాప్‌లు')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'ప్రాపర్టీలు ఏవీ అందుబాటులో లేవు', one: '1 ప్రాపర్టీలు అందుబాటులో ఉన్నాయి', other: '${totalProperties} ప్రాపర్టీలు అందుబాటులో ఉన్నాయి')}";
 
   static m5(value) => "వస్తువు ${value}";
 
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "మీరు ఎంపిక చేసింది: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "{ఖాతా సంఖ్య} కలిగిన {ఖాతాపేరు} ఖాతాలో ఉన్న {మొత్తం}.";
 
   static m9(amount) => "మీరు ఈ నెల ATM రుసుముల రూపంలో ${amount} ఖర్చు చేశారు";
 
@@ -53,16 +53,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "మీరు ఈ వారం రెస్టారెంట్‌లలో ${amount} ఖర్చు చేశారు.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'అవకాశం ఉన్న మీ పన్ను మినహాయింపును పెంచుకోండి! కేటాయించని 1 లావాదేవీకి వర్గాలను కేటాయించండి.', other: 'అవకాశం ఉన్న మీ పన్ను మినహాయింపును పెంచుకోండి! కేటాయించని ${count} లావాదేవీలకు వర్గాలను కేటాయించండి.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "గడువు {తేదీ}కి {మొత్తం} అయిన {బిల్లుపేరు} బిల్లు.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "{మొత్తం సొమ్ము} నుంచి {ఉపయోగించబడిన సొమ్ము} ఉపయోగించబడిన {బడ్జెట్ పేరు} బడ్జెట్, {మిగిలిన సొమ్ము} మిగిలింది";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'అంశాలు లేవు', one: '1 అంశం', other: '${quantity} అంశాలు')}";
 
   static m17(price) => "x ${price}";
 
@@ -268,7 +268,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("నమూనా దిగువున ఉండే షీట్"),
         "demoBottomSheetPersistentDescription":
             MessageLookupByLibrary.simpleMessage(
-                "దిగువున నిరంతరంగా ఉండే షీట్ అన్నది యాప్‌లోని ప్రాధమిక కంటెంట్‌కు పూరకంగా ఉండే అనుబంధ సమాచారాన్ని చూపుతుంది. యాప్‌లోని ఇతర భాగాలతో యూజర్ ఇంటరాక్ట్ అయినప్పుడు కూడా దిగువున నిరంతర షీట్ కనపడుతుంది."),
+                "దిగువున నిరంతరంగా ఉండే షీట్ అనేది యాప్‌లోని ప్రాధమిక కంటెంట్‌కు పూరకంగా ఉండే అనుబంధ సమాచారాన్ని చూపుతుంది. యాప్‌లోని ఇతర భాగాలతో యూజర్ ఇంటరాక్ట్ అయినప్పుడు కూడా దిగువున నిరంతర షీట్ కనపడుతుంది."),
         "demoBottomSheetPersistentTitle":
             MessageLookupByLibrary.simpleMessage("నిరంతరం దిగువున ఉండే షీట్"),
         "demoBottomSheetSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -319,11 +319,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("బటన్‌లు"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "పరస్పర సంబంధం లేని అనేక ఎంపికల మధ్య ఎంచుకోవడానికి దీనిని ఉపయోగిస్తారు. \'విభజించబడిన నియంత్రణ\'లో ఉండే ఒక ఎంపికను ఎంచుకుంటే, \'విభజించబడిన నియంత్రణ\'లో ఉండే ఇతర ఎంపికలు ఎంచుకునేందుకు ఇక అందుబాటులో ఉండవు."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "iOS-శైలి \'విభజించబడిన నియంత్రణ\'"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("విభజించబడిన నియంత్రణ"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "సాధారణ, అలర్ట్ మరియు పూర్తి స్క్రీన్"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("డైలాగ్‌లు"),
@@ -367,10 +368,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "సరళమైన డైలాగ్ వినియోగదారుకు అనేక ఎంపికల మధ్య ఎంపికను అందిస్తుంది. సరళమైన డైలాగ్‌లో ఐచ్ఛిక శీర్షిక ఉంటుంది, అది ఎంపికల పైన ప్రదర్శించబడుతుంది."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("సాధారణ"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "విభిన్న స్క్రీన్‌లు, డేటా సెట్‌లు మరియు ఇతర పరస్పర చర్యలలో ట్యాబ్‌లు అనేవి కంటెంట్‌ను నిర్వహిస్తాయి."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "స్వతంత్రంగా స్క్రోల్ చేయదగిన వీక్షణలతో ట్యాబ్‌లు"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("ట్యాబ్‌లు"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "వచన ఫీల్డ్‌లు అన్నవి వినియోగదారులు వచనాన్ని UIలో ఎంటర్ చేయడానికి వీలు కల్పిస్తాయి. అవి సాధారణంగా ఫారమ్‌లు, డైలాగ్‌లలో కనిపిస్తాయి."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("ఇమెయిల్"),
@@ -421,7 +422,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "అందరూ మిమ్మల్ని ఏమని పిలుస్తారు?"),
         "demoTextFieldWhereCanWeReachYou": MessageLookupByLibrary.simpleMessage(
-            "మేము మిమ్మల్ని ఏ విధంగా సంప్రదించవచ్చు?"),
+            "మేము మిమ్మల్ని ఎక్కడ సంప్రదించవచ్చు?"),
         "demoTextFieldYourEmailAddress":
             MessageLookupByLibrary.simpleMessage("మీ ఇమెయిల్ చిరునామా"),
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
@@ -431,7 +432,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "విశేష రూపకల్పనలో కనుగొన్న వివిధ రకాల టైపోగ్రాఫికల్ శైలుల యొక్క నిర్వచనాలు."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
-            "అన్ని పూర్వ నిర్వచిత వచన శైలలు"),
+            "అన్ని పూర్వ నిర్వచిత వచన శైలులు"),
         "demoTypographyTitle":
             MessageLookupByLibrary.simpleMessage("టైపోగ్రఫీ"),
         "dialogAddAccount":
@@ -530,11 +531,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("వినియోగదారు పేరు"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("అన్నీ చూడండి"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("అన్ని ఖాతాలనూ చూడండి"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("అన్ని బిల్‌లను చూడండి"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("అన్ని బడ్జెట్‌లనూ చూడండి"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ATMలను కనుగొనండి"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("సహాయం"),
@@ -581,7 +582,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("వచన దిశ"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("లొకేల్ ఆధారంగా"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("వచన ప్రమాణం"),
@@ -602,7 +603,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineCartItemCount": m16,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("కార్ట్"),
         "shrineCartShippingCaption":
-            MessageLookupByLibrary.simpleMessage("షిప్పింగ్ ఖర్చు:"),
+            MessageLookupByLibrary.simpleMessage("రవాణా ఖర్చు:"),
         "shrineCartSubtotalCaption":
             MessageLookupByLibrary.simpleMessage("ఉప మొత్తం:"),
         "shrineCartTaxCaption": MessageLookupByLibrary.simpleMessage("పన్ను:"),
@@ -683,8 +684,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("స్టెల్లా సన్‌గ్లాసెస్"),
         "shrineProductStrutEarrings":
             MessageLookupByLibrary.simpleMessage("దారంతో వేలాడే చెవిపోగులు"),
-        "shrineProductSucculentPlanters": MessageLookupByLibrary.simpleMessage(
-            "కండ కలిగిన మొక్కలు ఉంచే ప్లాంటర్‌లు"),
+        "shrineProductSucculentPlanters":
+            MessageLookupByLibrary.simpleMessage("ఊట మొక్కలు ఉంచే ప్లాంటర్‌లు"),
         "shrineProductSunshirtDress":
             MessageLookupByLibrary.simpleMessage("సన్‌షర్ట్ దుస్తులు"),
         "shrineProductSurfAndPerfShirt":
@@ -703,16 +704,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("విట్నీ బెల్ట్"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("కార్ట్‌ను మూసివేయండి"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("మెనూని మూసివేయండి"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("మెనూని తెరవండి"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("అంశాన్ని తీసివేయండి"),
+        "shrineTooltipSearch":
+            MessageLookupByLibrary.simpleMessage("శోధించండి"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("సెట్టింగ్‌లు"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "ప్రతిస్పందనాత్మక శైలిలోని స్టార్టర్ లేఅవుట్"),
         "starterAppDrawerItem": m19,

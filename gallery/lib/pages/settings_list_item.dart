@@ -70,12 +70,16 @@ class SettingsListItem<T> extends StatefulWidget {
     @required this.options,
     @required this.selectedOption,
     @required this.onOptionChanged,
+    @required this.onTapSetting,
+    @required this.isExpanded,
   }) : super(key: key);
 
   final String title;
   final LinkedHashMap<T, String> options;
   final T selectedOption;
   final ValueChanged<T> onOptionChanged;
+  final Function onTapSetting;
+  final bool isExpanded;
 
   @override
   _SettingsListItemState createState() => _SettingsListItemState<T>();
@@ -94,8 +98,6 @@ class _SettingsListItemState<T> extends State<SettingsListItem<T>>
   Animation<EdgeInsetsGeometry> _headerPadding;
   Animation<EdgeInsetsGeometry> _childrenPadding;
   Animation<BorderRadius> _headerBorderRadius;
-
-  bool _isExpanded = false;
 
   @override
   void initState() {
@@ -123,7 +125,7 @@ class _SettingsListItemState<T> extends State<SettingsListItem<T>>
       end: BorderRadius.zero,
     ).animate(_controller);
 
-    if (_isExpanded) {
+    if (widget.isExpanded) {
       _controller.value = 1.0;
     }
   }
@@ -134,22 +136,16 @@ class _SettingsListItemState<T> extends State<SettingsListItem<T>>
     super.dispose();
   }
 
-  void _handleTap() {
-    setState(() {
-      _isExpanded = !_isExpanded;
-      if (_isExpanded) {
-        _controller.forward();
-      } else {
-        _controller.reverse().then<void>((value) {
-          if (!mounted) {
-            return;
-          }
-          setState(() {
-            // Rebuild.
-          });
-        });
-      }
-    });
+  void _handleExpansion() {
+    if (widget.isExpanded) {
+      _controller.forward();
+    } else {
+      _controller.reverse().then<void>((value) {
+        if (!mounted) {
+          return;
+        }
+      });
+    }
   }
 
   Widget _buildHeaderWithChildren(BuildContext context, Widget child) {
@@ -164,7 +160,7 @@ class _SettingsListItemState<T> extends State<SettingsListItem<T>>
           chevronRotation: _headerChevronRotation,
           title: widget.title,
           subtitle: widget.options[widget.selectedOption] ?? '',
-          onTap: _handleTap,
+          onTap: () => widget.onTapSetting(),
         ),
         Padding(
           padding: _childrenPadding.value,
@@ -181,7 +177,8 @@ class _SettingsListItemState<T> extends State<SettingsListItem<T>>
 
   @override
   Widget build(BuildContext context) {
-    final bool closed = !_isExpanded && _controller.isDismissed;
+    _handleExpansion();
+    final closed = !widget.isExpanded && _controller.isDismissed;
     final theme = Theme.of(context);
 
     final optionsList = <Widget>[];
@@ -219,8 +216,11 @@ class _SettingsListItemState<T> extends State<SettingsListItem<T>>
                   ),
                 ),
               ),
-              child: Column(
-                children: optionsList,
+              child: ListView.builder(
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) => optionsList[index],
+                itemCount: optionsList.length,
               ),
             ),
     );

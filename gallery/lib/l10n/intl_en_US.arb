@@ -689,6 +689,30 @@
       }
     }
   },
+  "demoListsTitle": "Lists",
+  "@demoListsTitle": {
+    "description": "Title for lists demo."
+  },
+  "demoListsSubtitle": "Scrolling list layouts",
+  "@demoListsSubtitle": {
+    "description": "Subtitle for lists demo."
+  },
+  "demoListsDescription": "A single fixed-height row that typically contains some text as well as a leading or trailing icon.",
+  "@demoListsDescription": {
+    "description": "Description for lists demo. This describes what a single row in a list consists of."
+  },
+  "demoOneLineListsTitle": "One Line",
+  "@demoOneLineListsTitle": {
+    "description": "Title for lists demo with only one line of text per row."
+  },
+  "demoTwoLineListsTitle": "Two Lines",
+  "@demoTwoLineListsTitle": {
+    "description": "Title for lists demo with two lines of text per row."
+  },
+  "demoListsSecondary": "Secondary text",
+  "@demoListsSecondary": {
+    "description": "Text that appears in the second line of a list item."
+  },
   "demoTabsTitle": "Tabs",
   "@demoTabsTitle": {
     "description": "Title for tabs demo."
@@ -700,6 +724,38 @@
   "demoTabsDescription": "Tabs organize content across different screens, data sets, and other interactions.",
   "@demoTabsDescription": {
     "description": "Description for tabs demo."
+  },
+  "demoSelectionControlsTitle": "Selection controls",
+  "@demoSelectionControlsTitle": {
+    "description": "Title for selection controls demo."
+  },
+  "demoSelectionControlsSubtitle": "Checkboxes, radio buttons, and switches",
+  "@demoSelectionControlsSubtitle": {
+    "description": "Subtitle for selection controls demo."
+  },
+  "demoSelectionControlsCheckboxTitle": "Checkbox",
+  "@demoSelectionControlsCheckboxTitle": {
+    "description": "Title for the checkbox (selection controls) demo."
+  },
+  "demoSelectionControlsCheckboxDescription": "Checkboxes allow the user to select multiple options from a set. A normal checkbox's value is true or false and a tristate checkbox's value can also be null.",
+  "@demoSelectionControlsCheckboxDescription": {
+    "description": "Description for the checkbox (selection controls) demo."
+  },
+  "demoSelectionControlsRadioTitle": "Radio",
+  "@demoSelectionControlsRadioTitle": {
+    "description": "Title for the radio button (selection controls) demo."
+  },
+  "demoSelectionControlsRadioDescription": "Radio buttons allow the user to select one option from a set. Use radio buttons for exclusive selection if you think that the user needs to see all available options side-by-side.",
+  "@demoSelectionControlsRadioDescription": {
+    "description": "Description for the radio button (selection controls) demo."
+  },
+  "demoSelectionControlsSwitchTitle": "Switch",
+  "@demoSelectionControlsSwitchTitle": {
+    "description": "Title for the switches (selection controls) demo."
+  },
+  "demoSelectionControlsSwitchDescription": "On/off switches toggle the state of a single settings option. The option that the switch controls, as well as the state it’s in, should be made clear from the corresponding inline label.",
+  "@demoSelectionControlsSwitchDescription": {
+    "description": "Description for the switches (selection controls) demo."
   },
   "demoBottomTextFieldsTitle": "Text fields",
   "@demoBottomTextFieldsTitle": {
@@ -1389,27 +1445,57 @@
   },
   "shrineTooltipSearch": "Search",
   "@shrineTooltipSearch": {
-    "description": "The tooltip text for a search button. Also used as a semantic label, used by screen readers / VoiceOver."
+    "description": "The tooltip text for a search button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
   },
   "shrineTooltipSettings": "Settings",
   "@shrineTooltipSettings": {
-    "description": "The tooltip text for a settings button. Also used as a semantic label, used by screen readers / VoiceOver."
+    "description": "The tooltip text for a settings button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
   },
   "shrineTooltipOpenMenu": "Open menu",
   "@shrineTooltipOpenMenu": {
-    "description": "The tooltip text for a menu button. Also used as a semantic label, used by screen readers / VoiceOver."
+    "description": "The tooltip text for a menu button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
   },
   "shrineTooltipCloseMenu": "Close menu",
   "@shrineTooltipCloseMenu": {
-    "description": "The tooltip text for a button to close a menu. Also used as a semantic label, used by screen readers / VoiceOver."
+    "description": "The tooltip text for a button to close a menu. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
   },
   "shrineTooltipCloseCart": "Close cart",
   "@shrineTooltipCloseCart": {
-    "description": "The tooltip text for a button to close the shopping cart page. Also used as a semantic label, used by screen readers / VoiceOver."
+    "description": "The tooltip text for a button to close the shopping cart page. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
+  },
+  "shrineScreenReaderCart": "{quantity, plural, =0{Shopping cart, no items} =1{Shopping cart, 1 item} other{Shopping cart, {quantity} items}}",
+  "@shrineScreenReaderCart": {
+    "description": "The description of a shopping cart button containing some products. Used by screen readers, such as TalkBack and VoiceOver.",
+    "placeholders": {
+      "quantity": {
+        "example": "3"
+      }
+    }
+  },
+  "shrineScreenReaderItemRemoved": "Removed",
+  "@shrineScreenReaderItemRemoved": {
+    "description": "An announcement made by screen readers, such as TalkBack and VoiceOver when an item is removed from the shopping cart."
+  },
+  "shrineScreenReaderCartClearedAndClosed": "Cart cleared and closed",
+  "@shrineScreenReaderCartClearedAndClosed": {
+    "description": "An announcement made by screen readers, such as TalkBack and VoiceOver when the shopping cart is cleared and closed."
+  },
+  "shrineScreenReaderProductAddedToCart": "Added to cart",
+  "@shrineScreenReaderProductAddedToCart": {
+    "description": "An announcement made by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart."
+  },
+  "shrineScreenReaderRemoveProductButton": "Remove {product}",
+  "@shrineScreenReaderRemoveProductButton": {
+    "description": "A tooltip for a button to remove a product. This will be read by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart.",
+    "placeholders": {
+      "product": {
+        "example": "Ginger scarf"
+      }
+    }
   },
   "shrineTooltipRemoveItem": "Remove item",
   "@shrineTooltipRemoveItem": {
-    "description": "The tooltip text for a button to remove an item (a product) in a shopping cart. Also used as a semantic label, used by screen readers / VoiceOver."
+    "description": "The tooltip text for a button to remove an item (a product) in a shopping cart. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver."
   },
   "craneFormDiners": "Diners",
   "@craneFormDiners": {
@@ -1518,7 +1604,7 @@
   "@craneFly5": {
     "description": "Label for city."
   },
-  "craneFly6": "Madrid, Spain",
+  "craneFly6": "Mexico City, Mexico",
   "@craneFly6": {
     "description": "Label for city."
   },
@@ -1641,5 +1727,153 @@
   "craneEat10": "Lisbon, Portugal",
   "@craneEat10": {
     "description": "Label for city."
+  },
+  "craneFly0SemanticLabel": "Chalet in a snowy landscape with evergreen trees",
+  "@craneFly0SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly1SemanticLabel": "Tent in a field",
+  "@craneFly1SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly2SemanticLabel": "Prayer flags in front of snowy mountain",
+  "@craneFly2SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly3SemanticLabel": "Machu Picchu citadel",
+  "@craneFly3SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly4SemanticLabel": "Overwater bungalows",
+  "@craneFly4SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly5SemanticLabel": "Lake-side hotel in front of mountains",
+  "@craneFly5SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly6SemanticLabel": "Aerial view of Palacio de Bellas Artes",
+  "@craneFly6SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly7SemanticLabel": "Mount Rushmore",
+  "@craneFly7SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly8SemanticLabel": "Supertree Grove",
+  "@craneFly8SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly9SemanticLabel": "Man leaning on an antique blue car",
+  "@craneFly9SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly10SemanticLabel": "Al-Azhar Mosque towers during sunset",
+  "@craneFly10SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly11SemanticLabel": "Brick lighthouse at sea",
+  "@craneFly11SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly12SemanticLabel": "Pool with palm trees",
+  "@craneFly12SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneFly13SemanticLabel": "Sea-side pool with palm trees",
+  "@craneFly13SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep0SemanticLabel": "Overwater bungalows",
+  "@craneSleep0SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep1SemanticLabel": "Chalet in a snowy landscape with evergreen trees",
+  "@craneSleep1SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep2SemanticLabel": "Machu Picchu citadel",
+  "@craneSleep2SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep3SemanticLabel": "Man leaning on an antique blue car",
+  "@craneSleep3SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep4SemanticLabel": "Lake-side hotel in front of mountains",
+  "@craneSleep4SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep5SemanticLabel": "Tent in a field",
+  "@craneSleep5SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep6SemanticLabel": "Pool with palm trees",
+  "@craneSleep6SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep7SemanticLabel": "Colorful apartments at Riberia Square",
+  "@craneSleep7SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep8SemanticLabel": "Mayan ruins on a cliff above a beach",
+  "@craneSleep8SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep9SemanticLabel": "Brick lighthouse at sea",
+  "@craneSleep9SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep10SemanticLabel": "Al-Azhar Mosque towers during sunset",
+  "@craneSleep10SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneSleep11SemanticLabel": "Taipei 101 skyscraper",
+  "@craneSleep11SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat0SemanticLabel": "Pizza in a wood-fired oven",
+  "@craneEat0SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat1SemanticLabel": "Empty bar with diner-style stools",
+  "@craneEat1SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat2SemanticLabel": "Burger",
+  "@craneEat2SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat3SemanticLabel": "Korean taco",
+  "@craneEat3SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat4SemanticLabel": "Chocolate desert",
+  "@craneEat4SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat5SemanticLabel": "Artsy restaurant seating area",
+  "@craneEat5SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat6SemanticLabel": "Shrimp dish",
+  "@craneEat6SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat7SemanticLabel": "Bakery entrance",
+  "@craneEat7SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat8SemanticLabel": "Plate of crawfish",
+  "@craneEat8SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat9SemanticLabel": "Cafe counter with pastries",
+  "@craneEat9SemanticLabel": {
+    "description": "Semantic label for an image."
+  },
+  "craneEat10SemanticLabel": "Woman holding huge pastrami sandwich",
+  "@craneEat10SemanticLabel": {
+    "description": "Semantic label for an image."
   }
 }

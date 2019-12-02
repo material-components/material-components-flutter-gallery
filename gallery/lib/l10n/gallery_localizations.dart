@@ -493,6 +493,13 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneEat0', desc: r'Label for city.');
   }
 
+  String get craneEat0SemanticLabel {
+    return Intl.message(r'Pizza in a wood-fired oven',
+        locale: _localeName,
+        name: 'craneEat0SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneEat1 {
     return Intl.message(r'Dallas, United States',
         locale: _localeName, name: 'craneEat1', desc: r'Label for city.');
@@ -503,9 +510,30 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneEat10', desc: r'Label for city.');
   }
 
+  String get craneEat10SemanticLabel {
+    return Intl.message(r'Woman holding huge pastrami sandwich',
+        locale: _localeName,
+        name: 'craneEat10SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
+  String get craneEat1SemanticLabel {
+    return Intl.message(r'Empty bar with diner-style stools',
+        locale: _localeName,
+        name: 'craneEat1SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneEat2 {
     return Intl.message(r'Córdoba, Argentina',
         locale: _localeName, name: 'craneEat2', desc: r'Label for city.');
+  }
+
+  String get craneEat2SemanticLabel {
+    return Intl.message(r'Burger',
+        locale: _localeName,
+        name: 'craneEat2SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneEat3 {
@@ -513,9 +541,23 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneEat3', desc: r'Label for city.');
   }
 
+  String get craneEat3SemanticLabel {
+    return Intl.message(r'Korean taco',
+        locale: _localeName,
+        name: 'craneEat3SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneEat4 {
     return Intl.message(r'Paris, France',
         locale: _localeName, name: 'craneEat4', desc: r'Label for city.');
+  }
+
+  String get craneEat4SemanticLabel {
+    return Intl.message(r'Chocolate desert',
+        locale: _localeName,
+        name: 'craneEat4SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneEat5 {
@@ -523,9 +565,23 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneEat5', desc: r'Label for city.');
   }
 
+  String get craneEat5SemanticLabel {
+    return Intl.message(r'Artsy restaurant seating area',
+        locale: _localeName,
+        name: 'craneEat5SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneEat6 {
     return Intl.message(r'Seattle, United States',
         locale: _localeName, name: 'craneEat6', desc: r'Label for city.');
+  }
+
+  String get craneEat6SemanticLabel {
+    return Intl.message(r'Shrimp dish',
+        locale: _localeName,
+        name: 'craneEat6SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneEat7 {
@@ -533,14 +589,35 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneEat7', desc: r'Label for city.');
   }
 
+  String get craneEat7SemanticLabel {
+    return Intl.message(r'Bakery entrance',
+        locale: _localeName,
+        name: 'craneEat7SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneEat8 {
     return Intl.message(r'Atlanta, United States',
         locale: _localeName, name: 'craneEat8', desc: r'Label for city.');
   }
 
+  String get craneEat8SemanticLabel {
+    return Intl.message(r'Plate of crawfish',
+        locale: _localeName,
+        name: 'craneEat8SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneEat9 {
     return Intl.message(r'Madrid, Spain',
         locale: _localeName, name: 'craneEat9', desc: r'Label for city.');
+  }
+
+  String get craneEat9SemanticLabel {
+    return Intl.message(r'Cafe counter with pastries',
+        locale: _localeName,
+        name: 'craneEat9SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String craneEatRestaurants(int totalRestaurants) {
@@ -571,6 +648,13 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneFly0', desc: r'Label for city.');
   }
 
+  String get craneFly0SemanticLabel {
+    return Intl.message(r'Chalet in a snowy landscape with evergreen trees',
+        locale: _localeName,
+        name: 'craneFly0SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneFly1 {
     return Intl.message(r'Big Sur, United States',
         locale: _localeName, name: 'craneFly1', desc: r'Label for city.');
@@ -581,9 +665,23 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneFly10', desc: r'Label for city.');
   }
 
+  String get craneFly10SemanticLabel {
+    return Intl.message(r'Al-Azhar Mosque towers during sunset',
+        locale: _localeName,
+        name: 'craneFly10SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneFly11 {
     return Intl.message(r'Lisbon, Portugal',
         locale: _localeName, name: 'craneFly11', desc: r'Label for city.');
+  }
+
+  String get craneFly11SemanticLabel {
+    return Intl.message(r'Brick lighthouse at sea',
+        locale: _localeName,
+        name: 'craneFly11SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneFly12 {
@@ -591,9 +689,30 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneFly12', desc: r'Label for city.');
   }
 
+  String get craneFly12SemanticLabel {
+    return Intl.message(r'Pool with palm trees',
+        locale: _localeName,
+        name: 'craneFly12SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneFly13 {
     return Intl.message(r'Bali, Indonesia',
         locale: _localeName, name: 'craneFly13', desc: r'Label for city.');
+  }
+
+  String get craneFly13SemanticLabel {
+    return Intl.message(r'Sea-side pool with palm trees',
+        locale: _localeName,
+        name: 'craneFly13SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
+  String get craneFly1SemanticLabel {
+    return Intl.message(r'Tent in a field',
+        locale: _localeName,
+        name: 'craneFly1SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneFly2 {
@@ -601,9 +720,23 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneFly2', desc: r'Label for city.');
   }
 
+  String get craneFly2SemanticLabel {
+    return Intl.message(r'Prayer flags in front of snowy mountain',
+        locale: _localeName,
+        name: 'craneFly2SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneFly3 {
     return Intl.message(r'Machu Picchu, Peru',
         locale: _localeName, name: 'craneFly3', desc: r'Label for city.');
+  }
+
+  String get craneFly3SemanticLabel {
+    return Intl.message(r'Machu Picchu citadel',
+        locale: _localeName,
+        name: 'craneFly3SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneFly4 {
@@ -611,14 +744,35 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneFly4', desc: r'Label for city.');
   }
 
+  String get craneFly4SemanticLabel {
+    return Intl.message(r'Overwater bungalows',
+        locale: _localeName,
+        name: 'craneFly4SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneFly5 {
     return Intl.message(r'Vitznau, Switzerland',
         locale: _localeName, name: 'craneFly5', desc: r'Label for city.');
   }
 
+  String get craneFly5SemanticLabel {
+    return Intl.message(r'Lake-side hotel in front of mountains',
+        locale: _localeName,
+        name: 'craneFly5SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneFly6 {
-    return Intl.message(r'Madrid, Spain',
+    return Intl.message(r'Mexico City, Mexico',
         locale: _localeName, name: 'craneFly6', desc: r'Label for city.');
+  }
+
+  String get craneFly6SemanticLabel {
+    return Intl.message(r'Aerial view of Palacio de Bellas Artes',
+        locale: _localeName,
+        name: 'craneFly6SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneFly7 {
@@ -626,14 +780,35 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneFly7', desc: r'Label for city.');
   }
 
+  String get craneFly7SemanticLabel {
+    return Intl.message(r'Mount Rushmore',
+        locale: _localeName,
+        name: 'craneFly7SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneFly8 {
     return Intl.message(r'Singapore',
         locale: _localeName, name: 'craneFly8', desc: r'Label for city.');
   }
 
+  String get craneFly8SemanticLabel {
+    return Intl.message(r'Supertree Grove',
+        locale: _localeName,
+        name: 'craneFly8SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneFly9 {
     return Intl.message(r'Havana, Cuba',
         locale: _localeName, name: 'craneFly9', desc: r'Label for city.');
+  }
+
+  String get craneFly9SemanticLabel {
+    return Intl.message(r'Man leaning on an antique blue car',
+        locale: _localeName,
+        name: 'craneFly9SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String craneFlyStops(int numberOfStops) {
@@ -721,6 +896,13 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneSleep0', desc: r'Label for city.');
   }
 
+  String get craneSleep0SemanticLabel {
+    return Intl.message(r'Overwater bungalows',
+        locale: _localeName,
+        name: 'craneSleep0SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneSleep1 {
     return Intl.message(r'Aspen, United States',
         locale: _localeName, name: 'craneSleep1', desc: r'Label for city.');
@@ -731,9 +913,30 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneSleep10', desc: r'Label for city.');
   }
 
+  String get craneSleep10SemanticLabel {
+    return Intl.message(r'Al-Azhar Mosque towers during sunset',
+        locale: _localeName,
+        name: 'craneSleep10SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneSleep11 {
     return Intl.message(r'Taipei, Taiwan',
         locale: _localeName, name: 'craneSleep11', desc: r'Label for city.');
+  }
+
+  String get craneSleep11SemanticLabel {
+    return Intl.message(r'Taipei 101 skyscraper',
+        locale: _localeName,
+        name: 'craneSleep11SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
+  String get craneSleep1SemanticLabel {
+    return Intl.message(r'Chalet in a snowy landscape with evergreen trees',
+        locale: _localeName,
+        name: 'craneSleep1SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneSleep2 {
@@ -741,9 +944,23 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneSleep2', desc: r'Label for city.');
   }
 
+  String get craneSleep2SemanticLabel {
+    return Intl.message(r'Machu Picchu citadel',
+        locale: _localeName,
+        name: 'craneSleep2SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneSleep3 {
     return Intl.message(r'Havana, Cuba',
         locale: _localeName, name: 'craneSleep3', desc: r'Label for city.');
+  }
+
+  String get craneSleep3SemanticLabel {
+    return Intl.message(r'Man leaning on an antique blue car',
+        locale: _localeName,
+        name: 'craneSleep3SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneSleep4 {
@@ -751,9 +968,23 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneSleep4', desc: r'Label for city.');
   }
 
+  String get craneSleep4SemanticLabel {
+    return Intl.message(r'Lake-side hotel in front of mountains',
+        locale: _localeName,
+        name: 'craneSleep4SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneSleep5 {
     return Intl.message(r'Big Sur, United States',
         locale: _localeName, name: 'craneSleep5', desc: r'Label for city.');
+  }
+
+  String get craneSleep5SemanticLabel {
+    return Intl.message(r'Tent in a field',
+        locale: _localeName,
+        name: 'craneSleep5SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneSleep6 {
@@ -761,9 +992,23 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneSleep6', desc: r'Label for city.');
   }
 
+  String get craneSleep6SemanticLabel {
+    return Intl.message(r'Pool with palm trees',
+        locale: _localeName,
+        name: 'craneSleep6SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneSleep7 {
     return Intl.message(r'Porto, Portugal',
         locale: _localeName, name: 'craneSleep7', desc: r'Label for city.');
+  }
+
+  String get craneSleep7SemanticLabel {
+    return Intl.message(r'Colorful apartments at Riberia Square',
+        locale: _localeName,
+        name: 'craneSleep7SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String get craneSleep8 {
@@ -771,9 +1016,23 @@ class GalleryLocalizations {
         locale: _localeName, name: 'craneSleep8', desc: r'Label for city.');
   }
 
+  String get craneSleep8SemanticLabel {
+    return Intl.message(r'Mayan ruins on a cliff above a beach',
+        locale: _localeName,
+        name: 'craneSleep8SemanticLabel',
+        desc: r'Semantic label for an image.');
+  }
+
   String get craneSleep9 {
     return Intl.message(r'Lisbon, Portugal',
         locale: _localeName, name: 'craneSleep9', desc: r'Label for city.');
+  }
+
+  String get craneSleep9SemanticLabel {
+    return Intl.message(r'Brick lighthouse at sea',
+        locale: _localeName,
+        name: 'craneSleep9SemanticLabel',
+        desc: r'Semantic label for an image.');
   }
 
   String craneSleepProperties(int totalProperties) {
@@ -1361,6 +1620,43 @@ class GalleryLocalizations {
         desc: r'Error message when opening the URL for a demo.');
   }
 
+  String get demoListsDescription {
+    return Intl.message(
+        r'A single fixed-height row that typically contains some text as well as a leading or trailing icon.',
+        locale: _localeName,
+        name: 'demoListsDescription',
+        desc:
+            r'Description for lists demo. This describes what a single row in a list consists of.');
+  }
+
+  String get demoListsSecondary {
+    return Intl.message(r'Secondary text',
+        locale: _localeName,
+        name: 'demoListsSecondary',
+        desc: r'Text that appears in the second line of a list item.');
+  }
+
+  String get demoListsSubtitle {
+    return Intl.message(r'Scrolling list layouts',
+        locale: _localeName,
+        name: 'demoListsSubtitle',
+        desc: r'Subtitle for lists demo.');
+  }
+
+  String get demoListsTitle {
+    return Intl.message(r'Lists',
+        locale: _localeName,
+        name: 'demoListsTitle',
+        desc: r'Title for lists demo.');
+  }
+
+  String get demoOneLineListsTitle {
+    return Intl.message(r'One Line',
+        locale: _localeName,
+        name: 'demoOneLineListsTitle',
+        desc: r'Title for lists demo with only one line of text per row.');
+  }
+
   String get demoOptionsTooltip {
     return Intl.message(r'Options',
         locale: _localeName,
@@ -1396,6 +1692,69 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'demoRaisedButtonTitle',
         desc: r'Title for the raised button component demo.');
+  }
+
+  String get demoSelectionControlsCheckboxDescription {
+    return Intl.message(
+        r'Checkboxes allow the user to select multiple options from a set. A normal checkbox'
+        "'"
+        r's value is true or false and a tristate checkbox'
+        "'"
+        r's value can also be null.',
+        locale: _localeName,
+        name: 'demoSelectionControlsCheckboxDescription',
+        desc: r'Description for the checkbox (selection controls) demo.');
+  }
+
+  String get demoSelectionControlsCheckboxTitle {
+    return Intl.message(r'Checkbox',
+        locale: _localeName,
+        name: 'demoSelectionControlsCheckboxTitle',
+        desc: r'Title for the checkbox (selection controls) demo.');
+  }
+
+  String get demoSelectionControlsRadioDescription {
+    return Intl.message(
+        r'Radio buttons allow the user to select one option from a set. Use radio buttons for exclusive selection if you think that the user needs to see all available options side-by-side.',
+        locale: _localeName,
+        name: 'demoSelectionControlsRadioDescription',
+        desc: r'Description for the radio button (selection controls) demo.');
+  }
+
+  String get demoSelectionControlsRadioTitle {
+    return Intl.message(r'Radio',
+        locale: _localeName,
+        name: 'demoSelectionControlsRadioTitle',
+        desc: r'Title for the radio button (selection controls) demo.');
+  }
+
+  String get demoSelectionControlsSubtitle {
+    return Intl.message(r'Checkboxes, radio buttons, and switches',
+        locale: _localeName,
+        name: 'demoSelectionControlsSubtitle',
+        desc: r'Subtitle for selection controls demo.');
+  }
+
+  String get demoSelectionControlsSwitchDescription {
+    return Intl.message(
+        r'On/off switches toggle the state of a single settings option. The option that the switch controls, as well as the state it’s in, should be made clear from the corresponding inline label.',
+        locale: _localeName,
+        name: 'demoSelectionControlsSwitchDescription',
+        desc: r'Description for the switches (selection controls) demo.');
+  }
+
+  String get demoSelectionControlsSwitchTitle {
+    return Intl.message(r'Switch',
+        locale: _localeName,
+        name: 'demoSelectionControlsSwitchTitle',
+        desc: r'Title for the switches (selection controls) demo.');
+  }
+
+  String get demoSelectionControlsTitle {
+    return Intl.message(r'Selection controls',
+        locale: _localeName,
+        name: 'demoSelectionControlsTitle',
+        desc: r'Title for selection controls demo.');
   }
 
   String get demoSimpleDialogDescription {
@@ -1655,6 +2014,13 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'demoToggleButtonTitle',
         desc: r'Title for the toggle buttons component demo.');
+  }
+
+  String get demoTwoLineListsTitle {
+    return Intl.message(r'Two Lines',
+        locale: _localeName,
+        name: 'demoTwoLineListsTitle',
+        desc: r'Title for lists demo with two lines of text per row.');
   }
 
   String get demoTypographyDescription {
@@ -2834,12 +3200,57 @@ class GalleryLocalizations {
         desc: r'Name of the product ' "'" r'Whitney belt' "'" r'.');
   }
 
+  String shrineScreenReaderCart(int quantity) {
+    return Intl.plural(quantity,
+        locale: _localeName,
+        name: 'shrineScreenReaderCart',
+        desc:
+            r'The description of a shopping cart button containing some products. Used by screen readers, such as TalkBack and VoiceOver.',
+        args: <Object>[quantity],
+        zero: 'Shopping cart, no items',
+        one: 'Shopping cart, 1 item',
+        other: 'Shopping cart, $quantity items');
+  }
+
+  String get shrineScreenReaderCartClearedAndClosed {
+    return Intl.message(r'Cart cleared and closed',
+        locale: _localeName,
+        name: 'shrineScreenReaderCartClearedAndClosed',
+        desc:
+            r'An announcement made by screen readers, such as TalkBack and VoiceOver when the shopping cart is cleared and closed.');
+  }
+
+  String get shrineScreenReaderItemRemoved {
+    return Intl.message(r'Removed',
+        locale: _localeName,
+        name: 'shrineScreenReaderItemRemoved',
+        desc:
+            r'An announcement made by screen readers, such as TalkBack and VoiceOver when an item is removed from the shopping cart.');
+  }
+
+  String get shrineScreenReaderProductAddedToCart {
+    return Intl.message(r'Added to cart',
+        locale: _localeName,
+        name: 'shrineScreenReaderProductAddedToCart',
+        desc:
+            r'An announcement made by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart.');
+  }
+
+  String shrineScreenReaderRemoveProductButton(Object product) {
+    return Intl.message(r'Remove $product',
+        locale: _localeName,
+        name: 'shrineScreenReaderRemoveProductButton',
+        desc:
+            r'A tooltip for a button to remove a product. This will be read by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart.',
+        args: <Object>[product]);
+  }
+
   String get shrineTooltipCloseCart {
     return Intl.message(r'Close cart',
         locale: _localeName,
         name: 'shrineTooltipCloseCart',
         desc:
-            r'The tooltip text for a button to close the shopping cart page. Also used as a semantic label, used by screen readers / VoiceOver.');
+            r'The tooltip text for a button to close the shopping cart page. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver.');
   }
 
   String get shrineTooltipCloseMenu {
@@ -2847,7 +3258,7 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'shrineTooltipCloseMenu',
         desc:
-            r'The tooltip text for a button to close a menu. Also used as a semantic label, used by screen readers / VoiceOver.');
+            r'The tooltip text for a button to close a menu. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver.');
   }
 
   String get shrineTooltipOpenMenu {
@@ -2855,7 +3266,7 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'shrineTooltipOpenMenu',
         desc:
-            r'The tooltip text for a menu button. Also used as a semantic label, used by screen readers / VoiceOver.');
+            r'The tooltip text for a menu button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver.');
   }
 
   String get shrineTooltipRemoveItem {
@@ -2863,7 +3274,7 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'shrineTooltipRemoveItem',
         desc:
-            r'The tooltip text for a button to remove an item (a product) in a shopping cart. Also used as a semantic label, used by screen readers / VoiceOver.');
+            r'The tooltip text for a button to remove an item (a product) in a shopping cart. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver.');
   }
 
   String get shrineTooltipSearch {
@@ -2871,7 +3282,7 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'shrineTooltipSearch',
         desc:
-            r'The tooltip text for a search button. Also used as a semantic label, used by screen readers / VoiceOver.');
+            r'The tooltip text for a search button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver.');
   }
 
   String get shrineTooltipSettings {
@@ -2879,7 +3290,7 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'shrineTooltipSettings',
         desc:
-            r'The tooltip text for a settings button. Also used as a semantic label, used by screen readers / VoiceOver.');
+            r'The tooltip text for a settings button. Also used as a semantic label, used by screen readers, such as TalkBack and VoiceOver.');
   }
 
   String get starterAppDescription {

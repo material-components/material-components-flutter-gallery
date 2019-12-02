@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "${title} नामक ट्याबको प्लेसहोल्डर";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'कुनै पनि भोजनालय छैन', one: '१ भोजनालय', other: '${totalRestaurants} भोजनालय')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'ननस्टप', one: '१ बिसौनी', other: '${numberOfStops} बिसौनी')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'कुनै पनि उपलब्ध आवास छैन', one: ' उपलब्ध १ आवास', other: 'उपलब्ध ${totalProperties} आवास')}";
 
   static m5(value) => "वस्तु ${value}";
 
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "तपाईंले यो चयन गर्नुभयो: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${amount} रकम सहितको ${accountName} खाता ${accountNumber}।";
 
   static m9(amount) =>
       "तपाईंले यो महिना ATM शुल्कबापत ${amount} खर्च गर्नुभएको छ";
@@ -55,16 +55,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "तपाईंले यो महिना भोजनालयहरूमा ${amount} खर्च गर्नुभएको छ।";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'आफ्नो सम्भावित कर कटौती बढाउनुहोस्! कोटीहरूलाई निर्दिष्ट नगरिएको १ कारोबारमा निर्दिष्ट गर्नुहोस्।', other: 'आफ्नो सम्भावित कर कटौती बढाउनुहोस्! कोटीहरूलाई निर्दिष्ट नगरिएका ${count} कारोबारमा निर्दिष्ट गर्नुहोस्।')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "${amount} तिर्नु पर्ने ${billName} को म्याद ${date}।";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "${amountTotal} कुल रकम भएको, ${amountUsed} चलाइएको र ${amountLeft} छाडिएको ${budgetName} बजेट";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'कुनै पनि वस्तु छैन', one: '१ वस्तु', other: '${quantity} वस्तु')}";
 
   static m17(price) => "x ${price}";
 
@@ -318,11 +318,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("बटनहरू"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "धेरै पारस्परिक रूपमा विशेष विकल्पहरूबिच चयन गर्न प्रयोग गरिएको। सेग्मेन्ट गरिएका अवयवको नियन्त्रणबाट एउटा विकल्प चयन गरिएमा सेग्मेन्ट गरिएका अवयवको नियन्त्रणका अन्य विकल्पहरू चयन हुन छाड्छन्।"),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "iOS शैलीको सेग्मेन्ट गरिएका अवयवको नियन्त्रण"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage(
+                "सेग्मेन्ट गरिएका अवयवको नियन्त्रण"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "सामान्य, सतर्कता र पूर्ण स्क्रिन"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("संवादहरू"),
@@ -364,10 +366,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "सामान्य संवादले प्रयोगकर्तालाई थुप्रै विकल्पहरूबाट चयन गर्ने सुविधा दिन्छ। सामान्य संवादमा रोज्ने विकल्पहरूमाथि देखाइएको एउटा वैकल्पिक शीर्षक हुन्छ।"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("सरल"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "ट्याबहरूले फरक स्क्रिन, डेटा सेट र अन्य अन्तर्क्रियाहरूभरिको सामग्री व्यवस्थापन गर्दछन्।"),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "स्वतन्त्र रूपमा स्क्रोल गर्न मिल्ने दृश्यहरू भएका ट्याबहरू"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("ट्याबहरू"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "पाठका फिल्डहरूले प्रयोगकर्तालाई UI मा पाठ प्रविष्टि गर्न दिन्छन्। सामान्यतया तिनीहरू फारम वा संवादका रूपमा देखा पर्छन्।"),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("इमेल"),
@@ -523,11 +525,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("प्रयोगकर्ताको नाम"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("सबै हेर्नुहोस्"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("सबै खाता हेर्नुहोस्"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("सबै बिलहरू हेर्नुहोस्"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("सबै बजेटहरू हेर्नुहोस्"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ATM हरू फेला पार्नुहोस्"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("मद्दत"),
@@ -572,7 +574,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("बायाँबाट दायाँ"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("लोकेलमा आधारित"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("दायाँबाट बायाँ"),
         "settingsTextScaling":
@@ -693,16 +695,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("ह्विट्नी बेल्ट"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("कार्ट बन्द गर्नुहोस्"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("मेनु बन्द गर्नुहोस्"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("मेनु खोल्नुहोस्"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
-        "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("वस्तु हटाउनुहोस्"),
+        "shrineTooltipSearch":
+            MessageLookupByLibrary.simpleMessage("खोज्नुहोस्"),
+        "shrineTooltipSettings": MessageLookupByLibrary.simpleMessage("सेटिङ"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "सुरु हुँदा स्क्रिनअनुसार समायोजन हुने ढाँचा"),
         "starterAppDrawerItem": m19,

@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "Platshållare för fliken ${title}";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'Inga restauranger', one: '1 restaurang', other: '${totalRestaurants} restauranger')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'Direktflyg', one: '1 mellanlandning', other: '${numberOfStops} mellanlandningar')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'Inga tillgängliga boenden', one: '1 tillgängligt boende', other: '${totalProperties} tillgängliga boenden')}";
 
   static m5(value) => "Artikel ${value}";
 
@@ -41,7 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "Du har valt ${value}";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${accountName}-kontot ${accountNumber} med ${amount}.";
 
   static m9(amount) =>
       "Du har lagt ${amount} på avgifter för uttag den här månaden";
@@ -56,16 +56,16 @@ class MessageLookup extends MessageLookupByLibrary {
       "Du har lagt ${amount} på restaurangbesök den här veckan.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'Öka ditt potentiella skatteavdrag! Tilldela kategorier till 1 ej tilldelad transaktion.', other: 'Öka ditt potentiella skatteavdrag! Tilldela kategorier till ${count} ej tilldelade transaktioner.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "${billName}-fakturan på ${amount} förfaller den ${date}.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "${budgetName}-budget med ${amountUsed} använt av ${amountTotal}, ${amountLeft} kvar";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'INGA OBJEKT', one: '1 OBJEKT', other: '${quantity} OBJEKT')}";
 
   static m17(price) => "x ${price}";
 
@@ -293,11 +293,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Knappar"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "Används för att välja mellan ett antal ömsesidigt uteslutande alternativ. När ett alternativ i segmentstyrningen har valts är de andra alternativen i segmentstyrningen inte längre valda."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage("Segmentstyrning i iOS-stil"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("Segmentstyrning"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Enkel, avisering och helskärm"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("Dialogruta"),
@@ -342,10 +342,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Med en enkel dialogruta får användaren välja mellan flera alternativ. En enkel dialogruta har en valfri titel som visas ovanför alternativen."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Enkel"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "Flikar organiserar innehåll på olika skärmar och med olika dataset och andra interaktioner."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "Flikar med vyer som går att skrolla igenom separat"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Flikar"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Med textfält kan användare ange text i ett användargränssnitt. De används vanligtvis i formulär och dialogrutor."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("E-post"),
@@ -497,11 +497,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Användarnamn"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("VISA ALLA"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("Visa alla konton"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("Visa alla fakturor"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("Visa alla budgetar"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("Hitta uttagsautomater"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("Hjälp"),
@@ -547,7 +547,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "settingsTextDirectionLTR":
             MessageLookupByLibrary.simpleMessage("Vänster till höger"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("Utifrån språkkod"),
         "settingsTextDirectionRTL":
             MessageLookupByLibrary.simpleMessage("Höger till vänster"),
         "settingsTextScaling":
@@ -670,16 +670,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Bälte – Whitney"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("Stäng kundvagnen"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("Stäng menyn"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("Öppna menyn"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("Ta bort objektet"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Sök"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("Inställningar"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("En responsiv startlayout"),
         "starterAppDrawerItem": m19,

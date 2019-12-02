@@ -129,32 +129,18 @@ class _BackdropState extends State<Backdrop> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     final isDesktop = isDisplayDesktop(context);
-    final textDirection = GalleryOptions.of(context).textDirection();
     final textScaleFactor = GalleryOptions.of(context).textScaleFactor(context);
 
     return Material(
       color: cranePurple800,
       child: Padding(
-        padding: isDesktop ? EdgeInsets.only(top: 12) : EdgeInsets.zero,
+        padding: EdgeInsets.only(top: 12),
         child: Scaffold(
           backgroundColor: cranePurple800,
           appBar: AppBar(
             brightness: Brightness.dark,
             elevation: 0,
             titleSpacing: 0,
-            leading: Align(
-              child: Transform.translate(
-                offset: Offset(
-                    isDesktop ? 0 : textDirection == TextDirection.rtl ? 4 : -4,
-                    -8),
-                child: Image(
-                  image: AssetImage('assets/crane/menu.png'),
-                  matchTextDirection: true,
-                  height: 20,
-                ),
-              ),
-              alignment: AlignmentDirectional.centerStart,
-            ),
             flexibleSpace: CraneAppBar(
               tabController: _tabController,
               tabHandler: _handleTabs,
@@ -262,9 +248,11 @@ class _CraneAppBarState extends State<CraneAppBar> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(
-              'assets/crane/logo.png',
-              fit: BoxFit.cover,
+            ExcludeSemantics(
+              child: Image.asset(
+                'assets/crane/logo.png',
+                fit: BoxFit.cover,
+              ),
             ),
             Expanded(
               child: Padding(

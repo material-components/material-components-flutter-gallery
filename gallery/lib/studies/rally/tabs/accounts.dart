@@ -42,8 +42,10 @@ class AccountsView extends StatelessWidget {
             child: Container(
               color: RallyColors.inputBackground,
               padding: EdgeInsetsDirectional.only(start: 24),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+              height: double.infinity,
+              alignment: AlignmentDirectional.centerStart,
+              child: ListView(
+                shrinkWrap: true,
                 children: [
                   for (AccountDetailData item in detailItems)
                     _AccountDetail(title: item.title, value: item.value),

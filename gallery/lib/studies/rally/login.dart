@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
+import 'package:gallery/layout/text_scale.dart';
 import 'package:gallery/studies/rally/colors.dart';
 
 class LoginPage extends StatefulWidget {
@@ -21,16 +22,6 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return ApplyTextOptions(
       child: Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          leading: IconButton(
-            icon: const BackButtonIcon(),
-            tooltip: MaterialLocalizations.of(context).backButtonTooltip,
-            onPressed: () {
-              Navigator.of(context, rootNavigator: true).maybePop();
-            },
-          ),
-        ),
         body: SafeArea(
           child: _MainView(
             usernameController: _usernameController,
@@ -69,7 +60,7 @@ class _MainView extends StatelessWidget {
     List<Widget> listViewChildren;
 
     if (isDesktop) {
-      final desktopMaxWidth = 400.0;
+      final desktopMaxWidth = 400.0 + 100.0 * (cappedTextScale(context) - 1);
       listViewChildren = [
         _UsernameInput(
           maxWidth: desktopMaxWidth,
@@ -131,36 +122,50 @@ class _TopBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final spacing = const SizedBox(width: 30);
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        spacing,
-        ExcludeSemantics(
-          child: SizedBox(
-            height: 80,
-            child: Image.asset(
-              'logo.png',
-              package: 'rally_assets',
-            ),
-          ),
-        ),
-        spacing,
-        Text(
-          GalleryLocalizations.of(context).rallyLoginLoginToRally,
-          style: Theme.of(context).textTheme.body2.copyWith(
-                fontSize: 35,
-                fontWeight: FontWeight.w600,
+    return Container(
+      width: double.infinity,
+      margin: const EdgeInsets.only(top: 8),
+      padding: EdgeInsets.symmetric(horizontal: 30),
+      child: Wrap(
+        alignment: WrapAlignment.spaceBetween,
+        children: [
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ExcludeSemantics(
+                child: SizedBox(
+                  height: 80,
+                  child: Image.asset(
+                    'logo.png',
+                    package: 'rally_assets',
+                  ),
+                ),
               ),
-        ),
-        const Expanded(child: SizedBox.shrink()),
-        Text(
-          GalleryLocalizations.of(context).rallyLoginNoAccount,
-          style: Theme.of(context).textTheme.subhead,
-        ),
-        spacing,
-        _BorderButton(text: GalleryLocalizations.of(context).rallyLoginSignUp),
-        spacing,
-      ],
+              spacing,
+              Text(
+                GalleryLocalizations.of(context).rallyLoginLoginToRally,
+                style: Theme.of(context).textTheme.body2.copyWith(
+                      fontSize: 35 / reducedTextScale(context),
+                      fontWeight: FontWeight.w600,
+                    ),
+              ),
+            ],
+          ),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                GalleryLocalizations.of(context).rallyLoginNoAccount,
+                style: Theme.of(context).textTheme.subhead,
+              ),
+              spacing,
+              _BorderButton(
+                text: GalleryLocalizations.of(context).rallyLoginSignUp,
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
