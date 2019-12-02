@@ -473,7 +473,7 @@ class DemoWrapper extends StatelessWidget {
         removeBottom: true,
         child: ApplyTextOptions(
           child: CupertinoTheme(
-            data: CupertinoThemeData(),
+            data: CupertinoThemeData().copyWith(brightness: Brightness.light),
             child: child,
           ),
         ),
