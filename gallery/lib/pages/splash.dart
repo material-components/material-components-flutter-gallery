@@ -28,10 +28,14 @@ class _SplashPageState extends State<SplashPage>
     with SingleTickerProviderStateMixin {
   AnimationController _controller;
   Timer _launchTimer;
+  double _draggableScrollableExtent;
+  final _random = Random();
+  int effectIndex;
 
   bool get _isSplashVisible {
     return _controller.status == AnimationStatus.completed ||
-        _controller.status == AnimationStatus.forward;
+        _controller.status == AnimationStatus.forward ||
+        (_draggableScrollableExtent != null && _draggableScrollableExtent < 1);
   }
 
   @override
@@ -56,6 +60,9 @@ class _SplashPageState extends State<SplashPage>
     } else {
       _controller.fling(velocity: -1);
     }
+
+    // If the number of included effects changes, this number should be changed.
+    effectIndex = _random.nextInt(10) + 1;
   }
 
   @override
@@ -76,50 +83,61 @@ class _SplashPageState extends State<SplashPage>
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        final Animation<RelativeRect> animation =
-            _getPanelAnimation(constraints);
-        Widget frontLayer = widget.child;
-        if (isDisplayDesktop(context)) {
-          frontLayer = Padding(
-            padding: const EdgeInsets.only(top: 136),
-            child: ClipRRect(
-              borderRadius: BorderRadius.vertical(
-                top: Radius.circular(40),
-              ),
-              child: frontLayer,
-            ),
-          );
-        }
-
-        return Stack(
-          children: [
-            _SplashBackLayer(
-              isCollapsed: !_isSplashVisible || !widget.isAnimated,
-            ),
-            PositionedTransition(
-              rect: animation,
-              child: frontLayer,
-            ),
-          ],
-        );
+    return NotificationListener<DraggableScrollableNotification>(
+      onNotification: (notification) {
+        setState(() {
+          _draggableScrollableExtent = notification.extent;
+        });
+        return true;
       },
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final Animation<RelativeRect> animation =
+              _getPanelAnimation(constraints);
+          Widget frontLayer = widget.child;
+          if (isDisplayDesktop(context)) {
+            frontLayer = Padding(
+              padding: const EdgeInsets.only(top: 136),
+              child: ClipRRect(
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(40),
+                ),
+                child: frontLayer,
+              ),
+            );
+          }
+
+          return Stack(
+            children: [
+              _SplashBackLayer(
+                isCollapsed: !_isSplashVisible || !widget.isAnimated,
+                effectIndex: effectIndex,
+              ),
+              PositionedTransition(
+                rect: animation,
+                child: frontLayer,
+              ),
+            ],
+          );
+        },
+      ),
     );
   }
 }
 
 class _SplashBackLayer extends StatelessWidget {
-  _SplashBackLayer({Key key, @required this.isCollapsed}) : super(key: key);
+  _SplashBackLayer({
+    Key key,
+    @required this.isCollapsed,
+    this.effectIndex,
+  }) : super(key: key);
 
   final bool isCollapsed;
-  final _random = Random();
+  final int effectIndex;
 
   @override
   Widget build(BuildContext context) {
-    // If the number of included effects changes, this number should be changed.
-    var effect = _random.nextInt(10) + 1;
-    var effectAsset = 'assets/splash_effects/splash_effect_$effect.gif';
+    var effectAsset = 'assets/splash_effects/splash_effect_$effectIndex.gif';
 
     return ExcludeSemantics(
       child: Container(

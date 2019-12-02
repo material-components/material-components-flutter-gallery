@@ -38,7 +38,7 @@ class GalleryApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final home = DraggableScrollableSheet(
       initialChildSize: 1,
-      minChildSize: 0.1,
+      minChildSize: 0.2,
       builder: (context, scrollController) {
         return Backdrop(
           frontLayer: SettingsPage(),

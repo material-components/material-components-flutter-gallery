@@ -149,6 +149,7 @@ class HomePage extends StatelessWidget {
     } else {
       return Scaffold(
         body: _AnimatedHomePage(
+          scrollController: scrollController,
           carouselCards: carouselCards,
         ),
       );
@@ -213,8 +214,13 @@ class Header extends StatelessWidget {
 }
 
 class _AnimatedHomePage extends StatefulWidget {
-  const _AnimatedHomePage({Key key, this.carouselCards}) : super(key: key);
+  const _AnimatedHomePage({
+    Key key,
+    this.scrollController,
+    this.carouselCards,
+  }) : super(key: key);
 
+  final ScrollController scrollController;
   final List<Widget> carouselCards;
 
   @override
@@ -254,6 +260,7 @@ class _AnimatedHomePageState extends State<_AnimatedHomePage>
   @override
   Widget build(BuildContext context) {
     return ListView(
+      controller: widget.scrollController,
       children: [
         SizedBox(height: 8),
         Container(
