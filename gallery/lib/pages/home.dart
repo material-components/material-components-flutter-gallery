@@ -39,6 +39,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var carouselHeight = _carouselHeight(.7, context);
+    final isDesktop = isDisplayDesktop(context);
 
     final carouselCards = <_CarouselCard>[
       _CarouselCard(
@@ -75,7 +76,7 @@ class HomePage extends StatelessWidget {
       ),
     ];
 
-    if (isDisplayDesktop(context)) {
+    if (isDesktop) {
       final desktopCategoryItems = <_DesktopCategoryItem>[
         _DesktopCategoryItem(
           title: homeCategoryMaterial,
@@ -98,13 +99,11 @@ class HomePage extends StatelessWidget {
         body: ListView(
           padding: EdgeInsetsDirectional.only(
             start: _horizontalDesktopPadding,
-            top: (isDisplayDesktop(context)) ? 5 : 21,
+            top: isDesktop ? firstHeaderDesktopTopPadding : 21,
             end: _horizontalDesktopPadding,
           ),
           children: [
-            SizedBox(height: 5),
             ExcludeSemantics(child: _GalleryHeader()),
-            SizedBox(height: 11),
             Container(
               height: carouselHeight,
               child: Row(
@@ -195,7 +194,7 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        top: isDisplayDesktop(context) ? 63 : 29,
+        top: isDisplayDesktop(context) ? 63 : 15,
         bottom: isDisplayDesktop(context) ? 21 : 11,
       ),
       child: Text(
@@ -346,15 +345,20 @@ class _DesktopCategoryItem extends StatelessWidget {
               color: colorScheme.background,
             ),
             Flexible(
-              child: ListView(
-                children: [
-                  const SizedBox(height: 12),
-                  for (GalleryDemo demo in demos)
-                    CategoryDemoItem(
-                      demo: demo,
-                    ),
-                  SizedBox(height: 12),
-                ],
+              // Remove ListView top padding as it is already accounted for.
+              child: MediaQuery.removePadding(
+                removeTop: true,
+                context: context,
+                child: ListView(
+                  children: [
+                    const SizedBox(height: 12),
+                    for (GalleryDemo demo in demos)
+                      CategoryDemoItem(
+                        demo: demo,
+                      ),
+                    SizedBox(height: 12),
+                  ],
+                ),
               ),
             ),
           ],
