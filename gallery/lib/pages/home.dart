@@ -35,6 +35,8 @@ const String craneTitle = 'Crane';
 const String homeCategoryMaterial = 'MATERIAL';
 const String homeCategoryCupertino = 'CUPERTINO';
 
+class ToggleSplashNotification extends Notification {}
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -246,7 +248,6 @@ class _AnimatedHomePageState extends State<_AnimatedHomePage>
       // starting ours.
       _launchTimer = Timer(
         const Duration(
-          seconds: launchTimerDurationInSeconds,
           milliseconds: splashPageAnimationDurationInMilliseconds,
         ),
         () {
@@ -266,46 +267,67 @@ class _AnimatedHomePageState extends State<_AnimatedHomePage>
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return Stack(
       children: [
-        SizedBox(height: 8),
-        Container(
-          margin: EdgeInsets.symmetric(horizontal: _horizontalPadding),
-          child: ExcludeSemantics(child: _GalleryHeader()),
+        ListView(
+          children: [
+            SizedBox(height: 8),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: _horizontalPadding),
+              child: ExcludeSemantics(child: _GalleryHeader()),
+            ),
+            _Carousel(
+              children: widget.carouselCards,
+              animationController: _animationController,
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: _horizontalPadding),
+              child: _CategoriesHeader(),
+            ),
+            _AnimatedCategoryItem(
+              startDelayFraction: 0.00,
+              controller: _animationController,
+              child: CategoryListItem(
+                title: homeCategoryMaterial,
+                imageString: 'assets/icons/material/material.png',
+                demos: materialDemos(context),
+              ),
+            ),
+            _AnimatedCategoryItem(
+              startDelayFraction: 0.05,
+              controller: _animationController,
+              child: CategoryListItem(
+                title: homeCategoryCupertino,
+                imageString: 'assets/icons/cupertino/cupertino.png',
+                demos: cupertinoDemos(context),
+              ),
+            ),
+            _AnimatedCategoryItem(
+              startDelayFraction: 0.10,
+              controller: _animationController,
+              child: CategoryListItem(
+                title: GalleryLocalizations.of(context).homeCategoryReference,
+                imageString: 'assets/icons/reference/reference.png',
+                demos: referenceDemos(context),
+              ),
+            ),
+          ],
         ),
-        _Carousel(
-          children: widget.carouselCards,
-          animationController: _animationController,
-        ),
-        Container(
-          margin: EdgeInsets.symmetric(horizontal: _horizontalPadding),
-          child: _CategoriesHeader(),
-        ),
-        _AnimatedCategoryItem(
-          startDelayFraction: 0.00,
-          controller: _animationController,
-          child: CategoryListItem(
-            title: homeCategoryMaterial,
-            imageString: 'assets/icons/material/material.png',
-            demos: materialDemos(context),
-          ),
-        ),
-        _AnimatedCategoryItem(
-          startDelayFraction: 0.05,
-          controller: _animationController,
-          child: CategoryListItem(
-            title: homeCategoryCupertino,
-            imageString: 'assets/icons/cupertino/cupertino.png',
-            demos: cupertinoDemos(context),
-          ),
-        ),
-        _AnimatedCategoryItem(
-          startDelayFraction: 0.10,
-          controller: _animationController,
-          child: CategoryListItem(
-            title: GalleryLocalizations.of(context).homeCategoryReference,
-            imageString: 'assets/icons/reference/reference.png',
-            demos: referenceDemos(context),
+        Align(
+          alignment: Alignment.topCenter,
+          child: GestureDetector(
+            onVerticalDragEnd: (details) {
+              if (details.velocity.pixelsPerSecond.dy > 200) {
+                ToggleSplashNotification()..dispatch(context);
+              }
+            },
+            child: SafeArea(
+              child: Container(
+                height: 40,
+                // If we don't set the color, gestures are not detected.
+                color: Colors.transparent,
+              ),
+            ),
           ),
         ),
       ],

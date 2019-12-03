@@ -20,7 +20,7 @@ const double systemTextScaleFactorOption = -1;
 const launchTimerDurationInSeconds = 2;
 
 // The splash page animation duration.
-const splashPageAnimationDurationInMilliseconds = 100;
+const splashPageAnimationDurationInMilliseconds = 300;
 
 // The desktop top padding for a page's first header (e.g. Gallery, Settings)
 const firstHeaderDesktopTopPadding = 5.0;
