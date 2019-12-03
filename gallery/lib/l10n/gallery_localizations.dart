@@ -3236,28 +3236,12 @@ class GalleryLocalizations {
         other: 'Shopping cart, $quantity items');
   }
 
-  String get shrineScreenReaderCartClearedAndClosed {
-    return Intl.message(r'Cart cleared and closed',
+  String get shrineScreenReaderProductAddToCart {
+    return Intl.message(r'Add to cart',
         locale: _localeName,
-        name: 'shrineScreenReaderCartClearedAndClosed',
+        name: 'shrineScreenReaderProductAddToCart',
         desc:
-            r'An announcement made by screen readers, such as TalkBack and VoiceOver when the shopping cart is cleared and closed.');
-  }
-
-  String get shrineScreenReaderItemRemoved {
-    return Intl.message(r'Removed',
-        locale: _localeName,
-        name: 'shrineScreenReaderItemRemoved',
-        desc:
-            r'An announcement made by screen readers, such as TalkBack and VoiceOver when an item is removed from the shopping cart.');
-  }
-
-  String get shrineScreenReaderProductAddedToCart {
-    return Intl.message(r'Added to cart',
-        locale: _localeName,
-        name: 'shrineScreenReaderProductAddedToCart',
-        desc:
-            r'An announcement made by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart.');
+            r'An announcement made by screen readers, such as TalkBack and VoiceOver to indicate the action of a button for adding a product to the cart.');
   }
 
   String shrineScreenReaderRemoveProductButton(Object product) {

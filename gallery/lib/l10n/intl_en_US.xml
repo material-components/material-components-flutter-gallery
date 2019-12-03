@@ -1398,17 +1398,9 @@
     description="The description of a shopping cart button containing some products. Used by screen readers, such as TalkBack and VoiceOver."
     >{quantity, plural, =0{Shopping cart, no items} =1{Shopping cart, 1 item} other{Shopping cart, {quantity} items}}</string>
   <string
-    name="shrineScreenReaderItemRemoved"
-    description="An announcement made by screen readers, such as TalkBack and VoiceOver when an item is removed from the shopping cart."
-    >Removed</string>
-  <string
-    name="shrineScreenReaderCartClearedAndClosed"
-    description="An announcement made by screen readers, such as TalkBack and VoiceOver when the shopping cart is cleared and closed."
-    >Cart cleared and closed</string>
-  <string
-    name="shrineScreenReaderProductAddedToCart"
-    description="An announcement made by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart."
-    >Added to cart</string>
+    name="shrineScreenReaderProductAddToCart"
+    description="An announcement made by screen readers, such as TalkBack and VoiceOver to indicate the action of a button for adding a product to the cart."
+    >Add to cart</string>
   <string
     name="shrineScreenReaderRemoveProductButton"
     description="A tooltip for a button to remove a product. This will be read by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart."

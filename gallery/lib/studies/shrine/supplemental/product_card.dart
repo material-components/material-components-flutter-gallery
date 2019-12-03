@@ -33,10 +33,14 @@ class MobileProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _buildProductCard(
-      context: context,
-      product: product,
-      imageAspectRatio: imageAspectRatio,
+    return Semantics(
+      container: true,
+      button: true,
+      child: _buildProductCard(
+        context: context,
+        product: product,
+        imageAspectRatio: imageAspectRatio,
+      ),
     );
   }
 }
@@ -77,20 +81,20 @@ Widget _buildProductCard({
     package: product.assetPackage,
     fit: BoxFit.cover,
     width: isDesktop ? imageWidth : null,
+    excludeFromSemantics: true,
   );
 
   return ScopedModelDescendant<AppStateModel>(
     builder: (context, child, model) {
-      return GestureDetector(
-        onTap: () {
-          model.addProductToCart(product.id);
-          SemanticsService.announce(
-            GalleryLocalizations.of(context)
-                .shrineScreenReaderProductAddedToCart,
-            Directionality.of(context),
-          );
-        },
-        child: child,
+      return Semantics(
+        onTapHint:
+            GalleryLocalizations.of(context).shrineScreenReaderProductAddToCart,
+        child: GestureDetector(
+          onTap: () {
+            model.addProductToCart(product.id);
+          },
+          child: child,
+        ),
       );
     },
     child: Stack(

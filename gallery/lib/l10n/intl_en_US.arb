@@ -1489,17 +1489,9 @@
       }
     }
   },
-  "shrineScreenReaderItemRemoved": "Removed",
-  "@shrineScreenReaderItemRemoved": {
-    "description": "An announcement made by screen readers, such as TalkBack and VoiceOver when an item is removed from the shopping cart."
-  },
-  "shrineScreenReaderCartClearedAndClosed": "Cart cleared and closed",
-  "@shrineScreenReaderCartClearedAndClosed": {
-    "description": "An announcement made by screen readers, such as TalkBack and VoiceOver when the shopping cart is cleared and closed."
-  },
-  "shrineScreenReaderProductAddedToCart": "Added to cart",
-  "@shrineScreenReaderProductAddedToCart": {
-    "description": "An announcement made by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart."
+  "shrineScreenReaderProductAddToCart": "Add to cart",
+  "@shrineScreenReaderProductAddToCart": {
+    "description": "An announcement made by screen readers, such as TalkBack and VoiceOver to indicate the action of a button for adding a product to the cart."
   },
   "shrineScreenReaderRemoveProductButton": "Remove {product}",
   "@shrineScreenReaderRemoveProductButton": {

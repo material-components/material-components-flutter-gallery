@@ -39,10 +39,6 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
             quantity: model.productsInCart[id],
             onPressed: () {
               model.removeItemFromCart(id);
-              SemanticsService.announce(
-                GalleryLocalizations.of(context).shrineScreenReaderItemRemoved,
-                Directionality.of(context),
-              );
             },
           ),
         )
@@ -75,21 +71,17 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                                   .shrineTooltipCloseCart,
                             ),
                           ),
-                          MergeSemantics(
-                            child: Text(
-                              GalleryLocalizations.of(context)
-                                  .shrineCartPageCaption,
-                              style: localTheme.textTheme.subhead
-                                  .copyWith(fontWeight: FontWeight.w600),
-                            ),
+                          Text(
+                            GalleryLocalizations.of(context)
+                                .shrineCartPageCaption,
+                            style: localTheme.textTheme.subhead
+                                .copyWith(fontWeight: FontWeight.w600),
                           ),
                           const SizedBox(width: 16),
-                          MergeSemantics(
-                            child: Text(
-                              GalleryLocalizations.of(context)
-                                  .shrineCartItemCount(
-                                model.totalCartQuantity,
-                              ),
+                          Text(
+                            GalleryLocalizations.of(context)
+                                .shrineCartItemCount(
+                              model.totalCartQuantity,
                             ),
                           ),
                         ],
@@ -122,11 +114,6 @@ class _ShoppingCartPageState extends State<ShoppingCartPage> {
                       onPressed: () {
                         model.clearCart();
                         ExpandingBottomSheet.of(context).close();
-                        SemanticsService.announce(
-                          GalleryLocalizations.of(context)
-                              .shrineScreenReaderCartClearedAndClosed,
-                          Directionality.of(context),
-                        );
                       },
                     ),
                   ),
@@ -268,6 +255,7 @@ class ShoppingCartRow extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Semantics(
+            container: true,
             label: GalleryLocalizations.of(context)
                 .shrineScreenReaderRemoveProductButton(product.name(context)),
             button: true,
@@ -291,14 +279,13 @@ class ShoppingCartRow extends StatelessWidget {
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      ExcludeSemantics(
-                        child: Image.asset(
-                          product.assetName,
-                          package: product.assetPackage,
-                          fit: BoxFit.cover,
-                          width: 75,
-                          height: 75,
-                        ),
+                      Image.asset(
+                        product.assetName,
+                        package: product.assetPackage,
+                        fit: BoxFit.cover,
+                        width: 75,
+                        height: 75,
+                        excludeFromSemantics: true,
                       ),
                       const SizedBox(width: 16),
                       Expanded(

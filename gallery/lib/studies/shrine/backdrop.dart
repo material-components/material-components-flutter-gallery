@@ -311,18 +311,24 @@ class _BackdropState extends State<Backdrop>
     return Stack(
       key: _backdropKey,
       children: [
-        widget.backLayer,
+        ExcludeSemantics(
+          excluding: _frontLayerVisible,
+          child: widget.backLayer,
+        ),
         PositionedTransition(
           rect: _layerAnimation,
-          child: AnimatedBuilder(
-            animation: PageStatus.of(context).cartController,
-            builder: (context, child) => AnimatedBuilder(
-              animation: PageStatus.of(context).menuController,
-              builder: (context, child) => _FrontLayer(
-                onTap: menuPageIsVisible(context)
-                    ? _toggleBackdropLayerVisibility
-                    : null,
-                child: widget.frontLayer,
+          child: ExcludeSemantics(
+            excluding: !_frontLayerVisible,
+            child: AnimatedBuilder(
+              animation: PageStatus.of(context).cartController,
+              builder: (context, child) => AnimatedBuilder(
+                animation: PageStatus.of(context).menuController,
+                builder: (context, child) => _FrontLayer(
+                  onTap: menuPageIsVisible(context)
+                      ? _toggleBackdropLayerVisibility
+                      : null,
+                  child: widget.frontLayer,
+                ),
               ),
             ),
           ),

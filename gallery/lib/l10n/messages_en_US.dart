@@ -785,12 +785,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
         "shrineScreenReaderCart": m21,
-        "shrineScreenReaderCartClearedAndClosed":
-            MessageLookupByLibrary.simpleMessage("Cart cleared and closed"),
-        "shrineScreenReaderItemRemoved":
-            MessageLookupByLibrary.simpleMessage("Removed"),
-        "shrineScreenReaderProductAddedToCart":
-            MessageLookupByLibrary.simpleMessage("Added to cart"),
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Add to cart"),
         "shrineScreenReaderRemoveProductButton": m22,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Close cart"),
