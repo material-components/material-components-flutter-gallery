@@ -9,6 +9,28 @@ import 'package:flutter/material.dart';
 
 import 'package:gallery/constants.dart';
 import 'package:gallery/layout/adaptive.dart';
+import 'package:gallery/pages/home.dart';
+
+const homePeekDesktop = 210.0;
+const homePeekMobile = 60.0;
+
+class SplashPageAnimation extends InheritedWidget {
+  const SplashPageAnimation({
+    Key key,
+    @required this.isFinished,
+    @required Widget child,
+  })  : assert(child != null),
+        super(key: key, child: child);
+
+  final bool isFinished;
+
+  static SplashPageAnimation of(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType();
+  }
+
+  @override
+  bool updateShouldNotify(SplashPageAnimation old) => true;
+}
 
 class SplashPage extends StatefulWidget {
   const SplashPage({
@@ -28,6 +50,8 @@ class _SplashPageState extends State<SplashPage>
     with SingleTickerProviderStateMixin {
   AnimationController _controller;
   Timer _launchTimer;
+  int _effect;
+  final _random = Random();
 
   bool get _isSplashVisible {
     return _controller.status == AnimationStatus.completed ||
@@ -54,8 +78,11 @@ class _SplashPageState extends State<SplashPage>
         _controller.fling(velocity: -1);
       });
     } else {
-      _controller.fling(velocity: -1);
+      _controller.value = 0;
     }
+
+    // If the number of included effects changes, this number should be changed.
+    _effect = _random.nextInt(10) + 1;
   }
 
   @override
@@ -66,8 +93,12 @@ class _SplashPageState extends State<SplashPage>
     super.dispose();
   }
 
-  Animation<RelativeRect> _getPanelAnimation(BoxConstraints constraints) {
-    final double height = constraints.biggest.height;
+  Animation<RelativeRect> _getPanelAnimation(
+    BuildContext context,
+    BoxConstraints constraints,
+  ) {
+    final double height = constraints.biggest.height -
+        (isDisplayDesktop(context) ? homePeekDesktop : homePeekMobile);
     return RelativeRectTween(
       begin: const RelativeRect.fromLTRB(0, 0, 0, 0),
       end: RelativeRect.fromLTRB(0, height, 0, 0),
@@ -76,70 +107,109 @@ class _SplashPageState extends State<SplashPage>
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        final Animation<RelativeRect> animation =
-            _getPanelAnimation(constraints);
-        Widget frontLayer = widget.child;
-        if (isDisplayDesktop(context)) {
-          frontLayer = Padding(
-            padding: const EdgeInsets.only(top: 136),
-            child: ClipRRect(
-              borderRadius: BorderRadius.vertical(
-                top: Radius.circular(40),
-              ),
-              child: frontLayer,
-            ),
-          );
-        }
-
-        return Stack(
-          children: [
-            _SplashBackLayer(
-              isCollapsed: !_isSplashVisible || !widget.isAnimated,
-            ),
-            PositionedTransition(
-              rect: animation,
-              child: frontLayer,
-            ),
-          ],
-        );
+    return NotificationListener<ToggleSplashNotification>(
+      onNotification: (_) {
+        _controller.forward();
+        return true;
       },
+      child: SplashPageAnimation(
+        isFinished: _controller.status == AnimationStatus.dismissed,
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            final Animation<RelativeRect> animation =
+                _getPanelAnimation(context, constraints);
+            Widget frontLayer = widget.child;
+            if (_isSplashVisible) {
+              frontLayer = GestureDetector(
+                behavior: HitTestBehavior.opaque,
+                onTap: () {
+                  _controller.reverse();
+                },
+                child: IgnorePointer(child: frontLayer),
+              );
+            }
+
+            if (isDisplayDesktop(context)) {
+              frontLayer = Padding(
+                padding: const EdgeInsets.only(top: 136),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(40),
+                  ),
+                  child: frontLayer,
+                ),
+              );
+            }
+
+            return Stack(
+              children: [
+                _SplashBackLayer(
+                  isSplashCollapsed: !_isSplashVisible,
+                  effect: _effect,
+                  onTap: () {
+                    _controller.forward();
+                  },
+                ),
+                PositionedTransition(
+                  rect: animation,
+                  child: frontLayer,
+                ),
+              ],
+            );
+          },
+        ),
+      ),
     );
   }
 }
 
 class _SplashBackLayer extends StatelessWidget {
-  _SplashBackLayer({Key key, @required this.isCollapsed}) : super(key: key);
+  _SplashBackLayer({
+    Key key,
+    @required this.isSplashCollapsed,
+    this.effect,
+    this.onTap,
+  }) : super(key: key);
 
-  final bool isCollapsed;
-  final _random = Random();
+  final bool isSplashCollapsed;
+  final int effect;
+  final GestureTapCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    // If the number of included effects changes, this number should be changed.
-    var effect = _random.nextInt(10) + 1;
     var effectAsset = 'assets/splash_effects/splash_effect_$effect.gif';
+    final flutterLogo = Image.asset('assets/logo/flutter_logo.png');
+
+    Widget child;
+    if (isSplashCollapsed) {
+      child = isDisplayDesktop(context)
+          ? Padding(
+              padding: const EdgeInsets.only(top: 50),
+              child: Align(
+                alignment: Alignment.topCenter,
+                child: GestureDetector(
+                  onTap: onTap,
+                  child: flutterLogo,
+                ),
+              ),
+            )
+          : null;
+    } else {
+      child = Stack(
+        children: [
+          Center(child: Image.asset(effectAsset)),
+          Center(child: flutterLogo),
+        ],
+      );
+    }
 
     return ExcludeSemantics(
       child: Container(
         color: Color(0xFF030303), // This is the background color of the gifs.
-        child: Stack(
-          children: [
-            if (!isCollapsed)
-              Align(
-                alignment: Alignment.center,
-                child: Image.asset(effectAsset),
-              ),
-            Align(
-              alignment: isCollapsed ? Alignment.topCenter : Alignment.center,
-              child: Padding(
-                padding: EdgeInsets.only(top: isCollapsed ? 50 : 0),
-                child: Image.asset('assets/logo/flutter_logo.png'),
-              ),
-            ),
-          ],
+        padding: EdgeInsets.only(
+          bottom: isDisplayDesktop(context) ? homePeekDesktop : homePeekMobile,
         ),
+        child: child,
       ),
     );
   }

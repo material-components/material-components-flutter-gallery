@@ -9,6 +9,8 @@ import 'package:flutter/gestures.dart' show DragStartBehavior;
 
 import 'package:gallery/l10n/gallery_localizations.dart';
 
+// BEGIN textFieldDemo
+
 class TextFieldDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -348,3 +350,5 @@ class _UsNumberTextInputFormatter extends TextInputFormatter {
     );
   }
 }
+
+// END

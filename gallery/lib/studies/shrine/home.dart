@@ -13,6 +13,7 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
+import 'package:flutter/semantics.dart';
 import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/studies/shrine/expanding_bottom_sheet.dart';
@@ -52,16 +53,27 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final bool isDesktop = isDisplayDesktop(context);
 
+    // Use sort keys to make sure the cart button is always on the top.
+    // This way, a11y users do not have to scroll through the entire list to
+    // find the cart, and can easily get to the cart from anywhere on the page.
     return ApplyTextOptions(
       child: Stack(
         children: [
-          backdrop,
-          scrim,
-          Align(
-            child: expandingBottomSheet,
-            alignment: isDesktop
-                ? AlignmentDirectional.topEnd
-                : AlignmentDirectional.bottomEnd,
+          Semantics(
+            container: true,
+            child: backdrop,
+            sortKey: OrdinalSortKey(1),
+          ),
+          ExcludeSemantics(child: scrim),
+          Semantics(
+            container: true,
+            child: Align(
+              child: expandingBottomSheet,
+              alignment: isDesktop
+                  ? AlignmentDirectional.topEnd
+                  : AlignmentDirectional.bottomEnd,
+            ),
+            sortKey: OrdinalSortKey(0),
           ),
         ],
       ),

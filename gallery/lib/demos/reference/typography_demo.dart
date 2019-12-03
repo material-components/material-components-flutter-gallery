@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 
 import 'package:gallery/l10n/gallery_localizations.dart';
 
+// BEGIN typographyDemo
+
 class _TextStyleItem extends StatelessWidget {
   const _TextStyleItem({
     Key key,
@@ -121,3 +123,5 @@ class TypographyDemo extends StatelessWidget {
     );
   }
 }
+
+// END

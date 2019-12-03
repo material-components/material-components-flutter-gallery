@@ -37,18 +37,15 @@ class _BackdropState extends State<Backdrop>
   FlutterActorArtboard _artboard;
 
   double settingsButtonWidth = 64;
-  double desktopHeight = 56;
-  double mobileHeight = 40;
+  double settingsButtonHeightDesktop = 56;
+  double settingsButtonHeightMobile = 40;
 
-  bool get _isPanelVisible {
-    final AnimationStatus status = _controller.status;
-    return status == AnimationStatus.completed ||
-        status == AnimationStatus.forward;
-  }
+  bool _isSettingsOpen;
 
   @override
   void initState() {
     super.initState();
+    _isSettingsOpen = false;
     _controller = AnimationController(
         duration: Duration(milliseconds: 100), value: 1, vsync: this)
       ..addListener(() {
@@ -99,9 +96,10 @@ class _BackdropState extends State<Backdrop>
   }
 
   void toggleSettings() {
-    _controller.fling(velocity: _isPanelVisible ? -1 : 1);
+    _controller.fling(velocity: _isSettingsOpen ? 1 : -1);
     initAnimationLayer();
     isActive.value = true;
+    _isSettingsOpen = !_isSettingsOpen;
   }
 
   Animation<RelativeRect> _getPanelAnimation(BoxConstraints constraints) {
@@ -114,56 +112,57 @@ class _BackdropState extends State<Backdrop>
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.linear));
   }
 
-  List<Widget> _galleryHeader() {
-    return [
-      if (_isPanelVisible)
-        Semantics(
-          sortKey: OrdinalSortKey(
-            GalleryOptions.of(context).textDirection() == TextDirection.ltr
-                ? 1.0
-                : 2.0,
-            name: 'header',
-          ),
-          excludeSemantics: !_isPanelVisible,
-          label: GalleryLocalizations.of(context).homeHeaderGallery,
-          child: Container(),
+  Widget _galleryHeader() {
+    return ExcludeSemantics(
+      excluding: _isSettingsOpen,
+      child: Semantics(
+        sortKey: OrdinalSortKey(
+          GalleryOptions.of(context).textDirection() == TextDirection.ltr
+              ? 1.0
+              : 2.0,
+          name: 'header',
         ),
-    ];
+        label: GalleryLocalizations.of(context).homeHeaderGallery,
+        child: Container(),
+      ),
+    );
   }
 
   Widget _buildStack(BuildContext context, BoxConstraints constraints) {
     final Animation<RelativeRect> animation = _getPanelAnimation(constraints);
+    final isDesktop = isDisplayDesktop(context);
+    final safeAreaTopPadding = MediaQuery.of(context).padding.top;
 
     final Widget frontLayer = ExcludeSemantics(
       child: InheritedBackdrop(
         toggleSettings: toggleSettings,
         child: widget.frontLayer,
         settingsButtonWidth: settingsButtonWidth,
-        desktopSettingsButtonHeight: desktopHeight,
-        mobileSettingsButtonHeight: mobileHeight,
+        desktopSettingsButtonHeight: settingsButtonHeightDesktop,
+        mobileSettingsButtonHeight: settingsButtonHeightMobile,
       ),
-      excluding: _isPanelVisible,
+      excluding: !_isSettingsOpen,
     );
     final Widget backLayer = ExcludeSemantics(
       child: widget.backLayer,
-      excluding: !_isPanelVisible,
+      excluding: _isSettingsOpen,
     );
 
     return Container(
       child: Stack(
         children: [
-          if (!isDisplayDesktop(context)) ...[
-            ..._galleryHeader(),
+          if (!isDesktop) ...[
+            _galleryHeader(),
             frontLayer,
             PositionedTransition(
               rect: animation,
               child: backLayer,
             ),
           ],
-          if (isDisplayDesktop(context)) ...[
-            ..._galleryHeader(),
+          if (isDesktop) ...[
+            _galleryHeader(),
             backLayer,
-            if (!_isPanelVisible) ...[
+            if (_isSettingsOpen) ...[
               ExcludeSemantics(
                 child: ModalBarrier(
                   dismissible: true,
@@ -171,7 +170,7 @@ class _BackdropState extends State<Backdrop>
               ),
               Semantics(
                 label:
-                    MaterialLocalizations.of(context).modalBarrierDismissLabel,
+                    GalleryLocalizations.of(context).settingsButtonCloseLabel,
                 child: GestureDetector(
                   onTap: toggleSettings,
                 ),
@@ -189,7 +188,7 @@ class _BackdropState extends State<Backdrop>
               child: Align(
                 alignment: AlignmentDirectional.topEnd,
                 child: Material(
-                  elevation: 8,
+                  elevation: 7,
                   clipBehavior: Clip.antiAlias,
                   borderRadius: BorderRadius.circular(40),
                   color: Theme.of(context).colorScheme.secondaryVariant,
@@ -207,47 +206,39 @@ class _BackdropState extends State<Backdrop>
           ],
           Align(
             alignment: AlignmentDirectional.topEnd,
-            child: ExcludeSemantics(
-              excluding: !_isPanelVisible,
-              child: Semantics(
-                sortKey: OrdinalSortKey(
-                  GalleryOptions.of(context).textDirection() ==
-                          TextDirection.ltr
-                      ? 2.0
-                      : 1.0,
-                  name: 'header',
-                ),
-                button: true,
-                label: _isPanelVisible
-                    ? GalleryLocalizations.of(context).settingsButtonLabel
-                    : GalleryLocalizations.of(context).settingsButtonCloseLabel,
-                child: SafeArea(
-                  child: SizedBox(
-                    width: settingsButtonWidth,
-                    height: isDisplayDesktop(context)
-                        ? desktopHeight
-                        : mobileHeight,
-                    child: GestureDetector(
-                      onTap: toggleSettings,
-                      child: Material(
-                        borderRadius: BorderRadiusDirectional.only(
-                          bottomStart: Radius.circular(10),
-                        ),
-                        color: _isPanelVisible
-                            ? Theme.of(context).colorScheme.secondaryVariant
-                            : Colors.transparent,
-                        child: FlareActor(
-                          Theme.of(context).colorScheme.brightness ==
-                                  Brightness.light
-                              ? 'assets/icons/settings/settings_light.flr'
-                              : 'assets/icons/settings/settings_dark.flr',
-                          alignment:
-                              Directionality.of(context) == TextDirection.ltr
-                                  ? Alignment.bottomLeft
-                                  : Alignment.bottomRight,
-                          fit: BoxFit.contain,
-                          controller: this,
-                        ),
+            child: Semantics(
+              button: true,
+              label: _isSettingsOpen
+                  ? GalleryLocalizations.of(context).settingsButtonCloseLabel
+                  : GalleryLocalizations.of(context).settingsButtonLabel,
+              child: SizedBox(
+                width: settingsButtonWidth,
+                height: isDesktop
+                    ? settingsButtonHeightDesktop
+                    : settingsButtonHeightMobile + safeAreaTopPadding,
+                child: GestureDetector(
+                  onTap: toggleSettings,
+                  child: Material(
+                    borderRadius: BorderRadiusDirectional.only(
+                      bottomStart: Radius.circular(10),
+                    ),
+                    color: _isSettingsOpen & !_controller.isAnimating
+                        ? Colors.transparent
+                        : Theme.of(context).colorScheme.secondaryVariant,
+                    child: Padding(
+                      padding:
+                          const EdgeInsetsDirectional.only(start: 3, end: 18),
+                      child: FlareActor(
+                        Theme.of(context).colorScheme.brightness ==
+                                Brightness.light
+                            ? 'assets/icons/settings/settings_light.flr'
+                            : 'assets/icons/settings/settings_dark.flr',
+                        alignment:
+                            Directionality.of(context) == TextDirection.ltr
+                                ? Alignment.bottomLeft
+                                : Alignment.bottomRight,
+                        fit: BoxFit.contain,
+                        controller: this,
                       ),
                     ),
                   ),
@@ -262,10 +253,8 @@ class _BackdropState extends State<Backdrop>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: LayoutBuilder(
-        builder: _buildStack,
-      ),
+    return LayoutBuilder(
+      builder: _buildStack,
     );
   }
 }

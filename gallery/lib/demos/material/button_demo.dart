@@ -65,6 +65,8 @@ class ButtonDemo extends StatelessWidget {
   }
 }
 
+// BEGIN buttonDemoFlat
+
 class _FlatButtonDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -88,6 +90,10 @@ class _FlatButtonDemo extends StatelessWidget {
   }
 }
 
+// END
+
+// BEGIN buttonDemoRaised
+
 class _RaisedButtonDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -110,6 +116,10 @@ class _RaisedButtonDemo extends StatelessWidget {
     );
   }
 }
+
+// END
+
+// BEGIN buttonDemoOutline
 
 class _OutlineButtonDemo extends StatelessWidget {
   @override
@@ -140,6 +150,10 @@ class _OutlineButtonDemo extends StatelessWidget {
   }
 }
 
+// END
+
+// BEGIN buttonDemoToggle
+
 class _ToggleButtonsDemo extends StatefulWidget {
   @override
   _ToggleButtonsDemoState createState() => _ToggleButtonsDemoState();
@@ -168,6 +182,10 @@ class _ToggleButtonsDemoState extends State<_ToggleButtonsDemo> {
   }
 }
 
+// END
+
+// BEGIN buttonDemoFloating
+
 class _FloatingActionButtonDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -191,3 +209,5 @@ class _FloatingActionButtonDemo extends StatelessWidget {
     );
   }
 }
+
+// END

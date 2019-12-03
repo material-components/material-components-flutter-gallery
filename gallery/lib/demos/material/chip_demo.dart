@@ -59,6 +59,8 @@ class ChipDemo extends StatelessWidget {
   }
 }
 
+// BEGIN chipDemoAction
+
 class _ActionChipDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -74,6 +76,10 @@ class _ActionChipDemo extends StatelessWidget {
     );
   }
 }
+
+// END
+
+// BEGIN chipDemoChoice
 
 class _ChoiceChipDemo extends StatefulWidget {
   @override
@@ -122,6 +128,10 @@ class _ChoiceChipDemoState extends State<_ChoiceChipDemo> {
     );
   }
 }
+
+// END
+
+// BEGIN chipDemoFilter
 
 class _FilterChipDemo extends StatefulWidget {
   @override
@@ -179,6 +189,10 @@ class _FilterChipDemoState extends State<_FilterChipDemo> {
   }
 }
 
+// END
+
+// BEGIN chipDemoInput
+
 class _InputChipDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -197,3 +211,5 @@ class _InputChipDemo extends StatelessWidget {
     );
   }
 }
+
+// END

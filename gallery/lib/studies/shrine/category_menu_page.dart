@@ -123,8 +123,9 @@ class CategoryMenuPage extends StatelessWidget {
               child: Column(
                 children: [
                   const SizedBox(height: 64),
-                  ExcludeSemantics(
-                    child: Image.asset('packages/shrine_images/diamond.png'),
+                  Image.asset(
+                    'packages/shrine_images/diamond.png',
+                    excludeFromSemantics: true,
                   ),
                   const SizedBox(height: 16),
                   ExcludeSemantics(

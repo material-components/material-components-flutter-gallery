@@ -6,6 +6,8 @@ import 'package:flutter/cupertino.dart';
 
 import 'package:gallery/l10n/gallery_localizations.dart';
 
+// BEGIN cupertinoButtonDemo
+
 class CupertinoButtonDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -37,3 +39,5 @@ class CupertinoButtonDemo extends StatelessWidget {
     );
   }
 }
+
+// END

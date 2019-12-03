@@ -5,6 +5,8 @@
 import 'package:flutter/material.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 
+// BEGIN tabsDemo
+
 class TabsDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -41,3 +43,5 @@ class TabsDemo extends StatelessWidget {
     );
   }
 }
+
+// END

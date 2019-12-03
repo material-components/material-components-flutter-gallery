@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 
 import 'package:gallery/l10n/gallery_localizations.dart';
 
+// BEGIN bottomNavigationDemo
+
 enum BottomNavigationDemoType {
   withLabels,
   withoutLabels,
@@ -205,3 +207,5 @@ class _NavigationIconView {
     );
   }
 }
+
+// END

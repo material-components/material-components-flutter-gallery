@@ -49,3 +49,9 @@ gen-l10n:
 l10n: gen-l10n format
 	cd $(ROOT)/l10n_cli/ && $(FLUTTER) pub get
 	$(DART) $(ROOT)/l10n_cli/bin/main.dart
+
+.PHONY: update-code-segments
+update-code-segments:
+	cd $(ROOT)/codeviewer_cli/ && pub get
+	$(DART) $(ROOT)/codeviewer_cli/bin/main.dart
+	$(FLUTTER) format $(ROOT)/gallery/lib/codeviewer/code_segments.dart

@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 
 import 'package:gallery/l10n/gallery_localizations.dart';
 
+// BEGIN colorsDemo
+
 const double kColorItemHeight = 48;
 
 class _Palette {
@@ -258,3 +260,5 @@ class ColorsDemo extends StatelessWidget {
     );
   }
 }
+
+// END

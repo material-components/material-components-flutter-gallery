@@ -35,6 +35,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Item ${value}";
 
+  static m20(error) => "Failed to copy to clipboard: ${error}";
+
   static m6(name, phoneNumber) => "${name} phone number is ${phoneNumber}";
 
   static m7(value) => "You selected: \"${value}\"";
@@ -68,10 +70,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m18(quantity) => "Quantity: ${quantity}";
 
-  static m20(quantity) =>
+  static m21(quantity) =>
       "${Intl.plural(quantity, zero: 'Shopping cart, no items', one: 'Shopping cart, 1 item', other: 'Shopping cart, ${quantity} items')}";
 
-  static m21(product) => "Remove ${product}";
+  static m22(product) => "Remove ${product}";
 
   static m19(value) => "Item ${value}";
 
@@ -143,7 +145,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Korean taco"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
         "craneEat4SemanticLabel":
-            MessageLookupByLibrary.simpleMessage("Chocolate desert"),
+            MessageLookupByLibrary.simpleMessage("Chocolate dessert"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
         "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
             "Artsy restaurant seating area"),
@@ -351,6 +353,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("Choice Chip"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Code Sample"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("Copied to clipboard."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("COPY ALL"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m20,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Color and color swatch constants which represent Material Design\'s color palette."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -777,14 +784,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
-        "shrineScreenReaderCart": m20,
-        "shrineScreenReaderCartClearedAndClosed":
-            MessageLookupByLibrary.simpleMessage("Cart cleared and closed"),
-        "shrineScreenReaderItemRemoved":
-            MessageLookupByLibrary.simpleMessage("Removed"),
-        "shrineScreenReaderProductAddedToCart":
-            MessageLookupByLibrary.simpleMessage("Added to cart"),
-        "shrineScreenReaderRemoveProductButton": m21,
+        "shrineScreenReaderCart": m21,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Add to cart"),
+        "shrineScreenReaderRemoveProductButton": m22,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Close cart"),
         "shrineTooltipCloseMenu":

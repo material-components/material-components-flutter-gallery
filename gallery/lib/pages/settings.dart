@@ -10,7 +10,6 @@ import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/pages/about.dart' as about;
-import 'package:gallery/pages/backdrop.dart';
 import 'package:gallery/pages/home.dart';
 import 'package:gallery/pages/settings_list_item.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -43,11 +42,6 @@ class _SettingsPageState extends State<SettingsPage> {
 
   @override
   Widget build(BuildContext context) {
-    Widget settingsHeader() => Header(
-          color: Theme.of(context).colorScheme.onSurface,
-          text: GalleryLocalizations.of(context).settingsTitle,
-        );
-
     final colorScheme = Theme.of(context).colorScheme;
     final options = GalleryOptions.of(context);
     final isDesktop = isDisplayDesktop(context);
@@ -69,129 +63,139 @@ class _SettingsPageState extends State<SettingsPage> {
       ),
     );
 
-    return Container(
+    return Material(
       color: colorScheme.secondaryVariant,
-      padding: isDesktop
-          ? EdgeInsets.zero
-          : EdgeInsets.only(bottom: galleryHeaderHeight),
-      child: Center(
-        child: ListView(
-          children: [
-            _CloseSettingsSemantics(),
-            Padding(
-              padding: EdgeInsetsDirectional.only(
-                start: 32,
-                top: isDesktop ? 5 : 0,
-                end: 32,
-                bottom: isDesktop ? 5 : 0,
+      child: Padding(
+        padding: isDesktop
+            ? EdgeInsets.zero
+            : EdgeInsets.only(bottom: galleryHeaderHeight),
+        // Remove ListView top padding as it is already accounted for.
+        child: MediaQuery.removePadding(
+          removeTop: isDesktop,
+          context: context,
+          child: ListView(
+            children: [
+              SizedBox(height: firstHeaderDesktopTopPadding),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 32),
+                child: ExcludeSemantics(
+                  child: Header(
+                    color: Theme.of(context).colorScheme.onSurface,
+                    text: GalleryLocalizations.of(context).settingsTitle,
+                  ),
+                ),
               ),
-              child: settingsHeader(),
-            ),
-            SettingsListItem<double>(
-              title: GalleryLocalizations.of(context).settingsTextScaling,
-              selectedOption: options.textScaleFactor(
-                context,
-                useSentinel: true,
-              ),
-              options: LinkedHashMap.of({
-                systemTextScaleFactorOption:
-                    GalleryLocalizations.of(context).settingsSystemDefault,
-                0.8: GalleryLocalizations.of(context).settingsTextScalingSmall,
-                1.0: GalleryLocalizations.of(context).settingsTextScalingNormal,
-                2.0: GalleryLocalizations.of(context).settingsTextScalingLarge,
-                3.0: GalleryLocalizations.of(context).settingsTextScalingHuge
-              }),
-              onOptionChanged: (newTextScale) => GalleryOptions.update(
-                context,
-                options.copyWith(textScaleFactor: newTextScale),
-              ),
-              onTapSetting: () => onTapSetting(_ExpandableSetting.textScale),
-              isExpanded: expandedSettingId == _ExpandableSetting.textScale,
-            ),
-            SettingsListItem<CustomTextDirection>(
-              title: GalleryLocalizations.of(context).settingsTextDirection,
-              selectedOption: options.customTextDirection,
-              options: LinkedHashMap.of({
-                CustomTextDirection.localeBased:
-                    GalleryLocalizations.of(context)
-                        .settingsTextDirectionLocaleBased,
-                CustomTextDirection.ltr:
-                    GalleryLocalizations.of(context).settingsTextDirectionLTR,
-                CustomTextDirection.rtl:
-                    GalleryLocalizations.of(context).settingsTextDirectionRTL,
-              }),
-              onOptionChanged: (newTextDirection) => GalleryOptions.update(
-                context,
-                options.copyWith(customTextDirection: newTextDirection),
-              ),
-              onTapSetting: () =>
-                  onTapSetting(_ExpandableSetting.textDirection),
-              isExpanded: expandedSettingId == _ExpandableSetting.textDirection,
-            ),
-            SettingsListItem<Locale>(
-              title: GalleryLocalizations.of(context).settingsLocale,
-              selectedOption: options.locale == deviceLocale
-                  ? systemLocaleOption
-                  : options.locale,
-              options: localeOptions,
-              onOptionChanged: (newLocale) {
-                if (newLocale == systemLocaleOption) {
-                  newLocale = deviceLocale;
-                }
-                GalleryOptions.update(
+              SettingsListItem<double>(
+                title: GalleryLocalizations.of(context).settingsTextScaling,
+                selectedOption: options.textScaleFactor(
                   context,
-                  options.copyWith(locale: newLocale),
-                );
-              },
-              onTapSetting: () => onTapSetting(_ExpandableSetting.locale),
-              isExpanded: expandedSettingId == _ExpandableSetting.locale,
-            ),
-            SettingsListItem<TargetPlatform>(
-              title: GalleryLocalizations.of(context).settingsPlatformMechanics,
-              selectedOption: options.platform,
-              options: LinkedHashMap.of({
-                TargetPlatform.android:
-                    GalleryLocalizations.of(context).settingsPlatformAndroid,
-                TargetPlatform.iOS:
-                    GalleryLocalizations.of(context).settingsPlatformIOS,
-              }),
-              onOptionChanged: (newPlatform) => GalleryOptions.update(
-                context,
-                options.copyWith(platform: newPlatform),
+                  useSentinel: true,
+                ),
+                options: LinkedHashMap.of({
+                  systemTextScaleFactorOption:
+                      GalleryLocalizations.of(context).settingsSystemDefault,
+                  0.8:
+                      GalleryLocalizations.of(context).settingsTextScalingSmall,
+                  1.0: GalleryLocalizations.of(context)
+                      .settingsTextScalingNormal,
+                  2.0:
+                      GalleryLocalizations.of(context).settingsTextScalingLarge,
+                  3.0: GalleryLocalizations.of(context).settingsTextScalingHuge
+                }),
+                onOptionChanged: (newTextScale) => GalleryOptions.update(
+                  context,
+                  options.copyWith(textScaleFactor: newTextScale),
+                ),
+                onTapSetting: () => onTapSetting(_ExpandableSetting.textScale),
+                isExpanded: expandedSettingId == _ExpandableSetting.textScale,
               ),
-              onTapSetting: () => onTapSetting(_ExpandableSetting.platform),
-              isExpanded: expandedSettingId == _ExpandableSetting.platform,
-            ),
-            SettingsListItem<ThemeMode>(
-              title: GalleryLocalizations.of(context).settingsTheme,
-              selectedOption: options.themeMode,
-              options: LinkedHashMap.of({
-                ThemeMode.system:
-                    GalleryLocalizations.of(context).settingsSystemDefault,
-                ThemeMode.dark:
-                    GalleryLocalizations.of(context).settingsDarkTheme,
-                ThemeMode.light:
-                    GalleryLocalizations.of(context).settingsLightTheme,
-              }),
-              onOptionChanged: (newThemeMode) => GalleryOptions.update(
-                context,
-                options.copyWith(themeMode: newThemeMode),
+              SettingsListItem<CustomTextDirection>(
+                title: GalleryLocalizations.of(context).settingsTextDirection,
+                selectedOption: options.customTextDirection,
+                options: LinkedHashMap.of({
+                  CustomTextDirection.localeBased:
+                      GalleryLocalizations.of(context)
+                          .settingsTextDirectionLocaleBased,
+                  CustomTextDirection.ltr:
+                      GalleryLocalizations.of(context).settingsTextDirectionLTR,
+                  CustomTextDirection.rtl:
+                      GalleryLocalizations.of(context).settingsTextDirectionRTL,
+                }),
+                onOptionChanged: (newTextDirection) => GalleryOptions.update(
+                  context,
+                  options.copyWith(customTextDirection: newTextDirection),
+                ),
+                onTapSetting: () =>
+                    onTapSetting(_ExpandableSetting.textDirection),
+                isExpanded:
+                    expandedSettingId == _ExpandableSetting.textDirection,
               ),
-              onTapSetting: () => onTapSetting(_ExpandableSetting.theme),
-              isExpanded: expandedSettingId == _ExpandableSetting.theme,
-            ),
-            SlowMotionSetting(),
-            if (!isDesktop) ...[
-              SizedBox(height: 16),
-              Divider(thickness: 2, height: 0, color: colorScheme.background),
-              SizedBox(height: 12),
-              SettingsAbout(),
-              SettingsFeedback(),
-              SizedBox(height: 12),
-              Divider(thickness: 2, height: 0, color: colorScheme.background),
-              SettingsAttribution(),
+              SettingsListItem<Locale>(
+                title: GalleryLocalizations.of(context).settingsLocale,
+                selectedOption: options.locale == deviceLocale
+                    ? systemLocaleOption
+                    : options.locale,
+                options: localeOptions,
+                onOptionChanged: (newLocale) {
+                  if (newLocale == systemLocaleOption) {
+                    newLocale = deviceLocale;
+                  }
+                  GalleryOptions.update(
+                    context,
+                    options.copyWith(locale: newLocale),
+                  );
+                },
+                onTapSetting: () => onTapSetting(_ExpandableSetting.locale),
+                isExpanded: expandedSettingId == _ExpandableSetting.locale,
+              ),
+              SettingsListItem<TargetPlatform>(
+                title:
+                    GalleryLocalizations.of(context).settingsPlatformMechanics,
+                selectedOption: options.platform,
+                options: LinkedHashMap.of({
+                  TargetPlatform.android:
+                      GalleryLocalizations.of(context).settingsPlatformAndroid,
+                  TargetPlatform.iOS:
+                      GalleryLocalizations.of(context).settingsPlatformIOS,
+                }),
+                onOptionChanged: (newPlatform) => GalleryOptions.update(
+                  context,
+                  options.copyWith(platform: newPlatform),
+                ),
+                onTapSetting: () => onTapSetting(_ExpandableSetting.platform),
+                isExpanded: expandedSettingId == _ExpandableSetting.platform,
+              ),
+              SettingsListItem<ThemeMode>(
+                title: GalleryLocalizations.of(context).settingsTheme,
+                selectedOption: options.themeMode,
+                options: LinkedHashMap.of({
+                  ThemeMode.system:
+                      GalleryLocalizations.of(context).settingsSystemDefault,
+                  ThemeMode.dark:
+                      GalleryLocalizations.of(context).settingsDarkTheme,
+                  ThemeMode.light:
+                      GalleryLocalizations.of(context).settingsLightTheme,
+                }),
+                onOptionChanged: (newThemeMode) => GalleryOptions.update(
+                  context,
+                  options.copyWith(themeMode: newThemeMode),
+                ),
+                onTapSetting: () => onTapSetting(_ExpandableSetting.theme),
+                isExpanded: expandedSettingId == _ExpandableSetting.theme,
+              ),
+              SlowMotionSetting(),
+              if (!isDesktop) ...[
+                SizedBox(height: 16),
+                Divider(thickness: 2, height: 0, color: colorScheme.background),
+                SizedBox(height: 12),
+                SettingsAbout(),
+                SettingsFeedback(),
+                SizedBox(height: 12),
+                Divider(thickness: 2, height: 0, color: colorScheme.background),
+                SettingsAttribution(),
+              ],
             ],
-          ],
+          ),
         ),
       ),
     );
@@ -291,32 +295,6 @@ class _SettingsLink extends StatelessWidget {
               ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class _CloseSettingsSemantics extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    var backdrop = InheritedBackdrop.of(context);
-    return Align(
-      alignment: AlignmentDirectional.topEnd,
-      child: Semantics(
-        button: true,
-        label: GalleryLocalizations.of(context).settingsButtonCloseLabel,
-        child: SafeArea(
-          child: SizedBox(
-            width: backdrop.settingsButtonWidth,
-            height: isDisplayDesktop(context)
-                ? backdrop.desktopSettingsButtonHeight
-                : backdrop.mobileSettingsButtonHeight,
-            child: GestureDetector(
-              onTap: backdrop.toggleSettings,
-              child: Container(),
-            ),
-          ),
         ),
       ),
     );

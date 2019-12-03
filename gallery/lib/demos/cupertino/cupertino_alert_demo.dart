@@ -7,6 +7,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 
+// BEGIN cupertinoAlertDemo
+
 enum AlertDemoType {
   alert,
   alertTitle,
@@ -333,3 +335,5 @@ class CupertinoDessertDialog extends StatelessWidget {
     );
   }
 }
+
+// END

@@ -554,7 +554,7 @@ class GalleryLocalizations {
   }
 
   String get craneEat4SemanticLabel {
-    return Intl.message(r'Chocolate desert',
+    return Intl.message(r'Chocolate dessert',
         locale: _localeName,
         name: 'craneEat4SemanticLabel',
         desc: r'Semantic label for an image.');
@@ -1366,6 +1366,30 @@ class GalleryLocalizations {
         locale: _localeName,
         name: 'demoCodeTooltip',
         desc: r'Tooltip for code sample button in a demo.');
+  }
+
+  String get demoCodeViewerCopiedToClipboardMessage {
+    return Intl.message(r'Copied to clipboard.',
+        locale: _localeName,
+        name: 'demoCodeViewerCopiedToClipboardMessage',
+        desc:
+            r'A message displayed to the user after clicking the COPY ALL button, if the text is successfully copied to the clipboard.');
+  }
+
+  String get demoCodeViewerCopyAll {
+    return Intl.message(r'COPY ALL',
+        locale: _localeName,
+        name: 'demoCodeViewerCopyAll',
+        desc: r'Caption for a button to copy all text.');
+  }
+
+  String demoCodeViewerFailedToCopyToClipboardMessage(Object error) {
+    return Intl.message(r'Failed to copy to clipboard: $error',
+        locale: _localeName,
+        name: 'demoCodeViewerFailedToCopyToClipboardMessage',
+        desc:
+            r'A message displayed to the user after clicking the COPY ALL button, if the text CANNOT be copied to the clipboard.',
+        args: <Object>[error]);
   }
 
   String get demoColorsDescription {
@@ -3212,28 +3236,12 @@ class GalleryLocalizations {
         other: 'Shopping cart, $quantity items');
   }
 
-  String get shrineScreenReaderCartClearedAndClosed {
-    return Intl.message(r'Cart cleared and closed',
+  String get shrineScreenReaderProductAddToCart {
+    return Intl.message(r'Add to cart',
         locale: _localeName,
-        name: 'shrineScreenReaderCartClearedAndClosed',
+        name: 'shrineScreenReaderProductAddToCart',
         desc:
-            r'An announcement made by screen readers, such as TalkBack and VoiceOver when the shopping cart is cleared and closed.');
-  }
-
-  String get shrineScreenReaderItemRemoved {
-    return Intl.message(r'Removed',
-        locale: _localeName,
-        name: 'shrineScreenReaderItemRemoved',
-        desc:
-            r'An announcement made by screen readers, such as TalkBack and VoiceOver when an item is removed from the shopping cart.');
-  }
-
-  String get shrineScreenReaderProductAddedToCart {
-    return Intl.message(r'Added to cart',
-        locale: _localeName,
-        name: 'shrineScreenReaderProductAddedToCart',
-        desc:
-            r'An announcement made by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart.');
+            r'An announcement made by screen readers, such as TalkBack and VoiceOver to indicate the action of a button for adding a product to the cart.');
   }
 
   String shrineScreenReaderRemoveProductButton(Object product) {

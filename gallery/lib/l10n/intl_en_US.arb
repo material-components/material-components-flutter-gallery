@@ -316,6 +316,23 @@
   "@demoFullscreenTooltip": {
     "description": "Tooltip for Full Screen button in a demo."
   },
+  "demoCodeViewerCopyAll": "COPY ALL",
+  "@demoCodeViewerCopyAll": {
+    "description": "Caption for a button to copy all text."
+  },
+  "demoCodeViewerCopiedToClipboardMessage": "Copied to clipboard.",
+  "@demoCodeViewerCopiedToClipboardMessage": {
+    "description": "A message displayed to the user after clicking the COPY ALL button, if the text is successfully copied to the clipboard."
+  },
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Failed to copy to clipboard: {error}",
+  "@demoCodeViewerFailedToCopyToClipboardMessage": {
+    "description": "A message displayed to the user after clicking the COPY ALL button, if the text CANNOT be copied to the clipboard.",
+    "placeholders": {
+      "error": {
+        "example": "Your browser does not have clipboard support."
+      }
+    }
+  },
   "settingsTitle": "Settings",
   "@settingsTitle": {
     "description": "Title for the settings screen."
@@ -1472,17 +1489,9 @@
       }
     }
   },
-  "shrineScreenReaderItemRemoved": "Removed",
-  "@shrineScreenReaderItemRemoved": {
-    "description": "An announcement made by screen readers, such as TalkBack and VoiceOver when an item is removed from the shopping cart."
-  },
-  "shrineScreenReaderCartClearedAndClosed": "Cart cleared and closed",
-  "@shrineScreenReaderCartClearedAndClosed": {
-    "description": "An announcement made by screen readers, such as TalkBack and VoiceOver when the shopping cart is cleared and closed."
-  },
-  "shrineScreenReaderProductAddedToCart": "Added to cart",
-  "@shrineScreenReaderProductAddedToCart": {
-    "description": "An announcement made by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart."
+  "shrineScreenReaderProductAddToCart": "Add to cart",
+  "@shrineScreenReaderProductAddToCart": {
+    "description": "An announcement made by screen readers, such as TalkBack and VoiceOver to indicate the action of a button for adding a product to the cart."
   },
   "shrineScreenReaderRemoveProductButton": "Remove {product}",
   "@shrineScreenReaderRemoveProductButton": {
@@ -1848,7 +1857,7 @@
   "@craneEat3SemanticLabel": {
     "description": "Semantic label for an image."
   },
-  "craneEat4SemanticLabel": "Chocolate desert",
+  "craneEat4SemanticLabel": "Chocolate dessert",
   "@craneEat4SemanticLabel": {
     "description": "Semantic label for an image."
   },

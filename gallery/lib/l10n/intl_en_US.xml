@@ -286,6 +286,18 @@
     description="Tooltip for Full Screen button in a demo."
     >Full Screen</string>
   <string
+    name="demoCodeViewerCopyAll"
+    description="Caption for a button to copy all text."
+    >COPY ALL</string>
+  <string
+    name="demoCodeViewerCopiedToClipboardMessage"
+    description="A message displayed to the user after clicking the COPY ALL button, if the text is successfully copied to the clipboard."
+    >Copied to clipboard.</string>
+  <string
+    name="demoCodeViewerFailedToCopyToClipboardMessage"
+    description="A message displayed to the user after clicking the COPY ALL button, if the text CANNOT be copied to the clipboard."
+    >Failed to copy to clipboard: {error}</string>
+  <string
     name="settingsTitle"
     description="Title for the settings screen."
     >Settings</string>
@@ -1386,17 +1398,9 @@
     description="The description of a shopping cart button containing some products. Used by screen readers, such as TalkBack and VoiceOver."
     >{quantity, plural, =0{Shopping cart, no items} =1{Shopping cart, 1 item} other{Shopping cart, {quantity} items}}</string>
   <string
-    name="shrineScreenReaderItemRemoved"
-    description="An announcement made by screen readers, such as TalkBack and VoiceOver when an item is removed from the shopping cart."
-    >Removed</string>
-  <string
-    name="shrineScreenReaderCartClearedAndClosed"
-    description="An announcement made by screen readers, such as TalkBack and VoiceOver when the shopping cart is cleared and closed."
-    >Cart cleared and closed</string>
-  <string
-    name="shrineScreenReaderProductAddedToCart"
-    description="An announcement made by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart."
-    >Added to cart</string>
+    name="shrineScreenReaderProductAddToCart"
+    description="An announcement made by screen readers, such as TalkBack and VoiceOver to indicate the action of a button for adding a product to the cart."
+    >Add to cart</string>
   <string
     name="shrineScreenReaderRemoveProductButton"
     description="A tooltip for a button to remove a product. This will be read by screen readers, such as TalkBack and VoiceOver when a product is added to the shopping cart."
@@ -1744,7 +1748,7 @@
   <string
     name="craneEat4SemanticLabel"
     description="Semantic label for an image."
-    >Chocolate desert</string>
+    >Chocolate dessert</string>
   <string
     name="craneEat5SemanticLabel"
     description="Semantic label for an image."
