@@ -663,7 +663,10 @@ class _CarouselCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-    final isDark = Theme.of(context).colorScheme.brightness == Brightness.dark;
+    // TODO: Update with newer assets when we have them. For now, always use the
+    //  dark assets.
+    // Theme.of(context).colorScheme.brightness == Brightness.dark;
+    final isDark = true;
     final asset = isDark ? assetDark : this.asset;
     final textColor = isDark ? Colors.white.withOpacity(0.87) : this.textColor;
 
