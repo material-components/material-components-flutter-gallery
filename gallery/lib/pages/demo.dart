@@ -235,13 +235,13 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
         );
         section = CodeStyle(
           baseStyle: codeTheme.copyWith(color: Color(0xFFFAFBFB)),
-          numberStyle: codeTheme.copyWith(color: Color(0xFFCE63FF)),
+          numberStyle: codeTheme.copyWith(color: Color(0xFFBD93F9)),
           commentStyle: codeTheme.copyWith(color: Color(0xFF808080)),
           keywordStyle: codeTheme.copyWith(color: Color(0xFF1CDEC9)),
-          stringStyle: codeTheme.copyWith(color: Color(0xFFFF8383)),
+          stringStyle: codeTheme.copyWith(color: Color(0xFFFFA65C)),
           punctuationStyle: codeTheme.copyWith(color: Color(0xFF8BE9FD)),
-          classStyle: codeTheme.copyWith(color: Color(0xFFFF5722)),
-          constantStyle: codeTheme.copyWith(color: Color(0xFFB93C5D)),
+          classStyle: codeTheme.copyWith(color: Color(0xFFD65BAD)),
+          constantStyle: codeTheme.copyWith(color: Color(0xFFFF8383)),
           child: _DemoSectionCode(
             maxHeight: maxSectionHeight,
             codeWidget: CodeDisplayPage(
