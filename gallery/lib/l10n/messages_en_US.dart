@@ -143,7 +143,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Korean taco"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
         "craneEat4SemanticLabel":
-            MessageLookupByLibrary.simpleMessage("Chocolate desert"),
+            MessageLookupByLibrary.simpleMessage("Chocolate dessert"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
         "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
             "Artsy restaurant seating area"),

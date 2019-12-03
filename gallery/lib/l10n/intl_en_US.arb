@@ -1848,7 +1848,7 @@
   "@craneEat3SemanticLabel": {
     "description": "Semantic label for an image."
   },
-  "craneEat4SemanticLabel": "Chocolate desert",
+  "craneEat4SemanticLabel": "Chocolate dessert",
   "@craneEat4SemanticLabel": {
     "description": "Semantic label for an image."
   },

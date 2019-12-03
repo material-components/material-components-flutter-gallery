@@ -554,7 +554,7 @@ class GalleryLocalizations {
   }
 
   String get craneEat4SemanticLabel {
-    return Intl.message(r'Chocolate desert',
+    return Intl.message(r'Chocolate dessert',
         locale: _localeName,
         name: 'craneEat4SemanticLabel',
         desc: r'Semantic label for an image.');
