@@ -15,6 +15,7 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/pages/category_list_item.dart';
 import 'package:gallery/pages/settings.dart';
+import 'package:gallery/pages/splash.dart';
 import 'package:gallery/studies/crane/app.dart';
 import 'package:gallery/studies/crane/colors.dart';
 import 'package:gallery/studies/rally/app.dart';
@@ -144,6 +145,8 @@ class HomePage extends StatelessWidget {
     } else {
       return Scaffold(
         body: _AnimatedHomePage(
+          isSplashPageAnimationFinished:
+              SplashPageAnimation.of(context).isFinished,
           carouselCards: carouselCards,
         ),
       );
@@ -208,9 +211,14 @@ class Header extends StatelessWidget {
 }
 
 class _AnimatedHomePage extends StatefulWidget {
-  const _AnimatedHomePage({Key key, this.carouselCards}) : super(key: key);
+  const _AnimatedHomePage({
+    Key key,
+    @required this.carouselCards,
+    @required this.isSplashPageAnimationFinished,
+  }) : super(key: key);
 
   final List<Widget> carouselCards;
+  final bool isSplashPageAnimationFinished;
 
   @override
   _AnimatedHomePageState createState() => _AnimatedHomePageState();
@@ -228,14 +236,25 @@ class _AnimatedHomePageState extends State<_AnimatedHomePage>
       vsync: this,
       duration: Duration(milliseconds: 800),
     );
-    // Wait for the splash page animation to be finished.
-    _launchTimer = Timer(
+
+    if (widget.isSplashPageAnimationFinished) {
+      // To avoid the animation from running when changing the window size from
+      // desktop to mobile, we do not animate our widget if the
+      // splash page animation is finished on initState.
+      _animationController.value = 1.0;
+    } else {
+      // Wait for the splash page animation to be finished before
+      // starting ours.
+      _launchTimer = Timer(
         const Duration(
           seconds: launchTimerDurationInSeconds,
           milliseconds: splashPageAnimationDurationInMilliseconds,
-        ), () {
-      _animationController.forward();
-    });
+        ),
+        () {
+          _animationController.forward();
+        },
+      );
+    }
   }
 
   @override

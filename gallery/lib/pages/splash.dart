@@ -10,6 +10,24 @@ import 'package:flutter/material.dart';
 import 'package:gallery/constants.dart';
 import 'package:gallery/layout/adaptive.dart';
 
+class SplashPageAnimation extends InheritedWidget {
+  const SplashPageAnimation({
+    Key key,
+    @required this.isFinished,
+    @required Widget child,
+  })  : assert(child != null),
+        super(key: key, child: child);
+
+  final bool isFinished;
+
+  static SplashPageAnimation of(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType();
+  }
+
+  @override
+  bool updateShouldNotify(SplashPageAnimation old) => true;
+}
+
 class SplashPage extends StatefulWidget {
   const SplashPage({
     Key key,
@@ -76,35 +94,38 @@ class _SplashPageState extends State<SplashPage>
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (context, constraints) {
-        final Animation<RelativeRect> animation =
-            _getPanelAnimation(constraints);
-        Widget frontLayer = widget.child;
-        if (isDisplayDesktop(context)) {
-          frontLayer = Padding(
-            padding: const EdgeInsets.only(top: 136),
-            child: ClipRRect(
-              borderRadius: BorderRadius.vertical(
-                top: Radius.circular(40),
+    return SplashPageAnimation(
+      isFinished: _controller.status == AnimationStatus.dismissed,
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final Animation<RelativeRect> animation =
+              _getPanelAnimation(constraints);
+          Widget frontLayer = widget.child;
+          if (isDisplayDesktop(context)) {
+            frontLayer = Padding(
+              padding: const EdgeInsets.only(top: 136),
+              child: ClipRRect(
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(40),
+                ),
+                child: frontLayer,
               ),
-              child: frontLayer,
-            ),
-          );
-        }
+            );
+          }
 
-        return Stack(
-          children: [
-            _SplashBackLayer(
-              isCollapsed: !_isSplashVisible || !widget.isAnimated,
-            ),
-            PositionedTransition(
-              rect: animation,
-              child: frontLayer,
-            ),
-          ],
-        );
-      },
+          return Stack(
+            children: [
+              _SplashBackLayer(
+                isCollapsed: !_isSplashVisible || !widget.isAnimated,
+              ),
+              PositionedTransition(
+                rect: animation,
+                child: frontLayer,
+              ),
+            ],
+          );
+        },
+      ),
     );
   }
 }
