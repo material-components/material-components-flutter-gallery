@@ -446,11 +446,9 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
       );
     }
 
-    return ExcludeSemantics(
-      child: Opacity(
-        opacity: _thumbnailOpacityAnimation.value,
-        child: thumbnails,
-      ),
+    return Opacity(
+      opacity: _thumbnailOpacityAnimation.value,
+      child: thumbnails,
     );
   }
 
@@ -512,15 +510,10 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
     );
 
     final Widget childWithInteraction = productPageIsVisible(context)
-        ? Semantics(
-            button: true,
-            value: GalleryLocalizations.of(context)
-                .shrineScreenReaderCart(totalCartQuantity),
-            child: GestureDetector(
-              behavior: HitTestBehavior.opaque,
-              onTap: open,
-              child: child,
-            ),
+        ? GestureDetector(
+            behavior: HitTestBehavior.opaque,
+            onTap: open,
+            child: child,
           )
         : child;
 

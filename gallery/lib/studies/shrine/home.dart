@@ -59,21 +59,13 @@ class HomePage extends StatelessWidget {
     return ApplyTextOptions(
       child: Stack(
         children: [
-          Semantics(
-            container: true,
-            child: backdrop,
-            sortKey: OrdinalSortKey(1),
-          ),
-          ExcludeSemantics(child: scrim),
-          Semantics(
-            container: true,
-            child: Align(
-              child: expandingBottomSheet,
-              alignment: isDesktop
-                  ? AlignmentDirectional.topEnd
-                  : AlignmentDirectional.bottomEnd,
-            ),
-            sortKey: OrdinalSortKey(0),
+          backdrop,
+          scrim,
+          Align(
+            child: expandingBottomSheet,
+            alignment: isDesktop
+                ? AlignmentDirectional.topEnd
+                : AlignmentDirectional.bottomEnd,
           ),
         ],
       ),

@@ -150,75 +150,67 @@ class ShoppingCartSummary extends StatelessWidget {
             padding: const EdgeInsetsDirectional.only(end: 16),
             child: Column(
               children: [
-                MergeSemantics(
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        GalleryLocalizations.of(context).shrineCartTotalCaption,
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      GalleryLocalizations.of(context).shrineCartTotalCaption,
+                    ),
+                    Expanded(
+                      child: Text(
+                        formatter.format(model.totalCost),
+                        style: largeAmountStyle,
+                        textAlign: TextAlign.end,
                       ),
-                      Expanded(
-                        child: Text(
-                          formatter.format(model.totalCost),
-                          style: largeAmountStyle,
-                          textAlign: TextAlign.end,
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 16),
-                MergeSemantics(
-                  child: Row(
-                    children: [
-                      Text(
-                        GalleryLocalizations.of(context)
-                            .shrineCartSubtotalCaption,
+                Row(
+                  children: [
+                    Text(
+                      GalleryLocalizations.of(context)
+                          .shrineCartSubtotalCaption,
+                    ),
+                    Expanded(
+                      child: Text(
+                        formatter.format(model.subtotalCost),
+                        style: smallAmountStyle,
+                        textAlign: TextAlign.end,
                       ),
-                      Expanded(
-                        child: Text(
-                          formatter.format(model.subtotalCost),
-                          style: smallAmountStyle,
-                          textAlign: TextAlign.end,
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 4),
-                MergeSemantics(
-                  child: Row(
-                    children: [
-                      Text(
-                        GalleryLocalizations.of(context)
-                            .shrineCartShippingCaption,
+                Row(
+                  children: [
+                    Text(
+                      GalleryLocalizations.of(context)
+                          .shrineCartShippingCaption,
+                    ),
+                    Expanded(
+                      child: Text(
+                        formatter.format(model.shippingCost),
+                        style: smallAmountStyle,
+                        textAlign: TextAlign.end,
                       ),
-                      Expanded(
-                        child: Text(
-                          formatter.format(model.shippingCost),
-                          style: smallAmountStyle,
-                          textAlign: TextAlign.end,
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 4),
-                MergeSemantics(
-                  child: Row(
-                    children: [
-                      Text(
-                        GalleryLocalizations.of(context).shrineCartTaxCaption,
+                Row(
+                  children: [
+                    Text(
+                      GalleryLocalizations.of(context).shrineCartTaxCaption,
+                    ),
+                    Expanded(
+                      child: Text(
+                        formatter.format(model.tax),
+                        style: smallAmountStyle,
+                        textAlign: TextAlign.end,
                       ),
-                      Expanded(
-                        child: Text(
-                          formatter.format(model.tax),
-                          style: smallAmountStyle,
-                          textAlign: TextAlign.end,
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -254,21 +246,12 @@ class ShoppingCartRow extends StatelessWidget {
         key: ValueKey<int>(product.id),
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Semantics(
-            container: true,
-            label: GalleryLocalizations.of(context)
-                .shrineScreenReaderRemoveProductButton(product.name(context)),
-            button: true,
-            child: ExcludeSemantics(
-              child: SizedBox(
-                width: _startColumnWidth,
-                child: IconButton(
-                  icon: const Icon(Icons.remove_circle_outline),
-                  onPressed: onPressed,
-                  tooltip:
-                      GalleryLocalizations.of(context).shrineTooltipRemoveItem,
-                ),
-              ),
+          SizedBox(
+            width: _startColumnWidth,
+            child: IconButton(
+              icon: const Icon(Icons.remove_circle_outline),
+              onPressed: onPressed,
+              tooltip: GalleryLocalizations.of(context).shrineTooltipRemoveItem,
             ),
           ),
           Expanded(
@@ -285,39 +268,35 @@ class ShoppingCartRow extends StatelessWidget {
                         fit: BoxFit.cover,
                         width: 75,
                         height: 75,
-                        excludeFromSemantics: true,
+                        // excludeFromSemantics: true,
                       ),
                       const SizedBox(width: 16),
                       Expanded(
-                        child: MergeSemantics(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              MergeSemantics(
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                      child: Text(
-                                        GalleryLocalizations.of(context)
-                                            .shrineProductQuantity(quantity),
-                                      ),
-                                    ),
-                                    Text(
-                                      GalleryLocalizations.of(context)
-                                          .shrineProductPrice(
-                                        formatter.format(product.price),
-                                      ),
-                                    ),
-                                  ],
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Expanded(
+                                  child: Text(
+                                    GalleryLocalizations.of(context)
+                                        .shrineProductQuantity(quantity),
+                                  ),
                                 ),
-                              ),
-                              Text(
-                                product.name(context),
-                                style: localTheme.textTheme.subhead
-                                    .copyWith(fontWeight: FontWeight.w600),
-                              ),
-                            ],
-                          ),
+                                Text(
+                                  GalleryLocalizations.of(context)
+                                      .shrineProductPrice(
+                                    formatter.format(product.price),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Text(
+                              product.name(context),
+                              style: localTheme.textTheme.subhead
+                                  .copyWith(fontWeight: FontWeight.w600),
+                            ),
+                          ],
                         ),
                       ),
                     ],

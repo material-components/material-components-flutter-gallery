@@ -58,8 +58,8 @@ class _FrontLayer extends StatelessWidget {
           onTap != null
               ? GestureDetector(
                   behavior: HitTestBehavior.opaque,
-                  excludeFromSemantics:
-                      true, // Because there is already a "Close Menu" button on screen.
+                  // excludeFromSemantics:
+                  //     true, // Because there is already a "Close Menu" button on screen.
                   onTap: onTap,
                   child: pageTopArea,
                 )
@@ -311,24 +311,18 @@ class _BackdropState extends State<Backdrop>
     return Stack(
       key: _backdropKey,
       children: [
-        ExcludeSemantics(
-          excluding: _frontLayerVisible,
-          child: widget.backLayer,
-        ),
+        widget.backLayer,
         PositionedTransition(
           rect: _layerAnimation,
-          child: ExcludeSemantics(
-            excluding: !_frontLayerVisible,
-            child: AnimatedBuilder(
-              animation: PageStatus.of(context).cartController,
-              builder: (context, child) => AnimatedBuilder(
-                animation: PageStatus.of(context).menuController,
-                builder: (context, child) => _FrontLayer(
-                  onTap: menuPageIsVisible(context)
-                      ? _toggleBackdropLayerVisibility
-                      : null,
-                  child: widget.frontLayer,
-                ),
+          child: AnimatedBuilder(
+            animation: PageStatus.of(context).cartController,
+            builder: (context, child) => AnimatedBuilder(
+              animation: PageStatus.of(context).menuController,
+              builder: (context, child) => _FrontLayer(
+                onTap: menuPageIsVisible(context)
+                    ? _toggleBackdropLayerVisibility
+                    : null,
+                child: widget.frontLayer,
               ),
             ),
           ),
@@ -364,13 +358,10 @@ class _BackdropState extends State<Backdrop>
     );
     return AnimatedBuilder(
       animation: PageStatus.of(context).cartController,
-      builder: (context, child) => ExcludeSemantics(
-        excluding: cartPageIsVisible(context),
-        child: Scaffold(
-          appBar: appBar,
-          body: LayoutBuilder(
-            builder: _buildStack,
-          ),
+      builder: (context, child) => Scaffold(
+        appBar: appBar,
+        body: LayoutBuilder(
+          builder: _buildStack,
         ),
       ),
     );

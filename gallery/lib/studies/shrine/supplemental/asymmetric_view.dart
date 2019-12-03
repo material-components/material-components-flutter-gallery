@@ -148,23 +148,20 @@ class MobileAsymmetricView extends StatelessWidget {
       animation: PageStatus.of(context).cartController,
       builder: (context, child) => AnimatedBuilder(
         animation: PageStatus.of(context).menuController,
-        builder: (context, child) => ExcludeSemantics(
-          excluding: !productPageIsVisible(context),
-          child: LayoutBuilder(
-            builder: (context, constraints) {
-              return ListView(
-                scrollDirection: Axis.horizontal,
-                padding: const EdgeInsetsDirectional.fromSTEB(
-                  0,
-                  _topPadding,
-                  16,
-                  _bottomPadding,
-                ),
-                children: _buildColumns(context, constraints),
-                physics: const AlwaysScrollableScrollPhysics(),
-              );
-            },
-          ),
+        builder: (context, child) => LayoutBuilder(
+          builder: (context, constraints) {
+            return ListView(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsetsDirectional.fromSTEB(
+                0,
+                _topPadding,
+                16,
+                _bottomPadding,
+              ),
+              children: _buildColumns(context, constraints),
+              physics: const AlwaysScrollableScrollPhysics(),
+            );
+          },
         ),
       ),
     );
@@ -234,33 +231,30 @@ class DesktopAsymmetricView extends StatelessWidget {
 
     return AnimatedBuilder(
       animation: PageStatus.of(context).cartController,
-      builder: (context, child) => ExcludeSemantics(
-        excluding: !productPageIsVisible(context),
-        child: ListView(
-          scrollDirection: Axis.vertical,
-          children: [
-            Container(height: 60),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                _flex,
-                ...List<Widget>.generate(
-                  2 * columnCount - 1,
-                  (generalizedColumnIndex) {
-                    if (generalizedColumnIndex % 2 == 0) {
-                      return productCardColumns[generalizedColumnIndex ~/ 2];
-                    } else {
-                      return _gap;
-                    }
-                  },
-                ),
-                _flex,
-              ],
-            ),
-            Container(height: 60),
-          ],
-          physics: const AlwaysScrollableScrollPhysics(),
-        ),
+      builder: (context, child) => ListView(
+        scrollDirection: Axis.vertical,
+        children: [
+          Container(height: 60),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              _flex,
+              ...List<Widget>.generate(
+                2 * columnCount - 1,
+                (generalizedColumnIndex) {
+                  if (generalizedColumnIndex % 2 == 0) {
+                    return productCardColumns[generalizedColumnIndex ~/ 2];
+                  } else {
+                    return _gap;
+                  }
+                },
+              ),
+              _flex,
+            ],
+          ),
+          Container(height: 60),
+        ],
+        physics: const AlwaysScrollableScrollPhysics(),
       ),
     );
   }
