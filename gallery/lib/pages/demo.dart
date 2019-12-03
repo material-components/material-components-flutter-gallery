@@ -625,7 +625,7 @@ class _DemoSectionCode extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.only(bottom: 16),
         child: Container(
-          color: isDesktop ? null : Color(0xFF241E30),
+          color: isDesktop ? null : GalleryThemeData.darkThemeData.canvasColor,
           padding: EdgeInsets.symmetric(horizontal: 16),
           height: maxHeight,
           child: codeWidget,
@@ -672,31 +672,33 @@ class CodeDisplayPage extends StatelessWidget {
     }
 
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         if (hasCopyButton)
-          Row(
-            children: [
-              Container(
-                padding: isDesktop
-                    ? EdgeInsets.only(bottom: 8)
-                    : EdgeInsets.symmetric(vertical: 8),
-                child: FlatButton(
-                  color: const Color(0xFF322942),
-                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(4)),
-                  ),
-                  onPressed: () async {
-                    await Clipboard.setData(ClipboardData(text: _plainTextCode))
-                        .then(_showSnackBarOnCopySuccess)
-                        .catchError(_showSnackBarOnCopyFailure);
-                  },
-                  child: Text(
-                    GalleryLocalizations.of(context).demoCodeViewerCopyAll,
-                  ),
-                ),
+          Padding(
+            padding: isDesktop
+                ? EdgeInsets.only(bottom: 8)
+                : EdgeInsets.symmetric(vertical: 8),
+            child: FlatButton(
+              color: Colors.white.withOpacity(0.15),
+              materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              padding: EdgeInsets.symmetric(horizontal: 8),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(4)),
               ),
-            ],
+              onPressed: () async {
+                await Clipboard.setData(ClipboardData(text: _plainTextCode))
+                    .then(_showSnackBarOnCopySuccess)
+                    .catchError(_showSnackBarOnCopyFailure);
+              },
+              child: Text(
+                GalleryLocalizations.of(context).demoCodeViewerCopyAll,
+                style: Theme.of(context).textTheme.button.copyWith(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+              ),
+            ),
           ),
         Expanded(
           child: SingleChildScrollView(
