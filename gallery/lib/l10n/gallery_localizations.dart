@@ -1368,6 +1368,30 @@ class GalleryLocalizations {
         desc: r'Tooltip for code sample button in a demo.');
   }
 
+  String get demoCodeViewerCopiedToClipboardMessage {
+    return Intl.message(r'Copied to clipboard.',
+        locale: _localeName,
+        name: 'demoCodeViewerCopiedToClipboardMessage',
+        desc:
+            r'A message displayed to the user after clicking the COPY ALL button, if the text is successfully copied to the clipboard.');
+  }
+
+  String get demoCodeViewerCopyAll {
+    return Intl.message(r'COPY ALL',
+        locale: _localeName,
+        name: 'demoCodeViewerCopyAll',
+        desc: r'Caption for a button to copy all text.');
+  }
+
+  String demoCodeViewerFailedToCopyToClipboardMessage(Object error) {
+    return Intl.message(r'Failed to copy to clipboard: $error',
+        locale: _localeName,
+        name: 'demoCodeViewerFailedToCopyToClipboardMessage',
+        desc:
+            r'A message displayed to the user after clicking the COPY ALL button, if the text CANNOT be copied to the clipboard.',
+        args: <Object>[error]);
+  }
+
   String get demoColorsDescription {
     return Intl.message(
         r'Color and color swatch constants which represent Material Design'

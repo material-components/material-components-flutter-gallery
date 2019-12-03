@@ -144,4 +144,9 @@ flutter:
           weight: 500
         - asset: fonts/Rubik-Bold.ttf
           weight: 600
+    # Code font
+    - family: Roboto Mono
+      fonts:
+        - asset: fonts/RobotoMono-Regular.ttf
+          weight: 500
 

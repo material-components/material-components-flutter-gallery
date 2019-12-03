@@ -55,6 +55,8 @@ class SelectionControlsDemo extends StatelessWidget {
   }
 }
 
+// BEGIN selectionControlsDemoCheckbox
+
 class _CheckboxDemo extends StatefulWidget {
   @override
   _CheckboxDemoState createState() => _CheckboxDemoState();
@@ -102,6 +104,10 @@ class _CheckboxDemoState extends State<_CheckboxDemo> {
   }
 }
 
+// END
+
+// BEGIN selectionControlsDemoRadio
+
 class _RadioDemo extends StatefulWidget {
   @override
   _RadioDemoState createState() => _RadioDemoState();
@@ -134,6 +140,10 @@ class _RadioDemoState extends State<_RadioDemo> {
   }
 }
 
+// END
+
+// BEGIN selectionControlsDemoSwitches
+
 class _SwitchDemo extends StatefulWidget {
   @override
   _SwitchDemoState createState() => _SwitchDemoState();
@@ -156,3 +166,5 @@ class _SwitchDemoState extends State<_SwitchDemo> {
     );
   }
 }
+
+// END

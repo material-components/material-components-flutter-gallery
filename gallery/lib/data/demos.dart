@@ -4,6 +4,8 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gallery/codeviewer/code_displayer.dart';
+import 'package:gallery/codeviewer/code_segments.dart';
 import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/data/icons.dart';
 import 'package:gallery/demos/cupertino/cupertino_alert_demo.dart';
@@ -45,12 +47,14 @@ class GalleryDemoConfiguration {
     this.description,
     this.documentationUrl,
     this.buildRoute,
+    this.code,
   });
 
   final String title;
   final String description;
   final String documentationUrl;
   final WidgetBuilder buildRoute;
+  final CodeDisplayer code;
 }
 
 List<GalleryDemo> materialDemos(BuildContext context) {
@@ -69,6 +73,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
               'https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html',
           buildRoute: (_) =>
               BottomNavigationDemo(type: BottomNavigationDemoType.withLabels),
+          code: CodeSegments.bottomNavigationDemo,
         ),
         GalleryDemoConfiguration(
           title: GalleryLocalizations.of(context)
@@ -79,6 +84,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
               'https://api.flutter.dev/flutter/material/BottomNavigationBar-class.html',
           buildRoute: (_) => BottomNavigationDemo(
               type: BottomNavigationDemoType.withoutLabels),
+          code: CodeSegments.bottomNavigationDemo,
         ),
       ],
     ),
@@ -96,6 +102,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
               'https://api.flutter.dev/flutter/material/BottomSheet-class.html',
           buildRoute: (_) =>
               BottomSheetDemo(type: BottomSheetDemoType.persistent),
+          code: CodeSegments.bottomSheetDemoPersistent,
         ),
         GalleryDemoConfiguration(
           title: GalleryLocalizations.of(context).demoBottomSheetModalTitle,
@@ -104,6 +111,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/material/BottomSheet-class.html',
           buildRoute: (_) => BottomSheetDemo(type: BottomSheetDemoType.modal),
+          code: CodeSegments.bottomSheetDemoModal,
         ),
       ],
     ),
@@ -119,6 +127,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://docs.flutter.io/flutter/material/FlatButton-class.html',
           buildRoute: (_) => ButtonDemo(type: ButtonDemoType.flat),
+          code: CodeSegments.buttonDemoFlat,
         ),
         GalleryDemoConfiguration(
           title: GalleryLocalizations.of(context).demoRaisedButtonTitle,
@@ -127,6 +136,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://docs.flutter.io/flutter/material/RaisedButton-class.html',
           buildRoute: (_) => ButtonDemo(type: ButtonDemoType.raised),
+          code: CodeSegments.buttonDemoRaised,
         ),
         GalleryDemoConfiguration(
           title: GalleryLocalizations.of(context).demoOutlineButtonTitle,
@@ -135,6 +145,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://docs.flutter.io/flutter/material/OutlineButton-class.html',
           buildRoute: (_) => ButtonDemo(type: ButtonDemoType.outline),
+          code: CodeSegments.buttonDemoOutline,
         ),
         GalleryDemoConfiguration(
           title: GalleryLocalizations.of(context).demoToggleButtonTitle,
@@ -143,6 +154,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://docs.flutter.io/flutter/material/ToggleButtons-class.html',
           buildRoute: (_) => ButtonDemo(type: ButtonDemoType.toggle),
+          code: CodeSegments.buttonDemoToggle,
         ),
         GalleryDemoConfiguration(
           title: GalleryLocalizations.of(context).demoFloatingButtonTitle,
@@ -151,6 +163,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://docs.flutter.io/flutter/material/FloatingActionButton-class.html',
           buildRoute: (_) => ButtonDemo(type: ButtonDemoType.floating),
+          code: CodeSegments.buttonDemoFloating,
         ),
       ],
     ),
@@ -166,6 +179,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/material/ActionChip-class.html',
           buildRoute: (_) => ChipDemo(type: ChipDemoType.action),
+          code: CodeSegments.chipDemoAction,
         ),
         GalleryDemoConfiguration(
           title: GalleryLocalizations.of(context).demoChoiceChipTitle,
@@ -174,6 +188,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/material/ChoiceChip-class.html',
           buildRoute: (_) => ChipDemo(type: ChipDemoType.choice),
+          code: CodeSegments.chipDemoChoice,
         ),
         GalleryDemoConfiguration(
           title: GalleryLocalizations.of(context).demoFilterChipTitle,
@@ -182,6 +197,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/material/FilterChip-class.html',
           buildRoute: (_) => ChipDemo(type: ChipDemoType.filter),
+          code: CodeSegments.chipDemoFilter,
         ),
         GalleryDemoConfiguration(
           title: GalleryLocalizations.of(context).demoInputChipTitle,
@@ -190,6 +206,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/material/InputChip-class.html',
           buildRoute: (_) => ChipDemo(type: ChipDemoType.input),
+          code: CodeSegments.chipDemoInput,
         ),
       ],
     ),
@@ -205,6 +222,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/material/AlertDialog-class.html',
           buildRoute: (_) => DialogDemo(type: DialogDemoType.alert),
+          code: CodeSegments.dialogDemo,
         ),
         GalleryDemoConfiguration(
           title: GalleryLocalizations.of(context).demoAlertTitleDialogTitle,
@@ -213,6 +231,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/material/AlertDialog-class.html',
           buildRoute: (_) => DialogDemo(type: DialogDemoType.alertTitle),
+          code: CodeSegments.dialogDemo,
         ),
         GalleryDemoConfiguration(
           title: GalleryLocalizations.of(context).demoSimpleDialogTitle,
@@ -221,6 +240,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/material/SimpleDialog-class.html',
           buildRoute: (_) => DialogDemo(type: DialogDemoType.simple),
+          code: CodeSegments.dialogDemo,
         ),
         GalleryDemoConfiguration(
           title: GalleryLocalizations.of(context).demoFullscreenDialogTitle,
@@ -229,6 +249,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/widgets/PageRoute/fullscreenDialog.html',
           buildRoute: (_) => DialogDemo(type: DialogDemoType.fullscreen),
+          code: CodeSegments.dialogDemo,
         ),
       ],
     ),
@@ -243,6 +264,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/material/ListTile-class.html',
           buildRoute: (context) => ListDemo(type: ListDemoType.oneLine),
+          code: CodeSegments.listDemo,
         ),
         GalleryDemoConfiguration(
           title: GalleryLocalizations.of(context).demoTwoLineListsTitle,
@@ -250,6 +272,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/material/ListTile-class.html',
           buildRoute: (context) => ListDemo(type: ListDemoType.twoLine),
+          code: CodeSegments.listDemo,
         ),
       ],
     ),
@@ -268,6 +291,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           buildRoute: (context) => SelectionControlsDemo(
             type: SelectionControlsDemoType.checkbox,
           ),
+          code: CodeSegments.selectionControlsDemoCheckbox,
         ),
         GalleryDemoConfiguration(
           title:
@@ -279,6 +303,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           buildRoute: (context) => SelectionControlsDemo(
             type: SelectionControlsDemoType.radio,
           ),
+          code: CodeSegments.selectionControlsDemoRadio,
         ),
         GalleryDemoConfiguration(
           title:
@@ -290,6 +315,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           buildRoute: (context) => SelectionControlsDemo(
             type: SelectionControlsDemoType.switches,
           ),
+          code: CodeSegments.selectionControlsDemoSwitches,
         ),
       ],
     ),
@@ -304,6 +330,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/material/TabBarView-class.html',
           buildRoute: (context) => TabsDemo(),
+          code: CodeSegments.tabsDemo,
         ),
       ],
     ),
@@ -319,6 +346,7 @@ List<GalleryDemo> materialDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/material/TextField-class.html',
           buildRoute: (_) => TextFieldDemo(),
+          code: CodeSegments.textFieldDemo,
         ),
       ],
     ),
@@ -339,6 +367,7 @@ List<GalleryDemo> cupertinoDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/cupertino/CupertinoButton-class.html',
           buildRoute: (_) => CupertinoButtonDemo(),
+          code: CodeSegments.cupertinoButtonDemo,
         ),
       ],
     ),
@@ -354,6 +383,7 @@ List<GalleryDemo> cupertinoDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/cupertino/CupertinoAlertDialog-class.html',
           buildRoute: (_) => CupertinoAlertDemo(type: AlertDemoType.alert),
+          code: CodeSegments.cupertinoAlertDemo,
         ),
         GalleryDemoConfiguration(
           title:
@@ -363,6 +393,7 @@ List<GalleryDemo> cupertinoDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/cupertino/CupertinoAlertDialog-class.html',
           buildRoute: (_) => CupertinoAlertDemo(type: AlertDemoType.alertTitle),
+          code: CodeSegments.cupertinoAlertDemo,
         ),
         GalleryDemoConfiguration(
           title:
@@ -373,6 +404,7 @@ List<GalleryDemo> cupertinoDemos(BuildContext context) {
               'https://api.flutter.dev/flutter/cupertino/CupertinoAlertDialog-class.html',
           buildRoute: (_) =>
               CupertinoAlertDemo(type: AlertDemoType.alertButtons),
+          code: CodeSegments.cupertinoAlertDemo,
         ),
         GalleryDemoConfiguration(
           title: GalleryLocalizations.of(context)
@@ -383,6 +415,7 @@ List<GalleryDemo> cupertinoDemos(BuildContext context) {
               'https://api.flutter.dev/flutter/cupertino/CupertinoAlertDialog-class.html',
           buildRoute: (_) =>
               CupertinoAlertDemo(type: AlertDemoType.alertButtonsOnly),
+          code: CodeSegments.cupertinoAlertDemo,
         ),
         GalleryDemoConfiguration(
           title: GalleryLocalizations.of(context).demoCupertinoActionSheetTitle,
@@ -392,6 +425,7 @@ List<GalleryDemo> cupertinoDemos(BuildContext context) {
               'https://api.flutter.dev/flutter/cupertino/CupertinoActionSheet-class.html',
           buildRoute: (_) =>
               CupertinoAlertDemo(type: AlertDemoType.actionSheet),
+          code: CodeSegments.cupertinoAlertDemo,
         ),
       ],
     ),
@@ -410,6 +444,7 @@ List<GalleryDemo> cupertinoDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/cupertino/CupertinoSegmentedControl-class.html',
           buildRoute: (_) => CupertinoSegmentedControlDemo(),
+          code: CodeSegments.cupertinoSegmentedControlDemo,
         ),
       ],
     ),
@@ -429,6 +464,7 @@ List<GalleryDemo> referenceDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/material/MaterialColor-class.html',
           buildRoute: (_) => ColorsDemo(),
+          code: CodeSegments.colorsDemo,
         ),
       ],
     ),
@@ -444,6 +480,7 @@ List<GalleryDemo> referenceDemos(BuildContext context) {
           documentationUrl:
               'https://api.flutter.dev/flutter/material/TextTheme-class.html',
           buildRoute: (_) => TypographyDemo(),
+          code: CodeSegments.typographyDemo,
         ),
       ],
     ),

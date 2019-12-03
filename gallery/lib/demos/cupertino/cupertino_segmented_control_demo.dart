@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 
 import 'package:gallery/l10n/gallery_localizations.dart';
 
+// BEGIN cupertinoSegmentedControlDemo
+
 class CupertinoSegmentedControlDemo extends StatefulWidget {
   @override
   _CupertinoSegmentedControlDemoState createState() =>
@@ -80,3 +82,5 @@ class _CupertinoSegmentedControlDemoState
     );
   }
 }
+
+// END

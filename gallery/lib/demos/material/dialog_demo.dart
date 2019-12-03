@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 
+// BEGIN dialogDemo
+
 enum DialogDemoType {
   alert,
   alertTitle,
@@ -248,3 +250,5 @@ class _FullScreenDialogDemo extends StatelessWidget {
     );
   }
 }
+
+// END

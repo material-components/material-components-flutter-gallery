@@ -2,8 +2,15 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'dart:math';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:gallery/codeviewer/code_displayer.dart';
+import 'package:gallery/codeviewer/code_style.dart';
 import 'package:gallery/data/gallery_options.dart';
+import 'package:gallery/themes/gallery_theme_data.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:gallery/constants.dart';
@@ -37,6 +44,8 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
   int _configIndex = 0;
   bool _isDesktop;
 
+  AnimationController _codeBackgroundColorController;
+
   GalleryDemoConfiguration get _currentConfig {
     return widget.demo.configurations[_configIndex];
   }
@@ -47,6 +56,16 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
     _state = widget.demo.configurations.length > 1
         ? _DemoState.options
         : _DemoState.normal;
+    _codeBackgroundColorController = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 300),
+    );
+  }
+
+  @override
+  void dispose() {
+    _codeBackgroundColorController.dispose();
+    super.dispose();
   }
 
   @override
@@ -57,18 +76,30 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
     }
   }
 
+  /// Sets state and updates the background color for code.
+  void setStateAndUpdate(VoidCallback callback) {
+    setState(() {
+      callback();
+      if (_state == _DemoState.code) {
+        _codeBackgroundColorController.forward();
+      } else {
+        _codeBackgroundColorController.reverse();
+      }
+    });
+  }
+
   void _handleTap(_DemoState newState) {
     // Do not allow normal state for desktop.
     if (_state == newState && isDisplayDesktop(context)) {
       if (_state == _DemoState.fullscreen) {
-        setState(() {
+        setStateAndUpdate(() {
           _state = _DemoState.info;
         });
       }
       return;
     }
 
-    setState(() {
+    setStateAndUpdate(() {
       _state = _state == newState ? _DemoState.normal : newState;
     });
   }
@@ -126,6 +157,7 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
     final selectedIconColor = colorScheme.primary;
 
     final appBar = AppBar(
+      backgroundColor: Colors.transparent,
       actions: [
         if (widget.demo.configurations.length > 1)
           IconButton(
@@ -180,7 +212,7 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
           configurations: widget.demo.configurations,
           configIndex: _configIndex,
           onConfigChanged: (index) {
-            setState(() {
+            setStateAndUpdate(() {
               _configIndex = index;
               if (!isDesktop) {
                 _state = _DemoState.normal;
@@ -197,9 +229,29 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
         );
         break;
       case _DemoState.code:
-        section = _DemoSectionCode(
-          maxHeight: maxSectionHeight,
-          title: 'Code for ${_currentConfig.title}',
+        final TextStyle codeTheme = TextStyle(
+          fontSize: 12 * GalleryOptions.of(context).textScaleFactor(context),
+          fontFamily: 'Roboto Mono',
+        );
+        section = CodeStyle(
+          baseStyle: codeTheme.copyWith(color: Color(0xFFFAFBFB)),
+          numberStyle: codeTheme.copyWith(color: Color(0xFFCE63FF)),
+          commentStyle: codeTheme.copyWith(color: Color(0xFF808080)),
+          keywordStyle: codeTheme.copyWith(color: Color(0xFF1CDEC9)),
+          stringStyle: codeTheme.copyWith(color: Color(0xFFFF8383)),
+          punctuationStyle: codeTheme.copyWith(color: Color(0xFF8BE9FD)),
+          classStyle: codeTheme.copyWith(color: Color(0xFFFF5722)),
+          constantStyle: codeTheme.copyWith(color: Color(0xFFB93C5D)),
+          child: _DemoSectionCode(
+            maxHeight: maxSectionHeight,
+            codeWidget: CodeDisplayPage(
+              _currentConfig.code,
+              hasCopyButton:
+                  !kIsWeb, // TODO: Add support for copying code in Web.
+              // TODO: It is a known issue that Clipboard does not work on web.
+              // TODO: https://github.com/flutter/flutter/issues/40124
+            ),
+          ),
         );
         break;
       default:
@@ -215,8 +267,30 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
     if (isDesktop) {
       // If the available width is not very wide, reduce the amount of space
       // between the demo content and the selected section.
-      final spaceBetween =
-          mediaQuery.size.width > 900 ? horizontalPadding : 48.0;
+      const reducedMiddleSpaceWidth = 48.0;
+
+      // Width of the space between the section and the demo content
+      // when the code is NOT displayed.
+      final nonCodePageMiddleSpaceWidth = mediaQuery.size.width > 900
+          ? horizontalPadding
+          : reducedMiddleSpaceWidth;
+
+      // Width of the space between the section and the demo content
+      // when the code is displayed.
+      final codePageMiddleSpaceWidth =
+          min(reducedMiddleSpaceWidth, nonCodePageMiddleSpaceWidth);
+
+      // Width of the space between the section and the demo content
+      final middleSpaceWidth = _state == _DemoState.code
+          ? codePageMiddleSpaceWidth
+          : nonCodePageMiddleSpaceWidth;
+
+      // Width for demo content.
+      // It is calculated in this way because the code demands more space.
+      final demoContentWidth = (mediaQuery.size.width -
+              horizontalPadding * 2 -
+              nonCodePageMiddleSpaceWidth) /
+          2;
 
       body = SafeArea(
         child: Padding(
@@ -226,8 +300,11 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
             children: [
               if (_state != _DemoState.fullscreen) Expanded(child: section),
               if (_state != _DemoState.fullscreen)
-                SizedBox(width: spaceBetween),
-              Expanded(child: demoContent),
+                SizedBox(width: middleSpaceWidth),
+              Container(
+                width: demoContentWidth,
+                child: demoContent,
+              ),
             ],
           ),
         ),
@@ -254,7 +331,7 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
               behavior: HitTestBehavior.opaque,
               onTap: _state != _DemoState.normal
                   ? () {
-                      setState(() {
+                      setStateAndUpdate(() {
                         _state = _DemoState.normal;
                       });
                     }
@@ -268,16 +345,74 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
       );
     }
 
-    Widget page = Container(
-      padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
-      color: colorScheme.background,
-      child: ApplyTextOptions(
-        child: Scaffold(
-          appBar: appBar,
-          body: body,
+    Widget page;
+
+    if (isDesktop) {
+      page = AnimatedBuilder(
+          animation: _codeBackgroundColorController,
+          builder: (context, child) {
+            Brightness themeBrightness;
+
+            switch (GalleryOptions.of(context).themeMode) {
+              case ThemeMode.system:
+                themeBrightness = MediaQuery.of(context).platformBrightness;
+                break;
+              case ThemeMode.light:
+                themeBrightness = Brightness.light;
+                break;
+              case ThemeMode.dark:
+                themeBrightness = Brightness.dark;
+                break;
+            }
+
+            Widget contents = Container(
+              padding: EdgeInsets.symmetric(horizontal: horizontalPadding),
+              child: ApplyTextOptions(
+                child: Scaffold(
+                  appBar: appBar,
+                  body: body,
+                  backgroundColor: Colors.transparent,
+                ),
+              ),
+            );
+
+            if (themeBrightness == Brightness.light) {
+              // If it is currently in light mode, add a
+              // dark background for code.
+              Widget codeBackground = Container(
+                padding: EdgeInsets.only(top: 56),
+                child: Container(
+                  color: ColorTween(
+                    begin: Colors.transparent,
+                    end: GalleryThemeData.darkThemeData.canvasColor,
+                  ).animate(_codeBackgroundColorController).value,
+                ),
+              );
+
+              contents = Stack(
+                children: [
+                  codeBackground,
+                  contents,
+                ],
+              );
+            }
+
+            return Container(
+              color: colorScheme.background,
+              child: contents,
+            );
+          });
+    } else {
+      page = Container(
+        color: colorScheme.background,
+        child: ApplyTextOptions(
+          child: Scaffold(
+            appBar: appBar,
+            body: body,
+          ),
         ),
-      ),
-    );
+      );
+    }
 
     // Add the splash page functionality for desktop.
     if (isDesktop) {
@@ -444,38 +579,6 @@ class _DemoSectionInfo extends StatelessWidget {
   }
 }
 
-/// TODO: Build code viewer.
-class _DemoSectionCode extends StatelessWidget {
-  const _DemoSectionCode({
-    Key key,
-    this.maxHeight,
-    this.title,
-  }) : super(key: key);
-
-  final double maxHeight;
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    return Container(
-      constraints: BoxConstraints(maxHeight: maxHeight),
-      child: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(32),
-          child: Text(
-            title,
-            style: theme.textTheme.body1.apply(
-              color: theme.colorScheme.onSurface,
-            ),
-            textAlign: TextAlign.center,
-          ),
-        ),
-      ),
-    );
-  }
-}
-
 class DemoContent extends StatelessWidget {
   const DemoContent({
     Key key,
@@ -499,6 +602,114 @@ class DemoContent extends StatelessWidget {
         ),
         child: DemoWrapper(child: Builder(builder: buildRoute)),
       ),
+    );
+  }
+}
+
+class _DemoSectionCode extends StatelessWidget {
+  const _DemoSectionCode({
+    Key key,
+    this.maxHeight,
+    this.codeWidget,
+  }) : super(key: key);
+
+  final double maxHeight;
+  final Widget codeWidget;
+
+  @override
+  Widget build(BuildContext context) {
+    final isDesktop = isDisplayDesktop(context);
+
+    return Theme(
+      data: GalleryThemeData.darkThemeData,
+      child: Padding(
+        padding: EdgeInsets.only(bottom: 16),
+        child: Container(
+          color: isDesktop ? null : Color(0xFF241E30),
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          height: maxHeight,
+          child: codeWidget,
+        ),
+      ),
+    );
+  }
+}
+
+class CodeDisplayPage extends StatelessWidget {
+  const CodeDisplayPage(this.code, {this.hasCopyButton = true});
+
+  final CodeDisplayer code;
+  final bool hasCopyButton;
+
+  Widget build(BuildContext context) {
+    final isDesktop = isDisplayDesktop(context);
+
+    final TextSpan _richTextCode = code(context);
+    final String _plainTextCode = _richTextCode.toPlainText();
+
+    // TODO: Update snackbar theme.
+
+    void _showSnackBarOnCopySuccess(dynamic result) {
+      Scaffold.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            GalleryLocalizations.of(context)
+                .demoCodeViewerCopiedToClipboardMessage,
+          ),
+        ),
+      );
+    }
+
+    void _showSnackBarOnCopyFailure(Exception exception) {
+      Scaffold.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            GalleryLocalizations.of(context)
+                .demoCodeViewerFailedToCopyToClipboardMessage(exception),
+          ),
+        ),
+      );
+    }
+
+    return Column(
+      children: [
+        if (hasCopyButton)
+          Row(
+            children: [
+              Container(
+                padding: isDesktop
+                    ? EdgeInsets.only(bottom: 8)
+                    : EdgeInsets.symmetric(vertical: 8),
+                child: FlatButton(
+                  color: const Color(0xFF322942),
+                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(4)),
+                  ),
+                  onPressed: () async {
+                    await Clipboard.setData(ClipboardData(text: _plainTextCode))
+                        .then(_showSnackBarOnCopySuccess)
+                        .catchError(_showSnackBarOnCopyFailure);
+                  },
+                  child: Text(
+                    GalleryLocalizations.of(context).demoCodeViewerCopyAll,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        Expanded(
+          child: SingleChildScrollView(
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 8),
+              child: RichText(
+                textDirection: TextDirection.ltr,
+                text: _richTextCode,
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

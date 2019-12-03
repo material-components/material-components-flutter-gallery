@@ -316,6 +316,23 @@
   "@demoFullscreenTooltip": {
     "description": "Tooltip for Full Screen button in a demo."
   },
+  "demoCodeViewerCopyAll": "COPY ALL",
+  "@demoCodeViewerCopyAll": {
+    "description": "Caption for a button to copy all text."
+  },
+  "demoCodeViewerCopiedToClipboardMessage": "Copied to clipboard.",
+  "@demoCodeViewerCopiedToClipboardMessage": {
+    "description": "A message displayed to the user after clicking the COPY ALL button, if the text is successfully copied to the clipboard."
+  },
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Failed to copy to clipboard: {error}",
+  "@demoCodeViewerFailedToCopyToClipboardMessage": {
+    "description": "A message displayed to the user after clicking the COPY ALL button, if the text CANNOT be copied to the clipboard.",
+    "placeholders": {
+      "error": {
+        "example": "Your browser does not have clipboard support."
+      }
+    }
+  },
   "settingsTitle": "Settings",
   "@settingsTitle": {
     "description": "Title for the settings screen."

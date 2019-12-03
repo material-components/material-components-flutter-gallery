@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 
 import 'package:gallery/l10n/gallery_localizations.dart';
 
+// BEGIN listDemo
+
 enum ListDemoType {
   oneLine,
   twoLine,
@@ -44,3 +46,5 @@ class ListDemo extends StatelessWidget {
     );
   }
 }
+
+// END

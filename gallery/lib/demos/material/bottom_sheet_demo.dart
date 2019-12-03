@@ -71,6 +71,8 @@ class BottomSheetDemo extends StatelessWidget {
   }
 }
 
+// BEGIN bottomSheetDemoModal#1 bottomSheetDemoPersistent#1
+
 class _BottomSheetContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -105,6 +107,10 @@ class _BottomSheetContent extends StatelessWidget {
   }
 }
 
+// END bottomSheetDemoModal#1 bottomSheetDemoPersistent#1
+
+// BEGIN bottomSheetDemoModal#2
+
 class _ModalBottomSheetDemo extends StatelessWidget {
   void _showModalBottomSheet(BuildContext context) {
     showModalBottomSheet<void>(
@@ -127,6 +133,10 @@ class _ModalBottomSheetDemo extends StatelessWidget {
     );
   }
 }
+
+// END
+
+// BEGIN bottomSheetDemoPersistent#2
 
 class _PersistentBottomSheetDemo extends StatefulWidget {
   @override
@@ -178,3 +188,5 @@ class _PersistentBottomSheetDemoState
     );
   }
 }
+
+// END
