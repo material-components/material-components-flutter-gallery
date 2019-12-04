@@ -129,50 +129,101 @@ class MessageLookup extends MessageLookupByLibrary {
             "Uhlelo lokusebenza lokuhamba olwenziwe ngezifiso"),
         "craneEat": MessageLookupByLibrary.simpleMessage("I-EAT"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("I-Naples, Italy"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "I-pizza kuwovini onomlilo wezinkuni"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("I-Dallas, United States"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("I-Lisbon, e-Portugal"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Owesifazane ophethe isemishi enkulu ye-pastrami"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ibha engenalutho enezitulo zesitayela sedina"),
         "craneEat2":
             MessageLookupByLibrary.simpleMessage("I-Córdoba, Argentina"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Ibhega"),
         "craneEat3":
             MessageLookupByLibrary.simpleMessage("I-Portland, United States"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("I-Korean taco"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("I-Paris, France"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("I-Chocolate desert"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("I-Seoul, South Korea"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Indawo yokuhlala yerestshurenti ye-Artsy"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("I-Seattle, United States"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Isidlo se-Shrimp"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("I-Nashville, United States"),
+        "craneEat7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Indawo yokungena yokubhakwa kwezinkwa"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("I-Atlanta, United States"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Ipuleti le-crawfish"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("I-Madrid, Spain"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ikhawunta yekhefi enama-pastry"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Hlola izindawo zokudlela ngendawo"),
         "craneFly": MessageLookupByLibrary.simpleMessage("I-FLY"),
         "craneFly0":
             MessageLookupByLibrary.simpleMessage("I-Aspen, United States"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "I-chalet yokwakheka kwezwe eneqhwa enezihlahla ezihlala ziluhlaza"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("I-Big Sur, United States"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("I-Cairo, Egypt"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "I-Al-Azhar Mosque towers ngesikhathi sokushona kwelanga"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("I-Lisbon, e-Portugal"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Indlu enesibani yesitina esolwandle"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("I-Napa, United States"),
+        "craneFly12SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Iphuli enezihlahla zamasundu"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("I-Bali, Indonesia"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Iphuli ekuhlangothi lolwandle olunezihlahla zamasundu"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Itende kunkambu"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("I-Khumbu Valley, Nepal"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Amafulegi omthandazo angaphambi kwentaba eneqhwa"),
         "craneFly3":
             MessageLookupByLibrary.simpleMessage("I-Machu Picchu, Peru"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("I-Machu Picchu citadel"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("I-Malé, Maldives"),
+        "craneFly4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ama-bungalow angaphezu kwamanzi"),
         "craneFly5":
             MessageLookupByLibrary.simpleMessage("I-Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("I-Madrid, Spain"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ihhotela elikuhlangothi lwechibi ngaphambi kwezintaba"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("I-Mexico City, Mexico"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ukubuka okuphezulu kwe-Palacio de Bellas Artes"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "I-Mount Rushmore, United States"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("I-Mount Rushmore"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("U-Singapore"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("I-Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("I-Havana, Cuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Indoda encike kumoto endala eluhlaza okwesibhakabhaka"),
         "craneFlyStops": m3,
         "craneFlySubhead":
             MessageLookupByLibrary.simpleMessage("Hlola izindiza ngendawo"),
@@ -192,25 +243,49 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Abavakashi"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("LALA"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("I-Malé, Maldives"),
+        "craneSleep0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ama-bungalow angaphezu kwamanzi"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("I-Aspen, United States"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("I-Cairo, Egypt"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "I-Al-Azhar Mosque towers ngesikhathi sokushona kwelanga"),
         "craneSleep11":
             MessageLookupByLibrary.simpleMessage("I-Taipei, Taiwan"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("I-Taipei 101 skyscraper"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "I-chalet yokwakheka kwezwe eneqhwa enezihlahla ezihlala ziluhlaza"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("I-Machu Picchu, Peru"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("I-Machu Picchu citadel"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("I-Havana, Cuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Indoda encike kumoto endala eluhlaza okwesibhakabhaka"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("I-Vitznau, Switzerland"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ihhotela elikuhlangothi lwechibi ngaphambi kwezintaba"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("I-Big Sur, United States"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Itende kunkambu"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("I-Napa, United States"),
+        "craneSleep6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Iphuli enezihlahla zamasundu"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("I-Porto, Portugal"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Izindawo zokuhlala ezinemibalabala e-Riberia Square"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("I-Tulum, Mexico"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ukonakala kwase-Mayan eweni ngaphezulu kwebhishi"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("I-Lisbon, e-Portugal"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Indlu enesibani yesitina esolwandle"),
         "craneSleepProperties": m4,
         "craneSleepSubhead":
             MessageLookupByLibrary.simpleMessage("Hlola izinto ngendawo"),
@@ -363,6 +438,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("I-Chip yokungena"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Ayikwazanga ukubonisa i-URL:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Umugqa wokuphakama okulungisiwe oqukethe umbhalo kanye nesithonjana esilandelayo noma esiholayo."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Umbhalo wesibili"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Izendlalelo zohlu lokuskrola"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Uhlu"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Umugqa owodwa"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Izinketho"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Izinkinobho zohlala ziba i-opaque ziphinde ziphakame uma zicindezelwa. Zivamise ukubhangqwa nezinkinobho eziphakanyisiwe ukuze zibonise esinye isenzo, sesibili."),
@@ -372,6 +456,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Izinkinobho ezingeziwe zingeza ubukhulu kaningi kuzakhiwo eziphansi. Zigcizelela imisebenzi kuzikhala ezimatasa noma ezibanzi."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Inkinobho ephakanyisiwe"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Amabhokisi okuhlola avumela umsebenzisi ukuthi akhethe izinketho eziningi kusukela kusethi. Inani elijwayelekile lebhokisi lokuhlola liyiqiniso noma lingamanga futhi inani lebhokisi lokuhlola le-tristate nalo lingaba ngelingavumelekile."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Ibhokisi lokuthikha"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Izinkinobho zerediyo zivumela umsebenzisi ukuthi akhethe inketho eyodwa kusukela kusethi. Sebenzisa izinkinobho zerediyo zokukhethwa okukhethekile uma ucabanga ukuthi umsebenzisi kumele abone zonke izinketho ezikhethekile uhlangothi ukuya kolunye."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Irediyo"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Amabhokisi okuthikha, izinkinobho zerediyo, namaswishi"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Amaswishi okuvula/ukuvala aguqula isimo senketho eyodwa yezilungiselelo. Inketho elawulwa iswishi kanye nesimo ekuyo, kumele kwenziwe kube sobala kusukela kulebula engaphakathi komugqa ehambisanayo."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Iswishi"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Izilawuli zokukhethwa"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Ibhokisi elilula linikeza umsebenzisi inketho ephakathi kwezinketho ezithile. Ibhokisi elilula linesihloko ongasikhetha esiboniswa ngaphezulu kwezinketho."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Kulula"),
@@ -436,6 +539,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Izinkinobho zokuguqula zingasetshenziswa ukuze zifake kuqembu izinketho ezihambisanayo. Ukuze kugcizelelwe amaqembu ezinkinobho ezihambisanayo zokuguqula, iqembu kumele labelane ngesiqukathi esijwayelekile"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Izinkinobho zokuguqula"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Imigqa emibili"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Izincazelo zezitayela ezahlukahlukene ze-typographical zitholakele kudizayini ebalulekile."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -569,6 +674,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Mayelana ne-Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Kudizayinwe ngu-TOASTER e-London"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Vala izilungiselelo"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Izilungiselelo"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Kumnyama"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Thumela impendulo"),

@@ -121,50 +121,101 @@ class MessageLookup extends MessageLookupByLibrary {
             "ပုဂ္ဂိုလ်ရေးသီးသန့် ပြုလုပ်ပေးထားသည့် ခရီးသွားအက်ပ်"),
         "craneEat": MessageLookupByLibrary.simpleMessage("စား"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("နေပယ်လ်၊ အီတလီ"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ထင်းမီးဖိုရှိ ပီဇာ"),
         "craneEat1": MessageLookupByLibrary.simpleMessage(
             "ဒါးလပ်စ်၊ အမေရိကန် ပြည်ထောင်စု"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("လစ္စဘွန်း၊ ပေါ်တူဂီ"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ကြီးမားသော အမဲကျပ်တိုက်အသားညှပ်ပေါင်မုန့်ကို ကိုင်ထားသောအမျိုးသမီး"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ညစာစားရာတွင် အသုံးပြုသည့်ခုံပုံစံများဖြင့် လူမရှိသောအရက်ဆိုင်"),
         "craneEat2":
             MessageLookupByLibrary.simpleMessage("ကော်ဒိုဘာ၊ အာဂျင်တီးနား"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("အသားညှပ်ပေါင်မုန့်"),
         "craneEat3": MessageLookupByLibrary.simpleMessage(
             "ပေါ့တ်လန်၊ အမေရိကန် ပြည်ထောင်စု"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ကိုးရီးယား တာကို"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("ပဲရစ်၊ ပြင်သစ်"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ချောကလက် အချိုပွဲ"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("ဆိုးလ်၊ တောင်ကိုးရီးယား"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "အနုပညာလက်ရာမြောက်သော စားသောက်ဆိုင် တည်ခင်းဧည့်ခံရန်နေရာ"),
         "craneEat6": MessageLookupByLibrary.simpleMessage(
             "ဆီယက်တဲ၊ အမေရိကန် ပြည်ထောင်စု"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ပုဇွန်ဟင်း"),
         "craneEat7": MessageLookupByLibrary.simpleMessage(
             "နက်ရှ်ဗီးလ်၊ အမေရိကန် ပြည်ထောင်စု"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("မုန့်ဖုတ်ဆိုင် ဝင်ပေါက်"),
         "craneEat8": MessageLookupByLibrary.simpleMessage(
             "အတ္တလန်တာ၊ အမေရိကန် ပြည်ထောင်စု"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ကျောက်ပုစွန် ဟင်းလျာ"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("မဒရစ်၊ စပိန်"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ပေါင်မုန့်များဖြင့် ကော်ဖီဆိုင်ကောင်တာ"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "သွားရောက်ရန်နေရာအလိုက် စားသောက်ဆိုင်များကို စူးစမ်းခြင်း"),
         "craneFly": MessageLookupByLibrary.simpleMessage("ပျံသန်းခြင်း"),
         "craneFly0": MessageLookupByLibrary.simpleMessage(
             "အက်စ်ပန်၊ အမေရိကန် ပြည်ထောင်စု"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "အမြဲစိမ်းသစ်ပင်များဖြင့် နှင်းကျသော ရှုခင်းတစ်ခုရှိ တောင်ပေါ်သစ်သားအိမ်"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("ဘစ်စာ၊ အမေရိကန် ပြည်ထောင်စု"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("ကိုင်ရို၊ အီဂျစ်"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "နေဝင်ချိန် Al-Azhar Mosque မျှော်စင်များ"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("လစ္စဘွန်း၊ ပေါ်တူဂီ"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ပင်လယ်ရှိ အုတ်ဖြင့်တည်ဆောက်ထားသော မီးပြတိုက်"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("နာပါ၊ အမေရိကန် ပြည်ထောင်စု"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ထန်းပင်များနှင့် ရေကူးကန်"),
         "craneFly13":
             MessageLookupByLibrary.simpleMessage("ဘာလီ၊ အင်ဒိုနီးရှား"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ထန်းပင်များဖြင့် ပင်လယ်ကမ်းစပ်ရှိ ရေကူးကန်"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("လယ်ကွင်းတစ်ခုရှိတဲ"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("ကွန်ဘူတောင်ကြား၊ နီပေါ"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "နှင်းတောင်ရှေ့ရှိ ဆုတောင်းအလံများ"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("မာချူ ပီချူ၊ ပီရူး"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("မာချူ ပီချူ ခံတပ်"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("မာလီ၊ မော်လဒိုက်"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ရေပေါ်အိမ်လေးများ"),
         "craneFly5":
             MessageLookupByLibrary.simpleMessage("ဗစ်ဇ်နောင်၊ ဆွစ်ဇာလန်"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("မဒရစ်၊ စပိန်"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "တောင်တန်းများရှေ့ရှိ ကမ်းစပ်ဟိုတယ်"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("မက္ကဆီကိုမြို့၊ မက္ကဆီကို"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Palacio de Bellas Artes ၏ အပေါ်မှမြင်ကွင်း"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "ရပ်ရှ်မောတောင်၊ အမေရိကန် ပြည်ထောင်စု"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ရက်ရှ်မောတောင်"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("စင်္ကာပူ"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("ဟာဗားနား၊ ကျူးဘား"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ရှေးဟောင်းကားပြာဘေး မှီနေသည့်လူ"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "သွားရောက်ရန်နေရာအလိုက် လေယာဉ်ခရီးစဉ်များကို စူးစမ်းခြင်း"),
@@ -184,27 +235,51 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ခရီးသွားများ"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("အိပ်စက်ခြင်း"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("မာလီ၊ မော်လဒိုက်"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ရေပေါ်အိမ်လေးများ"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage(
             "အက်စ်ပန်၊ အမေရိကန် ပြည်ထောင်စု"),
         "craneSleep10":
             MessageLookupByLibrary.simpleMessage("ကိုင်ရို၊ အီဂျစ်"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "နေဝင်ချိန် Al-Azhar Mosque မျှော်စင်များ"),
         "craneSleep11":
             MessageLookupByLibrary.simpleMessage("တိုင်ပေ၊ ထိုင်ဝမ်"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("တိုင်ပေ 101 မိုးမျှော်တိုက်"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "အမြဲစိမ်းသစ်ပင်များဖြင့် နှင်းကျသော ရှုခင်းတစ်ခုရှိ တောင်ပေါ်သစ်သားအိမ်"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("မာချူ ပီချူ၊ ပီရူး"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("မာချူ ပီချူ ခံတပ်"),
         "craneSleep3":
             MessageLookupByLibrary.simpleMessage("ဟာဗားနား၊ ကျူးဘား"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ရှေးဟောင်းကားပြာဘေး မှီနေသည့်လူ"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("ဗစ်ဇ်နောင်၊ ဆွစ်ဇာလန်"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "တောင်တန်းများရှေ့ရှိ ကမ်းစပ်ဟိုတယ်"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("ဘစ်စာ၊ အမေရိကန် ပြည်ထောင်စု"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("လယ်ကွင်းတစ်ခုရှိတဲ"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("နာပါ၊ အမေရိကန် ပြည်ထောင်စု"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ထန်းပင်များနှင့် ရေကူးကန်"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("ပေါ်တို၊ ပေါ်တူဂီ"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Riberia Square ရှိ ရောင်စုံတိုက်ခန်းများ"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("တူလမ်၊ မက္ကဆီကို"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ကမ်းခြေထက် ကျောက်ကမ်းပါးတစ်ခုပေါ်ရှိ Mayan ဘုရားပျက်"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("လစ္စဘွန်း၊ ပေါ်တူဂီ"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ပင်လယ်ရှိ အုတ်ဖြင့်တည်ဆောက်ထားသော မီးပြတိုက်"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "သွားရောက်ရန်နေရာအလိုက် အိမ်ရာများကို စူးစမ်းခြင်း"),
@@ -358,6 +433,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("အဝင်ချစ်ပ်"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL ကို ပြ၍မရပါ-"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "ယေဘုယျအားဖြင့် စာသားအချို့အပြင် ထိပ်ပိုင်း သို့မဟုတ် နောက်ပိုင်းတွင် သင်္ကေတများ ပါဝင်သည့် တိကျသောအမြင့်ရှိသော စာကြောင်းတစ်ကြောင်း။"),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("ဒုတိယစာသား"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "လှိမ့်ခြင်းစာရင်း အပြင်အဆင်များ"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("စာရင်းများ"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("တစ်ကြောင်း"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("ရွေးစရာများ"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
@@ -368,6 +452,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "ခလုတ်မြင့်များသည် အများအားဖြင့် အပြားလိုက် အပြင်အဆင်များတွင် ထုထည်အားဖြင့်ဖြည့်ပေးသည်။ ၎င်းတို့သည် ကျယ်ပြန့်သော သို့မဟုတ် ခလုတ်များပြားသော နေရာများတွင် လုပ်ဆောင်ချက်များကို အထူးပြုသည်။"),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("ခလုတ်မြင့်"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "အမှန်ခြစ်ရန်နေရာများသည် အုပ်စုတစ်ခုမှ တစ်ခုထက်ပို၍ ရွေးချယ်ခွင့်ပေးသည်။ ပုံမှန်အမှန်ခြစ်ရန်နေရာ၏ တန်ဖိုးသည် အမှန် သို့မဟုတ် အမှားဖြစ်ပြီး အခြေအနေသုံးမျိုးပါ အမှန်ခြစ်ရန်နေရာ၏ တန်ဖိုးသည် ဗလာလည်း ဖြစ်နိုင်သည်။"),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("အမှတ်ခြစ်ရန် နေရာ"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ရေဒီယိုခလုတ်များသည် အုပ်စုတစ်ခုမှ ရွေးချယ်စရာများအနက် တစ်ခုကို ရွေးခွင့်ပေးသည်။ အသုံးပြုသူသည် ရွေးချယ်မှုများကို ဘေးချင်းကပ်ကြည့်ရန် လိုအပ်သည်ဟု ယူဆပါက အထူးသီးသန့်ရွေးချယ်မှုအတွက် ရေဒီယိုခလုတ်ကို အသုံးပြုပါ။"),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("ရေဒီယို"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "အမှန်ခြစ်ရန် နေရာများ၊ ရေဒီယိုခလုတ်များနှင့် အဖွင့်အပိတ်ခလုတ်များ"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "အဖွင့်/အပိတ်ခလုတ်များသည် ဆက်တင်တစ်ခုတည်း ရွေးချယ်မှု၏ အခြေအနေကို ပြောင်းပေးသည်။ ခလုတ်က ထိန်းချုပ်သည့် ရွေးချယ်မှု၊ ၎င်းရောက်ရှိနေသည့် အခြေအနေကို သက်‌ဆိုင်ရာ အညွှန်းတွင် ရှင်းရှင်းလင်းလင်း ‌ထားရှိသင့်သည်။"),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("ပြောင်းရန်"),
+        "demoSelectionControlsTitle": MessageLookupByLibrary.simpleMessage(
+            "ရွေးချယ်မှု ထိန်းချုပ်ချက်များ"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "ရိုးရှင်းသည့် ဒိုင်ယာလော့ဂ်သည် မတူညီသည့် ရွေးချယ်မှုများစွာမှ အသုံးပြုသူအား ရွေးခွင့်ပြုသည်။ ရိုးရှင်းသည့် ဒိုင်ယာလော့ဂ်တွင် ရွေးချယ်မှုများ၏ အပေါ်တွင် ဖော်ပြသော ချန်လှပ်ထားနိုင်သည့် ခေါင်းစဉ်ပါဝင်သည်။"),
         "demoSimpleDialogTitle":
@@ -434,6 +537,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "သက်ဆိုင်ရာ ရွေးချယ်စရာများကို အုပ်စုဖွဲ့ရန် အဖွင့်အပိတ်ခလုတ်များကို အသုံးပြုနိုင်သည်။ သက်ဆိုင်ရာ အဖွင့်ပိတ်ခလုတ်များကို အထူးပြုရန် အုပ်စုတစ်ခုသည် တူညီသည့် ကွန်တိန်နာကို အသုံးပြုသင့်သည်။"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("အဖွင့်အပိတ်ခလုတ်များ"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("နှစ်ကြောင်း"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "\'ပစ္စည်းပုံစံ\' တွင် မြင်တွေ့ရသော စာသားပုံစံအမျိုးမျိုးတို့၏ အဓိပ္ပာယ်ဖွင့်ဆိုချက်များ။"),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -570,6 +675,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Flutter Gallery အကြောင်း"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Designed by TOASTER in London"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("ဆက်တင်အားပိတ်ရန်"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("ဆက်တင်များ"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("အမှောင်"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("အကြံပြုချက် ပို့ခြင်း"),

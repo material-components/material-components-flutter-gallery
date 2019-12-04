@@ -123,40 +123,90 @@ class MessageLookup extends MessageLookupByLibrary {
             "Một ứng dụng du lịch cá nhân"),
         "craneEat": MessageLookupByLibrary.simpleMessage("CHỖ ĂN"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Ý"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bánh pizza trong một lò nướng bằng củi"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("Dallas, Hoa Kỳ"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Lisbon, Bồ Đào Nha"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Người phụ nữ cầm chiếc bánh sandwich kẹp thịt bò hun khói siêu to"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Quầy bar không người với những chiếc ghế đẩu chuyên dùng trong bar"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bánh mì kẹp"),
         "craneEat3": MessageLookupByLibrary.simpleMessage("Portland, Hoa Kỳ"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Món taco của Hàn Quốc"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, Pháp"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Món tráng miệng từ sô-cô-la"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, Hàn Quốc"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Khu vực ghế ngồi đậm chất nghệ thuật tại nhà hàng"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("Seattle, Hoa Kỳ"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Món ăn làm từ tôm"),
         "craneEat7": MessageLookupByLibrary.simpleMessage("Nashville, Hoa Kỳ"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Lối vào tiệm bánh"),
         "craneEat8": MessageLookupByLibrary.simpleMessage("Atlanta, Hoa Kỳ"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Đĩa tôm hùm đất"),
         "craneEat9":
             MessageLookupByLibrary.simpleMessage("Madrid, Tây Ban Nha"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Quầy cà phê bày những chiếc bánh ngọt"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Khám phá nhà hàng theo điểm đến"),
         "craneFly": MessageLookupByLibrary.simpleMessage("CHUYẾN BAY"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("Aspen, Hoa Kỳ"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Căn nhà gỗ trong khung cảnh đầy tuyết với cây thường xanh xung quanh"),
         "craneFly1": MessageLookupByLibrary.simpleMessage("Big Sur, Hoa Kỳ"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Ai Cập"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Tháp Al-Azhar Mosque lúc hoàng hôn"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Lisbon, Bồ Đào Nha"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ngọn hải đăng xây bằng gạch trên biển"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("Napa, Hoa Kỳ"),
+        "craneFly12SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bể bơi xung quanh là những cây cọ"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bể bơi ven biển xung quanh là những cây cọ"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Chiếc lều giữa cánh đồng"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Thung lũng Khumbu, Nepal"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Những lá cờ cầu nguyện phía trước ngọn núi đầy tuyết"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Thành cổ Machu Picchu"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneFly4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Nhà gỗ một tầng trên mặt nước"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Thụy Sĩ"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Khách sạn bên hồ phía trước những ngọn núi"),
         "craneFly6":
-            MessageLookupByLibrary.simpleMessage("Madrid, Tây Ban Nha"),
+            MessageLookupByLibrary.simpleMessage("Thành phố Mexico, Mexico"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Quang cảnh Palacio de Bellas Artes nhìn từ trên không"),
         "craneFly7":
             MessageLookupByLibrary.simpleMessage("Núi Rushmore, Hoa Kỳ"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Núi Rushmore"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Người đàn ông tựa vào chiếc xe ô tô cổ màu xanh dương"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Khám phá chuyến bay theo điểm đến"),
@@ -175,21 +225,45 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Số du khách"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("CHỖ NGỦ"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneSleep0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Nhà gỗ một tầng trên mặt nước"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage("Aspen, Hoa Kỳ"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Ai Cập"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Tháp Al-Azhar Mosque lúc hoàng hôn"),
         "craneSleep11":
             MessageLookupByLibrary.simpleMessage("Đài Bắc, Đài Loan"),
+        "craneSleep11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Tòa nhà chọc trời Đài Bắc 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Căn nhà gỗ trong khung cảnh đầy tuyết với cây thường xanh xung quanh"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Thành cổ Machu Picchu"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Người đàn ông tựa vào chiếc xe ô tô cổ màu xanh dương"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, Thụy Sĩ"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Khách sạn bên hồ phía trước những ngọn núi"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage("Big Sur, Hoa Kỳ"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Chiếc lều giữa cánh đồng"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("Napa, Hoa Kỳ"),
+        "craneSleep6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bể bơi xung quanh là những cây cọ"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("Porto, Bồ Đào Nha"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Những ngôi nhà rực rỡ sắc màu tại Quảng trường Riberia"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Những vết tích của nền văn minh Maya ở một vách đá phía trên bãi biển"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Lisbon, Bồ Đào Nha"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ngọn hải đăng xây bằng gạch trên biển"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Khám phá khách sạn theo điểm đến"),
@@ -338,6 +412,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Thẻ thông tin đầu vào"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("Không thể hiển thị URL:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Một hàng có chiều cao cố định thường chứa một số văn bản cũng như biểu tượng ở đầu hoặc ở cuối."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Văn bản thứ cấp"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("Bố cục của danh sách cuộn"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Danh sách"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("1 dòng"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Tùy chọn"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Các nút có đường viền sẽ mờ đi rồi hiện rõ lên khi nhấn. Các nút này thường xuất hiện cùng các nút lồi để biểu thị hành động phụ, thay thế."),
@@ -347,6 +430,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Các nút lồi sẽ làm gia tăng kích thước đối với hầu hết các bố cục phẳng. Các nút này làm nổi bật những chức năng trên không gian rộng hoặc có mật độ dày đặc."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Nút lồi"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Các hộp kiểm cho phép người dùng chọn nhiều tùy chọn trong một tập hợp. Giá trị thông thường của hộp kiểm là true hoặc false và giá trị 3 trạng thái của hộp kiểm cũng có thể là null."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Hộp kiểm"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Các nút radio cho phép người dùng chọn một tùy chọn trong một tập hợp. Hãy dùng nút radio để lựa chọn riêng nếu bạn cho rằng người dùng cần xem song song tất cả các tùy chọn có sẵn."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Nút radio"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Các hộp kiểm, nút radio và công tắc"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Các công tắc bật/tắt chuyển đổi trạng thái của một tùy chọn cài đặt. Tùy chọn mà công tắc điều khiển, cũng như trạng thái của tùy chọn, phải được hiện rõ bằng nhãn nội tuyến tương ứng."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Công tắc"),
+        "demoSelectionControlsTitle": MessageLookupByLibrary.simpleMessage(
+            "Các chức năng điều khiển lựa chọn"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Hộp thoại đơn giản đưa ra cho người dùng một lựa chọn trong số nhiều tùy chọn. Hộp thoại đơn giản không nhất thiết phải có tiêu đề ở phía trên các lựa chọn."),
         "demoSimpleDialogTitle":
@@ -411,6 +513,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Bạn có thể dùng các nút chuyển đổi để nhóm những tùy chọn có liên quan lại với nhau. To emphasize groups of related toggle buttons, a group should share a common container"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Nút chuyển đổi"),
+        "demoTwoLineListsTitle": MessageLookupByLibrary.simpleMessage("2 dòng"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Định nghĩa của nhiều kiểu nghệ thuật chữ có trong Material Design."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -540,6 +643,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Giới thiệu về Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Thiết kế của TOASTER tại London"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Đóng phần cài đặt"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Phần cài đặt"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Tối"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Gửi phản hồi"),

@@ -116,34 +116,83 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ግላዊነት የተላበሰ የጉዞ መተግበሪያ"),
         "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("ኔፕልስ፣ ጣልያን"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("በእንጨት በሚነድድ ምድጃ ውስጥ ፒዛ"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("ዳላስ፣ አሜሪካ"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("ሊዝበን፣ ፖርቱጋል"),
+        "craneEat10SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ትልቅ ፓስትራሚ ሳንድዊች የያዘች ሴት"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ባዶ መጠጥ ቤት ከመመገቢያ አይነት መቀመጫዎች ጋር"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("ኮርዶባ፣ አርጀንቲና"),
+        "craneEat2SemanticLabel": MessageLookupByLibrary.simpleMessage("በርገር"),
         "craneEat3": MessageLookupByLibrary.simpleMessage("ፖርትላንድ፣ አሜሪካ"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("የኮሪያ ታኮ"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("ፓሪስ፣ ፈረንሳይ"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ቸኮሌት መቅሰስ"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("ሲዮል፣ ደቡብ ኮሪያ"),
+        "craneEat5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ኪነ ጥበባዊ የምግብ ቤት መቀመጫ አካባቢ"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("ሲያትል፣ አሜሪካ"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ሽሪምፕ ሳህን"),
         "craneEat7": MessageLookupByLibrary.simpleMessage("ናሽቪል፣ አሜሪካ"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("የመጋገሪያ መግቢያ"),
         "craneEat8": MessageLookupByLibrary.simpleMessage("አትላንታ፣ አሜሪካ"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("የክሮውፊሽ ሳህን"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("ማድሪድ፣ ስፔን"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ኬኮች ያሉት የካፌ ካውንተር"),
         "craneEatRestaurants": m2,
         "craneEatSubhead":
             MessageLookupByLibrary.simpleMessage("ምግብ ቤቶችን በመድረሻ ያስሱ"),
         "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("አስፐን፣ አሜሪካ"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ሁሌ ለምለም ዛፎች ባሉት በረዷሟ መሬት ላይ ያለ ሻሌት ቤት"),
         "craneFly1": MessageLookupByLibrary.simpleMessage("ቢግ ሱር፣ አሜሪካ"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("ካይሮ፣ ግብጽ"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "የአል-አዝሃር መስጊድ ማማዎች በጸሐይ መጥለቂያ ጊዜ"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("ሊዝበን፣ ፖርቱጋል"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ባህር ላይ ያለ ባለጡብ ፋኖ ቤት"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("ናፓ፣ አሜሪካ"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ዘንባባ ዛፎች ያለው መዋኛ"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("ባሊ፣ ኢንዶኔዥያ"),
+        "craneFly13SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ዘንባባ ያሉት የባህር ጎን መዋኛ"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("በአንድ ሜዳ ላይ ድንኳን"),
         "craneFly2": MessageLookupByLibrary.simpleMessage("ኩምቡ ሸለቆ፣ ኔፓል"),
+        "craneFly2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ከበረዷማ ተራራ ፊት ያሉ የጸሎት ባንዲራዎች"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("ማቹ ፒቹ፣ ፔሩ"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("የማቹ ፒቹ ምሽግ"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("ማሌ፣ ማልዲቭስ"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("የውሃ ላይ ባንግሎው ቤት"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("ቪትዝናው፣ ስዊዘርላንድ"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("ማድሪድ፣ ስፔን"),
+        "craneFly5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ከተራራዎች ፊት ያለ የሐይቅ ዳርቻ ሆቴል"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("ሜክሲኮ ሲቲ፣ ሜክሲኮ"),
+        "craneFly6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("የፓላሲዮ ደ ቤያ አርቴስ የአየር ላይ እይታ"),
         "craneFly7": MessageLookupByLibrary.simpleMessage("ራሽሞር ተራራ፣ አሜሪካ"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ራሽሞር ተራራ"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("ሲንጋፖር"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ሱፐርትሪ ግሮቭ"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("ሃቫና፣ ኩባ"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "አንድ አንጋፋ ሰማያዊ መኪናን ተደግፎ የቆመ ሰው"),
         "craneFlyStops": m3,
         "craneFlySubhead":
             MessageLookupByLibrary.simpleMessage("በረራዎችን በመድረሻ ያስሱ"),
@@ -158,17 +207,41 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("ተጓዦች"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("እንቅልፍ"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("ማሌ፣ ማልዲቭስ"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("የውሃ ላይ ባንግሎው ቤት"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage("አስፐን፣ አሜሪካ"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("ካይሮ፣ ግብጽ"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "የአል-አዝሃር መስጊድ ማማዎች በጸሐይ መጥለቂያ ጊዜ"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("ታይፔይ፣ ታይዋን"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ታይፔይ 101 ሰማይ ጠቀስ ሕንጻ"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ሁሌ ለምለም ዛፎች ባሉት በረዷሟ መሬት ላይ ያለ ሻሌት ቤት"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("ማቹ ፒቹ፣ ፔሩ"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("የማቹ ፒቹ ምሽግ"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("ሃቫና፣ ኩባ"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "አንድ አንጋፋ ሰማያዊ መኪናን ተደግፎ የቆመ ሰው"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("ቪትዝናው፣ ስዊዘርላንድ"),
+        "craneSleep4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ከተራራዎች ፊት ያለ የሐይቅ ዳርቻ ሆቴል"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage("ቢግ ሱር፣ አሜሪካ"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("በአንድ ሜዳ ላይ ድንኳን"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("ናፓ፣ አሜሪካ"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ዘንባባ ዛፎች ያለው መዋኛ"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("ፖርቶ፣ ፖርቱጋል"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "በሪቤሪያ አደባባይ ላይ ያሉ ባለቀለም አፓርታማዎች"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("ቱሉም፣ ሜክሲኮ"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ከባህር ዳርቻ በላይ ባለ አምባ ላይ ያሉ የማያውያን ፍርስራሾች"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("ሊዝበን፣ ፖርቱጋል"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ባህር ላይ ያለ ባለጡብ ፋኖ ቤት"),
         "craneSleepProperties": m4,
         "craneSleepSubhead":
             MessageLookupByLibrary.simpleMessage("ንብረቶችን በመድረሻ ያስሱ"),
@@ -305,6 +378,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("የግቤት ቺፕ"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("ዩአርኤልን ማሳየት አልተቻለም፦"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "በተለምዶ የተወሰነ ጽሑፍና እንዲሁም መሪ ወይም ተከታይ አዶ የያዘ አንድ ባለነጠላ ቋሚ ረድፍ።"),
+        "demoListsSecondary": MessageLookupByLibrary.simpleMessage("ሁለተኛ ጽሑፍ"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("የዝርዝር አቀማመጦችን በመሸብለል ላይ"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("ዝርዝሮች"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("አንድ መስመር"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("አማራጮች"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "የቢጋር አዝራሮች የማይታዩ ይሆኑና በሚጫኑበት ጊዜ ከፍ ይላሉ። አማራጭን፣ ሁለተኛ እርምጃን ለመጠቆም ብዙውን ጊዜ ከፍ ካሉ አዝራሮች ጋር ይጣመራሉ።"),
@@ -314,6 +395,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "ከፍ ያሉ አዝራሮች ብዙውን ጊዜ ለዝርግ አቀማመጦች ስፋት ያክላሉ። በባተሌ ወይም ሰፊ ቦታዎች ላይ ተግባራት ላይ አጽዕኖት ይሰጣሉ።"),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("ከፍ ያለ አዝራር"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "አመልካች ሳጥኖች ተጠቃሚው ከአንድ ስብስብ በርካታ አማራጮችን እንዲሰበስብ ያስችለዋል። የአንድ መደበኛ አመልካች ሳጥኑ እሴት እውነት ወይም ሐሰት ነው፣ እና የአንድ ባለሶስት-ሁኔታ እሴት እንዲሁም አልቦ መሆን ይችላል።"),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("አመልካች ሳጥን"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "የሬዲዮ ዝራሮች ተጠቃሚው ከአንድ ስብስብ ውስጥ አንድ አማራጭ እንዲፈጥር ያስችለዋል። ተጠቃሚው ሁሉንም የሚገኙ አማራጮች ጎን ለጎን ማየት አለበት ብለው የሚያስቡ ከሆነ የሬዲዮ አዝራሮችን የሚመለከተውን ብቻ ለመምረጥ ይጠቀሙባቸው።"),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("ሬዲዮ"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "አመልካች ሳጥኖች፣ የሬዲዮ አዝራሮች እና መቀያየሪያዎች"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "የማብሪያ/ማጥፊያ መቀያየሪያዎች የነጠላ ቅንብሮች አማራጭ ሁኔታን ይቀያይራሉ። መቀያየሪያውን የሚቆጣጠረው አማራጭና እንዲሁም ያለበት ሁኔታ ከተጓዳኙ የውስጠ-መስመር የመሰየሚያው ግልጽ መሆን አለበት።"),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("ቀይር"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("የምርጫ መቆጣጠሪያዎች"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "ቀላል ንግግር ለተጠቃሚው በበርካታ አማራጮች መካከል ምርጫን ያቀርባል። ቀላል ንግግር ከምርጫዎ በላይ የሚታይ አማራጭ አርዕስት አለው።"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("ቀላል"),
@@ -377,6 +477,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "ተዛማጅ አማራጮችን ለመቦደን የቀያይር አዝራሮች ጥቅም ላይ ሊውሉ ይችላሉ። ተዛማጅነት ያላቸው መቀያየሪያ አዝራሮችን ቡድኖች አጽዕኖት ለመስጠት፣ ቡድን የጋራ መያዣን ማጋራት አለበት።"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("መቀያየሪያ አዝራሮች"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("ሁለት መስመሮች"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "በቁሳዊ ንድፍ ላይ የሚገኙ የተለያዩ ታይፖግራፊያዊ ቅጦች ፍቺዎች።"),
         "demoTypographySubtitle":
@@ -494,6 +596,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ስለ ፍላተር ማዕከለ ስዕላት"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("ለንደን ውስጥ በTOASTER የተነደፈ"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("ቅንብሮችን ዝጋ"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("ቅንብሮች"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("ጨለማ"),
         "settingsFeedback": MessageLookupByLibrary.simpleMessage("ግብረመልስ ላክ"),
         "settingsLightTheme": MessageLookupByLibrary.simpleMessage("ብርሃን"),

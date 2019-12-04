@@ -120,47 +120,98 @@ class MessageLookup extends MessageLookupByLibrary {
             "নিজের মতো সাজিয়ে নেওয়া ট্রাভেল অ্যাপ"),
         "craneEat": MessageLookupByLibrary.simpleMessage("খাদ্য"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("ন্যাপলি, ইতালি"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("কাঠের চুলায় পিৎজা"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("ডালাস, মার্কিন যুক্তরাষ্ট্র"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("লিসবন, পর্তুগাল"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "মহিলাটি বিশাল পাস্ট্রমি স্যান্ডউইচ ধরে রয়েছে"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ডিনার স্টাইলের চেয়ারের সাথে খালি বার"),
         "craneEat2":
             MessageLookupByLibrary.simpleMessage("কর্ডোবা, আর্জেন্টিনা"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("বার্গার"),
         "craneEat3": MessageLookupByLibrary.simpleMessage(
             "পোর্টল্যান্ড, মার্কিন যুক্তরাষ্ট্র"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("কোরিয়ান ট্যাকো"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("প্যারিস, ফ্রান্স"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("চকোলেট ডেজার্ট"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("সিওল, দক্ষিণ কোরিয়া"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "আর্টসির রেস্তোঁরা বসার জায়গা"),
         "craneEat6": MessageLookupByLibrary.simpleMessage(
             "সিয়াটেল, মার্কিন যুক্তরাষ্ট্র"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("চিংড়ি মাছের খাবার"),
         "craneEat7": MessageLookupByLibrary.simpleMessage(
             "ন্যাসভেলি, মার্কিন যুক্তরাষ্ট্র"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("বেকারির প্রবেশদ্বার"),
         "craneEat8": MessageLookupByLibrary.simpleMessage(
             "আটলান্টা, মার্কিন যুক্তরাষ্ট্র"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("প্লেট ভর্তি চিংড়ি মাছ"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("মাদ্রিদ, স্পেন"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("পেস্ট্রি সহ ক্যাফে কাউন্টার"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "গন্তব্যের হিসেবে রেস্তোরাঁ দেখুন"),
         "craneFly": MessageLookupByLibrary.simpleMessage("উড়া"),
         "craneFly0": MessageLookupByLibrary.simpleMessage(
             "অ্যাসপেন, মার্কিন যুক্তরাষ্ট্র"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "চিরসবুজ গাছ সহ একটি তুষারময় আড়াআড়ি কুটীর"),
         "craneFly1": MessageLookupByLibrary.simpleMessage(
             "বিগ সার, মার্কিন যুক্তরাষ্ট্র"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("কায়েরো, মিশর"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "সূর্যাস্তের সময় আল-আজহার মসজিদের টাওয়ার"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("লিসবন, পর্তুগাল"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("সমুদ্রে ইটের বাতিঘর"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("নাপা, মার্কিন যুক্তরাষ্ট্র"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("তাল গাছ সহ পুল"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("বালি, ইন্দোনেশিয়া"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "তাল গাছ সহ সমুদ্রের পাশের পুল"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ফিল্ডে টেন্ট"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("কুম্ভ উপত্যকা, নেপাল"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "বরফের পাহাড়ের সামনে প্রার্থনার পতাকা"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("মাচু পিচ্চু, পেরু"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("মাচু পিচ্চু দুর্গ"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("মালে, মালদ্বীপ"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ওভার ওয়াটার বাংলো"),
         "craneFly5":
             MessageLookupByLibrary.simpleMessage("ভিতজানাউ, সুইজারল্যান্ড"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("মাদ্রিদ, স্পেন"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "পাহাড়ের সামনে লেক সাইড হোটেল"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("মেক্সিকো সিটি, মেক্সিকো"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "প্যালাসিও দে বেলারাস আর্টেসের এরিয়াল ভিউ"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "মাউন্ট রুসমোর, মার্কিন যুক্তরাষ্ট্র"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("মাউন্ট রাশমোর"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("সিঙ্গাপুর"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("সুপারট্রি গ্রোভ"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("হাভানা, কিউবা"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "একজন পুরনো নীল গাড়িতে ঝুঁকে দেখছে"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "গন্তব্যের হিসেবে ফ্লাইট খুঁজুন"),
@@ -178,23 +229,47 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("ভ্রমণকারী"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("ঘুম"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("মালে, মালদ্বীপ"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ওভার ওয়াটার বাংলো"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage(
             "অ্যাসপেন, মার্কিন যুক্তরাষ্ট্র"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("কায়েরো, মিশর"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "সূর্যাস্তের সময় আল-আজহার মসজিদের টাওয়ার"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("তাইপেই, তাইওয়ান"),
+        "craneSleep11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "তাইপেই ১০১ স্কাই স্ক্র্যাপার"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "চিরসবুজ গাছ সহ একটি তুষারময় আড়াআড়ি কুটীর"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("মাচু পিচ্চু, পেরু"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("মাচু পিচ্চু দুর্গ"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("হাভানা, কিউবা"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "একজন পুরনো নীল গাড়িতে ঝুঁকে দেখছে"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("ভিতজানাউ, সুইজারল্যান্ড"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "পাহাড়ের সামনে লেক সাইড হোটেল"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage(
             "বিগ সার, মার্কিন যুক্তরাষ্ট্র"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ফিল্ডে টেন্ট"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("নাপা, মার্কিন যুক্তরাষ্ট্র"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("তাল গাছ সহ পুল"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("পোর্টো, পর্তুগাল"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "রিবেরিয়া স্কোয়ারে রঙিন অ্যাপার্টমেন্ট"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("তুলুম, মেক্সিকো"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "সমুদ্র সৈকতের কোনও একটি পাহাড়ে মায়ান সভ্যতার ধ্বংসাবশেষ"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("লিসবন, পর্তুগাল"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("সমুদ্রে ইটের বাতিঘর"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "গন্তব্যের হিসেবে প্রপার্টি দেখুন"),
@@ -345,6 +420,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("ইনপুট চিপ"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL ডিসপ্লে করতে পারছে না:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "একক নির্দিষ্ট উচ্চতাসম্পন্ন সারি যেখানে কিছু টেক্সট সহ লিডিং অথবা ট্রেলিং আইকন রয়েছে।"),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("গৌণ টেক্সট"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "তালিকার লে-আউট স্ক্রল করা হচ্ছে"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("তালিকা"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("প্রতি সারিতে একটি লাইন"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("বিকল্প"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "আউটলাইন বোতাম প্রেস করলে অস্বচ্ছ হয়ে বড় হয়ে যায়। সেটি প্রায়ই একটি বিকল্প সেকেন্ডারি অ্যাকশন নির্দেশ করতে বড় হওয়া বোতামের সাথে ব্যবহার হয়।"),
@@ -354,6 +438,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "বড় হওয়া বোতাম প্রায়ই ফ্ল্যাট লে-আউটকে আকার দিতে সাহায্য করে। ব্যস্ত বা চওড়া জায়গাতে তারা আরও গুরুত্ব দেয়।"),
         "demoRaisedButtonTitle": MessageLookupByLibrary.simpleMessage(
             "ক্রমশ উপরের দিকে যাওয়া বোতাম"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "চেকবক্স ব্যবহারকারীকে একটি সেট থেকে একাধিক বিকল্প বেছে নিতে দেয়। একটি সাধারণ চেকবক্সের মান সত্য বা মিথ্যা এবং একটি ট্রাইস্টেট চেকবক্সের মানটিও শূন্য হতে পারে।"),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("চেকবক্স"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "রেডিও বোতাম সেট থেকে ব্যবহারকারীকে একটি বিকল্প বেছে নিতে দেয়। একচেটিয়া নির্বাচনের জন্য রেডিও বোতামগুলি ব্যবহার করুন যদি আপনি মনে করেন যে ব্যবহারকারীর পাশাপাশি সমস্ত উপলভ্য বিকল্পগুলি দেখতে হবে।"),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("রেডিও"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "চেকবক্স, রেডিও বোতাম এবং সুইচ"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "অন/অফ করার সুইচগুলি একটি সিঙ্গেল সেটিংসের বিকল্পের স্ট্যাটাসকে পরিবর্তন করে। যে বিকল্পটি স্যুইচ নিয়ন্ত্রণ করে এবং সেই সাথে এটির মধ্যে থাকা স্ট্যাটাস সম্পর্কিত ইনলাইন লেবেল থেকে মুছে ফেলা উচিত।"),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("পাল্টান"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("বেছে নেওয়ার বিষয়ে নিয়ন্ত্রণ"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "একটি সাধারণ ডায়ালগ ব্যবহারকারীদের কাছে একাধিক বিকল্পের মধ্যে একটি বেছে নেওয়ার সুযোগ করে দেয়। একটি সাধারণ ডায়ালগে একটি ঐচ্ছিক শীর্ষক থাকলে, তা বেছে নেওয়ার বিকল্পগুলি উপরে উল্লেখ করা আছে।"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("সাধারণ"),
@@ -418,6 +521,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "টগল বোতাম ব্যবহার করে একই ধরনের বিকল্প গ্রুপ করতে পারেন। সম্পর্কিত টগল বোতামের একটি গ্রুপে গুরুত্ব দিতে, সাধারণ কন্টেনার শেয়ার করতে হবে"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("টগল বোতাম"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("প্রতি সারিতে দু\'টি লাইন"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "মেটেরিয়াল ডিজাইনে খুঁজে পাওয়া বিভিন্ন লেখার স্টাইল।"),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -542,6 +647,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ফ্লাটার গ্যালারি সম্পর্কে"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "লন্ডনে TOASTER দ্বারা ডিজাইন করা হয়েছে"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("সেটিংস বন্ধ করুন"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("সেটিংস"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("গাঢ়"),
         "settingsFeedback": MessageLookupByLibrary.simpleMessage("মতামত জানান"),
         "settingsLightTheme": MessageLookupByLibrary.simpleMessage("আলো"),

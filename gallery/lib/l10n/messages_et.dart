@@ -123,48 +123,99 @@ class MessageLookup extends MessageLookupByLibrary {
             "Isikupärastatud reisirakendus"),
         "craneEat": MessageLookupByLibrary.simpleMessage("SÖÖMINE"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Napoli, Itaalia"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Kiviahjus olev pitsa"),
         "craneEat1": MessageLookupByLibrary.simpleMessage(
             "Dallas, Ameerika Ühendriigid"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portugal"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Naine hoiab käes suurt lihavõileiba"),
+        "craneEat1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tühi baar ja baaripukid"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Burger"),
         "craneEat3": MessageLookupByLibrary.simpleMessage(
             "Portland, Ameerika Ühendriigid"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Korea tako"),
         "craneEat4":
             MessageLookupByLibrary.simpleMessage("Pariis, Prantsusmaa"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Šokolaadimagustoit"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, Lõuna-Korea"),
+        "craneEat5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Kunstipärane restoranisaal"),
         "craneEat6": MessageLookupByLibrary.simpleMessage(
             "Seattle, Ameerika Ühendriigid"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Krevetiroog"),
         "craneEat7": MessageLookupByLibrary.simpleMessage(
             "Nashville, Ameerika Ühendriigid"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pagariäri sissekäik"),
         "craneEat8": MessageLookupByLibrary.simpleMessage(
             "Atlanta, Ameerika Ühendriigid"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Taldrik vähkidega"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Hispaania"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Küpsetistega kohvikulett"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Restoranide avastamine sihtkoha järgi"),
         "craneFly": MessageLookupByLibrary.simpleMessage("LENDAMINE"),
         "craneFly0":
             MessageLookupByLibrary.simpleMessage("Aspen, Ameerika Ühendriigid"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mägimajake lumisel maastikul koos igihaljaste puudega"),
         "craneFly1": MessageLookupByLibrary.simpleMessage(
             "Big Sur, Ameerika Ühendriigid"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Kairo, Egiptus"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Al-Azhari mošee tornid päikeseloojangus"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portugal"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Kivimajakas merel"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("Napa, Ameerika Ühendriigid"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bassein ja palmid"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indoneesia"),
+        "craneFly13SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Mereäärne bassein ja palmid"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Telk väljal"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
+        "craneFly2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Palvelipud ja lumine mägi"),
         "craneFly3":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peruu"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu kadunud linn"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldiivid"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Veepeal olevad bangalod"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Šveits"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Hispaania"),
+        "craneFly5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Mägihotell järve kaldal"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("Mexico City, Mehhiko"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Aerofoto Palacio de Bellas Artesist"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "Mount Rushmore, Ameerika Ühendriigid"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Rushmore\'i mägi"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapur"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havanna, Kuuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mees nõjatub vanaaegsele sinisele autole"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Lendude avastamine sihtkoha järgi"),
@@ -182,22 +233,46 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Reisijad"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("UNEREŽIIM"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldiivid"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Veepeal olevad bangalod"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("Aspen, Ameerika Ühendriigid"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Kairo, Egiptus"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Al-Azhari mošee tornid päikeseloojangus"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Taipei 101 pilvelõhkuja"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mägimajake lumisel maastikul koos igihaljaste puudega"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peruu"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu kadunud linn"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havanna, Kuuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mees nõjatub vanaaegsele sinisele autole"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, Šveits"),
+        "craneSleep4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Mägihotell järve kaldal"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage(
             "Big Sur, Ameerika Ühendriigid"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Telk väljal"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("Napa, Ameerika Ühendriigid"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bassein ja palmid"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Värvikirevad korterid Riberia väljakul"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mehhiko"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Maiade ehitiste varemed kaljuserval ranna kohal"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portugal"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Kivimajakas merel"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Atribuutide avastamine sihtkoha järgi"),
@@ -344,6 +419,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Sisendkiip"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL-i ei saanud kuvada:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Üks fikseeritud kõrgusega rida, mis sisaldab tavaliselt teksti ja ikooni rea alguses või lõpus."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Teisene tekst"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("Loendi paigutuste kerimine"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Loendid"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Üks rida"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Valikud"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Mitmetasandilised nupud muutuvad vajutamisel läbipaistvaks ja tõusevad ülespoole. Need seotakse sageli tõstetud nuppudega, et pakkuda alternatiivset (teisest) toimingut."),
@@ -353,6 +437,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Tõstetud nupud pakuvad peamiselt ühetasandiliste nuppude kõrval lisamõõdet. Need tõstavad tihedalt täidetud või suurtel aladel esile funktsioone."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Tõstetud nupp"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Märkeruudud võimaldavad kasutajal teha komplektis mitu valikut. Tavapärane märkeruudu väärtus on Tõene või Väär. Kolme valikuga märkeruudu üks väärtustest võib olla ka Null."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Märkeruut"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Raadionupud võimaldavad kasutajal teha komplektis ühe valiku. Kasutage raadionuppe eksklusiivse valiku pakkumiseks, kui arvate, et kasutaja peab nägema kõiki saadaolevaid valikuid kõrvuti."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Raadio"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Märkeruudud, raadionupud ja lülitid"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Sees-/väljas-lülititega saab reguleerida konkreetse seade olekut. Valik, mida lülitiga juhitakse, ja ka selle olek, tuleb vastava tekstisisese sildiga sõnaselgelt ära märkida."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Lüliti"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Valiku juhtelemendid"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Lihtne dialoog pakub kasutajale valikut mitme võimaluse vahel. Lihtsal dialoogil on valikuline pealkiri, mis kuvatakse valikute kohal."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Lihtne"),
@@ -417,6 +520,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lülitusnuppe saab kasutada seotud valikute grupeerimiseks. Seotud lülitusnuppude gruppide esiletõstmiseks peab grupp jagama ühist konteinerit"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Lülitusnupp"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Kaks rida"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Materiaalses disainil leiduvate eri tüpograafiliste stiilide definitsioonid."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -544,6 +649,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "Teave Flutteri galerii kohta"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("Londonis kujundanud TOASTER"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Sule seaded"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("Seaded"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Tume"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Tagasiside saatmine"),

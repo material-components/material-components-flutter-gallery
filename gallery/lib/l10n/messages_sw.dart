@@ -129,39 +129,89 @@ class MessageLookup extends MessageLookupByLibrary {
             "Programu ya usafiri iliyogeuzwa kukufaa"),
         "craneEat": MessageLookupByLibrary.simpleMessage("KULA"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italia"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Piza ndani ya tanuri la kuni"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("Dallas, Marekani"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Ureno"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mwanamke aliyeshika sandiwichi kubwa ya pastrami"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Baa tupu yenye stuli za muundo wa behewa"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Ajentina"),
+        "craneEat2SemanticLabel": MessageLookupByLibrary.simpleMessage("Baga"),
         "craneEat3": MessageLookupByLibrary.simpleMessage("Portland, Marekani"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Taco ya Kikorea"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, Ufaransa"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Kitindamlo cha chokoleti"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("Seoul, Korea Kusini"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Eneo la kukaa la mkahawa wa kisanii"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("Seattle, Marekani"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Chakula cha uduvi"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("Nashville, Marekani"),
+        "craneEat7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mlango wa kuingia katika tanuri mikate"),
         "craneEat8": MessageLookupByLibrary.simpleMessage("Atlanta, Marekani"),
+        "craneEat8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Sahani ya kamba wa maji baridi"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Uhispania"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kaunta ya mkahawa yenye vitobosha"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Gundua Mikahawa kwa Kutumia Vituo"),
         "craneFly": MessageLookupByLibrary.simpleMessage("RUKA"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("Aspen, Marekani"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Nyumba ndogo ya kupumzika katika mandhari ya theluji yenye miti ya kijani kibichi"),
         "craneFly1": MessageLookupByLibrary.simpleMessage("Big Sur, Marekani"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Kairo, Misri"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Minara ya Msikiti wa Al-Azhar wakati wa machweo"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Ureno"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mnara wa taa wa matofali baharini"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("Napa, Marekani"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bwawa lenye michikichi"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bwawa lenye michikichi kando ya bahari"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Hema katika uwanja"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Bonde la Khumbu, NepalI"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bendera za maombi mbele ya mlima uliofunikwa kwa theluji"),
         "craneFly3":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peruu"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Ngome ya Machu Picchu"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneFly4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Nyumba zisizo na ghorofa zilizojengwa juu ya maji"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Uswisi"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Uhispania"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hoteli kando ya ziwa na mbele ya milima"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("Jiji la Meksiko, Meksiko"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mwonekeno wa juu wa Palacio de Bellas Artes"),
         "craneFly7":
             MessageLookupByLibrary.simpleMessage("Mount Rushmore, Marekani"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Mlima Rushmore"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapoo"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Kijisitu cha Supertree"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mwanaume aliyeegemea gari la kale la samawati"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Gundua Ndege kwa Kutumia Vituo"),
@@ -177,19 +227,43 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Wasafiri"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("HALI TULI"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneSleep0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Nyumba zisizo na ghorofa zilizojengwa juu ya maji"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage("Aspen, Marekani"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Kairo, Misri"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Minara ya Msikiti wa Al-Azhar wakati wa machweo"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwani"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Maghorofa ya Taipei 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Nyumba ndogo ya kupumzika katika mandhari ya theluji yenye miti ya kijani kibichi"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peruu"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Ngome ya Machu Picchu"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mwanaume aliyeegemea gari la kale la samawati"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, Uswisi"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hoteli kando ya ziwa na mbele ya milima"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("Big Sur, Marekani"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Hema katika uwanja"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("Napa, Marekani"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bwawa lenye michikichi"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Ureno"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Nyumba maridadi katika Mraba wa Riberia"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Meksiko"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Magofu ya Maya kwenye jabali juu ya ufuo"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Ureno"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mnara wa taa wa matofali baharini"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Gundua Mali kwa Kutumia Vituo"),
@@ -339,6 +413,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Chipu ya Kuingiza"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("Imeshindwa kuonyesha URL:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Safu wima moja ya urefu usiobadilika ambayo kwa kawaida ina baadhi ya maandishi na pia aikoni ya mwanzoni au mwishoni."),
+        "demoListsSecondary": MessageLookupByLibrary.simpleMessage(
+            "Maandishi katika mstari wa pili"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Miundo ya orodha za kusogeza"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Orodha"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Mstari Mmoja"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Chaguo"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Vitufe vya mipaka ya mistari huwa havipenyezi nuru na huinuka vinapobonyezwa. Mara nyingi vinaoanishwa na vitufe vilivyoinuliwa ili kuashiria kitendo mbadala, cha pili."),
@@ -348,6 +431,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Vitufe vilivyoinuliwa huongeza kivimbe kwenye miundo iliyo bapa kwa sehemu kubwa. Vinasisitiza utendaji kwenye nafasi pana au yenye shughuli nyingi."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Kitufe Kilichoinuliwa"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Visanduku vya kuteua humruhusu mtumiaji kuteua chaguo nyingi kwenye seti. Thamani ya kawaida ya kisanduku cha kuteua ni ndivyo au saivyo na thamani ya hali tatu ya kisanduku cha kuteua pia inaweza kuwa batili."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Kisanduku cha kuteua"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Vitufe vya mviringo humruhusu mtumiaji kuteua chaguo moja kwenye seti. Tumia vitufe vya mviringo kwa uteuzi wa kipekee ikiwa unafikiri kuwa mtumiaji anahitaji kuona chaguo zote upande kwa upande."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Redio"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Visanduku vya kuteua, vitufe vya mviringo na swichi"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Swichi za kuwasha/kuzima hugeuza hali ya chaguo moja la mipangilio. Chaguo ambalo swichi inadhibiti na pia hali ambayo chaguo hilo limo inafaa kubainishwa wazi kwenye lebo inayolingana na maandishi."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Swichi"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Vidhibiti vya kuteua"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Kidirisha rahisi humpa mtumiaji chaguo kati ya chaguo nyingi. Kidirisha rahisi kina kichwa kisicho cha lazima kinachoonyeshwa juu ya chaguo."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Rahisi"),
@@ -412,6 +514,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Vitufe vya kugeuza vinaweza kutumiwa kuweka chaguo zinazohusiana katika vikundi. Ili kusisitiza vikundi vya vitufe vya kugeuza vinavyohusiana, kikundi kinafaa kushiriki metadata ya kawaida"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Vitufe vya Kugeuza"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Mistari Miwili"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Ufafanuzi wa miundo mbalimbali ya taipografia inayopatikana katika Usanifu Bora."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -539,6 +643,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Kuhusu Matunzio ya Flutter"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Imebuniwa na TOASTER mjini London"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Funga mipangilio"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Mipangilio"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Meusi"),
         "settingsFeedback": MessageLookupByLibrary.simpleMessage("Tuma maoni"),
         "settingsLightTheme": MessageLookupByLibrary.simpleMessage("Meupe"),

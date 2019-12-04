@@ -123,37 +123,88 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("En anpassad reseapp"),
         "craneEat": MessageLookupByLibrary.simpleMessage("MAT"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Neapel, Italien"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pizza i en vedeldad ugn"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("Dallas, USA"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portugal"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kvinna som håller en stor pastramimacka"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Tom bar med höga pallar i dinerstil"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Hamburgare"),
         "craneEat3": MessageLookupByLibrary.simpleMessage("Portland, USA"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Koreansk taco"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, Frankrike"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Chokladdessert"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, Sydkorea"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Sittplatser på en bohemisk restaurang"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("Seattle, USA"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Räkrätt"),
         "craneEat7": MessageLookupByLibrary.simpleMessage("Nashville, USA"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Ingång till bageriet"),
         "craneEat8": MessageLookupByLibrary.simpleMessage("Atlanta, USA"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Fat med kräftor"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spanien"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Kafédisk med bakverk"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Utforska restauranger efter destination"),
         "craneFly": MessageLookupByLibrary.simpleMessage("FLYG"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("Aspen, USA"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Fjällstuga i ett snötäckt landskap med granar"),
         "craneFly1": MessageLookupByLibrary.simpleMessage("Big Sur, USA"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Kairo, Egypten"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Al-Azhar-moskéns torn i solnedgången"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portugal"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tegelfyr i havet"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("Napa, USA"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pool och palmer"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesien"),
+        "craneFly13SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Havsnära pool och palmer"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tält på ett fält"),
         "craneFly2": MessageLookupByLibrary.simpleMessage("Khumbudalen, Nepal"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Böneflaggor framför snötäckt berg"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldiverna"),
+        "craneFly4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bungalower på pålar i vattnet"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Schweiz"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spanien"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hotell vid en sjö med berg i bakgrunden"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("Mexico City, Mexiko"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Flygbild av Palacio de Bellas Artes"),
         "craneFly7":
             MessageLookupByLibrary.simpleMessage("Mount Rushmore, USA"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Mount Rushmore"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Parken Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havanna, Kuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Man som lutar sig mot en blå veteranbil"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Utforska flyg efter destination"),
@@ -169,19 +220,43 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Resenärer"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("SÖMN"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldiverna"),
+        "craneSleep0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bungalower på pålar i vattnet"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage("Aspen, USA"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Kairo, Egypten"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Al-Azhar-moskéns torn i solnedgången"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Skyskrapan Taipei 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Fjällstuga i ett snötäckt landskap med granar"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havanna, Kuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Man som lutar sig mot en blå veteranbil"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, Schweiz"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hotell vid en sjö med berg i bakgrunden"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage("Big Sur, USA"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tält på ett fält"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("Napa, USA"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pool och palmer"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Färgglada byggnader vid Praça da Ribeira"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexiko"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mayaruiner på en klippa ovanför en strand"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portugal"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tegelfyr i havet"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Utforska boenden efter destination"),
@@ -328,6 +403,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Inmatningsbricka"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Det gick inte att visa webbadressen:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "En enkelrad med fast höjd som vanligtvis innehåller text och en ikon före eller efter texten."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Sekundär text"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("Layouter med rullista"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Listor"),
+        "demoOneLineListsTitle": MessageLookupByLibrary.simpleMessage("En rad"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("Alternativ"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
@@ -338,6 +421,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Med upphöjda knappar får mestadels platta layouter definition. De kan också användas för att lyfta fram funktioner i plottriga eller breda utrymmen."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Upphöjd knapp"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Med kryssrutor kan användaren välja mellan flera alternativ från en uppsättning. Värdet för en normal kryssruta är sant eller falskt. För en kryssruta med tre lägen kan värdet även vara tomt."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Kryssruta"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Med hjälp av alternativknapparna kan användarna välja ett alternativ från en uppsättning. Använd alternativknapparna för ömsesidig uteslutning om du tror att användaren behöver se alla tillgängliga alternativ sida vid sida."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Alternativknapp"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Kryssrutor, alternativknappar och reglage"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "På/av-reglage som används för att aktivera eller inaktivera en inställning. Det alternativ som reglaget styr samt det aktuella läget ska framgå av motsvarande infogad etikett."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Reglage"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Urvalskontroller"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Med en enkel dialogruta får användaren välja mellan flera alternativ. En enkel dialogruta har en valfri titel som visas ovanför alternativen."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Enkel"),
@@ -401,6 +503,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "På/av-knappar kan användas för grupprelaterade alternativ. En grupp bör finnas i samma behållare för att lyfta fram grupper av relaterade på/av-knappar"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("På/av-knappar"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Två rader"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Definitioner för olika typografiska format i Material Design"),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -529,6 +633,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Om Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Designad av TOASTER i London"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Stäng inställningar"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Inställningar"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Mörkt"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Skicka feedback"),

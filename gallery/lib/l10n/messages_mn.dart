@@ -123,45 +123,96 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Хувийн болгосон аяллын апп"),
         "craneEat": MessageLookupByLibrary.simpleMessage("ЗООГЛОХ"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Итали, Неаполь"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Модоор галласан зуухан дахь пицца"),
         "craneEat1": MessageLookupByLibrary.simpleMessage(
             "Америкийн Нэгдсэн Улс, Даллас"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("Португал, Лисбон"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Асар том пастрами сэндвич барьж буй эмэгтэй"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Хоолны сандалтай хоосон уушийн газар"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Аргентин, Кордова"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Бургер"),
         "craneEat3": MessageLookupByLibrary.simpleMessage(
             "Америкийн Нэгдсэн Улс, Портланд"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Солонгос тако"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Франц, Парис"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Шоколадтай амттан"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("Өмнөд Солонгос, Сөүл"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Уран чамин рестораны суух хэсэг"),
         "craneEat6": MessageLookupByLibrary.simpleMessage(
             "Америкийн Нэгдсэн Улс, Сиэтл"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Сам хорхойтой хоол"),
         "craneEat7": MessageLookupByLibrary.simpleMessage(
             "Америкийн Нэгдсэн Улс, Нашвилл"),
+        "craneEat7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Талх нарийн боовны газрын хаалга"),
         "craneEat8": MessageLookupByLibrary.simpleMessage(
             "Америкийн Нэгдсэн улс, Атланта"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Хавчны таваг"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Испани, Мадрид"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Гурилан бүтээгдэхүүнүүд өрсөн кафены лангуу"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Рестораныг очих газраар нь судлах"),
         "craneFly": MessageLookupByLibrary.simpleMessage("НИСЭХ"),
         "craneFly0": MessageLookupByLibrary.simpleMessage(
             "Америкийн Нэгдсэн Улс, Аспен"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Мөнх ногоон модтой, цастай байгаль дахь модон байшин"),
         "craneFly1": MessageLookupByLibrary.simpleMessage(
             "Америкийн Нэгдсэн Улс, Биг Сур"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Египет, Каир"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Нар жаргах үеийн Аль-Азхар сүмийн цамхгууд"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("Португал, Лисбон"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Далай дахь тоосгон гэрэлт цамхаг"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("Америкийн Нэгдсэн Улс, Напа"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Далдуу модтой усан сан"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Индонез, Бали"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Далдуу модтой далайн эргийн усан сан"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Талбай дээрх майхан"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Балба, Хумбу хөндий"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Цастай уулын урдах залбирлын тугууд"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Перу, Мачу Пикчу"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Мачу Пикчу хэрэм"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Мальдив, Мале"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Усан дээрх бунгало"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Швейцар, Вицнау"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Испани, Мадрид"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Уулын урдах нуурын эргийн зочид буудал"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("Мексик улс, Мексик хот"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Palacio de Bellas Artes-н агаараас харагдах байдал"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "Америкийн Нэгдсэн Улс, Рашмор"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Рашмор уул"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Сингапур"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree төгөл"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Куба, Хавана"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Хуучны цэнхэр өнгийн машин налж буй эр"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Нислэгийг очих газраар нь судлах"),
@@ -179,20 +230,44 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Аялагчид"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("ХОНОГЛОХ"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Мальдив, Мале"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Усан дээрх бунгало"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage(
             "Америкийн Нэгдсэн Улс, Аспен"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Египет, Каир"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Нар жаргах үеийн Аль-Азхар сүмийн цамхгууд"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Тайвань, Тайбэй"),
+        "craneSleep11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Тайбэй 101 тэнгэр баганадсан барилга"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Мөнх ногоон модтой, цастай байгаль дахь модон байшин"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("Перу, Мачу Пикчу"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Мачу Пикчу хэрэм"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Куба, Хавана"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Хуучны цэнхэр өнгийн машин налж буй эр"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("Швейцар, Вицнау"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Уулын урдах нуурын эргийн зочид буудал"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage(
             "Америкийн Нэгдсэн Улс, Биг Сур"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Талбай дээрх майхан"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("Америкийн Нэгдсэн Улс, Напа"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Далдуу модтой усан сан"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("Португал, Порту"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Riberia Square дахь өнгөлөг орон сууцууд"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Мексик, Тулум"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Далайн эрэг дээрх хадан цохионы Майягийн балгас туурь"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("Португал, Лисбон"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Далай дахь тоосгон гэрэлт цамхаг"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Үл хөдлөх хөрөнгийг очих газраар нь судлах"),
@@ -345,6 +420,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Оруулгын чип"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL-г үзүүлж чадсангүй:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Тогтмол өндөртэй ганц мөр нь ихэвчлэн зарим текст болон эхлэх эсвэл төгсгөх дүрс тэмдэг агуулдаг."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Хоёр дахь мөрний текст"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Жагсаалтын бүдүүвчийг гүйлгэх"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Жагсаалтууд"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Нэг шугам"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Сонголт"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Гадна хүрээтэй товчлуурыг дарсан үед тодорч, дээшилдэг. Нэмэлт сонголт болон хоёрдогч үйлдлийг заахын тулд тэдгээрийг ихэвчлэн товгор товчлууртай хослуулдаг."),
@@ -354,6 +438,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Товгор товчлуур нь ихэвчлэн хавтгай бүдүүвчид хэмжээс нэмдэг. Тэд шигүү эсвэл өргөн зайтай функцийг онцолдог."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Товгор товчлуур"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Checkboxes нь хэрэглэгчид багцаас олон сонголт сонгохыг зөвшөөрдөг. Энгийн checkbox-н утга нь үнэн эсвэл худал, tristate checkbox-н утга нь мөн тэг байж болно."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Checkbox"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Радио товчлуур нь хэрэглэгчид багцаас нэг сонголт сонгохийг зөвшөөрдөг. Хэрэв та хэрэглэгч бүх боломжит сонголтыг зэрэгцүүлэн харах шаардлагатай гэж бодож байвал онцгой сонголтод зориулсан радио товчлуурыг ашиглана уу."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Радио"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Checkboxes, радио товчлуур болон сэлгүүр"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Асаах/унтраах сэлгүүр нь дан тохиргооны сонголтын төлөвийг асаана/унтраана. Сэлгэх хяналтын сонголт Болон үүний байгаа төлөвийг харгалзах мөрийн шошгоос тодорхой болгох шаардлагатай."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Сэлгэх"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Хяналтын сонголт"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Энгийн харилцах цонх нь хэрэглэгчид хэд хэдэн сонголтыг санал болгодог. Энгийн харилцах цонх нь сонголтын дээр үзэгдэх сонгох боломжтой гарчигтай байна."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Энгийн"),
@@ -418,6 +521,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Асаах товчийг холбоотой сонголтыг бүлэглэхэд ашиглаж болно. Асаах товчтой холбоотой бүлгийг онцлохын тулд тухайн бүлэг нийтлэг контэйнер хуваалцсан байх шаардлагатай"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Асаах товч"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Хоёр шугам"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Материалын загварт байх төрөл бүрийн үсгийн урлагийн загварын тодорхойлолт."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -543,6 +648,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Flutter Gallery-н тухай"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Лондон дахь TOASTER зохион бүтээсэн"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Тохиргоог хаах"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("Тохиргоо"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Бараан"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Санал хүсэлт илгээх"),

@@ -121,38 +121,88 @@ class MessageLookup extends MessageLookupByLibrary {
             "Саяхатқа арналған жекелендірілген қолданба"),
         "craneEat": MessageLookupByLibrary.simpleMessage("ТАҒАМ"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Неаполь, Италия"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ағаш жағылатын пештегі пицца"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("Даллас, АҚШ"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Лиссабон, Португалия"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Пастрами қосылған үлкен сэндвичті ұстаған әйел"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Дөңгелек орындықтар қойылған бос бар"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Кордова, Аргентина"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Бургер"),
         "craneEat3": MessageLookupByLibrary.simpleMessage("Портленд, АҚШ"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Корей такосы"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Париж, Франция"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Шоколад десерті"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("Сеул, Оңтүстік Корея"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Artsy мейрамханасының демалыс орны"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("Сиэтл, АҚШ"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Асшаян тағамы"),
         "craneEat7": MessageLookupByLibrary.simpleMessage("Нашвилл, АҚШ"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Наубайхана есігі"),
         "craneEat8": MessageLookupByLibrary.simpleMessage("Атланта, АҚШ"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Шаян салынған тәрелке"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Мадрид, Испания"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Кафедегі тоқаштар қойылған сөре"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Баратын жердегі мейрамханаларды қарау"),
         "craneFly": MessageLookupByLibrary.simpleMessage("ҰШУ"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("Аспен, АҚШ"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Мәңгі жасыл ағаштар өскен қарлы жердегі шале"),
         "craneFly1": MessageLookupByLibrary.simpleMessage("Биг-Сур, АҚШ"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Каир, Мысыр"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Күн батқан кездегі Әл Ажар мешітінің мұнаралары"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Лиссабон, Португалия"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Теңіздегі кірпіш шамшырақ"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("Напа, АҚШ"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Пальма ағаштары бар бассейн"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Бали, Индонезия"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Пальма ағаштары өскен теңіз жағасындағы бассейн"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Даладағы шатыр"),
         "craneFly2": MessageLookupByLibrary.simpleMessage("Кхумбу, Непал"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Қарлы тау алдындағы сыйыну жалаулары"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Мачу-Пикчу, Перу"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Мачу-пикчу цитаделі"),
         "craneFly4":
             MessageLookupByLibrary.simpleMessage("Мале, Мальдив аралдары"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Су үстіндегі бунгалолар"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Вицнау, Швейцария"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Мадрид, Испания"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Таулар алдындағы көл жағасындағы қонақүй"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Мехико, Мексика"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Әсем өнерлер сарайының үстінен көрінісі"),
         "craneFly7": MessageLookupByLibrary.simpleMessage("Рашмор, АҚШ"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Рашмор тауы"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Сингапур"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Суперағаштар орманы"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Гавана, Куба"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ескі көк автокөлікке сүйеніп тұрған ер адам"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Баратын жерге ұшақ билеттерін қарау"),
@@ -173,19 +223,43 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneSleep": MessageLookupByLibrary.simpleMessage("ҰЙҚЫ"),
         "craneSleep0":
             MessageLookupByLibrary.simpleMessage("Мале, Мальдив аралдары"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Су үстіндегі бунгалолар"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage("Аспен, АҚШ"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Каир, Мысыр"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Күн батқан кездегі Әл Ажар мешітінің мұнаралары"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Тайбэй, Тайвань"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Тайбэй 101 зәулім үйі"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Мәңгі жасыл ағаштар өскен қарлы жердегі шале"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("Мачу-Пикчу, Перу"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Мачу-пикчу цитаделі"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Гавана, Куба"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ескі көк автокөлікке сүйеніп тұрған ер адам"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("Вицнау, Швейцария"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Таулар алдындағы көл жағасындағы қонақүй"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage("Биг-Сур, АҚШ"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Даладағы шатыр"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("Напа, АҚШ"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Пальма ағаштары бар бассейн"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("Порту, Потугалия"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Рибейра алаңындағы түрлі түсті үйлер"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Тулум, Мексика"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Жағалау жанындағы жарда орналасқан майя тайпасының қирандылары"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Лиссабон, Португалия"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Теңіздегі кірпіш шамшырақ"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Баратын жердегі қонақүйлерді қарау"),
@@ -336,6 +410,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Енгізу чипі"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL мекенжайы көрсетілмеді:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Биіктігі белгіленген бір жол. Әдетте оның мәтіні мен басында және аяғында белгішесі болады."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Қосымша мәтін"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("Тізім форматтарын айналдыру"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Тізімдер"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Бір қатар"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Oпциялар"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Контурлы түймелер күңгірт болады және оларды басқан кезде көтеріледі. Олар көбіне көтеріңкі түймелермен жұптасып, балама және қосымша әрекетті көрсетеді."),
@@ -345,6 +428,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Көтеріңкі түймелер тегіс форматтағы мазмұндарға өң қосады. Олар мазмұн тығыз не сирек орналасқан кезде функцияларды ерекшелеу үшін қолданылады."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Көтеріңкі түйме"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Құсбелгі ұяшықтары пайдаланушыға бір жиынтықтан бірнеше опцияны таңдауға мүмкіндік береді. Әдетте құсбелгі ұяшығы \"true\" не \"false\" болады, кейде \"null\" болуы мүмкін."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Құсбелгі ұяшығы"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Ауыстырып қосқыш пайдаланушыға жиыннан бір опцияны таңдап алуға мүмкіндік береді. Барлық қолжетімді опцияларды бір жерден көруді қалаған кезде, ауыстырып қосқышты пайдаланыңыз."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Радио"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Құсбелгі ұяшықтары, ауыстырып қосқыштар және ауыстырғыштар"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Қосу/өшіру ауыстырғыштарымен жеке параметрлер опциясының күйін ауыстырып қоса аласыз. Басқару элементтерін қосу/өшіру опциясы және оның күйі сәйкес белгі арқылы анық көрсетілуі керек."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Ауысу"),
+        "demoSelectionControlsTitle": MessageLookupByLibrary.simpleMessage(
+            "Таңдауды басқару элементтері"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Қарапайым диалогтік терезе пайдаланушыға опцияны таңдауға мүмкіндік береді. Қарапайым диалогтік терезеге атау берілсе, ол таңдаулардың үстінде көрсетіледі."),
         "demoSimpleDialogTitle":
@@ -409,6 +511,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ауыстырып қосу түймелері ұқсас опцияларды топтастыруға пайдаланылады. Ұқсас ауыстырып қосу түймелерін белгілеу үшін топ ортақ контейнерде орналасқан болу керек."),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Ауыстырып қосу түймелері"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Екі қатар"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Material Design-дағы түрлі стильдердің анықтамалары бар."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -536,6 +640,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Flutter Gallery туралы ақпарат"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("Дизайн: TOASTER, Лондон"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Параметрлерді жабу"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Параметрлер"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Қараңғы"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Пікір жіберу"),

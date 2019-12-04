@@ -124,47 +124,98 @@ class MessageLookup extends MessageLookupByLibrary {
             "Μια εξατομικευμένη εφαρμογή για ταξίδια"),
         "craneEat": MessageLookupByLibrary.simpleMessage("ΦΑΓΗΤΟ"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Νάπολη, Ιταλία"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Πίτσα σε ξυλόφουρνο"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("Ντάλας, Ηνωμένες Πολιτείες"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Λισαβόνα, Πορτογαλία"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Γυναίκα που κρατάει ένα τεράστιο σάντουιτς παστράμι"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Άδειο μπαρ με σκαμπό εστιατορίου"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Κόρδοβα, Αργεντινή"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Μπέργκερ"),
         "craneEat3": MessageLookupByLibrary.simpleMessage(
             "Πόρτλαντ, Ηνωμένες Πολιτείες"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Κορεατικό τάκο"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Παρίσι, Γαλλία"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Γλυκό σοκολάτας"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Σεούλ, Νότια Κορέα"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Χώρος καθήμενων καλλιτεχνικού εστιατορίου"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("Σιάτλ, Ηνωμένες Πολιτείες"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Πιάτο με γαρίδες"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("Νάσβιλ, Ηνωμένες Πολιτείες"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Είσοδος φούρνου"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("Ατλάντα, Ηνωμένες Πολιτείες"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Πιάτο με καραβίδες"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Μαδρίτη, Ισπανία"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Πάγκος καφετέριας με αρτοσκευάσματα"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Αναζήτηση εστιατορίων κατά προορισμό"),
         "craneFly": MessageLookupByLibrary.simpleMessage("ΠΤΗΣΗ"),
         "craneFly0":
             MessageLookupByLibrary.simpleMessage("Άσπεν, Ηνωμένες Πολιτείες"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Σαλέ σε χιονισμένο τοπίο με αειθαλή δέντρα"),
         "craneFly1": MessageLookupByLibrary.simpleMessage(
             "Μπιγκ Σερ, Ηνωμένες Πολιτείες"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Κάιρο, Αίγυπτος"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Οι πύργοι του τεμένους Αλ-Αζχάρ στο ηλιοβασίλεμα"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Λισαβόνα, Πορτογαλία"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Φάρος από τούβλα στη θάλασσα"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("Νάπα, Ηνωμένες Πολιτείες"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Λιμνούλα με φοινικόδεντρα"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Μπαλί, Ινδονησία"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Πισίνα δίπλα στη θάλασσα με φοινικόδεντρα"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Μια σκηνή σε ένα λιβάδι"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Κοιλάδα Κούμπου, Νεπάλ"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Σημαίες προσευχής μπροστά από ένα χιονισμένο βουνό"),
         "craneFly3":
             MessageLookupByLibrary.simpleMessage("Μάτσου Πίτσου, Περού"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Φρούριο Μάτσου Πίτσου"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Μαλέ, Μαλδίβες"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Μπανγκαλόου πάνω στο νερό"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Βιτζνάου, Ελβετία"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Μαδρίτη, Ισπανία"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ξενοδοχείο δίπλα στη λίμνη μπροστά από βουνά"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("Πόλη του Μεξικού, Μεξικό"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Αεροφωτογραφία του Palacio de Bellas Artes"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "Όρος Ράσμορ, Ηνωμένες Πολιτείες"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Όρος Ράσμορ"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Σιγκαπούρη"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Αβάνα, Κούβα"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Άνδρας που ακουμπάει σε αυτοκίνητο αντίκα"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Αναζητήστε πτήσεις κατά προορισμό"),
@@ -184,24 +235,48 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ταξιδιώτες"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("ΥΠΝΟΣ"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Μαλέ, Μαλδίβες"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Μπανγκαλόου πάνω στο νερό"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("Άσπεν, Ηνωμένες Πολιτείες"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Κάιρο, Αίγυπτος"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Οι πύργοι του τεμένους Αλ-Αζχάρ στο ηλιοβασίλεμα"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Ταϊπέι, Ταϊβάν"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Ουρανοξύστης Taipei 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Σαλέ σε χιονισμένο τοπίο με αειθαλή δέντρα"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Μάτσου Πίτσου, Περού"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Φρούριο Μάτσου Πίτσου"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Αβάνα, Κούβα"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Άνδρας που ακουμπάει σε αυτοκίνητο αντίκα"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("Βιτζνάου, Ελβετία"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ξενοδοχείο δίπλα στη λίμνη μπροστά από βουνά"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage(
             "Μπιγκ Σερ, Ηνωμένες Πολιτείες"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Μια σκηνή σε ένα λιβάδι"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("Νάπα, Ηνωμένες Πολιτείες"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Λιμνούλα με φοινικόδεντρα"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("Πόρτο, Πορτογαλία"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Πολύχρωμα διαμερίσματα στην πλατεία Riberia"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Τουλούμ, Μεξικό"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ερείπια των Μάγια σε έναν γκρεμό πάνω από μια παραλία"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Λισαβόνα, Πορτογαλία"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Φάρος από τούβλα στη θάλασσα"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Αναζήτηση ιδιοκτησιών κατά προορισμό"),
@@ -355,6 +430,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Τσιπ εισαγωγής"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Δεν ήταν δυνατή η προβολή του URL:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Μία γραμμή σταθερού ύψους που συνήθως περιέχει κείμενο καθώς και ένα εικονίδιο στην αρχή ή στο τέλος."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Δευτερεύον κείμενο"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("Διατάξεις κυλιόμενων λιστών"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Λίστες"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Μία γραμμή"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Επιλογές"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Τα κουμπιά με περίγραμμα γίνονται αδιαφανή και ανυψώνονται κατά το πάτημα. Συχνά συνδυάζονται με ανυψωμένα κουμπιά για να υποδείξουν μια εναλλακτική, δευτερεύουσα ενέργεια."),
@@ -364,6 +448,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Τα ανυψωμένα κουμπιά προσθέτουν διάσταση στις κυρίως επίπεδες διατάξεις. Δίνουν έμφαση σε λειτουργίες σε γεμάτους ή μεγάλους χώρους."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Ανασηκωμένο κουμπί"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Τα πλαίσια ελέγχου επιτρέπουν στον χρήστη να επιλέξει πολλές επιλογές από ένα σύνολο. Μια τιμή ενός κανονικού πλαισίου ελέγχου είναι είτε true είτε false και η τιμή ενός πλαισίου ελέγχου τριπλής κατάστασης μπορεί, επίσης, να είναι null."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Πλαίσιο ελέγχου"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Τα κουμπιά επιλογής επιτρέπουν στον χρήστη να επιλέξει μια επιλογή από ένα σύνολο. Χρησιμοποιήστε τα κουμπιά επιλογής για αποκλειστική επιλογή, εάν πιστεύετε ότι ο χρήστης πρέπει να βλέπει όλες τις διαθέσιμες επιλογές δίπλα-δίπλα."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Ραδιόφωνο"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Πλαίσια ελέγχου, κουμπιά επιλογής και διακόπτες"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Οι διακόπτες ενεργοποίησης/απενεργοποίησης εναλλάσουν την κατάσταση μιας μεμονωμένης ρύθμισης. Η επιλογή που ελέγχει ο διακόπτης, καθώς και η κατάσταση στην οποία βρίσκεται, θα πρέπει να αποσαφηνίζεται από την αντίστοιχη ενσωματωμένη ετικέτα."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Εναλλαγή"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Στοιχεία ελέγχου επιλογής"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Ένα απλό παράθυρο διαλόγου που προσφέρει στον χρήστη τη δυνατότητα επιλογής μεταξύ διαφόρων επιλογών. Ένα απλό παράθυρο διαλόγου με προαιρετικό τίτλο που εμφανίζεται πάνω από τις επιλογές."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Απλό"),
@@ -430,6 +533,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Μπορείτε να χρησιμοποιήσετε κουμπιά εναλλαγής για να ομαδοποιήσετε τις σχετικές επιλογές. Για να δοθεί έμφαση σε ομάδες σχετικών κουμπιών εναλλαγής, μια ομάδα θα πρέπει να μοιράζεται ένα κοινό κοντέινερ."),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Κουμπιά εναλλαγής"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Δύο γραμμές"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Ορισμοί για διάφορα τυπογραφικά στιλ που συναντώνται στο material design."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -561,6 +666,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Σχετικά με το Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Σχεδίαση από TOASTER στο Λονδίνο"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Κλείσιμο ρυθμίσεων"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Ρυθμίσεις"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Σκούρο"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Αποστολή σχολίων"),

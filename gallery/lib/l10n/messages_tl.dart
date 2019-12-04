@@ -123,45 +123,96 @@ class MessageLookup extends MessageLookupByLibrary {
             "Isang naka-personalize na travel app"),
         "craneEat": MessageLookupByLibrary.simpleMessage("KUMAIN"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italy"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Pizza sa loob ng oven na ginagamitan ng panggatong"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("Dallas, United States"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Babaeng may hawak na malaking pastrami sandwich"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Walang taong bar na may mga upuang pang-diner"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Burger"),
         "craneEat3":
             MessageLookupByLibrary.simpleMessage("Portland, United States"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Korean taco"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, France"),
+        "craneEat4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Panghimagas na gawa sa tsokolate"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, South Korea"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Artsy na seating area ng isang restaurant"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("Seattle, United States"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Putaheng may hipon"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("Nashville, United States"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pasukan ng bakery"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("Atlanta, United States"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pinggan ng crawfish"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Counter na may mga pastry sa isang cafe"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Mag-explore ng Mga Restaurant ayon sa Destinasyon"),
         "craneFly": MessageLookupByLibrary.simpleMessage("LUMIPAD"),
         "craneFly0":
             MessageLookupByLibrary.simpleMessage("Aspen, United States"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Chalet sa isang maniyebeng tanawing may mga evergreen na puno"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mga tore ng Al-Azhar Mosque habang papalubog ang araw"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Brick na parola sa may dagat"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("Napa, United States"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pool na may mga palm tree"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Pool sa tabi ng dagat na may mga palm tree"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tent sa isang parang"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mga prayer flag sa harap ng maniyebeng bundok"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Citadel ng Machu Picchu"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneFly4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mga bungalow sa ibabaw ng tubig"),
         "craneFly5":
             MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spain"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hotel sa tabi ng lawa sa harap ng mga bundok"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("Mexico City, Mexico"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Tanawin mula sa himpapawid ng Palacio de Bellas Artes"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "Mount Rushmore, United States"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Mount Rushmore"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Lalaking nakasandal sa isang antique na asul na sasakyan"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Mag-explore ng Mga Flight ayon sa Destinasyon"),
@@ -181,22 +232,46 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Mga Bumibiyahe"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("MATULOG"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneSleep0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mga bungalow sa ibabaw ng tubig"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("Aspen, United States"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egypt"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mga tore ng Al-Azhar Mosque habang papalubog ang araw"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Taipei 101 skyscraper"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Chalet sa isang maniyebeng tanawing may mga evergreen na puno"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Citadel ng Machu Picchu"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Lalaking nakasandal sa isang antique na asul na sasakyan"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("Vitznau, Switzerland"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hotel sa tabi ng lawa sa harap ng mga bundok"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("Big Sur, United States"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tent sa isang parang"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("Napa, United States"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pool na may mga palm tree"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Makukulay na apartment sa Riberia Square"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mga Mayan na guho sa isang talampas sa itaas ng beach"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Brick na parola sa may dagat"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Mag-explore ng Mga Property ayon sa Destinasyon"),
@@ -347,6 +422,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Input Chip"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("Hindi maipakita ang URL:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Isang row na nakapirmi ang taas na karaniwang naglalaman ng ilang text pati na rin isang icon na leading o trailing."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Pangalawang text"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Mga layout ng nagso-scroll na listahan"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Mga Listahan"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Isang Linya"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("Mga Opsyon"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
@@ -357,6 +441,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Nagdaragdag ng dimensyon ang mga nakaangat na button sa mga layout na puro flat. Binibigyang-diin ng mga ito ang mga function sa mga lugar na maraming nakalagay o malawak."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Nakaangat na Button"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Nagbibigay-daan sa user ang mga checkbox na pumili ng maraming opsyon sa isang hanay. True o false ang value ng isang normal na checkbox at puwede ring null ang value ng isang tristate checkbox."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Checkbox"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Nagbibigay-daan sa user ang mga radio button na pumili ng isang opsyon sa isang hanay. Gamitin ang mga radio button para sa paisa-isang pagpili kung sa tingin mo ay dapat magkakatabing makita ng user ang lahat ng available na opsyon."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Radio"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Mga checkbox, radio button, at switch"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Tina-toggle ng mga on/off na switch ang status ng isang opsyon sa mga setting. Dapat malinaw na nakasaad sa inline na label ang opsyong kinokontrol ng switch, pati na rin ang kasalukuyang status nito."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Switch"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Mga kontrol sa pagpili"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Isang simpleng dialog na nag-aalok sa user na pumili sa pagitan ng ilang opsyon. May opsyonal na pamagat ang simpleng dialog na ipinapakita sa itaas ng mga opsyon."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Simple"),
@@ -423,6 +526,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Magagamit ang mga toggle button para pagpangkatin ang magkakaugnay na opsyon. Para bigyang-diin ang mga pangkat ng magkakaugnay na toggle button, dapat may iisang container ang isang pangkat"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Mga Toggle Button"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Dalawang Linya"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Mga kahulugan para sa iba\'t ibang typographical na istilong makikita sa Material Design."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -553,6 +658,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Tungkol sa Gallery ng Flutter"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Idinisenyo ng TOASTER sa London"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Isara ang mga setting"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Mga Setting"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Madilim"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Magpadala ng feedback"),

@@ -124,38 +124,89 @@ class MessageLookup extends MessageLookupByLibrary {
             "Personalizovaná cestovní aplikace"),
         "craneEat": MessageLookupByLibrary.simpleMessage("JÍDLO"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Neapol, Itálie"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pizza v peci na dřevo"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("Dallas, USA"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Lisabon, Portugalsko"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Žena držící velký sendvič pastrami"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Prázdný bar s vysokými stoličkami"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Hamburger"),
         "craneEat3": MessageLookupByLibrary.simpleMessage("Portland, USA"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Korejské taco"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Paříž, Francie"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Čokoládový dezert"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Soul, Jižní Korea"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Posezení ve stylové restauraci"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("Seattle, USA"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pokrm z krevet"),
         "craneEat7": MessageLookupByLibrary.simpleMessage("Nashville, USA"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Vchod do pekárny"),
         "craneEat8": MessageLookupByLibrary.simpleMessage("Atlanta, USA"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Talíř s humrem"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Španělsko"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Kavárenský pult s cukrovím"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Objevte restaurace podle destinace"),
         "craneFly": MessageLookupByLibrary.simpleMessage("LÉTÁNÍ"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("Aspen, USA"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Chata v zasněžené krajině se stálezelenými stromy"),
         "craneFly1": MessageLookupByLibrary.simpleMessage("Big Sur, USA"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Káhira, Egypt"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Minarety mešity al-Azhar při západu slunce"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Lisabon, Portugalsko"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Cihlový maják u moře"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("Napa, USA"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bazén s palmami"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonésie"),
+        "craneFly13SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bazén u moře s palmami"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Stan na poli"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Údolí Khumbu, Nepál"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Modlitební praporky se zasněženou horou v pozadí"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pevnost Machu Picchu"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maledivy"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bungalovy nad vodou"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Švýcarsko"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Španělsko"),
+        "craneFly5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Hotel u jezera na úpatí hor"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("Ciudad de México, Mexiko"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Letecký snímek Paláce výtvarných umění"),
         "craneFly7":
             MessageLookupByLibrary.simpleMessage("Mount Rushmore, USA"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Mount Rushmore"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapur"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Muž opírající se o staré modré auto"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Objevte lety podle destinace"),
@@ -174,22 +225,46 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Cestovatelé"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("SPÁNEK"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maledivy"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bungalovy nad vodou"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage("Aspen, USA"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Káhira, Egypt"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Minarety mešity al-Azhar při západu slunce"),
         "craneSleep11":
             MessageLookupByLibrary.simpleMessage("Tchaj-pej, Tchaj-wan"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Mrakodrap Tchaj-pej 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Chata v zasněžené krajině se stálezelenými stromy"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pevnost Machu Picchu"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Muž opírající se o staré modré auto"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("Vitznau, Švýcarsko"),
+        "craneSleep4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Hotel u jezera na úpatí hor"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage("Big Sur, USA"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Stan na poli"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("Napa, USA"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bazén s palmami"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("Porto, Portugalsko"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Pestrobarevné domy na náměstí Ribeira"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexiko"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mayské ruiny na útesu nad pláží"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Lisabon, Portugalsko"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Cihlový maják u moře"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Objevte ubytování podle destinace"),
@@ -342,6 +417,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Prvek vstupu"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("Adresu URL nelze zobrazit:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Jeden řádek s pevnou výškou, který obvykle obsahuje text a ikonu na začátku nebo na konci."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Sekundární text"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Rozložení posouvacích seznamů"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Seznamy"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Jeden řádek"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Možnosti"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Obrysová tlačítka se při stisknutí zdvihnou a zneprůhlední. Obvykle se vyskytují v páru se zvýšenými tlačítky za účelem označení alternativní, sekundární akce."),
@@ -351,6 +435,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Zvýšená tlačítka vnášejí rozměr do převážně plochých rozvržení. Upozorňují na funkce v místech, která jsou hodně navštěvovaná nebo rozsáhlá."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Zvýšené tlačítko"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Zaškrtávací políčka umožňují uživatelům vybrat několik možností z celé sady. Běžná hodnota zaškrtávacího políčka je True nebo False, ale zaškrtávací políčko se třemi stavy může mít také hodnotu Null."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Zaškrtávací políčko"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Tlačítkové přepínače umožňují uživatelům vybrat jednu možnost z celé sady. Tlačítkové přepínače použijte pro výběr, pokud se domníváte, že uživatel potřebuje vidět všechny dostupné možnosti vedle sebe."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Tlačítkový přepínač"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Zaškrtávací tlačítka, tlačítkové přepínače a přepínače"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Přepínače mění stav jedné možnosti nastavení. Možnost, kterou přepínač ovládá, i stav, ve kterém se nachází, musejí být zřejmé z příslušného textového štítku."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Přepínač"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Ovládací prvky výběru"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Jednoduché dialogové okno nabízí uživateli na výběr mezi několika možnostmi. Jednoduché dialogové okno má volitelný název, který je zobrazen nad možnostmi."),
         "demoSimpleDialogTitle":
@@ -415,6 +518,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Přepínače lze použít k seskupení souvisejících možností. Chcete-li zvýraznit skupiny souvisejících přepínačů, umístěte skupinu do stejného kontejneru"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Přepínače"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Dva řádky"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Definice různých typografických stylů, které se vyskytují ve vzhledu Material Design."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -542,6 +647,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Informace o aplikaci Flutter Gallery"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("Design: TOASTER, Londýn"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Zavřít nastavení"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Nastavení"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Tmavý"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Odeslat zpětnou vazbu"),

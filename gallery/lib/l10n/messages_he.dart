@@ -120,40 +120,91 @@ class MessageLookup extends MessageLookupByLibrary {
             "אפליקציית נסיעות מותאמת אישית"),
         "craneEat": MessageLookupByLibrary.simpleMessage("אוכל"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("נאפולי, איטליה"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("פיצה בתנור עצים"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("דאלאס, ארצות הברית"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("ליסבון, פורטוגל"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "אישה שמחזיקה כריך פסטרמה ענק"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "בר ריק עם שרפרפים בסגנון דיינר"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("קורדובה, ארגנטינה"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("המבורגר"),
         "craneEat3":
             MessageLookupByLibrary.simpleMessage("פורטלנד, ארצות הברית"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("טאקו בסגנון קוריאני"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("פריז, צרפת"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("קינוח משוקולד"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("סיאול, דרום קוריאה"),
+        "craneEat5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("אזור ישיבה במסעדה אומנותית"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("סיאטל, ארצות הברית"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("מנת שרימפס"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("נאשוויל, ארצות הברית"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("כניסה למאפייה"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("אטלנטה, ארצות הברית"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("צלחת של סרטני נהרות"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("מדריד, ספרד"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("מאפים על דלפק בבית קפה"),
         "craneEatRestaurants": m2,
         "craneEatSubhead":
             MessageLookupByLibrary.simpleMessage("עיון במסעדות לפי יעד"),
         "craneFly": MessageLookupByLibrary.simpleMessage("טיסות"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("אספן, ארצות הברית"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "בקתה בנוף מושלג עם עצים ירוקי-עד"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("ביג סר, ארצות הברית"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("קהיר, מצרים"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "המגדלים של מסגד אל-אזהר בשקיעה"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("ליסבון, פורטוגל"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("מגדלור שבנוי מלבנים בים"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("נאפה, ארצות הברית"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("עצי דקל לצד בריכה"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("באלי, אינדונזיה"),
+        "craneFly13SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("בריכה לחוף הים עם עצי דקל"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("אוהל בשדה"),
         "craneFly2": MessageLookupByLibrary.simpleMessage("עמק קומבו, נפאל"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "דגלי תפילה טיבטיים על רקע הר מושלג"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("מאצ\'ו פיצ\'ו, פרו"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("המבצר במאצ\'ו פיצ\'ו"),
         "craneFly4":
             MessageLookupByLibrary.simpleMessage("מאלה, האיים המלדיביים"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("בקתות מעל המים"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("ויצנאו, שווייץ"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("מדריד, ספרד"),
+        "craneFly5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("מלון לחוף אגם על רקע הרים"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("מקסיקו סיטי, מקסיקו"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "נוף ממבט אווירי של ארמון האומנויות היפות"),
         "craneFly7":
             MessageLookupByLibrary.simpleMessage("הר ראשמור, ארצות הברית"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("הר ראשמור"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("סינגפור"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("גן Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("הוואנה, קובה"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "אדם שנשען על מכונית כחולה עתיקה"),
         "craneFlyStops": m3,
         "craneFlySubhead":
             MessageLookupByLibrary.simpleMessage("עיון בטיסות לפי יעד"),
@@ -170,21 +221,45 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneSleep": MessageLookupByLibrary.simpleMessage("שינה"),
         "craneSleep0":
             MessageLookupByLibrary.simpleMessage("מאלה, האיים המלדיביים"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("בקתות מעל המים"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("אספן, ארצות הברית"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("קהיר, מצרים"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "המגדלים של מסגד אל-אזהר בשקיעה"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("טאיפיי, טייוואן"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("גורד השחקים טאיפיי 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "בקתה בנוף מושלג עם עצים ירוקי-עד"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("מאצ\'ו פיצ\'ו, פרו"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("המבצר במאצ\'ו פיצ\'ו"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("הוואנה, קובה"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "אדם שנשען על מכונית כחולה עתיקה"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("ויצנאו, שווייץ"),
+        "craneSleep4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("מלון לחוף אגם על רקע הרים"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("ביג סר, ארצות הברית"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("אוהל בשדה"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("נאפה, ארצות הברית"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("עצי דקל לצד בריכה"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("פורטו, פורטוגל"),
+        "craneSleep7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("דירות צבעוניות בכיכר ריברה"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("טולום, מקסיקו"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "הריסות מבנים של בני המאיה על צוק מעל חוף ים"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("ליסבון, פורטוגל"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("מגדלור שבנוי מלבנים בים"),
         "craneSleepProperties": m4,
         "craneSleepSubhead":
             MessageLookupByLibrary.simpleMessage("עיון בנכסים לפי יעד"),
@@ -329,6 +404,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("צ\'יפ קלט"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("לא ניתן להציג כתובת URL:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "שורה יחידה בגובה קבוע, שלרוב מכילה טקסט כלשהו וכן סמל בתחילתה או בסופה."),
+        "demoListsSecondary": MessageLookupByLibrary.simpleMessage("טקסט משני"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("פריסות של רשימת גלילה"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("רשימות"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("שורה אחת"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("אפשרויות"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "לחצני קווי מתאר הופכים לאטומים ובולטים כשלוחצים עליהם. בדרך כלל, מבוצעת להם התאמה עם לחצנים בולטים כדי לציין פעולה חלופית משנית."),
@@ -338,6 +421,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "לחצנים בולטים מוסיפים ממד לפריסות ששטוחות ברובן. הם מדגישים פונקציות בסביבות תצוגה עמוסות או רחבות."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("לחצן בולט"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "תיבות סימון מאפשרות למשתמש לבחור אפשרויות מרובות מתוך מבחר אפשרויות. ערך רגיל של תיבת סימון הוא \'נכון\' או \'לא נכון\' וערך שלישי בתיבת סימון יכול להיות גם \'חסר תוקף\'."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("תיבת סימון"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "לחצני בחירה מאפשרים למשתמש לבחור אפשרות אחת מתוך מבחר אפשרויות. יש להשתמש בלחצני בחירה לצורך בחירה בלעדית אם לדעתך המשתמש צריך לראות את כל האפשרויות הזמינות זו לצד זו."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("לחצני בחירה"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "תיבות סימון, לחצני בחירה ומתגים"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "מתגי הפעלה וכיבוי מחליפים את המצב של אפשרות הגדרות אחת. האפשרות שהמתג שולט בה, וגם המצב שבו הוא נמצא, אמורים להיות ברורים מהתווית המתאימה שבתוך השורה."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("מתגים"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("בקרות לבחירה"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "תיבת דו-שיח פשוטה מציעה למשתמש בחירה מבין מספר אפשרויות. לתיבת דו-שיח יש כותרת אופציונלית שמוצגת מעל אפשרויות הבחירה."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("פשוטה"),
@@ -400,6 +502,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "אפשר להשתמש בלחצני החלפת מצב לקיבוץ של אפשרויות קשורות. כדי להדגיש קבוצות של לחצני החלפת מצב קשורים, לקבוצה צריך להיות מאגר משותף"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("לחצני החלפת מצב"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("שתי שורות"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "הגדרות לסגנונות הטיפוגרפיים השונים שבעיצוב חדשני תלת-ממדי."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -523,6 +627,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("מידע על Flutter Gallery"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("בעיצוב של TOASTER בלונדון"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("סגירת ההגדרות"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("הגדרות"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("כהה"),
         "settingsFeedback": MessageLookupByLibrary.simpleMessage("שליחת משוב"),
         "settingsLightTheme": MessageLookupByLibrary.simpleMessage("בהיר"),

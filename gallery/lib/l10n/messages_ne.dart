@@ -126,47 +126,97 @@ class MessageLookup extends MessageLookupByLibrary {
             "यात्रासम्बन्धी वैयक्तीकृत अनुप्रयोग"),
         "craneEat": MessageLookupByLibrary.simpleMessage("खानुहोस्"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("नेपल्स, इटाली"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "दाउरा बाल्ने भट्टीमा बनाइएको पिज्जा"),
         "craneEat1": MessageLookupByLibrary.simpleMessage(
             "डल्लास, संयुक्त राज्य अमेरिका"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("लिसबन, पोर्तुगल"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "विशाल पास्ट्रामी स्यान्डविच बोकेकी महिला"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "डाइनर शैलीका स्टूलहरू राखिएको खाली बार"),
         "craneEat2":
             MessageLookupByLibrary.simpleMessage("कोर्डोबा, अर्जेन्टिना"),
+        "craneEat2SemanticLabel": MessageLookupByLibrary.simpleMessage("बर्गर"),
         "craneEat3": MessageLookupByLibrary.simpleMessage(
             "पोर्टल्यान्ड, संयुक्त राज्य अमेरिका"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("कोरियाली टाको"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("पेरिस, फ्रान्स"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("चकलेट डेजर्ट"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("सियोल, दक्षिण कोरिया"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "आर्ट्सी भोजनालयको बस्ने ठाउँ"),
         "craneEat6": MessageLookupByLibrary.simpleMessage(
             "सियाटल, संयुक्त राज्य अमेरिका"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("झिँगे माछाको परिकार"),
         "craneEat7": MessageLookupByLibrary.simpleMessage(
             "न्यासभिल, संयुक्त राज्य अमेरिका"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("बेकरी पसलको प्रवेशद्वार"),
         "craneEat8": MessageLookupByLibrary.simpleMessage(
             "एटलान्टा, संयुक्त राज्य अमेरिका"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("क्रफिसको प्लेट"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("म्याड्रिड, स्पेन"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "पेस्ट्री पाइने क्याफे काउन्टर"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "गन्तव्यअनुसार भोजनालयहरूको अन्वेषण गर्नुहोस्"),
         "craneFly": MessageLookupByLibrary.simpleMessage("उड्नुहोस्"),
         "craneFly0": MessageLookupByLibrary.simpleMessage(
             "एस्पेन, संयुक्त राज्य अमेरिका"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "सदाबहार रूखहरू भएको र साथै हिउँ परेको ल्यान्डस्केपमा सानो कुटी"),
         "craneFly1": MessageLookupByLibrary.simpleMessage(
             "बिग सुर, संयुक्त राज्य अमेरिका"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("कायरो, इजिप्ट"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "घाम अस्ताउँदै गरेका बेला अल-अजहर मस्जिदका टावरहरू"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("लिसबन, पोर्तुगल"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("समुद्रमा इटाले बनेको दीपगृह"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("नापा, संयुक्त राज्य अमेरिका"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("खजुरको रूख भएको पोखरी"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("बाली, इन्डोनेसिया"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "खजुरका रूखहरू भएको समुद्र छेउको पोखरी"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("मैदानमा लगाइएको टेन्ट"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("खुम्बु उपत्यका, नेपाल"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "हिउँ परेको पहाडको अघिल्तिर प्रार्थनाका लागि गाडिएका झण्डाहरू"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("माचू पिक्चू, पेरु"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("माचू पिक्चूको गढी"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("मेल, माल्दिभ्स"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("पानीमाथिका बङ्गलाहरू"),
         "craneFly5":
             MessageLookupByLibrary.simpleMessage("भिज्नाउ, स्विट्जरल्यान्ड"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("म्याड्रिड, स्पेन"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "पहाडका नजिकमा रहेको झील छेउको होटेल"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("मेक्सिको सिटी, मेक्सिको"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Palacio de Bellas Artes को हवाई दृश्य"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "माउन्ट रसमोर, संयुक्त राज्य अमेरिका"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("माउन्ट रसमोर"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("सिङ्गापुर"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("सुपरट्री ग्रोभ"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("हवाना, क्युबा"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "पुरानो मोडलको नीलो कारमा अढेस लागेको मान्छे"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "गन्तव्यअनुसार उडानको अन्वेषण गर्नुहोस्"),
@@ -188,22 +238,46 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneSleep":
             MessageLookupByLibrary.simpleMessage("शयन अवस्थामा लानुहोस्"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("मेल, माल्दिभ्स"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("पानीमाथिका बङ्गलाहरू"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage(
             "एस्पेन, संयुक्त राज्य अमेरिका"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("कायरो, इजिप्ट"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "घाम अस्ताउँदै गरेका बेला अल-अजहर मस्जिदका टावरहरू"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("ताइपेइ, ताइवान"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ताइपेइ १०१ स्काइस्क्रेपर"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "सदाबहार रूखहरू भएको र साथै हिउँ परेको ल्यान्डस्केपमा सानो कुटी"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("माचू पिक्चू, पेरु"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("माचू पिक्चूको गढी"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("हवाना, क्युबा"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "पुरानो मोडलको नीलो कारमा अढेस लागेको मान्छे"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("भिज्नाउ, स्विट्जरल्यान्ड"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "पहाडका नजिकमा रहेको झील छेउको होटेल"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage(
             "बिग सुर, संयुक्त राज्य अमेरिका"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("मैदानमा लगाइएको टेन्ट"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("नापा, संयुक्त राज्य अमेरिका"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("खजुरको रूख भएको पोखरी"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("पोर्टो, पोर्तुगल"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "रिबेरिया स्क्वायरका रङ्गीचङ्गी अपार्टमेन्टहरू"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("तुलुम, मेक्सिको"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "समुद्र किनाराको माथि उठेको चट्टानमा माया सभ्यताका खण्डहरहरू"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("लिसबन, पोर्तुगल"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("समुद्रमा इटाले बनेको दीपगृह"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "गन्तव्यअनुसार आवास अन्वेषण गर्नुहोस्"),
@@ -353,6 +427,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("इनपुट चिप"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL देखाउन सकिएन:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "सामान्य रूपमा केही पाठका साथै अगाडि वा पछाडि आइकन समावेश हुने स्थिर उचाइ भएको एकल पङ्क्ति।"),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("माध्यमिक पाठ"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "स्क्रोल गर्ने सूचीका लेआउटहरू"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("सूचीहरू"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("एक पङ्क्ति"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("विकल्पहरू"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "रूपरेखाका बटनहरू अपारदर्शी बन्छन् र थिच्दा उचालिन्छन्। यिनीहरूलाई वैकल्पिक र सहायक कार्यको सङ्केत दिन प्रायः उचालिएका बटनहरूसँग जोडा बनाइन्छ।"),
@@ -362,6 +445,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "उचालिएका बटनहरूले धेरैजसो समतल लेआउटहरूमा आयाम थप्छन्। यी बटनहरूले व्यस्त र फराकिला खाली ठाउँहरूमा हुने कार्यमा जोड दिन्छन्।"),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("उठाइएको बटन"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "जाँच बाकसहरूले प्रयोगकर्तालाई कुनै सेटबाट बहु विकल्पहरूको चयन गर्न अनुमति दिन्छन्। साधारण जाँच बाकसको मान सही वा गलत हुन्छ र तीन स्थिति भएको जाँच बाकसको मान पनि रिक्त हुन सक्छ।"),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("जाँच बाकस"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "रेडियो बटनहरूले प्रयोगकर्तालाई सेटबाट एउटा विकल्प चयन गर्न अनुमति दिन्छन्। तपाईंलाई प्रयोगकर्ताले उपलब्ध सबै विकल्पहरू सँगसँगै हेर्नु पर्छ भन्ने लाग्छ भने विशेष रूपमा चयन गर्न रेडियो बटनहरूको प्रयोग गर्नुहोस्।"),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("रेडियो"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "जाँच बाकस, रेडियो बटन र स्विचहरू"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "सक्रिय/निष्क्रिय गर्ने स्विचहरूले सेटिङ गर्ने एकल विकल्पको स्थितिलाई टगल गर्दछन्। स्विचहरूले नियन्त्रण गर्ने विकल्पका साथै यो विकल्प समावेश भएको स्थितिलाई यसको समरूपी इनलाइन लेबलबाट स्पष्ट रूपमा देखिने बनाउनु पर्ने छ।"),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("स्विच"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("चयनसम्बन्धी नियन्त्रणहरू"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "सामान्य संवादले प्रयोगकर्तालाई थुप्रै विकल्पहरूबाट चयन गर्ने सुविधा दिन्छ। सामान्य संवादमा रोज्ने विकल्पहरूमाथि देखाइएको एउटा वैकल्पिक शीर्षक हुन्छ।"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("सरल"),
@@ -427,6 +529,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "सम्बन्धित विकल्पहरूको समूह बनाउन टगल गर्ने बटन प्रयोग गर्न सकिन्छ। सम्बन्धित टगल बटनका समूहहरूलाई जोड दिनका लागि एउटा समूहले साझा कन्टेनर आदान प्रदान गर्नु पर्छ"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("टगल गर्ने बटन"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("दुई पङ्क्ति"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "सामग्री डिजाइनमा पाइने टाइपोग्राफीका विभिन्न शैलीहरूको परिभाषा।"),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -556,6 +660,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Flutter Gallery का बारेमा"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "TOASTER द्वारा लन्डनमा डिजाइन गरिएको"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("सेटिङ बन्द गर्नुहोस्"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("सेटिङ"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("अँध्यारो"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("प्रतिक्रिया पठाउनुहोस्"),

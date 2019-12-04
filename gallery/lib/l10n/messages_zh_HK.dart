@@ -113,33 +113,75 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneDescription": MessageLookupByLibrary.simpleMessage("個人化旅遊應用程式"),
         "craneEat": MessageLookupByLibrary.simpleMessage("食肆"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("意大利那不勒斯"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("柴火焗爐中的薄餅"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("美國達拉斯"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("葡萄牙里斯本"),
+        "craneEat10SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("拿著巨型燻牛肉三文治的女人"),
+        "craneEat1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("只有空櫈的酒吧無人光顧"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("阿根廷科爾多瓦"),
+        "craneEat2SemanticLabel": MessageLookupByLibrary.simpleMessage("漢堡包"),
         "craneEat3": MessageLookupByLibrary.simpleMessage("美國波特蘭"),
+        "craneEat3SemanticLabel": MessageLookupByLibrary.simpleMessage("韓式玉米捲"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("法國巴黎"),
+        "craneEat4SemanticLabel": MessageLookupByLibrary.simpleMessage("朱古力甜品"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("南韓首爾"),
+        "craneEat5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("藝術風格餐廳的用餐區"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("美國西雅圖"),
+        "craneEat6SemanticLabel": MessageLookupByLibrary.simpleMessage("鮮蝦大餐"),
         "craneEat7": MessageLookupByLibrary.simpleMessage("美國納什維爾"),
+        "craneEat7SemanticLabel": MessageLookupByLibrary.simpleMessage("麵包店店門"),
         "craneEat8": MessageLookupByLibrary.simpleMessage("美國亞特蘭大"),
+        "craneEat8SemanticLabel": MessageLookupByLibrary.simpleMessage("一碟小龍蝦"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("西班牙馬德里"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("擺放著糕餅的咖啡店櫃檯"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage("根據目的地探尋餐廳"),
         "craneFly": MessageLookupByLibrary.simpleMessage("航班"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("美國阿斯彭"),
+        "craneFly0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("雪地中的小木屋和長青樹"),
         "craneFly1": MessageLookupByLibrary.simpleMessage("美國大蘇爾"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("埃及開羅"),
+        "craneFly10SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("夕陽下的愛資哈爾清真寺"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("葡萄牙里斯本"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("海上的磚燈塔"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("美國納帕"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("樹影婆娑的泳池"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("印尼峇里"),
+        "craneFly13SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("樹影婆娑的海邊泳池"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("田野中的帳篷"),
         "craneFly2": MessageLookupByLibrary.simpleMessage("尼泊爾坤布山谷"),
+        "craneFly2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("雪山前的經幡"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("秘魯馬丘比丘"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("古城馬丘比丘"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("馬爾代夫馬累"),
+        "craneFly4SemanticLabel": MessageLookupByLibrary.simpleMessage("水上小屋"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("瑞士維茨瑙"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("西班牙馬德里"),
+        "craneFly5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("背山而建的湖邊酒店"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("墨西哥墨西哥城"),
+        "craneFly6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("俯瞰墨西哥藝術宮"),
         "craneFly7": MessageLookupByLibrary.simpleMessage("美國拉什莫爾山"),
+        "craneFly7SemanticLabel": MessageLookupByLibrary.simpleMessage("拉什莫爾山"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("新加坡"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("新加坡超級樹"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("古巴哈瓦那"),
+        "craneFly9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("靠著藍色古董車的男人"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage("根據目的地探索航班"),
         "craneFormDate": MessageLookupByLibrary.simpleMessage("選取日期"),
@@ -152,17 +194,41 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("旅客人數"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("過夜"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("馬爾代夫馬累"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("水上小屋"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage("美國阿斯彭"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("埃及開羅"),
+        "craneSleep10SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("夕陽下的愛資哈爾清真寺"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("台灣台北"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("台北 101 摩天大樓"),
+        "craneSleep1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("雪地中的小木屋和長青樹"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("秘魯馬丘比丘"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("古城馬丘比丘"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("古巴哈瓦那"),
+        "craneSleep3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("靠著藍色古董車的男人"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("瑞士維茨瑙"),
+        "craneSleep4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("背山而建的湖邊酒店"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage("美國大蘇爾"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("田野中的帳篷"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("美國納帕"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("樹影婆娑的泳池"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("葡萄牙波多"),
+        "craneSleep7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("里貝拉廣場的彩色公寓"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("墨西哥圖盧姆"),
+        "craneSleep8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("座落在懸崖上遙望海灘的馬雅遺跡"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("葡萄牙里斯本"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("海上的磚燈塔"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage("根據目的地探索住宿"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("允許"),
@@ -293,6 +359,12 @@ class MessageLookup extends MessageLookupByLibrary {
             "輸入方塊以精簡的形式顯示複雜的資訊，如實體 (人物、地點或事物) 或對話文字。"),
         "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("輸入方塊"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage("無法顯示網址："),
+        "demoListsDescription":
+            MessageLookupByLibrary.simpleMessage("這種固定高度的單列一般載有文字和在開頭或結尾載有圖示。"),
+        "demoListsSecondary": MessageLookupByLibrary.simpleMessage("次行文字"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage("可捲動清單的版面配置"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("清單"),
+        "demoOneLineListsTitle": MessageLookupByLibrary.simpleMessage("單行"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("選項"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "外框按鈕會在使用者按下時轉為不透明並升起。這類按鈕通常會與凸起的按鈕一同使用，用於指出次要的替代動作。"),
@@ -300,6 +372,25 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoRaisedButtonDescription": MessageLookupByLibrary.simpleMessage(
             "凸起的按鈕可為主要為平面的版面配置增添層次。這類按鈕可在擁擠或寬闊的空間中突顯其功能。"),
         "demoRaisedButtonTitle": MessageLookupByLibrary.simpleMessage("凸起的按鈕"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "選框讓使用者從一組選項中選擇多個選項。一般選框的數值為 true 或 false，而三值選框則可包括空白值。"),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("選框"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "圓形按鈕讓使用者從一組選項中選擇一個選項。如果您認為使用者需要並排查看所有選項並從中選擇一個選項，便可使用圓形按鈕。"),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("圓形按鈕"),
+        "demoSelectionControlsSubtitle":
+            MessageLookupByLibrary.simpleMessage("選框、圓形按鈕和開關"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "使用開關可切換個別設定選項的狀態。開關控制的選項及其狀態應以相應的內嵌標籤清晰標示。"),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("開關"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("選項控制項"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "簡單對話框讓使用者在幾個選項之間選擇。您可按需要為簡單對話框設定標題 (標題會在選項上方顯示)。"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("簡單"),
@@ -357,6 +448,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "切換按鈕可用於將相關的選項分組。為突顯相關的切換按鈕群組，單一群組應共用同一個容器"),
         "demoToggleButtonTitle": MessageLookupByLibrary.simpleMessage("切換按鈕"),
+        "demoTwoLineListsTitle": MessageLookupByLibrary.simpleMessage("雙行"),
         "demoTypographyDescription":
             MessageLookupByLibrary.simpleMessage("在質感設計所定義的不同排版樣式。"),
         "demoTypographySubtitle":
@@ -465,6 +557,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("關於 Flutter Gallery"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("由倫敦的 TOASTER 設計"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("閂咗設定"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("設定"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("深色"),
         "settingsFeedback": MessageLookupByLibrary.simpleMessage("傳送意見"),
         "settingsLightTheme": MessageLookupByLibrary.simpleMessage("淺色"),

@@ -123,46 +123,97 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneEat": MessageLookupByLibrary.simpleMessage("உணவருந்துமிடம்"),
         "craneEat0":
             MessageLookupByLibrary.simpleMessage("நேப்பிள்ஸ், இத்தாலி"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "கட்டையால் நெருப்பூட்டப்பட்ட ஓவனில் உள்ள பிட்ஜா"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("டல்லாஸ், அமெரிக்கா"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("லிஸ்பன், போர்ச்சுகல்"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "பெரிய பாஸ்டிராமி சாண்ட்விச்சை வைத்திருக்கும் பெண்"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "டின்னர் ஸ்டைல் ஸ்டூல்களைக் கொண்ட காலியான பார்"),
         "craneEat2":
             MessageLookupByLibrary.simpleMessage("கோர்டோபா, அர்ஜெண்டினா"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("பர்கர்"),
         "craneEat3":
             MessageLookupByLibrary.simpleMessage("போர்ட்லாந்து, அமெரிக்கா"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("கொரிய டாகோ"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("பாரிஸ், ஃபிரான்ஸ்"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("சாக்கலேட் டெசெர்ட்"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("சியோல், தென் கொரியா"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ஆர்ட்ஸி உணவகத்தில் உள்ள அமரும் பகுதி"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("சியாட்டில், அமெரிக்கா"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ஷ்ரிம்ப் டிஷ்"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("நாஷ்வில்லி, அமெரிக்கா"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("பேக்கரி நுழைவு"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("அட்லாண்டா, அமெரிக்கா"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ஒரு பிளேட் கிராஃபிஷ்"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("மாட்ரிட், ஸ்பெயின்"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "பாஸ்த்திரிக்கள் உள்ள கஃபே கவுண்ட்டர்"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "சேருமிடத்தின் அடிப்படையில் உணவகங்களைக் கண்டறிதல்"),
         "craneFly": MessageLookupByLibrary.simpleMessage("விமானங்கள்"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("ஆஸ்பென், அமெரிக்கா"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "பனிபடர்ந்த மரங்கள் சூழ்ந்த நிலப்பரப்பில் உள்ள சாலேட்"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("பிக் ஸுர், அமெரிக்கா"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("கெய்ரோ, எகிப்து"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "சூரிய அஸ்தமனத்தின் போது அல் அஜார் மசூதியின் காட்சி"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("லிஸ்பன், போர்ச்சுகல்"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("கடலில் பிரைட்டான லைட்ஹவுஸ்"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("நாப்பா, அமெரிக்கா"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("பனைமரங்கள் சூழ்ந்த குளம்"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("பாலி, இந்தோனேசியா"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "பனைமரங்கள் அதிகம் கொண்ட கடலருகே உள்ள குளம்"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("களத்தில் உள்ள டெண்ட்"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("கும்பு வேலி, நேபாளம்"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "பனிபடர்ந்த மலைக்கு முன் உள்ள வழிபாட்டுக் கொடிகள்"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("மச்சு பிச்சு, பெரு"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("மாச்சு பிச்சு சைட்டாடெல்"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("மாலே, மாலத்தீவுகள்"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ஓவர்வாட்டர் பங்களாக்கள்"),
         "craneFly5":
             MessageLookupByLibrary.simpleMessage("விட்ஸ்னாவ், சுவிட்சர்லாந்து"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("மாட்ரிட், ஸ்பெயின்"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "மலைகளின் முன்னால் ஏரிக்கு அருகில் உள்ள ஹோட்டல்"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("மெக்ஸிகோ நகரம், மெக்ஸிகோ"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "பலாசியா டி பெல்லாஸ் ஆர்டஸின் ஏரியல் வியூ"),
         "craneFly7":
             MessageLookupByLibrary.simpleMessage("ரஷ்மோர் மலை, அமெரிக்கா"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ரஷ்மோர் மலை"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("சிங்கப்பூர்"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("சூப்பர்டிரீ குரோவ்"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("ஹவானா, கியூபா"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "பழங்கால நீளக் காரில் சாய்ந்தபடி உள்ள ஒருவன்"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "சேருமிடத்தின் அடிப்படையில் விமானங்களைக் கண்டறிதல்"),
@@ -184,26 +235,50 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneSleep": MessageLookupByLibrary.simpleMessage("உறங்குமிடம்"),
         "craneSleep0":
             MessageLookupByLibrary.simpleMessage("மாலே, மாலத்தீவுகள்"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ஓவர்வாட்டர் பங்களாக்கள்"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("ஆஸ்பென், அமெரிக்கா"),
         "craneSleep10":
             MessageLookupByLibrary.simpleMessage("கெய்ரோ, எகிப்து"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "சூரிய அஸ்தமனத்தின் போது அல் அஜார் மசூதியின் காட்சி"),
         "craneSleep11":
             MessageLookupByLibrary.simpleMessage("டாய்பேய், தைவான்"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("தைபெய் 101 ஸ்கைஸ்கிரேப்பர்"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "பனிபடர்ந்த மரங்கள் சூழ்ந்த நிலப்பரப்பில் உள்ள சாலேட்"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("மச்சு பிச்சு, பெரு"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("மாச்சு பிச்சு சைட்டாடெல்"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("ஹவானா, கியூபா"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "பழங்கால நீளக் காரில் சாய்ந்தபடி உள்ள ஒருவன்"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("விட்ஸ்னாவ், சுவிட்சர்லாந்து"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "மலைகளின் முன்னால் ஏரிக்கு அருகில் உள்ள ஹோட்டல்"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("பிக் ஸுர், அமெரிக்கா"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("களத்தில் உள்ள டெண்ட்"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("நாப்பா, அமெரிக்கா"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("பனைமரங்கள் சூழ்ந்த குளம்"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("போர்ட்டோ, போர்ச்சுகல்"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ரிபாரியா ஸ்கொயரில் உள்ள கலகலப்பான அபார்ட்மெண்ட்டுகள்"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("டுலூம், மெக்சிகோ"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "பீச்சைத் தாண்டி உள்ள ஒற்றைக் கிளிஃப்பில் உள்ள மாயன்"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("லிஸ்பன், போர்ச்சுகல்"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("கடலில் பிரைட்டான லைட்ஹவுஸ்"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "சேருமிடத்தின் அடிப்படையில் வாடகை விடுதிகளைக் கண்டறிதல்"),
@@ -354,6 +429,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("சிப்பை உள்ளிடுக"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("Couldn\'t display URL:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "ஒற்றை நிலையான உயர வரிசை பொதுவாக சில உரையையும் முன்னணி அல்லது பின்னணி ஐகானையும் கொண்டுள்ளது."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("இரண்டாம் நிலை உரை"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "நகரும் பட்டியல் தளவமைப்புகள்"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("பட்டியல்கள்"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("ஒரு வரி"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Options"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Outline buttons become opaque and elevate when pressed. They are often paired with raised buttons to indicate an alternative, secondary action."),
@@ -363,6 +447,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Raised buttons add dimension to mostly flat layouts. They emphasize functions on busy or wide spaces."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Raised Button"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "அமைப்பில் இருந்து ஒன்றுக்கும் மேற்பட்ட விருப்பங்களைத் தேர்வுசெய்ய செக்பாக்ஸ்கள் உதவும். சாதாராண செக்பாக்ஸின் மதிப்பு சரி அல்லது தவறாக இருப்பதுடன் டிரைஸ்டேட் செக்பாக்ஸின் மதிப்பு பூஜ்ஜியமாகவும்கூட இருக்கக்கூடும்."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("செக்பாக்ஸ்"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "அமைப்பில் இருந்து ஒரு விருப்பத்தைத் தேர்வுசெய்ய ரேடியோ பட்டன்கள் அனுமதிக்கும். பயனர் அனைத்து விருப்பங்களையும் ஒன்றை அடுத்து ஒன்று பார்க்க வேண்டுமானால் பிரத்தியேகத் தேர்விற்கு ரேடியோ பட்டன்களைப் பயன்படுத்தும்."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("வானொலி"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "செக்பாக்ஸ்கள், ரேடியோ பட்டன்கள் மற்றும் ஸ்விட்ச்கள்"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ஆன்/ஆஃப் செய்வதால் ஒற்றை அமைப்புகள் குறித்த விருப்பத் தேர்வின் நிலைமாறும். மாற்றத்தை நிர்வகிப்பதுடன் அது இருக்கும் நிலையை நிர்வகிக்கும் விருப்பத்தேர்விற்குரிய இன்லைன் லேபிள் தெளிவக்கப்பட வேண்டியது அவசியமாக்கும்."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("மாற்றுக"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("தேர்வுக் கட்டுப்பாடுகள்"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "A simple dialog offers the user a choice between several options. A simple dialog has an optional title that is displayed above the choices."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Simple"),
@@ -428,6 +531,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Toggle buttons can be used to group related options. To emphasize groups of related toggle buttons, a group should share a common container"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Toggle Buttons"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("இரண்டு கோடுகள்"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "மெட்டீரியல் டிசைனில் இருக்கும் வெவ்வேறு டைப்போகிராஃபிக்கல் ஸ்டைல்களுக்கான விளக்கங்கள்."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -554,6 +659,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Flutter கேலரி - ஓர் அறிமுகம்"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "லண்டனில் இருக்கும் TOASTER வடிவமைத்தது"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("அமைப்புகளை மூடும்"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("அமைப்புகள்"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("டார்க்"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("கருத்தை அனுப்பு"),

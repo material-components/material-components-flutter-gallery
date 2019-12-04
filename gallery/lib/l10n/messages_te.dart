@@ -125,48 +125,99 @@ class MessageLookup extends MessageLookupByLibrary {
             "వ్యక్తిగతీకరించిన ట్రావెల్ యాప్"),
         "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("నాపల్స్, ఇటలీ"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("చెక్క పొయ్యిలో పిజ్జా"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("డల్లాస్, యునైటెడ్ స్టేట్స్"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("లిస్బన్, పోర్చుగల్"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "పెద్ద పాస్ట్రామి శాండ్‌విచ్‌ను పట్టుకున్న మహిళ"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "డైనర్‌లో ఉండే లాటి స్టూల్‌లతో ఖాళీ బార్"),
         "craneEat2":
             MessageLookupByLibrary.simpleMessage("కొర్డొబా, అర్జెంటీనా"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("బర్గర్"),
         "craneEat3": MessageLookupByLibrary.simpleMessage(
             "పోర్ట్‌ల్యాండ్, యునైటెడ్ స్టేట్స్"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("కొరియన్ టాకో"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("పారిస్, ఫ్రాన్స్"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("చాక్లెట్ డెజర్ట్"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("సియోల్, దక్షిణ కొరియా"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "కళాత్మకంగా ఉన్న రెస్టారెంట్‌లో కూర్చునే ప్రదేశం"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("సీటెల్, యునైటెడ్ స్టేట్స్"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("రొయ్యల వంటకం"),
         "craneEat7": MessageLookupByLibrary.simpleMessage(
             "నాష్విల్లె, యునైటెడ్ స్టేట్స్"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("బేకరీ ప్రవేశ ద్వారం"),
         "craneEat8": MessageLookupByLibrary.simpleMessage(
             "అట్లాంటా, యునైటెడ్ స్టేట్స్"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ప్లేట్‌లో క్రాఫిష్"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("మాడ్రిడ్, స్పెయిన్"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("పేస్ట్రీలతో కేఫ్ కౌంటర్"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "గమ్యస్థానం ఆధారంగా రెస్టారెంట్‌లను అన్వేషించండి"),
         "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
         "craneFly0":
             MessageLookupByLibrary.simpleMessage("ఆస్పెన్, యునైటెడ్ స్టేట్స్"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "సతత హరిత వృక్షాలు, మంచుతో కూడిన ల్యాండ్‌స్కేప్‌లో చాలెట్"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("బిగ్ సర్, యునైటెడ్ స్టేట్స్"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("కైరో, ఈజిప్ట్"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "సూర్యాస్తమయం సమయంలో అల్-అజార్ మసీదు టవర్‌లు"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("లిస్బన్, పోర్చుగల్"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "సముద్రం వద్ద ఇటుకలతో నిర్మించబడిన లైట్ హౌస్"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("నాపా, యునైటెడ్ స్టేట్స్"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("తాటి చెట్ల పక్కన ఈత కొలను"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("బాలి, ఇండోనేషియా"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "తాటి చెట్లు, సముద్రం పక్కన ఈత కొలను"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("మైదానంలో గుడారం"),
         "craneFly2": MessageLookupByLibrary.simpleMessage("ఖుంబు లోయ, నేపాల్"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "మంచు పర్వతం ముందు ప్రార్థనా పతాకాలు"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("మాచు పిచ్చు, పెరూ"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("మాచు పిచ్చు, సిటాడెల్"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("మాలే, మాల్దీవులు"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ఓవర్‌వాటర్ బంగ్లాలు"),
         "craneFly5":
             MessageLookupByLibrary.simpleMessage("విట్నావ్, స్విట్జర్లాండ్"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("మాడ్రిడ్, స్పెయిన్"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "పర్వతాల ముందు సరస్సు పక్కన ఉన్న హోటల్"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("మెక్సికో నగరం, మెక్సికో"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ఆకాశంలో నుంచి కనిపించే \'పలాసియో డి బెల్లాస్ ఆర్టెస్\'"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "మౌంట్ రష్మోర్, యునైటెడ్ స్టేట్స్"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("మౌంట్ రష్‌మోర్"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("సింగపూర్"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("సూపర్‌ట్రీ తోట"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("హవానా, క్యూబా"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "పురాతన నీలి రంగు కారుపై వాలి నిలుచున్న మనిషి"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "గమ్యస్థానం ఆధారంగా విమానాలను అన్వేషించండి"),
@@ -186,24 +237,48 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ప్రయాణికులు"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("స్లీప్"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("మాలే, మాల్దీవులు"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ఓవర్‌వాటర్ బంగ్లాలు"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("ఆస్పెన్, యునైటెడ్ స్టేట్స్"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("కైరో, ఈజిప్ట్"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "సూర్యాస్తమయం సమయంలో అల్-అజార్ మసీదు టవర్‌లు"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("తైపీ, తైవాన్"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("తైపీ 101 ఆకాశహర్మ్యం"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "సతత హరిత వృక్షాలు, మంచుతో కూడిన ల్యాండ్‌స్కేప్‌లో చాలెట్"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("మాచు పిచ్చు, పెరూ"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("మాచు పిచ్చు, సిటాడెల్"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("హవానా, క్యూబా"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "పురాతన నీలి రంగు కారుపై వాలి నిలుచున్న మనిషి"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("విట్నావ్, స్విట్జర్లాండ్"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "పర్వతాల ముందు సరస్సు పక్కన ఉన్న హోటల్"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("బిగ్ సర్, యునైటెడ్ స్టేట్స్"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("మైదానంలో గుడారం"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("నాపా, యునైటెడ్ స్టేట్స్"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("తాటి చెట్ల పక్కన ఈత కొలను"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("పోర్టో, పోర్చుగల్"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "రిబీరియా స్క్వేర్ వద్ద రంగురంగుల అపార్టుమెంట్‌లు"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("టలమ్, మెక్సికో"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "బీచ్‌కి పైన కొండ శిఖరం మీద \'మాయన్\' శిథిలాలు"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("లిస్బన్, పోర్చుగల్"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "సముద్రం వద్ద ఇటుకలతో నిర్మించబడిన లైట్ హౌస్"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "గమ్యస్థానం ఆధారంగా ప్రాపర్టీలను అన్వేషించండి"),
@@ -355,6 +430,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ఇన్‌పుట్ చిప్"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "URLని ప్రదర్శించడం సాధ్యపడలేదు:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "ఒక స్థిరమైన వరుస సాధారణంగా కొంత వచనంతో పాటు ప్రారంభంలో లేదా చివరిలో చిహ్నాన్ని కలిగి ఉంటుంది."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("ద్వితీయ వచనం"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "స్క్రోల్ చేయదగిన జాబితా లేఅవుట్‌లు"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("జాబితాలు"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("ఒక పంక్తి"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("ఎంపికలు"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "అవుట్‌లైన్ బటన్‌లు అపారదర్శకంగా మారతాయి, నొక్కినప్పుడు ప్రకాశవంతం అవుతాయి. ప్రత్యామ్నాయ, ద్వితీయ చర్యను సూచించడానికి అవి తరచుగా ముందుకు వచ్చిన బటన్‌లతో జత చేయబడతాయి."),
@@ -364,6 +448,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "ముందుకు వచ్చిన బటన్‌లు ఎక్కువగా ఫ్లాట్ లేఅవుట్‌లకు పరిమాణాన్ని జోడిస్తాయి. అవి బిజీగా లేదా విస్తృత ప్రదేశాలలో విధులను నొక్కి చెబుతాయి."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("బయటికి ఉన్న బటన్"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "చెక్‌బాక్స్‌లు అనేవి ఒక సెట్ నుండి బహుళ ఎంపికలను ఎంచుకోవడానికి యూజర్‌ను అనుమతిస్తాయి. ఒక సాధారణ చెక్‌బాక్స్ విలువ ఒప్పు లేదా తప్పు కావొచ్చు. మూడు స్థితుల చెక్‌బాక్స్‌లో ఒక విలువ \'శూన్యం\' కూడా కావచ్చు."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("చెక్‌బాక్స్"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "రేడియో బటన్‌లు అనేవి ఒక సెట్ నుండి ఒక ఎంపికను ఎంచుకోవడానికి యూజర్‌ను అనుమతిస్తాయి. అందుబాటులో ఉన్న అన్ని ఎంపికలను, యూజర్, పక్కపక్కనే చూడాలని మీరు అనుకుంటే ప్రత్యేక ఎంపిక కోసం రేడియో బటన్‌లను ఉపయోగించండి."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("రేడియో"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "చెక్‌బాక్స్‌లు, రేడియో బటన్‌లు ఇంకా స్విచ్‌లు"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "సెట్టింగ్‌లలో ఒక ఎంపిక ఉండే స్థితిని ఆన్/ఆఫ్ స్విచ్‌లు అనేవి టోగుల్ చేసి ఉంచుతాయి. స్విచ్ నియంత్రించే ఎంపికనూ, అలాగే అది ఏ స్థితిలో ఉందనే అంశాన్ని, దానికి సంబంధించిన ఇన్‌లైన్ లేబుల్‌లో స్పష్టంగా చూపించాలి."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("స్విచ్"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("ఎంపిక నియంత్రణలు"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "సరళమైన డైలాగ్ వినియోగదారుకు అనేక ఎంపికల మధ్య ఎంపికను అందిస్తుంది. సరళమైన డైలాగ్‌లో ఐచ్ఛిక శీర్షిక ఉంటుంది, అది ఎంపికల పైన ప్రదర్శించబడుతుంది."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("సాధారణ"),
@@ -429,6 +532,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "సంబంధిత ఎంపికలను సమూహపరచడానికి టోగుల్ బటన్‌లను ఉపయోగించవచ్చు. సంబంధిత టోగుల్ బటన్‌ల సమూహాలను నొక్కడానికి, సమూహం సాధారణ కంటైనర్‌ని షేర్ చేయాలి"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("టోగుల్ బటన్‌లు"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("రెండు పంక్తులు"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "విశేష రూపకల్పనలో కనుగొన్న వివిధ రకాల టైపోగ్రాఫికల్ శైలుల యొక్క నిర్వచనాలు."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -563,6 +668,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("\'Flutter Gallery\' పరిచయం"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "లండన్‌లోని TOASTER ద్వారా డిజైన్ చేయబడింది"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("సెట్టింగ్‌లను మూసివేయి"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("సెట్టింగ్‌లు"),
         "settingsDarkTheme":
             MessageLookupByLibrary.simpleMessage("ముదురు రంగు"),
         "settingsFeedback":

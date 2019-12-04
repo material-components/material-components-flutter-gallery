@@ -123,50 +123,100 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneEat": MessageLookupByLibrary.simpleMessage("ÉTKEZÉS"),
         "craneEat0":
             MessageLookupByLibrary.simpleMessage("Nápoly, Olaszország"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Pizza egy fatüzelésű sütőben"),
         "craneEat1": MessageLookupByLibrary.simpleMessage(
             "Dallas, Amerikai Egyesült Államok"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Lisszabon, Portugália"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Óriási pastramis szendvicset tartó nő"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Üres bár vendéglőkben használatos bárszékekkel"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentína"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Hamburger"),
         "craneEat3": MessageLookupByLibrary.simpleMessage(
             "Portland, Amerikai Egyesült Államok"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Koreai taco"),
         "craneEat4":
             MessageLookupByLibrary.simpleMessage("Párizs, Franciaország"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Csokoládés desszert"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Szöul, Dél-Korea"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Művészi tematikájú étterem belső tere"),
         "craneEat6": MessageLookupByLibrary.simpleMessage(
             "Seattle, Amerikai Egyesült Államok"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Rákból készült étel"),
         "craneEat7": MessageLookupByLibrary.simpleMessage(
             "Nashville, Amerikai Egyesült Államok"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pékség bejárata"),
         "craneEat8": MessageLookupByLibrary.simpleMessage(
             "Atlanta, Amerikai Egyesült Államok"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Languszták egy tányéron"),
         "craneEat9":
             MessageLookupByLibrary.simpleMessage("Madrid, Spanyolország"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kávézó pultja péksüteményekkel"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Fedezzen fel éttermeket úti cél szerint"),
         "craneFly": MessageLookupByLibrary.simpleMessage("REPÜLÉS"),
         "craneFly0": MessageLookupByLibrary.simpleMessage(
             "Aspen, Amerikai Egyesült Államok"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Faház havas tájon, örökzöld fák között"),
         "craneFly1": MessageLookupByLibrary.simpleMessage(
             "Big Sur, Amerikai Egyesült Államok"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Kairó, Egyiptom"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Az Al-Azhar mecset tornyai a lemenő nap fényében"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Lisszabon, Portugália"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Téglaépítésű világítótorony a tengeren"),
         "craneFly12": MessageLookupByLibrary.simpleMessage(
             "Napa, Amerikai Egyesült Államok"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Medence pálmafákkal"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonézia"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Tengerparti medence pálmafákkal"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Sátor egy mezőn"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Khumbu-völgy, Nepál"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Imazászlók egy havas hegy előtt"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("A Machu Picchu fellegvára"),
         "craneFly4":
             MessageLookupByLibrary.simpleMessage("Malé, Maldív-szigetek"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Vízen álló nyaralóházak"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Svájc"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hegyek előtt, tó partján álló szálloda"),
         "craneFly6":
-            MessageLookupByLibrary.simpleMessage("Madrid, Spanyolország"),
+            MessageLookupByLibrary.simpleMessage("Mexikóváros, Mexikó"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Légi felvétel a Szépművészeti Palotáról"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "Rushmore-hegy, Amerikai Egyesült Államok"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Rushmore-hegy"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Szingapúr"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havanna, Kuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Régi kék autóra támaszkodó férfi"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Fedezzen fel repülőjáratokat úti cél szerint"),
@@ -188,23 +238,47 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneSleep": MessageLookupByLibrary.simpleMessage("ALVÁS"),
         "craneSleep0":
             MessageLookupByLibrary.simpleMessage("Malé, Maldív-szigetek"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Vízen álló nyaralóházak"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage(
             "Aspen, Amerikai Egyesült Államok"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Kairó, Egyiptom"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Az Al-Azhar mecset tornyai a lemenő nap fényében"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Tajpej, Tajvan"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("A Taipei 101 felhőkarcoló"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Faház havas tájon, örökzöld fák között"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("A Machu Picchu fellegvára"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havanna, Kuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Régi kék autóra támaszkodó férfi"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, Svájc"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hegyek előtt, tó partján álló szálloda"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage(
             "Big Sur, Amerikai Egyesült Államok"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Sátor egy mezőn"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage(
             "Napa, Amerikai Egyesült Államok"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Medence pálmafákkal"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("Porto, Portugália"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Színes lakóházak a Ribeira-téren"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexikó"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Maja romok egy tengerparti sziklán"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Lisszabon, Portugália"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Téglaépítésű világítótorony a tengeren"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Fedezzen fel ingatlanokat úti cél szerint"),
@@ -356,6 +430,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Beviteli szelvény"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Nem sikerült a következő URL megjelenítése:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Egyetlen, fix magasságú sor, amely általában szöveget tartalmaz, és az elején vagy végén ikon található."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Másodlagos szöveg"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Görgethető lista elrendezései"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Listák"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Egysoros"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("Lehetőségek"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
@@ -366,6 +449,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "A kiemelkedő gombok térbeli kiterjedést adnak az általában lapos külsejű gomboknak. Alkalmasak a funkciók kiemelésére zsúfolt vagy nagy területeken."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Kiemelkedő gomb"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "A jelölőnégyzetek lehetővé teszik a felhasználó számára, hogy egy adott csoportból több lehetőséget is kiválasszon. A normál jelölőnégyzetek értéke igaz vagy hamis lehet, míg a háromállapotú jelölőnégyzetek a null értéket is felvehetik."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Jelölőnégyzet"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "A választógombok lehetővé teszik, hogy a felhasználó kiválassza a csoportban lévő valamelyik lehetőséget. A választógombok használata kizárólagos kiválasztást eredményez, amelyet akkor érdemes használnia, ha úgy gondolja, hogy a felhasználónak egyszerre kell látnia az összes választható lehetőséget."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Választógomb"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Jelölőnégyzetek, választógombok és kapcsolók"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "A be- és kikapcsolásra szolgáló gomb egyetlen beállítás állapotát módosítja. Annak a beállításnak, amelyet a kapcsoló vezérel, valamint annak, hogy éppen be- vagy kikapcsolt állapotban van-e a kapcsoló, egyértelműnek kell lennie a megfelelő szövegközi címkéből."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Kapcsoló"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Kiválasztásvezérlők"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Egy egyszerű párbeszédpanel választást kínál a felhasználónak több lehetőség közül. Az egyszerű párbeszédpanel nem kötelező címmel rendelkezik, amely a választási lehetőségek felett jelenik meg."),
         "demoSimpleDialogTitle":
@@ -432,6 +534,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "A váltógombok kapcsolódó lehetőségek csoportosításához használhatók. A kapcsolódó váltógombok csoportjának kiemeléséhez a csoportnak közös tárolón kell osztoznia"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Váltógombok"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Kétsoros"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Az anyagszerű megjelenésben található különböző tipográfiai stílusok meghatározásai."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -563,6 +667,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("A Flutter galériáról"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("Tervezte: TOASTER, London"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Beállítások bezárása"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Beállítások"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Sötét"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Visszajelzés küldése"),

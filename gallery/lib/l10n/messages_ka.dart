@@ -125,47 +125,97 @@ class MessageLookup extends MessageLookupByLibrary {
             "პერსონალიზებული სამოგზაურო აპი"),
         "craneEat": MessageLookupByLibrary.simpleMessage("ჭამა24"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("ნეაპოლი, იტალია"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("პიცა შეშის ღუმელში"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("დალასი, შეერთებული შტატები"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("ლისაბონი, პორტუგალია"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ქალს უჭირავს უზარმაზარი პასტრომის სენდვიჩი"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ცარიელი ბარი სასადილოს სტილის სკამებით"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("კორდობა, არგენტინა"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ბურგერი"),
         "craneEat3": MessageLookupByLibrary.simpleMessage(
             "პორტლენდი, შეერთებული შტატები"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("კორეული ტაკო"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("პარიზი, საფრანგეთი"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("შოკოლადის დესერტი"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("სეული, სამხრეთ კორეა"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "მხატვრულად გაფორმებული რესტორნის სტუმრების დასაჯდომი სივრცე"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("სიეტლი, შეერთებული შტატები"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("კრევეტის კერძი"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("ნეშვილი, შეერთებული შტატები"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("საფუნთუშის შესასვლელი"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("ატლანტა, შეერთებული შტატები"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("თეფში ლანგუსტებით"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("მადრიდი, ესპანეთი"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "კაფეს დახლი საკონდიტრო ნაწარმით"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "აღმოაჩინეთ რესტორნები დანიშნულების ადგილის მიხედვით"),
         "craneFly": MessageLookupByLibrary.simpleMessage("ფრენა"),
         "craneFly0":
             MessageLookupByLibrary.simpleMessage("ასპენი, შეერთებული შტატები"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "შალე თოვლიან ლანდშაფტზე მარადმწვანე ხეებით"),
         "craneFly1": MessageLookupByLibrary.simpleMessage(
             "ბიგ სური, შეერთებული შტატები"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("კაირო, ეგვიპტე"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ალ-აზჰარის მეჩეთის კოშკები მზის ჩასვლისას"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("ლისაბონი, პორტუგალია"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("აგურის შუქურა ზღვაზე"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("ნაპა, შეერთებული შტატები"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("აუზი პალმის ხეებით"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("ბალი, ინდონეზია"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ზღვისპირა აუზი პალმის ხეებით"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("კარავი ველზე"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("კუმბუს მინდორი, ნეპალი"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "სალოცავი ალმები თოვლიანი მთის ფონზე"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("მაჩუ-პიკჩუ, პერუ"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("მაჩუ-პიქჩუს ციტადელი"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("მალე, მალდივები"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("წყალზე მდგომი ბუნგალოები"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("ვიცნაუ, შვეიცარია"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("მადრიდი, ესპანეთი"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ტბისპირა სასტუმრო მთების ფონზე"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("მეხიკო, მექსიკა"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ნატიფი ხელოვნების სასახლის ზედხედი"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "რუშმორის მთა, შეერთებული შტატები"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("მთა რაშმორი"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("სინგაპური"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("სუპერხეების კორომი"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("ჰავანა, კუბა"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "მამაკაცი ეყრდნობა ძველებურ ლურჯ მანქანას"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "აღმოაჩინეთ ფრენები დანიშნულების ადგილის მიხედვით"),
@@ -184,23 +234,47 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("მოგზაურები"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("ძილი"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("მალე, მალდივები"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("წყალზე მდგომი ბუნგალოები"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("ასპენი, შეერთებული შტატები"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("კაირო, ეგვიპტე"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ალ-აზჰარის მეჩეთის კოშკები მზის ჩასვლისას"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("ტაიპეი, ტაივანი"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ცათამბჯენი ტაიბეი 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "შალე თოვლიან ლანდშაფტზე მარადმწვანე ხეებით"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("მაჩუ-პიკჩუ, პერუ"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("მაჩუ-პიქჩუს ციტადელი"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("ჰავანა, კუბა"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "მამაკაცი ეყრდნობა ძველებურ ლურჯ მანქანას"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("ვიცნაუ, შვეიცარია"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ტბისპირა სასტუმრო მთების ფონზე"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage(
             "ბიგ სური, შეერთებული შტატები"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("კარავი ველზე"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("ნაპა, შეერთებული შტატები"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("აუზი პალმის ხეებით"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("პორტო, პორტუგალია"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ფერადი საცხოვრებელი სახლები რიბეირას მოედანზე"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("ტულუმი, მექსიკა"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "მაიას ნანგრევები ზღვისპირა კლიფზე"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("ლისაბონი, პორტუგალია"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("აგურის შუქურა ზღვაზე"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "აღმოაჩინეთ უძრავი ქონება დანიშნულების ადგილის მიხედვით"),
@@ -353,6 +427,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("შეყვანის ჩიპი"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "URL-ის ჩვენება ვერ მოხერხდა:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "ფიქსირებული სიმაღლის ერთი მწკრივი, რომელიც, ჩვეულებრივ, შეიცავს ტექსტს, ასევე ხატულას თავში ან ბოლოში."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("მეორადი ტექსტი"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "განლაგებების სიაში გადაადგილება"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("სიები"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("ერთი ხაზი"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("ვარიანტები"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
@@ -363,6 +446,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "ამოწეული ღილაკები ბრტყელ განლაგებების უფრო მოცულობითს ხდის. გადატვირთულ ან ფართო სივრცეებზე ფუნქციებს კი — უფრო შესამჩნევს."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("ამოწეული ღილაკი"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "მოსანიშნი ველები მომხმარებელს საშუალებას აძლევს, აირჩიოს რამდენიმე ვარიანტი ნაკრებიდან. ჩვეულებრივი მოსანიშნი ველის მნიშვნელობებია სწორი ან არასწორი, ხოლო სამმდგომარეობიანი მოსანიშნი ველის მნიშვნელობა შეიძლება იყოს ნულიც."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("მოსანიშნი ველი"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "არჩევანის ღილაკები მომხმარებელს საშუალებას აძლევს, აირჩიოს ერთი ვარიანტი ნაკრებიდან. ისარგებლეთ არჩევანის ღილაკებით გამომრიცხავი არჩევისთვის, თუ ფიქრობთ, რომ მომხმარებელს ყველა ხელმისაწვდომი ვარიანტის გვერდიგვერდ ნახვა სჭირდება."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("რადიო"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "მოსანიშნი ველები, არჩევანის ღილაკები და გადამრთველები"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ჩართვა/გამორთვა გადართავს პარამეტრების ცალკეულ ვარიანტებს. ვარიანტი, რომელსაც გადამრთველი მართავს, ასევე მდგომარეობა, რომელშიც ის იმყოფება, ნათელი უნდა იყოს შესაბამისი ჩართული ლეიბლიდან."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("გადამრთველი"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("არჩევის მართვის საშუალებები"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "მარტივი დიალოგი მომხმარებელს რამდენიმე ვარიანტს შორის არჩევანის გაკეთების საშუალებას აძლევს. სურვილისამებრ, მარტივ დიალოგს შეიძლება ჰქონდეს სათაური, რომელიც გამოჩნდება არჩევანის ზემოთ."),
         "demoSimpleDialogTitle":
@@ -429,6 +531,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "გადართვის ღილაკების მეშვეობით შესაძლებელია მსგავსი ვარიანტების დაჯგუფება. გადართვის ღილაკების დაკავშირებული ჯგუფებს უნდა ჰქონდეს საერთო კონტეინერი."),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("გადართვის ღილაკები"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("ორი ხაზი"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "განსაზღვრებები Material Design-ში არსებული სხვადასხვა ტიპოგრაფიული სტილისთვის."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -555,6 +659,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Flutter Gallery-ს შესახებ"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "შექმნილია TOASTER-ის მიერ ლონდონში"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("პარამეტრების დახურვა"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("პარამეტრები"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("მუქი"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("გამოხმაურების გაგზავნა"),

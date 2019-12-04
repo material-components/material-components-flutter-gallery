@@ -123,47 +123,97 @@ class MessageLookup extends MessageLookupByLibrary {
             "Жекелештирилген саякат колдонмосу"),
         "craneEat": MessageLookupByLibrary.simpleMessage("ТАМАК-АШ"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Неаполь, Италия"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Жыгач отун менен меште бышырылган пицца"),
         "craneEat1": MessageLookupByLibrary.simpleMessage(
             "Даллас, Америка Кошмо Штаттары"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Лиссабон, Португалия"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Бастурма менен жасалган чоң сэндвич кармаган аял"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Жеңил тамак ичүүгө арналган бийик отургучтар коюлган бош бар"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Кордоба, Аргентина"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Бургер"),
         "craneEat3": MessageLookupByLibrary.simpleMessage(
             "Портлэнд, Америка Кошмо Штаттары"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Корей такосу"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Париж, Франция"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Шоколаддан жасалган десерт"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Сеул, Түштүк Корея"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Artsy ресторанындагы эс алуу аймагы"),
         "craneEat6": MessageLookupByLibrary.simpleMessage(
             "Сиетл, Америка Кошмо Штаттары"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Креветкадан жасалган тамак"),
         "craneEat7": MessageLookupByLibrary.simpleMessage(
             "Нашвилл, Америка Кошмо Штаттары"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Наабайканага кире бериш"),
         "craneEat8": MessageLookupByLibrary.simpleMessage(
             "Атланта, Америка Кошмо Штаттары"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Лангуст табагы"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Мадрид, Испания"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Кафедеги таттуу азыктар коюлган текче"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Ресторандарды бара турган жер боюнча изилдөө"),
         "craneFly": MessageLookupByLibrary.simpleMessage("УЧУУ"),
         "craneFly0": MessageLookupByLibrary.simpleMessage(
             "Аспен, Америка Кошмо Штаттары"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Карга жамынган жашыл дарактардын арасындагы шале"),
         "craneFly1": MessageLookupByLibrary.simpleMessage(
             "Биг-Сур, Америка Кошмо Штаттары"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Каир, Египет"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Аль-Ажар мечитинин мунаралары күн баткан учурда"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Лиссабон, Португалия"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Деңиздеги кирпичтен курулган маяк"),
         "craneFly12": MessageLookupByLibrary.simpleMessage(
             "Напа, Америка Кошмо Штаттары"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Пальмалары бар бассейн"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Бали, Индонезия"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Пальма бактары бар деңиздин жээгиндеги бассейн"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Талаадагы чатыр"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Хумбу өрөөнү, Непал"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Кар жамынган тоонун алдындагы сыйынуу желектери"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Мачу-Пичу, Перу"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Мачу-Пичу цитадели"),
         "craneFly4":
             MessageLookupByLibrary.simpleMessage("Мале, Мальдив аралдары"),
+        "craneFly4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Суунун үстүндө жайгашкан бунгалолор"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Витзнау, Швейцария"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Мадрид, Испания"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Тоолордун этегиндеги көлдүн жеегинде жайгашкан мейманкана"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Мехико, Мексика"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Көркөм өнөр сарайынын бийиктиктен көрүнүшү"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "Рашмор тоосу, Америка Кошмо Штаттары"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Рашмор тоосу"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Сингапур"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Супертри багы"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Гавана, Куба"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Антиквардык көк унаага таянган киши"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Аба каттамдарын бара турган жер боюнча изилдөө"),
@@ -183,23 +233,47 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneSleep": MessageLookupByLibrary.simpleMessage("УКТОО"),
         "craneSleep0":
             MessageLookupByLibrary.simpleMessage("Мале, Мальдив аралдары"),
+        "craneSleep0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Суунун үстүндө жайгашкан бунгалолор"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage(
             "Аспен, Америка Кошмо Штаттары"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Каир, Египет"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Аль-Ажар мечитинин мунаралары күн баткан учурда"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Тайпей, Тайвань"),
+        "craneSleep11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Тайпейдеги 101 кабаттан турган асман тиреген бийик имарат"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Карга жамынган жашыл дарактардын арасындагы шале"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("Мачу-Пичу, Перу"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Мачу-Пичу цитадели"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Гавана, Куба"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Антиквардык көк унаага таянган киши"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("Витзнау, Швейцария"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Тоолордун этегиндеги көлдүн жеегинде жайгашкан мейманкана"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage(
             "Биг-Сур, Америка Кошмо Штаттары"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Талаадагы чатыр"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage(
             "Напа, Америка Кошмо Штаттары"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Пальмалары бар бассейн"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("Порто, Португалия"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Рибейра аянтындагы түстүү батирлер"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Тулум, Мексика"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Жээктеги асканын үстүндөгү Майя цивилизациясынын урандылары"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Лиссабон, Португалия"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Деңиздеги кирпичтен курулган маяк"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Жайларды бара турган жер боюнча изилдөө"),
@@ -353,6 +427,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Киргизүү чиби"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "URL\'ди чагылдыруу мүмкүн эмес:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Адатта текст жана сүрөтчө камтылган, бийиктиги бекитилген жалгыз сап."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Кошумча текст"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("Тизме калыптарын сыдыруу"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Тизмелер"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Бир сап"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("Параметрлер"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
@@ -363,6 +446,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Көтөрүлгөн баскычтар көбүнчө түз калыптарга чен-өлчөм кошот. Алар бош эмес же кең мейкиндиктердеги функциялар болуп эсептелет."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Көтөрүлгөн баскыч"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Белгилөө кутучалары колдонуучуга топтомдогу бир нече параметрди тандоо үчүн керек. Кадимки белгилөө кутучасынын мааниси \"true\" же \"false\", ал эми үч абалды көрсөтүүчү белгилөө кутучасынын мааниси \"null\" болушу мүмкүн."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Белгилөө кутучасы"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Радио баскычтар колдонуучуга топтомдогу бир параметрди тандоо үчүн керек. Эгер колдонуучу бардык жеткиликтүү параметрлерди катары менен көрсүн десеңиз, радио баскычтарды колдонуңуз."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Радио"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Белгилөө кутучалары, радио баскычтар жана которуштургучтар"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Жөндөөлөрдүн жалгыз параметрин өчүрүп/күйгүзөт. Которулуу жөндөөсү көзөмөлдөгөн параметр, ошондой эле анын абалы, тийиштүү курама энбелгиде так көрсөтүлүшү керек."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Которулуу"),
+        "demoSelectionControlsTitle": MessageLookupByLibrary.simpleMessage(
+            "Тандоону көзөмөлдөө каражаттары"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Жөнөкөй диалог колдонуучуга бир нече варианттардын бирин тандоо мүмкүнчүлүгүн берет. Жөнөкөй диалогдо тандоолордун жогору жагында жайгашкан аталышы болушу мүмкүн."),
         "demoSimpleDialogTitle":
@@ -430,6 +532,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Күйгүзүү/өчүрүү баскычтары тиешелүү варианттарды топтоо үчүн колдонулушу мүмкүн. Тиешелүү күйгүзүү/өчүрүү баскычтарынын топторун белгилөө үчүн топтун жалпы контейнери болушу мүмкүн"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Күйгүзүү/өчүрүү баскычтары"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Эки сап"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Material Design кызматындагы ар түрдүү типографиялык стилдердин аныктамалары."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -555,6 +659,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Flutter галереясы жөнүндө маалымат"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Лондондогу TOASTER тарабынан жасалгаланды"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Жөндөөлөрдү жабуу"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Жөндөөлөр"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Караңгы"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Пикир билдирүү"),

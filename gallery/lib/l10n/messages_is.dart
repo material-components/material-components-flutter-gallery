@@ -121,47 +121,97 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Sérsniðið ferðaforrit"),
         "craneEat": MessageLookupByLibrary.simpleMessage("MATUR"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Napólí, Ítalíu"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Viðarelduð pítsa í ofni"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("Dallas, Bandaríkjunum"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portúgal"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kona sem heldur á stórri nautakjötssamloku"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Tómur bar með auðum upphækkuðum stólum"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentínu"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Hamborgari"),
         "craneEat3":
             MessageLookupByLibrary.simpleMessage("Portland, Bandaríkjunum"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Kóreskt taco"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("París, Frakklandi"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Súkkulaðieftirréttur"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Seúl, Suður-Kóreu"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Sæti á listrænum veitingastað"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("Seattle, Bandaríkjunum"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Rækjudiskur"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("Nashville, Bandaríkjunum"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Inngangur bakarís"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("Atlanta, Bandaríkjunum"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Diskur með vatnakröbbum"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madríd, Spáni"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Kökur á kaffihúsi"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Skoða veitingastaði eftir áfangastað"),
         "craneFly": MessageLookupByLibrary.simpleMessage("FLUG"),
         "craneFly0":
             MessageLookupByLibrary.simpleMessage("Aspen, Bandaríkjunum"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kofi þakinn snjó í landslagi með sígrænum trjám"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("Big Sur, Bandaríkjunum"),
         "craneFly10":
             MessageLookupByLibrary.simpleMessage("Kaíró, Egyptalandi"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Turnar Al-Azhar moskunnar við sólarlag"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portúgal"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Múrsteinsviti við sjó"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("Napa, Bandaríkjunum"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Sundlaug og pálmatré"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Balí, Indónesíu"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Sundlaug við sjóinn og pálmatré"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tjald á akri"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Khumbu-dalur, Nepal"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Litflögg við snæviþakið fjall"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Perú"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu rústirnar"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldíveyjum"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bústaðir yfir vatni"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Sviss"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madríd, Spáni"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hótel við vatn með fjallasýn"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Mexíkóborg, Mexíkó"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Loftmynd af Palacio de Bellas Artes"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "Mount Rushmore, Bandaríkjunum"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Rushmore-fjall"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapúr"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Kúbu"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Maður sem hallar sér upp að bláum antíkbíl"),
         "craneFlyStops": m3,
         "craneFlySubhead":
             MessageLookupByLibrary.simpleMessage("Skoða flug eftir áfangastað"),
@@ -181,23 +231,47 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneSleep": MessageLookupByLibrary.simpleMessage("SVEFN"),
         "craneSleep0":
             MessageLookupByLibrary.simpleMessage("Malé, Maldíveyjum"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bústaðir yfir vatni"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("Aspen, Bandaríkjunum"),
         "craneSleep10":
             MessageLookupByLibrary.simpleMessage("Kaíró, Egyptalandi"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Turnar Al-Azhar moskunnar við sólarlag"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taívan"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Taipei 101 skýjakljúfur"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kofi þakinn snjó í landslagi með sígrænum trjám"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Perú"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Machu Picchu rústirnar"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Kúbu"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Maður sem hallar sér upp að bláum antíkbíl"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, Sviss"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hótel við vatn með fjallasýn"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("Big Sur, Bandaríkjunum"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tjald á akri"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("Napa, Bandaríkjunum"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Sundlaug og pálmatré"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("Portó, Portúgal"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Litrík hús við Ribeira-torgið"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexíkó"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Maya-rústir á klettavegg fyrir ofan strönd"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portúgal"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Múrsteinsviti við sjó"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Skoða eignir eftir áfangastað"),
@@ -347,6 +421,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Innsláttarkubbur"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Ekki var hægt að birta vefslóð:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Ein lína í fastri hæð sem yfirleitt inniheldur texta og tákn á undan eða á eftir."),
+        "demoListsSecondary": MessageLookupByLibrary.simpleMessage("Aukatexti"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("Útlit lista sem flettist"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Listar"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Ein lína"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Valkostir"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Hnappar með útlínum verða ógagnsæir og lyftast upp þegar ýtt er á þá. Þeir fylgja oft upphleyptum hnöppum til að gefa til kynna aukaaðgerð."),
@@ -356,6 +438,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Upphleyptir hnappar gefa flatri uppsetningu aukna vídd. Þeir undirstrika virkni á stórum svæðum eða þar sem mikið er um að vera."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Upphleyptur hnappur"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Gátreitir gera notanda kleift að velja marga valkosti úr mengi. Gildi venjulegs gátreits er rétt eða rangt og eitt af gildum gátreits með þrjú gildi getur einnig verið núll."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Gátreitur"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Valhnappar sem gera notandanum kleift að velja einn valkost af nokkrum. Nota ætti valhnappa fyrir einkvæmt val ef þörf er talin á að notandinn þurfi að sjá alla valkosti í einu."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Val"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Gátreitir, valreitir og rofar"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Rofar til að kveikja/slökkva skipta á milli tveggja stillinga. Gera ætti valkostinn sem rofinn stjórnar, sem og stöðu hans, skýran í samsvarandi innskotsmerki."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Rofi"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Valstýringar"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Einfaldur gluggi býður notanda að velja á milli nokkurra valkosta. Einfaldur gluggi getur haft titil sem birtist fyrir ofan valkostina."),
         "demoSimpleDialogTitle":
@@ -421,6 +522,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Hægt er að nota hnappa til að slökkva og kveikja á flokkun tengdra valkosta. Til að leggja áherslu á flokka tengdra hnappa til að slökkva og kveikja ætti flokkur að vera með sameiginlegan geymi"),
         "demoToggleButtonTitle": MessageLookupByLibrary.simpleMessage(
             "Hnappar til að slökkva og kveikja"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Tvær línur"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Skilgreiningar mismunandi leturstíla sem finna má í nýju útlitshönnuninni."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -548,6 +651,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Um Flutter Gallery"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("Hannað af TOASTER í London"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Loka stillingum"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Stillingar"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Dökkt"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Senda ábendingu"),

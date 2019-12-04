@@ -54,10 +54,10 @@ class MessageLookup extends MessageLookupByLibrary {
       "ਤੁਸੀਂ ਇਸ ਹਫ਼ਤੇ ${amount} ਰੈਸਟੋਰੈਂਟਾਂ \'ਤੇ ਖਰਚ ਕੀਤੇ ਹਨ।";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'ਆਪਣੀ ਸੰਭਾਵੀ ਟੈਕਸ ਕਟੌਤੀ ਵਿੱਚ ਵਾਧਾ ਕਰੋ! 1 ਜ਼ਿੰਮੇ ਨਾ ਲਾਏ ਲੈਣ-ਦੇਣ \'ਤੇ ਸ਼੍ਰੇਣੀਆਂ ਨੂੰ ਜ਼ਿੰਮੇ ਲਾਓ।', other: 'ਆਪਣੀ ਸੰਭਾਵੀ ਟੈਕਸ ਕਟੌਤੀ ਵਿੱਚ ਵਾਧਾ ਕਰੋ! ${count} ਜ਼ਿੰਮੇ ਨਾ ਲਾਏ ਲੈਣ-ਦੇਣ \'ਤੇ ਸ਼੍ਰੇਣੀਆਂ ਨੂੰ ਜ਼ਿੰਮੇ ਲਾਓ।')}";
+      "${Intl.plural(count, one: 'ਆਪਣੀ ਸੰਭਾਵੀ ਟੈਕਸ ਕਟੌਤੀ ਵਿੱਚ ਵਾਧਾ ਕਰੋ! 1 ਗੈਰ-ਜ਼ਿੰਮੇ ਵਾਲੇ ਲੈਣ-ਦੇਣ \'ਤੇ ਸ਼੍ਰੇਣੀਆਂ ਨੂੰ ਜ਼ਿੰਮੇ ਲਾਓ।', other: 'ਆਪਣੀ ਸੰਭਾਵੀ ਟੈਕਸ ਕਟੌਤੀ ਵਿੱਚ ਵਾਧਾ ਕਰੋ! ${count} ਗੈਰ-ਜ਼ਿੰਮੇ ਵਾਲੇ ਲੈਣ-ਦੇਣ \'ਤੇ ਸ਼੍ਰੇਣੀਆਂ ਨੂੰ ਜ਼ਿੰਮੇ ਲਾਓ।')}";
 
   static m14(billName, date, amount) =>
-      "${amount} ਦਾ ${billName} ਦਾ ਬਿੱਲ ਭਰਨ ਦੀ ਨਿਯਤ ਤਾਰੀਖ ${date} ਹੈ।";
+      "${billName} ਲਈ ${amount} ਦਾ ਬਿੱਲ ਭਰਨ ਦੀ ਨਿਯਤ ਤਾਰੀਖ ${date} ਹੈ।";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
       "${budgetName} ਦੇ ਬਜਟ ${amountTotal} ਵਿੱਚੋਂ ${amountUsed} ਵਰਤੇ ਗਏ ਹਨ, ${amountLeft} ਬਾਕੀ";
@@ -124,39 +124,89 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ਇੱਕ ਵਿਅਕਤੀਗਤ ਯਾਤਰਾ ਐਪ"),
         "craneEat": MessageLookupByLibrary.simpleMessage("ਖਾਣ-ਪੀਣ ਦੀਆਂ ਥਾਂਵਾਂ"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("ਨੇਪਲਜ਼, ਇਟਲੀ"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਤੰਦੂਰ ਵਿੱਚ ਲੱਕੜ ਦੀ ਅੱਗ ਨਾਲ ਬਣਿਆ ਪੀਜ਼ਾ"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("ਡਾਲਸ, ਸੰਯੁਕਤ ਰਾਜ"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("ਲਿਸਬਨ, ਪੁਰਤਗਾਲ"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਵੱਡੇ ਪਾਸਟ੍ਰਾਮੀ ਸੈਂਡਵਿਚ ਨੂੰ ਫੜ੍ਹ ਕੇ ਖੜ੍ਹੀ ਔਰਤ"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਰਾਤ ਦੇ ਖਾਣੇ ਵਾਲੇ ਸਟੂਲਾਂ ਦੇ ਨਾਲ ਖਾਲੀ ਬਾਰ"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("ਕੋਰਡੋਬਾ, ਅਰਜਨਟੀਨਾ"),
+        "craneEat2SemanticLabel": MessageLookupByLibrary.simpleMessage("ਬਰਗਰ"),
         "craneEat3":
             MessageLookupByLibrary.simpleMessage("ਪੋਰਟਲੈਂਡ, ਸੰਯੁਕਤ ਰਾਜ"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ਕੋਰੀਆਈ ਟੈਕੋ"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("ਪੈਰਿਸ, ਫਰਾਂਸ"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ਚਾਕਲੇਟ ਸਮਾਪਨ ਪਕਵਾਨ"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("ਸਿਓਲ, ਦੱਖਣੀ ਕੋਰੀਆ"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਕਲਾਕਾਰੀ ਰੈਸਟੋਰੈਂਟ ਵਿਚਲਾ ਬੈਠਣ ਵਾਲਾ ਖੇਤਰ"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("ਸੀਐਟਲ, ਸੰਯੁਕਤ ਰਾਜ"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ਝੀਂਗਾ ਮੱਛੀ ਪਕਵਾਨ"),
         "craneEat7": MessageLookupByLibrary.simpleMessage("ਨੈਸ਼ਵਿਲ, ਸੰਯੁਕਤ ਰਾਜ"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ਬੇਕਰੀ ਵਿੱਚ ਦਾਖਲ ਹੋਣ ਦਾ ਰਸਤਾ"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("ਅਟਲਾਂਟਾ, ਸੰਯੁਕਤ ਰਾਜ"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ਕ੍ਰਾਫਿਸ਼ ਨਾਲ ਭਰੀ ਪਲੇਟ"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("ਮਾਦਰੀਦ, ਸਪੇਨ"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ਪੇਸਟਰੀਆਂ ਵਾਲਾ ਕੈਫ਼ੇ ਕਾਊਂਟਰ"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "ਮੰਜ਼ਿਲਾਂ ਮੁਤਾਬਕ ਰੈਸਟੋਰੈਂਟਾਂ ਦੀ ਪੜਚੋਲ ਕਰੋ"),
         "craneFly": MessageLookupByLibrary.simpleMessage("ਉਡਾਣਾਂ"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("ਐਸਪਨ, ਸੰਯੁਕਤ ਰਾਜ"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਸਦਾਬਹਾਰ ਦਰੱਖਤਾਂ ਨਾਲ ਬਰਫ਼ੀਲੇ ਲੈਂਡਸਕੇਪ ਵਿੱਚ ਲੱਕੜ ਦਾ ਘਰ"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("ਬਿੱਗ ਸਰ, ਸੰਯੁਕਤ ਰਾਜ"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("ਕਾਹਿਰਾ, ਮਿਸਰ"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਸੂਰਜ ਡੁੱਬਣ ਦੌਰਾਨ ਅਲ-ਅਜ਼ਹਰ ਮਸੀਤ ਦੀਆਂ ਮੀਨਾਰਾਂ"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("ਲਿਸਬਨ, ਪੁਰਤਗਾਲ"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਸਮੁੰਦਰ ਵਿੱਚ ਇੱਟਾਂ ਦਾ ਬਣਿਆ ਚਾਨਣ ਮੁਨਾਰਾ"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("ਨੈਪਾ, ਸੰਯੁਕਤ ਰਾਜ"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ਖਜੂਰ ਦੇ ਦਰੱਖਤਾਂ ਵਾਲਾ ਪੂਲ"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("ਬਾਲੀ, ਇੰਡੋਨੇਸ਼ੀਆ"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਖਜੂਰ ਦੇ ਦਰੱਖਤਾਂ ਵਾਲਾ ਸਮੁੰਦਰ ਦੇ ਨੇੜੇ ਪੂਲ"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ਕਿਸੇ ਮੈਦਾਨ ਵਿੱਚ ਟੈਂਟ"),
         "craneFly2": MessageLookupByLibrary.simpleMessage("ਖੁੰਬੂ ਘਾਟੀ, ਨੇਪਾਲ"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਬਰਫ਼ੀਲੇ ਪਹਾੜਾਂ ਅੱਗੇ ਪ੍ਰਾਰਥਨਾ ਦੇ ਝੰਡੇ"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("ਮਾਚੂ ਪਿਕਚੂ, ਪੇਰੂ"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ਮਾਚੂ ਪਿਕਚੂ ਕਿਲ੍ਹਾ"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("ਮਾਲੇ, ਮਾਲਦੀਵ"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ਪਾਣੀ \'ਤੇ ਬਣੇ ਬੰਗਲੇ"),
         "craneFly5":
             MessageLookupByLibrary.simpleMessage("ਵਿਟਸਨਾਊ, ਸਵਿਟਜ਼ਰਲੈਂਡ"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("ਮਾਦਰੀਦ, ਸਪੇਨ"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਪਹਾੜਾਂ ਸਾਹਮਣੇ ਝੀਲ ਦੇ ਕਿਨਾਰੇ ਹੋਟਲ"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("ਮੈਕਸੀਕੋ ਸ਼ਹਿਰ, ਮੈਕਸੀਕੋ"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਪਲੈਸੀਓ ਦੇ ਬੇਲਾਸ ਆਰਤੇਸ ਦਾ ਹਵਾਈ ਦ੍ਰਿਸ਼"),
         "craneFly7":
             MessageLookupByLibrary.simpleMessage("ਮਾਊਂਟ ਰਸ਼ਮੋਰ, ਸੰਯੁਕਤ ਰਾਜ"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ਮਾਊਂਟ ਰਸ਼ਮੋਰ"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("ਸਿੰਗਾਪੁਰ"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ਸੁਪਰਟ੍ਰੀ ਗਰੋਵ"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("ਹਵਾਨਾ, ਕਿਊਬਾ"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਪੁਰਾਣੀ ਨੀਲੀ ਕਾਰ \'ਤੇ ਢੋਅ ਲਗਾ ਕੇ ਖੜ੍ਹਾ ਆਦਮੀ"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "ਮੰਜ਼ਿਲਾਂ ਮੁਤਾਬਕ ਉਡਾਣਾਂ ਦੀ ਪੜਚੋਲ ਕਰੋ"),
@@ -172,19 +222,43 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("ਯਾਤਰੀ"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("ਸਲੀਪ ਮੋਡ"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("ਮਾਲੇ, ਮਾਲਦੀਵ"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ਪਾਣੀ \'ਤੇ ਬਣੇ ਬੰਗਲੇ"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage("ਐਸਪਨ, ਸੰਯੁਕਤ ਰਾਜ"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("ਕਾਹਿਰਾ, ਮਿਸਰ"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਸੂਰਜ ਡੁੱਬਣ ਦੌਰਾਨ ਅਲ-ਅਜ਼ਹਰ ਮਸੀਤ ਦੀਆਂ ਮੀਨਾਰਾਂ"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("ਤਾਈਪੇ, ਤਾਈਵਾਨ"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ਤਾਈਪੇ 101 ਉੱਚੀ ਇਮਾਰਤ"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਸਦਾਬਹਾਰ ਦਰੱਖਤਾਂ ਨਾਲ ਬਰਫ਼ੀਲੇ ਲੈਂਡਸਕੇਪ ਵਿੱਚ ਲੱਕੜ ਦਾ ਘਰ"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("ਮਾਚੂ ਪਿਕਚੂ, ਪੇਰੂ"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ਮਾਚੂ ਪਿਕਚੂ ਕਿਲ੍ਹਾ"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("ਹਵਾਨਾ, ਕਿਊਬਾ"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਪੁਰਾਣੀ ਨੀਲੀ ਕਾਰ \'ਤੇ ਢੋਅ ਲਗਾ ਕੇ ਖੜ੍ਹਾ ਆਦਮੀ"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("ਵਿਟਸਨਾਊ, ਸਵਿਟਜ਼ਰਲੈਂਡ"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਪਹਾੜਾਂ ਸਾਹਮਣੇ ਝੀਲ ਦੇ ਕਿਨਾਰੇ ਹੋਟਲ"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("ਬਿੱਗ ਸਰ, ਸੰਯੁਕਤ ਰਾਜ"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ਕਿਸੇ ਮੈਦਾਨ ਵਿੱਚ ਟੈਂਟ"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("ਨੈਪਾ, ਸੰਯੁਕਤ ਰਾਜ"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ਖਜੂਰ ਦੇ ਦਰੱਖਤਾਂ ਵਾਲਾ ਪੂਲ"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("ਪੋਰਟੋ, ਪੁਰਤਗਾਲ"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਰਾਈਬੇਰੀਆ ਸਕਵੇਅਰ \'ਤੇ ਰੰਗ-ਬਿਰੰਗੇ ਅਪਾਰਟਮੈਂਟ"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("ਟੁਲੁਮ, ਮੈਕਸੀਕੋ"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਬੀਚ \'ਤੇ ਚਟਾਨ ਉੱਪਰ ਮਾਇਆ ਸੱਭਿਅਤਾ ਦੇ ਖੰਡਰ"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("ਲਿਸਬਨ, ਪੁਰਤਗਾਲ"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ਸਮੁੰਦਰ ਵਿੱਚ ਇੱਟਾਂ ਦਾ ਬਣਿਆ ਚਾਨਣ ਮੁਨਾਰਾ"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "ਮੰਜ਼ਿਲਾਂ ਮੁਤਾਬਕ ਸੰਪਤੀਆਂ ਦੀ ਪੜਚੋਲ ਕਰੋ"),
@@ -297,7 +371,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ਬਟਨ"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "ਇਸ ਦੀ ਵਰਤੋਂ ਕਿਸੇ ਖਾਸ ਵਿਕਲਪਾਂ ਵਿੱਚੋਂ ਚੁਣਨ ਲਈ ਕੀਤੀ ਗਈ। ਜਦੋਂ ਉਪ-ਸਮੂਹ ਵਿੱਚੋਂ ਇੱਕ ਵਿਕਲਪ ਚੁਣਿਆ ਜਾਂਦਾ ਹੈ, ਤਾਂ ਉਪ-ਸਮੂਹ ਵਿੱਚ ਹੋਰ ਵਿਕਲਪ ਨਹੀਂ ਚੁਣੇ ਜਾ ਸਕਦੇ।"),
+                "ਇਸ ਦੀ ਵਰਤੋਂ ਕਿਸੇ ਪਰਸਪਰ ਖਾਸ ਵਿਕਲਪਾਂ ਵਿੱਚੋਂ ਚੁਣਨ ਲਈ ਕੀਤੀ ਗਈ। ਜਦੋਂ ਉਪ-ਸਮੂਹ ਕੰਟਰੋਲ ਵਿੱਚੋਂ ਇੱਕ ਵਿਕਲਪ ਚੁਣਿਆ ਜਾਂਦਾ ਹੈ, ਤਾਂ ਉਪ-ਸਮੂਹ ਕੰਟਰੋਲ ਵਿੱਚ ਹੋਰ ਵਿਕਲਪ ਨਹੀਂ ਚੁਣੇ ਜਾ ਸਕਦੇ।"),
         "demoCupertinoSegmentedControlSubtitle":
             MessageLookupByLibrary.simpleMessage("iOS-style ਉਪ-ਸਮੂਹ ਕੰਟਰੋਲ"),
         "demoCupertinoSegmentedControlTitle":
@@ -331,6 +405,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ਇਨਪੁੱਟ ਚਿੱਪ"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL ਦਿਖਾਇਆ ਨਹੀਂ ਜਾ ਸਕਿਆ:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "ਸਥਿਰ-ਉਚਾਈ ਵਾਲੀ ਇਕਹਿਰੀ ਕਤਾਰ ਜਿਸ ਵਿੱਚ ਆਮ ਤੌਰ \'ਤੇ ਸ਼ੁਰੂਆਤ ਜਾਂ ਪਿਛੋਕੜ ਵਾਲੇ ਪ੍ਰਤੀਕ ਦੇ ਨਾਲ ਕੁਝ ਲਿਖਤ ਵੀ ਸ਼ਾਮਲ ਹੁੰਦੀ ਹੈ।"),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("ਸੈਕੰਡਰੀ ਲਿਖਤ"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("ਸਕ੍ਰੋਲਿੰਗ ਸੂਚੀ ਖਾਕੇ"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("ਸੂਚੀਆਂ"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("ਇੱਕ ਲਾਈਨ"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("ਵਿਕਲਪ"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "ਰੂਪ-ਰੇਖਾ ਬਟਨ ਦਬਾਏ ਜਾਣ \'ਤੇ ਧੁੰਦਲੇ ਹੋ ਜਾਂਦੇ ਹਨ ਅਤੇ ਉੱਪਰ ਉੱਠਦੇ ਹਨ। ਵਿਕਲਪਿਕ, ਸੈਕੰਡਰੀ ਕਾਰਵਾਈ ਦਰਸਾਉਣ ਲਈ ਉਹਨਾਂ ਨੂੰ ਅਕਸਰ ਉਭਰੇ ਹੋਏ ਬਟਨਾਂ ਨਾਲ ਜੋੜਾਬੱਧ ਕੀਤਾ ਜਾਂਦਾ ਹੈ।"),
@@ -340,6 +423,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "ਉਭਰੇ ਹੋਏ ਬਟਨ ਜ਼ਿਆਦਾਤਰ ਸਮਤਲ ਖਾਕਿਆਂ \'ਤੇ ਆਯਾਮ ਸ਼ਾਮਲ ਕਰਦੇ ਹਨ। ਉਹ ਵਿਅਸਤ ਜਾਂ ਚੌੜੀਆਂ ਸਪੇਸਾਂ \'ਤੇ ਫੰਕਸ਼ਨਾਂ \'ਤੇ ਜ਼ੋਰ ਦਿੰਦੇ ਹਨ।"),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("ਉਭਰਿਆ ਹੋਇਆ ਬਟਨ"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ਚੈੱਕ-ਬਾਕਸ ਵਰਤੋਂਕਾਰ ਨੂੰ ਕਿਸੇ ਸੈੱਟ ਵਿੱਚੋਂ ਕਈ ਵਿਕਲਪਾਂ ਨੂੰ ਚੁਣਨ ਦਿੰਦਾ ਹੈ। ਕਿਸੇ ਸਧਾਰਨ ਚੈੱਕ-ਬਾਕਸ ਦਾ ਮੁੱਲ ਸਹੀ ਜਾਂ ਗਲਤ ਹੁੰਦਾ ਹੈ ਅਤੇ ਕਿਸੇ ਤੀਹਰੇ ਚੈੱਕ-ਬਾਕਸ ਦਾ ਮੁੱਲ ਖਾਲੀ ਵੀ ਹੋ ਸਕਦਾ ਹੈ।"),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("ਚੈੱਕ-ਬਾਕਸ"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ਰੇਡੀਓ ਬਟਨ ਕਿਸੇ ਸੈੱਟ ਵਿੱਚੋਂ ਵਰਤੋਂਕਾਰ ਨੂੰ ਇੱਕ ਵਿਕਲਪ ਚੁਣਨ ਦਿੰਦੇ ਹਨ। ਜੇ ਤੁਹਾਨੂੰ ਲੱਗਦਾ ਹੈ ਕਿ ਵਰਤੋਂਕਾਰ ਨੂੰ ਉਪਲਬਧ ਵਿਕਲਪਾਂ ਨੂੰ ਇੱਕ-ਇੱਕ ਕਰਕੇ ਦੇਖਣ ਦੀ ਲੋੜ ਹੈ ਤਾਂ ਖਾਸ ਚੋਣ ਲਈ ਰੇਡੀਓ ਬਟਨ ਵਰਤੋ।"),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("ਰੇਡੀਓ"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "ਚੈੱਕ-ਬਾਕਸ, ਰੇਡੀਓ ਬਟਨ ਅਤੇ ਸਵਿੱਚ"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ਸਵਿੱਚਾਂ ਨੂੰ ਚਾਲੂ/ਬੰਦ ਕਰਨ \'ਤੇ ਇਹ ਇਕਹਿਰੀ ਸੈਟਿੰਗਾਂ ਵਿਕਲਪ ਦੀ ਸਥਿਤੀ ਵਿਚਾਲੇ ਟੌਗਲ ਕਰਦੇ ਹਨ। ਉਹ ਵਿਕਲਪ ਜਿਸਨੂੰ ਸਵਿੱਚ ਕੰਟਰੋਲ ਕਰਦਾ ਹੈ, ਅਤੇ ਨਾਲ ਉਹ ਸਥਿਤੀ ਜਿਸ ਵਿੱਚ ਇਹ ਹੈ ਉਸਨੂੰ ਸੰਬੰਧਿਤ ਇਨਲਾਈਨ ਲੇਬਲ ਨਾਲ ਕਲੀਅਰ ਕੀਤਾ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ।"),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("ਸਵਿੱਚ"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("ਚੋਣ ਸੰਬੰਧੀ ਕੰਟਰੋਲ"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "ਸਧਾਰਨ ਵਿੰਡੋ ਵਰਤੋਂਕਾਰ ਨੂੰ ਕਈ ਵਿਕਲਪਾਂ ਵਿਚਕਾਰ ਚੋਣ ਕਰਨ ਦੀ ਪੇਸ਼ਕਸ਼ ਕਰਦੀ ਹੈ। ਸਧਾਰਨ ਵਿੰਡੋ ਵਿੱਚ ਇੱਕ ਵਿਕਲਪਿਕ ਸਿਰਲੇਖ ਸ਼ਾਮਲ ਹੁੰਦਾ ਹੈ ਜੋ ਚੋਣਾਂ ਦੇ ਉੱਪਰ ਦਿਖਾਇਆ ਜਾਂਦਾ ਹੈ।"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("ਸਧਾਰਨ"),
@@ -404,6 +506,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "ਟੌਗਲ ਬਟਨ ਦੀ ਵਰਤੋਂ ਸੰਬੰਧਿਤ ਵਿਕਲਪਾਂ ਨੂੰ ਗਰੁੱਪਬੱਧ ਕਰਨ ਲਈ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ। ਸੰਬੰਧਿਤ ਟੌਗਲ ਬਟਨਾਂ ਦੇ ਗਰੁੱਪਾਂ \'ਤੇ ਜ਼ੋਰ ਦੇਣ ਲਈ, ਗਰੁੱਪ ਦਾ ਕੋਈ ਸਾਂਝਾ ਕੰਟੇਨਰ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("ਟੌਗਲ ਬਟਨ"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("ਦੋ ਲਾਈਨਾਂ"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "ਮੈਟੀਰੀਅਲ ਡਿਜ਼ਾਈਨ ਵਿੱਚ ਵੱਖ-ਵੱਖ ਛਪਾਈ ਵਾਲੇ ਸਟਾਈਲਾਂ ਲਈ ਪਰਿਭਾਸ਼ਾਵਾਂ।"),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -530,6 +634,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Flutter Gallery ਬਾਰੇ"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "ਲੰਡਨ ਵਿੱਚ TOASTER ਵੱਲੋਂ ਡਿਜ਼ਾਈਨ ਕੀਤਾ ਗਿਆ"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("ਸੈਟਿੰਗਾਂ ਬੰਦ ਕਰੋ"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("ਸੈਟਿੰਗਾਂ"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("ਗੂੜ੍ਹਾ"),
         "settingsFeedback": MessageLookupByLibrary.simpleMessage("ਵਿਚਾਰ ਭੇਜੋ"),
         "settingsLightTheme": MessageLookupByLibrary.simpleMessage("ਹਲਕਾ"),

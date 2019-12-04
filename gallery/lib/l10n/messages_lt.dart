@@ -125,48 +125,98 @@ class MessageLookup extends MessageLookupByLibrary {
             "Suasmeninta kelionių programa"),
         "craneEat": MessageLookupByLibrary.simpleMessage("MAISTAS"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Neapolis, Italija"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pica malkinėje krosnyje"),
         "craneEat1": MessageLookupByLibrary.simpleMessage(
             "Dalasas, Jungtinės Amerikos Valstijos"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Lisabona, Portugalija"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Moteris, laikanti didelį su jautiena"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Tuščias baras su aukštomis baro kėdėmis"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Kordoba, Argentina"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Mėsainis"),
         "craneEat3": MessageLookupByLibrary.simpleMessage(
             "Portlandas, Jungtinės Amerikos Valstijos"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Korėjietiškas tako"),
         "craneEat4":
             MessageLookupByLibrary.simpleMessage("Paryžius, Prancūzija"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Šokoladinis desertas"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("Seulas 06236, Pietų Korėja"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Vieta prie stalo meniškame restorane"),
         "craneEat6": MessageLookupByLibrary.simpleMessage(
             "Siatlas, Jungtinės Amerikos Valstijos"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Indas krevečių"),
         "craneEat7": MessageLookupByLibrary.simpleMessage(
             "Našvilis, Jungtinės Amerikos Valstijos"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Įėjimas į kepyklą"),
         "craneEat8": MessageLookupByLibrary.simpleMessage(
             "Atlanta, Jungtinės Amerikos Valstijos"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Vėžių lėkštė"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madridas, Ispanija"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kavinės vitrina su kepiniais"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Ieškokite restoranų pagal kelionės tikslą"),
         "craneFly": MessageLookupByLibrary.simpleMessage("SKRYDIS"),
         "craneFly0": MessageLookupByLibrary.simpleMessage(
             "Aspenas, Jungtinės Amerikos Valstijos"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Trobelė sniegynuose su visžaliais medžiais"),
         "craneFly1": MessageLookupByLibrary.simpleMessage(
             "Big Sur, Jungtinės Amerikos Valstijos"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Kairas, Egiptas"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Al Azharo mečetės bokštai per saulėlydį"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Lisabona, Portugalija"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Mūrinis švyturys jūroje"),
         "craneFly12": MessageLookupByLibrary.simpleMessage(
             "Napa, Jungtinės Amerikos Valstijos"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Baseinas su palmėmis"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Balis, Indonezija"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Paplūdimio baseinas su palmėmis"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Palapinė lauke"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Kumbu slėnis, Nepalas"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Maldos vėliavėlės apsnigto kalno fone"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Maču Pikču, Peru"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Maču Pikču tvirtovė"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Malė, Maldyvai"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Vilos ant vandens"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Vicnau, Šveicarija"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madridas, Ispanija"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Viešbutis ežero pakrantėje su kalnais"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Meksikas, Meksika"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Meksiko vaizduojamojo meno rūmų vaizdas iš viršaus"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "Rašmoro Kalnas, Jungtinės Amerikos Valstijos"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Rašmoro kalnas"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapūras"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supermedžių giraitė"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Žmogus, palinkęs prie senovinio mėlyno automobilio"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Ieškokite skrydžių pagal kelionės tikslą"),
@@ -187,24 +237,48 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Keliautojai"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("NAKVYNĖ"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Malė, Maldyvai"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Vilos ant vandens"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage(
             "Aspenas, Jungtinės Amerikos Valstijos"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Kairas, Egiptas"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Al Azharo mečetės bokštai per saulėlydį"),
         "craneSleep11":
             MessageLookupByLibrary.simpleMessage("Taipėjus, Taivanas"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Taipėjaus dangoraižis 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Trobelė sniegynuose su visžaliais medžiais"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("Maču Pikču, Peru"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Maču Pikču tvirtovė"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Žmogus, palinkęs prie senovinio mėlyno automobilio"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("Vicnau, Šveicarija"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Viešbutis ežero pakrantėje su kalnais"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage(
             "Big Sur, Jungtinės Amerikos Valstijos"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Palapinė lauke"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage(
             "Napa, Jungtinės Amerikos Valstijos"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Baseinas su palmėmis"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("Portas, Portugalija"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Spalvingi apartamentai Ribeiro aikštėje"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulumas, Meksika"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Majų griuvėsiai paplūdimyje ant uolos"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Lisabona, Portugalija"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Mūrinis švyturys jūroje"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Ieškokite nuomojamų patalpų pagal kelionės tikslą"),
@@ -358,6 +432,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Įvesties fragmentas"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("Nepavyko pateikti URL:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Viena fiksuoto aukščio eilutė, kurioje paprastai yra teksto bei piktograma pradžioje ar pabaigoje."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Antrinis tekstas"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Slenkamojo sąrašo išdėstymai"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Sąrašai"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Viena eilutė"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Parinktys"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Paspaudus kontūrinius mygtukus jie tampa nepermatomi ir pakyla. Jie dažnai teikiami su iškiliaisiais mygtukais norint nurodyti alternatyvų, antrinį veiksmą."),
@@ -367,6 +450,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Iškilieji mygtukai padidina daugumą plokščiųjų išdėstymų. Jie paryškina funkcijas užimtose ar plačiose erdvėse."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Iškilusis mygtukas"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Naudotojas žymimaisiais laukeliais gali pasirinkti kelias parinktis iš rinkinio. Įprasto žymimojo laukelio vertė yra „true“ (tiesa) arba „false“ (netiesa), o trijų parinkčių žymimojo laukelio vertė bė minėtųjų gali būti ir nulis."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Žymimasis laukelis"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Naudotojas akutėmis gali pasirinkti vieną parinktį iš rinkinio. Naudokite akutes išskirtiniams pasirinkimams, jei manote, kad naudotojui reikia peržiūrėti visas galimas parinktis kartu."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Akutė"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Žymimieji laukeliai, akutės ir jungikliai"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Įjungimo ir išjungimo jungikliais galima keisti kiekvienos nustatymo parinkties būseną. Jungiklio valdoma parinktis ir nustatyta būsena turi būti aiškios be įterptos etiketės."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Perjungti"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Pasirinkimo valdikliai"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Rodant paprastą dialogo langą naudotojui galima rinktis iš kelių parinkčių. Nurodomas pasirenkamas paprasto dialogo lango pavadinimas, kuris pateikiamas virš pasirinkimo variantų."),
         "demoSimpleDialogTitle":
@@ -434,6 +536,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Perjungimo mygtukais galima grupuoti susijusias parinktis. Norint pažymėti susijusių perjungimo mygtukų grupes, turėtų būti bendrinamas bendras grupės sudėtinis rodinys"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Perjungimo mygtukai"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Dvi eilutės"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Įvairių tipografinių stilių apibrėžtys prie trimačių objektų dizaino."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -567,6 +671,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Apie „Flutter“ galeriją"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("Sukūrė TOASTER, Londonas"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Uždaryti nustatymus"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Nustatymai"),
         "settingsDarkTheme":
             MessageLookupByLibrary.simpleMessage("Tamsioji tema"),
         "settingsFeedback":

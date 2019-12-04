@@ -118,44 +118,95 @@ class MessageLookup extends MessageLookupByLibrary {
             "แอปการเดินทางที่ปรับเปลี่ยนในแบบของคุณ"),
         "craneEat": MessageLookupByLibrary.simpleMessage("ร้านอาหาร"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("เนเปิลส์ อิตาลี"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("พิซซ่าในเตาอบฟืนไม้"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("ดัลลาส สหรัฐอเมริกา"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("ลิสบอน โปรตุเกส"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ผู้หญิงถือแซนด์วิชเนื้อชิ้นใหญ่"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "บาร์ที่ไม่มีลูกค้าซึ่งมีม้านั่งสูงแบบไม่มีพนัก"),
         "craneEat2":
             MessageLookupByLibrary.simpleMessage("คอร์โดบา อาร์เจนตินา"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("เบอร์เกอร์"),
         "craneEat3":
             MessageLookupByLibrary.simpleMessage("พอร์ตแลนด์ สหรัฐอเมริกา"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ทาโก้แบบเกาหลี"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("ปารีส ฝรั่งเศส"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ของหวานที่เป็นช็อกโกแลต"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("โซล เกาหลีใต้"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "บริเวณที่นั่งในร้านอาหารซึ่งดูมีศิลปะ"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("ซีแอตเทิล สหรัฐอเมริกา"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("เมนูที่ใส่กุ้ง"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("แนชวิลล์ สหรัฐอเมริกา"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ทางเข้าร้านเบเกอรี่"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("แอตแลนตา สหรัฐอเมริกา"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("จานใส่กุ้งน้ำจืด"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("มาดริด สเปน"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "เคาน์เตอร์ในคาเฟ่ที่มีขนมอบต่างๆ"),
         "craneEatRestaurants": m2,
         "craneEatSubhead":
             MessageLookupByLibrary.simpleMessage("ค้นหาร้านอาหารตามจุดหมาย"),
         "craneFly": MessageLookupByLibrary.simpleMessage("เที่ยวบิน"),
         "craneFly0":
             MessageLookupByLibrary.simpleMessage("แอสเพน สหรัฐอเมริกา"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "กระท่อมหลังเล็กท่ามกลางทิวทัศน์ที่มีหิมะและต้นไม้เขียวชอุ่ม"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("บิ๊กเซอร์ สหรัฐอเมริกา"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("ไคโร อียิปต์"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "มัสยิดอัลอัซฮัรช่วงพระอาทิตย์ตก"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("ลิสบอน โปรตุเกส"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ประภาคารอิฐกลางทะเล"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("นาปา สหรัฐอเมริกา"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("สระว่ายน้ำที่มีต้นปาล์ม"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("บาหลี อินโดนีเซีย"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "สระว่ายน้ำริมทะเลซึ่งมีต้นปาล์ม"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("เต็นท์ในทุ่ง"),
         "craneFly2": MessageLookupByLibrary.simpleMessage("หุบเขาคุมบู เนปาล"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ธงมนตราหน้าภูเขาที่ปกคลุมด้วยหิมะ"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("มาชูปิกชู เปรู"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ป้อมมาชูปิกชู"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("มาเล มัลดีฟส์"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("บังกะโลที่ตั้งอยู่เหนือน้ำ"),
         "craneFly5":
             MessageLookupByLibrary.simpleMessage("วิทซ์นาว สวิตเซอร์แลนด์"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("มาดริด สเปน"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "โรงแรมริมทะเลสาบที่อยู่หน้าภูเขา"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("เม็กซิโกซิตี้ เม็กซิโก"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "มุมมองทางอากาศของพระราชวัง Bellas Artes"),
         "craneFly7":
             MessageLookupByLibrary.simpleMessage("ภูเขารัชมอร์ สหรัฐอเมริกา"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ภูเขารัชมอร์"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("สิงคโปร์"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ซูเปอร์ทรี โกรฟ"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("ฮาวานา คิวบา"),
+        "craneFly9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ผู้ชายพิงรถโบราณสีน้ำเงิน"),
         "craneFlyStops": m3,
         "craneFlySubhead":
             MessageLookupByLibrary.simpleMessage("ค้นหาเที่ยวบินตามจุดหมาย"),
@@ -172,21 +223,45 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("นักเดินทาง"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("ที่พัก"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("มาเล มัลดีฟส์"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("บังกะโลที่ตั้งอยู่เหนือน้ำ"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("แอสเพน สหรัฐอเมริกา"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("ไคโร อียิปต์"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "มัสยิดอัลอัซฮัรช่วงพระอาทิตย์ตก"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("ไทเป ไต้หวัน"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ตึกระฟ้าไทเป 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "กระท่อมหลังเล็กท่ามกลางทิวทัศน์ที่มีหิมะและต้นไม้เขียวชอุ่ม"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("มาชูปิกชู เปรู"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ป้อมมาชูปิกชู"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("ฮาวานา คิวบา"),
+        "craneSleep3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ผู้ชายพิงรถโบราณสีน้ำเงิน"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("วิทซ์นาว สวิตเซอร์แลนด์"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "โรงแรมริมทะเลสาบที่อยู่หน้าภูเขา"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("บิ๊กเซอร์ สหรัฐอเมริกา"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("เต็นท์ในทุ่ง"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("นาปา สหรัฐอเมริกา"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("สระว่ายน้ำที่มีต้นปาล์ม"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("ปอร์โต โปรตุเกส"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "อพาร์ตเมนต์สีสันสดใสที่จัตุรัส Ribeira"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("ตูลุม เม็กซิโก"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ซากปรักหักพังของอารยธรรมมายันบนหน้าผาเหนือชายหาด"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("ลิสบอน โปรตุเกส"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ประภาคารอิฐกลางทะเล"),
         "craneSleepProperties": m4,
         "craneSleepSubhead":
             MessageLookupByLibrary.simpleMessage("ค้นหาที่พักตามจุดหมาย"),
@@ -335,6 +410,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("ชิปอินพุต"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("แสดง URL ไม่ได้:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "แถวเดี่ยวความสูงคงที่ซึ่งมักจะมีข้อความบางอย่างรวมถึงไอคอนนำหน้าหรือต่อท้าย"),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("ข้อความรอง"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("เลย์เอาต์รายการแบบเลื่อน"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("รายการ"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("หนึ่งบรรทัด"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("ตัวเลือก"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "ปุ่มที่เติมขอบจะเปลี่ยนเป็นสีทึบและยกขึ้นเมื่อกด มักจับคู่กับปุ่มแบบยกขึ้นเพื่อระบุว่ามีการดำเนินการสำรองอย่างอื่น"),
@@ -344,6 +428,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "ปุ่มแบบยกขึ้นช่วยเพิ่มมิติให้แก่เลย์เอาต์แบบแบนราบเป็นส่วนใหญ่ โดยจะช่วยเน้นฟังก์ชันในพื้นที่ที่มีการใช้งานมากหรือกว้างขวาง"),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("ปุ่มแบบยกขึ้น"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ช่องทำเครื่องหมายให้ผู้ใช้เลือกตัวเลือกจากชุดตัวเลือกได้หลายรายการ ค่าปกติของช่องทำเครื่องหมายคือ \"จริง\" หรือ \"เท็จ\" และค่า 3 สถานะของช่องทำเครื่องหมายอาจเป็น \"ว่าง\" ได้ด้วย"),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("ช่องทำเครื่องหมาย"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ปุ่มตัวเลือกให้ผู้ใช้เลือก 1 ตัวเลือกจากชุดตัวเลือก ใช้ปุ่มตัวเลือกสำหรับการเลือกพิเศษในกรณีที่คุณคิดว่าผู้ใช้จำเป็นต้องเห็นตัวเลือกที่มีอยู่ทั้งหมดแสดงข้างกัน"),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("ปุ่มตัวเลือก"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "ช่องทำเครื่องหมาย ปุ่มตัวเลือก และสวิตช์"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "สวิตช์เปิด/ปิดสลับสถานะของตัวเลือกการตั้งค่า 1 รายการ ตัวเลือกที่สวิตช์ควบคุมและสถานะของตัวเลือกควรแตกต่างอย่างชัดเจนจากป้ายกำกับในบรรทัดที่เกี่ยวข้อง"),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("สวิตช์"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("การควบคุมการเลือก"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "กล่องโต้ตอบแบบง่ายจะนำเสนอทางเลือกระหว่างตัวเลือกหลายๆ อย่าง โดยกล่องโต้ตอบแบบง่ายจะมีชื่อที่ไม่บังคับซึ่งจะแสดงเหนือทางเลือกต่างๆ"),
         "demoSimpleDialogTitle":
@@ -409,6 +512,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "ปุ่มเปิด-ปิดอาจใช้เพื่อจับกลุ่มตัวเลือกที่เกี่ยวข้องกัน กลุ่มของปุ่มเปิด-ปิดที่เกี่ยวข้องกันควรใช้คอนเทนเนอร์ร่วมกันเพื่อเป็นการเน้นกลุ่มเหล่านั้น"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("ปุ่มเปิด-ปิด"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("สองบรรทัด"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "คำจำกัดความของตัวอักษรรูปแบบต่างๆ ที่พบในดีไซน์ Material"),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -541,6 +646,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("เกี่ยวกับ Flutter Gallery"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("ออกแบบโดย TOASTER ในลอนดอน"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("ปิดการตั้งค่า"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("การตั้งค่า"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("สีเข้ม"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("ส่งความคิดเห็น"),
