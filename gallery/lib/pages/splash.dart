@@ -52,6 +52,23 @@ class _SplashPageState extends State<SplashPage>
   int _effect;
   final _random = Random();
 
+  // A map of the effect index to its duration. This duration is used to
+  // determine how long to display the splash animation at launch.
+  //
+  // If a new effect is added, this map should be updated.
+  final _effectDurations = {
+    1: 5,
+    2: 4,
+    3: 4,
+    4: 5,
+    5: 5,
+    6: 4,
+    7: 4,
+    8: 4,
+    9: 3,
+    10: 6,
+  };
+
   bool get _isSplashVisible {
     return _controller.status == AnimationStatus.completed ||
         _controller.status == AnimationStatus.forward;
@@ -60,6 +77,10 @@ class _SplashPageState extends State<SplashPage>
   @override
   void initState() {
     super.initState();
+
+    // If the number of included effects changes, this number should be changed.
+    _effect = _random.nextInt(_effectDurations.length) + 1;
+
     _controller = AnimationController(
         duration: Duration(
           milliseconds: splashPageAnimationDurationInMilliseconds,
@@ -71,17 +92,14 @@ class _SplashPageState extends State<SplashPage>
       });
     if (widget.isAnimated) {
       _launchTimer = Timer(
-          const Duration(
-            seconds: launchTimerDurationInSeconds,
-          ), () {
-        _controller.fling(velocity: -1);
-      });
+        Duration(seconds: _effectDurations[_effect]),
+        () {
+          _controller.fling(velocity: -1);
+        },
+      );
     } else {
       _controller.value = 0;
     }
-
-    // If the number of included effects changes, this number should be changed.
-    _effect = _random.nextInt(10) + 1;
   }
 
   @override
