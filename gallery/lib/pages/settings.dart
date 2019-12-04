@@ -237,17 +237,24 @@ class SettingsFeedback extends StatelessWidget {
 class SettingsAttribution extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(
-          horizontal: isDisplayDesktop(context) ? 16 : 32, vertical: 28),
-      child: Text(
-        GalleryLocalizations.of(context).settingsAttribution,
-        style: Theme.of(context).textTheme.body2.copyWith(
-              fontSize: 12,
-              color: Theme.of(context).colorScheme.onSecondary,
-            ),
-        textAlign:
-            (isDisplayDesktop(context)) ? TextAlign.end : TextAlign.start,
+    final isDesktop = isDisplayDesktop(context);
+    final verticalPadding = isDesktop ? 0.0 : 28.0;
+    return MergeSemantics(
+      child: Padding(
+        padding: EdgeInsetsDirectional.only(
+          start: isDesktop ? 48 : 32,
+          end: isDesktop ? 0 : 32,
+          top: verticalPadding,
+          bottom: verticalPadding,
+        ),
+        child: Text(
+          GalleryLocalizations.of(context).settingsAttribution,
+          style: Theme.of(context).textTheme.body2.copyWith(
+                fontSize: 12,
+                color: Theme.of(context).colorScheme.onSecondary,
+              ),
+          textAlign: isDesktop ? TextAlign.end : TextAlign.start,
+        ),
       ),
     );
   }
@@ -264,12 +271,15 @@ class _SettingsLink extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
     final colorScheme = Theme.of(context).colorScheme;
+    final isDesktop = isDisplayDesktop(context);
 
     return InkWell(
       onTap: onTap,
       child: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: isDisplayDesktop(context) ? 16 : 32),
+        padding: EdgeInsetsDirectional.only(
+          start: isDesktop ? 48 : 32,
+          end: isDesktop ? 0 : 32,
+        ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -280,17 +290,17 @@ class _SettingsLink extends StatelessWidget {
             ),
             Flexible(
               child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 16,
-                  vertical: 12,
+                padding: const EdgeInsetsDirectional.only(
+                  start: 16,
+                  top: 12,
+                  bottom: 12,
                 ),
                 child: Text(
                   title,
-                  style:
-                      textTheme.subtitle.apply(color: colorScheme.onSecondary),
-                  textAlign: (isDisplayDesktop(context))
-                      ? TextAlign.end
-                      : TextAlign.start,
+                  style: textTheme.subtitle.apply(
+                    color: colorScheme.onSecondary,
+                  ),
+                  textAlign: isDesktop ? TextAlign.end : TextAlign.start,
                 ),
               ),
             ),

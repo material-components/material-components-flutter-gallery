@@ -128,14 +128,24 @@ class HomePage extends StatelessWidget {
                 bottom: 81,
                 top: 109,
               ),
-              child: Wrap(
-                crossAxisAlignment: WrapCrossAlignment.center,
-                alignment: WrapAlignment.end,
+              child: Row(
                 children: [
-                  SettingsAbout(),
-                  SettingsFeedback(),
-                  MergeSemantics(
-                    child: SettingsAttribution(),
+                  Image.asset(
+                    Theme.of(context).colorScheme.brightness == Brightness.dark
+                        ? 'assets/logo/flutter_logo.png'
+                        : 'assets/logo/flutter_logo_color.png',
+                    excludeFromSemantics: true,
+                  ),
+                  Expanded(
+                    child: Wrap(
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      alignment: WrapAlignment.end,
+                      children: [
+                        SettingsAbout(),
+                        SettingsFeedback(),
+                        SettingsAttribution(),
+                      ],
+                    ),
                   ),
                 ],
               ),
