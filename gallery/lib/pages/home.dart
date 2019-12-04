@@ -355,35 +355,40 @@ class _DesktopCategoryItem extends StatelessWidget {
       color: colorScheme.surface,
       child: Semantics(
         container: true,
-        child: Column(
-          children: [
-            _DesktopCategoryHeader(
-              title: title,
-              imageString: imageString,
-            ),
-            Divider(
-              height: 2,
-              thickness: 2,
-              color: colorScheme.background,
-            ),
-            Flexible(
-              // Remove ListView top padding as it is already accounted for.
-              child: MediaQuery.removePadding(
-                removeTop: true,
-                context: context,
-                child: ListView(
-                  children: [
-                    const SizedBox(height: 12),
-                    for (GalleryDemo demo in demos)
-                      CategoryDemoItem(
-                        demo: demo,
-                      ),
-                    SizedBox(height: 12),
-                  ],
+        child: DefaultFocusTraversal(
+          policy: WidgetOrderFocusTraversalPolicy(),
+          child: Column(
+            children: [
+              _DesktopCategoryHeader(
+                title: title,
+                imageString: imageString,
+              ),
+              Divider(
+                height: 2,
+                thickness: 2,
+                color: colorScheme.background,
+              ),
+              Flexible(
+                // Remove ListView top padding as it is already accounted for.
+                child: Focus(
+                  child: MediaQuery.removePadding(
+                    removeTop: true,
+                    context: context,
+                    child: ListView(
+                      children: [
+                        const SizedBox(height: 12),
+                        for (GalleryDemo demo in demos)
+                          CategoryDemoItem(
+                            demo: demo,
+                          ),
+                        SizedBox(height: 12),
+                      ],
+                    ),
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

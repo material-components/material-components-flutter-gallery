@@ -6,7 +6,6 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-
 import 'package:gallery/constants.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/pages/home.dart';

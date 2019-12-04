@@ -134,12 +134,15 @@ class _BackdropState extends State<Backdrop>
     final safeAreaTopPadding = MediaQuery.of(context).padding.top;
 
     final Widget frontLayer = ExcludeSemantics(
-      child: InheritedBackdrop(
-        toggleSettings: toggleSettings,
-        child: widget.frontLayer,
-        settingsButtonWidth: settingsButtonWidth,
-        desktopSettingsButtonHeight: settingsButtonHeightDesktop,
-        mobileSettingsButtonHeight: settingsButtonHeightMobile,
+      child: DefaultFocusTraversal(
+        policy: WidgetOrderFocusTraversalPolicy(),
+        child: InheritedBackdrop(
+          toggleSettings: toggleSettings,
+          child: widget.frontLayer,
+          settingsButtonWidth: settingsButtonWidth,
+          desktopSettingsButtonHeight: settingsButtonHeightDesktop,
+          mobileSettingsButtonHeight: settingsButtonHeightMobile,
+        ),
       ),
       excluding: !_isSettingsOpen,
     );
