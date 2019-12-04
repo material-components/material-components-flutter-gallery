@@ -292,21 +292,24 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
               nonCodePageMiddleSpaceWidth) /
           2;
 
+      final Widget sectionAndDemo = (_state == _DemoState.fullscreen)
+          ? demoContent
+          : Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(child: section),
+                SizedBox(width: middleSpaceWidth),
+                Container(
+                  width: demoContentWidth,
+                  child: demoContent,
+                ),
+              ],
+            );
+
       body = SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(top: 56),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              if (_state != _DemoState.fullscreen) Expanded(child: section),
-              if (_state != _DemoState.fullscreen)
-                SizedBox(width: middleSpaceWidth),
-              Container(
-                width: demoContentWidth,
-                child: demoContent,
-              ),
-            ],
-          ),
+          child: sectionAndDemo,
         ),
       );
     } else {
