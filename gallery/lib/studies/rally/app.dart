@@ -5,6 +5,7 @@
 import 'package:flutter/material.dart';
 import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
+
 import 'package:gallery/studies/rally/colors.dart';
 import 'package:gallery/studies/rally/home.dart';
 import 'package:gallery/studies/rally/login.dart';
@@ -38,6 +39,7 @@ class RallyApp extends StatelessWidget {
     return ThemeData(
       scaffoldBackgroundColor: RallyColors.primaryBackground,
       primaryColor: RallyColors.primaryBackground,
+      focusColor: RallyColors.focusColor,
       textTheme: _buildRallyTextTheme(base.textTheme),
       inputDecorationTheme: InputDecorationTheme(
         labelStyle: const TextStyle(

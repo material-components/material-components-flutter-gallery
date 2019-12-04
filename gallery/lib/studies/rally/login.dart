@@ -3,10 +3,12 @@
 // found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/layout/text_scale.dart';
+import 'package:gallery/pages/home.dart';
 import 'package:gallery/studies/rally/colors.dart';
 
 class LoginPage extends StatefulWidget {
@@ -20,12 +22,22 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return ApplyTextOptions(
-      child: Scaffold(
-        body: SafeArea(
-          child: _MainView(
-            usernameController: _usernameController,
-            passwordController: _passwordController,
+    return DefaultFocusTraversal(
+      policy: LoginFocusTraversalPolicy(
+        backButtonFocusNode:
+            InheritedFocusNodes.of(context).backButtonFocusNode,
+        focusScopeNode: InheritedFocusNodes.of(context).studyFocusScopeNode,
+      ),
+      child: FocusScope(
+        node: InheritedFocusNodes.of(context).studyFocusScopeNode,
+        child: ApplyTextOptions(
+          child: Scaffold(
+            body: SafeArea(
+              child: _MainView(
+                usernameController: _usernameController,
+                passwordController: _passwordController,
+              ),
+            ),
           ),
         ),
       ),
@@ -37,6 +49,36 @@ class _LoginPageState extends State<LoginPage> {
     _usernameController.dispose();
     _passwordController.dispose();
     super.dispose();
+  }
+}
+
+class LoginFocusTraversalPolicy extends ReadingOrderTraversalPolicy {
+  LoginFocusTraversalPolicy({
+    @required this.backButtonFocusNode,
+    @required this.focusScopeNode,
+  });
+
+  final FocusNode backButtonFocusNode;
+  final FocusScopeNode focusScopeNode;
+
+  @override
+  bool previous(FocusNode currentNode) {
+    if (currentNode == focusScopeNode.children.first) {
+      backButtonFocusNode.requestFocus();
+      return true;
+    } else {
+      return super.previous(currentNode);
+    }
+  }
+
+  @override
+  bool next(FocusNode currentNode) {
+    if (currentNode == focusScopeNode.children.last) {
+      backButtonFocusNode.requestFocus();
+      return true;
+    } else {
+      return super.next(currentNode);
+    }
   }
 }
 
@@ -247,12 +289,19 @@ class _PasswordInput extends StatelessWidget {
   }
 }
 
-class _ThumbButton extends StatelessWidget {
+class _ThumbButton extends StatefulWidget {
   _ThumbButton({
     @required this.onTap,
   });
 
   final VoidCallback onTap;
+
+  @override
+  _ThumbButtonState createState() => _ThumbButtonState();
+}
+
+class _ThumbButtonState extends State<_ThumbButton> {
+  BoxDecoration borderDecoration;
 
   @override
   Widget build(BuildContext context) {
@@ -261,13 +310,42 @@ class _ThumbButton extends StatelessWidget {
       enabled: true,
       label: GalleryLocalizations.of(context).rallyLoginLabelLogin,
       child: GestureDetector(
-        onTap: onTap,
-        child: SizedBox(
-          height: 120,
-          child: ExcludeSemantics(
-            child: Image.asset(
-              'thumb.png',
-              package: 'rally_assets',
+        onTap: widget.onTap,
+        child: Focus(
+          onKey: (node, event) {
+            if (event is RawKeyDownEvent) {
+              if (event.logicalKey == LogicalKeyboardKey.enter ||
+                  event.logicalKey == LogicalKeyboardKey.space) {
+                widget.onTap();
+                return true;
+              }
+            }
+            return false;
+          },
+          onFocusChange: (hasFocus) {
+            if (hasFocus) {
+              setState(() {
+                borderDecoration = BoxDecoration(
+                  border: Border.all(
+                    color: Colors.white.withOpacity(0.5),
+                    width: 2,
+                  ),
+                );
+              });
+            } else {
+              setState(() {
+                borderDecoration = null;
+              });
+            }
+          },
+          child: Container(
+            decoration: borderDecoration,
+            height: 120,
+            child: ExcludeSemantics(
+              child: Image.asset(
+                'thumb.png',
+                package: 'rally_assets',
+              ),
             ),
           ),
         ),
@@ -321,6 +399,7 @@ class _BorderButton extends StatelessWidget {
       borderSide: const BorderSide(color: RallyColors.buttonColor),
       color: RallyColors.buttonColor,
       highlightedBorderColor: RallyColors.buttonColor,
+      focusColor: RallyColors.buttonColor.withOpacity(0.8),
       padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 24),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12),

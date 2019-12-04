@@ -760,47 +760,129 @@ double _carouselHeight(double scaleFactor, BuildContext context) => math.max(
 
 /// Wrap the studies with this to display a back button and allow the user to
 /// exit them at any time.
-class _StudyWrapper extends StatelessWidget {
+class _StudyWrapper extends StatefulWidget {
   const _StudyWrapper({Key key, this.study}) : super(key: key);
 
   final Widget study;
 
   @override
+  _StudyWrapperState createState() => _StudyWrapperState();
+}
+
+class _StudyWrapperState extends State<_StudyWrapper> {
+  FocusNode backButtonFocusNode;
+  FocusScopeNode studyFocusScopeNode;
+
+  @override
+  void initState() {
+    super.initState();
+    backButtonFocusNode = FocusNode();
+    studyFocusScopeNode = FocusScopeNode();
+  }
+
+  @override
+  void dispose() {
+    backButtonFocusNode.dispose();
+    studyFocusScopeNode.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final textTheme = Theme.of(context).textTheme;
-
     return ApplyTextOptions(
-      child: Stack(
-        children: [
-          Semantics(
-            sortKey: OrdinalSortKey(1),
-            child: study,
-          ),
-          Semantics(
-            sortKey: OrdinalSortKey(0),
-            child: Align(
-              alignment: AlignmentDirectional.bottomStart,
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: FloatingActionButton.extended(
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                  icon: IconTheme(
-                    data: IconThemeData(color: colorScheme.onPrimary),
-                    child: BackButtonIcon(),
-                  ),
-                  label: Text(
-                    MaterialLocalizations.of(context).backButtonTooltip,
-                    style: textTheme.button.apply(color: colorScheme.onPrimary),
+      child: DefaultFocusTraversal(
+        policy: StudyWrapperFocusTraversalPolicy(
+          backButtonFocusNode: backButtonFocusNode,
+          studyFocusScopeNode: studyFocusScopeNode,
+        ),
+        child: InheritedFocusNodes(
+          backButtonFocusNode: backButtonFocusNode,
+          studyFocusScopeNode: studyFocusScopeNode,
+          child: Stack(
+            children: [
+              Semantics(
+                sortKey: OrdinalSortKey(1),
+                child: widget.study,
+              ),
+              Semantics(
+                sortKey: OrdinalSortKey(0),
+                child: Align(
+                  alignment: AlignmentDirectional.bottomStart,
+                  child: Padding(
+                    padding: const EdgeInsets.all(16),
+                    child: FloatingActionButton.extended(
+                      focusNode: backButtonFocusNode,
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      icon: IconTheme(
+                        data: IconThemeData(color: colorScheme.onPrimary),
+                        child: BackButtonIcon(),
+                      ),
+                      label: Text(
+                        MaterialLocalizations.of(context).backButtonTooltip,
+                        style: textTheme.button
+                            .apply(color: colorScheme.onPrimary),
+                      ),
+                    ),
                   ),
                 ),
               ),
-            ),
+            ],
           ),
-        ],
+        ),
       ),
     );
+  }
+}
+
+class InheritedFocusNodes extends InheritedWidget {
+  const InheritedFocusNodes({
+    Key key,
+    @required Widget child,
+    @required this.backButtonFocusNode,
+    @required this.studyFocusScopeNode,
+  })  : assert(child != null),
+        super(key: key, child: child);
+
+  final FocusNode backButtonFocusNode;
+  final FocusScopeNode studyFocusScopeNode;
+
+  static InheritedFocusNodes of(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType();
+
+  @override
+  bool updateShouldNotify(InheritedFocusNodes old) => true;
+}
+
+class StudyWrapperFocusTraversalPolicy extends ReadingOrderTraversalPolicy {
+  StudyWrapperFocusTraversalPolicy({
+    @required this.backButtonFocusNode,
+    @required this.studyFocusScopeNode,
+  });
+
+  final FocusNode backButtonFocusNode;
+  final FocusScopeNode studyFocusScopeNode;
+
+  @override
+  bool previous(FocusNode currentNode) {
+    if (currentNode == backButtonFocusNode) {
+      studyFocusScopeNode.children.last.requestFocus();
+      return true;
+    } else {
+      return super.previous(currentNode);
+    }
+  }
+
+  @override
+  bool next(FocusNode currentNode) {
+    if (currentNode == backButtonFocusNode) {
+      studyFocusScopeNode.children.first.requestFocus();
+      return true;
+    } else {
+      return super.next(currentNode);
+    }
   }
 }

@@ -37,6 +37,7 @@ class RallyColors {
   static const Color inputBackground = Color(0xFF26282F);
   static const Color cardBackground = Color(0x03FEFEFE);
   static const Color buttonColor = Color(0xFF09AF79);
+  static const Color focusColor = Color(0xCCFFFFFF);
 
   /// Convenience method to get a single account color with position i.
   static Color accountColor(int i) {
