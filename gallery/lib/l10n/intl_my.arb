@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "အားလုံး မိတ္တူကူးရန်",
+  "shrineScreenReaderRemoveProductButton": "{product} ကို ဖယ်ရှားရန်",
+  "shrineScreenReaderProductAddToCart": "ဈေးခြင်းတောင်းသို့ ပေါင်းထည့်မည်",
+  "shrineScreenReaderCart": "{quantity,plural, =0{ဈေးခြင်းတောင်း၊ ပစ္စည်းမရှိပါ}=1{ဈေးခြင်းတောင်း၊ ပစ္စည်း ၁ ခု}other{ဈေးခြင်းတောင်း၊ ပစ္စည်း {quantity} ခု}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "ကလစ်ဘုတ်သို့ မိတ္တူကူး၍မရပါ− {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "ကလစ်ဘုတ်သို့ မိတ္တူကူးပြီးပါပြီ။",
   "craneSleep8SemanticLabel": "ကမ်းခြေထက် ကျောက်ကမ်းပါးတစ်ခုပေါ်ရှိ Mayan ဘုရားပျက်",
   "craneSleep4SemanticLabel": "တောင်တန်းများရှေ့ရှိ ကမ်းစပ်ဟိုတယ်",
   "craneSleep2SemanticLabel": "မာချူ ပီချူ ခံတပ်",

@@ -35,40 +35,47 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Vienums ${value}";
 
-  static m6(name, phoneNumber) => "${name} tālruņa numurs ir ${phoneNumber}";
+  static m6(error) => "Neizdevās kopēt starpliktuvē: ${error}";
 
-  static m7(value) => "Jūs atlasījāt: “${value}”";
+  static m7(name, phoneNumber) => "${name} tālruņa numurs ir ${phoneNumber}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "Jūs atlasījāt: “${value}”";
+
+  static m9(accountName, accountNumber, amount) =>
       "Kontā (${accountName}; numurs: ${accountNumber}) ir šāda summa: ${amount}.";
 
-  static m9(amount) => "Šomēnes esat iztērējis ${amount} par maksu bankomātos";
-
-  static m10(percent) =>
-      "Labs darbs! Jūsu norēķinu konts ir par ${percent} augstāks nekā iepriekšējā mēnesī.";
+  static m10(amount) => "Šomēnes esat iztērējis ${amount} par maksu bankomātos";
 
   static m11(percent) =>
+      "Labs darbs! Jūsu norēķinu konts ir par ${percent} augstāks nekā iepriekšējā mēnesī.";
+
+  static m12(percent) =>
       "Uzmanību! Jūs esat izmantojis ${percent} no sava iepirkšanās budžeta šim mēnesim.";
 
-  static m12(amount) => "Šonedēļ esat iztērējis ${amount} restorānos.";
+  static m13(amount) => "Šonedēļ esat iztērējis ${amount} restorānos.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, zero: 'Palieliniet nodokļu atmaksas iespējas! Pievienojiet kategorijas ${count} darījumiem, kuriem vēl nav pievienotas kategorijas.', one: 'Palieliniet nodokļu atmaksas iespējas! Pievienojiet kategorijas 1 darījumam, kuram vēl nav pievienota kategorija.', other: 'Palieliniet nodokļu atmaksas iespējas! Pievienojiet kategorijas ${count} darījumiem, kuriem vēl nav pievienotas kategorijas.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "Rēķins (${billName}) par summu ${amount} ir jāapmaksā līdz šādam datumam: ${date}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "Budžets ${budgetName} ar iztērētu summu ${amountUsed} no ${amountTotal}, atlikusī summa: ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'NAV VIENUMU', one: '1 VIENUMS', other: '${quantity} VIENUMI')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Daudzums: ${quantity}";
+  static m19(quantity) => "Daudzums: ${quantity}";
 
-  static m19(value) => "Vienums ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Iepirkumu grozs, nav preču', one: 'Iepirkumu grozs, 1 prece', other: 'Iepirkumu grozs, ${quantity} preces')}";
+
+  static m21(product) => "Noņemt produktu: ${product}";
+
+  static m22(value) => "Vienums ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -344,6 +351,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("Izvēles žetons"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Koda paraugs"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("Kopēts starpliktuvē."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("KOPĒT VISU"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Krāsas un krāsas izvēles konstantes, kas atspoguļo materiālu dizaina krāsu paleti."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -475,7 +487,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Biogrāfija"),
         "demoTextFieldNameField":
             MessageLookupByLibrary.simpleMessage("Vārds*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Ir jāievada vārds."),
         "demoTextFieldNoMoreThan":
@@ -540,7 +552,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Google varēs palīdzēt lietotnēm noteikt atrašanās vietu. Tas nozīmē, ka uzņēmumam Google tiks nosūtīti anonīmi atrašanās vietas dati, pat ja neviena lietotne nedarbosies."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Vai izmantot Google atrašanās vietas pakalpojumu?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Dublējuma konta iestatīšana"),
         "dialogShow":
@@ -550,7 +562,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Kategorijas"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galerija"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Ietaupījumi automašīnai"),
         "rallyAccountDataChecking":
@@ -575,15 +587,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Kopā"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Konti"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Brīdinājumi"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Rēķini"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Termiņš"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Apģērbs"),
         "rallyBudgetCategoryCoffeeShops":
@@ -688,7 +700,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ATCELT"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("NOTĪRĪT GROZU"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("GROZS"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Piegāde:"),
@@ -750,8 +762,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Tumši zilas bikses"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Ģipša krāsas tunika"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Četrvietīgs galds"),
         "shrineProductRainwaterTray":
@@ -790,6 +802,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Balts svītrains krekls"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney josta"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Pievienot grozam"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Aizvērt grozu"),
         "shrineTooltipCloseMenu":
@@ -803,7 +819,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Iestatījumi"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Adaptīvs sākuma izkārtojums"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Pamatteksts"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("POGA"),

@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "COPIA-HO TOT",
+  "shrineScreenReaderRemoveProductButton": "Suprimeix {product}",
+  "shrineScreenReaderProductAddToCart": "Afegeix al carretó",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Carretó, cap article}=1{Carretó, 1 article}other{Carretó, {quantity} articles}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "No s'ha pogut copiar al porta-retalls: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "S'ha copiat al porta-retalls.",
   "craneSleep8SemanticLabel": "Ruïnes maies en un cingle a la platja",
   "craneSleep4SemanticLabel": "Hotel vora un llac i davant d'unes muntanyes",
   "craneSleep2SemanticLabel": "Ciutadella de Machu Picchu",

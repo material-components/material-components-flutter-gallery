@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "सर्व कॉपी करा",
+  "shrineScreenReaderRemoveProductButton": "{product} काढून टाका",
+  "shrineScreenReaderProductAddToCart": "कार्टमध्ये जोडा",
+  "shrineScreenReaderCart": "{quantity,plural, =0{खरेदीचा कार्ट, कोणतेही आयटम नाहीत}=1{खरेदीचा कार्ट, एक आयटम आहे}other{खरेदीचा कार्ट, {quantity} आयटम आहेत}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "क्लिपबोर्डवर कॉपी करता आला नाही: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "क्लिपबोर्डवर कॉपी केला.",
   "craneSleep8SemanticLabel": "समुद्रकिनाऱ्याच्याबाजूला उंच डोंगरावर असलेले मायन संस्कृतीतील अवशेष",
   "craneSleep4SemanticLabel": "डोंगरांसमोर वसलेले तलावाशेजारचे हॉटेल",
   "craneSleep2SemanticLabel": "माचू पिचू बालेकिल्ला",

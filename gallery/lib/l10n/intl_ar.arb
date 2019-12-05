@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "نسخ الكل",
+  "shrineScreenReaderRemoveProductButton": "إزالة {product}",
+  "shrineScreenReaderProductAddToCart": "إضافة إلى سلة التسوق",
+  "shrineScreenReaderCart": "{quantity,plural, =0{سلة التسوق، ما مِن عناصر}=1{سلة التسوق، عنصر واحد}two{سلة التسوق، عنصران ({quantity})}few{سلة التسوق، {quantity} عناصر}many{سلة التسوق، {quantity} عنصرًا}other{سلة التسوق، {quantity} عنصر}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "تعذّر نسخ النص إلى الحافظة: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "تم نسخ النص إلى الحافظة.",
   "craneSleep8SemanticLabel": "أطلال \"المايا\" على جُرْف يطِلّ على الشاطئ",
   "craneSleep4SemanticLabel": "فندق يطِلّ على بحيرة قُبالة سلسلة من الجبال",
   "craneSleep2SemanticLabel": "قلعة ماتشو بيتشو",

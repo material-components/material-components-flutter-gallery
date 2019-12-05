@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "COPIAȚI TOT",
+  "shrineScreenReaderRemoveProductButton": "Eliminați {product}",
+  "shrineScreenReaderProductAddToCart": "Adăugați în coșul de cumpărături",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Coș de cumpărături, niciun articol}=1{Coș de cumpărături, un articol}few{Coș de cumpărături, {quantity} articole}other{Coș de cumpărături, {quantity} de articole}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Nu s-a copiat în clipboard: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "S-a copiat în clipboard.",
   "craneSleep8SemanticLabel": "Ruine mayașe pe o stâncă, deasupra unei plaje",
   "craneSleep4SemanticLabel": "Hotel pe malul unui lac, în fața munților",
   "craneSleep2SemanticLabel": "Cetatea Machu Picchu",

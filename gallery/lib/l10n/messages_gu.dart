@@ -35,40 +35,47 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "આઇટમ ${value}";
 
-  static m6(name, phoneNumber) => "${name} ફોન નંબર ${phoneNumber} છે";
+  static m6(error) => "ક્લિપબોર્ડ પર કૉપિ કરવામાં નિષ્ફળ રહ્યાં: ${error}";
 
-  static m7(value) => "તમે પસંદ કર્યું: \"${value}\"";
+  static m7(name, phoneNumber) => "${name} ફોન નંબર ${phoneNumber} છે";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "તમે પસંદ કર્યું: \"${value}\"";
+
+  static m9(accountName, accountNumber, amount) =>
       "${accountName}ના એકાઉન્ટ નંબર ${accountNumber}માં ${amount} જમા કર્યાં.";
 
-  static m9(amount) => "આ વર્ષે તમે ATM ફી માટે ${amount} વાપર્યા છે";
-
-  static m10(percent) =>
-      "ઘણું સરસ! તમારું ચેકિંગ એકાઉન્ટ પાછલા મહિના કરતાં ${percent} વધારે છે.";
+  static m10(amount) => "આ વર્ષે તમે ATM ફી માટે ${amount} વાપર્યા છે";
 
   static m11(percent) =>
+      "ઘણું સરસ! તમારું ચેકિંગ એકાઉન્ટ પાછલા મહિના કરતાં ${percent} વધારે છે.";
+
+  static m12(percent) =>
       "હવે ધ્યાન રાખજો, તમે ખરીદી માટેના આ મહિનાના તમારા બજેટમાંથી ${percent} વાપરી નાખ્યા છે.";
 
-  static m12(amount) => "આ અઠવાડિયે તમે રેસ્ટોરન્ટ પાછળ ${amount} વાપર્યા છે.";
+  static m13(amount) => "આ અઠવાડિયે તમે રેસ્ટોરન્ટ પાછળ ${amount} વાપર્યા છે.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'તમારો સંભવિત કર કપાત વધારો! ન સોંપાયેલ 1 વ્યવહાર માટે કૅટેગરી સોંપો.', other: 'તમારો સંભવિત કર કપાત વધારો! ન સોંપાયેલ ${count} વ્યવહાર માટે કૅટેગરી સોંપો.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "${billName}નું ${amount}નું બિલ ચુકવવાની નિયત તારીખ ${date} છે.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "${budgetName}ના ${amountTotal}ના બજેટમાંથી ${amountUsed} વપરાયા, ${amountLeft} બાકી છે";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'કોઈ આઇટમ નથી', one: '1 આઇટમ', other: '${quantity} આઇટમ')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "જથ્થો: ${quantity}";
+  static m19(quantity) => "જથ્થો: ${quantity}";
 
-  static m19(value) => "આઇટમ ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'શોપિંગ કાર્ટ, કોઈ આઇટમ નથી', one: 'શોપિંગ કાર્ટ, 1 આઇટમ', other: 'શોપિંગ કાર્ટ, ${quantity} આઇટમ')}";
+
+  static m21(product) => "${product} કાઢી નાખો";
+
+  static m22(value) => "આઇટમ ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -348,6 +355,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "ચૉઇસ ચિપ એ કોઈ સેટની એકલ પસંદગીને પ્રસ્તુત કરે છે. ચૉઇસ ચિપમાં સંબંધિત વર્ણનાત્મક ટેક્સ્ટ અથવા શ્રેણીઓ શામેલ હોય છે."),
         "demoChoiceChipTitle": MessageLookupByLibrary.simpleMessage("ચૉઇસ ચિપ"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("કોડનો નમૂનો"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("ક્લિપબોર્ડ પર કૉપિ કર્યા."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("બધા કૉપિ કરો"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "સામગ્રીની ડિઝાઇનના વિવિધ રંગનું પ્રતિનિધિત્વ કરતા રંગ અને રંગ સ્વૉચ કૉન્સ્ટન્ટ."),
         "demoColorsSubtitle":
@@ -474,7 +486,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("જીવન વૃત્તાંત"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("નામ*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("નામ જરૂરી છે."),
         "demoTextFieldNoMoreThan":
@@ -540,7 +552,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Googleને સ્થાન નિર્ધારિત કરવામાં ઍપની સહાય કરવા દો. આનો અર્થ છે જ્યારે કોઈ ઍપ ચાલી ન રહી હોય ત્યારે પણ Googleને અનામ સ્થાન ડેટા મોકલવો."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Googleની સ્થાન સેવાનો ઉપયોગ કરીએ?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("બૅકઅપ એકાઉન્ટ સેટ કરો"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("સંવાદ બતાવો"),
@@ -548,7 +560,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("સંદર્ભ શૈલીઓ અને મીડિયા"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("કૅટેગરી"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("ગૅલેરી"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("કાર બચત"),
         "rallyAccountDataChecking":
@@ -572,15 +584,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("કુલ"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("એકાઉન્ટ"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("અલર્ટ"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("બિલ"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("બાકી"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("વસ્ત્રો"),
         "rallyBudgetCategoryCoffeeShops":
@@ -675,7 +687,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("રદ કરો"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("કાર્ટ ખાલી કરો"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("કાર્ટ"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("શિપિંગ:"),
@@ -735,8 +747,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Navy trousers"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Quartet table"),
         "shrineProductRainwaterTray":
@@ -775,6 +787,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("કાર્ટમાં ઉમેરો"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("કાર્ટ બંધ કરો"),
         "shrineTooltipCloseMenu":
@@ -787,7 +803,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineTooltipSettings": MessageLookupByLibrary.simpleMessage("સેટિંગ"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "પ્રતિભાવ આપતું સ્ટાર્ટર લેઆઉટ"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("મુખ્ય ભાગ"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("બટન"),

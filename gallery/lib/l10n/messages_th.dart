@@ -34,40 +34,47 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "รายการ ${value}";
 
-  static m6(name, phoneNumber) =>
+  static m6(error) => "คัดลอกไปยังคลิปบอร์ดไม่สำเร็จ: ${error}";
+
+  static m7(name, phoneNumber) =>
       "หมายเลขโทรศัพท์ของ ${name} คือ ${phoneNumber}";
 
-  static m7(value) => "คุณเลือก \"${value}\"";
+  static m8(value) => "คุณเลือก \"${value}\"";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m9(accountName, accountNumber, amount) =>
       "บัญชี${accountName} เลขที่ ${accountNumber} จำนวน ${amount}";
 
-  static m9(amount) => "เดือนนี้คุณจ่ายค่าธรรมเนียมการใช้ ATM จำนวน ${amount}";
+  static m10(amount) => "เดือนนี้คุณจ่ายค่าธรรมเนียมการใช้ ATM จำนวน ${amount}";
 
-  static m10(percent) => "ดีมาก คุณมีเงินฝากมากกว่าเดือนที่แล้ว ${percent}";
+  static m11(percent) => "ดีมาก คุณมีเงินฝากมากกว่าเดือนที่แล้ว ${percent}";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "โปรดทราบ คุณใช้งบประมาณสำหรับการช็อปปิ้งของเดือนนี้ไปแล้ว ${percent}";
 
-  static m12(amount) => "สัปดาห์นี้คุณใช้จ่ายไปกับการทานอาหารในร้าน ${amount}";
+  static m13(amount) => "สัปดาห์นี้คุณใช้จ่ายไปกับการทานอาหารในร้าน ${amount}";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'เพิ่มโอกาสในการลดหย่อนภาษีของคุณ กำหนดหมวดหมู่ให้แก่ธุรกรรมที่ยังไม่มีหมวดหมู่ 1 รายการ', other: 'เพิ่มโอกาสในการลดหย่อนภาษีของคุณ กำหนดหมวดหมู่ให้แก่ธุรกรรมที่ยังไม่มีหมวดหมู่ ${count} รายการ')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "บิล${billName}ครบกำหนดชำระในวันที่ ${date} จำนวน ${amount}";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "ใช้งบประมาณ${budgetName}ไปแล้ว ${amountUsed} จากทั้งหมด ${amountTotal} เหลืออีก ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'ไม่มีสินค้า', one: 'มีสินค้า 1 รายการ', other: 'มีสินค้า ${quantity} รายการ')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "จำนวน: ${quantity}";
+  static m19(quantity) => "จำนวน: ${quantity}";
 
-  static m19(value) => "รายการ ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'รถเข็นช็อปปิ้งไม่มีสินค้า', one: 'รถเข็นช็อปปิ้งมีสินค้า 1 รายการ', other: 'รถเข็นช็อปปิ้งมีสินค้า ${quantity} รายการ')}";
+
+  static m21(product) => "นำ ${product} ออก";
+
+  static m22(value) => "รายการ ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -344,6 +351,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("ชิปตัวเลือก"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("ตัวอย่างโค้ด"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("คัดลอกไปยังคลิปบอร์ดแล้ว"),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("คัดลอกทั้งหมด"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "สีหรือแผงสีคงที่ซึ่งเป็นตัวแทนชุดสีของดีไซน์ Material"),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -472,7 +484,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("เรื่องราวชีวิต"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("ชื่อ*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("ต้องระบุชื่อ"),
         "demoTextFieldNoMoreThan":
@@ -536,7 +548,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "ให้ Google ช่วยแอประบุตำแหน่ง ซึ่งหมายถึงการส่งข้อมูลตำแหน่งแบบไม่เปิดเผยชื่อไปยัง Google แม้ว่าจะไม่มีแอปทำงานอยู่"),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "ใช้บริการตำแหน่งของ Google ไหม"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("ตั้งค่าบัญชีสำรอง"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("แสดงกล่องโต้ตอบ"),
@@ -545,7 +557,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("หมวดหมู่"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("แกลเลอรี"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("เงินเก็บสำหรับซื้อรถ"),
         "rallyAccountDataChecking":
@@ -573,15 +585,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("รวม"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("บัญชี"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("การแจ้งเตือน"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("ใบเรียกเก็บเงิน"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("ครบกำหนด"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("เสื้อผ้า"),
         "rallyBudgetCategoryCoffeeShops":
@@ -685,7 +697,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ยกเลิก"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("ล้างรถเข็น"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("รถเข็น"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("การจัดส่ง:"),
@@ -747,8 +759,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("กางเกงขายาวสีน้ำเงินเข้ม"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("เสื้อคลุมสีปูนปลาสเตอร์"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("โต๊ะสำหรับ 4 คน"),
         "shrineProductRainwaterTray":
@@ -788,6 +800,10 @@ class MessageLookup extends MessageLookupByLibrary {
                 "เสื้อเชิ้ตสีขาวลายทางแนวตั้ง"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("เข็มขัด Whitney"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("เพิ่มในรถเข็น"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("ปิดหน้ารถเข็น"),
         "shrineTooltipCloseMenu":
@@ -801,7 +817,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("การตั้งค่า"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "เลย์เอาต์เริ่มต้นที่มีการตอบสนอง"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("เนื้อความ"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("ปุ่ม"),

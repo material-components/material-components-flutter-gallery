@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "AFRITA ALLT",
+  "shrineScreenReaderRemoveProductButton": "Fjarlægja {product}",
+  "shrineScreenReaderProductAddToCart": "Setja í körfu",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Karfa, engir hlutir}=1{Karfa, 1 hlutur}one{Karfa, {quantity} hlutur}other{Karfa, {quantity} hlutir}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Ekki tókst að afrita á klippiborð: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Afritað á klippiborð.",
   "craneSleep8SemanticLabel": "Maya-rústir á klettavegg fyrir ofan strönd",
   "craneSleep4SemanticLabel": "Hótel við vatn með fjallasýn",
   "craneSleep2SemanticLabel": "Machu Picchu rústirnar",

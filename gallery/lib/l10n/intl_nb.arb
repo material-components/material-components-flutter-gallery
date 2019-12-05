@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "KOPIÉR ALT",
+  "shrineScreenReaderRemoveProductButton": "Fjern {product}",
+  "shrineScreenReaderProductAddToCart": "Legg i handlekurven",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Handlekurv, ingen varer}=1{Handlekurv, 1 vare}other{Handlekurv, {quantity} varer}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Kunne ikke kopiere til utklippstavlen: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Kopiert til utklippstavlen.",
   "craneSleep8SemanticLabel": "Maya-ruiner på en klippe over en strand",
   "craneSleep4SemanticLabel": "Hotell ved en innsjø foran fjell",
   "craneSleep2SemanticLabel": "Machu Picchu-festningen",

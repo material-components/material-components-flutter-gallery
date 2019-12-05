@@ -35,41 +35,48 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Нерсе ${value}";
 
-  static m6(name, phoneNumber) => "${name} телефон номери ${phoneNumber}";
+  static m6(error) => "Алмашуу буферине көчүрүлгөн жок: ${error}";
 
-  static m7(value) => "Сиз төмөнкүнү тандадыңыз: \"${value}\"";
+  static m7(name, phoneNumber) => "${name} телефон номери ${phoneNumber}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "Сиз төмөнкүнү тандадыңыз: \"${value}\"";
+
+  static m9(accountName, accountNumber, amount) =>
       "${accountNumber} номериндеги ${accountName} аккаунтунда ${amount} бар.";
 
-  static m9(amount) =>
+  static m10(amount) =>
       "Бул айда банкомат сыйакылары катары ${amount} төлөдүңүз";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Азаматсыз! Текшерүү эсебиңиз акыркы айга салыштырмалуу ${percent} жогорураак болду.";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "Көңүл буруңуз, бул айда Соода кылуу бюджетиңиздин ${percent} сарптадыңыз.";
 
-  static m12(amount) => "Бул аптада ресторандарда ${amount} сарптадыңыз.";
+  static m13(amount) => "Бул аптада ресторандарда ${amount} сарптадыңыз.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Мүмкүн болгон салыктын өлчөмүн чоңойтуңуз! Белгиленбеген 1 транзакциянын категориясын белгилеңиз.', other: 'Мүмкүн болгон салыктын өлчөмүн чоңойтуңуз! Белгиленбеген ${count} транзакциянын категориясын белгилеңиз.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "${amount} суммасындагы ${billName} эсеби ${date} төлөнүшү керек.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "${budgetName} бюджетинен ${amountUsed} өлчөмүндөгү сумма ${amountTotal} үчүн сарпталып, ${amountLeft} калды";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'ЭЧ НЕРСЕ ЖОК', one: '1 НЕРСЕ', other: '${quantity} НЕРСЕ')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Саны: ${quantity}";
+  static m19(quantity) => "Саны: ${quantity}";
 
-  static m19(value) => "Нерсе ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Арабада эч нерсе жок', one: 'Арабада 1 нерсе бар', other: 'Арабада ${quantity} нерсе бар')}";
+
+  static m21(product) => "${product} алып салуу";
+
+  static m22(value) => "Нерсе ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -359,6 +366,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Тандоо чиби"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Коддун үлгүсү"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("Алмашуу буферине көчүрүлдү."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("БААРЫН КӨЧҮРҮҮ"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Material Design кызматынын түстөр топтомун аныктаган түс жана түс үлгүлөрү."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -492,7 +504,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Өмүр баян"),
         "demoTextFieldNameField":
             MessageLookupByLibrary.simpleMessage("Аталышы*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Аталышы талап кылынат."),
         "demoTextFieldNoMoreThan":
@@ -557,7 +569,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Google\'га колдонмолорго жайгашкан жерди аныктоого уруксат бериңиз. Бул жайгашкан жердин дайындары Google\'га колдонмолор иштебей турганда да жашырууун жөнөтүлөрүн түшүндүрөт."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Google\'дун жайгашкан жерди аныктоо кызматы колдонулсунбу?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Көмөкчү аккаунтту жөндөө"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("ДИАЛОГДУ КӨРСӨТҮҮ"),
@@ -566,7 +578,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Категориялар"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Галерея"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings": MessageLookupByLibrary.simpleMessage(
             "Унаага чогултулуп жаткан каражат"),
         "rallyAccountDataChecking":
@@ -590,15 +602,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Жалпы"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Аккаунттар"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Эскертүүлөр"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Эсептер"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Мөөнөтү"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Кийим-кече"),
         "rallyBudgetCategoryCoffeeShops":
@@ -697,7 +709,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ЖОККО ЧЫГАРУУ"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("АРАБАНЫ ТАЗАЛОО"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("АРАБА"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Жеткирүү"),
@@ -758,8 +770,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Кара-көк шым"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Туника"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Квартет столу"),
         "shrineProductRainwaterTray":
@@ -798,6 +810,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ак сызыктуу көйнөк"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Уитни куру"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Арабага кошуу"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Арабаны жабуу"),
         "shrineTooltipCloseMenu":
@@ -811,7 +827,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Жөндөөлөр"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Адаптивдүү баштапкы калык"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Негизги текст"),
         "starterAppGenericButton":

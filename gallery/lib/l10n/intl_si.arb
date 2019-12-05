@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "සියල්ල පිටපත් කරන්න",
+  "shrineScreenReaderRemoveProductButton": "ඉවත් කරන්න {product}",
+  "shrineScreenReaderProductAddToCart": "කරත්තයට එක් කරන්න",
+  "shrineScreenReaderCart": "{quantity,plural, =0{සාප්පු යාමේ කරත්තය, අයිතම නැත}=1{සාප්පු යාමේ කරත්තය, අයිතම 1}one{සාප්පු යාමේ කරත්තය, අයිතම {quantity}}other{සාප්පු යාමේ කරත්තය, අයිතම {quantity}}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "පසුරු පුවරුවට පිටපත් කිරීමට අසමත් විය: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "පසුරු පුවරුවට පිටපත් කරන ලදි.",
   "craneSleep8SemanticLabel": "වෙරළක් ඉහළින් කඳු ශිඛරයක මේයන් නටබුන්",
   "craneSleep4SemanticLabel": "කඳු වැටියක ඉදිරිපස ඇති වැව ඉස්මත්තේ හෝටලය",
   "craneSleep2SemanticLabel": "මාචු පිච්චු බළකොටුව",

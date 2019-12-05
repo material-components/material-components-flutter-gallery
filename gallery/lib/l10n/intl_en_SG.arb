@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "COPY ALL",
+  "shrineScreenReaderRemoveProductButton": "Remove {product}",
+  "shrineScreenReaderProductAddToCart": "Add to basket",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Shopping basket, no items}=1{Shopping basket, 1 item}other{Shopping basket, {quantity} items}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Failed to copy to clipboard: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Copied to clipboard.",
   "craneSleep8SemanticLabel": "Mayan ruins on a cliff above a beach",
   "craneSleep4SemanticLabel": "Lake-side hotel in front of mountains",
   "craneSleep2SemanticLabel": "Machu Picchu citadel",

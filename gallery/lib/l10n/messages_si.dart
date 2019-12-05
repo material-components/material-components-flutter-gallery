@@ -35,40 +35,47 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "අයිතමය ${value}";
 
-  static m6(name, phoneNumber) => "${name} දුරකථන අංකය ${phoneNumber}";
+  static m6(error) => "පසුරු පුවරුවට පිටපත් කිරීමට අසමත් විය: ${error}";
 
-  static m7(value) => "ඔබ මෙය තෝරා ඇත: \"${value}\"";
+  static m7(name, phoneNumber) => "${name} දුරකථන අංකය ${phoneNumber}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "ඔබ මෙය තෝරා ඇත: \"${value}\"";
+
+  static m9(accountName, accountNumber, amount) =>
       "${accountName} ගිණුම ${accountNumber} ${amount}කි.";
 
-  static m9(amount) => "ඔබ මේ මාසයේ ATM ගාස්තු සඳහා ${amount} වියදම් කර ඇත";
-
-  static m10(percent) =>
-      "හොඳ වැඩක්! ඔබගේ ගෙවීම් ගිණුම පසුගිය මාසයට වඩා ${percent} වැඩිය.";
+  static m10(amount) => "ඔබ මේ මාසයේ ATM ගාස්තු සඳහා ${amount} වියදම් කර ඇත";
 
   static m11(percent) =>
+      "හොඳ වැඩක්! ඔබගේ ගෙවීම් ගිණුම පසුගිය මාසයට වඩා ${percent} වැඩිය.";
+
+  static m12(percent) =>
       "දැනුම්දීමයි, ඔබ මේ මාසය සඳහා ඔබේ සාප්පු සවාරි අයවැයෙන් ${percent} භාවිත කර ඇත.";
 
-  static m12(amount) => "ඔබ මේ සතියේ අවන්හල් සඳහා ${amount} වියදම් කර ඇත";
+  static m13(amount) => "ඔබ මේ සතියේ අවන්හල් සඳහා ${amount} වියදම් කර ඇත";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'ඔබේ විය හැකි බදු අඩු කිරීම වැඩි කරන්න! නොපවරන ලද ගනුදෙනු 1කට වර්ගීකරණ පවරන්න.', other: 'ඔබේ විය හැකි බදු අඩු කිරීම වැඩි කරන්න! නොපවරන ලද ගනුදෙනු ${count}කට වර්ගීකරණ පවරන්න.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "${billName} බිල්පත ${date} දිනට ${amount}කි.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "${amountTotal} කින් ${amountUsed}ක් භාවිත කළ ${budgetName} අයවැය, ඉතිරි ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'අයිතම නැත', one: 'අයිතම 1', other: 'අයිතම ${quantity}')}";
 
-  static m17(price) => "x {මිල}";
+  static m18(price) => "x {මිල}";
 
-  static m18(quantity) => "ප්‍රමාණය: ${quantity}";
+  static m19(quantity) => "ප්‍රමාණය: ${quantity}";
 
-  static m19(value) => "අයිතමය ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'සාප්පු යාමේ කරත්තය, අයිතම නැත', one: 'සාප්පු යාමේ කරත්තය, අයිතම 1', other: 'සාප්පු යාමේ කරත්තය, අයිතම ${quantity}')}";
+
+  static m21(product) => "ඉවත් කරන්න ${product}";
+
+  static m22(value) => "අයිතමය ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -357,6 +364,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("චිපය තේරීම"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("කේත සාම්පලය"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage(
+                "පසුරු පුවරුවට පිටපත් කරන ලදි."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("සියල්ල පිටපත් කරන්න"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "ද්‍රව්‍ය සැලසුමෙහි වර්ණ තැටිය නියෝජනය කරන වර්ණය සහ වර්ණ සාම්පල නියත."),
         "demoColorsSubtitle":
@@ -483,7 +496,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("ජීවිත කථාව"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("නම*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("නම අවශ්‍යයි."),
         "demoTextFieldNoMoreThan":
@@ -550,7 +563,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "යෙදුම්වලට ස්ථානය තීරණය කිරීම සඳහා සහාය වීමට Google හට ඉඩ දෙන්න. මෙයින් අදහස් කරන්නේ කිසිදු යෙදුමක් හෝ ධාවනය නොවන විට පවා Google වෙත නිර්නාමික ස්ථාන දත්ත යැවීමයි."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Google හි පිහිටීම් සේවාව භාවිත කරන්නද?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("උපස්ථ ගිණුම සකසන්න"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("සංවාදය පෙන්වන්න"),
@@ -559,7 +572,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("ප්‍රවර්ග"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("ගැලරිය"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("මෝටර් රථ සුරැකුම්"),
         "rallyAccountDataChecking":
@@ -583,15 +596,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("එකතුව"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("ගිණුම්"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("ඇඟවීම්"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("බිල්පත්"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("නියමිත"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("ඇඳුම්"),
         "rallyBudgetCategoryCoffeeShops":
@@ -690,7 +703,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("අවලංගු කරන්න"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("කරත්තය හිස් කරන්න"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("බහලුම"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("නැව්ගත කිරීම:"),
@@ -750,8 +763,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Navy trousers"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Quartet table"),
         "shrineProductRainwaterTray":
@@ -790,6 +803,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("කරත්තයට එක් කරන්න"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("බහලුම වසන්න"),
         "shrineTooltipCloseMenu":
@@ -803,7 +820,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("සැකසීම්"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("ප්‍රතිචාරාත්මක පිරිසැලසුමක්"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("අන්තර්ගතය"),
         "starterAppGenericButton":

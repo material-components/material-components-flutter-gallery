@@ -35,43 +35,50 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Artikel ${value}";
 
-  static m6(name, phoneNumber) =>
+  static m6(error) => "Det gick inte att kopiera till urklipp: ${error}";
+
+  static m7(name, phoneNumber) =>
       "Telefonnumret till ${name} är ${phoneNumber}";
 
-  static m7(value) => "Du har valt ${value}";
+  static m8(value) => "Du har valt ${value}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m9(accountName, accountNumber, amount) =>
       "${accountName}-kontot ${accountNumber} med ${amount}.";
 
-  static m9(amount) =>
+  static m10(amount) =>
       "Du har lagt ${amount} på avgifter för uttag den här månaden";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Bra jobbat! Du har ${percent} mer på kontot den här månaden.";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "Du har använt ${percent} av din budget för inköp den här månaden.";
 
-  static m12(amount) =>
+  static m13(amount) =>
       "Du har lagt ${amount} på restaurangbesök den här veckan.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Öka ditt potentiella skatteavdrag! Tilldela kategorier till 1 ej tilldelad transaktion.', other: 'Öka ditt potentiella skatteavdrag! Tilldela kategorier till ${count} ej tilldelade transaktioner.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "${billName}-fakturan på ${amount} förfaller den ${date}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "${budgetName}-budget med ${amountUsed} använt av ${amountTotal}, ${amountLeft} kvar";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'INGA OBJEKT', one: '1 OBJEKT', other: '${quantity} OBJEKT')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Kvantitet: ${quantity}";
+  static m19(quantity) => "Kvantitet: ${quantity}";
 
-  static m19(value) => "Artikel ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Kundvagnen. Den är tom', one: 'Kundvagnen. Den innehåller 1 vara', other: 'Kundvagnen. Den innehåller ${quantity} varor')}";
+
+  static m21(product) => "Ta bort ${product}";
+
+  static m22(value) => "Artikel ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -337,6 +344,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("Valbricka"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Kodexempel"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("Kopierat till urklipp."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("KOPIERA ALLT"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Färger och färgrutor som representerar färgpaletten i Material Design."),
         "demoColorsSubtitle":
@@ -464,7 +476,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Livsberättelse"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Namn*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Du måste ange namn."),
         "demoTextFieldNoMoreThan":
@@ -529,7 +541,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Google hjälper appar att avgöra enhetens plats. Detta innebär att anonym platsinformation skickas till Google, även när inga appar körs."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Vill du använda Googles platstjänst?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "Ange konto för säkerhetskopiering"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("VISA DIALOGRUTA"),
@@ -538,7 +550,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Kategorier"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galleri"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Sparkonto för bil"),
         "rallyAccountDataChecking":
@@ -562,15 +574,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Totalt"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Konton"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Aviseringar"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Fakturor"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Förfaller"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Kläder"),
         "rallyBudgetCategoryCoffeeShops":
@@ -674,7 +686,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("AVBRYT"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("RENSA KUNDVAGNEN"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("KUNDVAGN"),
         "shrineCartShippingCaption":
@@ -737,8 +749,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Marinblå byxor"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Gipsvit tunika"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Bord – Quartet"),
         "shrineProductRainwaterTray":
@@ -777,6 +789,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Kritstrecksrandig skjorta"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Bälte – Whitney"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Lägg i kundvagnen"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Stäng kundvagnen"),
         "shrineTooltipCloseMenu":
@@ -790,7 +806,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Inställningar"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("En responsiv startlayout"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Brödtext"),
         "starterAppGenericButton":

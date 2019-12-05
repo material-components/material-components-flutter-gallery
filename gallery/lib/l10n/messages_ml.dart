@@ -35,41 +35,48 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "ഇനം ${value}";
 
-  static m6(name, phoneNumber) =>
+  static m6(error) => "ക്ലിപ്‌ബോർഡിലേക്ക് പകർത്താനായില്ല: ${error}";
+
+  static m7(name, phoneNumber) =>
       "${name} എന്ന വ്യക്തിയുടെ ഫോൺ നമ്പർ ${phoneNumber} ആണ്";
 
-  static m7(value) => "നിങ്ങൾ തിരഞ്ഞെടുത്തത്: \"${value}\"";
+  static m8(value) => "നിങ്ങൾ തിരഞ്ഞെടുത്തത്: \"${value}\"";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m9(accountName, accountNumber, amount) =>
       "${amount} നിരക്കുള്ള, ${accountNumber} എന്ന അക്കൗണ്ട് നമ്പറോട് കൂടിയ ${accountName} അക്കൗണ്ട്.";
 
-  static m9(amount) => "ഈ മാസം നിങ്ങൾ ${amount} ATM ഫീസ് അടച്ചു";
-
-  static m10(percent) =>
-      "തകർപ്പൻ പ്രകടനം! നിങ്ങളുടെ ചെക്കിംഗ് അക്കൗണ്ട് കഴിഞ്ഞ മാസത്തേക്കാൾ ${percent} കൂടുതലാണ്.";
+  static m10(amount) => "ഈ മാസം നിങ്ങൾ ${amount} ATM ഫീസ് അടച്ചു";
 
   static m11(percent) =>
+      "തകർപ്പൻ പ്രകടനം! നിങ്ങളുടെ ചെക്കിംഗ് അക്കൗണ്ട് കഴിഞ്ഞ മാസത്തേക്കാൾ ${percent} കൂടുതലാണ്.";
+
+  static m12(percent) =>
       "ശ്രദ്ധിക്കൂ, നിങ്ങൾ ഈ മാസത്തെ ഷോപ്പിംഗ് ബജറ്റിന്റെ ${percent} ഉപയോഗിച്ചു.";
 
-  static m12(amount) => "ഈ ആഴ്ച റസ്റ്റോറന്റുകളിൽ നിങ്ങൾ ${amount} ചെലവാക്കി.";
+  static m13(amount) => "ഈ ആഴ്ച റസ്റ്റോറന്റുകളിൽ നിങ്ങൾ ${amount} ചെലവാക്കി.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'നികുതിയായി നിങ്ങളിൽ നിന്നും പിടിക്കാൻ സാധ്യതയുള്ള തുക കുറയ്ക്കൂ! വിഭാഗങ്ങൾ നിശ്ചയിച്ചിട്ടില്ലാത്ത ഒരു ഇടപാടിന് വിഭാഗങ്ങൾ നൽകുക.', other: 'നികുതിയായി നിങ്ങളിൽ നിന്നും പിടിക്കാൻ സാധ്യതയുള്ള തുക കുറയ്ക്കൂ! വിഭാഗങ്ങൾ നിശ്ചയിച്ചിട്ടില്ലാത്ത ${count} ഇടപാടുകൾക്ക് വിഭാഗങ്ങൾ നൽകുക.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "അവസാന തീയതി ${date} ആയ ${amount} വരുന്ന ${billName} ബിൽ.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "മൊത്തം ${amountTotal} തുകയിൽ ${amountUsed} നിരക്ക് ഉപയോഗിച്ച ${budgetName} ബജറ്റ്, ${amountLeft} ശേഷിക്കുന്നു";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'ഇനങ്ങളൊന്നുമില്ല', one: 'ഒരിനം', other: '${quantity} ഇനങ്ങൾ')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "അളവ്: ${quantity}";
+  static m19(quantity) => "അളവ്: ${quantity}";
 
-  static m19(value) => "ഇനം ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'ഷോപ്പിംഗ് കാർട്ട്, ഇനങ്ങളൊന്നുമില്ല', one: 'ഷോപ്പിംഗ് കാർട്ട്, ഒരു ഇനം', other: 'ഷോപ്പിംഗ് കാർട്ട്, ${quantity} ഇനങ്ങൾ')}";
+
+  static m21(product) => "${product} നീക്കുക";
+
+  static m22(value) => "ഇനം ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -143,7 +150,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("കൊറിയൻ ടാക്കോ"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("പാരീസ്, ഫ്രാൻസ്"),
         "craneEat4SemanticLabel":
-            MessageLookupByLibrary.simpleMessage("ചോക്ലേറ്റ് ഡെസേർട്ട്"),
+            MessageLookupByLibrary.simpleMessage("ചോക്ലേറ്റ് ഡിസേർട്ട്"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("സോൾ, ദക്ഷിണ കൊറിയ"),
         "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
             "ആർട്‌സി റെസ്‌റ്റോറന്റിലെ ഇരിപ്പിട സൗകര്യം"),
@@ -366,6 +373,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("ചോയ്സ് ചിപ്പ്"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("കോഡ് മാതൃക"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage(
+                "ക്ലിപ്പ്‌ബോർഡിലേക്ക് പകർത്തി."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("എല്ലാം പകർത്തുക"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "മെറ്റീരിയൽ രൂപകൽപ്പനയുടെ വർണ്ണ പാലെറ്റിനെ പ്രതിനിധീകരിക്കുന്ന വർണ്ണ, വർണ്ണ സ്വാച്ച് കോൺസ്‌റ്റന്റുകൾ."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -496,7 +509,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("ജീവിത കഥ"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("പേര്*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("പേര് ആവശ്യമാണ്."),
         "demoTextFieldNoMoreThan":
@@ -564,7 +577,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "ലൊക്കേഷൻ നിർണ്ണയിക്കുന്നതിന് ആപ്പുകളെ സഹായിക്കാൻ Google-നെ അനുവദിക്കുക. ആപ്പുകളൊന്നും പ്രവർത്തിക്കാത്തപ്പോൾ പോലും Google-ലേക്ക് അജ്ഞാത ലൊക്കേഷൻ ഡാറ്റ അയയ്‌ക്കുന്നുവെന്നാണ് ഇത് അർത്ഥമാക്കുന്നത്."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Google-ന്റെ ലൊക്കേഷൻ സേവനം ഉപയോഗിക്കണോ?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "ബാക്കപ്പ് അക്കൗണ്ട് സജ്ജീകരിക്കൂ"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("ഡയലോഗ് കാണിക്കുക"),
@@ -573,7 +586,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("വിഭാഗങ്ങൾ"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("ഗാലറി"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("കാർ സേവിംഗ്‍സ്"),
         "rallyAccountDataChecking":
@@ -597,15 +610,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("മൊത്തം"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("അക്കൗണ്ടുകൾ"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("മുന്നറിയിപ്പുകൾ"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("ബില്ലുകൾ"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("അവസാന തീയതി"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("വസ്ത്രങ്ങൾ"),
         "rallyBudgetCategoryCoffeeShops":
@@ -707,7 +720,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("റദ്ദാക്കുക"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("കാർട്ട് മായ്‌ക്കുക"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("കാർട്ട്"),
         "shrineCartShippingCaption":
@@ -770,8 +783,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("നേവി ട്രൗസേഴ്‌സ്"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("പ്ലാസ്‌റ്റർ ട്യൂണിക്"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("ക്വാർട്ടറ്റ് പട്ടിക"),
         "shrineProductRainwaterTray":
@@ -810,6 +823,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("വൈറ്റ് പിൻസ്ട്രൈപ്പ് ഷർട്ട്"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("വിറ്റ്നി ബെൽറ്റ്"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("കാർട്ടിലേക്ക് ചേർക്കുക"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("കാർട്ട് അടയ്ക്കുക"),
         "shrineTooltipCloseMenu":
@@ -823,7 +840,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ക്രമീകരണം"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "റെസ്പോൺസിവ് സ്റ്റാർട്ടർ ലേഔട്ട്"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("ബോഡി"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("ബട്ടൺ"),

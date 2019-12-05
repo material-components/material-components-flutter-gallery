@@ -35,42 +35,49 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Mặt hàng số ${value}";
 
-  static m6(name, phoneNumber) => "Số điện thoại của ${name} là ${phoneNumber}";
+  static m6(error) => "Không sao chép được vào khay nhớ tạm: ${error}";
 
-  static m7(value) => "Bạn đã chọn: \"${value}\"";
+  static m7(name, phoneNumber) => "Số điện thoại của ${name} là ${phoneNumber}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "Bạn đã chọn: \"${value}\"";
+
+  static m9(accountName, accountNumber, amount) =>
       "Số dư tài khoản ${accountName} ${accountNumber} là ${amount}.";
 
-  static m9(amount) =>
+  static m10(amount) =>
       "Bạn đã chi tiêu ${amount} cho phí sử dụng ATM trong tháng này";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Chúc mừng bạn! Số dư trong tài khoản giao dịch của bạn cao hơn ${percent} so với tháng trước.";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "Xin lưu ý rằng bạn đã dùng hết ${percent} ngân sách Mua sắm của bạn trong tháng này.";
 
-  static m12(amount) =>
+  static m13(amount) =>
       "Bạn đã chi tiêu ${amount} cho Nhà hàng trong tuần này.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Tăng khoản khấu trừ thuế bạn có thể được hưởng! Gán danh mục cho 1 giao dịch chưa chỉ định.', other: 'Tăng khoản khấu trừ thuế bạn có thể được hưởng! Gán danh mục cho ${count} giao dịch chưa chỉ định.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "Hóa đơn ${billName} ${amount} đến hạn vào ${date}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "Đã dùng hết ${amountUsed}/${amountTotal} ngân sách ${budgetName}, số tiền còn lại là ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'KHÔNG CÓ MẶT HÀNG NÀO', one: '1 MẶT HÀNG', other: '${quantity} MẶT HÀNG')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Số lượng: ${quantity}";
+  static m19(quantity) => "Số lượng: ${quantity}";
 
-  static m19(value) => "Mặt hàng số ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Giỏ hàng, không có mặt hàng nào', one: 'Giỏ hàng, có 1 mặt hàng', other: 'Giỏ hàng, có ${quantity} mặt hàng')}";
+
+  static m21(product) => "Xóa ${product}";
+
+  static m22(value) => "Mặt hàng số ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -139,8 +146,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneEat3SemanticLabel":
             MessageLookupByLibrary.simpleMessage("Món taco của Hàn Quốc"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, Pháp"),
-        "craneEat4SemanticLabel":
-            MessageLookupByLibrary.simpleMessage("Món tráng miệng từ sô-cô-la"),
+        "craneEat4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Món tráng miệng làm từ sô-cô-la"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, Hàn Quốc"),
         "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
             "Khu vực ghế ngồi đậm chất nghệ thuật tại nhà hàng"),
@@ -345,6 +352,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("Khối lựa chọn"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Tạo dạng mã"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage(
+                "Đã sao chép vào khay nhớ tạm."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("SAO CHÉP TOÀN BỘ"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Color and color swatch constants which represent Material design\'s color palette."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -474,7 +487,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Tiểu sử"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Tên*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Bạn phải nhập tên."),
         "demoTextFieldNoMoreThan":
@@ -537,7 +550,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Cho phép Google giúp ứng dụng xác định vị trí. Điều này có nghĩa là gửi dữ liệu vị trí ẩn danh cho Google, ngay cả khi không chạy ứng dụng nào."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Sử dụng dịch vụ vị trí của Google?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Thiết lập tài khoản sao lưu"),
         "dialogShow":
@@ -547,7 +560,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Danh mục"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Thư viện"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings": MessageLookupByLibrary.simpleMessage(
             "Tài khoản tiết kiệm mua ô tô"),
         "rallyAccountDataChecking":
@@ -573,16 +586,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Tổng"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Tài khoản"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Cảnh báo"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Hóa đơn"),
         "rallyBillsDue":
             MessageLookupByLibrary.simpleMessage("Khoản tiền đến hạn trả"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Quần áo"),
         "rallyBudgetCategoryCoffeeShops":
@@ -684,7 +697,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("HỦY"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("XÓA GIỎ HÀNG"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("GIỎ HÀNG"),
         "shrineCartShippingCaption":
@@ -748,8 +761,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Quần màu xanh tím than"),
         "shrineProductPlasterTunic": MessageLookupByLibrary.simpleMessage(
             "Áo dài qua hông màu thạch cao"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Bàn bốn người"),
         "shrineProductRainwaterTray":
@@ -788,6 +801,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Áo sơ mi trắng sọc nhỏ"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Thắt lưng Whitney"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Thêm vào giỏ hàng"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Đóng giỏ hàng"),
         "shrineTooltipCloseMenu":
@@ -801,7 +818,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Cài đặt"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Bố cục thích ứng cho ứng dụng cơ bản"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Nội dung"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("NÚT"),

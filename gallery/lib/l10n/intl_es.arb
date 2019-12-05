@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "COPIAR TODO",
+  "shrineScreenReaderRemoveProductButton": "Quitar {product}",
+  "shrineScreenReaderProductAddToCart": "Añadir al carrito",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Carrito: 0 artículos}=1{Carrito: 1 artículo}other{Carrito: {quantity} artículos}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "No se ha podido copiar en el portapapeles: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Se ha copiado en el portapapeles.",
   "craneSleep8SemanticLabel": "Ruinas mayas en lo alto de un acantilado junto a una playa",
   "craneSleep4SemanticLabel": "Hotel a orillas de un lago y frente a montañas",
   "craneSleep2SemanticLabel": "Ciudadela de Machu Picchu",

@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "すべてコピー",
+  "shrineScreenReaderRemoveProductButton": "{product}を削除",
+  "shrineScreenReaderProductAddToCart": "カートに追加",
+  "shrineScreenReaderCart": "{quantity,plural, =0{ショッピングカートにアイテムはありません}=1{ショッピングカートに1件のアイテムがあります}other{ショッピングカートに{quantity}件のアイテムがあります}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "クリップボードにコピーできませんでした。{error}",
+  "demoCodeViewerCopiedToClipboardMessage": "クリップボードにコピーしました。",
   "craneSleep8SemanticLabel": "海岸の断崖の上にあるマヤ遺跡",
   "craneSleep4SemanticLabel": "後ろに山が広がる湖畔のホテル",
   "craneSleep2SemanticLabel": "マチュピチュの砦",

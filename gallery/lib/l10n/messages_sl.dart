@@ -35,42 +35,49 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Element ${value}";
 
-  static m6(name, phoneNumber) =>
+  static m6(error) => "Kopiranje v odložišče ni uspelo: ${error}";
+
+  static m7(name, phoneNumber) =>
       "Telefonska številka osebe ${name} je ${phoneNumber}";
 
-  static m7(value) => "Izbrali ste: »${value}«";
+  static m8(value) => "Izbrali ste: »${value}«";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m9(accountName, accountNumber, amount) =>
       "${amount} na račun »${accountName}« s številko ${accountNumber}.";
 
-  static m9(amount) =>
+  static m10(amount) =>
       "Ta mesec ste porabili ${amount} za provizije na bankomatih";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Bravo. Stanje na transakcijskem računu je ${percent} višje kot prejšnji mesec.";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "Pozor, porabili ste ${percent} proračuna za nakupovanje za ta mesec.";
 
-  static m12(amount) => "Ta teden ste porabili ${amount} za restavracije.";
+  static m13(amount) => "Ta teden ste porabili ${amount} za restavracije.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Povečajte morebitno davčno olajšavo. Dodelite kategorije eni transakciji brez dodelitev.', two: 'Povečajte morebitno davčno olajšavo. Dodelite kategorije ${count} transakcijama brez dodelitev.', few: 'Povečajte morebitno davčno olajšavo. Dodelite kategorije ${count} transakcijam brez dodelitev.', other: 'Povečajte morebitno davčno olajšavo. Dodelite kategorije ${count} transakcijam brez dodelitev.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "Rok za plačilo položnice »${billName}« z zneskom ${amount} je ${date}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "Proračun ${budgetName} s porabljenimi sredstvi v višini ${amountUsed} od ${amountTotal}, na voljo še ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'NI IZDELKOV', one: '1 IZDELEK', two: '${quantity} IZDELKA', few: '${quantity} IZDELKI', other: '${quantity} IZDELKOV')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Količina: ${quantity}";
+  static m19(quantity) => "Količina: ${quantity}";
 
-  static m19(value) => "Element ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Nakupovalni voziček, ni izdelkov', one: 'Nakupovalni voziček, 1 izdelek', two: 'Nakupovalni voziček, ${quantity} izdelka', few: 'Nakupovalni voziček, ${quantity} izdelki', other: 'Nakupovalni voziček, ${quantity} izdelkov')}";
+
+  static m21(product) => "Odstranitev izdelka ${product}";
+
+  static m22(value) => "Element ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -356,6 +363,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("Element za izbiro"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Vzorec kode"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("Kopirano v odložišče."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("KOPIRAJ VSE"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Barvne konstante in konstante barvnih vzorcev, ki predstavljajo barvno paleto materialnega oblikovanja."),
         "demoColorsSubtitle":
@@ -487,7 +499,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Življenjska zgodba"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Ime*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Ime je obvezno."),
         "demoTextFieldNoMoreThan":
@@ -550,7 +562,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Naj Google pomaga aplikacijam določiti lokacijo. S tem se bodo Googlu pošiljali anonimni podatki o lokaciji, tudi ko se ne izvaja nobena aplikacija."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Želite uporabljati Googlovo lokacijsko storitev?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "Nastavite račun za varnostno kopiranje"),
         "dialogShow":
@@ -560,7 +572,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Kategorije"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galerija"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Prihranki pri avtomobilu"),
         "rallyAccountDataChecking":
@@ -585,15 +597,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Skupno"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Računi"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Opozorila"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Položnice"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Rok"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Oblačila"),
         "rallyBudgetCategoryCoffeeShops":
@@ -698,7 +710,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("PREKLIČI"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("POČISTI VOZIČEK"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("VOZIČEK"),
         "shrineCartShippingCaption":
@@ -761,8 +773,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Mornarsko modre hlače"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Umazano bela tunika"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Miza za štiri"),
         "shrineProductRainwaterTray":
@@ -801,6 +813,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Bela črtasta srajca"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Pas Whitney"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Dodaj v košarico"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Zapiranje vozička"),
         "shrineTooltipCloseMenu":
@@ -814,7 +830,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Nastavitve"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Odzivna začetna postavitev"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Telo"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("GUMB"),
         "starterAppGenericHeadline":

@@ -34,40 +34,47 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Зүйл ${value}";
 
-  static m6(name, phoneNumber) => "${name}-н утасны дугаар ${phoneNumber}";
+  static m6(error) => "Түр санах ойд хуулж чадсанүй: ${error}";
 
-  static m7(value) => "Та дараахыг сонгосон: \"${value}\"";
+  static m7(name, phoneNumber) => "${name}-н утасны дугаар ${phoneNumber}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "Та дараахыг сонгосон: \"${value}\"";
+
+  static m9(accountName, accountNumber, amount) =>
       "${amount}-тай ${accountName}-н ${accountNumber} дугаартай данс.";
 
-  static m9(amount) => "Та энэ сар ATM-н хураамжид ${amount} зарцуулсан байна";
-
-  static m10(percent) =>
-      "Сайн ажиллалаа! Таны чекийн данс өнгөрсөн сарынхаас ${percent}-р илүү байна.";
+  static m10(amount) => "Та энэ сар ATM-н хураамжид ${amount} зарцуулсан байна";
 
   static m11(percent) =>
+      "Сайн ажиллалаа! Таны чекийн данс өнгөрсөн сарынхаас ${percent}-р илүү байна.";
+
+  static m12(percent) =>
       "Сануулга: Tа энэ сарын худалдан авалтынхаа төсвийн ${percent}-г ашигласан байна.";
 
-  static m12(amount) => "Та энэ сар ресторанд ${amount} зарцуулсан байна.";
+  static m13(amount) => "Та энэ сар ресторанд ${amount} зарцуулсан байна.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Татварын боломжит хасалтаа нэмэгдүүлээрэй! 1 оноогоогүй гүйлгээнд ангилал оноогоорой.', other: 'Татварын боломжит хасалтаа нэмэгдүүлээрэй! ${count} оноогоогүй гүйлгээнд ангилал оноогоорой.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "${billName}-н ${amount}-н тооцоог ${date}-с өмнө хийх ёстой.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "${budgetName} төсвийн ${amountTotal}-с ${amountUsed}-г ашигласан, ${amountLeft} үлдсэн";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'ЗҮЙЛС АЛГА', one: '1 ЗҮЙЛ', other: '${quantity} ЗҮЙЛ')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Тоо хэмжээ: ${quantity}";
+  static m19(quantity) => "Тоо хэмжээ: ${quantity}";
 
-  static m19(value) => "Зүйл ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Худалдан авах сагс, зүйлс алга', one: 'Худалдан авах сагс, 1 зүйл', other: 'Худалдан авах сагс, ${quantity} зүйл')}";
+
+  static m21(product) => "Хасах ${product}";
+
+  static m22(value) => "Зүйл ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -351,6 +358,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("Сонголтын чип"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Кодын жишээ"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("Түр санах ойд хуулсан."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("БҮГДИЙГ ХУУЛАХ"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Материалын загварын өнгөний нийлүүрийг төлөөлдөг өнгө болон өнгөний цуглуулгын хэмжигдэхүүн."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -481,7 +493,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Амьдралын түүх"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Нэр*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Нэр оруулах шаардлагатай."),
         "demoTextFieldNoMoreThan": MessageLookupByLibrary.simpleMessage(
@@ -547,7 +559,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Google-д аппуудад байршлыг тодорхойлоход туслахыг зөвшөөрнө үү. Ингэснээр ямар ч апп ажиллаагүй байсан ч байршлын өгөгдлийг үл мэдэгдэх байдлаар Google-д илгээнэ."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Google-н байршлын үйлчилгээг ашиглах уу?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Нөөц бүртгэл тохируулна уу"),
         "dialogShow":
@@ -556,7 +568,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ЛАВЛАХ ЗАГВАР, МЕДИА"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("Ангилал"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Галерей"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Автомашины хадгаламж"),
         "rallyAccountDataChecking":
@@ -581,15 +593,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Нийт"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Данснууд"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Сэрэмжлүүлэг"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Тооцоо"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Эцсийн хугацаа"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Хувцас"),
         "rallyBudgetCategoryCoffeeShops":
@@ -689,7 +701,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ЦУЦЛАХ"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("САГСЫГ ЦЭВЭРЛЭХ"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("САГС"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Тээвэрлэлт:"),
@@ -751,8 +763,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Цэнхэр өмд"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Нимгэн урт цамц"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Квадрат ширээ"),
         "shrineProductRainwaterTray":
@@ -791,6 +803,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Босоо судалтай цагаан цамц"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Уитни бүс"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Сагсанд нэмэх"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Сагсыг хаах"),
         "shrineTooltipCloseMenu":
@@ -804,7 +820,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Тохиргоо"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Хариу үйлдэл сайтай гарааны бүдүүвч"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Үндсэн хэсэг"),
         "starterAppGenericButton":

@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "ყველას კოპირება",
+  "shrineScreenReaderRemoveProductButton": "ამოიშალოს {product}",
+  "shrineScreenReaderProductAddToCart": "კალათაში დამატება",
+  "shrineScreenReaderCart": "{quantity,plural, =0{საყიდლების კალათა, ერთეულები არ არის}=1{საყიდლების კალათა, 1 ერთეული}other{საყიდლების კალათა, {quantity} ერთეული}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "გაცვლის ბუფერში კოპირება ვერ მოხერხდა: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "კოპირებულია გაცვლის ბუფერში.",
   "craneSleep8SemanticLabel": "მაიას ნანგრევები ზღვისპირა კლიფზე",
   "craneSleep4SemanticLabel": "ტბისპირა სასტუმრო მთების ფონზე",
   "craneSleep2SemanticLabel": "მაჩუ-პიქჩუს ციტადელი",

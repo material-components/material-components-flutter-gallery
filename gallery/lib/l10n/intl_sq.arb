@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "KOPJO TË GJITHA",
+  "shrineScreenReaderRemoveProductButton": "Hiq {product}",
+  "shrineScreenReaderProductAddToCart": "Shto në karrocë",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Karroca e blerjeve, asnjë artikull}=1{Karroca e blerjeve, 1 artikull}other{Karroca e blerjeve, {quantity} artikuj}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Kopjimi në kujtesën e fragmenteve dështoi: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "U kopjua në kujtesën e fragmenteve",
   "craneSleep8SemanticLabel": "Rrënojat e fiseve maja në një shkëmb mbi një plazh",
   "craneSleep4SemanticLabel": "Hotel buzë liqenit përballë maleve",
   "craneSleep2SemanticLabel": "Qyteti i Maçu Piçut",

@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "KOPIEER ALLES",
+  "shrineScreenReaderRemoveProductButton": "Verwyder {product}",
+  "shrineScreenReaderProductAddToCart": "Voeg by mandjie",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Inkopiemandjie, geen items nie}=1{Inkopiemandjie, 1 item}other{Inkopiemandjie, {quantity} items}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Kon nie na knipbord kopieer nie: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Gekopieer na knipbord.",
   "craneSleep8SemanticLabel": "Maja-ruïnes op 'n krans bo 'n strand",
   "craneSleep4SemanticLabel": "Hotel aan die oewer van 'n meer voor berge",
   "craneSleep2SemanticLabel": "Machu Picchu-sitadel",

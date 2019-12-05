@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "ՊԱՏՃԵՆԵԼ ԱՄԲՈՂՋԸ",
+  "shrineScreenReaderRemoveProductButton": "{product}՝ հեռացնել",
+  "shrineScreenReaderProductAddToCart": "Ավելացնել զամբյուղում",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Զամբյուղը դատարկ է}=1{Զամբյուղում 1 ապրանք կա}one{Զամբյուղում {quantity} ապրանք կա}other{Զամբյուղում {quantity} ապրանք կա}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Չհաջողվեց պատճենել սեղմատախտակին՝ {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Պատճենվեց սեղմատախտակին։",
   "craneSleep8SemanticLabel": "Մայաների ավերակները լողափից վեր՝ ժայռի վրա",
   "craneSleep4SemanticLabel": "Լճամերձ հյուրանոց՝ լեռների ֆոնի վրա",
   "craneSleep2SemanticLabel": "Մաչու Պիչու ամրոց",

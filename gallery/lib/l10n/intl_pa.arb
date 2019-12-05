@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "ਸਭ ਕਾਪੀ ਕਰੋ",
+  "shrineScreenReaderRemoveProductButton": "ਹਟਾਓ {product}",
+  "shrineScreenReaderProductAddToCart": "ਕਾਰਟ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ",
+  "shrineScreenReaderCart": "{quantity,plural, =0{ਖਰੀਦਦਾਰੀ ਕਾਰਟ, ਕੋਈ ਆਈਟਮ ਨਹੀਂ}=1{ਖਰੀਦਦਾਰੀ ਕਾਰਟ, 1 ਆਈਟਮ}other{ਖਰੀਦਦਾਰੀ ਕਾਰਟ, {quantity} ਆਈਟਮਾਂ}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "ਕਲਿੱਪਬੋਰਡ 'ਤੇ ਕਾਪੀ ਕਰਨਾ ਅਸਫਲ ਰਿਹਾ: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "ਕਲਿੱਪਬੋਰਡ 'ਤੇ ਕਾਪੀ ਕੀਤਾ ਗਿਆ।",
   "craneSleep8SemanticLabel": "ਬੀਚ 'ਤੇ ਚਟਾਨ ਉੱਪਰ ਮਾਇਆ ਸੱਭਿਅਤਾ ਦੇ ਖੰਡਰ",
   "craneSleep4SemanticLabel": "ਪਹਾੜਾਂ ਸਾਹਮਣੇ ਝੀਲ ਦੇ ਕਿਨਾਰੇ ਹੋਟਲ",
   "craneSleep2SemanticLabel": "ਮਾਚੂ ਪਿਕਚੂ ਕਿਲ੍ਹਾ",

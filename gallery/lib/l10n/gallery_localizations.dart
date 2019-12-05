@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_localized_countries/flutter_localized_countries.dart';
 import 'package:intl/intl.dart';
 
 import 'messages_all.dart';
@@ -87,7 +86,6 @@ class GalleryLocalizations {
   static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
       <LocalizationsDelegate<dynamic>>[
     delegate,
-    LocaleNamesLocalizationsDelegate(),
     GlobalMaterialLocalizations.delegate,
     GlobalCupertinoLocalizations.delegate,
     GlobalWidgetsLocalizations.delegate,

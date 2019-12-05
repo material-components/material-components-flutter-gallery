@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "БААРЫН КӨЧҮРҮҮ",
+  "shrineScreenReaderRemoveProductButton": "{product} алып салуу",
+  "shrineScreenReaderProductAddToCart": "Арабага кошуу",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Арабада эч нерсе жок}=1{Арабада 1 нерсе бар}other{Арабада {quantity} нерсе бар}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Алмашуу буферине көчүрүлгөн жок: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Алмашуу буферине көчүрүлдү.",
   "craneSleep8SemanticLabel": "Жээктеги асканын үстүндөгү Майя цивилизациясынын урандылары",
   "craneSleep4SemanticLabel": "Тоолордун этегиндеги көлдүн жеегинде жайгашкан мейманкана",
   "craneSleep2SemanticLabel": "Мачу-Пичу цитадели",

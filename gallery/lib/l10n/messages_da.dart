@@ -34,43 +34,50 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Vare ${value}";
 
-  static m6(name, phoneNumber) =>
+  static m6(error) => "Kunne ikke kopieres til udklipsholderen: ${error}";
+
+  static m7(name, phoneNumber) =>
       "Telefonnummeret til ${name} er ${phoneNumber}";
 
-  static m7(value) => "Du valgte: \"${value}\"";
+  static m8(value) => "Du valgte: \"${value}\"";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m9(accountName, accountNumber, amount) =>
       "Kontoen \"${accountName}\" ${accountNumber} med saldoen ${amount}.";
 
-  static m9(amount) =>
+  static m10(amount) =>
       "Du har brugt ${amount} på hæveautomatsgebyrer i denne måned";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Flot! Din bankkonto er steget med ${percent} i forhold til sidste måned.";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "Vær opmærksom på, at du har brugt ${percent} af denne måneds shoppingbudget.";
 
-  static m12(amount) =>
+  static m13(amount) =>
       "Du har brugt ${amount} på restaurantbesøg i denne uge.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Hæv dit potentielle skattefradrag. Tildel kategorier til 1 transaktion, som ingen har.', other: 'Hæv dit potentielle skattefradrag. Tildel kategorier til ${count} transaktioner, som ingen har.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "Regningen ${billName} på ${amount}, som skal betales ${date}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "Budgettet ${budgetName}, hvor ${amountUsed} ud af ${amountTotal} er brugt, og der er ${amountLeft} tilbage";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'INGEN VARER', one: '1 VARE', other: '${quantity} VARER')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Antal: ${quantity}";
+  static m19(quantity) => "Antal: ${quantity}";
 
-  static m19(value) => "Vare ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Indkøbskurv, ingen varer', one: 'Indkøbskurv, 1 vare', other: 'Indkøbskurv, ${quantity} varer')}";
+
+  static m21(product) => "Fjern ${product}";
+
+  static m22(value) => "Vare ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -138,7 +145,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Koreansk taco"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, Frankrig"),
         "craneEat4SemanticLabel":
-            MessageLookupByLibrary.simpleMessage("Chokoladedessert"),
+            MessageLookupByLibrary.simpleMessage("Dessert med chokolade"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, Sydkorea"),
         "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
             "Siddepladser på en fin restaurant"),
@@ -340,6 +347,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle": MessageLookupByLibrary.simpleMessage("Valgtip"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Eksempel på et kodestykke"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage(
+                "Kopieret til udklipsholderen."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("KOPIER ALT"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Faste farver og farveskemaer, som repræsenterer farvepaletten for Material Design."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -468,7 +481,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Livshistorie"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Navn*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Du skal angive et navn."),
         "demoTextFieldNoMoreThan": MessageLookupByLibrary.simpleMessage(
@@ -531,7 +544,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lad Google gøre det nemmere for apps at fastlægge din placering. Det betyder, at der sendes anonyme placeringsdata til Google, også når der ikke er nogen apps, der kører."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Vil du bruge Googles placeringstjeneste?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Konfigurer konto til backup"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("VIS DIALOGBOKS"),
@@ -540,7 +553,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Kategorier"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galleri"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Opsparing til bil"),
         "rallyAccountDataChecking":
@@ -564,15 +577,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("I alt"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Konti"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Underretninger"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Fakturaer"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Betalingsdato"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Tøj"),
         "rallyBudgetCategoryCoffeeShops":
@@ -672,7 +685,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ANNULLER"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("RYD KURV"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("KURV"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Forsendelse:"),
@@ -735,8 +748,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Marineblå bukser"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Beige tunika"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Bord med fire stole"),
         "shrineProductRainwaterTray":
@@ -775,6 +788,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Nålestribet skjorte i hvid"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney-bælte"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Læg i kurven"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Luk kurven"),
         "shrineTooltipCloseMenu":
@@ -788,7 +805,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Indstillinger"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Et responsivt opstartslayout"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Brødtekst"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("KNAP"),

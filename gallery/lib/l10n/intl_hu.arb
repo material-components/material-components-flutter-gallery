@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "ÖSSZES MÁSOLÁSA",
+  "shrineScreenReaderRemoveProductButton": "{product} eltávolítása",
+  "shrineScreenReaderProductAddToCart": "Hozzáadás a kosárhoz",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Kosár, üres}=1{Kosár, 1 tétel}other{Kosár, {quantity} tétel}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Nem sikerült a vágólapra másolni: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "A vágólapra másolva.",
   "craneSleep8SemanticLabel": "Maja romok egy tengerparti sziklán",
   "craneSleep4SemanticLabel": "Hegyek előtt, tó partján álló szálloda",
   "craneSleep2SemanticLabel": "A Machu Picchu fellegvára",

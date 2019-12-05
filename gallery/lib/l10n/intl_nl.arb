@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "ALLES KOPIËREN",
+  "shrineScreenReaderRemoveProductButton": "{product} verwijderen",
+  "shrineScreenReaderProductAddToCart": "Toevoegen aan winkelwagen",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Winkelwagen, geen artikelen}=1{Winkelwagen, 1 artikel}other{Winkelwagen, {quantity} artikelen}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Kopiëren naar klembord is mislukt: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Naar klembord gekopieerd.",
   "craneSleep8SemanticLabel": "Maya-ruïnes aan een klif boven een strand",
   "craneSleep4SemanticLabel": "Hotel aan een meer met bergen op de achtergrond",
   "craneSleep2SemanticLabel": "Citadel Machu Picchu",

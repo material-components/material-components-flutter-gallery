@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "KOPIRAJ SVE",
+  "shrineScreenReaderRemoveProductButton": "Uklonite {product}",
+  "shrineScreenReaderProductAddToCart": "Dodavanje u košaricu",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Košarica, nema artikala}=1{Košarica, jedan artikl}one{Košarica, {quantity} artikl}few{Košarica, {quantity} artikla}other{Košarica, {quantity} artikala}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Kopiranje u međuspremnik nije uspjelo: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Kopirano u međuspremnik.",
   "craneSleep8SemanticLabel": "Majanske ruševine na litici iznad plaže",
   "craneSleep4SemanticLabel": "Hotel na obali jezera ispred planina",
   "craneSleep2SemanticLabel": "Citadela Machu Picchu",

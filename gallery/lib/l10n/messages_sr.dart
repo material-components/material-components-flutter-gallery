@@ -35,41 +35,48 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Ставка: ${value}";
 
-  static m6(name, phoneNumber) => "${name} има број телефона ${phoneNumber}";
+  static m6(error) => "Копирање у привремену меморију није успело: ${error}";
 
-  static m7(value) => "Изабрали сте: „${value}“";
+  static m7(name, phoneNumber) => "${name} има број телефона ${phoneNumber}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "Изабрали сте: „${value}“";
+
+  static m9(accountName, accountNumber, amount) =>
       "${accountName} рачун ${accountNumber} са ${amount}.";
 
-  static m9(amount) =>
+  static m10(amount) =>
       "Овог месеца сте потрошили ${amount} на накнаде за банкомате";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Одлично! На текућем рачуну имате ${percent} више него прошлог месеца.";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "Пажња! Искористили сте ${percent} буџета за куповину за овај месец.";
 
-  static m12(amount) => "Ове недеље сте потрошили ${amount} на ресторане.";
+  static m13(amount) => "Ове недеље сте потрошили ${amount} на ресторане.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Повећајте могући одбитак пореза! Доделите категорије 1 недодељеној трансакцији.', few: 'Повећајте могући одбитак пореза! Доделите категорије за ${count} недодељене трансакције.', other: 'Повећајте могући одбитак пореза! Доделите категорије за ${count} недодељених трансакција.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "Рачун (${billName}) од ${amount} доспева ${date}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "Буџет за ${budgetName}, потрошено је ${amountUsed} од ${amountTotal}, преостало је ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'НЕМА СТАВКИ', one: '1 СТАВКА', few: '${quantity} СТАВКЕ', other: '${quantity} СТАВКИ')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Количина: ${quantity}";
+  static m19(quantity) => "Количина: ${quantity}";
 
-  static m19(value) => "Ставка: ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Корпа за куповину, нема артикала', one: 'Корпа за куповину, 1 артикал', few: 'Корпа за куповину, ${quantity} артикла', other: 'Корпа за куповину, ${quantity} артикала')}";
+
+  static m21(product) => "Уклони производ ${product}";
+
+  static m22(value) => "Ставка: ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -359,6 +366,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("Чип избора"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Узорак кода"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage(
+                "Копирано је у привремену меморију."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("КОПИРАЈ СВЕ"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Боје и шема боја које представљају палету боја материјалног дизајна."),
         "demoColorsSubtitle":
@@ -488,7 +501,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Биографија"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Име*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Име је обавезно."),
         "demoTextFieldNoMoreThan":
@@ -551,7 +564,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Дозволите да Google помаже апликацијама у одређивању локације. То значи да се Google-у шаљу анонимни подаци о локацији, чак и када ниједна апликација није покренута."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Желите ли да користите Google услуге локације?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Подесите резервни налог"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("ПРИКАЖИ ДИЈАЛОГ"),
@@ -560,7 +573,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Категорије"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Галерија"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings": MessageLookupByLibrary.simpleMessage(
             "Штедња за куповину аутомобила"),
         "rallyAccountDataChecking":
@@ -586,16 +599,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Укупно"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Налози"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Обавештења"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Обрачуни"),
         "rallyBillsDue":
             MessageLookupByLibrary.simpleMessage("Доспева на наплату"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Одећа"),
         "rallyBudgetCategoryCoffeeShops":
@@ -699,7 +712,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ОТКАЖИ"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("ОБРИШИ СВЕ ИЗ КОРПЕ"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("КОРПА"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Испорука:"),
@@ -760,8 +773,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Тамноплаве панталоне"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Туника боје гипса"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Сто за четири особе"),
         "shrineProductRainwaterTray":
@@ -800,6 +813,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Бела кошуља са пругама"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Каиш Whitney"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Додај у корпу"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Затворите корпу"),
         "shrineTooltipCloseMenu":
@@ -814,7 +831,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Подешавања"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Изглед апликације за покретање која реагује"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Главни текст"),
         "starterAppGenericButton":

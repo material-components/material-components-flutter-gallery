@@ -35,42 +35,50 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Artigo ${value}";
 
-  static m6(name, phoneNumber) =>
+  static m6(error) =>
+      "Produciuse un erro ao copiar o contido no portapapeis: ${error}";
+
+  static m7(name, phoneNumber) =>
       "O número de teléfono de ${name} é o ${phoneNumber}";
 
-  static m7(value) => "Seleccionaches: \"${value}\"";
+  static m8(value) => "Seleccionaches: \"${value}\"";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m9(accountName, accountNumber, amount) =>
       "A conta ${accountNumber} (${accountName}) contén ${amount}.";
 
-  static m9(amount) =>
+  static m10(amount) =>
       "Gastaches ${amount} en comisións de caixeiro automático este mes";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Fantástico! A túa conta corrente ten un ${percent} máis de fondos que o mes pasado.";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "Aviso: Consumiches o ${percent} do teu orzamento de compras para este mes.";
 
-  static m12(amount) => "Gastaches ${amount} en restaurantes esta semana.";
+  static m13(amount) => "Gastaches ${amount} en restaurantes esta semana.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Aumenta a túa posible dedución de impostos. Escolle categorías para 1 transacción sen asignar.', other: 'Aumenta a túa posible dedución de impostos. Escolle categorías para ${count} transaccións sen asignar.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "A data límite da factura (${billName}) é o ${date} e o seu importe é de ${amount}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "O orzamento ${budgetName} é de ${amountTotal}; utilizouse un importe de ${amountUsed} e queda unha cantidade de ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'NON HAI ARTIGOS', one: '1 ARTIGO', other: '${quantity} ARTIGOS')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Cantidade: ${quantity}";
+  static m19(quantity) => "Cantidade: ${quantity}";
 
-  static m19(value) => "Artigo ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Cesta da compra (sen artigos)', one: 'Cesta da compra (1 artigo)', other: 'Cesta da compra (${quantity} artigos)')}";
+
+  static m21(product) => "Quitar ${product}";
+
+  static m22(value) => "Artigo ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -355,6 +363,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Pílula de elección"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Mostra de código"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage(
+                "Copiouse o contido no portapapeis."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("COPIAR TODO"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Constantes de cores e de coleccións de cores que representan a paleta de cores de material design."),
         "demoColorsSubtitle":
@@ -485,7 +499,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Biografía"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Nome*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired": MessageLookupByLibrary.simpleMessage(
             "É necesario indicar un nome."),
         "demoTextFieldNoMoreThan":
@@ -550,7 +564,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Permite que Google axude ás aplicacións a determinar a localización. Esta acción supón o envío de datos de localización anónimos a Google, aínda que non se execute ningunha aplicación."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Queres utilizar o servizo de localización de Google?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "Definir conta para a copia de seguranza"),
         "dialogShow":
@@ -560,7 +574,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Categorías"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galería"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Aforros para o coche"),
         "rallyAccountDataChecking":
@@ -586,15 +600,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Contas"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alertas"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Facturas"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Pendentes"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Roupa"),
         "rallyBudgetCategoryCoffeeShops":
@@ -704,7 +718,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("CANCELAR"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("BALEIRAR CESTA"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("CESTA"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Envío:"),
@@ -766,8 +780,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Pantalóns azul mariño"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Chaqueta cor xeso"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Mesa redonda"),
         "shrineProductRainwaterTray": MessageLookupByLibrary.simpleMessage(
@@ -807,6 +821,10 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Camisa de raia diplomática branca"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Cinto Whitney"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Engadir á cesta"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Pechar a cesta"),
         "shrineTooltipCloseMenu":
@@ -820,7 +838,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Configuración"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Deseño para principiantes adaptado"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Corpo"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("BOTÓN"),

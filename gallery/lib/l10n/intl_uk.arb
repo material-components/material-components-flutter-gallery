@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "КОПІЮВАТИ ВСЕ",
+  "shrineScreenReaderRemoveProductButton": "Вилучити товар \"{product}\"",
+  "shrineScreenReaderProductAddToCart": "Додати в кошик",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Кошик без товарів}=1{Кошик з 1 товаром}one{Кошик із {quantity} товаром}few{Кошик із {quantity} товарами}many{Кошик з {quantity} товарами}other{Кошик з {quantity} товару}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Не вдалося скопіювати в буфер обміну: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Скопійовано в буфер обміну.",
   "craneSleep8SemanticLabel": "Руїни Майя на кручі над берегом",
   "craneSleep4SemanticLabel": "Готель біля озера на гірському тлі",
   "craneSleep2SemanticLabel": "Цитадель Мачу-Пікчу",

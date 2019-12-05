@@ -35,41 +35,48 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "ပစ္စည်း ${value}";
 
-  static m6(name, phoneNumber) => "${name} ၏ ဖုန်းနံပါတ်သည် ${phoneNumber}";
+  static m6(error) => "ကလစ်ဘုတ်သို့ မိတ္တူကူး၍မရပါ− ${error}";
 
-  static m7(value) => "သင်ရွေးထားသည့်အရာ- \"${value}\"";
+  static m7(name, phoneNumber) => "${name} ၏ ဖုန်းနံပါတ်သည် ${phoneNumber}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "သင်ရွေးထားသည့်အရာ- \"${value}\"";
+
+  static m9(accountName, accountNumber, amount) =>
       "${amount} ထည့်ထားသော ${accountName} အကောင့် ${accountNumber}။";
 
-  static m9(amount) => "ဤလထဲတွင် ATM ကြေး ${amount} အသုံးပြုပြီးပါပြီ";
-
-  static m10(percent) =>
-      "ကောင်းပါသည်။ သင်၏ ဘဏ်စာရင်းရှင် အကောင့်သည် ယခင်လထက် ${percent} ပိုများနေသည်။";
+  static m10(amount) => "ဤလထဲတွင် ATM ကြေး ${amount} အသုံးပြုပြီးပါပြီ";
 
   static m11(percent) =>
+      "ကောင်းပါသည်။ သင်၏ ဘဏ်စာရင်းရှင် အကောင့်သည် ယခင်လထက် ${percent} ပိုများနေသည်။";
+
+  static m12(percent) =>
       "သတိ၊ ဤလအတွက် သင်၏ \'စျေးဝယ်ခြင်း\' ငွေစာရင်းမှနေ၍ ${percent} သုံးပြီးသွားပါပြီ။";
 
-  static m12(amount) =>
+  static m13(amount) =>
       "ဤအပတ်ထဲတွင် \'စားသောက်ဆိုင်\' များအတွက် ${amount} သုံးပြီးပါပြီ။";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'သင်၏အခွန်နုတ်ယူနိုင်ခြေကို တိုးမြှင့်ပါ။ မသတ်မှတ်ရသေးသော အရောင်းအဝယ် ၁ ခုတွင် အမျိုးအစားများ သတ်မှတ်ပါ။', other: 'သင်၏အခွန်နုတ်ယူနိုင်ခြေကို တိုးမြှင့်ပါ။ မသတ်မှတ်ရသေးသော အရောင်းအဝယ် ${count} ခုတွင် အမျိုးအစားများ သတ်မှတ်ပါ။')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "${billName} ငွေတောင်းခံလွှာအတွက် ${date} တွင် ${amount} ပေးရပါမည်။";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "${amountTotal} အနက် ${amountUsed} အသုံးပြုထားသော ${budgetName} အသုံးစရိတ်တွင် ${amountLeft} ကျန်ပါသည်";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'မည်သည့်ပစ္စည်းမျှ မရှိပါ', one: 'ပစ္စည်း ၁ ခု', other: 'ပစ္စည်း ${quantity} ခု')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "အရေအတွက်- ${quantity}";
+  static m19(quantity) => "အရေအတွက်- ${quantity}";
 
-  static m19(value) => "ပစ္စည်း ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'ဈေးခြင်းတောင်း၊ ပစ္စည်းမရှိပါ', one: 'ဈေးခြင်းတောင်း၊ ပစ္စည်း ၁ ခု', other: 'ဈေးခြင်းတောင်း၊ ပစ္စည်း ${quantity} ခု')}";
+
+  static m21(product) => "${product} ကို ဖယ်ရှားရန်";
+
+  static m22(value) => "ပစ္စည်း ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -365,6 +372,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("ရွေးချယ်မှု ချစ်ပ်"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("နမူနာကုဒ်"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage(
+                "ကလစ်ဘုတ်သို့ မိတ္တူကူးပြီးပါပြီ။"),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("အားလုံး မိတ္တူကူးရန်"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "အရောင်နှင့် အရောင်နမူနာ ပုံသေများသည် ပစ္စည်းဒီဇိုင်း၏ အရောင်အစုအဖွဲ့ကို ကိုယ်စားပြုသည်။"),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -496,7 +509,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("ဘဝဇာတ်ကြောင်း"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("အမည်*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("အမည် လိုအပ်ပါသည်။"),
         "demoTextFieldNoMoreThan":
@@ -563,7 +576,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "အက်ပ်များက တည်နေရာဆုံးဖြတ်ရာတွင် Google အား ကူညီခွင့်ပြုလိုက်ပါ။ ဆိုလိုသည်မှာ မည်သည့်အက်ပ်မျှ အသုံးပြုနေခြင်းမရှိသည့်အခါတွင်ပင် တည်နေရာဒေတာများကို Google သို့ အမည်မဖော်ဘဲ ပို့ခြင်းဖြစ်သည်။"),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Google ၏ တည်နေရာ ဝန်ဆောင်မှုကို သုံးလိုသလား။"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "အရန်အကောင့် စနစ်ထည့်သွင်းရန်"),
         "dialogShow":
@@ -573,7 +586,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("အမျိုးအစားများ"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("ပြခန်း"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("ကား စုငွေများ"),
         "rallyAccountDataChecking":
@@ -598,17 +611,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("စုစုပေါင်း"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("အကောင့်များ"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("သတိပေးချက်များ"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills":
             MessageLookupByLibrary.simpleMessage("ငွေတောင်းခံလွှာများ"),
         "rallyBillsDue":
             MessageLookupByLibrary.simpleMessage("နောက်ဆုံးထား ပေးရမည့်ရက်"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("အဝတ်အထည်"),
         "rallyBudgetCategoryCoffeeShops":
@@ -715,7 +728,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("မလုပ်တော့"),
         "shrineCartClearButtonCaption": MessageLookupByLibrary.simpleMessage(
             "စျေးခြင်းတောင်းကို ရှင်းလင်းရန်"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("ဈေးခြင်းတောင်း"),
         "shrineCartShippingCaption":
@@ -779,8 +792,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Navy trousers"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Quartet table"),
         "shrineProductRainwaterTray":
@@ -819,6 +832,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage(
+                "ဈေးခြင်းတောင်းသို့ ပေါင်းထည့်မည်"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("ဈေးခြင်းတောင်းကို ပိတ်ရန်"),
         "shrineTooltipCloseMenu":
@@ -833,7 +851,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ဆက်တင်များ"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "တုံ့ပြန်မှုကောင်းမွန်သော အစပြုရန် အပြင်အဆင်"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("စာကိုယ်"),
         "starterAppGenericButton":

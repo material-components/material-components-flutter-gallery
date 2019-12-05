@@ -35,40 +35,47 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Prekė ${value}";
 
-  static m6(name, phoneNumber) => "${name} telefono numeris: ${phoneNumber}";
+  static m6(error) => "Nepavyko nukopijuoti į iškarpinę: ${error}";
 
-  static m7(value) => "Pasirinkote: \"${value}\"";
+  static m7(name, phoneNumber) => "${name} telefono numeris: ${phoneNumber}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "Pasirinkote: \"${value}\"";
+
+  static m9(accountName, accountNumber, amount) =>
       "${accountName} sąskaita (${accountNumber}), kurioje yra ${amount}.";
 
-  static m9(amount) => "Šį mėnesį išleidote ${amount} bankomato mokesčiams";
-
-  static m10(percent) =>
-      "Puiku! Einamoji sąskaita ${percent} didesnė nei pastarąjį mėnesį.";
+  static m10(amount) => "Šį mėnesį išleidote ${amount} bankomato mokesčiams";
 
   static m11(percent) =>
+      "Puiku! Einamoji sąskaita ${percent} didesnė nei pastarąjį mėnesį.";
+
+  static m12(percent) =>
       "Dėmesio, šį mėnesį išnaudojote ${percent} apsipirkimo biudžeto.";
 
-  static m12(amount) => "Šią savaitę išleidote ${amount} restoranuose.";
+  static m13(amount) => "Šią savaitę išleidote ${amount} restoranuose.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Gaukite didesnę mokesčių lengvatą! Priskirkite kategorijas 1 nepriskirtai operacijai.', few: 'Gaukite didesnę mokesčių lengvatą! Priskirkite kategorijas ${count} nepriskirtoms operacijoms.', many: 'Gaukite didesnę mokesčių lengvatą! Priskirkite kategorijas ${count} nepriskirtos operacijos.', other: 'Gaukite didesnę mokesčių lengvatą! Priskirkite kategorijas ${count} nepriskirtų operacijų.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "Sąskaitą „${billName}“, kurios suma ${amount}, reikia apmokėti iki ${date}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "Biudžetas „${budgetName}“, kurio išnaudota suma: ${amountUsed} iš ${amountTotal}; likusi suma: ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'NĖRA JOKIŲ ELEMENTŲ', one: '1 ELEMENTAS', few: '${quantity} ELEMENTAI', many: '${quantity} ELEMENTO', other: '${quantity} ELEMENTŲ')}";
 
-  static m17(price) => "po ${price}";
+  static m18(price) => "po ${price}";
 
-  static m18(quantity) => "Kiekis: ${quantity}";
+  static m19(quantity) => "Kiekis: ${quantity}";
 
-  static m19(value) => "Prekė ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Pirkinių krepšelis, nėra jokių prekių', one: 'Pirkinių krepšelis, 1 prekė', few: 'Pirkinių krepšelis, ${quantity} prekės', many: 'Pirkinių krepšelis, ${quantity} prekės', other: 'Pirkinių krepšelis, ${quantity} prekių')}";
+
+  static m21(product) => "Pašalinti produktą: ${product}";
+
+  static m22(value) => "Prekė ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -364,6 +371,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Pasirinkimo fragmentas"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Kodo pavyzdys"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("Nukopijuota į iškarpinę."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("KOPIJUOTI VISKĄ"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Spalvų ir spalvų pavyzdžio konstantos, nurodančios trimačių objektų dizaino spalvų gamą."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -496,7 +508,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Gyvenimo istorija"),
         "demoTextFieldNameField":
             MessageLookupByLibrary.simpleMessage("Vardas*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired": MessageLookupByLibrary.simpleMessage(
             "Būtina nurodyti vardą ir pavardę."),
         "demoTextFieldNoMoreThan":
@@ -562,7 +574,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Leisti „Google“ padėti programoms nustatyti vietovę. Tai reiškia anoniminių vietovės duomenų siuntimą „Google“, net kai nevykdomos jokios programos."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Naudoti „Google“ vietovės paslaugą?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "Atsarginės kopijos paskyros nustatymas"),
         "dialogShow":
@@ -572,7 +584,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Kategorijos"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galerija"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Santaupos automobiliui"),
         "rallyAccountDataChecking":
@@ -599,15 +611,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Iš viso"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Paskyros"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Įspėjimai"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Sąskaitos"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Terminas"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Apranga"),
         "rallyBudgetCategoryCoffeeShops":
@@ -715,7 +727,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ATŠAUKTI"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("IŠVALYTI KREPŠELĮ"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("KREPŠELIS"),
         "shrineCartShippingCaption":
@@ -779,8 +791,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Tamsiai mėlynos kelnės"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Lengvo audinio tunika"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Keturių dalių stalas"),
         "shrineProductRainwaterTray":
@@ -819,6 +831,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Balti dryžuoti marškiniai"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("„Whitney“ diržas"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Pridėti į krepšelį"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Uždaryti krepšelį"),
         "shrineTooltipCloseMenu":
@@ -832,7 +848,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Nustatymai"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Interaktyvus pradedančiųjų programos išdėstymas"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Pagrindinė dalis"),
         "starterAppGenericButton":

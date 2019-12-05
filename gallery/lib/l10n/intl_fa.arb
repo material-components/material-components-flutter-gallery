@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "کپی همه موارد",
+  "shrineScreenReaderRemoveProductButton": "برداشتن {product}",
+  "shrineScreenReaderProductAddToCart": "افزودن به سبد خرید",
+  "shrineScreenReaderCart": "{quantity,plural, =0{سبد خرید، بدون مورد}=1{سبد خرید، ۱ مورد}one{سبد خرید، {quantity} مورد}other{سبد خرید، {quantity} مورد}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "در بریده‌دان کپی نشد: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "در بریده‌دان کپی شد.",
   "craneSleep8SemanticLabel": "خرابه‌های تمدن مایا بر صخره‌ای بالای ساحل",
   "craneSleep4SemanticLabel": "هتل ساحلی رو به کوهستان",
   "craneSleep2SemanticLabel": "قلعه ماچو پیچو",

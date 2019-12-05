@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "COPIAR TODO",
+  "shrineScreenReaderRemoveProductButton": "Quitar {product}",
+  "shrineScreenReaderProductAddToCart": "Engadir á cesta",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Cesta da compra (sen artigos)}=1{Cesta da compra (1 artigo)}other{Cesta da compra ({quantity} artigos)}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Produciuse un erro ao copiar o contido no portapapeis: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Copiouse o contido no portapapeis.",
   "craneSleep8SemanticLabel": "Ruínas maias no alto dun cantil xunto a unha praia",
   "craneSleep4SemanticLabel": "Hotel á beira dun lago e fronte ás montañas",
   "craneSleep2SemanticLabel": "Cidadela de Machu Picchu",

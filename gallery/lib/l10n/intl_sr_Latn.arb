@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "KOPIRAJ SVE",
+  "shrineScreenReaderRemoveProductButton": "Ukloni proizvod {product}",
+  "shrineScreenReaderProductAddToCart": "Dodaj u korpu",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Korpa za kupovinu, nema artikala}=1{Korpa za kupovinu, 1 artikal}one{Korpa za kupovinu, {quantity} artikal}few{Korpa za kupovinu, {quantity} artikla}other{Korpa za kupovinu, {quantity} artikala}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Kopiranje u privremenu memoriju nije uspelo: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Kopirano je u privremenu memoriju.",
   "craneSleep8SemanticLabel": "Majanske ruševine na litici iznad plaže",
   "craneSleep4SemanticLabel": "Hotel na obali jezera ispred planina",
   "craneSleep2SemanticLabel": "Tvrđava u Maču Pikčuu",

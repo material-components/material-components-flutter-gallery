@@ -35,40 +35,47 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "آئٹم ${value}";
 
-  static m6(name, phoneNumber) => "${name} کا فون نمبر ${phoneNumber} ہے";
+  static m6(error) => "کلپ بورڈ پر کاپی کرنے میں ناکام: ${error}";
 
-  static m7(value) => "آپ نے منتخب کیا: \"${value}\"";
+  static m7(name, phoneNumber) => "${name} کا فون نمبر ${phoneNumber} ہے";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "آپ نے منتخب کیا: \"${value}\"";
+
+  static m9(accountName, accountNumber, amount) =>
       "${amount} کے ساتھ ${accountName} اکاؤنٹ ${accountNumber}۔";
 
-  static m9(amount) => "آپ نے اس مہینے ATM فیس میں ${amount} خرچ کیے ہیں";
-
-  static m10(percent) =>
-      "بہت خوب! آپ کا چیکنگ اکاؤنٹ پچھلے مہینے سے ${percent} زیادہ ہے۔";
+  static m10(amount) => "آپ نے اس مہینے ATM فیس میں ${amount} خرچ کیے ہیں";
 
   static m11(percent) =>
+      "بہت خوب! آپ کا چیکنگ اکاؤنٹ پچھلے مہینے سے ${percent} زیادہ ہے۔";
+
+  static m12(percent) =>
       "آگاہ رہیں، آپ نے اس ماہ کے لیے اپنی خریداری کے بجٹ کا ${percent} استعمال کر لیا ہے۔";
 
-  static m12(amount) => "آپ نے اس ہفتے ریسٹورینٹس پر ${amount} خرچ کیے ہیں۔";
+  static m13(amount) => "آپ نے اس ہفتے ریسٹورینٹس پر ${amount} خرچ کیے ہیں۔";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'اپنے امکانی ٹیکس کٹوتی کو بڑھائیں! زمرے کو 1 غیر تفویض کردہ ٹرانزیکشن میں تفویض کریں۔', other: 'اپنے امکانی ٹیکس کٹوتی کو بڑھائیں! زمرے کو ${count} غیر تفویض کردہ ٹرانزیکشنز میں تفویض کریں۔')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "${amount} کے لیے ${billName} بل کی آخری تاریخ ${date}";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "${budgetName} بجٹ جس کا ${amountUsed} استعمال کیا گیا ${amountTotal} ہے، ${amountLeft} باقی ہے";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'کوئی آئٹمز نہیں ہیں', one: '1 آئٹم', other: '${quantity} آئٹمز')}";
 
-  static m17(price) => "x ‏${price}";
+  static m18(price) => "x ‏${price}";
 
-  static m18(quantity) => "مقدار: ${quantity}";
+  static m19(quantity) => "مقدار: ${quantity}";
 
-  static m19(value) => "آئٹم ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'شاپنگ کارٹ، کوئی آئٹم نہیں', one: 'شاپنگ کارٹ، 1 آئٹم', other: 'شاپنگ کارٹ، ${quantity} آئٹمز')}";
+
+  static m21(product) => "${product} ہٹائیں";
+
+  static m22(value) => "آئٹم ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -349,6 +356,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("چوائس چپس"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("کوڈ کا نمونہ"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("کلپ بورڈ پر کاپی ہو گیا۔"),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("سبھی کاپی کریں"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "رنگ اور رنگ کے نمونے مستقل رہتے ہیں جو مٹیریل ڈیزائن کے رنگ کے پیلیٹ کی نمائندگی کرتے ہیں۔"),
         "demoColorsSubtitle":
@@ -473,7 +485,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("زندگی کی کہانی"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("نام*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("نام درکار ہے۔"),
         "demoTextFieldNoMoreThan":
@@ -539,7 +551,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Google کو مقام کا تعین کرنے میں ایپس کی مدد کرنے دیں۔ اس کا مطلب یہ ہے کہ Google کو گمنام مقام کا ڈیٹا تب بھی بھیجا جائے گا، جب کوئی بھی ایپ نہیں چل رہی ہیں۔"),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Google کی مقام کی سروس کا استعمال کریں؟"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("بیک اپ اکاؤنٹ ترتیب دیں"),
         "dialogShow":
@@ -548,7 +560,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("حوالہ کی طرزیں اور میڈیا"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("زمرے"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("گیلری"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("کار کی سیونگز"),
         "rallyAccountDataChecking":
@@ -572,15 +584,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("کل"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("اکاؤنٹس"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("الرٹس"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("بلز"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("آخری تاریخ"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("لباس"),
         "rallyBudgetCategoryCoffeeShops":
@@ -678,7 +690,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("منسوخ کریں"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("کارٹ کو صاف کریں"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("کارٹ"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("ترسیل:"),
@@ -738,8 +750,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("نیوی پتلونیں"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("پلاسٹر ٹیونک"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("کوآرٹیٹ ٹیبل"),
         "shrineProductRainwaterTray":
@@ -778,6 +790,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("سفید پن اسٹراپ شرٹ"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("وہائٹنے نیلٹ"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("کارٹ میں شامل کریں"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("کارٹ بند کریں"),
         "shrineTooltipCloseMenu":
@@ -792,7 +808,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ترتیبات"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("ایک ذمہ دار اسٹارٹر لے آؤٹ"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("مضمون"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("بٹن"),
         "starterAppGenericHeadline":

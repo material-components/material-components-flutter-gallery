@@ -35,41 +35,48 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "السلعة ${value}";
 
-  static m6(name, phoneNumber) => "رقم هاتف ${name} هو ${phoneNumber}.";
+  static m6(error) => "تعذّر نسخ النص إلى الحافظة: ${error}";
 
-  static m7(value) => "لقد اخترت القيمة التالية: \"${value}\"";
+  static m7(name, phoneNumber) => "رقم هاتف ${name} هو ${phoneNumber}.";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "لقد اخترت القيمة التالية: \"${value}\"";
+
+  static m9(accountName, accountNumber, amount) =>
       "الحساب ${accountName} رقم ${accountNumber} بمبلغ ${amount}.";
 
-  static m9(amount) => "أنفقت ${amount} كرسوم لأجهزة الصراف الآلي هذا الشهر";
-
-  static m10(percent) =>
-      "عمل رائع! الرصيد الحالي في حسابك الجاري أعلى بنسبة ${percent} من الشهر الماضي.";
+  static m10(amount) => "أنفقت ${amount} كرسوم لأجهزة الصراف الآلي هذا الشهر";
 
   static m11(percent) =>
+      "عمل رائع! الرصيد الحالي في حسابك الجاري أعلى بنسبة ${percent} من الشهر الماضي.";
+
+  static m12(percent) =>
       "تنبيه: لقد استهلكت ${percent} من ميزانية التسوّق لهذا الشهر.";
 
-  static m12(amount) =>
+  static m13(amount) =>
       "أنفقت هذا الشهر مبلغ ${amount} على تناول الطعام في المطاعم.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, zero: 'يمكنك زيادة خصم الضرائب المحتملة. ضبط الفئات على ${count} معاملة لم يتم ضبطها.', one: 'يمكنك زيادة خصم الضرائب المحتملة. ضبط الفئات على معاملة واحدة لم يتم ضبطها.', two: 'يمكنك زيادة خصم الضرائب المحتملة. ضبط الفئات على معاملتين (${count}) لم يتم ضبطهما.', few: 'يمكنك زيادة خصم الضرائب المحتملة. ضبط الفئات على ${count} معاملات لم يتم ضبطها.', many: 'يمكنك زيادة خصم الضرائب المحتملة. ضبط الفئات على ${count} معاملة لم يتم ضبطها.', other: 'يمكنك زيادة خصم الضرائب المحتملة. ضبط الفئات على ${count} معاملة لم يتم ضبطها.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "تاريخ استحقاق الفاتورة ${billName} التي تبلغ ${amount} هو ${date}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "ميزانية ${budgetName} مع استخدام ${amountUsed} من إجمالي ${amountTotal}، المبلغ المتبقي ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'ما مِن عناصر.', one: 'عنصر واحد', two: 'عنصران (${quantity})', few: '${quantity} عناصر', many: '${quantity} عنصرًا', other: '${quantity} عنصر')}";
 
-  static m17(price) => "x ‏${price}";
+  static m18(price) => "x ‏${price}";
 
-  static m18(quantity) => "الكمية: ${quantity}";
+  static m19(quantity) => "الكمية: ${quantity}";
 
-  static m19(value) => "السلعة ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'سلة التسوق، ما مِن عناصر', one: 'سلة التسوق، عنصر واحد', two: 'سلة التسوق، عنصران (${quantity})', few: 'سلة التسوق، ${quantity} عناصر', many: 'سلة التسوق، ${quantity} عنصرًا', other: 'سلة التسوق، ${quantity} عنصر')}";
+
+  static m21(product) => "إزالة ${product}";
+
+  static m22(value) => "السلعة ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -349,6 +356,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("شريحة الخيارات"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("نموذج رمز"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("تم نسخ النص إلى الحافظة."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("نسخ الكل"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "ثوابت اللون وعينات الألوان التي تُمثل لوحة ألوان التصميم المتعدد الأبعاد"),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -478,7 +490,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("قصة حياة"),
         "demoTextFieldNameField":
             MessageLookupByLibrary.simpleMessage("الاسم*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("الاسم مطلوب."),
         "demoTextFieldNoMoreThan":
@@ -540,7 +552,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "يمكنك السماح لشركة Google بمساعدة التطبيقات في تحديد الموقع الجغرافي. ويعني هذا أنه سيتم إرسال بيانات مجهولة المصدر عن الموقع الجغرافي إلى Google، حتى عند عدم تشغيل أي تطبيقات."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "هل تريد استخدام خدمة الموقع الجغرافي من Google؟"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "تحديد حساب النسخة الاحتياطية"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("عرض مربع الحوار"),
@@ -548,7 +560,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الأنماط والوسائط المرجعية"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("الفئات"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("معرض الصور"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("المدّخرات المخصّصة للسيارة"),
         "rallyAccountDataChecking":
@@ -575,16 +587,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("الإجمالي"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("الحسابات"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("التنبيهات"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("الفواتير"),
         "rallyBillsDue":
             MessageLookupByLibrary.simpleMessage("الفواتير المستحقة"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("الملابس"),
         "rallyBudgetCategoryCoffeeShops":
@@ -687,7 +699,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إلغاء"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("محو سلة التسوق"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("سلة التسوّق"),
         "shrineCartShippingCaption":
@@ -752,8 +764,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("سروال بلون أزرق داكن"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("بلوزة من نوع \"بلاستر\""),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("طاولة رباعية الأرجل"),
         "shrineProductRainwaterTray":
@@ -792,6 +804,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("قميص ذو خطوط بيضاء"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("حزام \"ويتني\""),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("إضافة إلى سلة التسوق"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("إغلاق سلة التسوق"),
         "shrineTooltipCloseMenu":
@@ -805,7 +821,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "تطبيق نموذجي يتضمّن تنسيقًا تفاعليًا"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("النص"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("زر"),
         "starterAppGenericHeadline":

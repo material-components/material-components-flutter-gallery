@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "KOPIOI KAIKKI",
+  "shrineScreenReaderRemoveProductButton": "Poista {product}",
+  "shrineScreenReaderProductAddToCart": "Lisää ostoskoriin",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Ostoskori, ei tuotteita}=1{Ostoskori, 1 tuote}other{Ostoskori, {quantity} tuotetta}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Kopiointi leikepöydälle epäonnistui: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Kopioitu leikepöydälle.",
   "craneSleep8SemanticLabel": "Mayalaiset rauniot kalliolla rannan yläpuolella",
   "craneSleep4SemanticLabel": "Järvenrantahotelli vuorten edessä",
   "craneSleep2SemanticLabel": "Machu Picchun linnake",

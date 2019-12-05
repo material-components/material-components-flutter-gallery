@@ -34,41 +34,48 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "${value}";
 
-  static m6(name, phoneNumber) => "${name}: ${phoneNumber}";
+  static m6(error) => "Буферге көшірілмеді: ${error}";
 
-  static m7(value) => "Таңдалған мән: \"${value}\".";
+  static m7(name, phoneNumber) => "${name}: ${phoneNumber}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "Таңдалған мән: \"${value}\".";
+
+  static m9(accountName, accountNumber, amount) =>
       "${accountNumber} нөмірлі ${accountName} банк шотында ${amount} сома бар.";
 
-  static m9(amount) =>
+  static m10(amount) =>
       "Осы айда банкоматтардың комиссиялық алымына ${amount} жұмсадыңыз.";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Тамаша! Шотыңызда өткен аймен салыстырғанда ${percent} артық ақша бар.";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "Назар аударыңыз! Сіз осы айға арналған бюджеттің ${percent} жұмсадыңыз.";
 
-  static m12(amount) => "Осы аптада мейрамханаларға ${amount} жұмсадыңыз.";
+  static m13(amount) => "Осы аптада мейрамханаларға ${amount} жұмсадыңыз.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Салықтың шегерілетін сомасын арттырыңыз! 1 тағайындалмаған транзакцияға санаттар тағайындаңыз.', other: 'Салықтың шегерілетін сомасын арттырыңыз! ${count} тағайындалмаған транзакцияға санаттар тағайындаңыз.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "${amount} сомасындағы ${billName} төлемі ${date} күні төленуі керек.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "${budgetName} бюджеті: пайдаланылғаны: ${amountUsed}/${amountTotal}, қалғаны: ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'ЭЛЕМЕНТТЕР ЖОҚ', one: '1 ЭЛЕМЕНТ', other: '${quantity} ЭЛЕМЕНТ')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Саны: ${quantity}";
+  static m19(quantity) => "Саны: ${quantity}";
 
-  static m19(value) => "${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Себетте ешқандай зат жоқ', one: 'Себетте 1 зат бар', other: 'Себет, ${quantity} зат бар')}";
+
+  static m21(product) => "${product} өшіру";
+
+  static m22(value) => "${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -165,11 +172,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFly1": MessageLookupByLibrary.simpleMessage("Биг-Сур, АҚШ"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Каир, Мысыр"),
         "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
-            "Күн батқан кездегі Әл Ажар мешітінің мұнаралары"),
+            "Күн батқан кездегі Әл-Азхар мешітінің мұнаралары"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Лиссабон, Португалия"),
-        "craneFly11SemanticLabel":
-            MessageLookupByLibrary.simpleMessage("Теңіздегі кірпіш шамшырақ"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Теңіз жағалауындағы кірпіш шамшырақ"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("Напа, АҚШ"),
         "craneFly12SemanticLabel":
             MessageLookupByLibrary.simpleMessage("Пальма ағаштары бар бассейн"),
@@ -228,7 +235,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneSleep1": MessageLookupByLibrary.simpleMessage("Аспен, АҚШ"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Каир, Мысыр"),
         "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
-            "Күн батқан кездегі Әл Ажар мешітінің мұнаралары"),
+            "Күн батқан кездегі Әл-Азхар мешітінің мұнаралары"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Тайбэй, Тайвань"),
         "craneSleep11SemanticLabel":
             MessageLookupByLibrary.simpleMessage("Тайбэй 101 зәулім үйі"),
@@ -258,8 +265,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Жағалау жанындағы жарда орналасқан майя тайпасының қирандылары"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Лиссабон, Португалия"),
-        "craneSleep9SemanticLabel":
-            MessageLookupByLibrary.simpleMessage("Теңіздегі кірпіш шамшырақ"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Теңіз жағалауындағы кірпіш шамшырақ"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Баратын жердегі қонақүйлерді қарау"),
@@ -342,6 +349,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("Таңдау чипі"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Код үлгісі"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("Буферге көшірілді."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("БАРЛЫҒЫН КӨШІРУ"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Material Design түстер палитрасын көрсететін түс және түс үлгілері."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -473,7 +485,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Өмірбаян"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Аты*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Аты-жөніңізді енгізіңіз."),
         "demoTextFieldNoMoreThan":
@@ -536,7 +548,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Қолданбалардың орынды анықтауына Google-дың көмектесуіне рұқсат етіңіз. Яғни қолданбалар іске қосылмаған болса да, Google-ға анонимді геодеректер жіберіле береді."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Google орынды анықтау қызметін пайдалану керек пе?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "Сақтық есептік жазбасын реттеу"),
         "dialogShow":
@@ -546,7 +558,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Санаттар"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Галерея"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Көлік алуға арналған жинақ"),
         "rallyAccountDataChecking":
@@ -571,16 +583,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccounts":
             MessageLookupByLibrary.simpleMessage("Есептік жазбалар"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Ескертулер"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Шоттар"),
         "rallyBillsDue":
             MessageLookupByLibrary.simpleMessage("Төленетін сома:"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Киім"),
         "rallyBudgetCategoryCoffeeShops":
@@ -681,7 +693,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("БАС ТАРТУ"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("СЕБЕТТІ ТАЗАЛАУ"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("СЕБЕТ"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Жөнелту:"),
@@ -744,8 +756,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Қысқа балақ шалбарлар"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Ақшыл сары туника"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Төртбұрышты үстел"),
         "shrineProductRainwaterTray":
@@ -784,6 +796,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Жолақты жейде"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Былғары белдік"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Себетке қосу"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Себетті жабу"),
         "shrineTooltipCloseMenu":
@@ -797,7 +813,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Параметрлер"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Адаптивті бастау үлгісі"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Негізгі мәтін"),
         "starterAppGenericButton":

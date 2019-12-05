@@ -34,42 +34,49 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Item ${value}";
 
-  static m6(name, phoneNumber) => "Nombor telefon ${name} ialah ${phoneNumber}";
+  static m6(error) => "Gagal menyalin ke papan keratan: ${error}";
 
-  static m7(value) => "Anda memilih: \"${value}\"";
+  static m7(name, phoneNumber) => "Nombor telefon ${name} ialah ${phoneNumber}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "Anda memilih: \"${value}\"";
+
+  static m9(accountName, accountNumber, amount) =>
       "Akaun ${accountName} bagi ${accountNumber} sebanyak ${amount}.";
 
-  static m9(amount) =>
+  static m10(amount) =>
       "Anda sudah membelanjakan ${amount} untuk yuran ATM pada bulan ini";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Syabas! Akaun semasa anda adalah ${percent} lebih tinggi daripada bulan lalu.";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "Makluman, anda telah menggunakan ${percent} daripada belanjawan Beli-belah anda untuk bulan ini.";
 
-  static m12(amount) =>
+  static m13(amount) =>
       "Anda sudah membelanjakan ${amount} pada Restoran minggu ini.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Tingkatkan potongan cukai berpotensi anda! Tetapkan kategori kepada 1 transaksi yang tidak ditentukan.', other: 'Tingkatkan potongan cukai berpotensi anda! Tetapkan kategori kepada ${count} transaksi yang tidak ditentukan.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "Bil ${billName} perlu dijelaskan pada ${date} sebanyak ${amount}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "Belanjawan ${budgetName} dengan ${amountUsed} digunakan daripada ${amountTotal}, baki ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'TIADA ITEM', one: '1 ITEM', other: '${quantity} ITEM')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Kuantiti: ${quantity}";
+  static m19(quantity) => "Kuantiti: ${quantity}";
 
-  static m19(value) => "Item ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Troli Beli-belah, tiada item', one: 'Troli Beli-belah, 1 item', other: 'Troli Beli-belah, ${quantity} item')}";
+
+  static m21(product) => "Alih keluar ${product}";
+
+  static m22(value) => "Item ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -352,6 +359,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("Cip Pilihan"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Sampel Kod"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("Disalin ke papan keratan."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("SALIN SEMUA"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Warna dan malar reja warna yang mewakili palet warna Reka Bentuk Bahan."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -480,7 +492,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Kisah hidup"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Nama*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Nama diperlukan."),
         "demoTextFieldNoMoreThan":
@@ -544,7 +556,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Benarkan Google membantu apl menentukan lokasi. Ini bermakna menghantar data lokasi awanama kepada Google, walaupun semasa tiada apl yang berjalan."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Gunakan perkhidmatan lokasi Google?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Tetapkan akaun sandaran"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("TUNJUKKAN DIALOG"),
@@ -553,7 +565,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Kategori"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galeri"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Simpanan Kereta"),
         "rallyAccountDataChecking":
@@ -578,15 +590,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Jumlah"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Akaun"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Makluman"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Bil"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Tarikh Akhir"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Pakaian"),
         "rallyBudgetCategoryCoffeeShops":
@@ -688,7 +700,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("BATAL"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("KOSONGKAN TROLI"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("TROLI"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Penghantaran:"),
@@ -750,8 +762,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Navy trousers"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Quartet table"),
         "shrineProductRainwaterTray":
@@ -790,6 +802,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Tambahkan ke troli"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Tutup troli"),
         "shrineTooltipCloseMenu":
@@ -803,7 +819,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Tetapan"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Reka letak permulaan yang responsif"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Kandungan"),
         "starterAppGenericButton":
