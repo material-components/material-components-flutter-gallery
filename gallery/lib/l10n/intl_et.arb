@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "KOPEERI KÕIK",
+  "shrineScreenReaderRemoveProductButton": "Eemalda {product}",
+  "shrineScreenReaderProductAddToCart": "Lisa ostukorvi",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Ostukorv, üksusi pole}=1{Ostukorv, 1 üksus}other{Ostukorv, {quantity} üksust}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Lõikelauale kopeerimine ebaõnnestus: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Kopeeritud lõikelauale.",
   "craneSleep8SemanticLabel": "Maiade ehitiste varemed kaljuserval ranna kohal",
   "craneSleep4SemanticLabel": "Mägihotell järve kaldal",
   "craneSleep2SemanticLabel": "Machu Picchu kadunud linn",

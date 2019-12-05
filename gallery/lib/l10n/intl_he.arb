@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "העתקת הכול",
+  "shrineScreenReaderRemoveProductButton": "הסרת {product}",
+  "shrineScreenReaderProductAddToCart": "הוספה לעגלת הקניות",
+  "shrineScreenReaderCart": "{quantity,plural, =0{עגלת קניות, אין פריטים}=1{עגלת קניות, פריט אחד}two{עגלת קניות, {quantity} פריטים}many{עגלת קניות, {quantity} פריטים}other{עגלת קניות, {quantity} פריטים}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "ניסיון ההעתקה ללוח נכשל: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "התוכן הועתק ללוח.",
   "craneSleep8SemanticLabel": "הריסות מבנים של בני המאיה על צוק מעל חוף ים",
   "craneSleep4SemanticLabel": "מלון לחוף אגם על רקע הרים",
   "craneSleep2SemanticLabel": "המבצר במאצ'ו פיצ'ו",

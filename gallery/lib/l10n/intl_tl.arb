@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "KOPYAHIN LAHAT",
+  "shrineScreenReaderRemoveProductButton": "Alisin ang {product}",
+  "shrineScreenReaderProductAddToCart": "Idagdag sa cart",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Shopping cart, walang item}=1{Shopping cart, 1 item}one{Shopping cart, {quantity} item}other{Shopping cart, {quantity} na item}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Hindi nakopya sa clipboard: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Kinopya sa clipboard.",
   "craneSleep8SemanticLabel": "Mga Mayan na guho sa isang talampas sa itaas ng beach",
   "craneSleep4SemanticLabel": "Hotel sa tabi ng lawa sa harap ng mga bundok",
   "craneSleep2SemanticLabel": "Citadel ng Machu Picchu",

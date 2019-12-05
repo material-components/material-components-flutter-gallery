@@ -35,41 +35,48 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "ਆਈਟਮ ${value}";
 
-  static m6(name, phoneNumber) => "${name} ਦਾ ਫ਼ੋਨ ਨੰਬਰ ${phoneNumber} ਹੈ";
+  static m6(error) => "ਕਲਿੱਪਬੋਰਡ \'ਤੇ ਕਾਪੀ ਕਰਨਾ ਅਸਫਲ ਰਿਹਾ: ${error}";
 
-  static m7(value) => "ਤੁਸੀਂ ਚੁਣਿਆ: \"${value}\"";
+  static m7(name, phoneNumber) => "${name} ਦਾ ਫ਼ੋਨ ਨੰਬਰ ${phoneNumber} ਹੈ";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "ਤੁਸੀਂ ਚੁਣਿਆ: \"${value}\"";
+
+  static m9(accountName, accountNumber, amount) =>
       "${amount} ਦੀ ਰਕਮ ${accountName} ਦੇ ਖਾਤਾ ਨੰਬਰ ${accountNumber} ਵਿੱਚ ਜਮ੍ਹਾ ਕਰਵਾਈ ਗਈ।";
 
-  static m9(amount) => "ਤੁਸੀਂ ਇਸ ਮਹੀਨੇ ${amount} ATM ਫ਼ੀਸ ਵਜੋਂ ਖਰਚ ਕੀਤੇ ਹਨ";
-
-  static m10(percent) =>
-      "ਵਧੀਆ ਕੰਮ! ਤੁਹਾਡੇ ਵੱਲੋਂ ਚੈੱਕਿੰਗ ਖਾਤੇ ਵਿੱਚ ਜਮਾਂ ਕੀਤੀ ਰਕਮ ਪਿਛਲੇ ਮਹੀਨੇ ਤੋਂ ${percent} ਜ਼ਿਆਦਾ ਹੈ।";
+  static m10(amount) => "ਤੁਸੀਂ ਇਸ ਮਹੀਨੇ ${amount} ATM ਫ਼ੀਸ ਵਜੋਂ ਖਰਚ ਕੀਤੇ ਹਨ";
 
   static m11(percent) =>
+      "ਵਧੀਆ ਕੰਮ! ਤੁਹਾਡੇ ਵੱਲੋਂ ਚੈੱਕਿੰਗ ਖਾਤੇ ਵਿੱਚ ਜਮਾਂ ਕੀਤੀ ਰਕਮ ਪਿਛਲੇ ਮਹੀਨੇ ਤੋਂ ${percent} ਜ਼ਿਆਦਾ ਹੈ।";
+
+  static m12(percent) =>
       "ਧਿਆਨ ਦਿਓ, ਤੁਸੀਂ ਇਸ ਮਹੀਨੇ ਦੇ ਆਪਣੇ ਖਰੀਦਦਾਰੀ ਬਜਟ ਦਾ ${percent} ਵਰਤ ਚੁੱਕੇ ਹੋ।";
 
-  static m12(amount) =>
+  static m13(amount) =>
       "ਤੁਸੀਂ ਇਸ ਹਫ਼ਤੇ ${amount} ਰੈਸਟੋਰੈਂਟਾਂ \'ਤੇ ਖਰਚ ਕੀਤੇ ਹਨ।";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'ਆਪਣੀ ਸੰਭਾਵੀ ਟੈਕਸ ਕਟੌਤੀ ਵਿੱਚ ਵਾਧਾ ਕਰੋ! 1 ਗੈਰ-ਜ਼ਿੰਮੇ ਵਾਲੇ ਲੈਣ-ਦੇਣ \'ਤੇ ਸ਼੍ਰੇਣੀਆਂ ਨੂੰ ਜ਼ਿੰਮੇ ਲਾਓ।', other: 'ਆਪਣੀ ਸੰਭਾਵੀ ਟੈਕਸ ਕਟੌਤੀ ਵਿੱਚ ਵਾਧਾ ਕਰੋ! ${count} ਗੈਰ-ਜ਼ਿੰਮੇ ਵਾਲੇ ਲੈਣ-ਦੇਣ \'ਤੇ ਸ਼੍ਰੇਣੀਆਂ ਨੂੰ ਜ਼ਿੰਮੇ ਲਾਓ।')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "${billName} ਲਈ ${amount} ਦਾ ਬਿੱਲ ਭਰਨ ਦੀ ਨਿਯਤ ਤਾਰੀਖ ${date} ਹੈ।";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "${budgetName} ਦੇ ਬਜਟ ${amountTotal} ਵਿੱਚੋਂ ${amountUsed} ਵਰਤੇ ਗਏ ਹਨ, ${amountLeft} ਬਾਕੀ";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'ਕੋਈ ਆਈਟਮ ਨਹੀਂ', one: '1 ਆਈਟਮ', other: '${quantity} ਆਈਟਮਾਂ')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "ਮਾਤਰਾ: ${quantity}";
+  static m19(quantity) => "ਮਾਤਰਾ: ${quantity}";
 
-  static m19(value) => "ਆਈਟਮ ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'ਖਰੀਦਦਾਰੀ ਕਾਰਟ, ਕੋਈ ਆਈਟਮ ਨਹੀਂ', one: 'ਖਰੀਦਦਾਰੀ ਕਾਰਟ, 1 ਆਈਟਮ', other: 'ਖਰੀਦਦਾਰੀ ਕਾਰਟ, ${quantity} ਆਈਟਮਾਂ')}";
+
+  static m21(product) => "ਹਟਾਓ ${product}";
+
+  static m22(value) => "ਆਈਟਮ ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -340,6 +347,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("ਚੋਇਸ ਚਿੱਪ"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("ਕੋਡ ਸੈਂਪਲ"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage(
+                "ਕਲਿੱਪਬੋਰਡ \'ਤੇ ਕਾਪੀ ਕੀਤਾ ਗਿਆ।"),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("ਸਭ ਕਾਪੀ ਕਰੋ"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "ਰੰਗ ਅਤੇ ਰੰਗ ਨਮੂਨੇ ਦੇ ਸਥਾਈ ਮੁੱਲ ਜੋ ਮੈਟੀਰੀਅਲ ਡਿਜ਼ਾਈਨ ਦੇ ਰੰਗ ਪਟਲ ਨੂੰ ਪ੍ਰਦਰਸ਼ਿਤ ਕਰਦੇ ਹਨ।"),
         "demoColorsSubtitle":
@@ -466,7 +479,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("ਜੀਵਨ ਕਹਾਣੀ"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("ਨਾਮ*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("ਨਾਮ ਲੋੜੀਂਦਾ ਹੈ।"),
         "demoTextFieldNoMoreThan": MessageLookupByLibrary.simpleMessage(
@@ -531,7 +544,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Google ਨੂੰ ਟਿਕਾਣਾ ਨਿਰਧਾਰਿਤ ਕਰਨ ਵਿੱਚ ਐਪਾਂ ਦੀ ਮਦਦ ਕਰਨ ਦਿਓ। ਇਸਦਾ ਮਤਲਬ ਹੈ Google ਨੂੰ ਅਨਾਮ ਟਿਕਾਣਾ ਡਾਟਾ ਭੇਜਣਾ, ਭਾਵੇਂ ਕੋਈ ਵੀ ਐਪ ਨਾ ਚੱਲ ਰਹੀ ਹੋਵੇ।"),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "ਕੀ Google ਦੀ ਟਿਕਾਣਾ ਸੇਵਾ ਨੂੰ ਵਰਤਣਾ ਹੈ?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("ਬੈਕਅੱਪ ਖਾਤਾ ਸੈੱਟ ਕਰੋ"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("ਵਿੰਡੋ ਦਿਖਾਓ"),
@@ -540,7 +553,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("ਸ਼੍ਰੇਣੀਆਂ"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("ਗੈਲਰੀ"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("ਕਾਰ ਲਈ ਬੱਚਤਾਂ"),
         "rallyAccountDataChecking":
@@ -564,15 +577,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("ਕੁੱਲ"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("ਖਾਤੇ"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("ਸੁਚੇਤਨਾਵਾਂ"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("ਬਿੱਲ"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("ਦੇਣਯੋਗ"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("ਕੱਪੜੇ"),
         "rallyBudgetCategoryCoffeeShops":
@@ -671,7 +684,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ਰੱਦ ਕਰੋ"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("ਕਾਰਟ ਕਲੀਅਰ ਕਰੋ"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("ਕਾਰਟ"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("ਮਾਲ ਭੇਜਣ ਦੀ ਕੀਮਤ:"),
@@ -731,8 +744,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ਗੂੜ੍ਹੀਆਂ ਨੀਲੀਆਂ ਪੈਂਟਾਂ"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("ਪਲਾਸਟਰ ਟਿਊਨਿਕ"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("ਕਵਾਰਟੈੱਟ ਮੇਜ਼"),
         "shrineProductRainwaterTray":
@@ -771,6 +784,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ਚਿੱਟੀ ਪਿੰਨਸਟ੍ਰਾਈਪ ਕਮੀਜ਼"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("ਵਾਇਟਨੀ ਬੈਲਟ"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("ਕਾਰਟ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("ਕਾਰਟ ਬੰਦ ਕਰੋ"),
         "shrineTooltipCloseMenu":
@@ -784,7 +801,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ਸੈਟਿੰਗਾਂ"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("ਪ੍ਰਤਿਕਿਰਿਆਤਮਕ ਸਟਾਰਟਰ ਖਾਕਾ"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("ਬਾਡੀ"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("ਬਟਨ"),
         "starterAppGenericHeadline":

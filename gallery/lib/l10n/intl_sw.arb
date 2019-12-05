@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "NAKILI YOTE",
+  "shrineScreenReaderRemoveProductButton": "Ondoa {product}",
+  "shrineScreenReaderProductAddToCart": "Ongeza kwenye kikapu",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Kikapu, hakuna bidhaa}=1{Kikapu, bidhaa 1}other{Kikapu, bidhaa {quantity}}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Imeshindwa kuyaweka kwenye ubao wa kunakili: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Imewekwa kwenye ubao wa kunakili.",
   "craneSleep8SemanticLabel": "Magofu ya Maya kwenye jabali juu ya ufuo",
   "craneSleep4SemanticLabel": "Hoteli kando ya ziwa na mbele ya milima",
   "craneSleep2SemanticLabel": "Ngome ya Machu Picchu",

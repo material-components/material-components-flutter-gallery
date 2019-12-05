@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "คัดลอกทั้งหมด",
+  "shrineScreenReaderRemoveProductButton": "นำ {product} ออก",
+  "shrineScreenReaderProductAddToCart": "เพิ่มในรถเข็น",
+  "shrineScreenReaderCart": "{quantity,plural, =0{รถเข็นช็อปปิ้งไม่มีสินค้า}=1{รถเข็นช็อปปิ้งมีสินค้า 1 รายการ}other{รถเข็นช็อปปิ้งมีสินค้า {quantity} รายการ}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "คัดลอกไปยังคลิปบอร์ดไม่สำเร็จ: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "คัดลอกไปยังคลิปบอร์ดแล้ว",
   "craneSleep8SemanticLabel": "ซากปรักหักพังของอารยธรรมมายันบนหน้าผาเหนือชายหาด",
   "craneSleep4SemanticLabel": "โรงแรมริมทะเลสาบที่อยู่หน้าภูเขา",
   "craneSleep2SemanticLabel": "ป้อมมาชูปิกชู",

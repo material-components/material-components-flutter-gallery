@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "બધા કૉપિ કરો",
+  "shrineScreenReaderRemoveProductButton": "{product} કાઢી નાખો",
+  "shrineScreenReaderProductAddToCart": "કાર્ટમાં ઉમેરો",
+  "shrineScreenReaderCart": "{quantity,plural, =0{શોપિંગ કાર્ટ, કોઈ આઇટમ નથી}=1{શોપિંગ કાર્ટ, 1 આઇટમ}one{શોપિંગ કાર્ટ, {quantity} આઇટમ}other{શોપિંગ કાર્ટ, {quantity} આઇટમ}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "ક્લિપબોર્ડ પર કૉપિ કરવામાં નિષ્ફળ રહ્યાં: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "ક્લિપબોર્ડ પર કૉપિ કર્યા.",
   "craneSleep8SemanticLabel": "મય બીચના ખડક પર ખંડેર",
   "craneSleep4SemanticLabel": "પર્વતોની સામે તળાવ બાજુ હોટલ",
   "craneSleep2SemanticLabel": "માચુ પિચ્ચુનો રાજગઢ",

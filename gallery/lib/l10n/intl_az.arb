@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "HAMISINI KOPYALAYIN",
+  "shrineScreenReaderRemoveProductButton": "{product} məhsulunu silin",
+  "shrineScreenReaderProductAddToCart": "Səbətə əlavə edin",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Alış-veriş səbəti, element yoxdur}=1{Alış-veriş səbəti, 1 element}other{Alış-veriş səbəti, {quantity} element}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Mübadilə buferinə kopyalamaq alınmadı: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Mübadilə buferinə kopyalandı.",
   "craneSleep8SemanticLabel": "Çimərlikdəki qayalıqlarda Maya xarabalığı",
   "craneSleep4SemanticLabel": "Dağların qarşısında göl kənarı otel",
   "craneSleep2SemanticLabel": "Maçu Pikçu qalası",

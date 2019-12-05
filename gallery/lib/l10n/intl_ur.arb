@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "سبھی کاپی کریں",
+  "shrineScreenReaderRemoveProductButton": "{product} ہٹائیں",
+  "shrineScreenReaderProductAddToCart": "کارٹ میں شامل کریں",
+  "shrineScreenReaderCart": "{quantity,plural, =0{شاپنگ کارٹ، کوئی آئٹم نہیں}=1{شاپنگ کارٹ، 1 آئٹم}other{شاپنگ کارٹ، {quantity} آئٹمز}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "کلپ بورڈ پر کاپی کرنے میں ناکام: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "کلپ بورڈ پر کاپی ہو گیا۔",
   "craneSleep8SemanticLabel": "بیچ کے اوپر پہاڑ پر مایا تہذیب کے کھنڈرات",
   "craneSleep4SemanticLabel": "پہاڑوں کے سامنے جھیل کے کنارے ہوٹل",
   "craneSleep2SemanticLabel": "ماچو پیچو کا قلعہ",

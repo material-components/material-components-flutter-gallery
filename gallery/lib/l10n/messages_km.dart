@@ -35,41 +35,49 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "ធាតុទី ${value}";
 
-  static m6(name, phoneNumber) => "លេខទូរសព្ទ​របស់ ${name} គឺ ${phoneNumber}";
+  static m6(error) => "មិនអាច​ចម្លងទៅឃ្លីបបត​បានទេ៖ ${error}";
 
-  static m7(value) => "អ្នកបាន​ជ្រើសរើស៖ \"${value}\"";
+  static m7(name, phoneNumber) => "លេខទូរសព្ទ​របស់ ${name} គឺ ${phoneNumber}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "អ្នកបាន​ជ្រើសរើស៖ \"${value}\"";
+
+  static m9(accountName, accountNumber, amount) =>
       "គណនី ${accountName} ${accountNumber} ដែលមាន​ទឹកប្រាក់ ${amount}។";
 
-  static m9(amount) => "អ្នកបានចំណាយ​អស់ ${amount} សម្រាប់ថ្លៃសេវា ATM នៅខែនេះ";
-
-  static m10(percent) =>
-      "ល្អណាស់! គណនីមូលប្បទានបត្រ​របស់អ្នកគឺ​ខ្ពស់ជាង​ខែមុន ${percent}។";
+  static m10(amount) =>
+      "អ្នកបានចំណាយ​អស់ ${amount} សម្រាប់ថ្លៃសេវា ATM នៅខែនេះ";
 
   static m11(percent) =>
+      "ល្អណាស់! គណនីមូលប្បទានបត្រ​របស់អ្នកគឺ​ខ្ពស់ជាង​ខែមុន ${percent}។";
+
+  static m12(percent) =>
       "សូមប្រុងប្រយ័ត្ន អ្នកបានប្រើអស់ ${percent} នៃថវិកាទិញ​ទំនិញរបស់អ្នក​សម្រាប់ខែនេះ។";
 
-  static m12(amount) =>
+  static m13(amount) =>
       "អ្នកបាន​ចំណាយអស់ ${amount} លើភោជនីយដ្ឋាន​នៅសប្ដាហ៍នេះ។";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'បង្កើន​ការកាត់ពន្ធ​របស់អ្នក​ដែលអាច​មាន! កំណត់​ប្រភេទ​ទៅ​ប្រតិបត្តិការ 1 ដែលមិនបានកំណត់។', other: 'បង្កើន​ការកាត់ពន្ធ​របស់អ្នក​ដែលអាច​មាន! កំណត់​ប្រភេទ​ទៅ​ប្រតិបត្តិការ ${count} ដែលមិនបានកំណត់។')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "វិក្កយបត្រ ${billName} ដែលមានតម្លៃ ${amount} ផុតកំណត់​នៅថ្ងៃទី ${date}។";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "ថវិកា ${budgetName} ដែលចំណាយអស់ ${amountUsed} នៃទឹកប្រាក់សរុប ${amountTotal} ហើយនៅសល់ ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'មិនមាន​ទំនិញ​ទេ', one: 'ទំនិញ 1', other: 'ទំនិញ ${quantity}')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "បរិមាណ៖ ${quantity}";
+  static m19(quantity) => "បរិមាណ៖ ${quantity}";
 
-  static m19(value) => "ធាតុទី ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'រទេះទិញទំនិញ គ្មានទំនិញ', one: 'រទេះទិញទំនិញ ទំនិញ 1', other: 'រទេះទិញទំនិញ ទំនិញ ${quantity}')}";
+
+  static m21(product) => "ដក ${product} ចេញ";
+
+  static m22(value) => "ធាតុទី ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -270,7 +278,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "ផ្ទះល្វែង​ចម្រុះពណ៌​នៅ Ribeira Square"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("ទូលូម ម៉ិកស៊ិក"),
         "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
-            "សំណង់​បាក់បែក​របស់ទីក្រុងម៉ាយាន​នៅលើ​ចំណោតច្រាំង​ពីលើឆ្នេរខ្សាច់"),
+            "សំណង់​បាក់បែក​នៃទីក្រុងម៉ាយ៉ាន​នៅលើ​ចំណោតច្រាំង​ពីលើឆ្នេរខ្សាច់"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("លីសបោន ព័រទុយហ្គាល់"),
         "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
@@ -357,6 +365,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("ឈីប​ជម្រើស"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("គំរូកូដ"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("បានចម្លង​ទៅ​ឃ្លីបបត។"),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("ចម្លង​ទាំងអស់"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "តម្លៃថេរនៃ​គំរូពណ៌ និងពណ៌​ដែលតំណាងឱ្យ​ក្ដារលាយពណ៌​របស់​រចនាប័ទ្ម​សម្ភារ។"),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -486,7 +499,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("រឿងរ៉ាវជីវិត"),
         "demoTextFieldNameField":
             MessageLookupByLibrary.simpleMessage("ឈ្មោះ*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("តម្រូវ​ឱ្យ​មាន​ឈ្មោះ។"),
         "demoTextFieldNoMoreThan":
@@ -552,7 +565,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "ឱ្យ Google ជួយ​កម្មវិធី​ក្នុងការកំណត់​ទីតាំង។ មានន័យថា​ផ្ញើទិន្នន័យ​ទីតាំង​អនាមិក​ទៅ Google ទោះបីជា​មិនមាន​កម្មវិធី​កំពុងដំណើរការ​ក៏ដោយ។"),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "ប្រើ​សេវាកម្ម​ទីតាំង​របស់ Google?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("កំណត់​គណនី​បម្រុង​ទុក"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("បង្ហាញ​ប្រអប់"),
@@ -560,7 +573,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("មេឌៀ និងរចនាប័ទ្ម​យោង"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("ប្រភេទ"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("សាល​រូបភាព"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("គណនី​សន្សំទិញរថយន្ត"),
         "rallyAccountDataChecking":
@@ -585,15 +598,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("សរុប"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("គណនី"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("ការជូនដំណឹង"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("វិក្កយបត្រ"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("ចំនួនត្រូវបង់"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("សម្លៀក​បំពាក់"),
         "rallyBudgetCategoryCoffeeShops":
@@ -691,7 +704,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("បោះបង់"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("សម្អាត​រទេះ"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("រទេះ"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("ការ​ដឹកជញ្ជូន៖"),
@@ -753,8 +766,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ខោជើងវែង Navy"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("តុ Quartet"),
         "shrineProductRainwaterTray":
@@ -793,6 +806,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("អាវឆ្នូតពណ៌ស"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("ខ្សែក្រវ៉ាត់ Whitney"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("បញ្ចូលទៅរទេះ"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("បិទ​ទំព័រ​រទេះ"),
         "shrineTooltipCloseMenu":
@@ -806,7 +823,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ការកំណត់"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "ស្រទាប់​ចាប់ផ្ដើមដែល​ឆ្លើយតបរហ័ស"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("តួ​អត្ថបទ"),
         "starterAppGenericButton":

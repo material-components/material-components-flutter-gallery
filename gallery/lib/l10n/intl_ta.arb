@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "அனைத்தையும் நகலெடு",
+  "shrineScreenReaderRemoveProductButton": "{product} ஐ அகற்றும்",
+  "shrineScreenReaderProductAddToCart": "கார்ட்டில் சேர்",
+  "shrineScreenReaderCart": "{quantity,plural, =0{ஷாப்பிங் கார்ட், எதுவும் இல்லை}=1{ஷாப்பிங் கார்ட், 1 பொருள்}other{ஷாப்பிங் கார்ட், {quantity} பொருட்கள்}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "கிளிப்போர்டுக்கு நகலெடுக்க இயலவில்லை: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது.",
   "craneSleep8SemanticLabel": "பீச்சைத் தாண்டி உள்ள ஒற்றைக் கிளிஃப்பில் உள்ள மாயன்",
   "craneSleep4SemanticLabel": "மலைகளின் முன்னால் ஏரிக்கு அருகில் உள்ள ஹோட்டல்",
   "craneSleep2SemanticLabel": "மாச்சு பிச்சு சைட்டாடெல்",

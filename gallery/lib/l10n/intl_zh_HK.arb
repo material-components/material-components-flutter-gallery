@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "全部複製",
+  "shrineScreenReaderRemoveProductButton": "移除{product}",
+  "shrineScreenReaderProductAddToCart": "加入購物車",
+  "shrineScreenReaderCart": "{quantity,plural, =0{購物車，冇產品}=1{購物車，1 件產品}other{購物車，{quantity} 件產品}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "無法複製到剪貼簿：{error}",
+  "demoCodeViewerCopiedToClipboardMessage": "已複製到剪貼簿。",
   "craneSleep8SemanticLabel": "座落在懸崖上遙望海灘的馬雅遺跡",
   "craneSleep4SemanticLabel": "背山而建的湖邊酒店",
   "craneSleep2SemanticLabel": "古城馬丘比丘",

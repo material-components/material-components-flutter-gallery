@@ -35,41 +35,48 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "${value} elem";
 
-  static m6(name, phoneNumber) => "${name} telefonszáma: ${phoneNumber}";
+  static m6(error) => "Nem sikerült a vágólapra másolni: ${error}";
 
-  static m7(value) => "Az Ön által választott érték: „${value}”";
+  static m7(name, phoneNumber) => "${name} telefonszáma: ${phoneNumber}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "Az Ön által választott érték: „${value}”";
+
+  static m9(accountName, accountNumber, amount) =>
       "${accountName} bankszámla (${accountNumber}) ${amount} összeggel.";
 
-  static m9(amount) =>
+  static m10(amount) =>
       "${amount} összeget költött ATM-díjakra ebben a hónapban";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Nagyszerű! Folyószámlája ${percent}-kal magasabb, mint múlt hónapban.";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "Előrejelzés: Az e havi Shopping-költségkeret ${percent}-át használta fel.";
 
-  static m12(amount) => "${amount} összeget költött éttermekre ezen a héten.";
+  static m13(amount) => "${amount} összeget költött éttermekre ezen a héten.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Növelje a lehetséges adókedvezményt! Rendeljen kategóriát 1 hozzárendelés nélküli tranzakcióhoz.', other: 'Növelje a lehetséges adókedvezményt! Rendeljen kategóriákat ${count} hozzárendelés nélküli tranzakcióhoz.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "${amount} összegű ${billName} számla esedékességi dátuma: ${date}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "${amountTotal} összegű ${budgetName} költségkeret, amelyből felhasználásra került ${amountUsed}, és maradt ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'NINCSENEK TÉTELEK', one: '1 TÉTEL', other: '${quantity} TÉTEL')}";
 
-  static m17(price) => "× ${price}";
+  static m18(price) => "× ${price}";
 
-  static m18(quantity) => "Mennyiség: ${quantity}";
+  static m19(quantity) => "Mennyiség: ${quantity}";
 
-  static m19(value) => "${value} elem";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Kosár, üres', one: 'Kosár, 1 tétel', other: 'Kosár, ${quantity} tétel')}";
+
+  static m21(product) => "${product} eltávolítása";
+
+  static m22(value) => "${value} elem";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -362,6 +369,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("Választószelvény"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Kódminta"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("A vágólapra másolva."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("ÖSSZES MÁSOLÁSA"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Színek és állandó színkorongok, amelyek az anyagszerű megjelenés színpalettáját képviselik."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -494,7 +506,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Élettörténet"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Név*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("A név megadása kötelező."),
         "demoTextFieldNoMoreThan": MessageLookupByLibrary.simpleMessage(
@@ -559,7 +571,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Hagyja, hogy a Google segítsen az alkalmazásoknak a helymeghatározásban. Ez névtelen helyadatok küldését jelenti a Google-nak, még akkor is, ha egyetlen alkalmazás sem fut."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Használni kívánja a Google Helyszolgáltatásokat?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "Helyreállítási fiók beállítása"),
         "dialogShow": MessageLookupByLibrary.simpleMessage(
@@ -569,7 +581,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Kategóriák"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galéria"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings": MessageLookupByLibrary.simpleMessage(
             "Autóval kapcsolatos megtakarítások"),
         "rallyAccountDataChecking":
@@ -593,15 +605,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Összesen"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Fiókok"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Értesítések"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Számlák"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Esedékes"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Ruházat"),
         "rallyBudgetCategoryCoffeeShops":
@@ -711,7 +723,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("MÉGSE"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("KOSÁR TÖRLÉSE"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("KOSÁR"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Szállítás:"),
@@ -774,8 +786,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Matrózkék nadrág"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("„Plaster” tunika"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Négyzet alakú asztal"),
         "shrineProductRainwaterTray":
@@ -813,6 +825,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Fehér csíkos ing"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("„Whitney” öv"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Hozzáadás a kosárhoz"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Kosár bezárása"),
         "shrineTooltipCloseMenu":
@@ -826,7 +842,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Beállítások"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Interaktív kezdő elrendezés"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Szövegtörzs"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("GOMB"),

@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "ସବୁ କପି କରନ୍ତୁ",
+  "shrineScreenReaderRemoveProductButton": "{product} କାଢ଼ନ୍ତୁ",
+  "shrineScreenReaderProductAddToCart": "କାର୍ଟରେ ଯୋଗ କରନ୍ତୁ",
+  "shrineScreenReaderCart": "{quantity,plural, =0{ସପିଂ କାର୍ଟ, କୌଣସି ଆଇଟମ୍ ନାହିଁ}=1{ସପିଂ କାର୍ଟ, 1ଟି ଆଇଟମ୍}other{ସପିଂ କାର୍ଟ, {quantity}ଟି ଆଇଟମ୍}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "କ୍ଲିପ୍‌ବୋର୍ଡକୁ କପି କରିବାରେ ବିଫଳ ହେଲା: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "କ୍ଲିପ୍‌ବୋର୍ଡ‌କୁ କପି କରାଯାଇଛି।",
   "craneSleep8SemanticLabel": "ସମୂଦ୍ର ତଟରେ ଥିବା ଏକ ଚଟାଣ ଉପରେ ଗଢ଼ିଉଠିଥିବା ମାୟା ସଭ୍ୟତା",
   "craneSleep4SemanticLabel": "ପର୍ବତଗୁଡ଼ିକ ସାମ୍ନାରେ ହ୍ରଦ ପାଖରେ ଥିବା ହୋଟେଲ୍",
   "craneSleep2SemanticLabel": "ମାଚୁ ପିଚୁ ସିଟାଡେଲ୍",

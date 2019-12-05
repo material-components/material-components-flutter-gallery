@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "सभी को कॉपी करें",
+  "shrineScreenReaderRemoveProductButton": "{product} हटाएं",
+  "shrineScreenReaderProductAddToCart": "कार्ट में जोड़ें",
+  "shrineScreenReaderCart": "{quantity,plural, =0{शॉपिंग कार्ट, इसमें कोई आइटम नहीं है}=1{शॉपिंग कार्ट, इसमें 1 आइटम है}one{शॉपिंग कार्ट, इसमें {quantity} आइटम हैं}other{शॉपिंग कार्ट, इसमें {quantity} आइटम हैं}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "क्लिपबोर्ड पर कॉपी नहीं किया जा सका: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "क्लिपबोर्ड पर कॉपी किया गया.",
   "craneSleep8SemanticLabel": "समुद्र तट पर स्थित एक चट्टान पर माया सभ्यता के खंडहर",
   "craneSleep4SemanticLabel": "पहाड़ों के सामने, झील के किनारे बना होटल",
   "craneSleep2SemanticLabel": "माचू पिच्चू सिटडल",

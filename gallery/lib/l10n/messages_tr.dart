@@ -35,41 +35,48 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Ürün ${value}";
 
-  static m6(name, phoneNumber) =>
+  static m6(error) => "Panoya kopyalanamadı: ${error}";
+
+  static m7(name, phoneNumber) =>
       "${name} adlı kişinin telefon numarası: ${phoneNumber}";
 
-  static m7(value) => "Şunu seçtiniz: \"${value}\"";
+  static m8(value) => "Şunu seçtiniz: \"${value}\"";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m9(accountName, accountNumber, amount) =>
       "Bakiyesi ${amount} olan ${accountNumber} numaralı ${accountName} hesabı.";
 
-  static m9(amount) => "Bu ay ${amount} tutarında ATM komisyonu ödediniz.";
-
-  static m10(percent) =>
-      "Harika! Çek hesabınız geçen aya göre ${percent} daha fazla.";
+  static m10(amount) => "Bu ay ${amount} tutarında ATM komisyonu ödediniz.";
 
   static m11(percent) =>
+      "Harika! Çek hesabınız geçen aya göre ${percent} daha fazla.";
+
+  static m12(percent) =>
       "Dikkat! Bu ayın Alışveriş bütçenizi ${percent} oranında harcadınız.";
 
-  static m12(amount) => "Bu hafta Restoranlarda ${amount} harcadınız.";
+  static m13(amount) => "Bu hafta Restoranlarda ${amount} harcadınız.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Olası vergi iadenizi artırın. 1 atanmamış işleme kategoriler atayın.', other: 'Olası vergi iadenizi artırın. ${count} atanmamış işleme kategoriler atayın.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "Son ödeme tarihi ${date} olan ${amount} tutarındaki ${billName} faturası.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "Toplamı ${amountTotal} olan ve ${amountUsed} kullanıldıktan sonra ${amountLeft} kalan ${budgetName} bütçesi";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'ÖĞE YOK', one: '1 ÖĞE', other: '${quantity} ÖĞE')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Miktar: ${quantity}";
+  static m19(quantity) => "Miktar: ${quantity}";
 
-  static m19(value) => "Ürün ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Alışveriş sepeti, ürün yok', one: 'Alışveriş sepeti, 1 ürün', other: 'Alışveriş sepeti, ${quantity} ürün')}";
+
+  static m21(product) => "${product} ürününü kaldır";
+
+  static m22(value) => "Ürün ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -337,6 +344,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("Seçenek Çipi"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Kod Örneği"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("Panoya kopyalandı."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("TÜMÜNÜ KOPYALA"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Materyal Tasarımın renk paletini temsil eden renk ve renk örneği sabitleri."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -467,7 +479,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Hayat hikayesi"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Ad*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Ad gerekli."),
         "demoTextFieldNoMoreThan":
@@ -531,7 +543,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Google\'ın, uygulamaların konum tespiti yapmasına yardımcı olmasına izin verin. Bu, hiçbir uygulama çalışmıyorken bile anonim konum verilerinin Google\'a gönderilmesi anlamına gelir."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Google\'ın konum hizmeti kullanılsın mı?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Yedekleme hesabı ayarla"),
         "dialogShow":
@@ -541,7 +553,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Kategoriler"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galeri"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Araba İçin Biriktirilen"),
         "rallyAccountDataChecking":
@@ -565,16 +577,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Toplam"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Hesaplar"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Uyarılar"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Faturalar"),
         "rallyBillsDue":
             MessageLookupByLibrary.simpleMessage("Ödenecek tutar:"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Giyim"),
         "rallyBudgetCategoryCoffeeShops":
@@ -674,7 +686,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("İPTAL"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("ALIŞVERİŞ SEPETİNİ BOŞALT"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("ALIŞVERİŞ SEPETİ"),
         "shrineCartShippingCaption":
@@ -737,8 +749,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Lacivert pantolon"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("İnce tunik"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Dört kişilik masa"),
         "shrineProductRainwaterTray":
@@ -777,6 +789,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("İnce çizgili beyaz gömlek"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney kemer"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Sepete ekle"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Alışveriş sepetini kapat"),
         "shrineTooltipCloseMenu":
@@ -790,7 +806,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ayarlar"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Duyarlı başlangıç düzeni"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Gövde"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("DÜĞME"),

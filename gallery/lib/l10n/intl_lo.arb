@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "ສຳເນົາທັງໝົດ",
+  "shrineScreenReaderRemoveProductButton": "ລຶບ {product} ອອກ",
+  "shrineScreenReaderProductAddToCart": "ເພີ່ມໃສ່​ກະຕ່າ",
+  "shrineScreenReaderCart": "{quantity,plural, =0{ກະຕ່າຊື້ເຄື່ອງ, ບໍ່ມີລາຍການ}=1{ກະຕ່າຊື້ເຄື່ອງ, 1 ລາຍການ}other{ກະຕ່າຊື້ເຄື່ອງ, {quantity} ລາຍການ}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "ສຳເນົາໄປໃສ່ຄລິບບອດບໍ່ສຳເລັດ: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "ສຳເນົາໃສ່ຄລິບບອດແລ້ວ.",
   "craneSleep8SemanticLabel": "ຊາກເປ່ເພຂອງສິ່ງກໍ່ສ້າງຊາວມາຢັນຢູ່ໜ້າຜາເໜືອຫາດຊາຍ",
   "craneSleep4SemanticLabel": "ໂຮງແຮມຮິມທະເລສາບທີ່ຢູ່ໜ້າພູ",
   "craneSleep2SemanticLabel": "ປ້ອມມາຊູປິກຊູ",

@@ -35,42 +35,49 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Üksus ${value}";
 
-  static m6(name, phoneNumber) =>
+  static m6(error) => "Lõikelauale kopeerimine ebaõnnestus: ${error}";
+
+  static m7(name, phoneNumber) =>
       "Kontakti ${name} telefoninumber on ${phoneNumber}";
 
-  static m7(value) => "Teie valik: „${value}”";
+  static m8(value) => "Teie valik: „${value}”";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m9(accountName, accountNumber, amount) =>
       "Konto ${accountName} (${accountNumber}) – ${amount}.";
 
-  static m9(amount) =>
+  static m10(amount) =>
       "Olete sel kuul pangaautomaatidest välja võtnud ${amount}";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Tubli! Teie deposiidikonto saldo on eelmise kuuga võrreldes ${percent} suurem.";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "Tähelepanu! Olete sel kuu kulutanud ${percent} oma ostueelarvest.";
 
-  static m12(amount) => "Olete sel nädalal restoranides kulutanud ${amount}.";
+  static m13(amount) => "Olete sel nädalal restoranides kulutanud ${amount}.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Suurendage oma potentsiaalset maksuvabastust! Määrake kategooriad 1 määramata tehingule.', other: 'Suurendage oma potentsiaalset maksuvabastust! Määrake kategooriad ${count} määramata tehingule.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "Arve ${billName} summas ${amount} tuleb tasuda kuupäevaks ${date}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "Eelarve ${budgetName} summast ${amountTotal} on kasutatud ${amountUsed}, järel on ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'ÜKSUSI POLE', one: '1 ÜKSUS', other: '${quantity} ÜKSUST')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Kogus: ${quantity}";
+  static m19(quantity) => "Kogus: ${quantity}";
 
-  static m19(value) => "Üksus ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Ostukorv, üksusi pole', one: 'Ostukorv, 1 üksus', other: 'Ostukorv, ${quantity} üksust')}";
+
+  static m21(product) => "Eemalda ${product}";
+
+  static m22(value) => "Üksus ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -352,6 +359,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("Valikukiip"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Näidiskood"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("Kopeeritud lõikelauale."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("KOPEERI KÕIK"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Värvide ja värvipaletti püsiväärtused, mis esindavad materiaalse disaini värvipaletti."),
         "demoColorsSubtitle":
@@ -480,7 +492,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Elulugu"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Nimi*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Nimi on nõutav."),
         "demoTextFieldNoMoreThan":
@@ -545,7 +557,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Lubage Google\'il rakendusi asukoha tuvastamisel aidata. See tähendab, et Google\'ile saadetakse anonüümseid asukohaandmeid isegi siis, kui ükski rakendus ei tööta."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Kas kasutada Google\'i asukohateenuseid?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Varundamiskonto määramine"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("KUVA DIALOOG"),
@@ -554,7 +566,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Kategooriad"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galerii"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Autolaenukonto"),
         "rallyAccountDataChecking":
@@ -580,15 +592,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Kokku"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Kontod"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Hoiatused"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Arved"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Maksta"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Riided"),
         "rallyBudgetCategoryCoffeeShops":
@@ -689,7 +701,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("TÜHISTA"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("TÜHJENDA KORV"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("OSTUKORV"),
         "shrineCartShippingCaption":
@@ -751,8 +763,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Navy trousers"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Plaster tunic"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Quartet table"),
         "shrineProductRainwaterTray":
@@ -791,6 +803,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("White pinstripe shirt"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney belt"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Lisa ostukorvi"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Sule ostukorv"),
         "shrineTooltipCloseMenu":
@@ -803,7 +819,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineTooltipSettings": MessageLookupByLibrary.simpleMessage("Seaded"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Automaatselt kohanduva stardirakenduse paigutus"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Sisu"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("NUPP"),
         "starterAppGenericHeadline":

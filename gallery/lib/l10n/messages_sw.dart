@@ -35,41 +35,48 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Bidhaa ya ${value}";
 
-  static m6(name, phoneNumber) =>
+  static m6(error) => "Imeshindwa kuyaweka kwenye ubao wa kunakili: ${error}";
+
+  static m7(name, phoneNumber) =>
       "Nambari ya simu ya ${name} ni ${phoneNumber}";
 
-  static m7(value) => "Umechagua: \"${value}\"";
+  static m8(value) => "Umechagua: \"${value}\"";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m9(accountName, accountNumber, amount) =>
       "Akaunti ya ${accountName} ${accountNumber} iliyo na ${amount}.";
 
-  static m9(amount) => "Umetumia ${amount} katika ada za ATM mwezi huu";
-
-  static m10(percent) =>
-      "Kazi nzuri! Kiwango cha akaunti yako ya hundi kimezidi cha mwezi uliopita kwa ${percent}.";
+  static m10(amount) => "Umetumia ${amount} katika ada za ATM mwezi huu";
 
   static m11(percent) =>
+      "Kazi nzuri! Kiwango cha akaunti yako ya hundi kimezidi cha mwezi uliopita kwa ${percent}.";
+
+  static m12(percent) =>
       "Arifa: umetumia ${percent} ya bajeti yako ya Ununuzi kwa mwezi huu.";
 
-  static m12(amount) => "Umetumia ${amount} kwenye Mikahawa wiki hii.";
+  static m13(amount) => "Umetumia ${amount} kwenye Mikahawa wiki hii.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Ongeza kiwango cha kodi unayoweza kupunguziwa! Weka aina kwenye muamala 1 ambao hauna aina.', other: 'Ongeza kiwango cha kodi unayoweza kupunguziwa! Weka aina kwenye miamala ${count} ambayo haina aina.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "Bili ya ${amount} ya ${billName} inapaswa kulipwa ${date}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "Bajeti ya ${budgetName} yenye ${amountUsed} ambazo zimetumika kati ya ${amountTotal}, zimesalia ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'HAKUNA BIDHAA', one: 'BIDHAA 1', other: 'BIDHAA ${quantity}')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Kiasi: ${quantity}";
+  static m19(quantity) => "Kiasi: ${quantity}";
 
-  static m19(value) => "Bidhaa ya ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Kikapu, hakuna bidhaa', one: 'Kikapu, bidhaa 1', other: 'Kikapu, bidhaa ${quantity}')}";
+
+  static m21(product) => "Ondoa ${product}";
+
+  static m22(value) => "Bidhaa ya ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -346,6 +353,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Chipu ya Kuchagua"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Sampuli ya Msimbo"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage(
+                "Imewekwa kwenye ubao wa kunakili."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("NAKILI YOTE"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Rangi na seti ya rangi isiyobadilika ambayo inawakilisha safu ya rangi ya Usanifu Bora."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -475,7 +488,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Hadithi ya wasifu"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Jina*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Ni sharti ujaze jina."),
         "demoTextFieldNoMoreThan":
@@ -539,7 +552,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Ruhusu Google isaidie programu kutambua mahali. Hii inamaanisha kutuma data isiyokutambulisha kwa Google, hata wakati hakuna programu zinazotumika."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Ungependa kutumia huduma ya mahali ya Google?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "Weka akaunti ya kuhifadhi nakala"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("ONYESHA KIDIRISHA"),
@@ -547,7 +560,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "MIUNDO NA MAUDHUI YA MAREJELEO"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("Aina"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Matunzio"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Akiba ya Gari"),
         "rallyAccountDataChecking":
@@ -573,16 +586,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Jumla"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Akaunti"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Arifa"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Bili"),
         "rallyBillsDue":
             MessageLookupByLibrary.simpleMessage("Zinahitajika mnamo"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Mavazi"),
         "rallyBudgetCategoryCoffeeShops":
@@ -683,7 +696,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("GHAIRI"),
         "shrineCartClearButtonCaption": MessageLookupByLibrary.simpleMessage(
             "ONDOA KILA KITU KWENYE KIKAPU"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("KIKAPU"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Usafirishaji:"),
@@ -745,8 +758,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Suruali ya buluu"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Gwanda la Plaster"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Meza"),
         "shrineProductRainwaterTray":
@@ -784,6 +797,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Shati nyeupe yenye milia"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Mshipi wa Whitney"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Ongeza kwenye kikapu"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Funga kikapu"),
         "shrineTooltipCloseMenu":
@@ -797,7 +814,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Mipangilio"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Muundo wa kuanzisha unaobadilika kulingana na kifaa"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Mwili"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("KITUFE"),

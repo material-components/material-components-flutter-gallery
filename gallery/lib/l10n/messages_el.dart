@@ -35,42 +35,50 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Στοιχείο ${value}";
 
-  static m6(name, phoneNumber) =>
+  static m6(error) => "Η αντιγραφή στο πρόχειρο απέτυχε: ${error}";
+
+  static m7(name, phoneNumber) =>
       "Ο αριθμός τηλεφώνου του χρήστη ${name} είναι ${phoneNumber}";
 
-  static m7(value) => "Επιλέξατε \"${value}\"";
+  static m8(value) => "Επιλέξατε \"${value}\"";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m9(accountName, accountNumber, amount) =>
       "Λογαριασμός ${accountName} με αριθμό ${accountNumber} και ποσό ${amount}.";
 
-  static m9(amount) => "Δαπανήσατε ${amount} σε προμήθειες ATM αυτόν τον μήνα.";
-
-  static m10(percent) =>
-      "Συγχαρητήρια! Ο τρεχούμενος λογαριασμός σας παρουσιάζει αύξηση ${percent} συγκριτικά με τον προηγούμενο μήνα.";
+  static m10(amount) =>
+      "Δαπανήσατε ${amount} σε προμήθειες ATM αυτόν τον μήνα.";
 
   static m11(percent) =>
+      "Συγχαρητήρια! Ο τρεχούμενος λογαριασμός σας παρουσιάζει αύξηση ${percent} συγκριτικά με τον προηγούμενο μήνα.";
+
+  static m12(percent) =>
       "Έχετε υπόψη ότι χρησιμοποιήσατε το ${percent} του προϋπολογισμού αγορών σας γι\' αυτόν τον μήνα.";
 
-  static m12(amount) =>
+  static m13(amount) =>
       "Δαπανήσατε ${amount} σε εστιατόρια αυτήν την εβδομάδα.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Αυξήστε την πιθανή έκπτωση φόρου! Εκχωρήστε κατηγορίες σε 1 μη εκχωρημένη συναλλαγή.', other: 'Αυξήστε την πιθανή έκπτωση φόρου! Εκχωρήστε κατηγορίες σε ${count} μη εκχωρημένες συναλλαγές.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "Λογαριασμός ${billName} με προθεσμία στις ${date} και ποσό ${amount}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "Προϋπολογισμός ${budgetName} από τον οποίο έχουν χρησιμοποιηθεί ${amountUsed} από το συνολικό ποσό των ${amountTotal}, απομένουν ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'ΚΑΝΕΝΑ ΣΤΟΙΧΕΙΟ', one: '1 ΣΤΟΙΧΕΙΟ', other: '${quantity} ΣΤΟΙΧΕΙΑ')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Ποσότητα: ${quantity}";
+  static m19(quantity) => "Ποσότητα: ${quantity}";
 
-  static m19(value) => "Στοιχείο ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Καλάθι αγορών, κανένα στοιχείο', one: 'Καλάθι αγορών, 1 στοιχείο', other: 'Καλάθι αγορών, ${quantity} στοιχεία')}";
+
+  static m21(product) => "Κατάργηση ${product}";
+
+  static m22(value) => "Στοιχείο ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -143,7 +151,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Κορεατικό τάκο"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Παρίσι, Γαλλία"),
         "craneEat4SemanticLabel":
-            MessageLookupByLibrary.simpleMessage("Γλυκό σοκολάτας"),
+            MessageLookupByLibrary.simpleMessage("Επιδόρπιο σοκολάτας"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Σεούλ, Νότια Κορέα"),
         "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
             "Χώρος καθήμενων καλλιτεχνικού εστιατορίου"),
@@ -362,6 +370,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Τσιπ επιλογής"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Δείγμα κώδικα"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("Αντιγράφηκε στο πρόχειρο."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("ΑΝΤΙΓΡΑΦΗ ΟΛΩΝ"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Χρώματα και δείγματα χρώματος που αντιπροσωπεύουν τη χρωματική παλέτα του material design."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -493,7 +506,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Βιογραφία"),
         "demoTextFieldNameField":
             MessageLookupByLibrary.simpleMessage("Όνομα*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Το όνομα είναι υποχρεωτικό."),
         "demoTextFieldNoMoreThan": MessageLookupByLibrary.simpleMessage(
@@ -559,7 +572,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Επιτρέψτε στην Google να διευκολύνει τις εφαρμογές να προσδιορίζουν την τοποθεσία σας. Αυτό συνεπάγεται την αποστολή ανώνυμων δεδομένων τοποθεσίας στην Google, ακόμη και όταν δεν εκτελούνται εφαρμογές."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Χρήση της υπηρεσίας τοποθεσίας της Google;"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "Ρύθμιση λογαριασμού δημιουργίας αντιγράφων ασφαλείας"),
         "dialogShow":
@@ -569,7 +582,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Κατηγορίες"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Συλλογή"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Οικονομίες αυτοκινήτου"),
         "rallyAccountDataChecking":
@@ -594,15 +607,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Σύνολο"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Λογαριασμοί"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Ειδοποιήσεις"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Λογαριασμοί"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Προθεσμία"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Ρουχισμός"),
         "rallyBudgetCategoryCoffeeShops":
@@ -708,7 +721,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ΑΚΥΡΩΣΗ"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("ΑΔΕΙΑΣΜΑ ΚΑΛΑΘΙΟΥ"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("ΚΑΛΑΘΙ"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Αποστολή:"),
@@ -770,8 +783,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Παντελόνια Navy"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Τουνίκ με σχέδια"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Τραπέζι Quartet"),
         "shrineProductRainwaterTray":
@@ -810,6 +823,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Λευκό ριγέ πουκάμισο"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Ζώνη Whitney"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Προσθήκη στο καλάθι"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Κλείσιμο καλαθιού"),
         "shrineTooltipCloseMenu":
@@ -824,7 +841,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ρυθμίσεις"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Μια αποκριτική διάταξη για την εφαρμογή Starter"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Σώμα"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("ΚΟΥΜΠΙ"),

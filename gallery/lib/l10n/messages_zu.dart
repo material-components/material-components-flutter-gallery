@@ -35,41 +35,49 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Into ${value}";
 
-  static m6(name, phoneNumber) => "${name} inombolo yefoni ngu-${phoneNumber}";
+  static m6(error) =>
+      "Yehlulekile ukukopishela kubhodi lokunamathisela: ${error}";
 
-  static m7(value) => "Ukhethe: \"${value}\"";
+  static m7(name, phoneNumber) => "${name} inombolo yefoni ngu-${phoneNumber}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "Ukhethe: \"${value}\"";
+
+  static m9(accountName, accountNumber, amount) =>
       "${accountName} i-akhawunti engu-${accountNumber} enokungu-${amount}.";
 
-  static m9(amount) => "Uchithe u-${amount} enkokhelweni ye-ATM kule nyanga";
-
-  static m10(percent) =>
-      "Umsebenzi omuhle! I-akhawunti yakho yokuhlola ngu-${percent} ngaphezulu kunenyanga edlule.";
+  static m10(amount) => "Uchithe u-${amount} enkokhelweni ye-ATM kule nyanga";
 
   static m11(percent) =>
+      "Umsebenzi omuhle! I-akhawunti yakho yokuhlola ngu-${percent} ngaphezulu kunenyanga edlule.";
+
+  static m12(percent) =>
       "Amakhanda phezulu, usebenzise u-${percent} webhajethi yakho yokuthenga kule nyanga.";
 
-  static m12(amount) =>
+  static m13(amount) =>
       "Usebenzise u-${amount} ezindaweni zokudlela kuleli viki.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Khuphula amandla akho okudonselwa intela! Nikeza izigaba kumsebenzi ongu-1 ongenasigaba.', other: 'Khuphula amandla akho okudonselwa intela! Nikeza izigaba kumisebenzi enganikeziwe engu-${count}.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "${billName} inkokhelo ifuneka ngomhla ka-${date} ngokungu-${amount}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "${budgetName} ibhajethi enokungu-${amountUsed} okusetshenzisiwe kokungu-${amountTotal}, ${amountLeft} okusele";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'AZIKHO IZINTO', one: '1 INTO', other: '${quantity} IZINTO')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Ubuningi: ${quantity}";
+  static m19(quantity) => "Ubuningi: ${quantity}";
 
-  static m19(value) => "Into ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Ikalishi lokuthenga, azikho izinto', one: 'Ikalishi lokuthenga, 1 into', other: 'Ikalishi lokuthenga, ${quantity} izinto')}";
+
+  static m21(product) => "Susa i-${product}";
+
+  static m22(value) => "Into ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -148,8 +156,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneEat3SemanticLabel":
             MessageLookupByLibrary.simpleMessage("I-Korean taco"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("I-Paris, France"),
-        "craneEat4SemanticLabel":
-            MessageLookupByLibrary.simpleMessage("I-Chocolate desert"),
+        "craneEat4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Isidlo sokwehlisa soshokoledi"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("I-Seoul, South Korea"),
         "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
@@ -370,6 +378,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("I-Chip yenketho"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Isampuli yekhodi"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage(
+                "Kukopishwe kubhodi lokunamathisela."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("KOPISHA KONKE"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Umbala nokuhambisana kahle kwe-swatch yombala okumele i-palette yombala yedizayini yokubalulekile."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -500,7 +514,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Indaba yempilo"),
         "demoTextFieldNameField":
             MessageLookupByLibrary.simpleMessage("Igama*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Igama liyadingeka."),
         "demoTextFieldNoMoreThan": MessageLookupByLibrary.simpleMessage(
@@ -565,7 +579,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Vumela i-Google isize izinhlelo zokusebenza zithole indawo. Lokhu kusho ukuthumela idatha yendawo engaziwa ku-Google, nanoma kungekho zinhlelo zokusebenza ezisebenzayo."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Sebenzisa isevisi yendawo ye-Google?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "Setha i-akhawunti yokwenza isipele"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("BONISA IBHOKISI"),
@@ -573,7 +587,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("IZITAYELA ZENKOMBA NEMIDIYA"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("Izigaba"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Igalari"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Ukulondoloza kwemoto"),
         "rallyAccountDataChecking":
@@ -599,15 +613,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Isamba"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Ama-akhawunti"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Izexwayiso"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Amabhili"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Ifuneka"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Izimpahla"),
         "rallyBudgetCategoryCoffeeShops":
@@ -714,7 +728,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("KHANSELA"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("SULA INQOLA"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("IKALISHI"),
         "shrineCartShippingCaption":
@@ -778,8 +792,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Amabhulukwe anevi"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("I-Plaster tunic"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Ithebula lekota"),
         "shrineProductRainwaterTray":
@@ -819,6 +833,10 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Ishedi le-pinstripe elimhlophe"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Ibhande le-Whitney"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Engeza kukalishi"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Vala ikalishi"),
         "shrineTooltipCloseMenu":
@@ -832,7 +850,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Izilungiselelo"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Isendlalelo sokuqalisa sokuphendula"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Umzimba"),
         "starterAppGenericButton":

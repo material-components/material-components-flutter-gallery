@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "KOPIJUOTI VISKĄ",
+  "shrineScreenReaderRemoveProductButton": "Pašalinti produktą: {product}",
+  "shrineScreenReaderProductAddToCart": "Pridėti į krepšelį",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Pirkinių krepšelis, nėra jokių prekių}=1{Pirkinių krepšelis, 1 prekė}one{Pirkinių krepšelis, {quantity} prekė}few{Pirkinių krepšelis, {quantity} prekės}many{Pirkinių krepšelis, {quantity} prekės}other{Pirkinių krepšelis, {quantity} prekių}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Nepavyko nukopijuoti į iškarpinę: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Nukopijuota į iškarpinę.",
   "craneSleep8SemanticLabel": "Majų griuvėsiai paplūdimyje ant uolos",
   "craneSleep4SemanticLabel": "Viešbutis ežero pakrantėje su kalnais",
   "craneSleep2SemanticLabel": "Maču Pikču tvirtovė",

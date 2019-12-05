@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "БҮГДИЙГ ХУУЛАХ",
+  "shrineScreenReaderRemoveProductButton": "Хасах {product}",
+  "shrineScreenReaderProductAddToCart": "Сагсанд нэмэх",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Худалдан авах сагс, зүйлс алга}=1{Худалдан авах сагс, 1 зүйл}other{Худалдан авах сагс, {quantity} зүйл}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Түр санах ойд хуулж чадсанүй: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Түр санах ойд хуулсан.",
   "craneSleep8SemanticLabel": "Далайн эрэг дээрх хадан цохионы Майягийн балгас туурь",
   "craneSleep4SemanticLabel": "Уулын урдах нуурын эргийн зочид буудал",
   "craneSleep2SemanticLabel": "Мачу Пикчу хэрэм",

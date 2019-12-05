@@ -35,42 +35,49 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Пункт ${value}";
 
-  static m6(name, phoneNumber) => "${name}: ${phoneNumber}";
+  static m6(error) => "Не удалось скопировать текст: ${error}";
 
-  static m7(value) => "Вы выбрали значение \"${value}\".";
+  static m7(name, phoneNumber) => "${name}: ${phoneNumber}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "Вы выбрали значение \"${value}\".";
+
+  static m9(accountName, accountNumber, amount) =>
       "Счет \"${accountName}\" с номером ${accountNumber}. Баланс: ${amount}.";
 
-  static m9(amount) =>
+  static m10(amount) =>
       "В этом месяце вы потратили ${amount} на оплату комиссии в банкоматах.";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Отлично! В этом месяце на вашем счете на ${percent} больше средств по сравнению с прошлым месяцем.";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "Внимание! Вы израсходовали ${percent} своего бюджета на этот месяц.";
 
-  static m12(amount) =>
+  static m13(amount) =>
       "На этой неделе вы потратили ${amount} на еду и напитки в ресторанах.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Увеличьте сумму возможного налогового вычета, назначив категорию для одной нераспределенной транзакции.', few: 'Увеличьте сумму возможного налогового вычета, назначив категории для ${count} нераспределенных транзакций.', many: 'Увеличьте сумму возможного налогового вычета, назначив категории для ${count} нераспределенных транзакций.', other: 'Увеличьте сумму возможного налогового вычета, назначив категории для ${count} нераспределенной транзакции.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "Счет \"${billName}\" на сумму ${amount}. Срок оплаты: ${date}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "Бюджет \"${budgetName}\". Израсходовано: ${amountUsed} из ${amountTotal}. Осталось: ${amountLeft}.";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'НЕТ ТОВАРОВ', one: '1 ТОВАР', few: '${quantity} ТОВАРА', many: '${quantity} ТОВАРОВ', other: '${quantity} ТОВАРА')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Количество: ${quantity}";
+  static m19(quantity) => "Количество: ${quantity}";
 
-  static m19(value) => "Пункт ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Нет товаров в корзине', one: '1 товар в корзине', few: '${quantity} товара в корзине', many: '${quantity} товаров в корзине', other: '${quantity} товара в корзине')}";
+
+  static m21(product) => "${product}: удалить товар";
+
+  static m22(value) => "Пункт ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -345,6 +352,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("Чип выбора"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Пример кода"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage(
+                "Текст скопирован в буфер обмена."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("КОПИРОВАТЬ ВСЕ"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Константы для цветов и градиентов, которые представляют цветовую палитру Material Design."),
         "demoColorsSubtitle":
@@ -477,7 +490,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Биография"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Имя*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Введите имя."),
         "demoTextFieldNoMoreThan":
@@ -543,7 +556,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Отправка анонимных геоданных в Google помогает приложениям точнее определять ваше местоположение. Данные будут отправляться, даже если не запущено ни одно приложение."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Использовать геолокацию Google?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "Настройка аккаунта для резервного копирования"),
         "dialogShow":
@@ -553,7 +566,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Категории"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Галерея"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Сбережения на машину"),
         "rallyAccountDataChecking":
@@ -580,15 +593,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccounts":
             MessageLookupByLibrary.simpleMessage("Банковские счета"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Оповещения"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Счета"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Срок"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Одежда"),
         "rallyBudgetCategoryCoffeeShops":
@@ -691,7 +704,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ОТМЕНА"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("ОЧИСТИТЬ КОРЗИНУ"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("КОРЗИНА"),
         "shrineCartShippingCaption":
@@ -754,8 +767,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Короткие брюки клеш"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Кремовая туника"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Круглый стол"),
         "shrineProductRainwaterTray":
@@ -794,6 +807,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Рубашка в белую полоску"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Кожаный ремень"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Добавить в корзину"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Закрыть корзину"),
         "shrineTooltipCloseMenu":
@@ -807,7 +824,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Настройки"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Адаптивный макет"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Основной текст"),
         "starterAppGenericButton":

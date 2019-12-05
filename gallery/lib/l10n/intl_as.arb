@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "সকলো প্ৰতিলিপি কৰক",
+  "shrineScreenReaderRemoveProductButton": "{product} আঁতৰাওক",
+  "shrineScreenReaderProductAddToCart": "কাৰ্টত যোগ কৰক",
+  "shrineScreenReaderCart": "{quantity,plural, =0{শ্বপিং কাৰ্ট, কোনো বস্তু নাই}=1{শ্বপিং কাৰ্ট, ১ টা বস্তু}one{শ্বপিং কার্ট, {quantity} টা বস্তু}other{শ্বপিং কার্ট, {quantity} টা বস্তু}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "ক্লিপব'ৰ্ডলৈ প্ৰতিলিপি কৰিব পৰা নগ'ল: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "ক্লিপব’ৰ্ডলৈ প্ৰতিলিপি কৰা হ’ল।",
   "craneSleep8SemanticLabel": "এটা উপকূলৰ ওপৰত মায়া সভ্যতাৰ ধ্বংসাৱশেষ",
   "craneSleep4SemanticLabel": "পৰ্বতৰ সন্মুখত থকা এটা হ্ৰদৰ কাষৰীয়া হোটেল",
   "craneSleep2SemanticLabel": "মাচু পিচু চিটাডেল",

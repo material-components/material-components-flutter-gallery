@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "TÜMÜNÜ KOPYALA",
+  "shrineScreenReaderRemoveProductButton": "{product} ürününü kaldır",
+  "shrineScreenReaderProductAddToCart": "Sepete ekle",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Alışveriş sepeti, ürün yok}=1{Alışveriş sepeti, 1 ürün}other{Alışveriş sepeti, {quantity} ürün}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Panoya kopyalanamadı: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Panoya kopyalandı.",
   "craneSleep8SemanticLabel": "Sahilin üst tarafında falezdeki Maya kalıntıları",
   "craneSleep4SemanticLabel": "Dağların yamacında, göl kenarında otel",
   "craneSleep2SemanticLabel": "Machu Picchu kalesi",

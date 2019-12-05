@@ -35,41 +35,49 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Ставка ${value}";
 
-  static m6(name, phoneNumber) =>
+  static m6(error) =>
+      "Не успеа да се копира во привремената меморија: ${error}";
+
+  static m7(name, phoneNumber) =>
       "Телефонскиот број на ${name} е ${phoneNumber}";
 
-  static m7(value) => "Избравте: „${value}“";
+  static m8(value) => "Избравте: „${value}“";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m9(accountName, accountNumber, amount) =>
       "${accountName} сметка ${accountNumber} со ${amount}.";
 
-  static m9(amount) => "Потрошивте ${amount} на провизија за банкомат месецов";
-
-  static m10(percent) =>
-      "Одлично! Салдото на сметката ви е ${percent} поголемо од минатиот месец.";
+  static m10(amount) => "Потрошивте ${amount} на провизија за банкомат месецов";
 
   static m11(percent) =>
+      "Одлично! Салдото на сметката ви е ${percent} поголемо од минатиот месец.";
+
+  static m12(percent) =>
       "Внимавајте, сте искористиле ${percent} од буџетот за купување месецов.";
 
-  static m12(amount) => "Потрошивте ${amount} на ресторани седмицава.";
+  static m13(amount) => "Потрошивте ${amount} на ресторани седмицава.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Зголемете го потенцијалното одбивање данок! Назначете категории на 1 неназначена трансакција.', other: 'Зголемете го потенцијалното одбивање данок! Назначете категории на ${count} неназначени трансакции.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "${billName} треба да се плати до ${date} и изнесува ${amount}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "${budgetName} буџет со искористени ${amountUsed} од ${amountTotal}, преостануваат ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'НЕМА СТАВКИ', one: '1 СТАВКА', other: '${quantity} СТАВКИ')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Количина: ${quantity}";
+  static m19(quantity) => "Количина: ${quantity}";
 
-  static m19(value) => "Ставка ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Кошничка за купување, нема ставки', one: 'Кошничка за купување, 1 ставка', other: 'Кошничка за купување, ${quantity} ставки')}";
+
+  static m21(product) => "Отстранете ${product}";
+
+  static m22(value) => "Ставка ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -145,7 +153,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Чоколаден десерт"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Сеул, Јужна Кореја"),
         "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
-            "Област за седење во уметнички ресторан"),
+            "Простор за седење во ресторан со уметничка атмосфера"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("Сиетл, САД"),
         "craneEat6SemanticLabel":
             MessageLookupByLibrary.simpleMessage("Порција ракчиња"),
@@ -255,7 +263,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("Порто, Португалија"),
         "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
-            "Живописни апартмани во квартот Рибериа"),
+            "Живописни апартмани на плоштадот Рибеира"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Тулум, Мексико"),
         "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
             "Урнатини на Маите на карпа над плажа"),
@@ -346,6 +354,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Икона за избор"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Примерок на код"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage(
+                "Копирано во привремената меморија."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("КОПИРАЈ ГИ СИТЕ"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Константи за бои и мостри што ја претставуваат палетата на бои на Material Design."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -441,12 +455,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Тркалезните копчиња му овозможуваат на корисникот да избере една опција од збир опции. Користете ги за исклучителен избор доколку мислите дека корисникот треба да ги види сите достапни опции една до друга."),
         "demoSelectionControlsRadioTitle":
-            MessageLookupByLibrary.simpleMessage("Радио"),
+            MessageLookupByLibrary.simpleMessage("Тркалезно копче"),
         "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
             "Полиња за избор, тркалезни копчиња и прекинувачи"),
         "demoSelectionControlsSwitchDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Прекинувачите за вклучување/исклучување ја менуваат состојбата на опција со една поставка. Опцијата што прекинувачот ја контролира, како и нејзината состојба, треба да е јасно одредена со соодветна внатрешна ознака."),
+                "Прекинувачите за вклучување/исклучување ја менуваат состојбата на опција со една поставка. Опцијата што прекинувачот ја контролира, како и нејзината состојба, треба да е јасно одредена со соодветна етикета."),
         "demoSelectionControlsSwitchTitle":
             MessageLookupByLibrary.simpleMessage("Прекинувач"),
         "demoSelectionControlsTitle":
@@ -476,7 +490,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Животна приказна"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Име*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Потребно е име."),
         "demoTextFieldNoMoreThan":
@@ -540,7 +554,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Дозволете Google да им помогне на апликациите да ја утврдуваат локацијата. Тоа подразбира испраќање анонимни податоци за локација до Google, дури и кога не се извршуваат апликации."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Да се користи услугата според локација на Google?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Поставете резервна сметка"),
         "dialogShow":
@@ -550,7 +564,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Категории"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Галерија"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings": MessageLookupByLibrary.simpleMessage(
             "Штедна сметка за автомобилот"),
         "rallyAccountDataChecking":
@@ -575,15 +589,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Вкупно"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Сметки"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Предупредувања"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Сметки"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Краен рок"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Облека"),
         "rallyBudgetCategoryCoffeeShops":
@@ -685,7 +699,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ОТКАЖИ"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("ИСПРАЗНИ КОШНИЧКА"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("КОШНИЧКА"),
         "shrineCartShippingCaption":
@@ -749,8 +763,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Панталони во морско сина"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Туника Plaster"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Маса Quartet"),
         "shrineProductRainwaterTray":
@@ -789,6 +803,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Бела кошула со риги"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Ремен Whitney"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Додајте во кошничката"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Затворете ја кошничката"),
         "shrineTooltipCloseMenu":
@@ -802,7 +820,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Поставки"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Распоред што овозможува брзо стартување"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Главен текст"),
         "starterAppGenericButton":

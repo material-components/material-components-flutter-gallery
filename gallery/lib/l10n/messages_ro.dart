@@ -35,43 +35,50 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Articol ${value}";
 
-  static m6(name, phoneNumber) =>
+  static m6(error) => "Nu s-a copiat în clipboard: ${error}";
+
+  static m7(name, phoneNumber) =>
       "Numărul de telefon al persoanei de contact ${name} este ${phoneNumber}";
 
-  static m7(value) => "Ați selectat: „${value}”";
+  static m8(value) => "Ați selectat: „${value}”";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m9(accountName, accountNumber, amount) =>
       "Contul ${accountName} ${accountNumber} cu ${amount}.";
 
-  static m9(amount) =>
+  static m10(amount) =>
       "Luna aceasta ați cheltuit ${amount} pentru comisioanele de la bancomat";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Felicitări! Contul dvs. curent este cu ${percent} mai bogat decât luna trecută.";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "Atenție, ați folosit ${percent} din bugetul de cumpărături pentru luna aceasta.";
 
-  static m12(amount) =>
+  static m13(amount) =>
       "Săptămâna aceasta ați cheltuit ${amount} în restaurante.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Creșteți-vă potențiala deducere fiscală! Atribuiți categorii unei tranzacții neatribuite.', few: 'Creșteți-vă potențiala deducere fiscală! Atribuiți categorii pentru ${count} tranzacții neatribuite.', other: 'Creșteți-vă potențiala deducere fiscală! Atribuiți categorii pentru ${count} de tranzacții neatribuite.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "Factura ${billName} în valoare de ${amount} este scadentă pe ${date}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "Bugetul pentru ${budgetName} cu ${amountUsed} cheltuiți din ${amountTotal}, ${amountLeft} rămași";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'NICIUN ARTICOL', one: 'UN ARTICOL', few: '${quantity} ARTICOLE', other: '${quantity} ARTICOLE')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Cantitate: ${quantity}";
+  static m19(quantity) => "Cantitate: ${quantity}";
 
-  static m19(value) => "Articol ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Coș de cumpărături, niciun articol', one: 'Coș de cumpărături, un articol', few: 'Coș de cumpărături, ${quantity} articole', other: 'Coș de cumpărături, ${quantity} de articole')}";
+
+  static m21(product) => "Eliminați ${product}";
+
+  static m22(value) => "Articol ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -359,6 +366,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Cip de opțiune"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Exemplu de cod"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("S-a copiat în clipboard."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("COPIAȚI TOT"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Constante pentru culori și mostre de culori care reprezintă paleta de culori pentru Design material."),
         "demoColorsSubtitle":
@@ -488,7 +500,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Povestea vieții"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Nume*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Numele este obligatoriu."),
         "demoTextFieldNoMoreThan":
@@ -554,7 +566,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Acceptați ajutor de la Google pentru ca aplicațiile să vă detecteze locația. Aceasta înseamnă că veți trimite la Google date anonime privind locațiile, chiar și când nu rulează nicio aplicație."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Folosiți serviciul de localizare Google?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Setați contul pentru backup"),
         "dialogShow":
@@ -564,7 +576,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Categorii"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galerie"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Economii pentru mașină"),
         "rallyAccountDataChecking":
@@ -590,15 +602,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Total"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Conturi"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alerte"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Facturi"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Data scadentă"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Îmbrăcăminte"),
         "rallyBudgetCategoryCoffeeShops":
@@ -702,7 +714,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ANULAȚI"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("GOLIȚI COȘUL"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption":
             MessageLookupByLibrary.simpleMessage("COȘ DE CUMPĂRĂTURI"),
         "shrineCartShippingCaption":
@@ -764,8 +776,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Pantaloni bleumarin"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Tunică Plaster"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Masă Quartet"),
         "shrineProductRainwaterTray": MessageLookupByLibrary.simpleMessage(
@@ -804,6 +816,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Cămașă cu dungi fine albe"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Curea Whitney"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage(
+                "Adăugați în coșul de cumpărături"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart": MessageLookupByLibrary.simpleMessage(
             "Închideți coșul de cumpărături"),
         "shrineTooltipCloseMenu":
@@ -816,7 +833,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineTooltipSettings": MessageLookupByLibrary.simpleMessage("Setări"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Un aspect adaptabil pentru Starter"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody": MessageLookupByLibrary.simpleMessage("Corp"),
         "starterAppGenericButton":
             MessageLookupByLibrary.simpleMessage("BUTON"),

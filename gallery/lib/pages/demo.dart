@@ -321,6 +321,22 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
         child: section,
       );
 
+      // Add a tap gesture to collapse the currently opened section.
+      if (_state != _DemoState.normal) {
+        demoContent = Semantics(
+          label: MaterialLocalizations.of(context).modalBarrierDismissLabel,
+          child: GestureDetector(
+            behavior: HitTestBehavior.opaque,
+            onTap: () {
+              setStateAndUpdate(() {
+                _state = _DemoState.normal;
+              });
+            },
+            child: ExcludeSemantics(child: demoContent),
+          ),
+        );
+      }
+
       body = SafeArea(
         bottom: false,
         child: ListView(
@@ -329,18 +345,7 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
           physics: NeverScrollableScrollPhysics(),
           children: [
             section,
-            // Add a tap gesture to collapse the currently opened section.
-            GestureDetector(
-              behavior: HitTestBehavior.opaque,
-              onTap: _state != _DemoState.normal
-                  ? () {
-                      setStateAndUpdate(() {
-                        _state = _DemoState.normal;
-                      });
-                    }
-                  : null,
-              child: demoContent,
-            ),
+            demoContent,
             // Fake the safe area to ensure the animation looks correct.
             SizedBox(height: bottomSafeArea),
           ],

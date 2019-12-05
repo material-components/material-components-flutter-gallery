@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "KOPIUJ WSZYSTKO",
+  "shrineScreenReaderRemoveProductButton": "Usuń {product}",
+  "shrineScreenReaderProductAddToCart": "Dodaj do koszyka",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Koszyk, pusty}=1{Koszyk, 1 produkt}few{Koszyk, {quantity} produkty}many{Koszyk, {quantity} produktów}other{Koszyk, {quantity} produktu}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Nie udało się skopiować do schowka: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Skopiowano do schowka.",
   "craneSleep8SemanticLabel": "Ruiny budowli Majów na klifie przy plaży",
   "craneSleep4SemanticLabel": "Hotel nad jeziorem z górami w tle",
   "craneSleep2SemanticLabel": "Cytadela Machu Picchu",

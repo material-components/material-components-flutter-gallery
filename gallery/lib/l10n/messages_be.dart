@@ -35,42 +35,49 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Элемент ${value}";
 
-  static m6(name, phoneNumber) =>
+  static m6(error) => "Не ўдалося скапіраваць у буфер абмену: ${error}";
+
+  static m7(name, phoneNumber) =>
       "Нумар тэлефона карыстальніка ${name}: ${phoneNumber}";
 
-  static m7(value) => "Вы выбралі: \"${value}\"";
+  static m8(value) => "Вы выбралі: \"${value}\"";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m9(accountName, accountNumber, amount) =>
       "Рахунак ${accountName} ${accountNumber} з ${amount}.";
 
-  static m9(amount) =>
+  static m10(amount) =>
       "У гэтым месяцы вы патрацілі ${amount} на аплату камісіі ў банкаматах";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Выдатна! У гэтым месяцы на вашым разліковым рахунку засталося на ${percent} больш сродкаў, чым у мінулым.";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "Увага! Вы зрасходавалі ${percent} свайго месячнага бюджэту на пакупкі.";
 
-  static m12(amount) => "На гэтым тыдні вы выдаткавалі ${amount} на рэстараны.";
+  static m13(amount) => "На гэтым тыдні вы выдаткавалі ${amount} на рэстараны.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Павялічце свой патэнцыяльны падатковы вылік! Прызначце катэгорыі для 1 непрызначанай трансакцыі.', few: 'Павялічце свой патэнцыяльны падатковы вылік! Прызначце катэгорыі для ${count} непрызначаных трансакцый.', many: 'Павялічце свой патэнцыяльны падатковы вылік! Прызначце катэгорыі для ${count} непрызначаных трансакцый.', other: 'Павялічце свой патэнцыяльны падатковы вылік! Прызначце катэгорыі для ${count} непрызначаных трансакцый.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "${billName}: трэба заплаціць ${amount} да ${date}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "Бюджэт ${budgetName}: выкарыстана ${amountUsed} з ${amountTotal}, засталося ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'НЯМА ЭЛЕМЕНТАЎ', one: '1 ЭЛЕМЕНТ', few: '${quantity} ЭЛЕМЕНТЫ', many: '${quantity} ЭЛЕМЕНТАЎ', other: '${quantity} ЭЛЕМЕНТА')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Колькасць: ${quantity}";
+  static m19(quantity) => "Колькасць: ${quantity}";
 
-  static m19(value) => "Элемент ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Кошык, няма прадуктаў', one: 'Кошык, 1 прадукт', few: 'Кошык, ${quantity} прадукты', many: 'Кошык, ${quantity} прадуктаў', other: 'Кошык, ${quantity} прадукту')}";
+
+  static m21(product) => "Выдаліць прадукт: ${product}";
+
+  static m22(value) => "Элемент ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -202,8 +209,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFly7SemanticLabel":
             MessageLookupByLibrary.simpleMessage("Гара Рашмар"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Сінгапур"),
-        "craneFly8SemanticLabel": MessageLookupByLibrary.simpleMessage(
-            "Supertree Grove (Гай супердрэваў)"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Сады каля заліва"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Гавана, Куба"),
         "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
             "Мужчына, які абапіраецца на антыкварны сіні аўтамабіль"),
@@ -254,7 +261,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("Порту, Партугалія"),
         "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
-            "Каляровыя дамы ў скверы Рыбейра"),
+            "Каляровыя дамы на плошчы Рыбейра"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Тулум, Мексіка"),
         "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
             "Руіны цывілізацыі мая на ўцёсе над пляжам"),
@@ -347,6 +354,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("Чып выбару"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Прыклад кода"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("Скапіравана ў буфер абмену."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("КАПІРАВАЦЬ УСЁ"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Колеры і ўзоры колераў, якія прадстаўляюць палітру колераў матэрыялу."),
         "demoColorsSubtitle":
@@ -440,7 +452,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Поле для птушкі"),
         "demoSelectionControlsRadioDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Радыёкнопкі дазваляюць карыстальніку выбраць з набору адзін варыянт. Выкарыстоўвайце радыёкнопкі для асаблівага выбару, калі лічыце, што карыстальнік павінен бачыць усе даступныя варыянты побач."),
+                "Радыёкнопкі дазваляюць карыстальніку выбраць з набору адзін варыянт. Выкарыстоўвайце іх для выбару ў асаблівых сітуацыях, каб карыстальнікі маглі бачыць усе даступныя варыянты."),
         "demoSelectionControlsRadioTitle":
             MessageLookupByLibrary.simpleMessage("Радыё"),
         "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -478,7 +490,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("Біяграфія"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("Імя*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Увядзіце назву."),
         "demoTextFieldNoMoreThan":
@@ -543,7 +555,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Дазвольце Google вызначаць ваша месцазнаходжанне для розных праграм. Ананімныя даныя пра месцазнаходжанне будуць адпраўляцца ў Google, нават калі ніякія праграмы не запушчаны."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Выкарыстоўваць службу геалакацыі Google?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "Задаць уліковы запіс для рэзервовага капіравання"),
         "dialogShow":
@@ -553,7 +565,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Катэгорыі"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Галерэя"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Зберажэнні на аўтамабіль"),
         "rallyAccountDataChecking":
@@ -582,16 +594,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccounts":
             MessageLookupByLibrary.simpleMessage("Уліковыя запісы"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Абвесткі"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Рахункі"),
         "rallyBillsDue":
             MessageLookupByLibrary.simpleMessage("Тэрмін пагашэння"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Адзенне"),
         "rallyBudgetCategoryCoffeeShops":
@@ -695,7 +707,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("СКАСАВАЦЬ"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("АЧЫСЦІЦЬ КОШЫК"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("КОШЫК"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Дастаўка:"),
@@ -757,8 +769,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Цёмна-сінія штаны"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Крэмавая туніка"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Квадратны стол"),
         "shrineProductRainwaterTray":
@@ -797,6 +809,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Кашуля ў белую палоску"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Скураны рамень"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Дадаць у кошык"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Закрыць кошык"),
         "shrineTooltipCloseMenu":
@@ -809,7 +825,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineTooltipSettings": MessageLookupByLibrary.simpleMessage("Налады"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("Адаптыўны макет запуску"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Асноўны тэкст"),
         "starterAppGenericButton":

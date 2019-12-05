@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "SALIN SEMUA",
+  "shrineScreenReaderRemoveProductButton": "Hapus {product}",
+  "shrineScreenReaderProductAddToCart": "Tambahkan ke keranjang",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Keranjang belanja, tidak ada item}=1{Keranjang belanja, 1 item}other{Keranjang belanja, {quantity} item}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Gagal menyalin ke papan klip: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Disalin ke papan klip.",
   "craneSleep8SemanticLabel": "Reruntuhan kota suku Maya di tebing di atas pantai",
   "craneSleep4SemanticLabel": "Hotel tepi danau yang menghadap pegunungan",
   "craneSleep2SemanticLabel": "Benteng Machu Picchu",

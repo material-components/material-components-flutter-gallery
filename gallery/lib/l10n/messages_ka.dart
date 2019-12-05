@@ -35,41 +35,48 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "ერთეული ${value}";
 
-  static m6(name, phoneNumber) => "${name} ტელეფონის ნომერია ${phoneNumber}";
+  static m6(error) => "გაცვლის ბუფერში კოპირება ვერ მოხერხდა: ${error}";
 
-  static m7(value) => "თქვენ აირჩიეთ: „${value}“";
+  static m7(name, phoneNumber) => "${name} ტელეფონის ნომერია ${phoneNumber}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "თქვენ აირჩიეთ: „${value}“";
+
+  static m9(accountName, accountNumber, amount) =>
       "${accountName} ანგარიში ${accountNumber}, თანხა ${amount}.";
 
-  static m9(amount) =>
+  static m10(amount) =>
       "ამ თვეში ბანკომატების გადასახადებში დახარჯული გაქვთ ${amount}";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "კარგია! თქვენს მიმდინარე ანგარიშზე ნაშთი გასულ თვესთან შედარებით ${percent}-ით მეტია.";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "გატყობინებთ, რომ ამ თვეში უკვე დახარჯული გაქვთ საყიდლებისთვის განკუთვნილი ბიუჯეტის ${percent}.";
 
-  static m12(amount) => "რესტორნებში ამ კვირაში დახარჯული გაქვთ ${amount}.";
+  static m13(amount) => "რესტორნებში ამ კვირაში დახარჯული გაქვთ ${amount}.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'გაზარდეთ თქვენი პოტენციური საგადასახადო გამოქვითვა! მიანიჭეთ კატეგორია 1 მიუმაგრებელ ტრანსაქციას.', other: 'გაზარდეთ თქვენი პოტენციური საგადასახადო გამოქვითვა! მიანიჭეთ კატეგორია ${count} მიუმაგრებელ ტრანსაქციას.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "${billName} ანგარიშის გასწორების ვადაა ${date}, თანხა: ${amount}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "${budgetName} ბიუჯეტი, დახარჯული თანხა: ${amountUsed} / ${amountTotal}-დან, დარჩენილი თანხა: ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'ერთეულები არ არის', one: '1 ერთეული', other: '${quantity} ერთეული')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "რაოდენობა: ${quantity}";
+  static m19(quantity) => "რაოდენობა: ${quantity}";
 
-  static m19(value) => "ერთეული ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'საყიდლების კალათა, ერთეულები არ არის', one: 'საყიდლების კალათა, 1 ერთეული', other: 'საყიდლების კალათა, ${quantity} ერთეული')}";
+
+  static m21(product) => "ამოიშალოს ${product}";
+
+  static m22(value) => "ერთეული ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -359,6 +366,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("Choice Chip"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("კოდის ნიმუში"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage(
+                "კოპირებულია გაცვლის ბუფერში."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("ყველას კოპირება"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "კონსტანტები ფერებისა და გრადიენტებისთვის, რომლებიც წარმოადგენს Material Design-ის ფერთა პალიტრას."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -491,7 +504,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ცხოვრებისეული ამბავი"),
         "demoTextFieldNameField":
             MessageLookupByLibrary.simpleMessage("სახელი*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("საჭიროა სახელი."),
         "demoTextFieldNoMoreThan":
@@ -556,7 +569,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Google-ისთვის ნების დართვა, რომ აპებს მდებარეობის ამოცნობაში დაეხმაროს. ეს ნიშნავს, რომ Google-ში გადაიგზავნება მდებარეობის ანონიმური მონაცემები მაშინაც კი, როდესაც აპები გაშვებული არ არის."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "გსურთ Google-ის მდებარეობის სერვისის გამოყენება?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "სარეზერვო ანგარიშის დაყენება"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("დიალოგის ჩვენება"),
@@ -565,7 +578,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("კატეგორიები"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("გალერეა"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("დანაზოგები მანქანისთვის"),
         "rallyAccountDataChecking":
@@ -591,15 +604,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("სულ"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("ანგარიშები"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("გაფრთხილებები"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("გადასახადები"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("გადასახდელია"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("ტანსაცმელი"),
         "rallyBudgetCategoryCoffeeShops":
@@ -701,7 +714,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("გაუქმება"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("კალათის გასუფთავება"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("კალათა"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("მიწოდება:"),
@@ -764,8 +777,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("მუქი ლურჯი შარვალი"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("თაბაშირისფერი ტუნიკა"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Quartet-ის მაგიდა"),
         "shrineProductRainwaterTray":
@@ -804,6 +817,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("თეთრი ზოლებიანი მაისური"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney-ს ქამარი"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("კალათაში დამატება"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("კალათის დახურვა"),
         "shrineTooltipCloseMenu":
@@ -817,7 +834,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("პარამეტრები"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "ადაპტირებადი საწყისი განლაგება"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("ძირითადი ტექსტი"),
         "starterAppGenericButton":

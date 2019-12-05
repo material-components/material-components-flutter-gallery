@@ -35,42 +35,49 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "Elementua: ${value}";
 
-  static m6(name, phoneNumber) =>
+  static m6(error) => "Ezin izan da kopiatu arbelean: ${error}";
+
+  static m7(name, phoneNumber) =>
       "${name} erabiltzailearen telefono-zenbakia ${phoneNumber} da";
 
-  static m7(value) => "Hau hautatu duzu: \"${value}\"";
+  static m8(value) => "Hau hautatu duzu: \"${value}\"";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m9(accountName, accountNumber, amount) =>
       "${accountName} bankuko ${accountNumber} kontua (${amount}).";
 
-  static m9(amount) =>
+  static m10(amount) =>
       "Hilabete honetan ${amount} gastatu duzu kutxazainetako komisioetan";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "Primeran. Joan den hilean baino ${percent} diru gehiago duzu kontu korrontean.";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "Adi: hilabete honetako erosketa-aurrekontuaren ${percent} erabili duzu.";
 
-  static m12(amount) => "Aste honetan ${amount} gastatu duzu jatetxeetan.";
+  static m13(amount) => "Aste honetan ${amount} gastatu duzu jatetxeetan.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'Zerga-kenkari potentzial handiagoa! Esleitu kategoriak esleitu gabeko transakzio bati.', other: 'Zerga-kenkari potentzial handiagoa! Esleitu kategoriak esleitu gabeko ${count} transakziori.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "${billName} faktura (${amount}) data honetan ordaindu behar da: ${date}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "\"${budgetName}\" izeneko aurrekontua: ${amountUsed}/${amountTotal} erabilita; ${amountLeft} gelditzen da";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'EZ DAGO PRODUKTURIK', one: '1 PRODUKTU', other: '${quantity} PRODUKTU')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "Zenbatekoa: ${quantity}";
+  static m19(quantity) => "Zenbatekoa: ${quantity}";
 
-  static m19(value) => "Elementua: ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'Erosketa-saskia. Hutsik dago.', one: 'Erosketa-saskia. Produktu bat dauka.', other: 'Erosketa-saskia. ${quantity} produktu dauzka.')}";
+
+  static m21(product) => "Kendu ${product}";
+
+  static m22(value) => "Elementua: ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -143,7 +150,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Korear taco bat"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Paris (Frantzia)"),
         "craneEat4SemanticLabel":
-            MessageLookupByLibrary.simpleMessage("Txokolatezko postre bat"),
+            MessageLookupByLibrary.simpleMessage("Txokolatezko postrea"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Seul (Hego Korea)"),
         "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
             "Jatetxe moderno bateko mahaiak"),
@@ -355,6 +362,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Aukera-pilula"),
         "demoCodeTooltip":
             MessageLookupByLibrary.simpleMessage("Kodearen lagina"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage("Kopiatu da arbelean."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("KOPIATU DENA"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "Material izeneko diseinuaren kolore-paleta irudikatzen duten koloreen eta kolore-aldaketen konstanteak."),
         "demoColorsSubtitle":
@@ -486,7 +498,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Biografia"),
         "demoTextFieldNameField":
             MessageLookupByLibrary.simpleMessage("Izena*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("Izena behar da."),
         "demoTextFieldNoMoreThan":
@@ -550,7 +562,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Utzi Google-ri aplikazioei kokapena zehazten laguntzen. Horretarako, kokapen-datu anonimoak bidaliko zaizkio Google-ri, baita aplikazioak martxan ez daudenean ere."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Google-ren kokapen-zerbitzua erabili nahi duzu?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup": MessageLookupByLibrary.simpleMessage(
             "Ezarri babeskopiak egiteko kontua"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("ERAKUTSI LEIHOA"),
@@ -559,7 +571,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "homeHeaderCategories":
             MessageLookupByLibrary.simpleMessage("Kategoriak"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("Galeria"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("Autorako aurrezkiak"),
         "rallyAccountDataChecking":
@@ -586,15 +598,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("Guztira"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("Kontuak"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("Alertak"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("Fakturak"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("Epemuga:"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("Arropa"),
         "rallyBudgetCategoryCoffeeShops":
@@ -703,7 +715,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("UTZI"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("GARBITU SASKIA"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("SASKIA"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("Bidalketa:"),
@@ -766,8 +778,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Galtza urdin ilunak"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("Igeltsu-koloreko tunika"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("Laurentzako mahaia"),
         "shrineProductRainwaterTray":
@@ -807,6 +819,10 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Marra fineko alkandora zuria"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("Whitney gerrikoa"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("Gehitu saskian"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("Itxi saskia"),
         "shrineTooltipCloseMenu":
@@ -820,7 +836,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ezarpenak"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "Hasierako diseinu sentikorra"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("Gorputza"),
         "starterAppGenericButton":

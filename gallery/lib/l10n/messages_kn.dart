@@ -35,42 +35,49 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "ಐಟಂ ${value}";
 
-  static m6(name, phoneNumber) =>
+  static m6(error) => "ಫ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲು ವಿಫಲವಾಗಿದೆ: ${error}";
+
+  static m7(name, phoneNumber) =>
       "${name} ಅವರ ಫೋನ್ ಸಂಖ್ಯೆ ${phoneNumber} ಆಗಿದೆ";
 
-  static m7(value) => "ನೀವು ಆಯ್ಕೆಮಾಡಿದ್ದೀರಿ: \"${value}\"";
+  static m8(value) => "ನೀವು ಆಯ್ಕೆಮಾಡಿದ್ದೀರಿ: \"${value}\"";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m9(accountName, accountNumber, amount) =>
       "${accountName} ಖಾತೆ ${accountNumber} ${amount} ಮೊತ್ತದೊಂದಿಗೆ.";
 
-  static m9(amount) => "ನೀವು ಈ ತಿಂಗಳು ATM ಶುಲ್ಕಗಳಲ್ಲಿ ${amount} ವ್ಯಯಿಸಿದ್ದೀರಿ";
-
-  static m10(percent) =>
-      "ಒಳ್ಳೆಯ ಕೆಲಸ ಮಾಡಿದ್ದೀರಿ! ನಿಮ್ಮ ಪರಿಶೀಲನೆ ಖಾತೆಯು ಹಿಂದಿನ ತಿಂಗಳಿಗಿಂತ ಶೇಕಡಾ ${percent} ಹೆಚ್ಚಿದೆ.";
+  static m10(amount) => "ನೀವು ಈ ತಿಂಗಳು ATM ಶುಲ್ಕಗಳಲ್ಲಿ ${amount} ವ್ಯಯಿಸಿದ್ದೀರಿ";
 
   static m11(percent) =>
+      "ಒಳ್ಳೆಯ ಕೆಲಸ ಮಾಡಿದ್ದೀರಿ! ನಿಮ್ಮ ಪರಿಶೀಲನೆ ಖಾತೆಯು ಹಿಂದಿನ ತಿಂಗಳಿಗಿಂತ ಶೇಕಡಾ ${percent} ಹೆಚ್ಚಿದೆ.";
+
+  static m12(percent) =>
       "ಗಮನಿಸಿ, ಈ ತಿಂಗಳ ನಿಮ್ಮ ಶಾಪಿಂಗ್ ಬಜೆಟ್‌ನಲ್ಲಿ ನೀವು ಶೇಕಡಾ ${percent} ಬಳಸಿದ್ದೀರಿ.";
 
-  static m12(amount) =>
+  static m13(amount) =>
       "ನೀವು ಈ ವಾರ ರೆಸ್ಟೋರೆಂಟ್‌ಗಳಲ್ಲಿ ${amount} ಖರ್ಚುಮಾಡಿದ್ದೀರಿ.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'ನಿಮ್ಮ ಸಂಭವನೀಯ ತೆರಿಗೆ ಕಡಿತಗಳನ್ನು ಹೆಚ್ಚಿಸಿ! 1 ನಿಯೋಜಿಸದ ವಹಿವಾಟಿಗೆ ವರ್ಗವನ್ನು ನಿಯೋಜಿಸಿ.', other: 'ನಿಮ್ಮ ಸಂಭವನೀಯ ತೆರಿಗೆ ಕಡಿತಗಳನ್ನು ಹೆಚ್ಚಿಸಿ! ${count} ನಿಯೋಜಿಸದ ವಹಿವಾಟುಗಳಿಗೆ ವರ್ಗಗಳನ್ನು ನಿಯೋಜಿಸಿ.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "${amount} ಗಾಗಿ ${date} ರಂದು ${billName} ಬಿಲ್ ಪಾವತಿ ಬಾಕಿಯಿದೆ.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "${amountTotal} ರಲ್ಲಿನ ${budgetName} ಬಜೆಟ್‌ನ ${amountUsed} ಮೊತ್ತವನ್ನು ಬಳಸಲಾಗಿದೆ, ${amountLeft} ಬಾಕಿಯಿದೆ";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'ಯಾವುದೇ ಐಟಂಗಳಿಲ್ಲ', one: '1 ಐಟಂ', other: '${quantity} ಐಟಂಗಳು')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "ಪ್ರಮಾಣ: ${quantity}";
+  static m19(quantity) => "ಪ್ರಮಾಣ: ${quantity}";
 
-  static m19(value) => "ಐಟಂ ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'ಶಾಪಿಂಗ್ ಕಾರ್ಟ್, ಯಾವುದೇ ಐಟಂಗಳಿಲ್ಲ', one: 'ಶಾಪಿಂಗ್ ಕಾರ್ಟ್, 1 ಐಟಂ', other: 'ಶಾಪಿಂಗ್ ಕಾರ್ಟ್, ${quantity} ಐಟಂಗಳು')}";
+
+  static m21(product) => "${product} ತೆಗೆದುಹಾಕಿ";
+
+  static m22(value) => "ಐಟಂ ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -148,7 +155,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneEat4":
             MessageLookupByLibrary.simpleMessage("ಪ್ಯಾರಿಸ್‌, ಫ್ರಾನ್ಸ್‌‌"),
         "craneEat4SemanticLabel":
-            MessageLookupByLibrary.simpleMessage("ಚಾಕೋಲೇಟ್ ಡೆಸರ್ಟ್"),
+            MessageLookupByLibrary.simpleMessage("ಚಾಕೊಲೇಟ್ ಡೆಸರ್ಟ್"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("ಸಿಯೊಲ್, ದಕ್ಷಿಣ ಕೊರಿಯಾ"),
         "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
@@ -364,6 +371,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("ಚಾಯ್ಸ್ ಚಿಪ್"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("ಕೋಡ್‌ ಮಾದರಿ"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage(
+                "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲಾಗಿದೆ."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("ಎಲ್ಲವನ್ನೂ ನಕಲಿಸಿ"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "ವಸ್ತು ವಿನ್ಯಾಸದ ಬಣ್ಣ ಫಲಕವನ್ನು ಪ್ರತಿನಿಧಿಸುವ ಬಣ್ಣ ಮತ್ತು ಬಣ್ಣದ ಸ್ಥಿರಾಂಕಗಳು."),
         "demoColorsSubtitle":
@@ -493,7 +506,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ಆತ್ಮಕಥೆ"),
         "demoTextFieldNameField":
             MessageLookupByLibrary.simpleMessage("ಹೆಸರು*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("ಹೆಸರು ಅಗತ್ಯವಿದೆ."),
         "demoTextFieldNoMoreThan": MessageLookupByLibrary.simpleMessage(
@@ -559,7 +572,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "ಸ್ಥಳವನ್ನು ಪತ್ತೆಹಚ್ಚುವುದಕ್ಕೆ ಆ್ಯಪ್‌ಗಳಿಗೆ ಸಹಾಯ ಮಾಡಲು Google ಗೆ ಅವಕಾಶ ನೀಡಿ. ಅಂದರೆ, ಯಾವುದೇ ಆ್ಯಪ್‌ಗಳು ರನ್ ಆಗದೇ ಇರುವಾಗಲೂ, Google ಗೆ ಅನಾಮಧೇಯ ಸ್ಥಳದ ಡೇಟಾವನ್ನು ಕಳುಹಿಸುವುದು ಎಂದರ್ಥ."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Google ನ ಸ್ಥಳ ಸೇವೆಯನ್ನು ಬಳಸುವುದೇ?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("ಬ್ಯಾಕಪ್ ಖಾತೆಯನ್ನು ಹೊಂದಿಸಿ"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("ಡೈಲಾಗ್ ತೋರಿಸಿ"),
@@ -567,7 +580,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ಉಲ್ಲೇಖ ಶೈಲಿಗಳು ಮತ್ತು ಮಾಧ್ಯಮ"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("ವರ್ಗಗಳು"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("ಗ್ಯಾಲರಿ"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("ಕಾರ್ ಉಳಿತಾಯ"),
         "rallyAccountDataChecking":
@@ -591,15 +604,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("ಒಟ್ಟು"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("ಖಾತೆಗಳು"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("ಅಲರ್ಟ್‌ಗಳು"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("ಬಿಲ್‌ಗಳು"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("ಅಂತಿಮ ದಿನಾಂಕ"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("ಉಡುಗೆ"),
         "rallyBudgetCategoryCoffeeShops":
@@ -705,7 +718,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ರದ್ದುಗೊಳಿಸಿ"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("ಕಾರ್ಟ್ ತೆರವುಗೊಳಿಸಿ"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("ಕಾರ್ಟ್"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("ಶಿಪ್ಪಿಂಗ್:"),
@@ -766,8 +779,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ನೇವಿ ಟ್ರೌಸರ್ಸ್"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("ಪ್ಲಾಸ್ಟರ್ ಟ್ಯೂನಿಕ್"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("ಕ್ವಾರ್ಟೆಟ್ ಟೇಬಲ್"),
         "shrineProductRainwaterTray":
@@ -806,6 +819,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ವೈಟ್ ಪಿನ್‌ಸ್ಟ್ರೈಪ್ ಶರ್ಟ್"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("ವಿಟ್ನೀ ಬೆಲ್ಟ್"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("ಕಾರ್ಟ್‌ಗೆ ಸೇರಿಸಿ"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("ಕಾರ್ಟ್ ಮುಚ್ಚಿರಿ"),
         "shrineTooltipCloseMenu":
@@ -819,7 +836,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ಸೆಟ್ಟಿಂಗ್‌ಗಳು"),
         "starterAppDescription":
             MessageLookupByLibrary.simpleMessage("ಸ್ಪಂದನಾಶೀಲ ಸ್ಟಾರ್ಟರ್ ಲೇಔಟ್"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("ಮುಖ್ಯ ಭಾಗ"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("ಬಟನ್"),

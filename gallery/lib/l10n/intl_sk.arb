@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "KOPÍROVAŤ VŠETKO",
+  "shrineScreenReaderRemoveProductButton": "Odstrániť výrobok {product}",
+  "shrineScreenReaderProductAddToCart": "Pridať do košíka",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Nákupný košík, žiadne položky}=1{Nákupný košík, 1 položka}few{Nákupný košík, {quantity} položky}many{Shopping cart, {quantity} items}other{Nákupný košík, {quantity} položiek}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Kopírovanie do schránky sa nepodarilo: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Skopírované do schránky.",
   "craneSleep8SemanticLabel": "Mayské ruiny na útese nad plážou",
   "craneSleep4SemanticLabel": "Hotel na brehu jazera s horami v pozadí",
   "craneSleep2SemanticLabel": "Citadela Machu Picchu",

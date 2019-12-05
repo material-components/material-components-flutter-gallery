@@ -1,5 +1,11 @@
 {
-  "craneSleep8SemanticLabel": "សំណង់​បាក់បែក​របស់ទីក្រុងម៉ាយាន​នៅលើ​ចំណោតច្រាំង​ពីលើឆ្នេរខ្សាច់",
+  "demoCodeViewerCopyAll": "ចម្លង​ទាំងអស់",
+  "shrineScreenReaderRemoveProductButton": "ដក {product} ចេញ",
+  "shrineScreenReaderProductAddToCart": "បញ្ចូលទៅរទេះ",
+  "shrineScreenReaderCart": "{quantity,plural, =0{រទេះទិញទំនិញ គ្មានទំនិញ}=1{រទេះទិញទំនិញ ទំនិញ 1}other{រទេះទិញទំនិញ ទំនិញ {quantity}}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "មិនអាច​ចម្លងទៅឃ្លីបបត​បានទេ៖ {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "បានចម្លង​ទៅ​ឃ្លីបបត។",
+  "craneSleep8SemanticLabel": "សំណង់​បាក់បែក​នៃទីក្រុងម៉ាយ៉ាន​នៅលើ​ចំណោតច្រាំង​ពីលើឆ្នេរខ្សាច់",
   "craneSleep4SemanticLabel": "សណ្ឋាគារ​ជាប់មាត់បឹង​នៅពី​មុខភ្នំ",
   "craneSleep2SemanticLabel": "ប្រាសាទ​នៅ​ម៉ាឈូភីឈូ",
   "craneSleep1SemanticLabel": "ផ្ទះឈើ​នៅលើភ្នំ​ដែលស្ថិត​នៅក្នុង​ទេសភាព​មានព្រិលធ្លាក់​ជាមួយនឹង​ដើមឈើ​ដែលមាន​ស្លឹក​ពេញមួយឆ្នាំ",

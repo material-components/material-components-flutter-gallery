@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "सबै प्रतिलिपि गर्नुहोस्",
+  "shrineScreenReaderRemoveProductButton": "हटाउनुहोस् {product}",
+  "shrineScreenReaderProductAddToCart": "किनमेल गर्ने कार्टमा राख्नुहोस्",
+  "shrineScreenReaderCart": "{quantity,plural, =0{किनमेल गर्ने कार्ट, कुनै पनि वस्तु छैन}=1{किनमेल गर्ने कार्ट, १ वस्तु छ}other{किनमेल गर्ने कार्ट, {quantity} वस्तु छन्}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "क्लिपबोर्डमा प्रतिलिपि गर्न सकिएन: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "क्लिपबोर्डमा प्रतिलिपि गरियो।",
   "craneSleep8SemanticLabel": "समुद्र किनाराको माथि उठेको चट्टानमा माया सभ्यताका खण्डहरहरू",
   "craneSleep4SemanticLabel": "पहाडका नजिकमा रहेको झील छेउको होटेल",
   "craneSleep2SemanticLabel": "माचू पिक्चूको गढी",

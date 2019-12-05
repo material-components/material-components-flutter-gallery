@@ -35,40 +35,47 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "వస్తువు ${value}";
 
-  static m6(name, phoneNumber) => "${name} యొక్క ఫోన్ నంబర్ ${phoneNumber}";
+  static m6(error) => "క్లిప్‌బోర్డ్‌కు కాపీ చేయడం విఫలమైంది: ${error}";
 
-  static m7(value) => "మీరు ఎంపిక చేసింది: \"${value}\"";
+  static m7(name, phoneNumber) => "${name} యొక్క ఫోన్ నంబర్ ${phoneNumber}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "మీరు ఎంపిక చేసింది: \"${value}\"";
+
+  static m9(accountName, accountNumber, amount) =>
       "{ఖాతా సంఖ్య} కలిగిన {ఖాతాపేరు} ఖాతాలో ఉన్న {మొత్తం}.";
 
-  static m9(amount) => "మీరు ఈ నెల ATM రుసుముల రూపంలో ${amount} ఖర్చు చేశారు";
-
-  static m10(percent) =>
-      "మంచి పని చేసారు! మీ చెకింగ్ ఖాతా గత నెల కంటే ${percent} అధికంగా ఉంది.";
+  static m10(amount) => "మీరు ఈ నెల ATM రుసుముల రూపంలో ${amount} ఖర్చు చేశారు";
 
   static m11(percent) =>
+      "మంచి పని చేసారు! మీ చెకింగ్ ఖాతా గత నెల కంటే ${percent} అధికంగా ఉంది.";
+
+  static m12(percent) =>
       "జాగ్రత్త పడండి, ఈ నెలకు సరిపడ షాపింగ్ బడ్జెట్‌లో ${percent} ఖర్చు చేసేశారు.";
 
-  static m12(amount) => "మీరు ఈ వారం రెస్టారెంట్‌లలో ${amount} ఖర్చు చేశారు.";
+  static m13(amount) => "మీరు ఈ వారం రెస్టారెంట్‌లలో ${amount} ఖర్చు చేశారు.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'అవకాశం ఉన్న మీ పన్ను మినహాయింపును పెంచుకోండి! కేటాయించని 1 లావాదేవీకి వర్గాలను కేటాయించండి.', other: 'అవకాశం ఉన్న మీ పన్ను మినహాయింపును పెంచుకోండి! కేటాయించని ${count} లావాదేవీలకు వర్గాలను కేటాయించండి.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "గడువు {తేదీ}కి {మొత్తం} అయిన {బిల్లుపేరు} బిల్లు.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "{మొత్తం సొమ్ము} నుంచి {ఉపయోగించబడిన సొమ్ము} ఉపయోగించబడిన {బడ్జెట్ పేరు} బడ్జెట్, {మిగిలిన సొమ్ము} మిగిలింది";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'అంశాలు లేవు', one: '1 అంశం', other: '${quantity} అంశాలు')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "సంఖ్య: ${quantity}";
+  static m19(quantity) => "సంఖ్య: ${quantity}";
 
-  static m19(value) => "వస్తువు ${value}";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'షాపింగ్ కార్ట్, అంశాలు లేవు', one: 'షాపింగ్ కార్ట్, 1 అంశం', other: 'షాపింగ్ కార్ట్, ${quantity} అంశాలు')}";
+
+  static m21(product) => "${product}ను తీసివేయండి";
+
+  static m22(value) => "వస్తువు ${value}";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -145,7 +152,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("కొరియన్ టాకో"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("పారిస్, ఫ్రాన్స్"),
         "craneEat4SemanticLabel":
-            MessageLookupByLibrary.simpleMessage("చాక్లెట్ డెజర్ట్"),
+            MessageLookupByLibrary.simpleMessage("చాక్లెట్ డెసర్ట్"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("సియోల్, దక్షిణ కొరియా"),
         "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
@@ -363,6 +370,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("ఎంపిక చిప్"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("కోడ్ నమూనా"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage(
+                "క్లిప్‌బోర్డ్‌కు కాపీ అయింది."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("మొత్తం వచనాన్ని కాపీ చేయి"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "మెటీరియల్ డిజైన్ రంగుల పాలెట్‌ను సూచించే రంగు మరియు రంగు స్వాచ్ కాన్‌స్టెంట్స్."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -491,7 +504,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoTextFieldLifeStory":
             MessageLookupByLibrary.simpleMessage("జీవిత కథ"),
         "demoTextFieldNameField": MessageLookupByLibrary.simpleMessage("పేరు*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("పేరు అవసరం."),
         "demoTextFieldNoMoreThan":
@@ -560,7 +573,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "యాప్‌లు లొకేషన్‌ను గుర్తించేందుకు సహాయపడటానికి Googleను అనుమతించండి. దీని అర్థం ఏమిటంటే, యాప్‌లు ఏవీ అమలులో లేకపోయినా కూడా, Googleకు అనామకమైన లొకేషన్ డేటా పంపబడుతుంది."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Google లొకేషన్ సేవను ఉపయోగించాలా?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("బ్యాకప్ ఖాతాను సెట్ చేయి"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("డైలాగ్ చూపించు"),
@@ -568,7 +581,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("రిఫరెన్స్ స్టైల్స్ & మీడియా"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("వర్గాలు"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("గ్యాలరీ"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("కారు సేవింగ్స్"),
         "rallyAccountDataChecking":
@@ -593,16 +606,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("మొత్తం"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("ఖాతాలు"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("అలర్ట్‌లు"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("బిల్లులు"),
         "rallyBillsDue":
             MessageLookupByLibrary.simpleMessage("బకాయి వున్న బిల్లు"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("దుస్తులు"),
         "rallyBudgetCategoryCoffeeShops":
@@ -709,7 +722,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("రద్దు చేయి"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("కార్ట్ అంతా క్లియర్ చేయి"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("కార్ట్"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("రవాణా ఖర్చు:"),
@@ -771,8 +784,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("నేవీ ట్రౌజర్లు"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("ప్లాస్టర్ ట్యూనిక్"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("క్వార్టెట్ బల్ల"),
         "shrineProductRainwaterTray":
@@ -812,6 +825,10 @@ class MessageLookup extends MessageLookupByLibrary {
                 "తెల్లని పిన్‌స్ట్రైప్ చొక్కా"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("విట్నీ బెల్ట్"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("కార్ట్‌కు జోడించండి"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("కార్ట్‌ను మూసివేయండి"),
         "shrineTooltipCloseMenu":
@@ -826,7 +843,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("సెట్టింగ్‌లు"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "ప్రతిస్పందనాత్మక శైలిలోని స్టార్టర్ లేఅవుట్"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("ప్రధాన భాగం"),
         "starterAppGenericButton": MessageLookupByLibrary.simpleMessage("బటన్"),

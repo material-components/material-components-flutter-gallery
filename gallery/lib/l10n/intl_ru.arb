@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "КОПИРОВАТЬ ВСЕ",
+  "shrineScreenReaderRemoveProductButton": "{product}: удалить товар",
+  "shrineScreenReaderProductAddToCart": "Добавить в корзину",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Нет товаров в корзине}=1{1 товар в корзине}one{{quantity} товар в корзине}few{{quantity} товара в корзине}many{{quantity} товаров в корзине}other{{quantity} товара в корзине}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Не удалось скопировать текст: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Текст скопирован в буфер обмена.",
   "craneSleep8SemanticLabel": "Руины майя на утесе над пляжем",
   "craneSleep4SemanticLabel": "Гостиница у озера на фоне гор",
   "craneSleep2SemanticLabel": "Крепость Мачу-Пикчу",

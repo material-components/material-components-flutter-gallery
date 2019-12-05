@@ -1,4 +1,10 @@
 {
+  "demoCodeViewerCopyAll": "SALIN SEMUA",
+  "shrineScreenReaderRemoveProductButton": "Alih keluar {product}",
+  "shrineScreenReaderProductAddToCart": "Tambahkan ke troli",
+  "shrineScreenReaderCart": "{quantity,plural, =0{Troli Beli-belah, tiada item}=1{Troli Beli-belah, 1 item}other{Troli Beli-belah, {quantity} item}}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "Gagal menyalin ke papan keratan: {error}",
+  "demoCodeViewerCopiedToClipboardMessage": "Disalin ke papan keratan.",
   "craneSleep8SemanticLabel": "Runtuhan maya pada cenuram di atas pantai",
   "craneSleep4SemanticLabel": "Hotel tepi tasik berhadapan gunung",
   "craneSleep2SemanticLabel": "Kubu kota Machu Picchu",

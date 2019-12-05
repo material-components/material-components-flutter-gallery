@@ -35,42 +35,49 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "${value} பொருள்";
 
-  static m6(name, phoneNumber) => "${name} உடைய ஃபோன் எண் ${phoneNumber}";
+  static m6(error) => "கிளிப்போர்டுக்கு நகலெடுக்க இயலவில்லை: ${error}";
 
-  static m7(value) => "You selected: \"${value}\"";
+  static m7(name, phoneNumber) => "${name} உடைய ஃபோன் எண் ${phoneNumber}";
 
-  static m8(accountName, accountNumber, amount) =>
+  static m8(value) => "You selected: \"${value}\"";
+
+  static m9(accountName, accountNumber, amount) =>
       "${amount} பேலன்ஸைக் கொண்ட ${accountName} அக்கவுண்ட் எண்: ${accountNumber}.";
 
-  static m9(amount) =>
+  static m10(amount) =>
       "இந்த மாதம் ATM கட்டணங்களாக ${amount} செலவிட்டுள்ளீர்கள்";
 
-  static m10(percent) =>
+  static m11(percent) =>
       "பாராட்டுகள்! உங்கள் செக்கிங் கணக்கு சென்ற மாதத்தைவிட  ${percent} அதிகரித்துள்ளது.";
 
-  static m11(percent) =>
+  static m12(percent) =>
       "கவனத்திற்கு: இந்த மாதத்திற்கான ஷாப்பிங் பட்ஜெட்டில் ${percent} பயன்படுத்திவிட்டீர்கள்.";
 
-  static m12(amount) =>
+  static m13(amount) =>
       "இந்த வாரத்தில் உணவகங்களில் ${amount} செலவழித்துள்ளீர்கள்.";
 
-  static m13(count) =>
+  static m14(count) =>
       "${Intl.plural(count, one: 'உங்களுக்குரிய சாத்தியமான வரிக் கழிவை அதிகரித்துக்கொள்ளுங்கள்! ஒரு பொறுப்புமாற்றப்படாத பணப் பரிமாற்றத்திற்கான வகைகளைச் சேருங்கள்.', other: 'உங்களுக்குரிய சாத்தியமான வரிக் கழிவை அதிகரித்துக்கொள்ளுங்கள்! ${count} பொறுப்புமாற்றப்படாத பணப் பரிமாற்றங்களுக்கான வகைகளைச் சேருங்கள்.')}";
 
-  static m14(billName, date, amount) =>
+  static m15(billName, date, amount) =>
       "${amount}க்கான ${billName} பில்லின் நிலுவைத் தேதி: ${date}.";
 
-  static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
+  static m16(budgetName, amountUsed, amountTotal, amountLeft) =>
       "${amountTotal}க்கான ${budgetName} பட்ஜெட்டில் பயன்படுத்தப்பட்ட தொகை: ${amountUsed}, மீதமுள்ள தொகை: ${amountLeft}";
 
-  static m16(quantity) =>
+  static m17(quantity) =>
       "${Intl.plural(quantity, zero: 'எதுவும் இல்லை', one: 'ஒரு பொருள்', other: '${quantity} பொருட்கள்')}";
 
-  static m17(price) => "x ${price}";
+  static m18(price) => "x ${price}";
 
-  static m18(quantity) => "எண்ணிக்கை: ${quantity}";
+  static m19(quantity) => "எண்ணிக்கை: ${quantity}";
 
-  static m19(value) => "${value} பொருள்";
+  static m20(quantity) =>
+      "${Intl.plural(quantity, zero: 'ஷாப்பிங் கார்ட், எதுவும் இல்லை', one: 'ஷாப்பிங் கார்ட், 1 பொருள்', other: 'ஷாப்பிங் கார்ட், ${quantity} பொருட்கள்')}";
+
+  static m21(product) => "${product} ஐ அகற்றும்";
+
+  static m22(value) => "${value} பொருள்";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function>{
@@ -360,6 +367,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoChoiceChipTitle":
             MessageLookupByLibrary.simpleMessage("தேர்வு சிப்"),
         "demoCodeTooltip": MessageLookupByLibrary.simpleMessage("Code Sample"),
+        "demoCodeViewerCopiedToClipboardMessage":
+            MessageLookupByLibrary.simpleMessage(
+                "கிளிப்போர்டுக்கு நகலெடுக்கப்பட்டது."),
+        "demoCodeViewerCopyAll":
+            MessageLookupByLibrary.simpleMessage("அனைத்தையும் நகலெடு"),
+        "demoCodeViewerFailedToCopyToClipboardMessage": m6,
         "demoColorsDescription": MessageLookupByLibrary.simpleMessage(
             "மெட்டீரியல் டிசைனின் வண்ணத் தட்டைக் குறிக்கின்ற வண்ணங்களும், வண்ணக் கலவை மாறிலிகளும்."),
         "demoColorsSubtitle": MessageLookupByLibrary.simpleMessage(
@@ -492,7 +505,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("வாழ்க்கைக் கதை"),
         "demoTextFieldNameField":
             MessageLookupByLibrary.simpleMessage("பெயர்*"),
-        "demoTextFieldNameHasPhoneNumber": m6,
+        "demoTextFieldNameHasPhoneNumber": m7,
         "demoTextFieldNameRequired":
             MessageLookupByLibrary.simpleMessage("பெயரை உள்ளிடுவது அவசியம்."),
         "demoTextFieldNoMoreThan": MessageLookupByLibrary.simpleMessage(
@@ -555,7 +568,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running."),
         "dialogLocationTitle": MessageLookupByLibrary.simpleMessage(
             "Use Google\'s location service?"),
-        "dialogSelectedOption": m7,
+        "dialogSelectedOption": m8,
         "dialogSetBackup":
             MessageLookupByLibrary.simpleMessage("Set backup account"),
         "dialogShow": MessageLookupByLibrary.simpleMessage("SHOW DIALOG"),
@@ -563,7 +576,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("மேற்கோள் ஸ்டைல்கள் & மீடியா"),
         "homeHeaderCategories": MessageLookupByLibrary.simpleMessage("வகைகள்"),
         "homeHeaderGallery": MessageLookupByLibrary.simpleMessage("கேலரி"),
-        "rallyAccountAmount": m8,
+        "rallyAccountAmount": m9,
         "rallyAccountDataCarSavings":
             MessageLookupByLibrary.simpleMessage("கார் சேமிப்புகள்"),
         "rallyAccountDataChecking":
@@ -588,15 +601,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "rallyAccountTotal": MessageLookupByLibrary.simpleMessage("மொத்தம்"),
         "rallyAccounts": MessageLookupByLibrary.simpleMessage("கணக்குகள்"),
         "rallyAlerts": MessageLookupByLibrary.simpleMessage("விழிப்பூட்டல்கள்"),
-        "rallyAlertsMessageATMFees": m9,
-        "rallyAlertsMessageCheckingAccount": m10,
-        "rallyAlertsMessageHeadsUpShopping": m11,
-        "rallyAlertsMessageSpentOnRestaurants": m12,
-        "rallyAlertsMessageUnassignedTransactions": m13,
-        "rallyBillAmount": m14,
+        "rallyAlertsMessageATMFees": m10,
+        "rallyAlertsMessageCheckingAccount": m11,
+        "rallyAlertsMessageHeadsUpShopping": m12,
+        "rallyAlertsMessageSpentOnRestaurants": m13,
+        "rallyAlertsMessageUnassignedTransactions": m14,
+        "rallyBillAmount": m15,
         "rallyBills": MessageLookupByLibrary.simpleMessage("பில்கள்"),
         "rallyBillsDue": MessageLookupByLibrary.simpleMessage("நிலுவை"),
-        "rallyBudgetAmount": m15,
+        "rallyBudgetAmount": m16,
         "rallyBudgetCategoryClothing":
             MessageLookupByLibrary.simpleMessage("ஆடை"),
         "rallyBudgetCategoryCoffeeShops":
@@ -702,7 +715,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ரத்துசெய்"),
         "shrineCartClearButtonCaption":
             MessageLookupByLibrary.simpleMessage("கார்ட்டை காலி செய்"),
-        "shrineCartItemCount": m16,
+        "shrineCartItemCount": m17,
         "shrineCartPageCaption": MessageLookupByLibrary.simpleMessage("கார்ட்"),
         "shrineCartShippingCaption":
             MessageLookupByLibrary.simpleMessage("ஷிப்பிங் விலை:"),
@@ -766,8 +779,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("நேவி டிரவுசர்கள்"),
         "shrineProductPlasterTunic":
             MessageLookupByLibrary.simpleMessage("பிளாஸ்டர் டியூனிக்"),
-        "shrineProductPrice": m17,
-        "shrineProductQuantity": m18,
+        "shrineProductPrice": m18,
+        "shrineProductQuantity": m19,
         "shrineProductQuartetTable":
             MessageLookupByLibrary.simpleMessage("குவார்டெட் டேபிள்"),
         "shrineProductRainwaterTray":
@@ -806,6 +819,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("வெள்ளை பின்ஸ்டிரைப் ஷர்ட்"),
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("விட்னி பெல்ட்"),
+        "shrineScreenReaderCart": m20,
+        "shrineScreenReaderProductAddToCart":
+            MessageLookupByLibrary.simpleMessage("கார்ட்டில் சேர்"),
+        "shrineScreenReaderRemoveProductButton": m21,
         "shrineTooltipCloseCart":
             MessageLookupByLibrary.simpleMessage("கார்ட்டை மூடுவதற்கான பட்டன்"),
         "shrineTooltipCloseMenu":
@@ -820,7 +837,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("அமைப்புகளுக்கான பட்டன்"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "திரைக்கு ஏற்ப மாறும் ஸ்டார்ட்டர் தளவமைப்பு"),
-        "starterAppDrawerItem": m19,
+        "starterAppDrawerItem": m22,
         "starterAppGenericBody":
             MessageLookupByLibrary.simpleMessage("உரைப் பகுதி"),
         "starterAppGenericButton":
