@@ -281,6 +281,8 @@ class _CategoryHeader extends StatelessWidget {
                         sizeFactor: subtitleHeight,
                         child: Text(
                           subtitle,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: textTheme.overline.apply(
                             color: colorScheme.primary,
                           ),

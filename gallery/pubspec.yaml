@@ -27,6 +27,10 @@ dependencies:
       url: git://github.com/google/flutter-desktop-embedding.git
       ref: a075c245ffdfc17409a3fff12517cf416aa77c87
       path: plugins/flutter_plugins/url_launcher_fde
+  flutter_localized_countries:
+    git:
+      url: git://github.com/guidezpl/flutter-localized-countries.git
+      ref: 76bfbf9654c3842d735181383f7ab86c312a2483
 
 dev_dependencies:
   flutter_test:

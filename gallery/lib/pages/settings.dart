@@ -4,7 +4,9 @@
 
 import 'dart:collection';
 
+import "package:collection/collection.dart";
 import 'package:flutter/material.dart';
+import 'package:flutter_localized_countries/flutter_localized_countries.dart';
 import 'package:gallery/constants.dart';
 import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
@@ -29,6 +31,7 @@ class SettingsPage extends StatefulWidget {
 
 class _SettingsPageState extends State<SettingsPage> {
   _ExpandableSetting expandedSettingId;
+  Map<String, String> _localeNativeNames;
 
   void onTapSetting(_ExpandableSetting settingId) {
     setState(() {
@@ -41,27 +44,75 @@ class _SettingsPageState extends State<SettingsPage> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    LocaleNamesLocalizationsDelegate().getLocaleNativeNames().then(
+          (data) => setState(
+            () {
+              _localeNativeNames = data;
+            },
+          ),
+        );
+  }
+
+  /// Given a [Locale], returns a two-line string containing its native name
+  /// followed by its name in the currently selected locale. If the native name
+  /// can't be determined, it is omitted. If the locale can't be determined,
+  /// the locale code is returned.
+  String _getLocaleDisplayName(BuildContext context, Locale locale) {
+    // TODO: gsw, fil, and es_419 aren't in flutter_localized_countries' dataset
+    final localeCode = locale.toString();
+    final localeName = LocaleNames.of(context).nameOf(localeCode);
+    if (localeName != null) {
+      final localeNativeName =
+          _localeNativeNames != null ? _localeNativeNames[localeCode] : null;
+      return localeNativeName != null
+          ? localeNativeName + '\n' + localeName
+          : localeName;
+    } else {
+      switch (localeCode) {
+        case 'gsw':
+          return 'Schwiizertüütsch\nSwiss German';
+        case 'fil':
+          return 'Filipino\nFilipino';
+        case 'es_419':
+          return 'español (Latinoamérica)\nSpanish (Latin America)';
+      }
+    }
+
+    return localeCode;
+  }
+
+  /// Create a sorted — by native name – map of supported locales to their
+  /// intended display string, with a system option as the first element.
+  LinkedHashMap<Locale, String> _getLocaleOptions() {
+    var localeOptions = LinkedHashMap.of({
+      systemLocaleOption:
+          GalleryLocalizations.of(context).settingsSystemDefault +
+              (deviceLocale != null
+                  ? ' - ${_getLocaleDisplayName(context, deviceLocale)}'
+                  : '')
+    });
+    var supportedLocales =
+        List<Locale>.from(GalleryLocalizations.supportedLocales);
+    supportedLocales.removeWhere((locale) => locale == deviceLocale);
+
+    final displayLocales = Map<Locale, String>.fromIterable(
+      supportedLocales,
+      value: (dynamic locale) =>
+          _getLocaleDisplayName(context, locale as Locale),
+    ).entries.toList()
+      ..sort((l1, l2) => compareAsciiUpperCase(l1.value, l2.value));
+
+    localeOptions.addAll(LinkedHashMap.fromEntries(displayLocales));
+    return localeOptions;
+  }
+
+  @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
     final options = GalleryOptions.of(context);
     final isDesktop = isDisplayDesktop(context);
-
-    var localeOptions = LinkedHashMap.of({
-      systemLocaleOption:
-          GalleryLocalizations.of(context).settingsSystemDefault +
-              (deviceLocale != null ? ' - $deviceLocale' : '')
-    });
-    // Add supported locales to localeOptions, except the device locale.
-    var supportedLocales =
-        List<Locale>.from(GalleryLocalizations.supportedLocales);
-    supportedLocales.removeWhere((locale) => locale == deviceLocale);
-    localeOptions.addAll(
-      LinkedHashMap.fromIterable(
-        supportedLocales,
-        // TODO: use flutter_localized_countries when updated
-        value: (dynamic v) => v.toString(),
-      ),
-    );
 
     return Material(
       color: colorScheme.secondaryVariant,
@@ -135,7 +186,7 @@ class _SettingsPageState extends State<SettingsPage> {
                 selectedOption: options.locale == deviceLocale
                     ? systemLocaleOption
                     : options.locale,
-                options: localeOptions,
+                options: _getLocaleOptions(),
                 onOptionChanged: (newLocale) {
                   if (newLocale == systemLocaleOption) {
                     newLocale = deviceLocale;
