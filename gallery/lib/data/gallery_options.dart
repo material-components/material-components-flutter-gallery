@@ -5,6 +5,7 @@
 import 'dart:async';
 import 'dart:io' show Platform;
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart' show timeDilation;
 import 'package:gallery/constants.dart';
@@ -71,7 +72,7 @@ class GalleryOptions {
       deviceLocale ??
       // TODO: When deviceLocale can be obtained on macOS, this won't be necessary
       // https://github.com/flutter/flutter/issues/45343
-      (Platform.isMacOS ? Locale('en', 'US') : null);
+      (!kIsWeb && Platform.isMacOS ? Locale('en', 'US') : null);
 
   /// Returns the text direction based on the [CustomTextDirection] setting.
   /// If the locale cannot be determined, returns null.
