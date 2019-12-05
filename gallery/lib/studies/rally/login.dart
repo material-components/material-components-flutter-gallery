@@ -26,17 +26,14 @@ class _LoginPageState extends State<LoginPage> {
       policy: LoginFocusTraversalPolicy(
         backButtonFocusNode:
             InheritedFocusNodes.of(context).backButtonFocusNode,
-        focusScopeNode: InheritedFocusNodes.of(context).studyFocusScopeNode,
+        focusScopeNode: FocusScope.of(context),
       ),
-      child: FocusScope(
-        node: InheritedFocusNodes.of(context).studyFocusScopeNode,
-        child: ApplyTextOptions(
-          child: Scaffold(
-            body: SafeArea(
-              child: _MainView(
-                usernameController: _usernameController,
-                passwordController: _passwordController,
-              ),
+      child: ApplyTextOptions(
+        child: Scaffold(
+          body: SafeArea(
+            child: _MainView(
+              usernameController: _usernameController,
+              passwordController: _passwordController,
             ),
           ),
         ),

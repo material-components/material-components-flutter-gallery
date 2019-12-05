@@ -10,9 +10,14 @@ import 'package:gallery/studies/starter/home.dart';
 const _primaryColor = Color(0xFF6200EE);
 
 class StarterApp extends StatelessWidget {
+  const StarterApp({Key key, this.navigatorKey}) : super(key: key);
+
+  final GlobalKey<NavigatorState> navigatorKey;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: navigatorKey,
       title: GalleryLocalizations.of(context).starterAppTitle,
       debugShowCheckedModeBanner: false,
       localizationsDelegates: GalleryLocalizations.localizationsDelegates,

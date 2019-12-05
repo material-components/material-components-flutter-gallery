@@ -29,6 +29,10 @@ import 'package:gallery/studies/shrine/supplemental/cut_corners_border.dart';
 import 'package:scoped_model/scoped_model.dart';
 
 class ShrineApp extends StatefulWidget {
+  const ShrineApp({Key key, this.navigatorKey}) : super(key: key);
+
+  final GlobalKey<NavigatorState> navigatorKey;
+
   @override
   _ShrineAppState createState() => _ShrineAppState();
 }
@@ -91,6 +95,7 @@ class _ShrineAppState extends State<ShrineApp> with TickerProviderStateMixin {
     return ScopedModel<AppStateModel>(
       model: _model,
       child: MaterialApp(
+        navigatorKey: widget.navigatorKey,
         title: 'Shrine',
         debugShowCheckedModeBanner: false,
         home: PageStatus(

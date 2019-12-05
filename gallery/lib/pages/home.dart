@@ -37,12 +37,18 @@ const String homeCategoryCupertino = 'CUPERTINO';
 
 class ToggleSplashNotification extends Notification {}
 
+class NavigatorKeys {
+  static final shrine = GlobalKey<NavigatorState>();
+  static final rally = GlobalKey<NavigatorState>();
+  static final crane = GlobalKey<NavigatorState>();
+  static final starter = GlobalKey<NavigatorState>();
+}
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var carouselHeight = _carouselHeight(.7, context);
     final isDesktop = isDisplayDesktop(context);
-
     final carouselCards = <_CarouselCard>[
       _CarouselCard(
         title: shrineTitle,
@@ -50,7 +56,8 @@ class HomePage extends StatelessWidget {
         asset: 'assets/studies/shrine_card.png',
         assetDark: 'assets/studies/shrine_card_dark.png',
         textColor: shrineBrown900,
-        study: ShrineApp(),
+        study: ShrineApp(navigatorKey: NavigatorKeys.shrine),
+        navigatorKey: NavigatorKeys.shrine,
       ),
       _CarouselCard(
         title: rallyTitle,
@@ -58,7 +65,8 @@ class HomePage extends StatelessWidget {
         textColor: RallyColors.accountColors[0],
         asset: 'assets/studies/rally_card.png',
         assetDark: 'assets/studies/rally_card_dark.png',
-        study: RallyApp(),
+        study: RallyApp(navigatorKey: NavigatorKeys.rally),
+        navigatorKey: NavigatorKeys.rally,
       ),
       _CarouselCard(
         title: craneTitle,
@@ -66,7 +74,8 @@ class HomePage extends StatelessWidget {
         asset: 'assets/studies/crane_card.png',
         assetDark: 'assets/studies/crane_card_dark.png',
         textColor: cranePurple700,
-        study: CraneApp(),
+        study: CraneApp(navigatorKey: NavigatorKeys.crane),
+        navigatorKey: NavigatorKeys.crane,
       ),
       _CarouselCard(
         title: GalleryLocalizations.of(context).starterAppTitle,
@@ -74,7 +83,8 @@ class HomePage extends StatelessWidget {
         asset: 'assets/studies/starter_card.png',
         assetDark: 'assets/studies/starter_card_dark.png',
         textColor: Colors.black,
-        study: StarterApp(),
+        study: StarterApp(navigatorKey: NavigatorKeys.starter),
+        navigatorKey: NavigatorKeys.starter,
       ),
     ];
 
@@ -692,6 +702,7 @@ class _CarouselCard extends StatelessWidget {
     this.assetDark,
     this.textColor,
     this.study,
+    this.navigatorKey,
   }) : super(key: key);
 
   final String title;
@@ -700,6 +711,7 @@ class _CarouselCard extends StatelessWidget {
   final String assetDark;
   final Color textColor;
   final Widget study;
+  final GlobalKey<NavigatorState> navigatorKey;
 
   @override
   Widget build(BuildContext context) {
@@ -722,7 +734,10 @@ class _CarouselCard extends StatelessWidget {
           onTap: () {
             Navigator.of(context).push<void>(
               MaterialPageRoute(
-                builder: (context) => _StudyWrapper(study: study),
+                builder: (context) => _StudyWrapper(
+                  study: study,
+                  navigatorKey: navigatorKey,
+                ),
               ),
             );
           },
@@ -771,9 +786,14 @@ double _carouselHeight(double scaleFactor, BuildContext context) => math.max(
 /// Wrap the studies with this to display a back button and allow the user to
 /// exit them at any time.
 class _StudyWrapper extends StatefulWidget {
-  const _StudyWrapper({Key key, this.study}) : super(key: key);
+  const _StudyWrapper({
+    Key key,
+    this.study,
+    this.navigatorKey,
+  }) : super(key: key);
 
   final Widget study;
+  final GlobalKey<NavigatorState> navigatorKey;
 
   @override
   _StudyWrapperState createState() => _StudyWrapperState();
@@ -805,11 +825,10 @@ class _StudyWrapperState extends State<_StudyWrapper> {
       child: DefaultFocusTraversal(
         policy: StudyWrapperFocusTraversalPolicy(
           backButtonFocusNode: backButtonFocusNode,
-          studyFocusScopeNode: studyFocusScopeNode,
+          studyNavigatorKey: widget.navigatorKey,
         ),
         child: InheritedFocusNodes(
           backButtonFocusNode: backButtonFocusNode,
-          studyFocusScopeNode: studyFocusScopeNode,
           child: Stack(
             children: [
               Semantics(
@@ -853,12 +872,10 @@ class InheritedFocusNodes extends InheritedWidget {
     Key key,
     @required Widget child,
     @required this.backButtonFocusNode,
-    @required this.studyFocusScopeNode,
   })  : assert(child != null),
         super(key: key, child: child);
 
   final FocusNode backButtonFocusNode;
-  final FocusScopeNode studyFocusScopeNode;
 
   static InheritedFocusNodes of(BuildContext context) =>
       context.dependOnInheritedWidgetOfExactType();
@@ -870,16 +887,19 @@ class InheritedFocusNodes extends InheritedWidget {
 class StudyWrapperFocusTraversalPolicy extends ReadingOrderTraversalPolicy {
   StudyWrapperFocusTraversalPolicy({
     @required this.backButtonFocusNode,
-    @required this.studyFocusScopeNode,
+    @required this.studyNavigatorKey,
   });
 
   final FocusNode backButtonFocusNode;
-  final FocusScopeNode studyFocusScopeNode;
+  final GlobalKey<NavigatorState> studyNavigatorKey;
 
   @override
   bool previous(FocusNode currentNode) {
     if (currentNode == backButtonFocusNode) {
-      studyFocusScopeNode.children.last.requestFocus();
+      studyNavigatorKey.currentState.focusScopeNode.traversalDescendants
+          .toList()
+          .last
+          .requestFocus();
       return true;
     } else {
       return super.previous(currentNode);
@@ -889,7 +909,10 @@ class StudyWrapperFocusTraversalPolicy extends ReadingOrderTraversalPolicy {
   @override
   bool next(FocusNode currentNode) {
     if (currentNode == backButtonFocusNode) {
-      studyFocusScopeNode.children.first.requestFocus();
+      studyNavigatorKey.currentState.focusScopeNode.traversalDescendants
+          .toList()
+          .first
+          .requestFocus();
       return true;
     } else {
       return super.next(currentNode);

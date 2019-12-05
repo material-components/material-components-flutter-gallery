@@ -22,6 +22,10 @@ import 'package:gallery/studies/crane/sleep_form.dart';
 import 'package:gallery/studies/crane/theme.dart';
 
 class CraneApp extends StatefulWidget {
+  const CraneApp({Key key, this.navigatorKey}) : super(key: key);
+
+  final GlobalKey<NavigatorState> navigatorKey;
+
   @override
   _CraneAppState createState() => _CraneAppState();
 }
@@ -30,6 +34,7 @@ class _CraneAppState extends State<CraneApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: widget.navigatorKey,
       title: 'Crane',
       debugShowCheckedModeBanner: false,
       localizationsDelegates: GalleryLocalizations.localizationsDelegates,
