@@ -126,44 +126,95 @@ class MessageLookup extends MessageLookupByLibrary {
             "Personalizirana aplikacija za putovanja"),
         "craneEat": MessageLookupByLibrary.simpleMessage("HRANA"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Napulj, Italija"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pizza u krušnoj peći"),
         "craneEat1": MessageLookupByLibrary.simpleMessage(
             "Dalas, Sjedinjene Američke Države"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("Lisabon, Portugal"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Žena drži ogromni sendvič s dimljenom govedinom"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Prazan bar s barskim stolicama"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Kordoba, Argentina"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pljeskavica"),
         "craneEat3": MessageLookupByLibrary.simpleMessage(
             "Portland, Sjedinjene Američke Države"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Korejski tako"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Pariz, Francuska"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Čokoladni desert"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Seul, Južna Koreja"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Prostor za sjedenje u umjetničkom restoranu"),
         "craneEat6": MessageLookupByLibrary.simpleMessage(
             "Seattle, Sjedinjene Američke Države"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Jelo od škampi"),
         "craneEat7": MessageLookupByLibrary.simpleMessage(
             "Nashville, Sjedinjene Američke Države"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Ulaz u pekaru"),
         "craneEat8": MessageLookupByLibrary.simpleMessage(
             "Atlanta, Sjedinjene Američke Države"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tanjir s rečnim rakovima"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Španija"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Štand za kafu i peciva"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Istražite restorane po odredištima"),
         "craneFly": MessageLookupByLibrary.simpleMessage("LETITE"),
         "craneFly0": MessageLookupByLibrary.simpleMessage(
             "Aspen, Sjedinjene Američke Države"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Planinska kućica u snježnom krajoliku sa zimzelenim drvećem"),
         "craneFly1": MessageLookupByLibrary.simpleMessage(
             "Big Sur, Sjedinjene Američke Države"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Kairo, Egipat"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Minareti džamije Al-Azhar u suton"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("Lisabon, Portugal"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Svjetionik od cigle na moru"),
         "craneFly12": MessageLookupByLibrary.simpleMessage(
             "Napa, Sjedinjene Američke Države"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bazen okružen palmama"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonezija"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bazen pored mora okružen palmama"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Šator u polju"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Dolina Khumbu, Nepal"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Molitvene zastave ispred snijegom prekrivene planine"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tvrđava Machu Picchu"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldivi"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Kućice na vodi"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Švicarska"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Španija"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hotel pored jezera ispred planina"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("Mexico City, Meksiko"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Pogled iz zraka na Palacio de Bellas Artes"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "Planina Rushmore, Sjedinjene Američke Države"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Planina Rushmore"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapur"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Muškarac naslonjen na starinski plavi automobil"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Istražite letove po odredištima"),
@@ -184,23 +235,47 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Putnici"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("STANJE MIROVANJA"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldivi"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Kućice na vodi"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage(
             "Aspen, Sjedinjene Američke Države"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Kairo, Egipat"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Minareti džamije Al-Azhar u suton"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Tajvan"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Neboder Taipei 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Planinska kućica u snježnom krajoliku sa zimzelenim drvećem"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tvrđava Machu Picchu"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Muškarac naslonjen na starinski plavi automobil"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("Vitznau, Švicarska"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hotel pored jezera ispred planina"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage(
             "Big Sur, Sjedinjene Američke Države"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Šator u polju"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage(
             "Napa, Sjedinjene Američke Države"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bazen okružen palmama"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Šareni stanovi na Trgu Riberia"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Meksiko"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Majanske ruševine na litici iznad plaže"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Lisabon, Portugal"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Svjetionik od cigle na moru"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Istražite smještaje po odredištima"),
@@ -350,6 +425,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("Čip unosa"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Prikazivanje URL-a nije uspjelo:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Jedan red fiksne visine koji uglavnom sadrži tekst te ikonu na početku ili na kraju."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Sekundarni tekst"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Izgledi liste koju je moguće klizati"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Liste"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Jedan red"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opcije"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Ocrtana dugmad postaje neprozirna i podiže se kada se pritisne. Obično se uparuje s izdignutom dugmadi kako bi se ukazalo na alternativnu, sekundarnu radnju."),
@@ -359,6 +443,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Izdignuta dugmad daje trodimenzionalni izgled uglavnom ravnim prikazima. Ona naglašava funkcije u prostorima s puno elemenata ili širokim prostorima."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Izdignuto dugme"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Polja za potvrdu omogućavaju korisniku da odabere više opcija iz skupa. Normalna vrijednost polja za potvrdu je tačno ili netačno, a treća vrijednost polja za potvrdu može biti i nula."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Polje za potvrdu"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Dugmad za izbor omogućava korisniku da odabere jednu opciju iz seta. Koristite dugmad za izbor za ekskluzivni odabir ako smatrate da korisnik treba vidjeti sve dostupne opcije jednu pored druge."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Dugme za izbor"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Polja za potvrdu, dugmad za izbor i prekidači"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Prekidači za uključivanje/isključivanje mijenjaju stanje jedne opcije postavki. Opcija koju kontrolirira prekidač, kao i status te opcije, trebaju biti jasno naglašeni u odgovarajućoj direktnoj oznaci."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Prekidač"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Kontrole odabira"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Jednostavni dijaloški okvir korisniku nudi izbor između nekoliko opcija. Jednostavni dijaloški okvir ima opcionalni naslov koji se prikazuje iznad izbora."),
         "demoSimpleDialogTitle":
@@ -424,6 +527,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Dugmad za uključivanje/isključivanje može se koristiti za grupisanje srodnih opcija. Da naglasite grupe srodne dugmadi za uključivanje/isključivanje, grupa treba imati zajednički spremnik"),
         "demoToggleButtonTitle": MessageLookupByLibrary.simpleMessage(
             "Dugmad za uključivanje/isključivanje"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Dva reda"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Definicije raznih tipografskih stilova u materijalnom dizajnu."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -550,6 +655,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("O usluzi Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Dizajnirala agencija TOASTER iz Londona"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Zatvori postavke"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("Postavke"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Tamna"),
         "settingsFeedback": MessageLookupByLibrary.simpleMessage(
             "Pošalji povratne informacije"),

@@ -86,7 +86,7 @@ Future<void> generateXmlFromArb({
       xml.writeln('    name="$name"');
       xml.writeln('    description="$description">');
       for (String suffix in _pluralSuffixes) {
-        final pluralKey = '${resourceId}${suffix}';
+        final pluralKey = '$resourceId$suffix';
         if (bundle.containsKey(pluralKey)) {
           final translation =
               translationFor(pluralKey).replaceFirst(quantityVar, '%d');
@@ -109,12 +109,12 @@ Future<void> generateXmlFromArb({
       assert(metaInfo['parameters'].trim().isNotEmpty);
       final parameters = metaInfo['parameters']
           .split(',')
-          .map<String>((String s) => s.trim())
+          .map<String>((s) => s.trim())
           .toList();
       var index = 1;
       for (String parameter in parameters) {
-        translation = translation.replaceAll('\$$parameter', '%${index}\$s');
-        description = description.replaceAll('\$$parameter', '%${index}\$s');
+        translation = translation.replaceAll('\$$parameter', '%$index\$s');
+        description = description.replaceAll('\$$parameter', '%$index\$s');
         index += 1;
       }
       xml.writeln('  <string');

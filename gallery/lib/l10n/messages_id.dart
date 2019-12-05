@@ -122,45 +122,95 @@ class MessageLookup extends MessageLookupByLibrary {
             "Aplikasi perjalanan yang dipersonalisasi"),
         "craneEat": MessageLookupByLibrary.simpleMessage("MAKAN"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Naples, Italia"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Pizza dalam oven berbahan bakar kayu"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("Dallas, Amerika Serikat"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Wanita yang memegang sandwich pastrami besar"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bar kosong dengan bangku bergaya rumah makan"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Burger"),
         "craneEat3":
             MessageLookupByLibrary.simpleMessage("Portland, Amerika Serikat"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Taco korea"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, Prancis"),
+        "craneEat4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Makanan penutup berbahan cokelat"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("Seoul, Korea Selatan"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Area tempat duduk restoran yang berseni"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("Seattle, Amerika Serikat"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Hidangan berbahan udang"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("Nashville, Amerika Serikat"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pintu masuk toko roti"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("Atlanta, Amerika Serikat"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Sepiring udang laut"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spanyol"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Meja kafe dengan kue-kue"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Jelajahi Restoran berdasarkan Tujuan"),
         "craneFly": MessageLookupByLibrary.simpleMessage("TERBANG"),
         "craneFly0":
             MessageLookupByLibrary.simpleMessage("Aspen, Amerika Serikat"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Chalet di lanskap bersalju dengan pepohonan hijau"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("Big Sur, Amerika Serikat"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Kairo, Mesir"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Menara Masjid Al-Azhar saat matahari terbenam"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Mercusuar bata di laut"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("Napa, Amerika Serikat"),
+        "craneFly12SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kolam renang yang terdapat pohon palem"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kolam renang tepi laut yang terdapat pohon palem"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tenda di lapangan"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Khumbu Valley, Nepal"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bendera doa menghadap gunung bersalju"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Benteng Machu Picchu"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maladewa"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bungalo apung"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Swiss"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spanyol"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hotel tepi danau yang menghadap pegunungan"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Meksiko, Meksiko"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Pemandangan udara Palacio de Bellas Artes"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "Gunung Rushmore, Amerika Serikat"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Gunung Rushmore"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapura"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Pria yang bersandar pada mobil antik warna biru"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Jelajahi Penerbangan berdasarkan Tujuan"),
@@ -176,21 +226,45 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Pelancong"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("TIDUR"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maladewa"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bungalo apung"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("Aspen, Amerika Serikat"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Kairo, Mesir"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Menara Masjid Al-Azhar saat matahari terbenam"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+        "craneSleep11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Gedung pencakar langit Taipei 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Chalet di lanskap bersalju dengan pepohonan hijau"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Benteng Machu Picchu"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Pria yang bersandar pada mobil antik warna biru"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, Swiss"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hotel tepi danau yang menghadap pegunungan"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("Big Sur, Amerika Serikat"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tenda di lapangan"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("Napa, Amerika Serikat"),
+        "craneSleep6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kolam renang yang terdapat pohon palem"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Apartemen warna-warni di Ribeira Square"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Meksiko"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Reruntuhan kota suku Maya di tebing di atas pantai"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("Lisbon, Portugal"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Mercusuar bata di laut"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Jelajahi Properti berdasarkan Tujuan"),
@@ -338,6 +412,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Input Chip"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Tidak dapat menampilkan URL:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Baris tunggal dengan ketinggian tetap yang biasanya berisi teks serta ikon di awal atau akhir."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Teks sekunder"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("Tata letak daftar scroll"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Daftar"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Satu Baris"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opsi"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Tombol outline akan menjadi buram dan terangkat saat ditekan. Tombol tersebut sering dipasangkan dengan tombol timbul untuk menandakan tindakan kedua dan alternatif."),
@@ -347,6 +430,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Tombol timbul menambahkan dimensi ke sebagian besar tata letak datar. Tombol tersebut mempertegas fungsi pada ruang yang sibuk atau lapang."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Tombol Timbul"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Kotak centang memungkinkan pengguna memilih beberapa opsi dari suatu kumpulan. Nilai kotak centang normal adalah true atau false dan nilai kotak centang tristate juga dapat null."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Kotak centang"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Tombol pilihan memungkinkan pengguna memilih salah satu opsi dari kumpulan. Gunakan tombol pilihan untuk pilihan eksklusif jika Anda merasa bahwa pengguna perlu melihat semua opsi yang tersedia secara berdampingan."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Radio"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Kotak centang, tombol pilihan, dan tombol akses"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Tombol akses on/off mengalihkan status opsi setelan tunggal. Opsi yang dikontrol tombol akses, serta statusnya, harus dijelaskan dari label inline yang sesuai."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Tombol Akses"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Kontrol pilihan"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Dialog sederhana akan menawarkan pilihan di antara beberapa opsi kepada pengguna. Dialog sederhana memiliki judul opsional yang ditampilkan di atas pilihan tersebut."),
         "demoSimpleDialogTitle":
@@ -409,6 +511,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Tombol yang dapat digunakan untuk opsi terkait grup. Untuk mempertegas grup tombol yang terkait, sebuah grup harus berbagi container yang sama"),
         "demoToggleButtonTitle": MessageLookupByLibrary.simpleMessage("Tombol"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Dua Baris"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Definisi berbagai gaya tipografi yang ditemukan dalam Desain Material."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -532,6 +636,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Tentang Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Didesain oleh TOASTER di London"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Tutup setelan"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("Setelan"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Gelap"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Kirimkan masukan"),

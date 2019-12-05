@@ -121,44 +121,94 @@ class MessageLookup extends MessageLookupByLibrary {
             "ذاتی نوعیت کی بنائی گئی ایک سفری ایپ"),
         "craneEat": MessageLookupByLibrary.simpleMessage("کھائیں"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("نیپال، اٹلی"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "لکڑی سے جلنے والے اوون میں پزا"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("ڈلاس، ریاستہائے متحدہ"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("لسبن، پرتگال"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "پاسٹرامی سینڈوچ پکڑے ہوئے عورت"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "کھانے کے اسٹولز کے ساتھ خالی بار"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("قرطبہ، ارجنٹینا"),
+        "craneEat2SemanticLabel": MessageLookupByLibrary.simpleMessage("برگر"),
         "craneEat3":
             MessageLookupByLibrary.simpleMessage("پورٹلینڈ، ریاست ہائے متحدہ"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("کوریائی ٹیکو"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("پیرس، فرانس"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("چاکلیٹ سے بنی مٹھائی"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("سیول، جنوبی کوریا"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "آرٹس ریسٹورنٹ میں بیٹھنے کی جگہ"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("سی‏ئٹل، ریاستہائے متحدہ"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("جھینگا مچھلی سے بنی ڈش"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("نیش ول، ریاستہائے متحدہ"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("بیکری کا دروازہ"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("اٹلانٹا، ریاستہائے متحدہ"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("پلیٹ میں رکھی جھینگا مچھلی"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("میڈرڈ، ہسپانیہ"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "پیسٹریز کے ساتھ کیفے کاؤنٹر"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "منزل کے لحاظ سے ریستوران دریافت کریں"),
         "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
         "craneFly0":
             MessageLookupByLibrary.simpleMessage("اسپین، ریاستہائے متحدہ"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "سدا بہار پہاڑوں کے بیچ برفیلے لینڈ اسکیپ میں چالیٹ"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("بگ سور، ریاستہائے متحدہ"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("قاہرہ، مصر"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "غروب آفتاب کے دوران ازہر مسجد کے ٹاورز"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("لسبن، پرتگال"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "سمندر کے کنارے برک لائٹ ہاؤس"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("ناپا، ریاستہائے متحدہ"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("کھجور کے درختوں کے ساتھ پول"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("بالی، انڈونیشیا"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "سمندر کنارے کھجور کے درختوں کے ساتھ پول"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("میدان میں ٹینٹ"),
         "craneFly2": MessageLookupByLibrary.simpleMessage("خومبو ویلی، نیپال"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "برفیلے پہاڑ کے سامنے دعا کے جھنڈے"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("ماچو پچو، پیرو"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ماچو پیچو کا قلعہ"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("مالے، مالدیپ"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("پانی کے اوپر بنگلے"),
         "craneFly5":
             MessageLookupByLibrary.simpleMessage("وٹزناؤ، سوئٹزر لینڈ"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("میڈرڈ، ہسپانیہ"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "پہاڑوں کے سامنے جھیل کے کنارے ہوٹل"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("میکسیکو سٹی، میکسیکو"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "پلاسیو دا بلاس آرٹس کے محل کا فضائی نظارہ"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "ماؤنٹ رشمور، ریاستہائے متحدہ امریکہ"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ماؤنٹ رشمور"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("سنگاپور"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("سپرٹری گرو"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("ہوانا، کیوبا"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "نیلے رنگ کی کار سے ٹیک لگار کر کھڑا آدمی"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "منزل کے لحاظ سے فلائیٹس دریافت کریں"),
@@ -177,22 +227,46 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("سیاح"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("نیند"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("مالے، مالدیپ"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("پانی کے اوپر بنگلے"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("اسپین، ریاستہائے متحدہ"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("قاہرہ، مصر"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "غروب آفتاب کے دوران ازہر مسجد کے ٹاورز"),
         "craneSleep11":
             MessageLookupByLibrary.simpleMessage("تائی پے، تائیوان"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("اسکائی اسکریپر 101 تائی پے"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "سدا بہار پہاڑوں کے بیچ برفیلے لینڈ اسکیپ میں چالیٹ"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("ماچو پچو، پیرو"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ماچو پیچو کا قلعہ"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("ہوانا، کیوبا"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "نیلے رنگ کی کار سے ٹیک لگار کر کھڑا آدمی"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("وٹزناؤ، سوئٹزر لینڈ"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "پہاڑوں کے سامنے جھیل کے کنارے ہوٹل"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("بگ سور، ریاستہائے متحدہ"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("میدان میں ٹینٹ"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("ناپا، ریاستہائے متحدہ"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("کھجور کے درختوں کے ساتھ پول"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("پورٹو، پرتگال"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "رائبیریا اسکوائر میں رنگین اپارٹمنٹس"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("تولوم ، میکسیکو"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "بیچ کے اوپر پہاڑ پر مایا تہذیب کے کھنڈرات"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("لسبن، پرتگال"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "سمندر کے کنارے برک لائٹ ہاؤس"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "منزل کے لحاظ سے پراپرٹیز دریافت کریں"),
@@ -339,6 +413,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("ان پٹ چپ"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL نہیں دکھایا جا سکا:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "ایک واحد مقررہ اونچائی والی قطار جس میں عام طور پر کچھ متن کے ساتھ ساتھ آگے یا پیچھے کرنے والا ایک آئیکن ہوتا ہے۔"),
+        "demoListsSecondary": MessageLookupByLibrary.simpleMessage("ثانوی متن"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("اسکرولنگ فہرست کا لے آؤٹس"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("فہرستیں"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("ایک لائن"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("اختیارات"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "آؤٹ لائن بٹنز کے دبائیں جانے پر وہ دھندلے اور بلند ہوجاتے ہیں۔ یہ متبادل، ثانوی کارروائی کی نشاندہی کرنے کے لیے اکثر ابھرے ہوئے بٹنوں کے ساتھ جوڑے جاتے ہیں۔"),
@@ -348,6 +430,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "ابھرے ہوئے بٹن اُن لے آؤٹس میں شامل کریں جو زیادہ تر ہموار ہیں۔ یہ مصروف یا وسیع خالی جگہوں والے افعال پر زور دیتے ہیں۔"),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("ابھرا ہوا بٹن"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "چیک باکسز صارف کو سیٹ سے متعدد اختیارات کو منتخب کرنے کی اجازت دیتا ہے۔ عام چیک باکس کی قدر صحیح یا غلط ہوتی ہے اور تین حالتوں والے چیک باکس کو خالی بھی چھوڑا جا سکتا ہے۔"),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("چیک باکس"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ریڈیو بٹنز صارف کو سیٹ سے ایک اختیار منتخب کرنے کی اجازت دیتے ہیں۔ اگر آپ کو لگتا ہے کہ صارف کو سبھی دستیاب اختیارات کو پہلو بہ پہلو دیکھنے کی ضرورت ہے تو خاص انتخاب کے لیے ریڈیو بٹنز استعمال کریں۔"),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("ریڈیو"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "چیک باکسز، ریڈیو بٹنز اور سوئچز"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "آن/آف سوئچز ترتیبات کے واحد اختیار کو ٹوگل کرتا ہے۔ اختیار جسے سوئچ کنٹرول کرتا ہے، اور اس میں موجود حالت متعلقہ ان لائن لیبل سے واضح کیا جانا چاہیے۔"),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("سوئچ کریں"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("انتخاب کے کنٹرولز"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "ایک سادہ ڈائیلاگ صارف کو کئی اختیارات کے درمیان انتخاب پیش کرتا ہے ایک سادہ ڈائیلاگ کا اختیاری عنوان ہوتا ہے جو انتخابات کے اوپر دکھایا جاتا ہے۔"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("سادہ"),
@@ -412,6 +513,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "گروپ سے متعلق اختیارات کے لیے ٹوگل بٹنز استعمال کئے جا سکتے ہیں۔ متعلقہ ٹوگل بٹنز کے گروپوں پر زور دینے کے لئے، ایک گروپ کو مشترکہ کنٹینر کا اشتراک کرنا ہوگا"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("ٹوگل بٹنز"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("دو لائنز"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "مٹیریل ڈیزائن میں پائے جانے والے مختلف ٹائپوگرافیکل اسٹائل کی تعریفات۔"),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -539,6 +642,9 @@ class MessageLookup extends MessageLookupByLibrary {
             "چاپلوسی والی Gallery کے بارے میں"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "لندن میں ٹوسٹر کے ذریعے ڈیزائن کیا گیا"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("ترتیبات بند کریں"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("ترتیبات"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("گہری"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("تاثرات بھیجیں"),

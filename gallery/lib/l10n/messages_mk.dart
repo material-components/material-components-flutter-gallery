@@ -125,37 +125,88 @@ class MessageLookup extends MessageLookupByLibrary {
             "Персонализирана апликација за патување"),
         "craneEat": MessageLookupByLibrary.simpleMessage("ЈАДЕЊЕ"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Неапол, Италија"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Пица во фурна на дрва"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("Далас, САД"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Лисабон, Португалија"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Жена држи огромен сендвич со пастрма"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Празен шанк со столици во стилот на американските ресторани"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Кордоба, Аргентина"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Хамбургер"),
         "craneEat3": MessageLookupByLibrary.simpleMessage("Портланд, САД"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Корејско тако"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Париз, Франција"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Чоколаден десерт"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Сеул, Јужна Кореја"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Област за седење во уметнички ресторан"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("Сиетл, САД"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Порција ракчиња"),
         "craneEat7": MessageLookupByLibrary.simpleMessage("Нешвил, САД"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Влез на пекарница"),
         "craneEat8": MessageLookupByLibrary.simpleMessage("Атланта, САД"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Чинија со ракови"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Мадрид, Шпанија"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Шанк во кафуле со печива"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Истражувајте ресторани по дестинација"),
         "craneFly": MessageLookupByLibrary.simpleMessage("ЛЕТАЊЕ"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("Аспен, САД"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Вила во снежен пејзаж со зимзелени дрва"),
         "craneFly1": MessageLookupByLibrary.simpleMessage("Биг Сур, САД"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Каиро, Египет"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Минарињата на џамијата Ал-Азар на зајдисонце"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Лисабон, Португалија"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Светилник од тули на море"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("Напа, САД"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Базен со палми"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Бали, Индонезија"),
+        "craneFly13SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Базен крај море со палми"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Шатор на поле"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Долина Кумбу, Непал"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Молитвени знамиња пред снежна планина"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Мачу Пикчу, Перу"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Тврдината Мачу Пикчу"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Мале, Малдиви"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Надводни бунгалови"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Вицнау, Швјцарија"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Мадрид, Шпанија"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Хотел крај езеро пред планини"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("Мексико Сити, Мексико"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Поглед одозгора на Палатата на ликовни уметности"),
         "craneFly7": MessageLookupByLibrary.simpleMessage("Маунт Рашмор, САД"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Маунт Рашмор"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Сингапур"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Градина со супердрва"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Хавана, Куба"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Маж се потпира на старински син автомобил"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Истражувајте летови по дестинација"),
@@ -174,20 +225,44 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Патници"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("СПИЕЊЕ"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Мале, Малдиви"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Надводни бунгалови"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage("Аспен, САД"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Каиро, Египет"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Минарињата на џамијата Ал-Азар на зајдисонце"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Тајпеј, Тајван"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Облакодерот Тајпеј 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Вила во снежен пејзаж со зимзелени дрва"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("Мачу Пикчу, Перу"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Тврдината Мачу Пикчу"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Хавана, Куба"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Маж се потпира на старински син автомобил"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("Вицнау, Швјцарија"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Хотел крај езеро пред планини"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage("Биг Сур, САД"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Шатор на поле"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("Напа, САД"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Базен со палми"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("Порто, Португалија"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Живописни апартмани во квартот Рибериа"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Тулум, Мексико"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Урнатини на Маите на карпа над плажа"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Лисабон, Португалија"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Светилник од тули на море"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Истражувајте сместувања по дестинација"),
@@ -339,6 +414,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Икона за внесување"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "URL-адресата не можеше да се прикаже:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Еден ред со фиксна висина што обично содржи текст, како и икона на почетокот или на крајот."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Секундарен текст"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Распореди на подвижен список"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Списоци"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Една линија"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Опции"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Копчињата со контура стануваат непроѕирни и се подигнуваат кога ќе ги притиснете. Честопати се спаруваат со подигнатите копчиња за да означат алтернативно секундарно дејство."),
@@ -348,6 +432,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Подигнатите копчиња додаваат димензионалност во распоредите што се претежно рамни. Ги нагласуваат функциите во збиените или широките простори."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Подигнато копче"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Полињата за избор му овозможуваат на корисникот да избере повеќе опции од еден збир. Вредноста на обичното поле за избор е „точно“ или „неточно“, а вредноста на полето со три избори може да биде и нула."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Поле за избор"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Тркалезните копчиња му овозможуваат на корисникот да избере една опција од збир опции. Користете ги за исклучителен избор доколку мислите дека корисникот треба да ги види сите достапни опции една до друга."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Радио"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Полиња за избор, тркалезни копчиња и прекинувачи"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Прекинувачите за вклучување/исклучување ја менуваат состојбата на опција со една поставка. Опцијата што прекинувачот ја контролира, како и нејзината состојба, треба да е јасно одредена со соодветна внатрешна ознака."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Прекинувач"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Контроли за избор"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Едноставниот дијалог му нуди на корисникот избор помеѓу неколку опции. Едноставниот дијалог има изборен наслов прикажан над опциите."),
         "demoSimpleDialogTitle":
@@ -411,6 +514,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Копчињата за префрлање може да се користат за групирање поврзани опции. За да се нагласат групи на поврзани копчиња за префрлање, групата треба да споделува заеднички контејнер"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Копчиња за префрлање"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Две линии"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Дефиниции за различните типографски стилови во Material Design."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -540,6 +645,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("За Flutter Gallery"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("Дизајн на TOASTER во Лондон"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Затвори ги поставките"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("Поставки"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Темна"),
         "settingsFeedback": MessageLookupByLibrary.simpleMessage(
             "Испратете повратни информации"),

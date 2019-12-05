@@ -122,47 +122,98 @@ class MessageLookup extends MessageLookupByLibrary {
             "កម្មវិធីធ្វើដំណើរ​ដែលកំណត់ឱ្យស្រប​នឹងបុគ្គល"),
         "craneEat": MessageLookupByLibrary.simpleMessage("អាហារដ្ឋាន"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("នេផលស៍ អ៊ីតាលី"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ភីហ្សា​នៅក្នុង​ឡដុតអុស"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("ដាឡាស សហរដ្ឋ​អាមេរិក"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("លីសបោន ព័រទុយហ្គាល់"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ស្រ្តីកាន់​សាំងវិច​សាច់គោ​ដ៏ធំ"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "បារគ្មាន​មនុស្ស ដែលមាន​ជើងម៉ា​សម្រាប់អង្គុយទទួលទាន​អាហារ"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("ខរដូបា អាហ្សង់ទីន"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ប៊ឺហ្គឺ"),
         "craneEat3":
             MessageLookupByLibrary.simpleMessage("ផតឡែន សហរដ្ឋ​អាមេរិក"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("តាកូ​កូរ៉េ"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("ប៉ារីស បារាំង"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("បង្អែម​សូកូឡា"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("សេអ៊ូល កូរ៉េ​ខាងត្បូង"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "កន្លែងអង្គុយ​នៅ​ភោជនីយដ្ឋាន​បែបសិល្បៈ"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("ស៊ីអាថល សហរដ្ឋ​អាមេរិក"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ម្ហូបដែល​ធ្វើពី​បង្គា"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("ណាសវីល សហរដ្ឋ​អាមេរិក"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ទ្វារចូល​ហាងនំប៉័ង"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("អាត្លង់តា សហរដ្ឋ​អាមេរិក"),
+        "craneEat8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "បង្កង​ទឹកសាប​ដែលមាន​ទំហំតូច​មួយចាន"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("ម៉ាឌ្រីដ អេស្ប៉ាញ"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "តុគិតលុយ​នៅ​ហាងកាហ្វេដែល​មានលក់​នំធ្វើពីម្សៅ"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "ស្វែងរក​ភោជនីយ​ដ្ឋាន​តាម​គោលដៅ"),
         "craneFly": MessageLookupByLibrary.simpleMessage("ជើង​ហោះ​ហើរ"),
         "craneFly0":
             MessageLookupByLibrary.simpleMessage("អាស្ប៉ិន សហរដ្ឋ​អាមេរិក"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ផ្ទះឈើ​នៅលើភ្នំ​ដែលស្ថិត​នៅក្នុង​ទេសភាព​មានព្រិលធ្លាក់​ជាមួយនឹង​ដើមឈើ​ដែលមាន​ស្លឹក​ពេញមួយឆ្នាំ"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("ប៊ីកសឺ សហរដ្ឋ​អាមេរិក"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("គែរ អេហ្ស៊ីប"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ប៉មវិហារ​អ៊ិស្លាម Al-Azhar អំឡុងពេល​ថ្ងៃលិច"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("លីសបោន ព័រទុយហ្គាល់"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ប៉មភ្លើង​នាំផ្លូវ​ធ្វើពី​ឥដ្ឋ​នៅសមុទ្រ"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("ណាប៉ា សហរដ្ឋ​អាមេរិក"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("អាងហែលទឹក​ដែលមាន​ដើមត្នោត"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("បាលី ឥណ្ឌូណេស៊ី"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "អាងហែលទឹក​ជាប់​មាត់សមុទ្រ​ដែលមាន​ដើមត្នោត"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("តង់​នៅវាល"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("ជ្រលង​ខាំប៊្យូ នេប៉ាល់"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ទង់ដែលមាន​សរសេរការបន់ស្រន់​នៅពីមុខ​ភ្នំដែល​មានព្រិលធ្លាក់"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("ម៉ាឈូភីឈូ ប៉េរូ"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ប្រាសាទ​នៅ​ម៉ាឈូភីឈូ"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("ម៉ាល ម៉ាល់ឌីវ"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("បឹងហ្គាឡូ​លើ​ទឹក"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("វីតស្នោវ ស្វ៊ីស"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("ម៉ាឌ្រីដ អេស្ប៉ាញ"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "សណ្ឋាគារ​ជាប់មាត់បឹង​នៅពី​មុខភ្នំ"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage(
+            "ទីក្រុង​ម៉ិកស៊ិក ប្រទេស​ម៉ិកស៊ិក"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ទិដ្ឋភាពនៃ Palacio de Bellas Artes ពីលើ​អាកាស"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "ភ្នំ​រ៉ាស្សម៉រ សហរដ្ឋ​អាមេរិក"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ភ្នំ​រ៉ាស្សម៉រ"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("សិង្ហបុរី"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("ហាវ៉ាណា គុយបា"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "បុរសផ្អែកលើ​រថយន្ត​ស៊េរីចាស់​ពណ៌ខៀវ"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "ស្វែងរក​ជើង​ហោះហើរ​តាម​គោលដៅ"),
@@ -184,22 +235,46 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("អ្នក​ធ្វើ​ដំណើរ"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("កន្លែង​គេង"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("ម៉ាល ម៉ាល់ឌីវ"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("បឹងហ្គាឡូ​លើ​ទឹក"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("អាស្ប៉ិន សហរដ្ឋ​អាមេរិក"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("គែរ អេហ្ស៊ីប"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ប៉មវិហារ​អ៊ិស្លាម Al-Azhar អំឡុងពេល​ថ្ងៃលិច"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("តៃប៉ិ តៃវ៉ាន់"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("អគារ​កប់ពពក Taipei 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ផ្ទះឈើ​នៅលើភ្នំ​ដែលស្ថិត​នៅក្នុង​ទេសភាព​មានព្រិលធ្លាក់​ជាមួយនឹង​ដើមឈើ​ដែលមាន​ស្លឹក​ពេញមួយឆ្នាំ"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("ម៉ាឈូភីឈូ ប៉េរូ"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ប្រាសាទ​នៅ​ម៉ាឈូភីឈូ"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("ហាវ៉ាណា គុយបា"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "បុរសផ្អែកលើ​រថយន្ត​ស៊េរីចាស់​ពណ៌ខៀវ"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("វីតស្នោវ ស្វ៊ីស"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "សណ្ឋាគារ​ជាប់មាត់បឹង​នៅពី​មុខភ្នំ"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("ប៊ីកសឺ សហរដ្ឋ​អាមេរិក"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("តង់​នៅវាល"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("ណាប៉ា សហរដ្ឋ​អាមេរិក"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("អាងហែលទឹក​ដែលមាន​ដើមត្នោត"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("ព័រតូ ព័រទុយហ្គាល់"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ផ្ទះល្វែង​ចម្រុះពណ៌​នៅ Ribeira Square"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("ទូលូម ម៉ិកស៊ិក"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "សំណង់​បាក់បែក​របស់ទីក្រុងម៉ាយាន​នៅលើ​ចំណោតច្រាំង​ពីលើឆ្នេរខ្សាច់"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("លីសបោន ព័រទុយហ្គាល់"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ប៉មភ្លើង​នាំផ្លូវ​ធ្វើពី​ឥដ្ឋ​នៅសមុទ្រ"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "ស្វែងរក​អចលន​ទ្រព្យ​តាម​គោលដៅ"),
@@ -350,6 +425,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ឈីប​ធាតុ​បញ្ចូល"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("មិនអាច​បង្ហាញ URL បានទេ៖"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "ជួរដេកតែមួយដែលមានកម្ពស់ថេរ ដែលជាទូទៅមានអក្សរមួយចំនួន ក៏ដូចជារូបតំណាងនៅពីមុខ ឬពីក្រោយ។"),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("អក្សរនៅ​ជួរទីពីរ"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("ប្លង់​បញ្ជី​រំកិល"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("បញ្ជី"),
+        "demoOneLineListsTitle": MessageLookupByLibrary.simpleMessage("មួយជួរ"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("ជម្រើស"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "ប៊ូតុង​មានបន្ទាត់ជុំវិញ​ប្រែជា​ស្រអាប់ និង​ផុសឡើង​នៅពេលចុច។ ជាញឹកញាប់ ប៊ូតុងទាំងនេះត្រូវបានដាក់ជាគូជាមួយប៊ូតុងផុសឡើង ដើម្បីរំលេចសកម្មភាពបន្ទាប់បន្សំផ្សេង។"),
@@ -359,6 +442,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "ប៊ូតុង​ផុសឡើង​បន្ថែមវិមាត្រ​ទៅប្លង់​ដែលរាបស្មើភាគច្រើន។ ប៊ូតុង​ទាំងនេះ​រំលេច​មុខងារ​នៅកន្លែង​ដែលមមាញឹក ឬទូលាយ។"),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("ប៊ូតុង​ផុសឡើង"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ប្រអប់​ធីក​អនុញ្ញាតឱ្យ​អ្នកប្រើប្រាស់​ជ្រើសរើស​ជម្រើសច្រើន​ពីបណ្ដុំ​មួយ។ តម្លៃរបស់​ប្រអប់​ធីកធម្មតា​គឺពិត ឬមិនពិត ហើយតម្លៃ​របស់ប្រអប់ធីក​ដែលមាន​បីស្ថានភាពក៏អាច​ទទេ​បានផងដែរ។"),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("ប្រអប់​ធីក"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ប៊ូតុងមូល​អនុញ្ញាតឱ្យ​អ្នកប្រើប្រាស់​ជ្រើសរើស​ជម្រើសមួយ​ពី​បណ្ដុំមួយ។ ប្រើ​ប៊ូតុងមូល​សម្រាប់​ការជ្រើសរើស​ផ្ដាច់មុខ ប្រសិនបើ​អ្នកគិតថា​អ្នកប្រើប្រាស់​ត្រូវការមើល​ជម្រើស​ដែលមាន​ទាំងអស់​ទន្ទឹមគ្នា។"),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("ប៊ូតុង​មូល"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "ប្រអប់​ធីក ប៊ូតុង​មូល និង​ប៊ូតុង​បិទបើក"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ប៊ូតុង​បិទបើក​សម្រាប់​បិទ/បើក​ស្ថានភាព​ជម្រើស​នៃការកំណត់​តែមួយ។ ជម្រើសដែល​ប៊ូតុង​បិទបើក​គ្រប់គ្រង ក៏ដូចជា​ស្ថានភាព​ដែលវាស្ថិតនៅ គួរតែ​កំណត់​ឱ្យបាន​ច្បាស់លាស់ពី​ស្លាក​ក្នុងជួរ​ដែលពាក់ព័ន្ធ។"),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("ប៊ូតុង​បិទបើក"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("ការគ្រប់គ្រង​ការជ្រើសរើស"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "ប្រអប់ធម្មតា​ផ្ដល់ជូន​អ្នកប្រើប្រាស់​នូវជម្រើសមួយ​រវាង​ជម្រើស​មួយចំនួន។ ប្រអប់ធម្មតា​មាន​ចំណងជើង​ដែលជាជម្រើស ដែល​បង្ហាញនៅលើ​ជម្រើស។"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("ធម្មតា"),
@@ -426,6 +528,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "អាចប្រើ​ប៊ូតុងបិទ/បើក ដើម្បី​ដាក់ជម្រើស​ដែលពាក់ព័ន្ធ​ជាក្រុមបាន។ ដើម្បីរំលេចក្រុមប៊ូតុងបិទ/បើកដែលពាក់ព័ន្ធ ក្រុមប៊ូតុងគួរតែប្រើទម្រង់ផ្ទុកទូទៅរួមគ្នា"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("ប៊ូតុងបិទ/បើក"),
+        "demoTwoLineListsTitle": MessageLookupByLibrary.simpleMessage("ពីរជួរ"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "និយមន័យសម្រាប់​រចនាប័ទ្មនៃ​ការរចនាអក្សរ ដែលបានរកឃើញ​នៅក្នុងរចនាប័ទ្មសម្ភារ។"),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -550,6 +653,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("អំពី Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "រចនាដោយ TOASTER នៅក្នុង​ទីក្រុងឡុងដ៍"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("បិទ​ការ​កំណត់"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("ការកំណត់"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("ងងឹត"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("ផ្ញើមតិកែលម្អ"),

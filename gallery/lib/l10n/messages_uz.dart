@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "${title} sahifasi uchun pleysholder";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'Hech qancha restoran topilmadi', one: '1 ta restoran', other: '${totalRestaurants} ta restoran')}";
+      "${Intl.plural(totalRestaurants, zero: 'Restoran topilmadi', one: '1 ta restoran', other: '${totalRestaurants} ta restoran')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Uzluksiz', one: '1 toʻxtovli', other: '${numberOfStops} toʻxtovli')}";
+      "${Intl.plural(numberOfStops, zero: 'Uzluksiz', one: '1 ta almashinuv', other: '${numberOfStops} ta almashinuv')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'Mavjud joylar topilmadi', one: '1 ta joy mavjud', other: '${totalProperties} ta joy mavjud')}";
+      "${Intl.plural(totalProperties, zero: 'Mavjud uy-joylar topilmadi', one: '1 ta uy-joy mavjud', other: '${totalProperties} ta uy-joy mavjud')}";
 
   static m5(value) => "${value}-band";
 
@@ -124,41 +124,91 @@ class MessageLookup extends MessageLookupByLibrary {
             "Sayohatlar uchun moslangan ilova"),
         "craneEat": MessageLookupByLibrary.simpleMessage("OVQATLAR"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Neapol, Italiya"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Yogʻoch oʻtinli oʻchiqdagi pitsa"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("Dallas, AQSH"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portugaliya"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Pastromali katta sendvich ushlab turgan ayol"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Baland stullari bor boʻsh bar"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Kordova, Argentina"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Burger"),
         "craneEat3": MessageLookupByLibrary.simpleMessage("Portlend, AQSH"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Koreyscha tako"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Parij, Fransiya"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Shokoladli desert"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("Seul, Janubiy Koreya"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ijodkorlar restoranidagi oʻtirish joyi"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("Sietl, AQSH"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Krevetkali taom"),
         "craneEat7": MessageLookupByLibrary.simpleMessage("Neshvill, AQSH"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Nonvoyxonaga kirish qismi"),
         "craneEat8": MessageLookupByLibrary.simpleMessage("Atlanta, AQSH"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Qisqichbaqalar likopchasi"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Ispaniya"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pishiriqli kafe peshtaxtasi"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Turli manzillardagi restoranlar"),
         "craneFly": MessageLookupByLibrary.simpleMessage("UCHISH"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("Aspen, AQSH"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Qishloqdagi qorli yam yashil daraxtlar bagʻridagi uy"),
         "craneFly1": MessageLookupByLibrary.simpleMessage("Katta Sur, AQSH"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Qohira, Misr"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kun botayotganda Al Azhar machit minoralari"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portugaliya"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Dengiz boʻyidagi gʻishtdan qurilgan mayoq"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("Napa, AQSH"),
+        "craneFly12SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Atrofida palmalari bor hovuz"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indoneziya"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Dengiz boʻyidagi palmalari bor hovuz"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Daladagi chodir"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Xumbu vodiysi, Nepal"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Qorli togʻ bagʻridagi ibodat bayroqlari"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu-Pikchu, Peru"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Machu Pikchu qalʼasi"),
         "craneFly4":
             MessageLookupByLibrary.simpleMessage("Male, Maldiv orollari"),
+        "craneFly4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Suv ustidagi bir qavatli imorat"),
         "craneFly5":
             MessageLookupByLibrary.simpleMessage("Vitsnau, Shveytsariya"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Ispaniya"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Togʻlar bilan oʻralgan soy boʻyidagi mehmonxona"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Mexiko, Meksika"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Nafis saʼnat saroyining osmondan koʻrinishi"),
         "craneFly7":
             MessageLookupByLibrary.simpleMessage("Rashmor togʻi, AQSH"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Rashmor togʻi"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapur"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Superdaraxtzor"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Gavana, Kuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Eski koʻk avtomobilga suyanib turgan odam"),
         "craneFlyStops": m3,
         "craneFlySubhead":
             MessageLookupByLibrary.simpleMessage("Turli manzillarga parvozlar"),
@@ -179,21 +229,45 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneSleep": MessageLookupByLibrary.simpleMessage("UYQU"),
         "craneSleep0":
             MessageLookupByLibrary.simpleMessage("Male, Maldiv orollari"),
+        "craneSleep0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Suv ustidagi bir qavatli imorat"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage("Aspen, AQSH"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Qohira, Misr"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kun botayotganda Al Azhar machit minoralari"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Taypey, Tayvan"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Taypey 101 minorati"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Qishloqdagi qorli yam yashil daraxtlar bagʻridagi uy"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu-Pikchu, Peru"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Machu Pikchu qalʼasi"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Gavana, Kuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Eski koʻk avtomobilga suyanib turgan odam"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("Vitsnau, Shveytsariya"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Togʻlar bilan oʻralgan soy boʻyidagi mehmonxona"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage("Katta Sur, AQSH"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Daladagi chodir"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("Napa, AQSH"),
+        "craneSleep6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Atrofida palmalari bor hovuz"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("Porto, Portugaliya"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Riberiya maydonidagi rang-barang apartamentlar"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Meksika"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Sohil tepasidagi Maya vayronalari"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portugaliya"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Dengiz boʻyidagi gʻishtdan qurilgan mayoq"),
         "craneSleepProperties": m4,
         "craneSleepSubhead":
             MessageLookupByLibrary.simpleMessage("Turli manzillardagi joylar"),
@@ -314,10 +388,10 @@ class MessageLookup extends MessageLookupByLibrary {
                 "Bir nechta variantdan faqat bittasini belgilashda ishlatiladi. Bir element tanlansa, qolgan tanlov avtomatik yechiladi."),
         "demoCupertinoSegmentedControlSubtitle":
             MessageLookupByLibrary.simpleMessage(
-                "iOS-uslubidagi tanlov elementlari"),
+                "iOS uslubidagi boshqaruv elementlari"),
         "demoCupertinoSegmentedControlTitle":
             MessageLookupByLibrary.simpleMessage(
-                "Segmentlangan tanlov elementlari"),
+                "Segmentlangan boshqaruv elementlari"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "Oddiy, bildirishnoma va butun ekran"),
         "demoDialogTitle":
@@ -349,6 +423,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Kiritish chipi"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL ochilmadi:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Balandligi mahkamlangan va odatda boshida yoki oxirida rasm aks etuvchi matnlardan iborat boʻladi."),
+        "demoListsSecondary": MessageLookupByLibrary.simpleMessage("Quyi matn"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Skrollanuvchi roʻyxat maketlari"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Roʻyxatlar"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Bir qator"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("Parametrlar"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
@@ -359,13 +441,32 @@ class MessageLookup extends MessageLookupByLibrary {
             "Qavariq tugmalar yassi maketni qavariqli qilish imkonini beradi. Katta va keng sahifalarda koʻzga tez tashlanadigan boʻladi"),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Qavariq tugma"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Belgilash katakchasi bilan foydalanuvchi roʻyxatdagi bir nechta elementni tanlay oladi. Katakchalar ikki qiymatda boʻladi, ayrim vaqtlarda uchinchi qiymat ham ishlatiladi."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Belgilash katakchasi"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Radiotugma faqat bir tanlov imkonini beradi. Ular mavjud tanlovlarni bir roʻyxatda chiqarish uchun qulay."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Radiotugma"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Belgilash katakchalari, radio tugmalar va almashtirgichlar"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Almashtirgich tugmasi yordamida foydalanuvchilar biror sozlamani yoqishi yoki faolsizlantirishi mumkin. Almashtirgich yonida doim sozlama nomi va ahvoli chiqadi."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Almashtirgich"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Tanlov boshqaruvi"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Oddiy muloqot oynasida foydalanuvchiga tanlash uchun bir nechta variant beriladi. Oynada sarlavha boʻlsa, u variantlar ustida joylashadi."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Oddiy"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
             "Varaqlarda turli ekranlardagi kontent, axborot toʻplamlari va boshqa amallar jamlanadi."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Alohidadan chiqadigan varaqlar"),
+            "Alohida aylantiriladigan varaqlar"),
         "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Varaqlar"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "Matn kiritish maydonchalari yordamida foydalanuvchilar grafik interfeysga matn kirita olishadi. Ular odatda shakl va muloqot oynalari shaklida chiqadi."),
@@ -421,6 +522,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Belgilash/olib tashlash tugmasi bilan oʻxshash parametrlarni guruhlash mumkin. Belgilash/olib tashlash tugmasiga aloqador guruhlar bitta umumiy konteynerda boʻlishi lozim."),
         "demoToggleButtonTitle": MessageLookupByLibrary.simpleMessage(
             "Belgilash/olib tashlash tugmalari"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Ikki qator"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Material Design ichidagi har xil shriftlar uchun izoh."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -546,6 +649,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Flutter Gallery haqida"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("Dizayn: TOASTER, London"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Sozlamalarni yopish"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Sozlamalar"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Tungi"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Fikr-mulohaza yuborish"),

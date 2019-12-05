@@ -125,45 +125,96 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Personoitu matkasovellus"),
         "craneEat": MessageLookupByLibrary.simpleMessage("SYÖMINEN"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Napoli, Italia"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pizza puu-uunissa"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("Dallas, Yhdysvallat"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portugali"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Nainen pitää kädessään suurta pastrami-voileipää"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Tyhjä baaritiski ja amerikkalaisravintolan tyyliset tuolit"),
         "craneEat2":
             MessageLookupByLibrary.simpleMessage("Córdoba, Argentiina"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Hampurilainen"),
         "craneEat3":
             MessageLookupByLibrary.simpleMessage("Portland, Yhdysvallat"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Korealainen taco"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Pariisi, Ranska"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Suklaajälkiruoka"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Soul, Etelä-Korea"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Taiteellinen ravintolan istuma-alue"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("Seattle, Yhdysvallat"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Katkarapuannos"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("Nashville, Yhdysvallat"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Leipomon sisäänkäynti"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("Atlanta, Yhdysvallat"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Lautasellinen rapuja"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Espanja"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kahvilan tiski, jossa leivonnaisia"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Ravintolat määränpään mukaan"),
         "craneFly": MessageLookupByLibrary.simpleMessage("LENTÄMINEN"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("Aspen, Yhdysvallat"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Talvimökki lumisessa maisemassa ja ikivihreitä puita"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("Big Sur, Yhdysvallat"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Kairo, Egypti"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Al-Azhar-moskeijan tornit auringonlaskun aikaan"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portugali"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tiilimajakka meressä"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("Napa, Yhdysvallat"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Uima-allas ja palmuja"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+        "craneFly13SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Meriallas ja palmuja"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Teltta pellolla"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Khumbun laakso, Nepal"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Rukouslippuja lumisen vuoren edessä"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Machu Picchun linnake"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Malediivit"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Vedenpäällisiä taloja"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Sveitsi"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Espanja"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Järvenrantahotelli vuorten edessä"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("Mexico City, Meksiko"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ilmanäkymä Palacio de Bellas Artesista"),
         "craneFly7":
             MessageLookupByLibrary.simpleMessage("Mount Rushmore, Yhdysvallat"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Mount Rushmore"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havanna, Kuuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mies nojaamassa siniseen antiikkiautoon"),
         "craneFlyStops": m3,
         "craneFlySubhead":
             MessageLookupByLibrary.simpleMessage("Lennot määränpään mukaan"),
@@ -184,22 +235,46 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Matkustajat"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("NUKKUMINEN"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Malediivit"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Vedenpäällisiä taloja"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("Aspen, Yhdysvallat"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Kairo, Egypti"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Al-Azhar-moskeijan tornit auringonlaskun aikaan"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Taipei 101 ‑pilvenpiirtäjä"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Talvimökki lumisessa maisemassa ja ikivihreitä puita"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Machu Picchun linnake"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havanna, Kuuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mies nojaamassa siniseen antiikkiautoon"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, Sveitsi"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Järvenrantahotelli vuorten edessä"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("Big Sur, Yhdysvallat"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Teltta pellolla"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("Napa, Yhdysvallat"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Uima-allas ja palmuja"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugali"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Värikkäitä rakennuksia Riberia Squarella"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Meksiko"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mayalaiset rauniot kalliolla rannan yläpuolella"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portugali"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tiilimajakka meressä"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Majoituspaikat määränpään mukaan"),
@@ -350,6 +425,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Syöte-elementti"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "URL-osoitetta ei voitu näyttää:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Yksi korkeudeltaan kiinteä rivi, joka sisältää yleensä tekstiä ja jonka alussa tai lopussa on kuvake."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Toissijainen teksti"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Vieritettävien luetteloiden ulkoasut"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Luettelot"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Yksi rivi"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("Vaihtoehdot"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
@@ -360,6 +444,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Kohopainikkeet lisäävät ulottuvuutta enimmäkseen litteisiin asetteluihin. Ne korostavat toimintoja täysissä tai laajoissa tiloissa."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Kohopainike"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Valintaruutujen avulla käyttäjä voi valita useita vaihtoehtoja joukosta. Valintaruudun tavalliset arvovaihtoehdot ovat tosi ja epätosi, ja kolmisuuntaisen valintaruudun arvo voi myös olla tyhjä."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Valintaruutu"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Valintanapin avulla käyttäjä voi valita yhden vaihtoehdon joukosta. Käytä valintanappeja, kun käyttäjä voi valita vain yhden vaihtoehdon ja hänen pitää nähdä kaikki vaihtoehdot vierekkäin."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Valintanappi"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Valintaruudut, valintanapit ja päälle/pois-valitsimet"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Päälle/pois-valitsimet vaihtavat yksittäisen asetuksen tilan. Valitsimen ohjaama vaihtoehto sekä sen nykyinen tila pitäisi näkyä selkeästi sen tunnuksesta."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Valitsin"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Valintaohjaimet"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Yksinkertainen valintaikkuna tarjoaa käyttäjälle mahdollisuuden valita useista vaihtoehdoista. Yksinkertaisessa valintaikkunassa on valinnainen otsikko, joka näkyy vaihtoehtojen yläpuolella."),
         "demoSimpleDialogTitle":
@@ -426,6 +529,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Päälle/pois-painikkeiden avulla voidaan ryhmitellä vaihtoehtoja yhteen. To emphasize groups of related toggle buttons, a group should share a common container"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Päälle/pois-painikkeet"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Kaksi riviä"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Material Designin erilaisten typografisten tyylien määritelmät."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -552,6 +657,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Tietoja Flutter Gallerysta"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Suunnittelija: TOASTER, Lontoo"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Sulje asetukset"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Asetukset"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Tumma"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Lähetä palautetta"),

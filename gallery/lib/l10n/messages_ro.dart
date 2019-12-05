@@ -126,47 +126,98 @@ class MessageLookup extends MessageLookupByLibrary {
             "O aplicație pentru călătorii personalizate"),
         "craneEat": MessageLookupByLibrary.simpleMessage("MÂNCARE"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Napoli, Italia"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Pizza într-un cuptor pe lemne"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("Dallas, Statele Unite"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Lisabona, Portugalia"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Femeie care ține un sandviș imens cu pastramă"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bar gol cu scaune de tip bufet"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Burger"),
         "craneEat3":
             MessageLookupByLibrary.simpleMessage("Portland, Statele Unite"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Taco coreean"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, Franța"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Desert cu ciocolată"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("Seoul, Coreea de Sud"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Locuri dintr-un restaurant artistic"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("Seattle, Statele Unite"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Preparat cu creveți"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("Nashville, Statele Unite"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Intrare în brutărie"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("Atlanta, Statele Unite"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Platou cu languste"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spania"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Tejghea de cafenea cu dulciuri"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Explorați restaurantele după destinație"),
         "craneFly": MessageLookupByLibrary.simpleMessage("AVIOANE"),
         "craneFly0":
             MessageLookupByLibrary.simpleMessage("Aspen, Statele Unite"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Castel într-un peisaj de iarnă, cu conifere"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("Big Sur, Statele Unite"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Cairo, Egipt"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Turnurile moscheii Al-Azhar la apus"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Lisabona, Portugalia"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Far din cărămidă pe malul mării"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("Napa, Statele Unite"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Piscină cu palmieri"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonezia"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Piscină pe malul mării, cu palmieri"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Cort pe un câmp"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Valea Khumbu, Nepal"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Steaguri de rugăciune în fața unui munte înzăpezit"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Cetatea Machu Picchu"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldive"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bungalouri pe malul apei"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Elveția"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spania"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hotel pe malul unui lac, în fața munților"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("Ciudad de Mexico, Mexic"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Imagine aeriană cu Palacio de Bellas Artes"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "Muntele Rushmore, Statele Unite"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Muntele Rushmore"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bărbat care se sprijină de o mașină albastră veche"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Explorați zborurile după destinație"),
@@ -184,23 +235,47 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Călători"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("SOMN"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldive"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bungalouri pe malul apei"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("Aspen, Statele Unite"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Cairo, Egipt"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Turnurile moscheii Al-Azhar la apus"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+        "craneSleep11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Clădirea zgârie-nori Taipei 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Castel într-un peisaj de iarnă, cu conifere"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Cetatea Machu Picchu"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bărbat care se sprijină de o mașină albastră veche"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, Elveția"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hotel pe malul unui lac, în fața munților"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("Big Sur, Statele Unite"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Cort pe un câmp"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("Napa, Statele Unite"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Piscină cu palmieri"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("Porto, Portugalia"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Apartamente colorate în Riberia Square"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexic"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ruine mayașe pe o stâncă, deasupra unei plaje"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Lisabona, Portugalia"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Far din cărămidă pe malul mării"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Explorați proprietățile după destinație"),
@@ -352,6 +427,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Cip de intrare"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Nu s-a putut afișa adresa URL:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Un singur rând cu înălțime fixă, care conține de obicei text și o pictogramă la început sau la sfârșit."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Text secundar"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("Aspecte de liste derulante"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Liste"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Un rând"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opțiuni"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Butoanele cu contur devin opace și se ridică la apăsare. Sunt de multe ori asociate cu butoane ridicate, pentru a indica o acțiune secundară alternativă."),
@@ -361,6 +445,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Butoanele ridicate conferă dimensiune aspectelor în mare parte plate. Acestea evidențiază funcții în spații pline sau ample."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Buton ridicat"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Cu ajutorul casetelor de selectare, utilizatorii pot să aleagă mai multe opțiuni dintr-un set. Valoarea normală a unei casete este true sau false. O casetă cu trei stări poate avea și valoarea null."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Casetă de selectare"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Cu ajutorul butoanelor radio, utilizatorul poate să selecteze o singură opțiune dintr-un set. Folosiți-le pentru selectări exclusive dacă credeți că utilizatorul trebuie să vadă toate opțiunile disponibile alăturate."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Radio"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Casete de selectare, butoane radio și comutatoare"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Comutatoarele activat/dezactivat schimbă starea unei opțiuni pentru setări. Opțiunea controlată de comutator și starea acesteia trebuie să fie indicate clar de eticheta inline corespunzătoare."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Comutatoare"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Comenzi de selectare"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Caseta de dialog simplă îi oferă utilizatorului posibilitatea de a alege dintre mai multe opțiuni. Caseta de dialog simplă are un titlu opțional, afișat deasupra opțiunilor."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Simplă"),
@@ -425,6 +528,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Butoanele de comutare pot fi folosite pentru a grupa opțiunile similare. Pentru a evidenția grupuri de butoane de comutare similare, este necesar ca un grup să aibă un container comun."),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Butoane de comutare"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Două rânduri"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Definiții pentru stilurile tipografice diferite, care se găsesc în ghidul Design material."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -558,6 +663,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Despre galeria Flutter"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Conceput de TOASTER în Londra"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Închideți setările"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("Setări"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Întunecată"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Trimiteți feedback"),

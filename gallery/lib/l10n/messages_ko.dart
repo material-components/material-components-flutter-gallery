@@ -114,34 +114,81 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneDescription": MessageLookupByLibrary.simpleMessage("맞춤 여행 앱"),
         "craneEat": MessageLookupByLibrary.simpleMessage("음식점"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("이탈리아 나폴리"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("화덕 오븐 속 피자"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("미국 댈러스"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("포르투갈 리스본"),
+        "craneEat10SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("거대한 파스트라미 샌드위치를 들고 있는 여성"),
+        "craneEat1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("다이너식 스툴이 있는 빈 술집"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("아르헨티나 코르도바"),
+        "craneEat2SemanticLabel": MessageLookupByLibrary.simpleMessage("햄버거"),
         "craneEat3": MessageLookupByLibrary.simpleMessage("미국 포틀랜드"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("한국식 타코"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("프랑스 파리"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("초콜릿 디저트"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("대한민국 서울"),
+        "craneEat5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("예술적인 레스토랑 좌석"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("미국 시애틀"),
+        "craneEat6SemanticLabel": MessageLookupByLibrary.simpleMessage("새우 요리"),
         "craneEat7": MessageLookupByLibrary.simpleMessage("미국 내슈빌"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("베이커리 입구"),
         "craneEat8": MessageLookupByLibrary.simpleMessage("미국 애틀랜타"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("민물 가재 요리"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("스페인 마드리드"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("페이스트리가 있는 카페 카운터"),
         "craneEatRestaurants": m2,
         "craneEatSubhead":
             MessageLookupByLibrary.simpleMessage("목적지별 음식점 살펴보기"),
         "craneFly": MessageLookupByLibrary.simpleMessage("항공편"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("미국 애스펀"),
+        "craneFly0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("상록수가 있는 설경 속 샬레"),
         "craneFly1": MessageLookupByLibrary.simpleMessage("미국 빅 서어"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("이집트 카이로"),
+        "craneFly10SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("해질녘의 알아즈하르 모스크 탑"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("포르투갈 리스본"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("벽돌로 지은 바다의 등대"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("미국 나파"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("야자수가 있는 수영장"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("인도네시아, 발리"),
+        "craneFly13SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("야자수가 있는 바닷가 수영장"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("들판의 텐트"),
         "craneFly2": MessageLookupByLibrary.simpleMessage("네팔 쿰부 밸리"),
+        "craneFly2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("눈이 내린 산 앞에 있는 티베트 기도 깃발"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("페루 마추픽추"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("마추픽추 시타델"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("몰디브 말레"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("수상 방갈로"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("스위스 비츠나우"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("스페인 마드리드"),
+        "craneFly5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("산을 배경으로 한 호숫가 호텔"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("멕시코 멕시코시티"),
+        "craneFly6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("팔라시꾸 공연장 항공 사진"),
         "craneFly7": MessageLookupByLibrary.simpleMessage("미국 러시모어산"),
+        "craneFly7SemanticLabel": MessageLookupByLibrary.simpleMessage("러시모어산"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("싱가포르"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("수퍼트리 그로브"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("쿠바 아바나"),
+        "craneFly9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("파란색 앤티크 자동차에 기대 있는 남자"),
         "craneFlyStops": m3,
         "craneFlySubhead":
             MessageLookupByLibrary.simpleMessage("목적지별 항공편 살펴보기"),
@@ -155,17 +202,41 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("여행자 수"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("숙박"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("몰디브 말레"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("수상 방갈로"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage("미국 애스펀"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("이집트 카이로"),
+        "craneSleep10SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("해질녘의 알아즈하르 모스크 탑"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("대만 타이베이"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("타이베이 101 마천루"),
+        "craneSleep1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("상록수가 있는 설경 속 샬레"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("페루 마추픽추"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("마추픽추 시타델"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("쿠바 아바나"),
+        "craneSleep3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("파란색 앤티크 자동차에 기대 있는 남자"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("스위스 비츠나우"),
+        "craneSleep4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("산을 배경으로 한 호숫가 호텔"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage("미국 빅 서어"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("들판의 텐트"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("미국 나파"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("야자수가 있는 수영장"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("포르투갈 포르토"),
+        "craneSleep7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("히베이라 광장의 알록달록한 아파트"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("멕시코 툴룸"),
+        "craneSleep8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("해안가 절벽 위 마야 문명 유적지"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("포르투갈 리스본"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("벽돌로 지은 바다의 등대"),
         "craneSleepProperties": m4,
         "craneSleepSubhead":
             MessageLookupByLibrary.simpleMessage("목적지별 숙박업체 살펴보기"),
@@ -299,6 +370,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("입력 칩"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("다음 URL을 표시할 수 없습니다."),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "목록은 고정된 높이의 단일 행으로 구성되어 있으며 각 행에는 일반적으로 일부 텍스트와 선행 및 후행 들여쓰기 아이콘이 포함됩니다."),
+        "demoListsSecondary": MessageLookupByLibrary.simpleMessage("보조 텍스트"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("스크롤 목록 레이아웃"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("목록"),
+        "demoOneLineListsTitle": MessageLookupByLibrary.simpleMessage("한 줄"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("옵션"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "윤곽 버튼은 누르면 불투명해지면서 올라옵니다. 돌출 버튼과 함께 사용하여 대체 작업이나 보조 작업을 나타내는 경우가 많습니다."),
@@ -306,6 +384,25 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoRaisedButtonDescription": MessageLookupByLibrary.simpleMessage(
             "돌출 버튼은 대부분 평면인 레이아웃에 깊이감을 주는 데 사용합니다. 돌출 버튼은 꽉 차 있거나 넓은 공간에서 기능을 강조합니다."),
         "demoRaisedButtonTitle": MessageLookupByLibrary.simpleMessage("돌출 버튼"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "체크박스를 사용하면 집합에서 여러 옵션을 선택할 수 있습니다. 체크박스의 값은 보통 true 또는 false이며, 3상 체크박스의 경우 null 값도 가질 수 있습니다."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("체크박스"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "라디오 버튼을 사용하면 세트에서 한 가지 옵션을 선택할 수 있습니다. 사용자에게 선택 가능한 모든 옵션을 나란히 표시해야 한다고 판단된다면 라디오 버튼을 사용하여 한 가지만 선택할 수 있도록 하세요."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("라디오"),
+        "demoSelectionControlsSubtitle":
+            MessageLookupByLibrary.simpleMessage("체크박스, 라디오 버튼, 스위치"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "사용/사용 중지 스위치로 설정 옵션 하나의 상태를 전환합니다. 스위치로 제어하는 옵션 및 옵션의 상태는 해당하는 인라인 라벨에 명확하게 나타나야 합니다."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("스위치"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("선택 컨트롤"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "단순 대화상자는 사용자가 택일할 몇 가지 옵션을 제공합니다. 단순 대화상자에는 옵션 위에 표시되는 제목이 선택사항으로 포함됩니다."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("단순함"),
@@ -364,6 +461,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoToggleButtonDescription": MessageLookupByLibrary.simpleMessage(
             "전환 버튼은 관련 옵션을 그룹으로 묶는 데 사용할 수 있습니다. 관련 전환 버튼 그룹임을 강조하기 위해 하나의 그룹은 동일한 컨테이너를 공유해야 합니다."),
         "demoToggleButtonTitle": MessageLookupByLibrary.simpleMessage("전환 버튼"),
+        "demoTwoLineListsTitle": MessageLookupByLibrary.simpleMessage("두 줄"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "머티리얼 디자인에서 찾을 수 있는 다양한 타이포그래피 스타일의 정의입니다."),
         "demoTypographySubtitle":
@@ -474,6 +572,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Flutter Gallery 정보"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Designed by TOASTER in London"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("설정 닫기"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("설정"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("어둡게"),
         "settingsFeedback": MessageLookupByLibrary.simpleMessage("의견 보내기"),
         "settingsLightTheme": MessageLookupByLibrary.simpleMessage("밝게"),

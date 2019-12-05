@@ -122,39 +122,90 @@ class MessageLookup extends MessageLookupByLibrary {
             "Fərdiləşdirilmiş səyahət tətbiqi"),
         "craneEat": MessageLookupByLibrary.simpleMessage("YEMƏK"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Neapol, İtaliya"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Odun sobasında pizza"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("Dallas, ABŞ"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portuqaliya"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Əlində böyük basdırmalı sandviç olan qadın"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bar oturacaqları olan boş bar"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Kordova, Argentina"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Burger"),
         "craneEat3": MessageLookupByLibrary.simpleMessage("Portlend, ABŞ"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Koreya takosu"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, Fransa"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Şokolad deserti"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("Seul, Cənubi Koreya"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "İncəsənət üslublu restoranda oturma sahəsi"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("Sietl, ABŞ"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Krevetdən hazırlanan xörək"),
         "craneEat7": MessageLookupByLibrary.simpleMessage("Neşvill, ABŞ"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bulka dükanının girişi"),
         "craneEat8": MessageLookupByLibrary.simpleMessage("Atlanta, ABŞ"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bir boşqab xərçəng"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, İspaniya"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Qənnadı məmulatları düzülmüş kafe piştaxtası"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Təyinat yeri üzrə restoranları araşdırın"),
         "craneFly": MessageLookupByLibrary.simpleMessage("UÇUŞ"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("Aspen, ABŞ"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Həmişəyaşıl ağaclar olan qarlı yerdə ağacdan ev"),
         "craneFly1": MessageLookupByLibrary.simpleMessage("Biq Sur, ABŞ"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Qahirə, Misir"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Gün batımı zamanı Əl-Əzhər Məscidinin minarələri"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portuqaliya"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Dənizdə kərpic dəniz fənəri"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("Napa, ABŞ"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Palma ağacları olan hovuz"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, İndoneziya"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Palma ağacları olan dənizkənarı hovuz"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Sahədə çadır"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Xumbu vadisi, Nepal"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Qarlı dağın qarşısında dua bayraqları"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Maçu Pikçu, Peru"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Maçu Pikçu qalası"),
         "craneFly4":
             MessageLookupByLibrary.simpleMessage("Male, Maldiv adaları"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Suüstü bunqalolar"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, İsveçrə"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, İspaniya"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Dağların qarşısında göl kənarı otel"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("Mexiko şəhəri, Meksika"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "İncəsənət Sarayının yuxarıdan görünüşü"),
         "craneFly7": MessageLookupByLibrary.simpleMessage("Raşmor dağı, ABŞ"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Raşmor dağı"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Sinqapur"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove parkı"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Qədim mavi avtomobilə söykənən kişi"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Təyinat yeri üzrə uçuşları araşdırın"),
@@ -174,19 +225,43 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneSleep": MessageLookupByLibrary.simpleMessage("YUXU"),
         "craneSleep0":
             MessageLookupByLibrary.simpleMessage("Male, Maldiv adaları"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Suüstü bunqalolar"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage("Aspen, ABŞ"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Qahirə, Misir"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Gün batımı zamanı Əl-Əzhər Məscidinin minarələri"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Taybey, Tayvan"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Taybey 101 göydələni"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Həmişəyaşıl ağaclar olan qarlı yerdə ağacdan ev"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("Maçu Pikçu, Peru"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Maçu Pikçu qalası"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Qədim mavi avtomobilə söykənən kişi"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, İsveçrə"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Dağların qarşısında göl kənarı otel"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage("Biq Sur, ABŞ"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Sahədə çadır"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("Napa, ABŞ"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Palma ağacları olan hovuz"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("Portu, Portuqaliya"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ribeyra Meydanında rəngarəng mənzillər"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Meksika"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Çimərlikdəki qayalıqlarda Maya xarabalığı"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portuqaliya"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Dənizdə kərpic dəniz fənəri"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Təyinat yeri üzrə əmlakları araşdırın"),
@@ -339,6 +414,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Məlumat Çipi"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "URL\'i göstərmək mümkün olmadı:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Adətən mətn, öndə və sonda ikona daxil olan hündürlüyü sabit olan bir sətir."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("İkinci dərəcəli mətn"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("Sürüşən siyahı düzənləri"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Siyahılar"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Bir sətir"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Seçimlər"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Haşiyəli düymələrə basdıqda qeyri-şəffaf və qabarıq olurlar. Onlar, adətən, alternativ, ikinci dərəcəli əməliyyatı göstərmək üçün qabarıq düymələrlə birləşdirilir."),
@@ -348,6 +432,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Qabarıq düymələr əsasən yastı düzənlərin üzərində ölçücə böyük olur. Onlar dolu və ya geniş səthlərdə funksiyaları vurğulayır."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Qabarıq Düymə"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Qeyd xanaları istifadəçiyə dəstdən bir neçə seçim etmək imkanı verir. Adi qeyd xanasındakı dəyər doğru və ya yanlış olur, üç vəziyyətli qeyd xanasındakı dəyər isə boş da ola bilər."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Qeyd xanası"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Radio düymələri istifadəçiyə dəstdən bir seçim etmək imkanı verir. İstifadəçinin bütün əlçatan seçimləri yan-yana görməli olduğunu düşünsəniz, eksklüziv seçim üçün radio düymələrindən istifadə edin."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Radio"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Qeyd xanaları, radio düymələri və dəyişdiricilər"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Aktiv/deaktiv etmə dəyişdiriciləri bir ayarlar seçiminin vəziyyətini dəyişir. Dəyişdirici vasitəsilə idarə edilən seçim və onun olduğu vəziyyət müvafiq daxili nişandan aydın olmalıdır."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Dəyişdirici"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Seçim idarə elementləri"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Sadə dialoq istifadəçiyə bir neçə seçim təqdim edir. Sadə dialoqda seçimlərin yuxarısında göstərilən şərti başlıq olur."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Sadə"),
@@ -409,6 +512,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Dəyişdirici düymələrdən əlaqəli seçimləri qruplaşdırmaq üçün istifadə etmək mümkündür. Əlaqəli dəyişdirici düymələr qrupunu vurğulamaq üçün qrupun ümumi konteyneri olmalıdır"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Dəyişdirici Düymələr"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("İki sətir"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Material Dizaynındakı müxtəlif tipoqrafik üslubların izahları."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -533,6 +638,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Flutter Qalereya haqqında"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Londonda TOASTER tərəfindən hazırlanmışdır"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Ayarları qapadın"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("Ayarlar"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Tünd"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Rəy göndərin"),

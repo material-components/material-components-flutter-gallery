@@ -122,48 +122,99 @@ class MessageLookup extends MessageLookupByLibrary {
             "Een gepersonaliseerde reis-app"),
         "craneEat": MessageLookupByLibrary.simpleMessage("ETEN"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Napels, Italië"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pizza in een houtoven"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("Dallas, Verenigde Staten"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portugal"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Vrouw houdt een enorme pastrami-sandwich vast"),
+        "craneEat1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Lege bar met barkrukken"),
         "craneEat2":
             MessageLookupByLibrary.simpleMessage("Córdoba, Argentinië"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Hamburger"),
         "craneEat3":
             MessageLookupByLibrary.simpleMessage("Portland, Verenigde Staten"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Koreaanse taco"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Parijs, Frankrijk"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Chocoladetoetje"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Seoul, Zuid-Korea"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kunstzinnig zitgedeelte in restaurant"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("Seattle, Verenigde Staten"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Gerecht met garnalen"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("Nashville, Verenigde Staten"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Ingang van bakkerij"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("Atlanta, Verenigde Staten"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bord met rivierkreeft"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spanje"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Cafétoonbank met gebakjes"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Restaurants bekijken per bestemming"),
         "craneFly": MessageLookupByLibrary.simpleMessage("VLIEGEN"),
         "craneFly0":
             MessageLookupByLibrary.simpleMessage("Aspen, Verenigde Staten"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Chalet in een sneeuwlandschap met naaldbomen"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("Big Sur, Verenigde Staten"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Caïro, Egypte"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Torens van de Al-Azhar-moskee bij zonsondergang"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portugal"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bakstenen vuurtoren aan zee"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("Napa, Verenigde Staten"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Zwembad met palmbomen"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesië"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Zwembad aan zee met palmbomen"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Kampeertent in een veld"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Khumbu-vallei, Nepal"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Gebedsvlaggen met op de achtergrond een besneeuwde berg"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Citadel Machu Picchu"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldiven"),
+        "craneFly4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bungalows op palen boven het water"),
         "craneFly5":
             MessageLookupByLibrary.simpleMessage("Vitznau, Zwitserland"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spanje"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hotel aan een meer met bergen op de achtergrond"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("Mexico-Stad, Mexico"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Luchtfoto van het Palacio de Bellas Artes"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "Mount Rushmore, Verenigde Staten"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Mount Rushmore"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Man leunt op een antieke blauwe auto"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Vluchten bekijken per bestemming"),
@@ -183,23 +234,47 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Reizigers"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("OVERNACHTEN"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldiven"),
+        "craneSleep0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bungalows op palen boven het water"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("Aspen, Verenigde Staten"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Caïro, Egypte"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Torens van de Al-Azhar-moskee bij zonsondergang"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Taipei 101-skyscraper"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Chalet in een sneeuwlandschap met naaldbomen"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Peru"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Citadel Machu Picchu"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Cuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Man leunt op een antieke blauwe auto"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("Vitznau, Zwitserland"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hotel aan een meer met bergen op de achtergrond"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("Big Sur, Verenigde Staten"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Kampeertent in een veld"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("Napa, Verenigde Staten"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Zwembad met palmbomen"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugal"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kleurige appartementen aan het Ribeira-plein"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Mexico"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Maya-ruïnes aan een klif boven een strand"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Lissabon, Portugal"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bakstenen vuurtoren aan zee"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Accommodaties bekijken per bestemming"),
@@ -351,6 +426,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Invoerchip"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("Kan URL niet weergeven:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Eén rij met een vaste hoogte die meestal wat tekst bevat die wordt voorafgegaan of gevolgd door een pictogram."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Secundaire tekst"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Indelingen voor scrollende lijsten"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Lijsten"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Eén regel"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opties"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Contourknoppen worden ondoorzichtig en verhoogd als je ze indrukt. Ze worden vaak gekoppeld aan verhoogde knoppen om een alternatieve tweede actie aan te geven."),
@@ -360,6 +444,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Verhoogde knoppen voegen een dimensie toe aan vormgevingen die voornamelijk plat zijn. Ze lichten functies uit als de achtergrond druk is of breed wordt weergegeven."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Verhoogde knop"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Met selectievakjes kan de gebruiker meerdere opties selecteren uit een set. De waarde voor een normaal selectievakje is \'true\' of \'false\'. De waarde van een selectievakje met drie statussen kan ook \'null\' zijn."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Selectievakje"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Met keuzerondjes kan de gebruiker één optie selecteren uit een set. Gebruik keuzerondjes voor exclusieve selectie als de gebruiker alle beschikbare opties op een rij moet kunnen bekijken."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Radio"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Selectievakjes, keuzerondjes en schakelaars"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Aan/uit-schakelaars bepalen de status van één instellingsoptie. De optie die door de schakelaar wordt beheerd, en de status waarin de schakelaar zich bevindt, moeten duidelijk worden gemaakt via het bijbehorende inline label."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Schakelaar"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Selectieopties"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Een eenvoudig dialoogvenster biedt de gebruiker een keuze tussen meerdere opties. Een eenvoudig dialoogvenster bevat een optionele titel die boven de keuzes wordt weergegeven."),
         "demoSimpleDialogTitle":
@@ -425,6 +528,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Schakelknoppen kunnen worden gebruikt om gerelateerde opties tot een groep samen te voegen. Een groep moet een gemeenschappelijke container hebben om een groep gerelateerde schakelknoppen te benadrukken."),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Schakelknoppen"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Twee regels"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Definities voor de verschillende typografische stijlen van material design."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -553,6 +658,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Over Flutter Gallery"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Ontworpen door TOASTER uit Londen"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Instellingen sluiten"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Instellingen"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Donker"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Feedback versturen"),

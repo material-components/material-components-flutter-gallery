@@ -123,39 +123,89 @@ class MessageLookup extends MessageLookupByLibrary {
             "Անհատականացված հավելված ճամփորդությունների համար"),
         "craneEat": MessageLookupByLibrary.simpleMessage("ՍՆՈՒՆԴ"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Նեապոլ, Իտալիա"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Պիցցա՝ փայտի վառարանում"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("Դալաս, ԱՄՆ"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Լիսաբոն, Պորտուգալիա"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Պաստրամիով հսկայական սենդվիչ բռնած կին"),
+        "craneEat1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Բարձր աթոռներով դատարկ բառ"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Կորդոբա, արգենտինա"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Բուրգեր"),
         "craneEat3": MessageLookupByLibrary.simpleMessage("Փորթլենդ, ԱՄՆ"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Կորեական տակո"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Փարիզ, Ֆրանսիա"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Շոկոլադե աղանդեր"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("Սեուլ, Հարավային Կորեա"),
+        "craneEat5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Ռեստորանի նորաձև սրահ"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("Սիեթլ, ԱՄՆ"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Ծովախեցգետնից ուտեստ"),
         "craneEat7": MessageLookupByLibrary.simpleMessage("Նեշվիլ, ԱՄՆ"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Փռի մուտք"),
         "craneEat8": MessageLookupByLibrary.simpleMessage("Ատլանտա, ԱՄՆ"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Խեցգետինների ափսե"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Մադրիդ, Իսպանիա"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Թխվածքներով վաճառասեղան սրճարանում"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Դիտեք ռեստորաններն ըստ նպատակակետի"),
         "craneFly": MessageLookupByLibrary.simpleMessage("ՉՎԵՐԹՆԵՐ"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("Ասպեն, ԱՄՆ"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Շալե՝ փշատերև ծառերով ձյունե լանդշաֆտի ֆոնի վրա"),
         "craneFly1": MessageLookupByLibrary.simpleMessage("Բիգ Սուր, ԱՄՆ"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Կահիրե, Եգիպտոս"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ալ-Ազհարի մզկիթի մինարեթները մայրամուտին"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Լիսաբոն, Պորտուգալիա"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Աղյուսե փարոս՝ ծովի ֆոնի վրա"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("Նապա, ԱՄՆ"),
+        "craneFly12SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Արմավենիներով շրջապատված լողավազան"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Բալի, Ինդոնեզիա"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Արմավենիներով շրջապատված ծովափնյա լողավազան"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Վրան դաշտում"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Կհումբու հովիտ, Նեպալ"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Աղոթքի դրոշներ՝ ձյունապատ լեռների ֆոնի վրա"),
         "craneFly3":
             MessageLookupByLibrary.simpleMessage("Մաչու Պիկչու, Պերու"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Մաչու Պիչու ամրոց"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Մալե, Մալդիվներ"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Բունգալոներ ջրի վրա"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Վիցնաու, Շվեյցարիա"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Մադրիդ, Իսպանիա"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Լճամերձ հյուրանոց՝ լեռների ֆոնի վրա"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Մեխիկո, Մեքսիկա"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Օդից տեսարան դեպի Գեղարվեստի պալատ"),
         "craneFly7": MessageLookupByLibrary.simpleMessage("Ռաշմոր լեռ, ԱՄՆ"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Ռաշմոր լեռ"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Սինգապուր"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Գերծառերի պուրակ"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Հավանա, Կուբա"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Կապույտ ռետրո մեքենայի վրա հենված տղամարդ"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Դիտեք չվերթներն ըստ նպատակակետի"),
@@ -174,21 +224,45 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ճանապարհորդներ"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("ՔՈՒՆ"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Մալե, Մալդիվներ"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Բունգալոներ ջրի վրա"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage("Ասպեն, ԱՄՆ"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Կահիրե, Եգիպտոս"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Ալ-Ազհարի մզկիթի մինարեթները մայրամուտին"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Թայփեյ, Թայվան"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Թայբեյ 101 երկնաքեր"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Շալե՝ փշատերև ծառերով ձյունե լանդշաֆտի ֆոնի վրա"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Մաչու Պիկչու, Պերու"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Մաչու Պիչու ամրոց"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Հավանա, Կուբա"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Կապույտ ռետրո մեքենայի վրա հենված տղամարդ"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("Վիցնաու, Շվեյցարիա"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Լճամերձ հյուրանոց՝ լեռների ֆոնի վրա"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage("Բիգ Սուր, ԱՄՆ"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Վրան դաշտում"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("Նապա, ԱՄՆ"),
+        "craneSleep6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Արմավենիներով շրջապատված լողավազան"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("Պորտու, Պորտուգալիք"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Վառ տներ Ռիբեյրա հրապարակում"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Տուլում, Մեքսիկա"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Մայաների ավերակները լողափից վեր՝ ժայռի վրա"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Լիսաբոն, Պորտուգալիա"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Աղյուսե փարոս՝ ծովի ֆոնի վրա"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Դիտեք հյուրանոցներն ըստ նպատակակետի"),
@@ -345,6 +419,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Մուտքագրման չիպ"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("Չհաջողվեց ցուցադրել URL-ը՝"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Ֆիքսված բարձրությամբ մեկ տող, որը սովորաբար պարունակում է տեքստ, ինչպես նաև պատկերակ՝ տեքստի սկզբում կամ վերջում։"),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Երկրորդական տեքստ"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Ոլորման ցանկի դասավորություններ"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Ցանկեր"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Մեկ գիծ"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("Ընտրանքներ"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
@@ -355,6 +438,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Բարձրացված կոճակները թույլ են տալիս հարթ մակերեսները դարձնել ավելի ծավալային, իսկ հագեցած և լայն էջերի գործառույթները՝ ավելի տեսանելի։"),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Բարձրացված կոճակ"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Նշավանդակների միջոցով օգտատերը կարող է ցանկից ընտրել մի քանի կարգավորումներ։ Նշավանդակը սովորաբար ունենում է true կամ false կարգավիճակը, և որոշ դեպքերում երրորդ արժեքը՝ null։"),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Նշավանդակ"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Կետակոճակների միջոցով օգտատերը կարող է ընտրել մեկ կարգավորում ցանկից։ Օգտագործեք կետակոճակները, եթե կարծում եք, որ օգտատիրոջն անհրաժեշտ է տեսնել բոլոր հասանելի կարգավորումներն իրար կողքի։"),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Ռադիո"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Նշավանդակներ, կետակոճակներ և փոխանջատիչներ"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Փոխանջատիչի միջոցով կարելի է միացնել կամ անջատել առանձին կարգավորումներ։ Կարգավորման անվանումը և կարգավիճակը պետք է պարզ երևան փոխանջատիչի կողքին։"),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Փոխանջատիչ"),
+        "demoSelectionControlsTitle": MessageLookupByLibrary.simpleMessage(
+            "Ընտրության կառավարման տարրեր"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Սովորական երկխոսության պատուհանում օգտատիրոջն առաջարկվում է ընտրության մի քանի տարբերակ։ Եթե պատուհանն ունի վերնագիր, այն ցուցադրվում է տարբերակների վերևում։"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("Պարզ"),
@@ -420,6 +522,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Փոխարկման կոճակների օգնությամբ հնարավոր է խմբավորել նմանատիպ ընտրանքները։ Մեկը մյուսի հետ կապ ունեցող փոխարկման կոճակները պետք է ունենան ընդհանուր զետեղարան։"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Փոխարկման կոճակներ"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Երկու գիծ"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Սահմանումներ Material Design-ում առկա տարբեր տառատեսակների համար։"),
         "demoTypographySubtitle":
@@ -546,6 +650,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Flutter Gallery-ի մասին"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("Դիզայնը՝ TOASTER (Լոնդոն)"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Փակել կարգավորումները"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Կարգավորումներ"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Մուգ"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Կարծիք հայտնել"),

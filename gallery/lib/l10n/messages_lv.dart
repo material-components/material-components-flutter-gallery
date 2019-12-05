@@ -123,39 +123,89 @@ class MessageLookup extends MessageLookupByLibrary {
             "Personalizēta ceļojumu lietotne"),
         "craneEat": MessageLookupByLibrary.simpleMessage("ĒDIENS"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Neapole, Itālija"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pica malkas krāsnī"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("Dalasa, ASV"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Lisabona, Portugāle"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Sieviete tur lielu pastrami sendviču"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Tukšs bārs ar augstiem krēsliem"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Kordova, Argentīna"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Burgers"),
         "craneEat3": MessageLookupByLibrary.simpleMessage("Portlenda, ASV"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Korejas tako"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Parīze, Francija"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Šokolādes deserts"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("Seula, Dienvidkoreja"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Sēdvietas mākslinieciskā restorānā"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("Sietla, ASV"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Garneļu ēdiens"),
         "craneEat7": MessageLookupByLibrary.simpleMessage("Našvila, ASV"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Ieeja maizes ceptuvē"),
         "craneEat8": MessageLookupByLibrary.simpleMessage("Atlanta, ASV"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Šķīvis ar vēžiem"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madride, Spānija"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kafejnīcas lete ar konditorejas izstrādājumiem"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Izpētiet restorānus pēc galamērķa"),
         "craneFly": MessageLookupByLibrary.simpleMessage("LIDOJUMI"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("Espena, ASV"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kotedža sniegotā ainavā ar mūžzaļiem kokiem"),
         "craneFly1": MessageLookupByLibrary.simpleMessage("Bigsura, ASV"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Kaira, Ēģipte"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Al-Azhara mošejas minareti saulrietā"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Lisabona, Portugāle"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Ķieģeļu bāka jūrā"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("Napa, ASV"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Peldbaseins ar palmām"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonēzija"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Peldbaseins ar palmām pie jūras"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Telts laukā"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Khumbu ieleja, Nepāla"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Lūgšanu karodziņi uz sniegota kalna fona"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Maču Pikču, Peru"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Maču Pikču citadele"),
         "craneFly4":
             MessageLookupByLibrary.simpleMessage("Male, Maldīvu salas"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bungalo virs ūdens"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Vicnava, Šveice"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madride, Spānija"),
+        "craneFly5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Viesnīca pie kalnu ezera"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Mehiko, Meksika"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Skats no putna lidojuma uz Dekoratīvās mākslas pili"),
         "craneFly7": MessageLookupByLibrary.simpleMessage("Rašmora kalns, ASV"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Rašmora kalns"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapūra"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Vīrietis atspiedies pret senu, zilu automašīnu"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Izpētiet lidojumus pēc galamērķa"),
@@ -175,19 +225,43 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneSleep": MessageLookupByLibrary.simpleMessage("NAKTSMĪTNES"),
         "craneSleep0":
             MessageLookupByLibrary.simpleMessage("Male, Maldīvu salas"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bungalo virs ūdens"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage("Espena, ASV"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Kaira, Ēģipte"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Al-Azhara mošejas minareti saulrietā"),
         "craneSleep11":
             MessageLookupByLibrary.simpleMessage("Taipeja, Taivāna"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Debesskrāpis Taipei 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kotedža sniegotā ainavā ar mūžzaļiem kokiem"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("Maču Pikču, Peru"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Maču Pikču citadele"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havana, Kuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Vīrietis atspiedies pret senu, zilu automašīnu"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("Vicnava, Šveice"),
+        "craneSleep4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Viesnīca pie kalnu ezera"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage("Bigsura, ASV"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Telts laukā"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("Napa, ASV"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Peldbaseins ar palmām"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugāle"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Krāsainas mājas Ribeiras laukumā"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tuluma, Meksika"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Maiju celtņu drupas uz klints virs pludmales"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Lisabona, Portugāle"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Ķieģeļu bāka jūrā"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Izpētiet īpašumus pēc galamērķa"),
@@ -338,6 +412,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Ievades žetons"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("Nevarēja attēlot URL:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Viena fiksēta augstuma rindiņa, kas parasti ietver tekstu, kā arī ikonu pirms vai pēc teksta."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Sekundārais teksts"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Ritināmo sarakstu izkārtojumi"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Saraksti"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Viena rindiņa"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opcijas"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Konturētas pogas nospiežot paliek necaurspīdīgas un paceļas. Tās bieži izmanto kopā ar paceltām pogām, lai norādītu alternatīvu, sekundāru darbību."),
@@ -347,6 +430,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Paceltas pogas piešķir plakaniem izkārtojumiem apjomu. Tās uzsver funkcijas aizņemtās vai plašās vietās."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Pacelta poga"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Izmantojot izvēles rūtiņas, lietotājs var atlasīt vairākas opcijas grupā. Parastas izvēles rūtiņas vērtība ir “true” vai “false”. Triju statusu izvēles rūtiņas vērtība var būt arī “null”."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Izvēles rūtiņa"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Izmantojot pogas, lietotājs var atlasīt vienu opciju grupā. Izmantojiet pogas vienas opcijas atlasei, ja uzskatāt, ka lietotājam ir jāredz visas pieejamās opcijas līdzās."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Poga"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Izvēles rūtiņas, pogas un slēdži"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Izmantojot ieslēgšanas/izslēgšanas slēdzi, var mainīt vienas iestatījumu opcijas statusu. Atbilstošajā iekļautajā iezīmē ir jābūt skaidri norādītam, kuru opciju var pārslēgt, izmantojot slēdzi, un kādā statusā tā ir pašlaik."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Slēdzis"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Atlasīšanas vadīklas"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Vienkāršā dialoglodziņā lietotājam tiek piedāvāts izvēlēties starp vairākām opcijām. Vienkāršam dialoglodziņam ir neobligāts virsraksts, kas tiek attēlots virs izvēlēm."),
         "demoSimpleDialogTitle":
@@ -412,6 +514,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Pārslēgšanas pogas var izmantot saistītu opciju grupēšanai. Lai uzsvērtu saistītu pārslēgšanas pogu grupas, grupai ir jābūt kopīgam konteineram."),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Pārslēgšanas pogas"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Divas rindiņas"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Definīcijas dažādiem tipogrāfijas stiliem, kas atrasti materiāla dizaina ceļvedī."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -542,6 +646,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Par galeriju “Flutter”"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Radīja uzņēmums TOASTER Londonā"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Aizvērt iestatījumus"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Iestatījumi"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Tumšs"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Sūtīt atsauksmes"),

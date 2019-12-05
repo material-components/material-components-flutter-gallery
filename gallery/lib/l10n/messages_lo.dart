@@ -118,36 +118,87 @@ class MessageLookup extends MessageLookupByLibrary {
             "ແອັບການທ່ອງທ່ຽວທີ່ປັບແຕ່ງສ່ວນຕົວ"),
         "craneEat": MessageLookupByLibrary.simpleMessage("ກິນ"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("ເນໂປ, ສະຫະລັດ"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ພິດຊ່າໃນເຕົາອົບຟືນ"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("ດາລັສ, ສະຫະລັດ"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("ລິສບອນ, ປໍຕູກອລ"),
+        "craneEat10SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ຜູ້ຍິງຖືແຊນວິດພາສທຣາມີໃຫຍ່"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ບາທີ່ບໍ່ມີລູກຄ້າເຊິ່ງມີຕັ່ງນັ່ງແບບສູງແຕ່ບໍ່ມີພະນັກ"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("ຄໍໂດບາ, ອາເຈນທິນາ"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ເບີເກີ"),
         "craneEat3": MessageLookupByLibrary.simpleMessage("ພອດແລນ, ສະຫະລັດ"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ທາໂຄເກົາຫລີ"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("ປາຣີສ, ຝຣັ່ງ"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ຂອງຫວານຊັອກໂກແລັດ"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("ໂຊລ, ເກົາຫຼີໃຕ້"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ບໍລິເວນບ່ອນນັ່ງໃນຮ້ານອາຫານທີ່ມີສິລະປະ"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("ຊີເອເທິນ, ສະຫະລັດ"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ເມນູໃສ່ກຸ້ງ"),
         "craneEat7": MessageLookupByLibrary.simpleMessage("ແນຊວິວ, ສະຫະລັດ"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ທາງເຂົ້າຮ້ານເບເກີຣີ"),
         "craneEat8": MessageLookupByLibrary.simpleMessage("ແອັດລັນຕາ, ສະຫະລັດ"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ຈານໃສ່ກຸ້ງນ້ຳຈືດ"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("ມາດຣິດ​, ສະເປນ"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ເຄົາເຕີໃນຄາເຟ່ທີ່ມີເຂົ້າໜົມອົບຊະນິດຕ່າງໆ"),
         "craneEatRestaurants": m2,
         "craneEatSubhead":
             MessageLookupByLibrary.simpleMessage("ສຳຫຼວດຮ້ານອາຫານຕາມປາຍທາງ"),
         "craneFly": MessageLookupByLibrary.simpleMessage("ບິນ"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("ແອສເພນ, ສະຫະລັດ"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ກະຕູບຫຼັງນ້ອຍຢູ່ກາງທິວທັດທີ່ມີຫິມະ ແລະ ຕົ້ນໄມ້ຂຽວ"),
         "craneFly1": MessageLookupByLibrary.simpleMessage("ບິກເຊີ, ສະຫະລັດ"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("ໄຄໂຣ, ອີ​ຢິບ"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Al-Azhar Mosque ໃນຕອນຕາເວັນຕົກ"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("ລິສບອນ, ປໍຕູກອລ"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ປະພາຄານດິນຈີ່ກາງທະເລ"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("ນາປາ, ສະຫະລັດ"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ສະລອຍນ້ຳທີ່ມີຕົ້ນປາມ"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("ບາຫຼີ, ອິນໂດເນເຊຍ"),
+        "craneFly13SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ສະລອຍນ້ຳຕິດທະເລທີ່ມີຕົ້ນປາມ"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ເຕັ້ນພັກແຮມໃນທົ່ງ"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("ຫຸບເຂົາແຄມບູ, ເນປານ"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ທຸງມົນຕາໜ້າພູທີ່ປົກຄຸມດ້ວຍຫິມະ"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("ມາຈູ ພິຈູ​, ເປ​ຣູ"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ປ້ອມມາຊູປິກຊູ"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("ມາເລ່​, ມັລດີຟ"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ບັງກະໂລເໜືອນ້ຳ"),
         "craneFly5":
             MessageLookupByLibrary.simpleMessage("ວິຊເນົາ, ສະວິດເຊີແລນ"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("ມາດຣິດ​, ສະເປນ"),
+        "craneFly5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ໂຮງແຮມຮິມທະເລສາບທີ່ຢູ່ໜ້າພູ"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("ເມັກຊິກໂກ​ຊິຕີ, ເມັກ​ຊິ​ໂກ"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ພາບຖ່າຍທາງອາກາດຂອງພະລາດຊະວັງ Palacio de Bellas Artes"),
         "craneFly7": MessageLookupByLibrary.simpleMessage("ພູຣັຊມໍ, ສະຫະລັດ"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ພູຣັຊມໍ"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("ສິງກະໂປ"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("ຮາວານາ, ຄິວບາ"),
+        "craneFly9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ຜູ້ຊາຍຢືນພິງລົດບູຮານສີຟ້າ"),
         "craneFlyStops": m3,
         "craneFlySubhead":
             MessageLookupByLibrary.simpleMessage("ສຳຫຼວດຖ້ຽວບິນຕາມປາຍທາງ"),
@@ -164,19 +215,43 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ນັກທ່ອງທ່ຽວ"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("ນອນ"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("ມາເລ່​, ມັລດີຟ"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ບັງກະໂລເໜືອນ້ຳ"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage("ແອສເພນ, ສະຫະລັດ"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("ໄຄໂຣ, ອີ​ຢິບ"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Al-Azhar Mosque ໃນຕອນຕາເວັນຕົກ"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("ໄທເປ, ໄຕ້ຫວັນ"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ຕຶກໄທເປ 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ກະຕູບຫຼັງນ້ອຍຢູ່ກາງທິວທັດທີ່ມີຫິມະ ແລະ ຕົ້ນໄມ້ຂຽວ"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("ມາຈູ ພິຈູ​, ເປ​ຣູ"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ປ້ອມມາຊູປິກຊູ"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("ຮາວານາ, ຄິວບາ"),
+        "craneSleep3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ຜູ້ຊາຍຢືນພິງລົດບູຮານສີຟ້າ"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("ວິຊເນົາ, ສະວິດເຊີແລນ"),
+        "craneSleep4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ໂຮງແຮມຮິມທະເລສາບທີ່ຢູ່ໜ້າພູ"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage("ບິກເຊີ, ສະຫະລັດ"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ເຕັ້ນພັກແຮມໃນທົ່ງ"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("ນາປາ, ສະຫະລັດ"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ສະລອຍນ້ຳທີ່ມີຕົ້ນປາມ"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("ປໍໂຕ, ປໍຕູກອລ"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ຫ້ອງພັກທີ່ມີສີສັນສົດໃສຢູ່ຈະຕຸລັດ Ribeira"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("ທູລຳ, ເມັກຊິໂກ"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ຊາກເປ່ເພຂອງສິ່ງກໍ່ສ້າງຊາວມາຢັນຢູ່ໜ້າຜາເໜືອຫາດຊາຍ"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("ລິສບອນ, ປໍຕູກອລ"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ປະພາຄານດິນຈີ່ກາງທະເລ"),
         "craneSleepProperties": m4,
         "craneSleepSubhead":
             MessageLookupByLibrary.simpleMessage("ສຳຫຼວດທີ່ພັກຕາມປາຍທາງ"),
@@ -324,6 +399,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("ຊິບອິນພຸດ"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("ບໍ່ສາມາດສະແດງ URL ໄດ້:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "ແຖບທີ່ມີຄວາມສູງແບບຕາຍຕົວແຖວດ່ຽວທີ່ປົກກະຕິຈະມີຂໍ້ຄວາມຈຳນວນໜຶ່ງຮວມທັງໄອຄອນນຳໜ້າ ຫຼື ຕໍ່ທ້າຍ"),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("ຂໍ້ຄວາມສຳຮອງ"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("ໂຄງຮ່າງລາຍຊື່ແບບເລື່ອນໄດ້"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("ລາຍຊື່"),
+        "demoOneLineListsTitle": MessageLookupByLibrary.simpleMessage("ແຖວດຽວ"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("ຕົວເລືອກ"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "ປຸ່ມແບບມີເສັ້ນຂອບຈະເປັນສີທຶບ ແລະ ຍົກຂຶ້ນເມື່ອກົດໃສ່. ມັກຈະຈັບຄູ່ກັບປຸ່ມແບບຍົກຂຶ້ນເພື່ອລະບຸວ່າມີການດຳເນີນການສຳຮອງຢ່າງອື່ນ."),
@@ -333,6 +416,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "ປຸ່ມແບບຍົກຂຶ້ນຈະເພີ່ມມິຕິໃຫ້ກັບໂຄງຮ່າງທີ່ສ່ວນໃຫຍ່ຮາບພຽງ. ພວກມັນຈະເນັ້ນຟັງຊັນຕ່າງໆທີ່ສຳຄັນໃນພື້ນທີ່ກວ້າງ ຫຼື ມີການໃຊ້ວຽກຫຼາຍ."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("ປຸ່ມແບບຍົກຂຶ້ນ"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ກ່ອງໝາຍຈະເຮັດໃຫ້ຜູ້ໃຊ້ສາມາດເລືອກຫຼາຍຕົວເລືອກຈາກຊຸດໃດໜຶ່ງໄດ້. ຄ່າຂອງກ່ອງໝາຍປົກກະຕິທີ່ເປັນ true ຫຼື false ແລະ ຄ່າຂອງກ່ອງໝາຍທີ່ມີສາມຄ່າສາມາດເປັນຄ່າ null ໄດ້ນຳ."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("ກ່ອງໝາຍ"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ປຸ່ມຕົວເລືອກທີ່ເຮັດໃຫ້ຜູ້ໃຊ້ສາມາດເລືອກຕົວເລືອກຈາກຊຸດໃດໜຶ່ງໄດ້. ໃຊ້ປຸ່ມຕົວເລືອກສຳລັບການເລືອກສະເພາະຫາກທ່ານຄິດວ່າຜູ້ໃຊ້ຕ້ອງການເບິ່ງຕົວເລືອກທັງໝົດທີ່ມີຂ້າງໆກັນ."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("ປຸ່ມຕົວເລືອກ"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "ກ່ອງໝາຍ, ປຸ່ມຕົວເລືອກ ແລະ ປຸ່ມເປີດປິດຕ່າງໆ"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ປຸ່ມເປີດ/ປິດທີ່ຈະສະຫຼັບຕົວເລືອກການຕັ້ງຄ່າໃດໜຶ່ງ. ຕົວເລືອກທີ່ສະຫຼັບການຄວບຄຸມ, ຮວມທັງສະຖານະທີ່ມັນເປັນຢູ່, ຄວນເຮັດໃຫ້ຈະແຈ້ງຈາກປ້າຍກຳກັບໃນແຖວທີ່ສອດຄ່ອງກັນ."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("ປຸ່ມ"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("ການຄວບຄຸມການເລືອກ"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "ກ່ອງໂຕ້ຕອບງ່າຍໆທີ່ສະເໜີຕົວເລືອກໃຫ້ຜູ້ໃຊ້ລະຫວ່າງຫຼາຍໆຕົວເລືອກ. ກ່ອງໂຕ້ຕອບແບບງ່າຍໆຈະມີຊື່ແບບບໍ່ບັງຄັບທີ່ສະແດງທາງເທິງຕົວເລືອກ."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("ງ່າຍໆ"),
@@ -398,6 +500,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "ປຸ່ມເປີດ/ປິດອາດໃຊ້ເພື່ອຈັດກຸ່ມຕົວເລືອກທີ່ກ່ຽວຂ້ອງກັນ. ກຸ່ມຂອງປຸ່ມເປີດ/ປິດທີ່ກ່ຽວຂ້ອງກັນຄວນໃຊ້ຄອນເທນເນີຮ່ວມກັນເພື່ອເປັນການເນັ້ນກຸ່ມເຫຼົ່ານັ້ນ"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("ປຸ່ມເປີດ/ປິດ"),
+        "demoTwoLineListsTitle": MessageLookupByLibrary.simpleMessage("ສອງແຖວ"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "ຄຳຈຳກັດຄວາມຂອງຕົວອັກສອນຮູບແບບຕ່າງໆທີ່ພົບໃນ Material Design."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -523,6 +626,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ກ່ຽວກັບ Flutter Gallery"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("ອອກແບບໂດຍ TOASTER ໃນລອນດອນ"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("ປິດການຕັ້ງຄ່າ"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("ການຕັ້ງຄ່າ"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("ມືດ"),
         "settingsFeedback": MessageLookupByLibrary.simpleMessage("ສົ່ງຄຳຕິຊົມ"),
         "settingsLightTheme": MessageLookupByLibrary.simpleMessage("ແຈ້ງ"),

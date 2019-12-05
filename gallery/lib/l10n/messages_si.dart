@@ -122,49 +122,99 @@ class MessageLookup extends MessageLookupByLibrary {
             "පෞද්ගලීකකරණය කළ සංචාරක යෙදුමක්"),
         "craneEat": MessageLookupByLibrary.simpleMessage("EAT"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("නේපල්ස්, ඉතාලිය"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("දර උඳුනක ඇති පිට්සාව"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("ඩලාස්, එක්සත් ජනපදය"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("ලිස්බන්, පෘතුගාලය"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "විශාල පැස්ට්‍රාමි සැන්ඩ්විච් එකක් අතැති කාන්තාව"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "රාත්‍ර ආහාර ගන්නා ආකාරයේ බංකු සහිත හිස් තැබෑරුම"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("කෝඩොබා, ආජන්ටීනාව"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("බර්ගර්"),
         "craneEat3":
             MessageLookupByLibrary.simpleMessage("පෝට්ලන්ඩ්, එක්සත් ජනපදය"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("කොරියානු ටාකෝ"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("පැරීසිය, ප්‍රංශය"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("චොකොලට් අතුරුපස"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("සෝල්, දකුණු කොරියාව"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "කලාත්මක අවන්හලක ඉඳගෙන සිටින ප්‍රදේශය"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("සියැටල්, එක්සත් ජනපදය"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("කූනිස්සෝ පිඟාන"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("නෑෂ්විල්, එක්සත් ජනපදය"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("බේකරි ප්‍රවේශය"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("ඇට්ලන්ටා, එක්සත් ජනපදය"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("පොකිරිස්සෝ පිඟාන"),
         "craneEat9":
             MessageLookupByLibrary.simpleMessage("මැඩ්‍රිඩ්, ස්පාඤ්ඤය"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("පේස්ට්‍රි ඇති කැෆේ කවුන්ටරය"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "ගමනාන්තය අනුව අවන්හල් ගවේෂණය කරන්න"),
         "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
         "craneFly0":
             MessageLookupByLibrary.simpleMessage("ඇස්පෙන්, එක්සත් ජනපදය"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "සදාහරිත ගස් සහිත මීදුම සහිත භූමිභාගයක ඇති පැල"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("බිග් සර්, එක්සත් ජනපදය"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("කයිරෝ, ඊජිප්තුව"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ඉර බසින අතරතුර අල් අසාර් පල්ලයේ කුළුණු"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("ලිස්බන්, පෘතුගාලය"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "මුහුදේ ඇති ගඩොල් ප්‍රදීපාගාරය"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("නාපා, එක්සත් ජනපදය"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("තල් ගස් සහිත නාන තටාකය"),
         "craneFly13":
             MessageLookupByLibrary.simpleMessage("බාලි, ඉන්දුනීසියාව"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "තල් ගස් සහිත මුහුද අසබඩ නාන තටාකය"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("පිට්ටනියක ඇති කුඩාරම"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("කුම්බු නිම්නය, නේපාලය"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "හිම කන්දක ඉදිරිපස ඇති යාච්ඤා කොඩි"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("මාචු පික්කූ, පේරු"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("මාචු පිච්චු බළකොටුව"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("මාලේ, මාලදිවයින"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ජලය මත ඇති බංගලා"),
         "craneFly5":
             MessageLookupByLibrary.simpleMessage("විට්ස්නෝ, ස්විට්සර්ලන්තය"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "කඳු වැටියක ඉදිරිපස ඇති වැව ඉස්මත්තේ හෝටලය"),
         "craneFly6":
-            MessageLookupByLibrary.simpleMessage("මැඩ්‍රිඩ්, ස්පාඤ්ඤය"),
+            MessageLookupByLibrary.simpleMessage("මෙක්සිකෝ නගරය, මෙක්සිකෝව"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Palacio de Bellas Artes හි ගුවන් දසුන"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "මවුන්ට් රෂ්මෝර්, එක්සත් ජනපදය"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("රෂ්මෝ කඳුවැටිය"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("සිංගප්පූරුව"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("සුපර්ට්‍රී ග්‍රොව්"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("හවානා, කියුබාව"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "කෞතුක වටිනාකමක් ඇති නිල් පැහැති මෝටර් රථයකට හේත්තු වී සිටින මිනිසා"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "ගමනාන්තය අනුව ගුවන් ගමන් ගවේෂණය කරන්න"),
@@ -181,25 +231,49 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("සංචාරකයන්"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("නිද්‍රාව"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("මාලේ, මාලදිවයින"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ජලය මත ඇති බංගලා"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("ඇස්පෙන්, එක්සත් ජනපදය"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("කයිරෝ, ඊජිප්තුව"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ඉර බසින අතරතුර අල් අසාර් පල්ලයේ කුළුණු"),
         "craneSleep11":
             MessageLookupByLibrary.simpleMessage("තායිපේ, තායිවානය"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("තාය්පේයි 101 උස් ගොඩනැගිල්ල"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "සදාහරිත ගස් සහිත මීදුම සහිත භූමිභාගයක ඇති පැල"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("මාචු පික්කූ, පේරු"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("මාචු පිච්චු බළකොටුව"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("හවානා, කියුබාව"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "කෞතුක වටිනාකමක් ඇති නිල් පැහැති මෝටර් රථයකට හේත්තු වී සිටින මිනිසා"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("විට්ස්නෝ, ස්විට්සර්ලන්තය"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "කඳු වැටියක ඉදිරිපස ඇති වැව ඉස්මත්තේ හෝටලය"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("බිග් සර්, එක්සත් ජනපදය"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("පිට්ටනියක ඇති කුඩාරම"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("නාපා, එක්සත් ජනපදය"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("තල් ගස් සහිත නාන තටාකය"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("පෝටෝ, පෘතුගාලය"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "රයිබේරියා චතුරස්‍රයේ ඇති වර්ණවත් බද්ධ නිවාස"),
         "craneSleep8":
             MessageLookupByLibrary.simpleMessage("ටුලුම්, මෙක්සිකෝව"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "වෙරළක් ඉහළින් කඳු ශිඛරයක මේයන් නටබුන්"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("ලිස්බන්, පෘතුගාලය"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "මුහුදේ ඇති ගඩොල් ප්‍රදීපාගාරය"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "ගමනාන්තය අනුව කුලී නිවාස ගවේෂණය කරන්න"),
@@ -348,6 +422,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("ආදාන චිපය"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL සංදර්ශනය කළ නොහැකි විය:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "සාමාන්‍යයෙන් සමහර පෙළ මෙන්ම ඉදිරිපස හෝ පසුපස අයිකනයක් අඩංගු වන තනි ස්ථීර උසක් ඇති පේළියකි."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("ද්විතියික පෙළ"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "අනුචලනය කිරීමේ ලැයිස්තු පිරිසැලසුම්"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("ලැයිස්තු"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("පේළි එකයි"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("විකල්ප"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "වැටිසන බොත්තම් එබූ විට අපැහැදිලි වන අතර ඉස්සේ. ඒවා නිතර විකල්ප, ද්විතීයික ක්‍රියාවක් දැක්වීමට එසවූ බොත්තම් සමග යුගළ වේ."),
@@ -357,6 +440,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "එසවූ බොත්තම් බොහෝ විට පැතලි පිරිසැලසුම් වෙත පිරිවිතර එක් කරයි. ඒවා කාර්ය බහුල හෝ පුළුල් ඉඩවල ශ්‍රිත අවධාරණය කරයි."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("එසවූ බොත්තම"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "තේරීම් කොටු පරිශීලකයන්ට කට්ටලයකින් විකල්ප කීපයක් තේරීමට ඉඩ දෙයි. සාමාන්‍ය තේරීම් කොටුවක අගය සත්‍ය හෝ අසත්‍ය වන අතර ත්‍රිවිධාකාර තේරීම් කොටුවක අගය ද ශුන්‍ය විය හැකිය."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("තේරීම් කොටුව"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "රේඩියෝ බොත්තම පරිශීලකට කට්ටලයකින් එක් විකල්පයක් තේරීමට ඉඩ දෙයි. පරිශීලකට ලබා ගත හැකි සියලු විකල්ප පැත්තෙන් පැත්තට බැලීමට අවශ්‍යයැයි ඔබ සිතන්නේ නම් සුවිශේෂි තේරීම සඳහා රේඩියෝ බොත්තම භාවිත කරන්න."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("රේඩියෝ"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "තේරීම් කොටු, රේඩියෝ බොත්තම් සහ ස්විච"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ක්‍රියාත්මක කිරීමේ/ක්‍රියාවිරහිත කිරීමේ ස්විච තනි සැකසීම් විකල්පයක තත්ත්වය ටොගල් කරයි. පාලන මෙන්ම එය සිටින තත්තවය මාරු කරන විකල්ප අනුරූප පේළිගත ලේබලයෙන් පැහැදිලි කළ යුතුය."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("මාරු කරන්න"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("තේරීම් පාලන"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "සරල සංවාදයක් විකල්ප කීපයක් අතර තෝරා ගැනීමක් පිරිනමයි. සරල සංවාදයක තෝරා ගැනීම් ඉහළ සංදර්ශනය වන විකල්ප මාතෘකාවක් ඇත."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("සරල"),
@@ -422,6 +524,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "සම්බන්ධිත විකල්ප සමූහගත කිරීමට ටොගල බොත්තම් භාවිත කළ හැකිය. සම්බන්ධිත ටොගල බොත්තම සමූහ අවධාරණය කිරීමට, සමූහයක් පොදු බහාලුමක් බෙදා ගත යුතුය"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("ටොගල බොත්තම්"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("පේළි දෙකයි"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Material Design හි දක්නට ලැබෙන විවිධ මුද්‍රණ විලාස සඳහා අර්ථ දැක්වීම්."),
         "demoTypographySubtitle":
@@ -547,6 +651,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Flutter Gallery ගැන"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "ලන්ඩනයේ TOASTER විසින් නිර්මාණය කරන ලදි"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("සැකසීම් වසන්න"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("සැකසීම්"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("අඳුරු"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("ප්‍රතිපෝෂණ යවන්න"),

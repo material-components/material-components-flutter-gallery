@@ -126,37 +126,87 @@ class MessageLookup extends MessageLookupByLibrary {
             "Персаналізаваная праграма для падарожжаў"),
         "craneEat": MessageLookupByLibrary.simpleMessage("ЕЖА"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Неапаль, Італія"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Піца ў дрывяной печы"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("Далас, ЗША"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Лісабон, Партугалія"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Жанчына з вялікім сандвічам пастрамі ў руках"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Пусты бар з круглымі барнымі крэсламі"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Кордава, Аргенціна"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Бургер"),
         "craneEat3": MessageLookupByLibrary.simpleMessage("Портланд, ЗША"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Така па-карэйскі"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Парыж, Францыя"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Шакаладны дэсерт"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("Сеул, Паўднёвая Карэя"),
+        "craneEat5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Гасцёўня моднага рэстарана"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("Сіэтл, ЗША"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Страва з крэветкамі"),
         "craneEat7": MessageLookupByLibrary.simpleMessage("Нашвіл, ЗША"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Уваход у пякарню"),
         "craneEat8": MessageLookupByLibrary.simpleMessage("Атланта, ЗША"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Талерка з ракамі"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Мадрыд, Іспанія"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Прылавак кафэ з кандытарскімі вырабамі"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Агляд рэстаранаў у пункце прызначэння"),
         "craneFly": MessageLookupByLibrary.simpleMessage("РЭЙС"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("Аспен, ЗША"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Заснежаны краявід з сельскім домікам і вечназялёнымі дрэвамі"),
         "craneFly1": MessageLookupByLibrary.simpleMessage("Біг-Сур, ЗША"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Каір, Егіпет"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Мінарэты мячэці аль-Азхар на захадзе сонца"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Лісабон, Партугалія"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Цагельны маяк на моры"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("Напа, ЗША"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Басейн з пальмамі"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Балі, Інданезія"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Басейн з пальмамі з відам на мора"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Палатка ў полі"),
         "craneFly2": MessageLookupByLibrary.simpleMessage("Кхумбу, Непал"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Малітвеныя флажкі на фоне заснежанай гары"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Мачу-Пікчу, Перу"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Цытадэль Мачу-Пікчу"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Мале, Мальдывы"),
+        "craneFly4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Бунгала над воднай паверхняй"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Віцнау, Швейцарыя"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Мадрыд, Іспанія"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Гасцініца на беразе возера пад гарой"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Мехіка, Мексіка"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Від зверху на Палац вытанчаных мастацтваў"),
         "craneFly7": MessageLookupByLibrary.simpleMessage("Гара Рашмар, ЗША"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Гара Рашмар"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Сінгапур"),
+        "craneFly8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Supertree Grove (Гай супердрэваў)"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Гавана, Куба"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Мужчына, які абапіраецца на антыкварны сіні аўтамабіль"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Агляд рэйсаў у пункт прызначэння"),
@@ -174,20 +224,44 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Падарожнікі"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("НАЧЛЕГ"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Мале, Мальдывы"),
+        "craneSleep0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Бунгала над воднай паверхняй"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage("Аспен, ЗША"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Каір, Егіпет"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Мінарэты мячэці аль-Азхар на захадзе сонца"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Тайбэй, Тайвань"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Небаскроб Тайбэй 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Заснежаны краявід з сельскім домікам і вечназялёнымі дрэвамі"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("Мачу-Пікчу, Перу"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Цытадэль Мачу-Пікчу"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Гавана, Куба"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Мужчына, які абапіраецца на антыкварны сіні аўтамабіль"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("Віцнау, Швейцарыя"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Гасцініца на беразе возера пад гарой"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage("Біг-Сур, ЗША"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Палатка ў полі"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("Напа, ЗША"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Басейн з пальмамі"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("Порту, Партугалія"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Каляровыя дамы ў скверы Рыбейра"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Тулум, Мексіка"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Руіны цывілізацыі мая на ўцёсе над пляжам"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Лісабон, Партугалія"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Цагельны маяк на моры"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Агляд месцаў для пражывання ў пункце прызначэння"),
@@ -341,6 +415,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("Чып уводу"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Не ўдалося адлюстраваць URL-адрас:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Адзіны фіксаваны па вышыні радок, які звычайна ўтрымлівае тэкст, а таксама пачатковы і канцавы значкі."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Другасны тэкст"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Макеты спісаў, якія прагортваюцца"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Спісы"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Адзін радок"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Параметры"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Кнопкі з контурамі цямнеюць і падымаюцца ўгору пры націсканні. Яны часта спалучаюцца з выпуклымі кнопкамі для вызначэння альтэрнатыўнага, другаснага дзеяння."),
@@ -350,6 +433,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Выпуклыя кнопкі надаюць аб\'ёмнасць пераважна плоскім макетам. Яны паказваюць функцыі ў занятых або шырокіх абласцях."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Выпуклая кнопка"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Палі для птушак дазваляюць карыстальніку выбраць з набору некалькі параметраў. Звычайнае значэнне ў полі для птушак – гэта \"true\" або \"false\", а значэнне поля для птушак з трыма станамі можа быць роўным нулю."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Поле для птушкі"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Радыёкнопкі дазваляюць карыстальніку выбраць з набору адзін варыянт. Выкарыстоўвайце радыёкнопкі для асаблівага выбару, калі лічыце, што карыстальнік павінен бачыць усе даступныя варыянты побач."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Радыё"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Палі для птушак, радыёкнопкі і пераключальнікі"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Пераключальнікі мяняюць стан аднаго параметра налад з уключанага на выключаны і наадварот. Параметр, якім кіруе пераключальнік, а таксама яго стан павінны адлюстроўвацца ў адпаведнай убудаванай метцы."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Пераключальнік"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Элементы кіравання выбарам"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Простае дыялогавае акно прапануе карыстальніку выбар паміж некалькімі варыянтамі. Простае дыялогавае акно можа мець назву, якая паказваецца над варыянтамі выбару."),
         "demoSimpleDialogTitle":
@@ -415,6 +517,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Кнопкі пераключэння могуць выкарыстоўвацца для групавання звязаных параметраў. Каб вылучыць групы звязаных кнопак пераключэння, у групы павінен быць абагулены кантэйнер"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Кнопкі пераключэння"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Два радкі"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Азначэнні для розных друкарскіх стыляў з каталога матэрыяльнага дызайну."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -548,6 +652,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Пра Flutter Gallery"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("Дызайн: TOASTER, Лондан"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Закрыць налады"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("Налады"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Цёмная"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Адправіць водгук"),

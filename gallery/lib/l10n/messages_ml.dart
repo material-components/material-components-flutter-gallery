@@ -25,13 +25,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static m1(title) => "${title} ടാബിനുള്ള പ്ലെയ്സ്‌ഹോൾഡർ";
 
   static m2(totalRestaurants) =>
-      "${Intl.plural(totalRestaurants, zero: 'No Restaurants', one: '1 Restaurant', other: '${totalRestaurants} Restaurants')}";
+      "${Intl.plural(totalRestaurants, zero: 'റെസ്‌റ്റോറന്റുകളൊന്നുമില്ല', one: 'ഒരു റെസ്‌റ്റോറന്റ്', other: '${totalRestaurants} റെസ്റ്റോറന്റുകൾ')}";
 
   static m3(numberOfStops) =>
-      "${Intl.plural(numberOfStops, zero: 'Nonstop', one: '1 stop', other: '${numberOfStops} stops')}";
+      "${Intl.plural(numberOfStops, zero: 'സ്റ്റോപ്പില്ലാത്തവ', one: 'ഒരു സ്റ്റോപ്പ്', other: '${numberOfStops} സ്റ്റോപ്പുകൾ')}";
 
   static m4(totalProperties) =>
-      "${Intl.plural(totalProperties, zero: 'No Available Properties', one: '1 Available Properties', other: '${totalProperties} Available Properties')}";
+      "${Intl.plural(totalProperties, zero: 'പ്രോപ്പർട്ടികളൊന്നും ലഭ്യമല്ല', one: '1 പ്രോപ്പർട്ടികൾ ലഭ്യമാണ്', other: '${totalProperties} പ്രോപ്പർട്ടികൾ ലഭ്യമാണ്')}";
 
   static m5(value) => "ഇനം ${value}";
 
@@ -41,7 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
   static m7(value) => "നിങ്ങൾ തിരഞ്ഞെടുത്തത്: \"${value}\"";
 
   static m8(accountName, accountNumber, amount) =>
-      "${accountName} account ${accountNumber} with ${amount}.";
+      "${amount} നിരക്കുള്ള, ${accountNumber} എന്ന അക്കൗണ്ട് നമ്പറോട് കൂടിയ ${accountName} അക്കൗണ്ട്.";
 
   static m9(amount) => "ഈ മാസം നിങ്ങൾ ${amount} ATM ഫീസ് അടച്ചു";
 
@@ -54,16 +54,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static m12(amount) => "ഈ ആഴ്ച റസ്റ്റോറന്റുകളിൽ നിങ്ങൾ ${amount} ചെലവാക്കി.";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'Increase your potential tax deduction! Assign categories to 1 unassigned transaction.', other: 'Increase your potential tax deduction! Assign categories to ${count} unassigned transactions.')}";
+      "${Intl.plural(count, one: 'നികുതിയായി നിങ്ങളിൽ നിന്നും പിടിക്കാൻ സാധ്യതയുള്ള തുക കുറയ്ക്കൂ! വിഭാഗങ്ങൾ നിശ്ചയിച്ചിട്ടില്ലാത്ത ഒരു ഇടപാടിന് വിഭാഗങ്ങൾ നൽകുക.', other: 'നികുതിയായി നിങ്ങളിൽ നിന്നും പിടിക്കാൻ സാധ്യതയുള്ള തുക കുറയ്ക്കൂ! വിഭാഗങ്ങൾ നിശ്ചയിച്ചിട്ടില്ലാത്ത ${count} ഇടപാടുകൾക്ക് വിഭാഗങ്ങൾ നൽകുക.')}";
 
   static m14(billName, date, amount) =>
-      "${billName} bill due ${date} for ${amount}.";
+      "അവസാന തീയതി ${date} ആയ ${amount} വരുന്ന ${billName} ബിൽ.";
 
   static m15(budgetName, amountUsed, amountTotal, amountLeft) =>
-      "${budgetName} budget with ${amountUsed} used of ${amountTotal}, ${amountLeft} left";
+      "മൊത്തം ${amountTotal} തുകയിൽ ${amountUsed} നിരക്ക് ഉപയോഗിച്ച ${budgetName} ബജറ്റ്, ${amountLeft} ശേഷിക്കുന്നു";
 
   static m16(quantity) =>
-      "${Intl.plural(quantity, zero: 'NO ITEMS', one: '1 ITEM', other: '${quantity} ITEMS')}";
+      "${Intl.plural(quantity, zero: 'ഇനങ്ങളൊന്നുമില്ല', one: 'ഒരിനം', other: '${quantity} ഇനങ്ങൾ')}";
 
   static m17(price) => "x ${price}";
 
@@ -126,46 +126,96 @@ class MessageLookup extends MessageLookupByLibrary {
             "വ്യക്തിപരമാക്കിയ യാത്രാ ആപ്പ്"),
         "craneEat": MessageLookupByLibrary.simpleMessage("കഴിക്കുക"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("നേപ്പിൾസ്, ഇറ്റലി"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "വിറക് ഉപയോഗിക്കുന്ന അടുപ്പിലുണ്ടാക്കുന്ന പിസ"),
         "craneEat1": MessageLookupByLibrary.simpleMessage(
             "ഡാലസ്, യുണൈറ്റഡ് സ്റ്റേറ്റ്‌സ്"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("ലിസ്ബൺ, പോർച്ചുഗൽ"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "വലിയ പേസ്‌ട്രാമി സാൻഡ്‌വിച്ച് കൈയ്യിൽ പിടിച്ച് നിൽകുന്ന സ്‌ത്രീ"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ഡിന്നർ സ്‌റ്റൈൽ സ്‌റ്റൂളുകളുള്ള ആളൊഴിഞ്ഞ ബാർ"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("കോദോബ, അർജന്റീന"),
+        "craneEat2SemanticLabel": MessageLookupByLibrary.simpleMessage("ബർഗർ"),
         "craneEat3": MessageLookupByLibrary.simpleMessage(
             "പോർട്ട്ലൻഡ്, യുണൈറ്റഡ് സ്റ്റേറ്റ്സ്"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("കൊറിയൻ ടാക്കോ"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("പാരീസ്, ഫ്രാൻസ്"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ചോക്ലേറ്റ് ഡെസേർട്ട്"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("സോൾ, ദക്ഷിണ കൊറിയ"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ആർട്‌സി റെസ്‌റ്റോറന്റിലെ ഇരിപ്പിട സൗകര്യം"),
         "craneEat6": MessageLookupByLibrary.simpleMessage(
             "സീറ്റിൽ, യുണൈറ്റഡ് സ്‌റ്റേറ്റ്‌സ്"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ചെമ്മീന്‍ കൊണ്ടുള്ള വിഭവം"),
         "craneEat7": MessageLookupByLibrary.simpleMessage(
             "നാഷ്‌വിൽ, യുണൈറ്റഡ് സ്റ്റേറ്റ്സ്"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ബേക്കറിയുടെ പ്രവേശനകവാടം"),
         "craneEat8": MessageLookupByLibrary.simpleMessage(
             "അറ്റ്ലാന്റ, യുണൈറ്റഡ് സ്റ്റേറ്റ്സ്"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ഒരു പ്ലേറ്റ് ക്രോഫിഷ്"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("മാഡ്രിഡ്, സ്‌പെയിൻ"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "പേസ്‌ട്രികൾ ലഭ്യമാക്കുന്ന കഫേയിലെ കൗണ്ടർ"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "ലക്ഷ്യസ്ഥാനം അനുസരിച്ച് റെസ്റ്റോറന്റുകൾ അടുത്തറിയുക"),
         "craneFly": MessageLookupByLibrary.simpleMessage("FLY"),
         "craneFly0": MessageLookupByLibrary.simpleMessage(
             "ആസ്പെൻ, യുണൈറ്റഡ് സ്റ്റേറ്റ്സ്"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "മഞ്ഞ് പെയ്യുന്ന നിത്യഹരിത മരങ്ങളുള്ള പ്രദേശത്തെ\nഉല്ലാസ കേന്ദ്രം"),
         "craneFly1": MessageLookupByLibrary.simpleMessage(
             "ബിഗ് സുർ, യുണൈറ്റഡ് സ്‌റ്റേറ്റ്സ്"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("കെയ്‌റോ, ഈജിപ്ത്"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "സൂര്യാസ്‌തമയ സമയത്ത് അൽ-അസ്ഹർ പള്ളിയുടെ മിനാരങ്ങൾ"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("ലിസ്ബൺ, പോർച്ചുഗൽ"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ഇഷ്‌ടിക കൊണ്ട് ഉണ്ടാക്കിയ കടലിലെ ലൈറ്റ്ഹൗസ്"),
         "craneFly12": MessageLookupByLibrary.simpleMessage(
             "നാപ്പ, യുണൈറ്റഡ് സ്റ്റേറ്റ്സ്"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ഈന്തപ്പനകളോടുകൂടിയ പൂൾ"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("ബാലി, ഇന്തോനേഷ്യ"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ഈന്തപ്പനകളോടുകൂടിയ സമുദ്രതീരത്തെ പൂളുകൾ"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ഫീൽഡിലെ ടെന്റ്"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("കുംബു വാലി, നേപ്പാൾ"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "മഞ്ഞ് പെയ്യുന്ന മലനിരകൾക്ക് മുന്നിലെ പ്രാർഥനാ ഫ്ലാഗുകൾ"),
         "craneFly3":
             MessageLookupByLibrary.simpleMessage("മാച്ചു പിച്ചു, പെറു"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("മാച്ചു പിച്ചു സിറ്റാഡെൽ"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("മാലി, മാലദ്വീപുകൾ"),
+        "craneFly4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "വെള്ളത്തിന് പുറത്ത് നിർമ്മിച്ചിരിക്കുന്ന ബംഗ്ലാവുകൾ"),
         "craneFly5":
             MessageLookupByLibrary.simpleMessage("വിറ്റ്‌സ്നോ, സ്വിറ്റ്സർലൻഡ്"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("മാഡ്രിഡ്, സ്‌പെയിൻ"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "മലനിരകൾക്ക് മുന്നിലുള്ള തടാകതീരത്തെ ഹോട്ടൽ"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage(
+            "മെക്‌സിക്കോ സിറ്റി, മെക്‌സിക്കോ"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "പലാസിയോ ഡീ ബെല്ലാസ് അർട്ടെസിന്റെ ആകാശ കാഴ്‌ച"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "മൗണ്ട് റഷ്മോർ, യുണൈറ്റഡ് സ്‌റ്റേറ്റ്സ്"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("മൗണ്ട് റഷ്മോർ"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("സിംഗപ്പൂർ"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("ഹവാന, ക്യൂബ"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "നീല നിറത്തിലുള്ള പുരാതന കാറിൽ ചാരിയിരിക്കുന്ന മനുഷ്യൻ"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "ലക്ഷ്യസ്ഥാനം അനുസരിച്ച് ഫ്ലൈറ്റുകൾ അടുത്തറിയുക"),
@@ -186,27 +236,51 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneSleep": MessageLookupByLibrary.simpleMessage("ഉറക്കം"),
         "craneSleep0":
             MessageLookupByLibrary.simpleMessage("മാലി, മാലദ്വീപുകൾ"),
+        "craneSleep0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "വെള്ളത്തിന് പുറത്ത് നിർമ്മിച്ചിരിക്കുന്ന ബംഗ്ലാവുകൾ"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage(
             "ആസ്പെൻ, യുണൈറ്റഡ് സ്റ്റേറ്റ്സ്"),
         "craneSleep10":
             MessageLookupByLibrary.simpleMessage("കെയ്‌റോ, ഈജിപ്ത്"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "സൂര്യാസ്‌തമയ സമയത്ത് അൽ-അസ്ഹർ പള്ളിയുടെ മിനാരങ്ങൾ"),
         "craneSleep11":
             MessageLookupByLibrary.simpleMessage("തായ്പേയ്, തായ്‌വാൻ"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("തായ്പേയ് 101 സ്കൈസ്ക്രാപ്പർ"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "മഞ്ഞ് പെയ്യുന്ന നിത്യഹരിത മരങ്ങളുള്ള പ്രദേശത്തെ\nഉല്ലാസ കേന്ദ്രം"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("മാച്ചു പിച്ചു, പെറു"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("മാച്ചു പിച്ചു സിറ്റാഡെൽ"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("ഹവാന, ക്യൂബ"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "നീല നിറത്തിലുള്ള പുരാതന കാറിൽ ചാരിയിരിക്കുന്ന മനുഷ്യൻ"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("വിറ്റ്‌സ്നോ, സ്വിറ്റ്സർലൻഡ്"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "മലനിരകൾക്ക് മുന്നിലുള്ള തടാകതീരത്തെ ഹോട്ടൽ"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage(
             "ബിഗ് സുർ, യുണൈറ്റഡ് സ്‌റ്റേറ്റ്സ്"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ഫീൽഡിലെ ടെന്റ്"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage(
             "നാപ്പ, യുണൈറ്റഡ് സ്റ്റേറ്റ്സ്"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ഈന്തപ്പനകളോടുകൂടിയ പൂൾ"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("പോർട്ടോ, പോർച്ചുഗൽ"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "റിബേറിയ സ്ക്വയറിലെ വർണ്ണശബളമായ അപ്പാർട്ട്മെന്റുകൾ"),
         "craneSleep8":
             MessageLookupByLibrary.simpleMessage("ടുലും, മെക്സിക്കോ"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "കടൽത്തീരത്തുള്ള മലഞ്ചെരുവിൽ മായൻ അവശിഷ്‌ടങ്ങൾ"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("ലിസ്ബൺ, പോർച്ചുഗൽ"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ഇഷ്‌ടിക കൊണ്ട് ഉണ്ടാക്കിയ കടലിലെ ലൈറ്റ്ഹൗസ്"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "ലക്ഷ്യസ്ഥാനം അനുസരിച്ച് പ്രോപ്പർട്ടികൾ അടുത്തറിയുക"),
@@ -325,11 +399,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ബട്ടണുകൾ"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "Used to select between a number of mutually exclusive options. When one option in the segmented control is selected, the other options in the segmented control cease to be selected."),
+                "തനതായ നിരവധി ഓപ്‌ഷനുകൾക്കിടയിൽ നിന്ന് തിരഞ്ഞെടുക്കാൻ ഉപയോഗിക്കുന്നു. വിഭാഗീകരിച്ച നിയന്ത്രണത്തിലെ ഒരു ഓപ്ഷൻ തിരഞ്ഞെടുക്കുമ്പോൾ, വിഭാഗീകരിച്ച നിയന്ത്രണത്തിലെ മറ്റ് ഓപ്ഷനുകൾ തിരഞ്ഞെടുക്കപ്പെടുന്നതിൽ നിന്ന് തടയുന്നു."),
         "demoCupertinoSegmentedControlSubtitle":
-            MessageLookupByLibrary.simpleMessage("iOS-style segmented control"),
+            MessageLookupByLibrary.simpleMessage(
+                "iOS-സ്റ്റെെലിലുള്ള വിഭാഗീകരിച്ച നിയന്ത്രണം"),
         "demoCupertinoSegmentedControlTitle":
-            MessageLookupByLibrary.simpleMessage("Segmented Control"),
+            MessageLookupByLibrary.simpleMessage("വിഭാഗീകരിച്ച നിയന്ത്രണം"),
         "demoDialogSubtitle": MessageLookupByLibrary.simpleMessage(
             "ലളിതം, മുന്നറിയിപ്പ്, പൂർണ്ണസ്‌ക്രീൻ എന്നിവ"),
         "demoDialogTitle": MessageLookupByLibrary.simpleMessage("ഡയലോഗുകൾ"),
@@ -360,6 +435,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ഇൻപുട്ട് ചിപ്പ്"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "URL പ്രദർശിപ്പിക്കാൻ ആയില്ല:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "സാധാരണയായി ചില ടെക്സ്റ്റുകളും ഒപ്പം ലീഡിംഗ് അല്ലെങ്കിൽ ട്രെയിലിംഗ് ഐക്കണും അടങ്ങുന്ന, നിശ്ചിത ഉയരമുള്ള ഒറ്റ വരി."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("രണ്ടാം ടെക്സ്റ്റ്"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "സ്ക്രോൾ ചെയ്യുന്ന ലിസ്റ്റിന്റെ ലേഔട്ടുകൾ"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("ലിസ്റ്റുകൾ"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("ഒറ്റ വരി"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("ഓപ്‌ഷനുകൾ"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "ഔട്ട്ലൈൻ ബട്ടണുകൾ അതാര്യമാവുകയും അമർത്തുമ്പോൾ ഉയരുകയും ചെയ്യും. ഒരു ഇതര, ദ്വിതീയ പ്രവർത്തനം സൂചിപ്പിക്കുന്നതിന് അവ പലപ്പോഴും റെയ്‌സ്‌ഡ് ബട്ടണുകളുമായി ജോടിയാക്കുന്നു."),
@@ -369,14 +453,33 @@ class MessageLookup extends MessageLookupByLibrary {
             "റെയ്‌സ്‌ഡ് ബട്ടണുകൾ മിക്കവാറും ഫ്ലാറ്റ് ലേഔട്ടുകൾക്ക് മാനം നൽകുന്നു. തിരക്കേറിയതോ വിശാലമായതോ ആയ ഇടങ്ങളിൽ അവ ഫംഗ്ഷനുകൾക്ക് പ്രാധാന്യം നൽകുന്നു."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("റെയ്‌സ്‌ഡ് ബട്ടൺ"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ഒരു സെറ്റിൽ നിന്ന് ഒന്നിലധികം ഓപ്ഷനുകൾ തിരഞ്ഞെടുക്കാൻ ചെക്ക്‌ ബോക്‌സുകൾ ഉപയോക്താവിനെ അനുവദിക്കുന്നു. ഒരു സാധാരണ ചെക്ക്ബോക്‌സിന്റെ മൂല്യം ശരിയോ തെറ്റോ ആണ്, കൂടാതെ ഒരു ട്രൈസ്‌റ്റേറ്റ് ചെക്ക്ബോക്‌സിന്റെ മൂല്യവും അസാധുവാണ്."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("ചെക്ക് ബോക്‌സ്"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ഒരു സെറ്റിൽ നിന്ന് ഒരു ഓപ്ഷൻ തിരഞ്ഞെടുക്കാൻ റേഡിയോ ബട്ടണുകൾ ഉപയോക്താവിനെ അനുവദിക്കുന്നു. ഉപയോക്താവിന് ലഭ്യമായ എല്ലാ ഓപ്ഷനുകളും വശങ്ങളിലായി കാണണമെന്ന് നിങ്ങൾ കരുതുന്നുവെങ്കിൽ, എക്‌സ്‌ക്ലൂ‌സീവ് തിരഞ്ഞെടുക്കലിനായി റേഡിയോ ബട്ടണുകൾ ഉപയോഗിക്കുക."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("റേഡിയോ"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "ചെക്ക്‌ ബോക്‌സുകൾ, റേഡിയോ ബട്ടണുകൾ, സ്വിച്ചുകൾ എന്നിവ"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ഓൺ/ഓഫ് സ്വിച്ചുകൾ ഒറ്റ ക്രമീകരണ ഓപ്ഷന്റെ നില മാറ്റുന്നു. സ്വിച്ച് നിയന്ത്രണ ഓപ്ഷനും അതിന്റെ നിലയും അനുബന്ധ ഇൻലൈൻ ലേബലിൽ നിന്ന് വ്യക്തമാക്കണം."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("മാറുക"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("തിരഞ്ഞെടുക്കൽ നിയന്ത്രണങ്ങൾ"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "ഒരു ലളിതമായ ഡയലോഗ് ഉപയോക്താവിന് നിരവധി ഓപ്ഷനുകളിൽ ഒരു തിരഞ്ഞെടുക്കൽ ഓഫർ ചെയ്യുന്നു. ഒരു ലളിതമായ ഡയലോഗിന്റെ ഓപ്‌ഷണൽ പേര്, തിരഞ്ഞെടുത്തവയ്ക്ക് മുകളിൽ പ്രദർശിപ്പിക്കും."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("ലളിതം"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
-            "Tabs organize content across different screens, data sets, and other interactions."),
+            "വ്യത്യസ്ത സ്ക്രീനുകൾ, ഡാറ്റാ സെറ്റുകൾ, മറ്റ് ആശയവിനിമയങ്ങൾ എന്നിവയിലുടനീളം ഉള്ളടക്കം ടാബുകൾ ഓർഗനെെസ് ചെയ്യുന്നു."),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "Tabs with independently scrollable views"),
-        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabs"),
+            "സ്വതന്ത്രമായി സ്ക്രോൾ ചെയ്യാവുന്ന കാഴ്ചകളുള്ള ടാബുകൾ"),
+        "demoTabsTitle": MessageLookupByLibrary.simpleMessage("ടാബുകൾ"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "UI-ലേക്ക് ടെക്സ്റ്റ് ചേർക്കാൻ ടെക്സ്റ്റ് ഫീൽഡുകൾ ഉപയോക്താക്കളെ അനുവദിക്കുന്നു. അവ സാധാരണയായി ഫോമുകളിലും ഡയലോഗുകളിലും പ്രത്യക്ഷപ്പെടുന്നു."),
         "demoTextFieldEmail": MessageLookupByLibrary.simpleMessage("ഇമെയിൽ"),
@@ -434,6 +537,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "സമാനമായ ഓപ്ഷനുകൾ ഗ്രൂപ്പ് ചെയ്യാൻ ടോഗിൾ ബട്ടണുകൾ ഉപയോഗിക്കാം. സമാനമായ ടോഗിൾ ബട്ടണുകളുടെ ഗ്രൂപ്പുകൾക്ക് പ്രാധാന്യം നൽകുന്നതിന്, ഒരു ഗ്രൂപ്പ് ഒരു പൊതു കണ്ടെയിനർ പങ്കിടണം"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("ടോഗിൾ ബട്ടണുകൾ"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("രണ്ട് ലെെനുകൾ"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "മെറ്റീരിയൽ രൂപകൽപ്പനയിൽ കാണുന്ന വിവിധ ടൈപ്പോഗ്രാഫിക്കൽ ശൈലികൾക്കുള്ള നിർവ്വചനങ്ങൾ."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -531,11 +636,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ഉപയോക്തൃനാമം"),
         "rallySeeAll": MessageLookupByLibrary.simpleMessage("എല്ലാം കാണുക"),
         "rallySeeAllAccounts":
-            MessageLookupByLibrary.simpleMessage("See all accounts"),
+            MessageLookupByLibrary.simpleMessage("എല്ലാ അക്കൗണ്ടുകളും കാണുക"),
         "rallySeeAllBills":
-            MessageLookupByLibrary.simpleMessage("See all bills"),
+            MessageLookupByLibrary.simpleMessage("എല്ലാ ബില്ലുകളും കാണുക"),
         "rallySeeAllBudgets":
-            MessageLookupByLibrary.simpleMessage("See all budgets"),
+            MessageLookupByLibrary.simpleMessage("എല്ലാ ബജറ്റുകളും കാണുക"),
         "rallySettingsFindAtms":
             MessageLookupByLibrary.simpleMessage("ATM-കൾ കണ്ടെത്തുക"),
         "rallySettingsHelp": MessageLookupByLibrary.simpleMessage("സഹായം"),
@@ -563,6 +668,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ഫ്ലട്ടർ ഗ്യാലറിയെ കുറിച്ച്"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "ലണ്ടനിലെ TOASTER രൂപകൽപ്പന ചെയ്തത്"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("ക്രമീകരണം അടയ്ക്കുക"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("ക്രമീകരണം"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("ഇരുണ്ട"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("ഫീഡ്ബാക്ക് അയയ്ക്കുക"),
@@ -580,7 +689,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ടെക്‌സ്‌റ്റ് ദിശ"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("Based on locale"),
+            MessageLookupByLibrary.simpleMessage("ഭാഷാടിസ്ഥാനത്തിൽ"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("ടെക്‌സ്റ്റ് സ്‌കെയിലിംഗ്"),
@@ -702,16 +811,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "shrineProductWhitneyBelt":
             MessageLookupByLibrary.simpleMessage("വിറ്റ്നി ബെൽറ്റ്"),
         "shrineTooltipCloseCart":
-            MessageLookupByLibrary.simpleMessage("Close cart"),
+            MessageLookupByLibrary.simpleMessage("കാർട്ട് അടയ്ക്കുക"),
         "shrineTooltipCloseMenu":
-            MessageLookupByLibrary.simpleMessage("Close menu"),
+            MessageLookupByLibrary.simpleMessage("മെനു അടയ്ക്കുക"),
         "shrineTooltipOpenMenu":
-            MessageLookupByLibrary.simpleMessage("Open menu"),
+            MessageLookupByLibrary.simpleMessage("മെനു തുറക്കുക"),
         "shrineTooltipRemoveItem":
-            MessageLookupByLibrary.simpleMessage("Remove item"),
-        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("Search"),
+            MessageLookupByLibrary.simpleMessage("ഇനം നീക്കം ചെയ്യുക"),
+        "shrineTooltipSearch": MessageLookupByLibrary.simpleMessage("തിരയുക"),
         "shrineTooltipSettings":
-            MessageLookupByLibrary.simpleMessage("Settings"),
+            MessageLookupByLibrary.simpleMessage("ക്രമീകരണം"),
         "starterAppDescription": MessageLookupByLibrary.simpleMessage(
             "റെസ്പോൺസിവ് സ്റ്റാർട്ടർ ലേഔട്ട്"),
         "starterAppDrawerItem": m19,

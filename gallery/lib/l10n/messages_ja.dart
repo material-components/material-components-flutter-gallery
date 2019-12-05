@@ -116,33 +116,82 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("カスタマイズ トラベル アプリ"),
         "craneEat": MessageLookupByLibrary.simpleMessage("食事"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("ナポリ（イタリア）"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ウッドファイヤー オーブン内のピザ"),
         "craneEat1": MessageLookupByLibrary.simpleMessage("ダラス（米国）"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("リスボン（ポルトガル）"),
+        "craneEat10SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("巨大なパストラミ サンドイッチを持つ女性"),
+        "craneEat1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ダイナー スタイルのスツールが置かれた誰もいないバー"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("コルドバ（アルゼンチン）"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ハンバーガー"),
         "craneEat3": MessageLookupByLibrary.simpleMessage("ポートランド（米国）"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("韓国風タコス"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("パリ（フランス）"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("チョコレート デザート"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("ソウル（韓国）"),
+        "craneEat5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("アート風レストランの座席エリア"),
         "craneEat6": MessageLookupByLibrary.simpleMessage("シアトル（米国）"),
+        "craneEat6SemanticLabel": MessageLookupByLibrary.simpleMessage("エビ料理"),
         "craneEat7": MessageLookupByLibrary.simpleMessage("ナッシュビル（米国）"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ベーカリーの入口"),
         "craneEat8": MessageLookupByLibrary.simpleMessage("アトランタ（米国）"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ザリガニが載った皿"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("マドリッド（スペイン）"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ペストリーが置かれたカフェ カウンター"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage("目的地でレストランを検索"),
         "craneFly": MessageLookupByLibrary.simpleMessage("飛行機"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("アスペン（米国）"),
+        "craneFly0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("常緑樹の雪景色の中にあるシャレー"),
         "craneFly1": MessageLookupByLibrary.simpleMessage("ビッグサー（米国）"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("カイロ（エジプト）"),
+        "craneFly10SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("日没時のアズハルモスク"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("リスボン（ポルトガル）"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("レンガ作りの海の灯台"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("ナパ（米国）"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ヤシの木があるプール"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("バリ島（インドネシア）"),
+        "craneFly13SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ヤシの木があるシーサイド プール"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("野に張られたテント"),
         "craneFly2": MessageLookupByLibrary.simpleMessage("クンブ渓谷（ネパール）"),
+        "craneFly2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("後ろに雪山が広がる祈祷旗"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("マチュピチュ（ペルー）"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("マチュピチュの砦"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("マレ（モルディブ）"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("水上バンガロー"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("ヴィッツナウ（スイス）"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("マドリッド（スペイン）"),
+        "craneFly5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("後ろに山が広がる湖畔のホテル"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("メキシコシティ（メキシコ）"),
+        "craneFly6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ペジャス アルテス宮殿の空撮映像"),
         "craneFly7": MessageLookupByLibrary.simpleMessage("ラシュモア山（米国）"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ラシュモア山"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("シンガポール"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("スーパーツリー グローブ"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("ハバナ（キューバ）"),
+        "craneFly9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("青いクラシック カーに寄りかかる男性"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage("目的地でフライトを検索"),
         "craneFormDate": MessageLookupByLibrary.simpleMessage("日付を選択"),
@@ -155,17 +204,41 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("訪問者数"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("宿泊"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("マレ（モルディブ）"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("水上バンガロー"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage("アスペン（米国）"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("カイロ（エジプト）"),
+        "craneSleep10SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("日没時のアズハルモスク"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("台北（台湾）"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("台北 101（超高層ビル）"),
+        "craneSleep1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("常緑樹の雪景色の中にあるシャレー"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("マチュピチュ（ペルー）"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("マチュピチュの砦"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("ハバナ（キューバ）"),
+        "craneSleep3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("青いクラシック カーに寄りかかる男性"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("ヴィッツナウ（スイス）"),
+        "craneSleep4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("後ろに山が広がる湖畔のホテル"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage("ビッグサー（米国）"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("野に張られたテント"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage("ナパ（米国）"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ヤシの木があるプール"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("ポルト（ポルトガル）"),
+        "craneSleep7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("リベイラ広場のカラフルなアパートメント"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("トゥルム（メキシコ）"),
+        "craneSleep8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("海岸の断崖の上にあるマヤ遺跡"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("リスボン（ポルトガル）"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("レンガ作りの海の灯台"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage("目的地で物件を検索"),
         "cupertinoAlertAllow": MessageLookupByLibrary.simpleMessage("許可"),
@@ -302,6 +375,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoInputChipTitle": MessageLookupByLibrary.simpleMessage("入力チップ"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL を表示できませんでした:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "通常、高さが固定された 1 行には、テキストとその前後のアイコンが含まれます。"),
+        "demoListsSecondary": MessageLookupByLibrary.simpleMessage("サブテキスト"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("リスト レイアウトのスクロール"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("リスト"),
+        "demoOneLineListsTitle": MessageLookupByLibrary.simpleMessage("1 行"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("オプション"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "アウトライン ボタンは、押すと不透明になり、浮き上がります。通常は、浮き出しボタンと組み合わせて、代替のサブアクションを提示します。"),
@@ -311,6 +391,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "浮き出しボタンでは、ほぼ平面のレイアウトに次元を追加できます。スペースに余裕がある場所でもない場所でも、機能が強調されます。"),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("浮き出しボタン"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "チェックボックスでは、ユーザーが選択肢のセットから複数の項目を選択できます。通常のチェックボックスの値は True または False で、3 状態のチェックボックスの値は Null になることもあります。"),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("チェックボックス"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ラジオボタンでは、ユーザーが選択肢のセットから 1 つ選択できます。すべての選択肢を並べて、その中からユーザーが 1 つだけ選べるようにする場合は、ラジオボタンを使用します。"),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("ラジオ"),
+        "demoSelectionControlsSubtitle":
+            MessageLookupByLibrary.simpleMessage("チェックボックス、ラジオボタン、スイッチ"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "オンとオフのスイッチでは、1 つの設定の状態を切り替えることができます。スイッチでコントロールする設定とその状態は、対応するインライン ラベルと明確に区別する必要があります。"),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("スイッチ"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("選択コントロール"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "シンプル ダイアログでは、ユーザーに複数の選択肢を提示できます。必要に応じて、選択肢の上に表示するタイトルを設定できます。"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("シンプル"),
@@ -370,6 +469,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "切り替えボタンでは、関連するオプションを 1 つのグループにまとめることができます。関連する切り替えボタンのグループを強調するには、グループが共通コンテナを共有する必要があります"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("切り替えボタン"),
+        "demoTwoLineListsTitle": MessageLookupByLibrary.simpleMessage("2 行"),
         "demoTypographyDescription":
             MessageLookupByLibrary.simpleMessage("マテリアル デザインにあるさまざまな字体の定義です。"),
         "demoTypographySubtitle":
@@ -483,6 +583,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Flutter ギャラリーについて"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("デザイン: TOASTER（ロンドン）"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("設定を閉じる"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("設定"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("ダーク"),
         "settingsFeedback": MessageLookupByLibrary.simpleMessage("フィードバックを送信"),
         "settingsLightTheme": MessageLookupByLibrary.simpleMessage("ライト"),

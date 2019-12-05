@@ -124,48 +124,98 @@ class MessageLookup extends MessageLookupByLibrary {
             "Një aplikacion i personalizuar për udhëtimin"),
         "craneEat": MessageLookupByLibrary.simpleMessage("NGRËNIE"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Napoli, Itali"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pica në furrë druri"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("Dallas, Shtetet e Bashkuara"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Lisbonë, Portugali"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Grua që mban një sandviç të madh me pastërma"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bar i zbrazur me stola në stil restoranti"),
         "craneEat2":
             MessageLookupByLibrary.simpleMessage("Kordoba, Argjentinë"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Hamburger"),
         "craneEat3": MessageLookupByLibrary.simpleMessage(
             "Portland, Shtetet e Bashkuara"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tako koreane"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Paris, Francë"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Ëmbëlsirë me çokollatë"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("Seul, Koreja e Jugut"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Zonë uljeje në restorant me art"),
         "craneEat6": MessageLookupByLibrary.simpleMessage(
             "Siatëll, Shtetet e Bashkuara"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pjatë me karkaleca deti"),
         "craneEat7": MessageLookupByLibrary.simpleMessage(
             "Nashvill, Shtetet e Bashkuara"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Hyrje pastiçerie"),
         "craneEat8": MessageLookupByLibrary.simpleMessage(
             "Atlanta, Shtetet e Bashkuara"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pjatë me karavidhe"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spanjë"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Banak kafeneje me ëmbëlsira"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Eksploro restorantet sipas destinacionit"),
         "craneFly": MessageLookupByLibrary.simpleMessage("FLUTURIM"),
         "craneFly0":
             MessageLookupByLibrary.simpleMessage("Aspen, United States"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Shtëpi alpine në një peizazh me borë me pemë të gjelbëruara"),
         "craneFly1": MessageLookupByLibrary.simpleMessage(
             "Big Sur, Shtetet e Bashkuara"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Kajro, Egjipt"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Minaret e Xhamisë së Al-Azharit në perëndim të diellit"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Lisbonë, Portugali"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Far prej tulle buzë detit"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("Napa, Shtetet e Bashkuara"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pishinë me palma"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonezi"),
+        "craneFly13SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pishinë buzë detit me palma"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tendë në fushë"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Lugina Khumbu, Nepal"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Flamuj lutjesh përpara një mali me borë"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Maçu Piçu, Peru"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Qyteti i Maçu Piçut"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Shtëpi mbi ujë"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Zvicër"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spanjë"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hotel buzë liqenit përballë maleve"),
+        "craneFly6": MessageLookupByLibrary.simpleMessage("Meksiko, Meksikë"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Pamje nga ajri e Palacio de Bellas Artes"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "Mali Rushmore, Shtetet e Bashkuara"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Mali Rushmore"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapor"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Havanë, Kubë"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Burrë i mbështetur te një makinë antike blu"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Eksploro fluturimet sipas destinacionit"),
@@ -182,21 +232,45 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneFormTravelers": MessageLookupByLibrary.simpleMessage("Udhëtarët"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("GJUMI"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldives"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Shtëpi mbi ujë"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("Aspen, United States"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Kajro, Egjipt"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Minaret e Xhamisë së Al-Azharit në perëndim të diellit"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Tajvan"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Qiellgërvishtësi Taipei 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Shtëpi alpine në një peizazh me borë me pemë të gjelbëruara"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("Maçu Piçu, Peru"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Qyteti i Maçu Piçut"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Havanë, Kubë"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Burrë i mbështetur te një makinë antike blu"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau, Zvicër"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hotel buzë liqenit përballë maleve"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage(
             "Big Sur, Shtetet e Bashkuara"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tendë në fushë"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("Napa, Shtetet e Bashkuara"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pishinë me palma"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto, Portugali"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Apartamente shumëngjyrëshe në Sheshin Ribeira"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Meksikë"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Rrënojat e fiseve maja në një shkëmb mbi një plazh"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Lisbonë, Portugali"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Far prej tulle buzë detit"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Eksploro pronat sipas destinacionit"),
@@ -348,6 +422,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Çipi i hyrjes"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL-ja nuk mund të shfaqej:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Një rresht i njëfishtë me lartësi fikse që përmban normalisht tekst si edhe një ikonë pararendëse ose vijuese."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Teksti dytësor"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Lëvizja e strukturave të listës"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Listat"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Një rresht"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opsionet"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Butonat me kontur bëhen gjysmë të tejdukshëm dhe ngrihen kur shtypen. Shpesh ata çiftohen me butonat e ngritur për të treguar një veprim alternativ dytësor."),
@@ -357,6 +440,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Butonat e ngritur u shtojnë dimension kryesisht strukturave të rrafshëta. Ata theksojnë funksionet në hapësirat e gjera ose me trafik."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Butoni i ngritur"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Kutitë e kontrollit e lejojnë përdoruesin të zgjedhë shumë opsione nga një grup. Vlera e një kutie normale kontrolli është \"E vërtetë\" ose \"E gabuar\" dhe vlera e një kutie zgjedhjeje me tre gjendje mund të jetë edhe \"Zero\"."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Kutia e zgjedhjes"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Butonat e radios e lejojnë përdoruesin të zgjedhë një opsion nga një grup. Përdor butonat e radios për përzgjedhje ekskluzive nëse mendon se përdoruesi ka nevojë të shikojë të gjitha opsionet e disponueshme përkrah njëri-tjetrit."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Radio"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Kutitë e zgjedhjes, butonat e radios dhe çelësat"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Çelësat e ndezjes/fikjes ndërrojnë gjendjen e një opsioni të vetëm cilësimesh. Opsioni që kontrollon çelësi, si edhe gjendja në të cilën është, duhet të bëhet e qartë nga etiketa korresponduese brenda faqes."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Çelës"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Kontrollet e përzgjedhjes"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Një dialog i thjeshtë i ofron përdoruesit një zgjedhje mes disa opsionesh. Një dialog i thjeshtë ka një titull opsional që afishohet mbi zgjedhjet."),
         "demoSimpleDialogTitle":
@@ -421,6 +523,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Butonat e ndërrimit mund të përdoren për të grupuar opsionet e përafërta. Për të theksuar grupet e butonave të përafërt të ndërrimit, një grup duhet të ndajë një mbajtës të përbashkët"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Butonat e ndërrimit"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Dy rreshta"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Përkufizimet e stileve të ndryshme tipografike të gjendura në dizajnin e materialit"),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -550,6 +654,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Rreth galerisë së Flutter"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Projektuar nga TOASTER në Londër"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Mbyll \"Cilësimet\""),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Cilësimet"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("E errët"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Dërgo koment"),

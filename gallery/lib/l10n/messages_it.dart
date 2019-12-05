@@ -124,45 +124,96 @@ class MessageLookup extends MessageLookupByLibrary {
             "Un\'app personalizzata per i viaggi"),
         "craneEat": MessageLookupByLibrary.simpleMessage("DOVE MANGIARE"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Napoli, Italia"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Pizza in un forno a legna"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("Dallas, Stati Uniti"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("Lisbona, Portogallo"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Donna con un enorme pastrami sandwich in mano"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Locale vuoto con sgabelli in stile diner"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("Córdoba, Argentina"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Hamburger"),
         "craneEat3":
             MessageLookupByLibrary.simpleMessage("Portland, Stati Uniti"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Taco coreano"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Parigi, Francia"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Dolce al cioccolato"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("Seul, Corea del Sud"),
+        "craneEat5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Zona ristorante artistica"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("Seattle, Stati Uniti"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Piatto di gamberi"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("Nashville, Stati Uniti"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Ingresso di una panetteria"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("Atlanta, Stati Uniti"),
+        "craneEat8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Piatto di gamberi d\'acqua dolce"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madrid, Spagna"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bancone di un bar con dolci"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Trova ristoranti in base alla destinazione"),
         "craneFly": MessageLookupByLibrary.simpleMessage("VOLI"),
         "craneFly0": MessageLookupByLibrary.simpleMessage("Aspen, Stati Uniti"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Chalet in un paesaggio innevato con alberi sempreverdi"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("Big Sur, Stati Uniti"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Il Cairo, Egitto"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Torri della moschea di Al-Azhar al tramonto"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("Lisbona, Portogallo"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Faro di mattoni sul mare"),
         "craneFly12": MessageLookupByLibrary.simpleMessage("Napa, Stati Uniti"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Piscina con palme"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali, Indonesia"),
+        "craneFly13SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Piscina sul mare con palme"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tenda in un campo"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Valle di Khumbu, Nepal"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Bandiere di preghiera di fronte a una montagna innevata"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("Machu Picchu, Perù"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Cittadella di Machu Picchu"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Malé, Maldive"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bungalow sull\'acqua"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau, Svizzera"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madrid, Spagna"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hotel sul lago di fronte alle montagne"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("Città del Messico, Messico"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Veduta aerea del Palacio de Bellas Artes"),
         "craneFly7":
             MessageLookupByLibrary.simpleMessage("Monte Rushmore, Stati Uniti"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Monte Rushmore"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapore"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("L\'Avana, Cuba"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Uomo appoggiato a un\'auto blu antica"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Trova voli in base alla destinazione"),
@@ -181,25 +232,49 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Viaggiatori"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("DOVE DORMIRE"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé, Maldive"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Bungalow sull\'acqua"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("Aspen, Stati Uniti"),
         "craneSleep10":
             MessageLookupByLibrary.simpleMessage("Il Cairo, Egitto"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Torri della moschea di Al-Azhar al tramonto"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei, Taiwan"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Grattacielo Taipei 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Chalet in un paesaggio innevato con alberi sempreverdi"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu, Perù"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Cittadella di Machu Picchu"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("L\'Avana, Cuba"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Uomo appoggiato a un\'auto blu antica"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("Vitznau, Svizzera"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Hotel sul lago di fronte alle montagne"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("Big Sur, Stati Uniti"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Tenda in un campo"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("Napa, Stati Uniti"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Piscina con palme"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("Porto, Portogallo"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Appartamenti colorati a piazza Ribeira"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum, Messico"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Rovine maya su una scogliera sopra una spiaggia"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Lisbona, Portogallo"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Faro di mattoni sul mare"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Trova proprietà in base alla destinazione"),
@@ -351,6 +426,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Chip di input"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Impossibile mostrare l\'URL:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Una singola riga con altezza fissa che generalmente contiene del testo e un\'icona iniziale o finale."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Testo secondario"),
+        "demoListsSubtitle":
+            MessageLookupByLibrary.simpleMessage("Layout elenchi scorrevoli"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Elenchi"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Una riga"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opzioni"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "I pulsanti con contorni diventano opachi e sollevati quando vengono premuti. Sono spesso associati a pulsanti in rilievo per indicare alternative, azioni secondarie."),
@@ -360,6 +444,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "I pulsanti in rilievo aggiungono dimensione a layout prevalentemente piatti. Mettono in risalto le funzioni in spazi ampi o densi di contenuti."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Pulsante in rilievo"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Le caselle di controllo consentono all\'utente di selezionare diverse opzioni da un gruppo di opzioni. Il valore di una casella di controllo standard è true o false, mentre il valore di una casella di controllo a tre stati può essere anche null."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Casella di controllo"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "I pulsanti di opzione consentono all\'utente di selezionare un\'opzione da un gruppo di opzioni. Usa i pulsanti di opzione per la selezione esclusiva se ritieni che l\'utente debba vedere tutte le opzioni disponibili affiancate."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Pulsante di opzione"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Caselle di controllo, pulsanti di opzione e opzioni"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Le opzioni on/off consentono di attivare/disattivare lo stato di una singola opzione di impostazioni. La funzione e lo stato corrente dell\'opzione devono essere chiariti dall\'etichetta incorporata corrispondente."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Opzione"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("Comandi di selezione"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Una finestra di dialogo semplice offre all\'utente una scelta tra molte opzioni. Una finestra di dialogo semplice include un titolo facoltativo che viene mostrato sopra le scelte."),
         "demoSimpleDialogTitle":
@@ -427,6 +530,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "I pulsanti di attivazione/disattivazione possono essere usati per raggruppare le opzioni correlate. Per mettere in risalto un gruppo di pulsanti di attivazione/disattivazione correlati, il gruppo deve condividere un container comune."),
         "demoToggleButtonTitle": MessageLookupByLibrary.simpleMessage(
             "Pulsanti di attivazione/disattivazione"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Due righe"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Definizioni dei vari stili tipografici trovati in material design."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -557,6 +662,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Informazioni su Flutter Gallery"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("Design di TOASTER di Londra"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Chiudi impostazioni"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Impostazioni"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Scuro"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Invia feedback"),

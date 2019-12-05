@@ -54,7 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
       "ଆପଣ ଏହି ମାସରେ ରେଷ୍ଟୁରାଣ୍ଟଗୁଡ଼ିକରେ ${amount} ଖର୍ଚ୍ଚ କରିଛନ୍ତି।";
 
   static m13(count) =>
-      "${Intl.plural(count, one: 'ଆପଣଙ୍କର କରରେ ସମ୍ଭାବ୍ୟ ଛାଡ଼କୁ ବଢ଼ାନ୍ତୁ! 1ଟି ଆସାଇନ୍ କରାଯାଇନଥିବା ଟ୍ରଞ୍ଜାକ୍ସନ୍‌ରେ ବର୍ଗଗୁଡ଼ିକୁ ଆସାଇନ୍ କରନ୍ତୁ।', other: 'ଆପଣଙ୍କର କରରେ ସମ୍ଭାବ୍ୟ ଛାଡ଼କୁ ବଢ଼ାନ୍ତୁ! ${count}ଟି ଆସାଇନ୍ କରାଯାଇନଥିବା ଟ୍ରଞ୍ଜାକ୍ସନ୍‌ରେ ବର୍ଗଗୁଡ଼ିକୁ ଆସାଇନ୍ କରନ୍ତୁ।')}";
+      "${Intl.plural(count, one: 'ଆପଣଙ୍କର କରରେ ସମ୍ଭାବ୍ୟ ଛାଡ଼କୁ ବଢ଼ାନ୍ତୁ! 1ଟି ଆସାଇନ୍ କରାଯାଇନଥିବା ଟ୍ରାଞ୍ଜାକ୍ସନ୍‌ରେ ବର୍ଗଗୁଡ଼ିକୁ ଆସାଇନ୍ କରନ୍ତୁ।', other: 'ଆପଣଙ୍କର କରରେ ସମ୍ଭାବ୍ୟ ଛାଡ଼କୁ ବଢ଼ାନ୍ତୁ! ${count}ଟି ଆସାଇନ୍ କରାଯାଇନଥିବା ଟ୍ରାଞ୍ଜାକ୍ସନ୍‌ରେ ବର୍ଗଗୁଡ଼ିକୁ ଆସାଇନ୍ କରନ୍ତୁ।')}";
 
   static m14(billName, date, amount) =>
       "${billName} ପାଇଁ ${amount} ପେମେଣ୍ଟ କରିବାର ଧାର୍ଯ୍ୟ ସମୟ ${date} ଅଟେ।";
@@ -122,49 +122,100 @@ class MessageLookup extends MessageLookupByLibrary {
             "ଏକ ବ୍ୟକ୍ତିଗତକୃତ ଟ୍ରାଭେଲ୍ ଆପ୍"),
         "craneEat": MessageLookupByLibrary.simpleMessage("ଖାଇବାର ସ୍ଥାନଗୁଡ଼ିକ"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("ନେପଲସ୍, ଇଟାଲୀ"),
+        "craneEat0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ଏକ କାଠର ଓଭାନ୍‌ରେ ପିଜା"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("ଡଲାସ୍, ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା"),
         "craneEat10":
             MessageLookupByLibrary.simpleMessage("ଲିସବନ୍, ପର୍ତ୍ତୁଗାଲ୍"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ବଡ଼ ପାଷ୍ଟ୍ରାମି ସାଣ୍ଡୱିଚ୍ ଧରିଥିବା ମହିଳା"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ଡିନର୍ ଶୈଳୀର ଷ୍ଟୁଲ୍‌ଗୁଡ଼ିକ ଥିବା ଖାଲି ବାର୍"),
         "craneEat2":
             MessageLookupByLibrary.simpleMessage("କୋର୍ଡୋବା, ଆର୍ଜେଣ୍ଟିନା"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ବର୍ଗର୍"),
         "craneEat3": MessageLookupByLibrary.simpleMessage(
             "ପୋର୍ଟଲ୍ୟାଣ୍ଡ, ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("କୋରୀୟ ଟାକୋ"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("ପ୍ୟାରିସ୍, ଫ୍ରାନ୍ସ"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ଚକୋଲେଟ୍ ମିଠା"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("ସିଓଲ୍, ଦକ୍ଷିଣ କୋରିଆ"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ଆର୍ଟସେ ରେଷ୍ଟୁରାଣ୍ଟର ବସିବା ଅଞ୍ଚଳ"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("ସିଟଲ୍, ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ଚିଙ୍ଗୁଡ଼ି ତରକାରି"),
         "craneEat7": MessageLookupByLibrary.simpleMessage(
             "ନ୍ୟାସ୍‌ଭ୍ୟାଲି, ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ବେକେରୀର ପ୍ରବେଶ ସ୍ଥାନ"),
         "craneEat8": MessageLookupByLibrary.simpleMessage(
             "ଆଟଲାଣ୍ଟା, ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା"),
+        "craneEat8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "କଙ୍କଡ଼ା ପରି ଦେଖାଯାଉଥିବା ଚିଙ୍ଗୁଡ଼ି ମାଛ ପ୍ଲେଟ୍"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("ମାଦ୍ରିଦ୍, ସ୍ପେନ୍"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ପେଷ୍ଟ୍ରୀ ସହ କଫୀ କାଉଣ୍ଟର୍"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "ଗନ୍ତବ୍ୟସ୍ଥଳ ଅନୁଯାୟୀ ରେଷ୍ଟୁରାଣ୍ଟଗୁଡ଼ିକ ଏକ୍ସପ୍ଲୋର୍ କରନ୍ତୁ"),
         "craneFly": MessageLookupByLibrary.simpleMessage("ଫ୍ଲାଏ ମୋଡ୍"),
         "craneFly0": MessageLookupByLibrary.simpleMessage(
             "ଅସ୍ପେନ୍, ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ଏଭର୍‌ଗ୍ରୀନ୍ ଗଛ ଓ ଆଖପାଖରେ ବରଫ ପଡ଼ିଥିବା ଦୃଶ୍ୟ"),
         "craneFly1": MessageLookupByLibrary.simpleMessage(
             "ବିଗ୍ ସୁର୍, ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("କାଏରୋ, ଇଜିପ୍ଟ"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ସୂର୍ଯ୍ୟାସ୍ତ ସମୟରେ ଅଲ୍-ଆଜହାର୍ ମୋସ୍କ ଟାୱାର୍‌ର"),
         "craneFly11":
             MessageLookupByLibrary.simpleMessage("ଲିସବନ୍, ପର୍ତ୍ତୁଗାଲ୍"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ସମୂଦ୍ରରେ ଇଟାରେ ତିଆରି ଲାଇଟ୍‌ହାଉସ୍"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("ନାପା, ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ଖଜୁରୀ ଗଛ ସହ ପୁଲ୍"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("ବାଲି, ଇଣ୍ଡୋନେସିଆ"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ଖଜୁରୀ ଗଛ ଥିବା ସମୁଦ୍ର ପାଖ ପୁଲ୍"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ଏକ ପଡ଼ିଆରେ ଥିବା ଟେଣ୍ଟ"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("ଖୁମ୍ୱୁ ଉପତ୍ୟକା, ନେପାଳ"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ବରଫ ପାହାଡ଼ ସାମ୍ନାରେ ପ୍ରାର୍ଥନା ପାଇଁ ପତାକା"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("ମାଚୁ ପିଚୁ, ପେରୁ"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ମାଚୁ ପିଚୁ ସିଟାଡେଲ୍"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("ମାଲେ, ମାଳଦ୍ୱୀପ"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ପାଣି ଉପରେ ଥିବା ଘର"),
         "craneFly5":
             MessageLookupByLibrary.simpleMessage("ଭିଜ୍‍ନାଉ, ସ୍ଵିଜର୍‌ଲ୍ୟାଣ୍ଡ"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("ମାଦ୍ରିଦ୍, ସ୍ପେନ୍"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ପର୍ବତଗୁଡ଼ିକ ସାମ୍ନାରେ ହ୍ରଦ ପାଖରେ ଥିବା ହୋଟେଲ୍"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("ମେକ୍ସିକୋ ସହର, ମେକ୍ସିକୋ"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ପାଲାସିଓ ଡେ ବେଲାସ୍ ଆର୍ଟସ୍‌ର ଉପର ଦୃଶ୍ୟ"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "ମାଉଣ୍ଟ ରସ୍‌ମୋର୍, ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ମାଉଣ୍ଟ ରସ୍‌ମୋର୍"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("ସିଙ୍ଗାପୁର"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ସୁପର୍‌ଟ୍ରି ଗ୍ରୋଭ୍"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("ହାଭାନା, କ୍ୟୁବା"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ଏକ ପୁରୁଣା ନୀଳ କାରରେ ବୁଲୁଥିବା ପୁରୁଷ"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "ଗନ୍ତବ୍ୟସ୍ଥଳ ଅନୁଯାୟୀ ଫ୍ଲାଇଟ୍‍ଗୁଡ଼ିକ ଏକ୍ସପ୍ଲୋର୍ କରନ୍ତୁ"),
@@ -185,24 +236,48 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ଭ୍ରମଣକାରୀମାନେ"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("ସ୍ଲିପ୍ ମୋଡ୍"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("ମାଲେ, ମାଳଦ୍ୱୀପ"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ପାଣି ଉପରେ ଥିବା ଘର"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage(
             "ଅସ୍ପେନ୍, ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("କାଏରୋ, ଇଜିପ୍ଟ"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ସୂର୍ଯ୍ୟାସ୍ତ ସମୟରେ ଅଲ୍-ଆଜହାର୍ ମୋସ୍କ ଟାୱାର୍‌ର"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("ତାଇପେଇ, ତାଇୱାନ୍"),
+        "craneSleep11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ଟାଇପେୟୀ 101 ଆକକାଶ ଛୁଆଁ ପ୍ରାସାଦ"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ଏଭର୍‌ଗ୍ରୀନ୍ ଗଛ ଓ ଆଖପାଖରେ ବରଫ ପଡ଼ିଥିବା ଦୃଶ୍ୟ"),
         "craneSleep2": MessageLookupByLibrary.simpleMessage("ମାଚୁ ପିଚୁ, ପେରୁ"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ମାଚୁ ପିଚୁ ସିଟାଡେଲ୍"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("ହାଭାନା, କ୍ୟୁବା"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ଏକ ପୁରୁଣା ନୀଳ କାରରେ ବୁଲୁଥିବା ପୁରୁଷ"),
         "craneSleep4":
             MessageLookupByLibrary.simpleMessage("ଭିଜ୍‍ନାଉ, ସ୍ଵିଜର୍‌ଲ୍ୟାଣ୍ଡ"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ପର୍ବତଗୁଡ଼ିକ ସାମ୍ନାରେ ହ୍ରଦ ପାଖରେ ଥିବା ହୋଟେଲ୍"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage(
             "ବିଗ୍ ସୁର୍, ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ଏକ ପଡ଼ିଆରେ ଥିବା ଟେଣ୍ଟ"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("ନାପା, ଯୁକ୍ତରାଷ୍ଟ୍ର ଆମେରିକା"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("ଖଜୁରୀ ଗଛ ସହ ପୁଲ୍"),
         "craneSleep7":
             MessageLookupByLibrary.simpleMessage("ପୋର୍ତୋ, ପର୍ତ୍ତୁଗାଲ୍"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ରିବେରିଆ ସ୍କୋୟାର୍‌ରେ ରଙ୍ଗୀନ୍ ଆପାର୍ଟମେଣ୍ଟଗୁଡ଼ିକ"),
         "craneSleep8":
             MessageLookupByLibrary.simpleMessage("ଟ୍ୟୁଲମ୍, ମେକ୍ସିକୋ"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ସମୂଦ୍ର ତଟରେ ଥିବା ଏକ ଚଟାଣ ଉପରେ ଗଢ଼ିଉଠିଥିବା ମାୟା ସଭ୍ୟତା"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("ଲିସବନ୍, ପର୍ତ୍ତୁଗାଲ୍"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "ସମୂଦ୍ରରେ ଇଟାରେ ତିଆରି ଲାଇଟ୍‌ହାଉସ୍"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "ଗନ୍ତବ୍ୟସ୍ଥଳ ଅନୁଯାୟୀ ପ୍ରୋପର୍ଟି ଏକ୍ସପ୍ଲୋର୍ କରନ୍ତୁ"),
@@ -316,7 +391,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ବଟନ୍‍ଗୁଡ଼ିକ"),
         "demoCupertinoSegmentedControlDescription":
             MessageLookupByLibrary.simpleMessage(
-                "ପରସ୍ପର ଅନନ୍ୟ ବିକଳ୍ପଗୁଡ଼ିକ ମଧ୍ୟରୁ ଗୋଟିଏ ନମ୍ବରକୁ ଚୟନ କରିବା ପାଇଁ ଏହା ବ୍ୟବହାର କରାଯାଏ। ଯେତେବେଳେ ବର୍ଗୀକୃତ ନିୟନ୍ତ୍ରଣରୁ ଗୋଟିଏ ବିକଳ୍ପ ଚୟନ କରାଯାଏ, ସେତେବେଳେ ସେହି ବର୍ଗୀକୃତ ନିୟନ୍ତ୍ରଣରୁ ଅନ୍ୟ ବିକଳ୍ପ ଚୟନ କରିହେବ ନାହିଁ।"),
+                "କେତେଗୁଡ଼ିଏ ଭିନ୍ନ ସ୍ୱତନ୍ତ୍ର ବିକଳ୍ପ ମଧ୍ୟରୁ ଗୋଟିଏ ନମ୍ବରକୁ ଚୟନ କରିବା ପାଇଁ ଏହା ବ୍ୟବହାର କରାଯାଏ। ଯେତେବେଳେ ବର୍ଗୀକୃତ ନିୟନ୍ତ୍ରଣରୁ ଗୋଟିଏ ବିକଳ୍ପ ଚୟନ କରାଯାଏ, ସେତେବେଳେ ସେହି ବର୍ଗୀକୃତ ନିୟନ୍ତ୍ରଣରୁ ଅନ୍ୟ ବିକଳ୍ପ ଚୟନ କରିହେବ ନାହିଁ।"),
         "demoCupertinoSegmentedControlSubtitle":
             MessageLookupByLibrary.simpleMessage(
                 "iOS-ଶୈଳୀର ବର୍ଗୀକୃତ ନିୟନ୍ତ୍ରଣ"),
@@ -352,6 +427,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ଚିପ୍ ଇନ୍‍ପୁଟ୍ କରନ୍ତୁ"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("URL ଦେଖାଯାଇପାରିଲା ନାହିଁ:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "ଏକ ଏକକ ନିର୍ଦ୍ଦିଷ୍ଟ-ଉଚ୍ଚତା ଧାଡ଼ି ଯେଉଁଥିରେ ସାଧାରଣତଃ କିଛି ଟେକ୍ସଟ୍ ସାମିଲ ଥାଏ, ଏହାସହ ଆଗରେ କିମ୍ବା ପଛରେ ଏକ ଆଇକନ୍ ଥାଏ।"),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("ଦ୍ୱିତୀୟ ଟେକ୍ସଟ୍"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "ତାଲିକା ଲେଆଉଟ୍‌ଗୁଡ଼ିକୁ ସ୍କ୍ରୋଲ୍ କରୁଛି"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("ତାଲିକାଗୁଡ଼ିକ"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("ଗୋଟିଏ ଲାଇନ୍"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("ବିକଳ୍ପଗୁଡ଼ିକ"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
@@ -362,13 +446,32 @@ class MessageLookup extends MessageLookupByLibrary {
             "ଉଠିଥିବା ବଟନ୍‍ଗୁଡ଼ିକ ପ୍ରାୟ ସମତଳ ଲେଆଉଟ୍‍ଗୁଡ଼ିକୁ ଆକାର ଦେଇଥାଏ। ସେଗୁଡ଼ିକ ବ୍ୟସ୍ତ କିମ୍ବା ଚଉଡ଼ା ଜାଗାଗୁଡ଼ିକରେ ଫଙ୍କସନ୍‍ଗୁଡ଼ିକୁ ଗୁରୁତ୍ୱ ଦେଇଥାଏ।"),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("ଉଠିଥିବା ବଟନ୍"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ଚେକ୍‌ବକ୍ସଗୁଡ଼ିକ ଉପଯୋଗକର୍ତ୍ତାଙ୍କୁ ଏକ ସେଟ୍‌ରୁ ଏକାଧିକ ବିକଳ୍ପ ଚୟନ କରିବାକୁ ଅନୁମତି ଦେଇଥାଏ। ଏକ ସାମାନ୍ୟ ଚେକ୍‌ବକ୍ସର ମୂଲ୍ୟ ସତ୍ୟ କିମ୍ବା ମିଥ୍ୟା ଅଟେ ଏବଂ ଏକ ଟ୍ରିସେଟ୍ ଚେକ୍‌ବକ୍ସର ମୂଲ୍ୟ ମଧ୍ୟ ଶୂନ୍ୟ ହୋଇପାରିବ।"),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("ଚେକ୍‌ବକ୍ସ"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ରେଡିଓ ବଟନ୍‌ଗୁଡ଼ିକ ଉପଯୋଗକର୍ତ୍ତାଙ୍କୁ ଏକ ସେଟ୍‌ରୁ ଗୋଟିଏ ବିକଳ୍ପ ଚୟନ କରିବାକୁ ଅନୁମତି ଦେଇଥାଏ। ଯଦି ଆପଣ ଭାବୁଛନ୍ତି କି ଉପଯୋଗକର୍ତ୍ତା ଉପଲବ୍ଧ ଥିବା ସମସ୍ତ ବିକଳ୍ପ ଦେଖିବାକୁ ଚାହୁଁଛନ୍ତି, ତେବେ ବିଶେଷ ଚୟନ ପାଇଁ ରେଡିଓ ବଟନ୍ ବ୍ୟବହାର କରନ୍ତୁ।"),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("ରେଡିଓ"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Checkboxes, ରେଡିଓ ବଟନ୍ ଏବଂ ସ୍ୱିଚ୍‌ଗୁଡ଼ିକ"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "ଏକ ସିଙ୍ଗଲ୍ ସେଟିଂସ୍ ବିକଳ୍ପରେ ସ୍ୱିଚ୍‌ର ଚାଲୁ/ବନ୍ଦ ସ୍ଥିତିକୁ ଟୋଗଲ୍ କରାଯାଏ। ସ୍ୱିଚ୍ ନିୟନ୍ତ୍ରଣ କରୁଥିବା ବିକଳ୍ପ ଏହାସହ ଏହାର ସ୍ଥିତି ସମ୍ବନ୍ଧରେ ଇନ୍‌ଲାଇନ୍ ଲେବଲ୍‌ରେ ସ୍ପଷ୍ଟ କରାଯିବ ଉଚିତ୍।"),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("ସ୍ୱିଚ୍ କରନ୍ତୁ"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("ଚୟନ ଉପରେ ନିୟନ୍ତ୍ରଣ"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "ଏକ ସରଳ ଡାଏଲଗ୍ ଉପଯୋଗକର୍ତ୍ତାଙ୍କୁ ବିଭିନ୍ନ ବିକଳ୍ପଗୁଡ଼ିକ ମଧ୍ୟରୁ ଏକ ପସନ୍ଦ ପ୍ରଦାନ କରେ। ଏକ ସରଳ ଡାଏଲଗ୍‍‍ରେ ଏକ ଇଚ୍ଛାଧୀନ ଟାଇଟେଲ୍ ଥାଏ ଯାହା ପସନ୍ଦଗୁଡ଼ିକ ଉପରେ ପ୍ରଦର୍ଶିତ ହୁଏ।"),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("ସରଳ"),
         "demoTabsDescription": MessageLookupByLibrary.simpleMessage(
             "ଟାବ୍, ଭିନ୍ନ ସ୍କ୍ରିନ୍, ଡାଟା ସେଟ୍ ଏବଂ ଅନ୍ୟ ଇଣ୍ଟରାକ୍ସନ୍‌ଗୁଡ଼ିକରେ ବିଷୟବସ୍ତୁ ସଂଗଠିତ କରେ।"),
         "demoTabsSubtitle": MessageLookupByLibrary.simpleMessage(
-            "ସ୍ବତନ୍ତ୍ରଭାବରେ ସ୍କ୍ରୋଲ୍ ଯୋଗ୍ୟ ଭ୍ୟୁଗୁଡ଼ିକର ଟାବ୍"),
+            "ସ୍ୱତନ୍ତ୍ରଭାବରେ ସ୍କ୍ରୋଲ୍ ଯୋଗ୍ୟ ଭ୍ୟୁଗୁଡ଼ିକର ଟାବ୍"),
         "demoTabsTitle": MessageLookupByLibrary.simpleMessage("ଟାବ୍‌ଗୁଡ଼ିକ"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
             "ଟେକ୍ସଟ୍ ଫିଲ୍ଡ ଉପଯୋଗକର୍ତ୍ତାଙ୍କୁ ଏକ UIରେ ଟେକ୍ସଟ୍ ଲେଖିବାକୁ ଅନୁମତି ଦେଇଥାଏ। ସେମାନେ ସାଧାରଣତଃ ଫର୍ମ ଏବଂ ଡାଇଲଗ୍‌ରେ ଦେଖାଯାଆନ୍ତି।"),
@@ -427,6 +530,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "ସମ୍ବନ୍ଧିତ ବିକଳ୍ପଗୁଡ଼ିକ ଗୋଷ୍ଠୀଭୁକ୍ତ କରିବା ପାଇଁ ଟୋଗଲ୍ ବଟନ୍‍ଗୁଡ଼ିକ ବ୍ୟବହାର କରାଯାଏ। ସମ୍ବନ୍ଧିତ ଟୋଗଲ୍ ବଟନ୍‍ଗୁଡ଼ିକର ଗୋଷ୍ଠୀଗୁଡ଼ିକୁ ଗୁରୁତ୍ୱ ଦେବା ପାଇଁ, ଗୋଷ୍ଠୀ ସମାନ କଣ୍ଟେନର୍ ସେୟାର୍ କରିବା ଉଚିତ"),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("ଟୋଗଲ୍ ବଟନ୍‍ଗୁଡ଼ିକ"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("ଦୁଇଟି ଲାଇନ୍"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "ମେଟେରିଆଲ୍ ଡିଜାଇନ୍‌ରେ ପାଇଥିବା ଭିନ୍ନ ଟାଇପୋଗ୍ରାଫିକାଲ୍ ଶୈଳୀର ସଂଜ୍ଞା।"),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -556,6 +661,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ଫ୍ଲଟର୍ ଗ୍ୟାଲେରୀ ବିଷୟରେ"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "ଲଣ୍ଡନ୍‌ରେ TOASTER ଦ୍ୱାରା ଡିଜାଇନ୍ କରାଯାଇଛି"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("ସେଟିଂସ୍‌କୁ ବନ୍ଦ କରନ୍ତୁ"),
+        "settingsButtonLabel": MessageLookupByLibrary.simpleMessage("ସେଟିଂସ୍"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("ଗାଢ଼"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("ମତାମତ ପଠାନ୍ତୁ"),
@@ -574,7 +682,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ଟେକ୍ସଟ୍ ଦିଗ"),
         "settingsTextDirectionLTR": MessageLookupByLibrary.simpleMessage("LTR"),
         "settingsTextDirectionLocaleBased":
-            MessageLookupByLibrary.simpleMessage("ସ୍ଥାନର ଆଧାରରେ"),
+            MessageLookupByLibrary.simpleMessage("ଲୋକେଲର ଆଧାରରେ"),
         "settingsTextDirectionRTL": MessageLookupByLibrary.simpleMessage("RTL"),
         "settingsTextScaling":
             MessageLookupByLibrary.simpleMessage("ଟେକ୍ସଟ୍ ସ୍କେଲିଂ"),

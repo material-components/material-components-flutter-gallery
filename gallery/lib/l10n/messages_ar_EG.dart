@@ -123,45 +123,95 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تطبيق سفر مُخصَّص"),
         "craneEat": MessageLookupByLibrary.simpleMessage("المأكولات"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("نابولي، إيطاليا"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "بيتزا في فرن يُشعَل بالأخشاب"),
         "craneEat1":
             MessageLookupByLibrary.simpleMessage("دالاس، الولايات المتحدة"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("لشبونة، البرتغال"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "امرأة تمسك بشطيرة بسطرمة كبيرة"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "بار فارغ وكراسي مرتفعة للزبائن"),
         "craneEat2": MessageLookupByLibrary.simpleMessage("قرطبة، الأرجنتين"),
+        "craneEat2SemanticLabel": MessageLookupByLibrary.simpleMessage("برغر"),
         "craneEat3":
             MessageLookupByLibrary.simpleMessage("بورتلاند، الولايات المتحدة"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("وجبة التاكو الكورية"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("باريس، فرنسا"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("حلوى الشوكولاته"),
         "craneEat5":
             MessageLookupByLibrary.simpleMessage("سول، كوريا الجنوبية"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "منطقة الجلوس في مطعم ذي ذوق فني"),
         "craneEat6":
             MessageLookupByLibrary.simpleMessage("سياتل، الولايات المتحدة"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("طبق روبيان"),
         "craneEat7":
             MessageLookupByLibrary.simpleMessage("ناشفيل، الولايات المتحدة"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("مَدخل مخبز"),
         "craneEat8":
             MessageLookupByLibrary.simpleMessage("أتلانتا، الولايات المتحدة"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("طبق جراد البحر"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("مدريد، إسبانيا"),
+        "craneEat9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("طاولة مقهى لتقديم المعجنات"),
         "craneEatRestaurants": m2,
         "craneEatSubhead":
             MessageLookupByLibrary.simpleMessage("استكشاف المطاعم حسب الوجهة"),
         "craneFly": MessageLookupByLibrary.simpleMessage("الطيران"),
         "craneFly0":
             MessageLookupByLibrary.simpleMessage("أسبن، الولايات المتحدة"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "شاليه في مساحة طبيعية من الثلوج وبها أشجار دائمة الخضرة"),
         "craneFly1":
             MessageLookupByLibrary.simpleMessage("بيغ سور، الولايات المتحدة"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("القاهرة، مصر"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "مآذن الجامع الأزهر أثناء الغروب"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("لشبونة، البرتغال"),
+        "craneFly11SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "منارة من الطوب على شاطئ البحر"),
         "craneFly12":
             MessageLookupByLibrary.simpleMessage("نابا، الولايات المتحدة"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("بركة ونخيل"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("بالي، إندونيسيا"),
+        "craneFly13SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("بركة بجانب البحر حولها نخيل"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("خيمة في حقل"),
         "craneFly2": MessageLookupByLibrary.simpleMessage("وادي خومبو، نيبال"),
+        "craneFly2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("رايات صلاة أمام جبل ثلجي"),
         "craneFly3": MessageLookupByLibrary.simpleMessage("ماتشو بيتشو، بيرو"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("قلعة ماتشو بيتشو"),
         "craneFly4":
             MessageLookupByLibrary.simpleMessage("ماليه، جزر المالديف"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("أكواخ فوق الماء"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("فيتزناو، سويسرا"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("مدريد، إسبانيا"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "فندق يطِلّ على بحيرة قُبالة سلسلة من الجبال"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("مكسيكو سيتي، المكسيك"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "عرض \"قصر الفنون الجميلة\" من الجوّ"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "جبل راشمور، الولايات المتحدة"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("جبل راشمور"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("سنغافورة"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("سوبر تري غروف"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("هافانا، كوبا"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "رجل متّكِئ على سيارة زرقاء عتيقة"),
         "craneFlyStops": m3,
         "craneFlySubhead":
             MessageLookupByLibrary.simpleMessage("استكشاف الرحلات حسب الوجهة"),
@@ -179,21 +229,45 @@ class MessageLookup extends MessageLookupByLibrary {
         "craneSleep": MessageLookupByLibrary.simpleMessage("السكون"),
         "craneSleep0":
             MessageLookupByLibrary.simpleMessage("ماليه، جزر المالديف"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("أكواخ فوق الماء"),
         "craneSleep1":
             MessageLookupByLibrary.simpleMessage("أسبن، الولايات المتحدة"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("القاهرة، مصر"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "مآذن الجامع الأزهر أثناء الغروب"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("تايبيه، تايوان"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("مركز تايبيه المالي 101"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "شاليه في مساحة طبيعية من الثلوج وبها أشجار دائمة الخضرة"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("ماتشو بيتشو، بيرو"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("قلعة ماتشو بيتشو"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("هافانا، كوبا"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "رجل متّكِئ على سيارة زرقاء عتيقة"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("فيتزناو، سويسرا"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "فندق يطِلّ على بحيرة قُبالة سلسلة من الجبال"),
         "craneSleep5":
             MessageLookupByLibrary.simpleMessage("بيغ سور، الولايات المتحدة"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("خيمة في حقل"),
         "craneSleep6":
             MessageLookupByLibrary.simpleMessage("نابا، الولايات المتحدة"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("بركة ونخيل"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("بورتو، البرتغال"),
+        "craneSleep7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("شُقق ملونة في ميدان ريبيارا"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("تولوم، المكسيك"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "أطلال \"المايا\" على جُرْف يطِلّ على الشاطئ"),
         "craneSleep9": MessageLookupByLibrary.simpleMessage("لشبونة، البرتغال"),
+        "craneSleep9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "منارة من الطوب على شاطئ البحر"),
         "craneSleepProperties": m4,
         "craneSleepSubhead":
             MessageLookupByLibrary.simpleMessage("استكشاف العقارات حسب الوجهة"),
@@ -342,6 +416,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("شريحة الإدخال"),
         "demoInvalidURL":
             MessageLookupByLibrary.simpleMessage("تعذّر عرض عنوان URL:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "صف بارتفاع واحد ثابت يحتوي عادةً على نص ورمز سابق أو لاحق."),
+        "demoListsSecondary": MessageLookupByLibrary.simpleMessage("نص ثانوي"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "التمرير خلال تنسيقات القوائم"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("القوائم"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("سطر واحد"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("الخيارات"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "تصبح الأزرار المخطَّطة غير شفافة وترتفع عند الضغط عليها. وغالبًا ما يتم إقرانها مع الأزرار البارزة للإشارة إلى إجراء ثانوي بديل."),
@@ -351,6 +433,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "تضيف الأزرار البارزة بُعدًا إلى التخطيطات المنبسطة عادةً. وتبرِز الوظائف المتوفرة في المساحات العريضة أو المكدَّسة."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("الزر البارز"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "تسمح مربّعات الاختيار للمستخدمين باختيار عدة خيارات من مجموعة من الخيارات. القيمة المعتادة لمربّع الاختيار هي \"صحيح\" أو \"غير صحيح\" ويمكن أيضًا إضافة حالة ثالثة وهي \"خالية\"."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("مربّع اختيار"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "تسمح أزرار الاختيار للقارئ بتحديد خيار واحد من مجموعة من الخيارات. يمكنك استخدام أزرار الاختيار لتحديد اختيارات حصرية إذا كنت تعتقد أنه يجب أن تظهر للمستخدم كل الخيارات المتاحة جنبًا إلى جنب."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("زر اختيار"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "مربّعات الاختيار وأزرار الاختيار ومفاتيح التبديل"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "تؤدي مفاتيح تبديل التشغيل/الإيقاف إلى تبديل حالة خيار واحد في الإعدادات. يجب توضيح الخيار الذي يتحكّم فيه مفتاح التبديل وكذلك حالته، وذلك من خلال التسمية المضمّنة المتاحة."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("مفاتيح التبديل"),
+        "demoSelectionControlsTitle":
+            MessageLookupByLibrary.simpleMessage("عناصر التحكّم في الاختيار"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "يتيح مربع الحوار البسيط للمستخدم إمكانية الاختيار من بين عدة خيارات. ويشتمل مربع الحوار البسيط على عنوان اختياري يتم عرضه أعلى هذه الخيارات."),
         "demoSimpleDialogTitle": MessageLookupByLibrary.simpleMessage("بسيط"),
@@ -416,6 +517,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "يمكن استخدام أزرار التبديل لتجميع الخيارات المرتبطة. لتأكيد مجموعات أزرار التبديل المرتبطة، يجب أن تشترك إحدى المجموعات في حاوية مشتركة."),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("أزرار التبديل"),
+        "demoTwoLineListsTitle": MessageLookupByLibrary.simpleMessage("سطران"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "تعريف أساليب الخط المختلفة في التصميم المتعدد الأبعاد"),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -545,6 +647,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("نبذة عن معرض Flutter"),
         "settingsAttribution":
             MessageLookupByLibrary.simpleMessage("من تصميم TOASTER في لندن"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("إغلاق الإعدادات"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("داكن"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("إرسال التعليقات"),

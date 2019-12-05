@@ -8,10 +8,14 @@ class GalleryThemeData {
   static const _lightFillColor = Colors.black;
   static const _darkFillColor = Colors.white;
 
-  static ThemeData lightThemeData = themeData(_lightColorScheme);
-  static ThemeData darkThemeData = themeData(_darkColorScheme);
+  static Color _lightFocusColor = Colors.black.withOpacity(0.12);
+  static Color _darkFocusColor = Colors.white.withOpacity(0.12);
 
-  static ThemeData themeData(ColorScheme colorScheme) {
+  static ThemeData lightThemeData =
+      themeData(_lightColorScheme, _lightFocusColor);
+  static ThemeData darkThemeData = themeData(_darkColorScheme, _darkFocusColor);
+
+  static ThemeData themeData(ColorScheme colorScheme, Color focusColor) {
     return ThemeData(
       colorScheme: colorScheme,
       textTheme: _textTheme,
@@ -27,6 +31,7 @@ class GalleryThemeData {
       scaffoldBackgroundColor: colorScheme.background,
       highlightColor: Colors.transparent,
       accentColor: colorScheme.primary,
+      focusColor: focusColor,
     );
   }
 

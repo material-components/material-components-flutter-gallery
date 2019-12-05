@@ -1,4 +1,4 @@
-import '../lib/segment_generator.dart';
+import 'package:codeviewer_cli/segment_generator.dart';
 
 main(List<String> arguments) {
   writeSegments(

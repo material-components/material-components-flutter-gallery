@@ -124,46 +124,97 @@ class MessageLookup extends MessageLookupByLibrary {
             "Bidaia-aplikazio pertsonalizatua"),
         "craneEat": MessageLookupByLibrary.simpleMessage("JATEKOAK"),
         "craneEat0": MessageLookupByLibrary.simpleMessage("Napoles (Italia)"),
+        "craneEat0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Pizza bat egurrezko labe batean"),
         "craneEat1": MessageLookupByLibrary.simpleMessage(
             "Dallas (Ameriketako Estatu Batuak)"),
         "craneEat10": MessageLookupByLibrary.simpleMessage("Lisboa (Portugal)"),
+        "craneEat10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Emakume bat pastrami-sandwich bat eskuan duela"),
+        "craneEat1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Amerikar estiloko taberna bat hutsik"),
         "craneEat2":
             MessageLookupByLibrary.simpleMessage("Córdoba (Argentina)"),
+        "craneEat2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Hanburgesa bat"),
         "craneEat3": MessageLookupByLibrary.simpleMessage(
             "Portland (Ameriketako Estatu Batuak)"),
+        "craneEat3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Korear taco bat"),
         "craneEat4": MessageLookupByLibrary.simpleMessage("Paris (Frantzia)"),
+        "craneEat4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Txokolatezko postre bat"),
         "craneEat5": MessageLookupByLibrary.simpleMessage("Seul (Hego Korea)"),
+        "craneEat5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Jatetxe moderno bateko mahaiak"),
         "craneEat6": MessageLookupByLibrary.simpleMessage(
             "Seattle (Ameriketako Estatu Batuak)"),
+        "craneEat6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Izkira-platera"),
         "craneEat7": MessageLookupByLibrary.simpleMessage(
             "Nashville (Ameriketako Estatu Batuak)"),
+        "craneEat7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Okindegiko sarrera"),
         "craneEat8": MessageLookupByLibrary.simpleMessage(
             "Atlanta (Ameriketako Estatu Batuak)"),
+        "craneEat8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Otarrain-platera"),
         "craneEat9": MessageLookupByLibrary.simpleMessage("Madril (Espainia)"),
+        "craneEat9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Kafetegi bateko salmahaia, gozoekin"),
         "craneEatRestaurants": m2,
         "craneEatSubhead": MessageLookupByLibrary.simpleMessage(
             "Arakatu jatetxeak helmugaren arabera"),
         "craneFly": MessageLookupByLibrary.simpleMessage("HEGALDIAK"),
         "craneFly0": MessageLookupByLibrary.simpleMessage(
             "Aspen (Ameriketako Estatu Batuak)"),
+        "craneFly0SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Txalet bat zuhaitz hostoiraunkorreko paisaia elurtuan"),
         "craneFly1": MessageLookupByLibrary.simpleMessage(
             "Big Sur (Ameriketako Estatu Batuak)"),
         "craneFly10": MessageLookupByLibrary.simpleMessage("Kairo (Egipto)"),
+        "craneFly10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Al-Azhar meskitaren dorreak ilunabarrean"),
         "craneFly11": MessageLookupByLibrary.simpleMessage("Lisboa (Portugal)"),
+        "craneFly11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Adreiluzko itsasargia"),
         "craneFly12": MessageLookupByLibrary.simpleMessage(
             "Napa (Ameriketako Estatu Batuak)"),
+        "craneFly12SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Igerileku bat palmondoekin"),
         "craneFly13": MessageLookupByLibrary.simpleMessage("Bali (Indonesia)"),
+        "craneFly13SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Igerileku bat itsasertzean, palmondoekin"),
+        "craneFly1SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Denda bat zelai batean"),
         "craneFly2":
             MessageLookupByLibrary.simpleMessage("Khumbu bailara (Nepal)"),
+        "craneFly2SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Tibetar banderatxoak mendi elurtuen parean"),
         "craneFly3":
             MessageLookupByLibrary.simpleMessage("Machu Picchu (Peru)"),
+        "craneFly3SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Machu Picchuko hiria"),
         "craneFly4": MessageLookupByLibrary.simpleMessage("Malé (Maldivak)"),
+        "craneFly4SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Itsasoko bungalow-ak"),
         "craneFly5": MessageLookupByLibrary.simpleMessage("Vitznau (Suitza)"),
-        "craneFly6": MessageLookupByLibrary.simpleMessage("Madril (Espainia)"),
+        "craneFly5SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mendialdeko hotel bat, laku baten ertzean"),
+        "craneFly6":
+            MessageLookupByLibrary.simpleMessage("Mexiko Hiria (Mexiko)"),
+        "craneFly6SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Arte Ederren jauregiaren airetiko ikuspegia"),
         "craneFly7": MessageLookupByLibrary.simpleMessage(
             "Rushmore mendia (Ameriketako Estatu Batuak)"),
+        "craneFly7SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Rushmore mendia"),
         "craneFly8": MessageLookupByLibrary.simpleMessage("Singapur"),
+        "craneFly8SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Supertree Grove"),
         "craneFly9": MessageLookupByLibrary.simpleMessage("Habana (Kuba)"),
+        "craneFly9SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Gizon bat antzinako auto urdin baten aurrean makurtuta"),
         "craneFlyStops": m3,
         "craneFlySubhead": MessageLookupByLibrary.simpleMessage(
             "Arakatu hegaldiak helmugaren arabera"),
@@ -181,22 +232,46 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Bidaiariak"),
         "craneSleep": MessageLookupByLibrary.simpleMessage("Lotarako tokia"),
         "craneSleep0": MessageLookupByLibrary.simpleMessage("Malé (Maldivak)"),
+        "craneSleep0SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Itsasoko bungalow-ak"),
         "craneSleep1": MessageLookupByLibrary.simpleMessage(
             "Aspen (Ameriketako Estatu Batuak)"),
         "craneSleep10": MessageLookupByLibrary.simpleMessage("Kairo (Egipto)"),
+        "craneSleep10SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Al-Azhar meskitaren dorreak ilunabarrean"),
         "craneSleep11": MessageLookupByLibrary.simpleMessage("Taipei (Taiwan)"),
+        "craneSleep11SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Taipei 101 etxe-orratza"),
+        "craneSleep1SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Txalet bat zuhaitz hostoiraunkorreko paisaia elurtuan"),
         "craneSleep2":
             MessageLookupByLibrary.simpleMessage("Machu Picchu (Peru)"),
+        "craneSleep2SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Machu Picchuko hiria"),
         "craneSleep3": MessageLookupByLibrary.simpleMessage("Habana (Kuba)"),
+        "craneSleep3SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Gizon bat antzinako auto urdin baten aurrean makurtuta"),
         "craneSleep4": MessageLookupByLibrary.simpleMessage("Vitznau (Suitza)"),
+        "craneSleep4SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Mendialdeko hotel bat, laku baten ertzean"),
         "craneSleep5": MessageLookupByLibrary.simpleMessage(
             "Big Sur (Ameriketako Estatu Batuak)"),
+        "craneSleep5SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Denda bat zelai batean"),
         "craneSleep6": MessageLookupByLibrary.simpleMessage(
             "Napa (Ameriketako Estatu Batuak)"),
+        "craneSleep6SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Igerileku bat palmondoekin"),
         "craneSleep7": MessageLookupByLibrary.simpleMessage("Porto (Portugal)"),
+        "craneSleep7SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Eraikin koloretsuak Ribeira plazan"),
         "craneSleep8": MessageLookupByLibrary.simpleMessage("Tulum (Mexiko)"),
+        "craneSleep8SemanticLabel": MessageLookupByLibrary.simpleMessage(
+            "Maiar hondarrak itsaslabar baten ertzean"),
         "craneSleep9":
             MessageLookupByLibrary.simpleMessage("Lisboa (Portugal)"),
+        "craneSleep9SemanticLabel":
+            MessageLookupByLibrary.simpleMessage("Adreiluzko itsasargia"),
         "craneSleepProperties": m4,
         "craneSleepSubhead": MessageLookupByLibrary.simpleMessage(
             "Arakatu jabetzak helmugaren arabera"),
@@ -347,6 +422,15 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Sarrera-pilula"),
         "demoInvalidURL": MessageLookupByLibrary.simpleMessage(
             "Ezin izan da bistaratu URLa:"),
+        "demoListsDescription": MessageLookupByLibrary.simpleMessage(
+            "Altuera finkoko lerro bakarra; testua eta haren atzean edo aurrean ikono bat izan ohi ditu."),
+        "demoListsSecondary":
+            MessageLookupByLibrary.simpleMessage("Bigarren lerroko testua"),
+        "demoListsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Zerrenda lerrakorren diseinuak"),
+        "demoListsTitle": MessageLookupByLibrary.simpleMessage("Zerrendak"),
+        "demoOneLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Lerro bat"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Aukerak"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Botoi ingeradadunak opaku bihurtu eta goratu egiten dira sakatzean. Botoi goratuekin batera agertu ohi dira, ekintza alternatibo edo sekundario bat dagoela adierazteko."),
@@ -356,6 +440,25 @@ class MessageLookup extends MessageLookupByLibrary {
             "Botoi goratuek dimentsioa ematen diete nagusiki lauak diren diseinuei. Funtzioak nabarmentzen dituzte espazio bete edo zabaletan."),
         "demoRaisedButtonTitle":
             MessageLookupByLibrary.simpleMessage("Botoi goratua"),
+        "demoSelectionControlsCheckboxDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Kontrol-laukiei esker, multzo bereko aukera bat baino gehiago hauta ditzake erabiltzaileak. Kontrol-laukiek Egia eta Gezurra balioak izan ohi dituzte. Hiru aukerakoak badira, aldiz, balio nulua izan ohi dute bi horiez gain."),
+        "demoSelectionControlsCheckboxTitle":
+            MessageLookupByLibrary.simpleMessage("Kontrol-laukia"),
+        "demoSelectionControlsRadioDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Aukera-botoiei esker, multzo bateko aukera bakarra hauta dezakete erabiltzaileek. Erabili aukera-botoiak erabiltzaileei aukera guztiak ondoz ondo erakutsi nahi badizkiezu, ondoren haietako bat hauta dezaten."),
+        "demoSelectionControlsRadioTitle":
+            MessageLookupByLibrary.simpleMessage("Aukera-botoia"),
+        "demoSelectionControlsSubtitle": MessageLookupByLibrary.simpleMessage(
+            "Kontrol-laukiak, aukera-botoiak eta etengailuak"),
+        "demoSelectionControlsSwitchDescription":
+            MessageLookupByLibrary.simpleMessage(
+                "Aktibatu eta desaktibatzeko etengailuak ezarpen-aukera bakarraren egoera aldatzen du. Etiketa txertatuek argi adierazi behar dute etengailuak zer aukera kontrolatzen duen eta hura zein egoeratan dagoen."),
+        "demoSelectionControlsSwitchTitle":
+            MessageLookupByLibrary.simpleMessage("Etengailua"),
+        "demoSelectionControlsTitle": MessageLookupByLibrary.simpleMessage(
+            "Hautapena kontrolatzeko aukerak"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
             "Leiho arruntek hainbat aukera eskaintzen dizkiote erabiltzaileari, nahi duena aukera dezan. Aukeren gainean bistaratzen den izenburu bat izan dezakete leiho arruntek."),
         "demoSimpleDialogTitle":
@@ -422,6 +525,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Erlazionatutako aukerak taldekatzeko erabil daitezke etengailuak. Erlazionatutako etengailuen talde bat nabarmentzeko, taldeak edukiontzi bera partekatu beharko luke."),
         "demoToggleButtonTitle":
             MessageLookupByLibrary.simpleMessage("Etengailuak"),
+        "demoTwoLineListsTitle":
+            MessageLookupByLibrary.simpleMessage("Bi lerro"),
         "demoTypographyDescription": MessageLookupByLibrary.simpleMessage(
             "Material diseinuko estilo tipografikoen definizioak."),
         "demoTypographySubtitle": MessageLookupByLibrary.simpleMessage(
@@ -554,6 +659,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Flutter Gallery-ri buruz"),
         "settingsAttribution": MessageLookupByLibrary.simpleMessage(
             "Londreseko TOASTER enpresak diseinatua"),
+        "settingsButtonCloseLabel":
+            MessageLookupByLibrary.simpleMessage("Itxi ezarpenak"),
+        "settingsButtonLabel":
+            MessageLookupByLibrary.simpleMessage("Ezarpenak"),
         "settingsDarkTheme": MessageLookupByLibrary.simpleMessage("Iluna"),
         "settingsFeedback":
             MessageLookupByLibrary.simpleMessage("Bidali oharrak"),
