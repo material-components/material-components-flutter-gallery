@@ -126,58 +126,64 @@ class _BackdropTitle extends AnimatedWidget {
         // branded icon
         SizedBox(
           width: 72,
-          child: IconButton(
-            padding: const EdgeInsetsDirectional.only(end: 8),
-            onPressed: onPress,
-            tooltip: menuButtonTooltip,
-            icon: Stack(children: [
-              Opacity(
-                opacity: animation.value,
-                child: directionalSlantedMenuIcon,
-              ),
-              FractionalTranslation(
-                translation: Tween<Offset>(
-                  begin: Offset.zero,
-                  end: Offset(1 * textDirectionScalar, 0),
-                ).evaluate(animation),
-                child: const ImageIcon(
-                  AssetImage('packages/shrine_images/diamond.png'),
+          child: Semantics(
+            container: true,
+            child: IconButton(
+              padding: const EdgeInsetsDirectional.only(end: 8),
+              onPressed: onPress,
+              tooltip: menuButtonTooltip,
+              icon: Stack(children: [
+                Opacity(
+                  opacity: animation.value,
+                  child: directionalSlantedMenuIcon,
                 ),
-              ),
-            ]),
+                FractionalTranslation(
+                  translation: Tween<Offset>(
+                    begin: Offset.zero,
+                    end: Offset(1 * textDirectionScalar, 0),
+                  ).evaluate(animation),
+                  child: const ImageIcon(
+                    AssetImage('packages/shrine_images/diamond.png'),
+                  ),
+                ),
+              ]),
+            ),
           ),
         ),
         // Here, we do a custom cross fade between backTitle and frontTitle.
         // This makes a smooth animation between the two texts.
-        Stack(
-          children: [
-            Opacity(
-              opacity: CurvedAnimation(
-                parent: ReverseAnimation(animation),
-                curve: const Interval(0.5, 1),
-              ).value,
-              child: FractionalTranslation(
-                translation: Tween<Offset>(
-                  begin: Offset.zero,
-                  end: Offset(0.5 * textDirectionScalar, 0),
-                ).evaluate(animation),
-                child: backTitle,
+        Semantics(
+          container: true,
+          child: Stack(
+            children: [
+              Opacity(
+                opacity: CurvedAnimation(
+                  parent: ReverseAnimation(animation),
+                  curve: const Interval(0.5, 1),
+                ).value,
+                child: FractionalTranslation(
+                  translation: Tween<Offset>(
+                    begin: Offset.zero,
+                    end: Offset(0.5 * textDirectionScalar, 0),
+                  ).evaluate(animation),
+                  child: backTitle,
+                ),
               ),
-            ),
-            Opacity(
-              opacity: CurvedAnimation(
-                parent: animation,
-                curve: const Interval(0.5, 1),
-              ).value,
-              child: FractionalTranslation(
-                translation: Tween<Offset>(
-                  begin: Offset(-0.25 * textDirectionScalar, 0),
-                  end: Offset.zero,
-                ).evaluate(animation),
-                child: frontTitle,
+              Opacity(
+                opacity: CurvedAnimation(
+                  parent: animation,
+                  curve: const Interval(0.5, 1),
+                ).value,
+                child: FractionalTranslation(
+                  translation: Tween<Offset>(
+                    begin: Offset(-0.25 * textDirectionScalar, 0),
+                    end: Offset.zero,
+                  ).evaluate(animation),
+                  child: frontTitle,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ]),
     );

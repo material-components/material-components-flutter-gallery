@@ -128,7 +128,8 @@ class CategoryMenuPage extends StatelessWidget {
                     excludeFromSemantics: true,
                   ),
                   const SizedBox(height: 16),
-                  ExcludeSemantics(
+                  Semantics(
+                    container: true,
                     child: Text(
                       'SHRINE',
                       style: Theme.of(context).textTheme.headline,
