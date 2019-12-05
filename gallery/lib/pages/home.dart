@@ -264,11 +264,10 @@ class _AnimatedHomePageState extends State<_AnimatedHomePage>
       // splash page animation is finished on initState.
       _animationController.value = 1.0;
     } else {
-      // Wait for the splash page animation to be finished before
-      // starting ours.
+      // Start our animation halfway through the splash page animation.
       _launchTimer = Timer(
         const Duration(
-          milliseconds: splashPageAnimationDurationInMilliseconds,
+          milliseconds: splashPageAnimationDurationInMilliseconds ~/ 2,
         ),
         () {
           _animationController.forward();
