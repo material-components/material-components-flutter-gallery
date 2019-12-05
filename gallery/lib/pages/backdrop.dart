@@ -8,6 +8,7 @@ import 'package:flare_flutter/flare_actor.dart';
 import 'package:flare_flutter/flare_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:gallery/constants.dart';
 import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
@@ -41,10 +42,15 @@ class _BackdropState extends State<Backdrop>
   double settingsButtonHeightMobile = 40;
 
   bool _isSettingsOpen;
+  FocusNode frontLayerFocusNode;
+  FocusNode backLayerFocusNode;
 
   @override
   void initState() {
     super.initState();
+    frontLayerFocusNode = FocusNode();
+    backLayerFocusNode = FocusNode();
+
     _isSettingsOpen = false;
     _controller = AnimationController(
         duration: Duration(milliseconds: 100), value: 1, vsync: this)
@@ -58,6 +64,8 @@ class _BackdropState extends State<Backdrop>
   @override
   void dispose() {
     _controller.dispose();
+    frontLayerFocusNode.dispose();
+    backLayerFocusNode.dispose();
     super.dispose();
   }
 
@@ -136,12 +144,15 @@ class _BackdropState extends State<Backdrop>
     final Widget frontLayer = ExcludeSemantics(
       child: DefaultFocusTraversal(
         policy: WidgetOrderFocusTraversalPolicy(),
-        child: InheritedBackdrop(
-          toggleSettings: toggleSettings,
-          child: widget.frontLayer,
-          settingsButtonWidth: settingsButtonWidth,
-          desktopSettingsButtonHeight: settingsButtonHeightDesktop,
-          mobileSettingsButtonHeight: settingsButtonHeightMobile,
+        child: Focus(
+          skipTraversal: !_isSettingsOpen,
+          child: InheritedBackdrop(
+            toggleSettings: toggleSettings,
+            child: widget.frontLayer,
+            settingsButtonWidth: settingsButtonWidth,
+            desktopSettingsButtonHeight: settingsButtonHeightDesktop,
+            mobileSettingsButtonHeight: settingsButtonHeightMobile,
+          ),
         ),
       ),
       excluding: !_isSettingsOpen,
@@ -151,105 +162,122 @@ class _BackdropState extends State<Backdrop>
       excluding: _isSettingsOpen,
     );
 
-    return Container(
-      child: Stack(
-        children: [
-          if (!isDesktop) ...[
-            _galleryHeader(),
-            frontLayer,
-            PositionedTransition(
-              rect: animation,
-              child: backLayer,
-            ),
-          ],
-          if (isDesktop) ...[
-            _galleryHeader(),
-            backLayer,
-            if (_isSettingsOpen) ...[
-              ExcludeSemantics(
-                child: ModalBarrier(
-                  dismissible: true,
+    return DefaultFocusTraversal(
+      child: InheritedBackdropFocusNodes(
+        frontLayerFocusNode: frontLayerFocusNode,
+        backLayerFocusNode: backLayerFocusNode,
+        child: Container(
+          child: Stack(
+            children: [
+              if (!isDesktop) ...[
+                _galleryHeader(),
+                frontLayer,
+                PositionedTransition(
+                  rect: animation,
+                  child: backLayer,
                 ),
-              ),
-              Semantics(
-                label:
-                    GalleryLocalizations.of(context).settingsButtonCloseLabel,
-                child: GestureDetector(
-                  onTap: toggleSettings,
-                ),
-              )
-            ],
-            ScaleTransition(
-              alignment: Directionality.of(context) == TextDirection.ltr
-                  ? Alignment.topRight
-                  : Alignment.topLeft,
-              scale: CurvedAnimation(
-                parent: _animationReversed,
-                curve: Curves.easeIn,
-                reverseCurve: Curves.easeOut,
-              ),
-              child: Align(
-                alignment: AlignmentDirectional.topEnd,
-                child: Material(
-                  elevation: 7,
-                  clipBehavior: Clip.antiAlias,
-                  borderRadius: BorderRadius.circular(40),
-                  color: Theme.of(context).colorScheme.secondaryVariant,
-                  child: Container(
-                    constraints: const BoxConstraints(
-                      maxHeight: 560,
-                      maxWidth: desktopSettingsWidth,
-                      minWidth: desktopSettingsWidth,
+              ],
+              if (isDesktop) ...[
+                _galleryHeader(),
+                backLayer,
+                if (_isSettingsOpen) ...[
+                  ExcludeSemantics(
+                    child: ModalBarrier(
+                      dismissible: true,
                     ),
-                    child: frontLayer,
+                  ),
+                  Semantics(
+                    label: GalleryLocalizations.of(context)
+                        .settingsButtonCloseLabel,
+                    child: GestureDetector(
+                      onTap: toggleSettings,
+                    ),
+                  )
+                ],
+                ScaleTransition(
+                  alignment: Directionality.of(context) == TextDirection.ltr
+                      ? Alignment.topRight
+                      : Alignment.topLeft,
+                  scale: CurvedAnimation(
+                    parent: _animationReversed,
+                    curve: Curves.easeIn,
+                    reverseCurve: Curves.easeOut,
+                  ),
+                  child: Align(
+                    alignment: AlignmentDirectional.topEnd,
+                    child: Material(
+                      elevation: 7,
+                      clipBehavior: Clip.antiAlias,
+                      borderRadius: BorderRadius.circular(40),
+                      color: Theme.of(context).colorScheme.secondaryVariant,
+                      child: Container(
+                        constraints: const BoxConstraints(
+                          maxHeight: 560,
+                          maxWidth: desktopSettingsWidth,
+                          minWidth: desktopSettingsWidth,
+                        ),
+                        child: frontLayer,
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ),
-          ],
-          Align(
-            alignment: AlignmentDirectional.topEnd,
-            child: Semantics(
-              button: true,
-              label: _isSettingsOpen
-                  ? GalleryLocalizations.of(context).settingsButtonCloseLabel
-                  : GalleryLocalizations.of(context).settingsButtonLabel,
-              child: SizedBox(
-                width: settingsButtonWidth,
-                height: isDesktop
-                    ? settingsButtonHeightDesktop
-                    : settingsButtonHeightMobile + safeAreaTopPadding,
-                child: GestureDetector(
-                  onTap: toggleSettings,
-                  child: Material(
-                    borderRadius: BorderRadiusDirectional.only(
-                      bottomStart: Radius.circular(10),
-                    ),
-                    color: _isSettingsOpen & !_controller.isAnimating
-                        ? Colors.transparent
-                        : Theme.of(context).colorScheme.secondaryVariant,
-                    child: Padding(
-                      padding:
-                          const EdgeInsetsDirectional.only(start: 3, end: 18),
-                      child: FlareActor(
-                        Theme.of(context).colorScheme.brightness ==
-                                Brightness.light
-                            ? 'assets/icons/settings/settings_light.flr'
-                            : 'assets/icons/settings/settings_dark.flr',
-                        alignment:
-                            Directionality.of(context) == TextDirection.ltr
-                                ? Alignment.bottomLeft
-                                : Alignment.bottomRight,
-                        fit: BoxFit.contain,
-                        controller: this,
+              ],
+              Align(
+                alignment: AlignmentDirectional.topEnd,
+                child: Semantics(
+                  button: true,
+                  label: _isSettingsOpen
+                      ? GalleryLocalizations.of(context)
+                          .settingsButtonCloseLabel
+                      : GalleryLocalizations.of(context).settingsButtonLabel,
+                  child: SizedBox(
+                    width: settingsButtonWidth,
+                    height: isDesktop
+                        ? settingsButtonHeightDesktop
+                        : settingsButtonHeightMobile + safeAreaTopPadding,
+                    child: Material(
+                      borderRadius: BorderRadiusDirectional.only(
+                        bottomStart: Radius.circular(10),
+                      ),
+                      color: _isSettingsOpen & !_controller.isAnimating
+                          ? Colors.transparent
+                          : Theme.of(context).colorScheme.secondaryVariant,
+                      child: InkWell(
+                        onTap: toggleSettings,
+                        child: Padding(
+                          padding: const EdgeInsetsDirectional.only(
+                              start: 3, end: 18),
+                          child: Focus(
+                            onFocusChange: (hasFocus) {
+                              if (!hasFocus) {
+                                FocusScope.of(context).requestFocus(
+                                    (_isSettingsOpen)
+                                        ? frontLayerFocusNode
+                                        : backLayerFocusNode);
+                              }
+                            },
+                            child: FlareActor(
+                              Theme.of(context).colorScheme.brightness ==
+                                      Brightness.light
+                                  ? 'assets/icons/settings/settings_light.flr'
+                                  : 'assets/icons/settings/settings_dark.flr',
+                              alignment: Directionality.of(context) ==
+                                      TextDirection.ltr
+                                  ? Alignment.bottomLeft
+                                  : Alignment.bottomRight,
+                              fit: BoxFit.contain,
+                              controller: this,
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                   ),
                 ),
               ),
-            ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
@@ -284,4 +312,22 @@ class InheritedBackdrop extends InheritedWidget {
   static InheritedBackdrop of(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType();
   }
+}
+
+class InheritedBackdropFocusNodes extends InheritedWidget {
+  InheritedBackdropFocusNodes({
+    @required Widget child,
+    @required this.frontLayerFocusNode,
+    @required this.backLayerFocusNode,
+  })  : assert(child != null),
+        super(child: child);
+
+  final FocusNode frontLayerFocusNode;
+  final FocusNode backLayerFocusNode;
+
+  static InheritedBackdropFocusNodes of(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType();
+
+  @override
+  bool updateShouldNotify(InheritedWidget oldWidget) => true;
 }

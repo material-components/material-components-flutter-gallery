@@ -12,6 +12,7 @@ import 'package:gallery/data/gallery_options.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/pages/about.dart' as about;
+import 'package:gallery/pages/backdrop.dart';
 import 'package:gallery/pages/home.dart';
 import 'package:gallery/pages/settings_list_item.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -127,12 +128,16 @@ class _SettingsPageState extends State<SettingsPage> {
           child: ListView(
             children: [
               SizedBox(height: firstHeaderDesktopTopPadding),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 32),
-                child: ExcludeSemantics(
-                  child: Header(
-                    color: Theme.of(context).colorScheme.onSurface,
-                    text: GalleryLocalizations.of(context).settingsTitle,
+              Focus(
+                focusNode:
+                    InheritedBackdropFocusNodes.of(context).frontLayerFocusNode,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 32),
+                  child: ExcludeSemantics(
+                    child: Header(
+                      color: Theme.of(context).colorScheme.onSurface,
+                      text: GalleryLocalizations.of(context).settingsTitle,
+                    ),
                   ),
                 ),
               ),
