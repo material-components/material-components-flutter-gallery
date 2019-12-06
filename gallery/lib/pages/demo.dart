@@ -2,22 +2,27 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'dart:io' show Platform;
 import 'dart:math';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:gallery/codeviewer/code_displayer.dart';
-import 'package:gallery/codeviewer/code_style.dart';
-import 'package:gallery/data/gallery_options.dart';
-import 'package:gallery/themes/gallery_theme_data.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'package:gallery/codeviewer/code_displayer.dart';
+import 'package:gallery/codeviewer/code_style.dart';
 import 'package:gallery/constants.dart';
 import 'package:gallery/data/demos.dart';
+import 'package:gallery/data/gallery_options.dart';
+import 'package:gallery/feature_discovery/feature_discovery.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/pages/splash.dart';
+import 'package:gallery/themes/gallery_theme_data.dart';
+
+const _demoViewedCountKey = 'demoViewedCountKey';
 
 enum _DemoState {
   normal,
@@ -43,6 +48,8 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
   _DemoState _state = _DemoState.normal;
   int _configIndex = 0;
   bool _isDesktop;
+  bool _showFeatureHighlight = true;
+  int _demoViewedCount;
 
   AnimationController _codeBackgroundColorController;
 
@@ -50,16 +57,34 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
     return widget.demo.configurations[_configIndex];
   }
 
+  bool get _hasOptions => widget.demo.configurations.length > 1;
+
+  bool get _isSupportedSharedPreferencesPlatform =>
+      !kIsWeb && (Platform.isAndroid || Platform.isIOS);
+
+  // Only show the feature highlight on Android/iOS in mobile layout and only on
+  // the first and forth time the demo page is viewed.
+  bool _showFeatureHighlightForPlatform(BuildContext context) {
+    return _showFeatureHighlight &&
+        _isSupportedSharedPreferencesPlatform &&
+        !isDisplayDesktop(context) &&
+        (_demoViewedCount != null &&
+            (_demoViewedCount == 0 || _demoViewedCount == 3));
+  }
+
   @override
   void initState() {
     super.initState();
-    _state = widget.demo.configurations.length > 1
-        ? _DemoState.options
-        : _DemoState.normal;
     _codeBackgroundColorController = AnimationController(
       vsync: this,
       duration: Duration(milliseconds: 300),
     );
+    SharedPreferences.getInstance().then((preferences) {
+      setState(() {
+        _demoViewedCount = preferences.getInt(_demoViewedCountKey) ?? 0;
+        preferences.setInt(_demoViewedCountKey, _demoViewedCount + 1);
+      });
+    });
   }
 
   @override
@@ -93,7 +118,7 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
     if (_state == newState && isDisplayDesktop(context)) {
       if (_state == _DemoState.fullscreen) {
         setStateAndUpdate(() {
-          _state = _DemoState.info;
+          _state = _hasOptions ? _DemoState.options : _DemoState.info;
         });
       }
       return;
@@ -137,7 +162,7 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
       _state = _DemoState.normal;
     } else if (_state == _DemoState.normal && isDesktop) {
       // Do not allow normal state for desktop.
-      _state = _DemoState.info;
+      _state = _hasOptions ? _DemoState.options : _DemoState.info;
     } else if (isDesktop != this._isDesktop) {
       this._isDesktop = isDesktop;
       // When going from desktop to mobile, return to normal state.
@@ -159,11 +184,33 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
     final appBar = AppBar(
       backgroundColor: Colors.transparent,
       actions: [
-        if (widget.demo.configurations.length > 1)
+        if (_hasOptions)
           IconButton(
-            icon: Icon(Icons.tune),
+            icon: FeatureDiscovery(
+              title: GalleryLocalizations.of(context).demoOptionsFeatureTitle,
+              description: GalleryLocalizations.of(context)
+                  .demoOptionsFeatureDescription,
+              showOverlay: _showFeatureHighlightForPlatform(context),
+              color: colorScheme.primary,
+              onDismiss: () {
+                setState(() {
+                  _showFeatureHighlight = false;
+                });
+              },
+              onTap: () {
+                setState(() {
+                  _showFeatureHighlight = false;
+                });
+              },
+              child: Icon(
+                Icons.tune,
+                color: _state == _DemoState.options ||
+                        _showFeatureHighlightForPlatform(context)
+                    ? selectedIconColor
+                    : iconColor,
+              ),
+            ),
             tooltip: GalleryLocalizations.of(context).demoOptionsTooltip,
-            color: _state == _DemoState.options ? selectedIconColor : iconColor,
             onPressed: () => _handleTap(_DemoState.options),
           ),
         IconButton(
@@ -430,7 +477,7 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
       );
     }
 
-    return page;
+    return FeatureDiscoveryController(page);
   }
 }
 

@@ -298,6 +298,14 @@
     description="A message displayed to the user after clicking the COPY ALL button, if the text CANNOT be copied to the clipboard."
     >Failed to copy to clipboard: {error}</string>
   <string
+    name="demoOptionsFeatureTitle"
+    description="Title for an alert that explains what the options button does."
+    >View options</string>
+  <string
+    name="demoOptionsFeatureDescription"
+    description="Description for an alert that explains what the options button does."
+    >Tap here to view available options for this demo.</string>
+  <string
     name="settingsTitle"
     description="Title for the settings screen."
     >Settings</string>

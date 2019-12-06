@@ -31,6 +31,7 @@ dependencies:
     git:
       url: git://github.com/guidezpl/flutter-localized-countries.git
       ref: 76bfbf9654c3842d735181383f7ab86c312a2483
+  shared_preferences: ^0.5.4+8
 
 dev_dependencies:
   flutter_test:
