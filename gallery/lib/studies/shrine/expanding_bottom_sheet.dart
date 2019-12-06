@@ -504,7 +504,7 @@ class _ExpandingBottomSheetState extends State<ExpandingBottomSheet>
     final Widget childWithInteraction = productPageIsVisible(context)
         ? Semantics(
             button: true,
-            value: GalleryLocalizations.of(context)
+            label: GalleryLocalizations.of(context)
                 .shrineScreenReaderCart(totalCartQuantity),
             child: GestureDetector(
               behavior: HitTestBehavior.opaque,

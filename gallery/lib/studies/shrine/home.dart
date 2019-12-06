@@ -55,15 +55,15 @@ class HomePage extends StatelessWidget {
             sortKey: OrdinalSortKey(1),
           ),
           ExcludeSemantics(child: scrim),
-          Semantics(
-            container: true,
-            child: Align(
+          Align(
+            child: Semantics(
+              container: true,
               child: expandingBottomSheet,
-              alignment: isDesktop
-                  ? AlignmentDirectional.topEnd
-                  : AlignmentDirectional.bottomEnd,
+              sortKey: OrdinalSortKey(0),
             ),
-            sortKey: OrdinalSortKey(0),
+            alignment: isDesktop
+                ? AlignmentDirectional.topEnd
+                : AlignmentDirectional.bottomEnd,
           ),
         ],
       ),
