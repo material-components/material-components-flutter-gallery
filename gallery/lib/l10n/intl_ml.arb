@@ -3,7 +3,7 @@
   "shrineScreenReaderRemoveProductButton": "{product} നീക്കുക",
   "shrineScreenReaderProductAddToCart": "കാർട്ടിലേക്ക് ചേർക്കുക",
   "shrineScreenReaderCart": "{quantity,plural, =0{ഷോപ്പിംഗ് കാർട്ട്, ഇനങ്ങളൊന്നുമില്ല}=1{ഷോപ്പിംഗ് കാർട്ട്, ഒരു ഇനം}other{ഷോപ്പിംഗ് കാർട്ട്, {quantity} ഇനങ്ങൾ}}",
-  "demoCodeViewerFailedToCopyToClipboardMessage": "ക്ലിപ്‌ബോർഡിലേക്ക് പകർത്താനായില്ല: {error}",
+  "demoCodeViewerFailedToCopyToClipboardMessage": "ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്താനായില്ല: {error}",
   "demoCodeViewerCopiedToClipboardMessage": "ക്ലിപ്പ്‌ബോർഡിലേക്ക് പകർത്തി.",
   "craneSleep8SemanticLabel": "കടൽത്തീരത്തുള്ള മലഞ്ചെരുവിൽ മായൻ അവശിഷ്‌ടങ്ങൾ",
   "craneSleep4SemanticLabel": "മലനിരകൾക്ക് മുന്നിലുള്ള തടാകതീരത്തെ ഹോട്ടൽ",

@@ -591,11 +591,11 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Livsmedel"),
         "rallyBudgetCategoryRestaurants":
             MessageLookupByLibrary.simpleMessage("Restauranger"),
-        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Vänster"),
+        "rallyBudgetLeft": MessageLookupByLibrary.simpleMessage("Kvar"),
         "rallyBudgets": MessageLookupByLibrary.simpleMessage("Budgetar"),
         "rallyDescription":
             MessageLookupByLibrary.simpleMessage("En app för privatekonomi"),
-        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("VÄNSTER"),
+        "rallyFinanceLeft": MessageLookupByLibrary.simpleMessage("KVAR"),
         "rallyLoginButtonLogin":
             MessageLookupByLibrary.simpleMessage("LOGGA IN"),
         "rallyLoginLabelLogin":

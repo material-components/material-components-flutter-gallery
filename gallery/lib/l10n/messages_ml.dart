@@ -35,7 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   static m5(value) => "ഇനം ${value}";
 
-  static m6(error) => "ക്ലിപ്‌ബോർഡിലേക്ക് പകർത്താനായില്ല: ${error}";
+  static m6(error) => "ക്ലിപ്പ്ബോർഡിലേക്ക് പകർത്താനായില്ല: ${error}";
 
   static m7(name, phoneNumber) =>
       "${name} എന്ന വ്യക്തിയുടെ ഫോൺ നമ്പർ ${phoneNumber} ആണ്";

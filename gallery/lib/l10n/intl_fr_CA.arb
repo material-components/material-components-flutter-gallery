@@ -52,7 +52,7 @@
   "craneSleep3SemanticLabel": "Homme s'appuyant sur une voiture bleue ancienne",
   "demoSelectionControlsRadioTitle": "Radio",
   "demoSelectionControlsRadioDescription": "Boutons radio qui permettent à l'utilisateur de sélectionner une option à partir d'un ensemble. Utilisez les boutons radio pour offrir une sélection exclusive, si vous croyez que l'utilisateur a besoin de voir toutes les options proposées côte à côte.",
-  "demoSelectionControlsSwitchTitle": "Changer",
+  "demoSelectionControlsSwitchTitle": "Commutateur",
   "demoSelectionControlsSwitchDescription": "Les commutateurs permettent de basculer l'état d'un réglage unique. L'option que le commutateur détermine, ainsi que l'état dans lequel il se trouve, doivent être clairement indiqués sur l'étiquette correspondante.",
   "craneFly0SemanticLabel": "Chalet dans un paysage enneigé et entouré de conifères",
   "craneFly1SemanticLabel": "Tente dans un champ",
