@@ -33,7 +33,7 @@ For more details on what `make l10n` runs, you can read below under Generate Gal
 To generate GalleryLocalizations, from `gallery/` run:
 
 ```dart
-dart ${YOUR_FLUTTER_PATH}/dev/tools/localization/gen_l10n.dart \
+dart ${YOUR_FLUTTER_PATH}/dev/tools/localization/bin/gen_l10n.dart \
     --template-arb-file=intl_en_US.arb \
     --output-localization-file=gallery_localizations.dart \
     --output-class=GalleryLocalizations
@@ -67,7 +67,7 @@ make format
 which is equal to
 
 ```dart
-dart ${YOUR_FLUTTER_PATH}/dev/tools/localization/gen_l10n.dart \
+dart ${YOUR_FLUTTER_PATH}/dev/tools/localization/bin/gen_l10n.dart \
     --template-arb-file=intl_en_US.arb \
     --output-localization-file=gallery_localizations.dart \
     --output-class=GalleryLocalizations
