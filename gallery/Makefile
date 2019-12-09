@@ -36,6 +36,7 @@ master-branch-check: fetch-master
 
 .PHONY: deploy
 deploy: master-branch-check build-web
+	cp $(ROOT)/gallery/web/favicon.ico $(ROOT)/gallery/build/web/
 	firebase deploy
 
 .PHONY: gen-l10n
