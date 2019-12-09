@@ -49,7 +49,7 @@ flutter:
     - assets/splash_effects/
     - packages/rally_assets/logo.png
     - packages/rally_assets/thumb.png
-    - assets/crane/
+    - assets/crane/logo/
     - assets/crane/destinations/
     - packages/shrine_images/diamond.png
     - packages/shrine_images/slanted_menu.png

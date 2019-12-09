@@ -240,7 +240,7 @@ class _CraneAppBarState extends State<CraneAppBar> {
           children: [
             ExcludeSemantics(
               child: Image.asset(
-                'assets/crane/logo.png',
+                'assets/crane/logo/logo.png',
                 fit: BoxFit.cover,
               ),
             ),
