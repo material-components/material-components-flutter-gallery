@@ -10,6 +10,7 @@ import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/layout/text_scale.dart';
 import 'package:gallery/pages/home.dart';
 import 'package:gallery/studies/rally/colors.dart';
+import 'package:gallery/studies/rally/focus_traversal_policy.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -22,10 +23,13 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    final backButtonFocusNode =
+        InheritedFocusNodes.of(context).backButtonFocusNode;
+
     return DefaultFocusTraversal(
-      policy: LoginFocusTraversalPolicy(
-        backButtonFocusNode:
-            InheritedFocusNodes.of(context).backButtonFocusNode,
+      policy: EdgeChildrenFocusTraversalPolicy(
+        firstFocusNodeOutsideScope: backButtonFocusNode,
+        lastFocusNodeOutsideScope: backButtonFocusNode,
         focusScopeNode: FocusScope.of(context),
       ),
       child: ApplyTextOptions(
@@ -46,36 +50,6 @@ class _LoginPageState extends State<LoginPage> {
     _usernameController.dispose();
     _passwordController.dispose();
     super.dispose();
-  }
-}
-
-class LoginFocusTraversalPolicy extends ReadingOrderTraversalPolicy {
-  LoginFocusTraversalPolicy({
-    @required this.backButtonFocusNode,
-    @required this.focusScopeNode,
-  });
-
-  final FocusNode backButtonFocusNode;
-  final FocusScopeNode focusScopeNode;
-
-  @override
-  bool previous(FocusNode currentNode) {
-    if (currentNode == focusScopeNode.children.first) {
-      backButtonFocusNode.requestFocus();
-      return true;
-    } else {
-      return super.previous(currentNode);
-    }
-  }
-
-  @override
-  bool next(FocusNode currentNode) {
-    if (currentNode == focusScopeNode.children.last) {
-      backButtonFocusNode.requestFocus();
-      return true;
-    } else {
-      return super.next(currentNode);
-    }
   }
 }
 

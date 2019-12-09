@@ -814,19 +814,16 @@ class _StudyWrapper extends StatefulWidget {
 
 class _StudyWrapperState extends State<_StudyWrapper> {
   FocusNode backButtonFocusNode;
-  FocusScopeNode studyFocusScopeNode;
 
   @override
   void initState() {
     super.initState();
     backButtonFocusNode = FocusNode();
-    studyFocusScopeNode = FocusScopeNode();
   }
 
   @override
   void dispose() {
     backButtonFocusNode.dispose();
-    studyFocusScopeNode.dispose();
     super.dispose();
   }
 
@@ -897,7 +894,7 @@ class InheritedFocusNodes extends InheritedWidget {
   bool updateShouldNotify(InheritedFocusNodes old) => true;
 }
 
-class StudyWrapperFocusTraversalPolicy extends ReadingOrderTraversalPolicy {
+class StudyWrapperFocusTraversalPolicy extends WidgetOrderFocusTraversalPolicy {
   StudyWrapperFocusTraversalPolicy({
     @required this.backButtonFocusNode,
     @required this.studyNavigatorKey,
@@ -906,14 +903,16 @@ class StudyWrapperFocusTraversalPolicy extends ReadingOrderTraversalPolicy {
   final FocusNode backButtonFocusNode;
   final GlobalKey<NavigatorState> studyNavigatorKey;
 
+  FocusNode _firstFocusNode() {
+    return studyNavigatorKey.currentState.focusScopeNode.traversalDescendants
+        .toList()
+        .first;
+  }
+
   @override
   bool previous(FocusNode currentNode) {
     if (currentNode == backButtonFocusNode) {
-      studyNavigatorKey.currentState.focusScopeNode.traversalDescendants
-          .toList()
-          .last
-          .requestFocus();
-      return true;
+      return super.previous(_firstFocusNode());
     } else {
       return super.previous(currentNode);
     }
@@ -922,10 +921,7 @@ class StudyWrapperFocusTraversalPolicy extends ReadingOrderTraversalPolicy {
   @override
   bool next(FocusNode currentNode) {
     if (currentNode == backButtonFocusNode) {
-      studyNavigatorKey.currentState.focusScopeNode.traversalDescendants
-          .toList()
-          .first
-          .requestFocus();
+      _firstFocusNode().requestFocus();
       return true;
     } else {
       return super.next(currentNode);
