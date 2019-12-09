@@ -22,12 +22,20 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultFocusTraversal(
-      policy: LoginFocusTraversalPolicy(
+    // Only apply policy if there is an inherited focus node in scope
+    // (i.e. we're inside the Flutter Gallery, not standalone).
+    final focusNodes = InheritedFocusNodes.of(context);
+    LoginFocusTraversalPolicy policy;
+    if (focusNodes != null) {
+      policy = LoginFocusTraversalPolicy(
         backButtonFocusNode:
             InheritedFocusNodes.of(context).backButtonFocusNode,
         focusScopeNode: FocusScope.of(context),
-      ),
+      );
+    }
+
+    return DefaultFocusTraversal(
+      policy: policy,
       child: ApplyTextOptions(
         child: Scaffold(
           body: SafeArea(
