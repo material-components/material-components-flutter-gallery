@@ -142,6 +142,11 @@ class _SplashPageState extends State<SplashPage>
                 onTap: () {
                   _controller.reverse();
                 },
+                onVerticalDragEnd: (details) {
+                  if (details.velocity.pixelsPerSecond.dy < -200) {
+                    _controller.reverse();
+                  }
+                },
                 child: IgnorePointer(child: frontLayer),
               );
             }
