@@ -193,7 +193,7 @@ class _CancelAndNextButtons extends StatelessWidget {
                 // the Shrine home screen using onGenerateRoute and so
                 // rootNavigator must be set to true in order to get out
                 // of Shrine completely.
-                Navigator.of(context, rootNavigator: true).pop();
+                Navigator.of(context, rootNavigator: true).maybePop();
               },
             ),
             RaisedButton(
