@@ -333,6 +333,14 @@
       }
     }
   },
+  "demoOptionsFeatureTitle": "View options",
+  "@demoOptionsFeatureTitle": {
+    "description": "Title for an alert that explains what the options button does."
+  },
+  "demoOptionsFeatureDescription": "Tap here to view available options for this demo.",
+  "@demoOptionsFeatureDescription": {
+    "description": "Description for an alert that explains what the options button does."
+  },
   "settingsTitle": "Settings",
   "@settingsTitle": {
     "description": "Title for the settings screen."

@@ -845,13 +845,13 @@ class _StudyWrapperState extends State<_StudyWrapper> {
           child: Stack(
             children: [
               Semantics(
-                sortKey: OrdinalSortKey(1),
+                sortKey: const OrdinalSortKey(1),
                 child: widget.study,
               ),
-              Semantics(
-                sortKey: OrdinalSortKey(0),
-                child: Align(
-                  alignment: AlignmentDirectional.bottomStart,
+              Align(
+                alignment: AlignmentDirectional.bottomStart,
+                child: Semantics(
+                  sortKey: const OrdinalSortKey(0),
                   child: Padding(
                     padding: const EdgeInsets.all(16),
                     child: FloatingActionButton.extended(

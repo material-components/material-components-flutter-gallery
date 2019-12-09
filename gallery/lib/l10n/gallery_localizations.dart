@@ -1681,6 +1681,22 @@ class GalleryLocalizations {
         desc: r'Title for lists demo with only one line of text per row.');
   }
 
+  String get demoOptionsFeatureDescription {
+    return Intl.message(r'Tap here to view available options for this demo.',
+        locale: _localeName,
+        name: 'demoOptionsFeatureDescription',
+        desc:
+            r'Description for an alert that explains what the options button does.');
+  }
+
+  String get demoOptionsFeatureTitle {
+    return Intl.message(r'View options',
+        locale: _localeName,
+        name: 'demoOptionsFeatureTitle',
+        desc:
+            r'Title for an alert that explains what the options button does.');
+  }
+
   String get demoOptionsTooltip {
     return Intl.message(r'Options',
         locale: _localeName,

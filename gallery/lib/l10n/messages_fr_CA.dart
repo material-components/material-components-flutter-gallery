@@ -470,7 +470,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage(
                 "Les commutateurs permettent de basculer l\'état d\'un réglage unique. L\'option que le commutateur détermine, ainsi que l\'état dans lequel il se trouve, doivent être clairement indiqués sur l\'étiquette correspondante."),
         "demoSelectionControlsSwitchTitle":
-            MessageLookupByLibrary.simpleMessage("Changer"),
+            MessageLookupByLibrary.simpleMessage("Commutateur"),
         "demoSelectionControlsTitle":
             MessageLookupByLibrary.simpleMessage("Commandes de sélection"),
         "demoSimpleDialogDescription": MessageLookupByLibrary.simpleMessage(
