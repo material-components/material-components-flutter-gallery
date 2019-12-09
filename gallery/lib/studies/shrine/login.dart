@@ -20,13 +20,6 @@ double desktopLoginScreenMainAreaWidth({BuildContext context}) {
   );
 }
 
-const _decoration = ShapeDecoration(
-  shape: BeveledRectangleBorder(
-    side: BorderSide(color: shrineBrown900, width: 0.5),
-    borderRadius: BorderRadius.all(Radius.circular(7)),
-  ),
-);
-
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();
@@ -118,7 +111,6 @@ class _UsernameTextField extends StatelessWidget {
     return PrimaryColorOverride(
       color: shrineBrown900,
       child: Container(
-        decoration: _decoration,
         child: TextField(
           controller: _usernameController,
           cursorColor: colorScheme.onSurface,
@@ -144,7 +136,6 @@ class _PasswordTextField extends StatelessWidget {
     return PrimaryColorOverride(
       color: shrineBrown900,
       child: Container(
-        decoration: _decoration,
         child: TextField(
           controller: _passwordController,
           cursorColor: colorScheme.onSurface,

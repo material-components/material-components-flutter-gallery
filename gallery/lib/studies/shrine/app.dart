@@ -148,8 +148,12 @@ ThemeData _buildShrineTheme() {
       textTheme: ButtonTextTheme.normal,
     ),
     primaryIconTheme: _customIconTheme(base.iconTheme),
-    inputDecorationTheme:
-        const InputDecorationTheme(border: CutCornersBorder()),
+    inputDecorationTheme: const InputDecorationTheme(
+      border: CutCornersBorder(
+        borderSide: BorderSide(color: shrineBrown900, width: 0.5),
+      ),
+      contentPadding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+    ),
     textTheme: _buildShrineTextTheme(base.textTheme),
     primaryTextTheme: _buildShrineTextTheme(base.primaryTextTheme),
     accentTextTheme: _buildShrineTextTheme(base.accentTextTheme),
