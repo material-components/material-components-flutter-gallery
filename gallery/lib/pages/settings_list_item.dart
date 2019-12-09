@@ -12,6 +12,13 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 final settingItemBorderRadius = BorderRadius.circular(10);
 const settingItemHeaderMargin = EdgeInsetsDirectional.fromSTEB(32, 0, 32, 8);
 
+class DisplayOption {
+  final String title;
+  final String subtitle;
+
+  DisplayOption(this.title, {this.subtitle});
+}
+
 class SlowMotionSetting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -75,7 +82,7 @@ class SettingsListItem<T> extends StatefulWidget {
   }) : super(key: key);
 
   final String title;
-  final LinkedHashMap<T, String> options;
+  final LinkedHashMap<T, DisplayOption> options;
   final T selectedOption;
   final ValueChanged<T> onOptionChanged;
   final Function onTapSetting;
@@ -159,7 +166,7 @@ class _SettingsListItemState<T> extends State<SettingsListItem<T>>
           subtitleHeight: _headerSubtitleHeight,
           chevronRotation: _headerChevronRotation,
           title: widget.title,
-          subtitle: widget.options[widget.selectedOption] ?? '',
+          subtitle: widget.options[widget.selectedOption].title ?? '',
           onTap: () => widget.onTapSetting(),
         ),
         Padding(
@@ -184,14 +191,30 @@ class _SettingsListItemState<T> extends State<SettingsListItem<T>>
     final optionsList = <Widget>[];
 
     widget.options.forEach(
-      (option, optionText) => optionsList.add(
+      (optionValue, optionDisplay) => optionsList.add(
         RadioListTile<T>(
-          value: option,
-          title: Text(
-            optionText,
-            style: theme.textTheme.body2.copyWith(
-              color: Theme.of(context).colorScheme.onPrimary,
-            ),
+          value: optionValue,
+          title: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                optionDisplay.title,
+                style: theme.textTheme.body2.copyWith(
+                  color: Theme.of(context).colorScheme.onPrimary,
+                ),
+              ),
+              if (optionDisplay.subtitle != null)
+                Text(
+                  optionDisplay.subtitle,
+                  style: theme.textTheme.body2.copyWith(
+                    fontSize: 12,
+                    color: Theme.of(context)
+                        .colorScheme
+                        .onPrimary
+                        .withOpacity(0.8),
+                  ),
+                ),
+            ],
           ),
           groupValue: widget.selectedOption,
           onChanged: (newOption) => widget.onOptionChanged(newOption),

@@ -56,11 +56,11 @@ class _SettingsPageState extends State<SettingsPage> {
         );
   }
 
-  /// Given a [Locale], returns a two-line string containing its native name
-  /// followed by its name in the currently selected locale. If the native name
-  /// can't be determined, it is omitted. If the locale can't be determined,
-  /// the locale code is returned.
-  String _getLocaleDisplayName(BuildContext context, Locale locale) {
+  /// Given a [Locale], returns a [DisplayOption] with its native name for a
+  /// title and its name in the currently selected locale for a subtitle. If the
+  /// native name can't be determined, it is omitted. If the locale can't be
+  /// determined, the locale code is used.
+  DisplayOption _getLocaleDisplayOption(BuildContext context, Locale locale) {
     // TODO: gsw, fil, and es_419 aren't in flutter_localized_countries' dataset
     final localeCode = locale.toString();
     final localeName = LocaleNames.of(context).nameOf(localeCode);
@@ -68,42 +68,46 @@ class _SettingsPageState extends State<SettingsPage> {
       final localeNativeName =
           _localeNativeNames != null ? _localeNativeNames[localeCode] : null;
       return localeNativeName != null
-          ? localeNativeName + '\n' + localeName
-          : localeName;
+          ? DisplayOption(localeNativeName, subtitle: localeName)
+          : DisplayOption(localeName);
     } else {
       switch (localeCode) {
         case 'gsw':
-          return 'Schwiizertüütsch\nSwiss German';
+          return DisplayOption('Schwiizertüütsch', subtitle: 'Swiss German');
         case 'fil':
-          return 'Filipino\nFilipino';
+          return DisplayOption('Filipino', subtitle: 'Filipino');
         case 'es_419':
-          return 'español (Latinoamérica)\nSpanish (Latin America)';
+          return DisplayOption(
+            'español (Latinoamérica)',
+            subtitle: 'Spanish (Latin America)',
+          );
       }
     }
 
-    return localeCode;
+    return DisplayOption(localeCode);
   }
 
   /// Create a sorted — by native name – map of supported locales to their
   /// intended display string, with a system option as the first element.
-  LinkedHashMap<Locale, String> _getLocaleOptions() {
+  LinkedHashMap<Locale, DisplayOption> _getLocaleOptions() {
     var localeOptions = LinkedHashMap.of({
-      systemLocaleOption:
-          GalleryLocalizations.of(context).settingsSystemDefault +
-              (deviceLocale != null
-                  ? ' - ${_getLocaleDisplayName(context, deviceLocale)}'
-                  : '')
+      systemLocaleOption: DisplayOption(
+        GalleryLocalizations.of(context).settingsSystemDefault +
+            (deviceLocale != null
+                ? ' - ${_getLocaleDisplayOption(context, deviceLocale).title}'
+                : ''),
+      ),
     });
     var supportedLocales =
         List<Locale>.from(GalleryLocalizations.supportedLocales);
     supportedLocales.removeWhere((locale) => locale == deviceLocale);
 
-    final displayLocales = Map<Locale, String>.fromIterable(
+    final displayLocales = Map<Locale, DisplayOption>.fromIterable(
       supportedLocales,
       value: (dynamic locale) =>
-          _getLocaleDisplayName(context, locale as Locale),
+          _getLocaleDisplayOption(context, locale as Locale),
     ).entries.toList()
-      ..sort((l1, l2) => compareAsciiUpperCase(l1.value, l2.value));
+      ..sort((l1, l2) => compareAsciiUpperCase(l1.value.title, l2.value.title));
 
     localeOptions.addAll(LinkedHashMap.fromEntries(displayLocales));
     return localeOptions;
@@ -148,15 +152,21 @@ class _SettingsPageState extends State<SettingsPage> {
                   useSentinel: true,
                 ),
                 options: LinkedHashMap.of({
-                  systemTextScaleFactorOption:
-                      GalleryLocalizations.of(context).settingsSystemDefault,
-                  0.8:
-                      GalleryLocalizations.of(context).settingsTextScalingSmall,
-                  1.0: GalleryLocalizations.of(context)
-                      .settingsTextScalingNormal,
-                  2.0:
-                      GalleryLocalizations.of(context).settingsTextScalingLarge,
-                  3.0: GalleryLocalizations.of(context).settingsTextScalingHuge
+                  systemTextScaleFactorOption: DisplayOption(
+                    GalleryLocalizations.of(context).settingsSystemDefault,
+                  ),
+                  0.8: DisplayOption(
+                    GalleryLocalizations.of(context).settingsTextScalingSmall,
+                  ),
+                  1.0: DisplayOption(
+                    GalleryLocalizations.of(context).settingsTextScalingNormal,
+                  ),
+                  2.0: DisplayOption(
+                    GalleryLocalizations.of(context).settingsTextScalingLarge,
+                  ),
+                  3.0: DisplayOption(
+                    GalleryLocalizations.of(context).settingsTextScalingHuge,
+                  ),
                 }),
                 onOptionChanged: (newTextScale) => GalleryOptions.update(
                   context,
@@ -169,13 +179,16 @@ class _SettingsPageState extends State<SettingsPage> {
                 title: GalleryLocalizations.of(context).settingsTextDirection,
                 selectedOption: options.customTextDirection,
                 options: LinkedHashMap.of({
-                  CustomTextDirection.localeBased:
-                      GalleryLocalizations.of(context)
-                          .settingsTextDirectionLocaleBased,
-                  CustomTextDirection.ltr:
-                      GalleryLocalizations.of(context).settingsTextDirectionLTR,
-                  CustomTextDirection.rtl:
-                      GalleryLocalizations.of(context).settingsTextDirectionRTL,
+                  CustomTextDirection.localeBased: DisplayOption(
+                    GalleryLocalizations.of(context)
+                        .settingsTextDirectionLocaleBased,
+                  ),
+                  CustomTextDirection.ltr: DisplayOption(
+                    GalleryLocalizations.of(context).settingsTextDirectionLTR,
+                  ),
+                  CustomTextDirection.rtl: DisplayOption(
+                    GalleryLocalizations.of(context).settingsTextDirectionRTL,
+                  ),
                 }),
                 onOptionChanged: (newTextDirection) => GalleryOptions.update(
                   context,
@@ -209,10 +222,12 @@ class _SettingsPageState extends State<SettingsPage> {
                     GalleryLocalizations.of(context).settingsPlatformMechanics,
                 selectedOption: options.platform,
                 options: LinkedHashMap.of({
-                  TargetPlatform.android:
-                      GalleryLocalizations.of(context).settingsPlatformAndroid,
-                  TargetPlatform.iOS:
-                      GalleryLocalizations.of(context).settingsPlatformIOS,
+                  TargetPlatform.android: DisplayOption(
+                    GalleryLocalizations.of(context).settingsPlatformAndroid,
+                  ),
+                  TargetPlatform.iOS: DisplayOption(
+                    GalleryLocalizations.of(context).settingsPlatformIOS,
+                  ),
                 }),
                 onOptionChanged: (newPlatform) => GalleryOptions.update(
                   context,
@@ -225,12 +240,15 @@ class _SettingsPageState extends State<SettingsPage> {
                 title: GalleryLocalizations.of(context).settingsTheme,
                 selectedOption: options.themeMode,
                 options: LinkedHashMap.of({
-                  ThemeMode.system:
-                      GalleryLocalizations.of(context).settingsSystemDefault,
-                  ThemeMode.dark:
-                      GalleryLocalizations.of(context).settingsDarkTheme,
-                  ThemeMode.light:
-                      GalleryLocalizations.of(context).settingsLightTheme,
+                  ThemeMode.system: DisplayOption(
+                    GalleryLocalizations.of(context).settingsSystemDefault,
+                  ),
+                  ThemeMode.dark: DisplayOption(
+                    GalleryLocalizations.of(context).settingsDarkTheme,
+                  ),
+                  ThemeMode.light: DisplayOption(
+                    GalleryLocalizations.of(context).settingsLightTheme,
+                  ),
                 }),
                 onOptionChanged: (newThemeMode) => GalleryOptions.update(
                   context,
