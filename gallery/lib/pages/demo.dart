@@ -702,8 +702,6 @@ class CodeDisplayPage extends StatelessWidget {
     final TextSpan _richTextCode = code(context);
     final String _plainTextCode = _richTextCode.toPlainText();
 
-    // TODO: Update snackbar theme.
-
     void _showSnackBarOnCopySuccess(dynamic result) {
       Scaffold.of(context).showSnackBar(
         SnackBar(

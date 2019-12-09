@@ -32,6 +32,14 @@ class GalleryThemeData {
       highlightColor: Colors.transparent,
       accentColor: colorScheme.primary,
       focusColor: focusColor,
+      snackBarTheme: SnackBarThemeData(
+        behavior: SnackBarBehavior.floating,
+        backgroundColor: Color.alphaBlend(
+          _lightFillColor.withOpacity(0.80),
+          _darkFillColor,
+        ),
+        contentTextStyle: _textTheme.subhead.apply(color: _darkFillColor),
+      ),
     );
   }
 
