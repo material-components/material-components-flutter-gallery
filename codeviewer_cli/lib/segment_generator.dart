@@ -129,7 +129,7 @@ Map<String, String> _createSegments(String sourceDirectoryPath) {
             activeSubsegments.remove(argument);
           } else {
             throw PreformatterException(
-                'END $argument is used without a paired START in ${file.path}');
+                'END $argument is used without a paired BEGIN in ${file.path}');
           }
         }
       } else {
@@ -142,7 +142,7 @@ Map<String, String> _createSegments(String sourceDirectoryPath) {
     }
 
     if (activeSubsegments.isNotEmpty) {
-      throw PreformatterException('File ${file.path} has unpaired START');
+      throw PreformatterException('File ${file.path} has unpaired BEGIN');
     }
   }
 
@@ -246,7 +246,7 @@ void _formatSegments(Map<String, String> segments, String targetFilePath) {
 ///
 /// [writeSegments] walks through the directory specified by
 /// [sourceDirectoryPath] and reads every file in it,
-/// collects code segments marked by "// START <segment_name>" and "// END",
+/// collects code segments marked by "// BEGIN <segment_name>" and "// END",
 /// highlights them, and writes to the file specified by
 /// [targetFilePath].
 ///
