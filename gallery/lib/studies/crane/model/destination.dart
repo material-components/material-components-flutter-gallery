@@ -49,7 +49,7 @@ class FlyDestination extends Destination {
   final int stops;
   final Duration duration;
 
-  String get assetName => 'assets/crane/destinations/fly_$id.png';
+  String get assetName => 'assets/crane/destinations/fly_$id.jpg';
 
   String subtitle(BuildContext context) {
     final stopsText = GalleryLocalizations.of(context).craneFlyStops(stops);
@@ -96,7 +96,7 @@ class SleepDestination extends Destination {
 
   final int total;
 
-  String get assetName => 'assets/crane/destinations/sleep_$id.png';
+  String get assetName => 'assets/crane/destinations/sleep_$id.jpg';
 
   String subtitle(BuildContext context) {
     return GalleryLocalizations.of(context).craneSleepProperties(total);
@@ -119,7 +119,7 @@ class EatDestination extends Destination {
 
   final int total;
 
-  String get assetName => 'assets/crane/destinations/eat_$id.png';
+  String get assetName => 'assets/crane/destinations/eat_$id.jpg';
 
   String subtitle(BuildContext context) {
     return GalleryLocalizations.of(context).craneEatRestaurants(total);

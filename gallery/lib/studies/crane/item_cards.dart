@@ -44,12 +44,12 @@ class _ItemCardsState extends State<ItemCards> {
   void didChangeDependencies() {
     super.didChangeDependencies();
     // We use didChangeDependencies because the initialization involves an
-    // InheritedWidget (for localization). However, we don't want destinations
-    // to be shuffled when, say, resizing the window.
+    // InheritedWidget (for localization). However, we don't need to get
+    // destinations again when, say, resizing the window.
     if (flyDestinations == null) {
-      flyDestinations = getFlyDestinations(context)..shuffle();
-      sleepDestinations = getSleepDestinations(context)..shuffle();
-      eatDestinations = getEatDestinations(context)..shuffle();
+      flyDestinations = getFlyDestinations(context);
+      sleepDestinations = getSleepDestinations(context);
+      eatDestinations = getEatDestinations(context);
     }
   }
 
