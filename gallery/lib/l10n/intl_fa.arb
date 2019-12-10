@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "مشاهده گزینه‌ها",
+  "demoOptionsFeatureDescription": "برای مشاهده گزینه‌های در دسترس برای این نسخه نمایشی، اینجا ضربه بزنید.",
   "demoCodeViewerCopyAll": "کپی همه موارد",
   "shrineScreenReaderRemoveProductButton": "برداشتن {product}",
   "shrineScreenReaderProductAddToCart": "افزودن به سبد خرید",

@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Afficher les options",
+  "demoOptionsFeatureDescription": "Appuyez ici pour afficher les options disponibles pour cette démo.",
   "demoCodeViewerCopyAll": "TOUT COPIER",
   "shrineScreenReaderRemoveProductButton": "Supprimer {product}",
   "shrineScreenReaderProductAddToCart": "Ajouter au panier",

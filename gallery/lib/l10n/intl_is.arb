@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Skoða valkosti",
+  "demoOptionsFeatureDescription": "Ýttu hér til að sjá valkosti í boði fyrir þessa kynningu.",
   "demoCodeViewerCopyAll": "AFRITA ALLT",
   "shrineScreenReaderRemoveProductButton": "Fjarlægja {product}",
   "shrineScreenReaderProductAddToCart": "Setja í körfu",

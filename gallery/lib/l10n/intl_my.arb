@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "ရွေးစရာများ ကြည့်ရန်",
+  "demoOptionsFeatureDescription": "ယခုသရုပ်ပြမှုအတွက် ရနိုင်သောရွေးစရာများ ကြည့်ရန် ဤနေရာကို တို့နိုင်သည်။",
   "demoCodeViewerCopyAll": "အားလုံး မိတ္တူကူးရန်",
   "shrineScreenReaderRemoveProductButton": "{product} ကို ဖယ်ရှားရန်",
   "shrineScreenReaderProductAddToCart": "ဈေးခြင်းတောင်းသို့ ပေါင်းထည့်မည်",

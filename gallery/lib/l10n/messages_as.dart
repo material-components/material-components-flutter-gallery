@@ -445,6 +445,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("সূচীসমূহ"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("এটা শাৰী"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "এই ডেম’টোৰ বাবে উপলব্ধ বিকল্পসমূহ চাবলৈ ইয়াত টিপক।"),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("বিকল্পসমূহ চাওক"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("বিকল্পসমূহ"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(

@@ -437,6 +437,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Списоци"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Една линија"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Допрете тука за да се прикажат достапните опции за оваа демонстрација."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Прикажи ги опциите"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Опции"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Копчињата со контура стануваат непроѕирни и се подигнуваат кога ќе ги притиснете. Честопати се спаруваат со подигнатите копчиња за да означат алтернативно секундарно дејство."),

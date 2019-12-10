@@ -446,6 +446,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Luettelot"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Yksi rivi"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Tap here to view available options for this demo."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("View options"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("Vaihtoehdot"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(

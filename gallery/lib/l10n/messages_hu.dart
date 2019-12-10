@@ -451,6 +451,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Listák"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Egysoros"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Koppintson ide a bemutatóhoz tartozó, rendelkezésre álló lehetőségek megtekintéséhez."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Lehetőségek megtekintése"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("Lehetőségek"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(

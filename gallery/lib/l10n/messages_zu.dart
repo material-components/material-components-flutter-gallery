@@ -461,6 +461,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Uhlu"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Umugqa owodwa"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Thepha lapha ukuze ubuke izinketho ezitholakalayo zale demo."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Buka izinketho"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Izinketho"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Izinkinobho zohlala ziba i-opaque ziphinde ziphakame uma zicindezelwa. Zivamise ukubhangqwa nezinkinobho eziphakanyisiwe ukuze zibonise esinye isenzo, sesibili."),

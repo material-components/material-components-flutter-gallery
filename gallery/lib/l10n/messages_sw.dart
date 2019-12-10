@@ -435,6 +435,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Orodha"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Mstari Mmoja"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Gusa hapa ili uangalie chaguo zinazopatikana kwa onyesho hili."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Angalia chaguo"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Chaguo"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Vitufe vya mipaka ya mistari huwa havipenyezi nuru na huinuka vinapobonyezwa. Mara nyingi vinaoanishwa na vitufe vilivyoinuliwa ili kuashiria kitendo mbadala, cha pili."),

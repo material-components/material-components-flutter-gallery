@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Zobrazit možnosti",
+  "demoOptionsFeatureDescription": "Klepnutím sem zobrazíte dostupné možnosti pro tuto ukázku.",
   "demoCodeViewerCopyAll": "KOPÍROVAT VŠE",
   "shrineScreenReaderRemoveProductButton": "Odstranit produkt {product}",
   "shrineScreenReaderProductAddToCart": "Přidat do košíku",

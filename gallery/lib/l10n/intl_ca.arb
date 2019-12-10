@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Mostra les opcions",
+  "demoOptionsFeatureDescription": "Toca aquí per veure les opcions disponibles per a aquesta demostració.",
   "demoCodeViewerCopyAll": "COPIA-HO TOT",
   "shrineScreenReaderRemoveProductButton": "Suprimeix {product}",
   "shrineScreenReaderProductAddToCart": "Afegeix al carretó",

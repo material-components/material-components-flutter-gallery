@@ -449,6 +449,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("ତାଲିକାଗୁଡ଼ିକ"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("ଗୋଟିଏ ଲାଇନ୍"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Tap here to view available options for this demo."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("View options"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("ବିକଳ୍ପଗୁଡ଼ିକ"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(

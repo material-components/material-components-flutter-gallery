@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "הצגת אפשרויות",
+  "demoOptionsFeatureDescription": "יש להקיש כאן כדי להציג אפשרויות זמינות להדגמה זו.",
   "demoCodeViewerCopyAll": "העתקת הכול",
   "shrineScreenReaderRemoveProductButton": "הסרת {product}",
   "shrineScreenReaderProductAddToCart": "הוספה לעגלת הקניות",

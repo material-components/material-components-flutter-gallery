@@ -436,6 +436,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Спісы"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Адзін радок"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Tap here to view available options for this demo."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("View options"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Параметры"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Кнопкі з контурамі цямнеюць і падымаюцца ўгору пры націсканні. Яны часта спалучаюцца з выпуклымі кнопкамі для вызначэння альтэрнатыўнага, другаснага дзеяння."),

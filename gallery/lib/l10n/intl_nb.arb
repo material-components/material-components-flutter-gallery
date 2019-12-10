@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Visningsalternativer",
+  "demoOptionsFeatureDescription": "Trykk her for å se tilgjengelige alternativer for denne demonstrasjonen.",
   "demoCodeViewerCopyAll": "KOPIÉR ALT",
   "shrineScreenReaderRemoveProductButton": "Fjern {product}",
   "shrineScreenReaderProductAddToCart": "Legg i handlekurven",

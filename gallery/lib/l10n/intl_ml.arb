@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "ഓപ്ഷനുകൾ കാണുക",
+  "demoOptionsFeatureDescription": "ഈ ഡെമോയ്ക്ക് ലഭ്യമായ ഓപ്ഷനുകൾ കാണുന്നതിന് ഇവിടെ ടാപ്പ് ചെയ്യുക.",
   "demoCodeViewerCopyAll": "എല്ലാം പകർത്തുക",
   "shrineScreenReaderRemoveProductButton": "{product} നീക്കുക",
   "shrineScreenReaderProductAddToCart": "കാർട്ടിലേക്ക് ചേർക്കുക",

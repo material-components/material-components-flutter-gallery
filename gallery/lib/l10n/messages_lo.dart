@@ -419,6 +419,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ໂຄງຮ່າງລາຍຊື່ແບບເລື່ອນໄດ້"),
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("ລາຍຊື່"),
         "demoOneLineListsTitle": MessageLookupByLibrary.simpleMessage("ແຖວດຽວ"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "ແຕະບ່ອນນີ້ເພື່ອເບິ່ງຕົວເລືອກທີ່ສາມາດໃຊ້ໄດ້ສຳລັບການສາທິດນີ້."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("ເບິ່ງຕົວເລືອກ"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("ຕົວເລືອກ"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "ປຸ່ມແບບມີເສັ້ນຂອບຈະເປັນສີທຶບ ແລະ ຍົກຂຶ້ນເມື່ອກົດໃສ່. ມັກຈະຈັບຄູ່ກັບປຸ່ມແບບຍົກຂຶ້ນເພື່ອລະບຸວ່າມີການດຳເນີນການສຳຮອງຢ່າງອື່ນ."),

@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Opties bekijken",
+  "demoOptionsFeatureDescription": "Tik hier om de beschikbare opties voor deze demo te bekijken.",
   "demoCodeViewerCopyAll": "ALLES KOPIËREN",
   "shrineScreenReaderRemoveProductButton": "{product} verwijderen",
   "shrineScreenReaderProductAddToCart": "Toevoegen aan winkelwagen",
@@ -263,7 +265,7 @@
   "demoBottomTextFieldsTitle": "Tekstvelden",
   "demoTextFieldTitle": "TEKSTVELDEN",
   "demoTextFieldSubtitle": "Eén regel bewerkbare tekst en cijfers",
-  "demoTextFieldDescription": "Met tekstvelden kunnen gebruikers tekst invoeren in een gebruikersinterface. Ze worden meestal gebruikt in formulieren en dialoogvensters",
+  "demoTextFieldDescription": "Met tekstvelden kunnen gebruikers tekst invoeren in een gebruikersinterface. Ze worden meestal gebruikt in formulieren en dialoogvensters.",
   "demoTextFieldShowPasswordLabel": "Wachtwoord weergeven",
   "demoTextFieldHidePasswordLabel": "Wachtwoord verbergen",
   "demoTextFieldFormErrors": "Los de rood gemarkeerde fouten op voordat je het formulier indient.",

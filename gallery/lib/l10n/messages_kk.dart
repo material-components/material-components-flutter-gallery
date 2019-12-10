@@ -431,6 +431,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Тізімдер"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Бір қатар"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Tap here to view available options for this demo."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("View options"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Oпциялар"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Контурлы түймелер күңгірт болады және оларды басқан кезде көтеріледі. Олар көбіне көтеріңкі түймелермен жұптасып, балама және қосымша әрекетті көрсетеді."),

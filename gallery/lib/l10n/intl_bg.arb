@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Преглед на опциите",
+  "demoOptionsFeatureDescription": "Докоснете тук, за да видите наличните опции за тази демонстрация.",
   "demoCodeViewerCopyAll": "КОПИРАНЕ НА ВСИЧКО",
   "shrineScreenReaderRemoveProductButton": "Премахване на {product}",
   "shrineScreenReaderProductAddToCart": "Добавяне към кошницата",

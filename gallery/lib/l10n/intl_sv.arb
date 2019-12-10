@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Alternativ för vy",
+  "demoOptionsFeatureDescription": "Tryck här om du vill visa tillgängliga alternativ för demon.",
   "demoCodeViewerCopyAll": "KOPIERA ALLT",
   "shrineScreenReaderRemoveProductButton": "Ta bort {product}",
   "shrineScreenReaderProductAddToCart": "Lägg i kundvagnen",

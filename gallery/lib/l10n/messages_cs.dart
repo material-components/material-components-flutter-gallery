@@ -438,6 +438,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Seznamy"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Jeden řádek"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Klepnutím sem zobrazíte dostupné možnosti pro tuto ukázku."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Zobrazit možnosti"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Možnosti"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Obrysová tlačítka se při stisknutí zdvihnou a zneprůhlední. Obvykle se vyskytují v páru se zvýšenými tlačítky za účelem označení alternativní, sekundární akce."),

@@ -376,6 +376,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsSubtitle": MessageLookupByLibrary.simpleMessage("可捲動清單的版面配置"),
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("清單"),
         "demoOneLineListsTitle": MessageLookupByLibrary.simpleMessage("單行"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Tap here to view available options for this demo."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("View options"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("選項"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "外框按鈕會在使用者按下時轉為不透明並升起。這類按鈕通常會與凸起的按鈕一同使用，用於指出次要的替代動作。"),

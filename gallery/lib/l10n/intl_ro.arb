@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Afișați opțiunile",
+  "demoOptionsFeatureDescription": "Atingeți aici pentru a vedea opțiunile disponibile pentru această demonstrație.",
   "demoCodeViewerCopyAll": "COPIAȚI TOT",
   "shrineScreenReaderRemoveProductButton": "Eliminați {product}",
   "shrineScreenReaderProductAddToCart": "Adăugați în coșul de cumpărături",

@@ -393,6 +393,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("リスト レイアウトのスクロール"),
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("リスト"),
         "demoOneLineListsTitle": MessageLookupByLibrary.simpleMessage("1 行"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Tap here to view available options for this demo."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("View options"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("オプション"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "アウトライン ボタンは、押すと不透明になり、浮き上がります。通常は、浮き出しボタンと組み合わせて、代替のサブアクションを提示します。"),

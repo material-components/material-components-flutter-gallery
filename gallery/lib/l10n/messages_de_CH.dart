@@ -439,6 +439,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Listen"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Eine Zeile"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Tippe hier, um die verfügbaren Optionen für diese Demo anzuzeigen."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Optionen für die Ansicht"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Optionen"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Schaltflächen mit Umriss werden undurchsichtig und erhöht dargestellt, wenn sie gedrückt werden. Sie werden häufig mit erhöhten Schaltflächen kombiniert, um eine alternative oder sekundäre Aktion zu kennzeichnen."),

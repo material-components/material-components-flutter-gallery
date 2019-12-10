@@ -444,6 +444,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Lyste"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Een reël"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Tik hier om beskikbare opsies vir hierdie demonstrasie te bekyk."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Sien opsies"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opsies"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Buitelynknoppies word ondeursigtig en verhewe wanneer dit gedruk word. Hulle word dikwels met verhewe knoppies saamgebind om \'n alternatiewe, sekondêre handeling aan te dui."),

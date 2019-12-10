@@ -455,6 +455,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("စာရင်းများ"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("တစ်ကြောင်း"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "ယခုသရုပ်ပြမှုအတွက် ရနိုင်သောရွေးစရာများ ကြည့်ရန် ဤနေရာကို တို့နိုင်သည်။"),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("ရွေးစရာများ ကြည့်ရန်"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("ရွေးစရာများ"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(

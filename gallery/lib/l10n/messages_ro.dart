@@ -448,6 +448,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Liste"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Un rând"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Atingeți aici pentru a vedea opțiunile disponibile pentru această demonstrație."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Afișați opțiunile"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opțiuni"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Butoanele cu contur devin opace și se ridică la apăsare. Sunt de multe ori asociate cu butoane ridicate, pentru a indica o acțiune secundară alternativă."),

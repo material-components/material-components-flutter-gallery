@@ -445,6 +445,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Listas"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Uma linha"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Toque aqui para ver as opções disponíveis para esta demonstração."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Veja as opções"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opções"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Os botões de contorno ficam opacos e são elevados quando premidos. Muitas vezes, são sincronizados com botões em relevo para indicar uma ação secundária alternativa."),

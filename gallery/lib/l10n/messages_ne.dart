@@ -449,6 +449,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("सूचीहरू"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("एक पङ्क्ति"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "यो डेमोका उपलब्ध विकल्पहरू हेर्न यहाँ ट्याप गर्नुहोस्।"),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("हेराइसम्बन्धी विकल्पहरू"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("विकल्पहरू"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "रूपरेखाका बटनहरू अपारदर्शी बन्छन् र थिच्दा उचालिन्छन्। यिनीहरूलाई वैकल्पिक र सहायक कार्यको सङ्केत दिन प्रायः उचालिएका बटनहरूसँग जोडा बनाइन्छ।"),

@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "មើល​ជម្រើស",
+  "demoOptionsFeatureDescription": "សូមចុច​ត្រង់នេះ ដើម្បីមើល​ជម្រើសដែលមាន​សម្រាប់​ការសាកល្បង​នេះ។",
   "demoCodeViewerCopyAll": "ចម្លង​ទាំងអស់",
   "shrineScreenReaderRemoveProductButton": "ដក {product} ចេញ",
   "shrineScreenReaderProductAddToCart": "បញ្ចូលទៅរទេះ",

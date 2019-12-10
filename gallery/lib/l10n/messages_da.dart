@@ -428,6 +428,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Lister"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Én linje"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Tryk her for at se de tilgængelige muligheder for denne demo."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Se valgmuligheder"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("Valgmuligheder"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(

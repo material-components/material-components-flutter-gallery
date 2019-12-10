@@ -373,6 +373,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsSubtitle": MessageLookupByLibrary.simpleMessage("可滚动列表布局"),
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("列表"),
         "demoOneLineListsTitle": MessageLookupByLibrary.simpleMessage("一行"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Tap here to view available options for this demo."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("View options"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("选项"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "轮廓按钮会在用户按下后变为不透明并升起。这类按钮通常会与凸起按钮配对使用，用于指示其他的次要操作。"),

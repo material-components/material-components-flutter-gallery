@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Επιλογές προβολής",
+  "demoOptionsFeatureDescription": "Πατήστε εδώ για να δείτε διαθέσιμες επιλογές για αυτήν την επίδειξη.",
   "demoCodeViewerCopyAll": "ΑΝΤΙΓΡΑΦΗ ΟΛΩΝ",
   "shrineScreenReaderRemoveProductButton": "Κατάργηση {product}",
   "shrineScreenReaderProductAddToCart": "Προσθήκη στο καλάθι",

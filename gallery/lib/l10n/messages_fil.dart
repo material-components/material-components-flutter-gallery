@@ -443,6 +443,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Mga Listahan"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Isang Linya"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Tap here to view available options for this demo."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("View options"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("Mga Opsyon"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(

@@ -453,6 +453,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Sąrašai"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Viena eilutė"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Palieskite čia, kad peržiūrėtumėte pasiekiamas šios demonstracinės versijos parinktis."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Žr. parinktis"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Parinktys"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Paspaudus kontūrinius mygtukus jie tampa nepermatomi ir pakyla. Jie dažnai teikiami su iškiliaisiais mygtukais norint nurodyti alternatyvų, antrinį veiksmą."),

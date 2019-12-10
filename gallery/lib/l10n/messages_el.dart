@@ -452,6 +452,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Λίστες"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Μία γραμμή"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Πατήστε εδώ για να δείτε διαθέσιμες επιλογές για αυτήν την επίδειξη."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Επιλογές προβολής"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Επιλογές"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Τα κουμπιά με περίγραμμα γίνονται αδιαφανή και ανυψώνονται κατά το πάτημα. Συχνά συνδυάζονται με ανυψωμένα κουμπιά για να υποδείξουν μια εναλλακτική, δευτερεύουσα ενέργεια."),

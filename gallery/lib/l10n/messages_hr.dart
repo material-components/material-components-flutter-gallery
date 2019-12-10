@@ -445,6 +445,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Popisi"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Jedan redak"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Dodirnite ovdje da biste vidjeli dostupne opcije za ovaj demo."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Opcije prikaza"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opcije"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Ocrtani gumbi postaju neprozirni i izdižu se kad se pritisnu. Obično se uparuju s izdignutim gumbima da bi naznačili alternativnu, sekundarnu radnju."),

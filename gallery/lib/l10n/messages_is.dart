@@ -441,6 +441,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Listar"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Ein lína"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Ýttu hér til að sjá valkosti í boði fyrir þessa kynningu."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Skoða valkosti"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Valkostir"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Hnappar með útlínum verða ógagnsæir og lyftast upp þegar ýtt er á þá. Þeir fylgja oft upphleyptum hnöppum til að gefa til kynna aukaaðgerð."),

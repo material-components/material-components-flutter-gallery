@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "বিকল্প দেখুন",
+  "demoOptionsFeatureDescription": "এই ডেমোর জন্য উপলভ্য বিকল্প দেখতে এখানে ট্যাপ করুন।",
   "demoCodeViewerCopyAll": "সব কিছু কপি করুন",
   "shrineScreenReaderRemoveProductButton": "সরান {প্রোডাক্ট}",
   "shrineScreenReaderProductAddToCart": "কার্টে যোগ করুন",

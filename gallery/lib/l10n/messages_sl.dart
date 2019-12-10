@@ -445,6 +445,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Seznami"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Ena vrstica"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Dotaknite se tukaj, če si želite ogledati razpoložljive možnosti za to predstavitev."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Ogled možnosti"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Možnosti"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Orisni gumbi ob pritisku postanejo prosojni in dvignjeni. Pogosto so združeni z dvignjenimi gumbi in označujejo nadomestno, sekundarno dejanje."),

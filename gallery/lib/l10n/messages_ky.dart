@@ -448,6 +448,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Тизмелер"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Бир сап"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Tap here to view available options for this demo."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("View options"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("Параметрлер"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(

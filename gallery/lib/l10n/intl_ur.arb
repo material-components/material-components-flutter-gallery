@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "اختیارات دیکھیں",
+  "demoOptionsFeatureDescription": "اس ڈیمو کے ليے دستیاب اختیارات دیکھنے کے ليے یہاں تھپتھپائیں۔",
   "demoCodeViewerCopyAll": "سبھی کاپی کریں",
   "shrineScreenReaderRemoveProductButton": "{product} ہٹائیں",
   "shrineScreenReaderProductAddToCart": "کارٹ میں شامل کریں",

@@ -447,6 +447,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Lijsten"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Eén regel"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Tik hier om de beschikbare opties voor deze demo te bekijken."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Opties bekijken"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opties"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Contourknoppen worden ondoorzichtig en verhoogd als je ze indrukt. Ze worden vaak gekoppeld aan verhoogde knoppen om een alternatieve tweede actie aan te geven."),
@@ -485,7 +489,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Tabbladen met onafhankelijk scrollbare weergaven"),
         "demoTabsTitle": MessageLookupByLibrary.simpleMessage("Tabbladen"),
         "demoTextFieldDescription": MessageLookupByLibrary.simpleMessage(
-            "Met tekstvelden kunnen gebruikers tekst invoeren in een gebruikersinterface. Ze worden meestal gebruikt in formulieren en dialoogvensters"),
+            "Met tekstvelden kunnen gebruikers tekst invoeren in een gebruikersinterface. Ze worden meestal gebruikt in formulieren en dialoogvensters."),
         "demoTextFieldEmail":
             MessageLookupByLibrary.simpleMessage("E-mailadres"),
         "demoTextFieldEnterPassword":

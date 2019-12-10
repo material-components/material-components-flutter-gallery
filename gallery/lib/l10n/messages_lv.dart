@@ -433,6 +433,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Saraksti"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Viena rindiņa"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Pieskarieties šeit, lai skatītu šai demonstrācijai pieejamās opcijas."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Skatīšanas opcijas"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opcijas"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Konturētas pogas nospiežot paliek necaurspīdīgas un paceļas. Tās bieži izmanto kopā ar paceltām pogām, lai norādītu alternatīvu, sekundāru darbību."),

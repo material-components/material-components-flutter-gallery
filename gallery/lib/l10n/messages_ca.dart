@@ -446,6 +446,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Llistes"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Una línia"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Toca aquí per veure les opcions disponibles per a aquesta demostració."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Mostra les opcions"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opcions"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Els botons perfilats es tornen opacs i s\'eleven en prémer-los. Normalment estan vinculats amb botons amb relleu per indicar una acció secundaria o alternativa."),

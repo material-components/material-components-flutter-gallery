@@ -443,6 +443,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Roʻyxatlar"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Bir qator"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Mavjud variantlarni koʻrish uchun bu yerga bosing."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Variantlarni koʻrish"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("Parametrlar"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(

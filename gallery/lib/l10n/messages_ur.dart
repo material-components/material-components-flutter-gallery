@@ -433,6 +433,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("فہرستیں"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("ایک لائن"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "اس ڈیمو کے ليے دستیاب اختیارات دیکھنے کے ليے یہاں تھپتھپائیں۔"),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("اختیارات دیکھیں"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("اختیارات"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "آؤٹ لائن بٹنز کے دبائیں جانے پر وہ دھندلے اور بلند ہوجاتے ہیں۔ یہ متبادل، ثانوی کارروائی کی نشاندہی کرنے کے لیے اکثر ابھرے ہوئے بٹنوں کے ساتھ جوڑے جاتے ہیں۔"),

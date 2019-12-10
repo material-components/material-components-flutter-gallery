@@ -431,6 +431,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("طرح‌بندی‌های فهرست پیمایشی"),
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("فهرست‌ها"),
         "demoOneLineListsTitle": MessageLookupByLibrary.simpleMessage("یک خط"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "برای مشاهده گزینه‌های در دسترس برای این نسخه نمایشی، اینجا ضربه بزنید."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("مشاهده گزینه‌ها"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("گزینه‌ها"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "دکمه‌های برون‌نما مات می‌شوند و هنگامی که فشار داده شوند بالا می‌آیند. این دکمه‌ها معمولاً با دکمه‌های برجسته مرتبط می‌شوند تا کنشی فرعی و جایگزین را نشان دهند."),

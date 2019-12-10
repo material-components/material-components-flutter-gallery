@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Se valgmuligheder",
+  "demoOptionsFeatureDescription": "Tryk her for at se de tilgængelige muligheder for denne demo.",
   "demoCodeViewerCopyAll": "KOPIER ALT",
   "shrineScreenReaderRemoveProductButton": "Fjern {product}",
   "shrineScreenReaderProductAddToCart": "Læg i kurven",

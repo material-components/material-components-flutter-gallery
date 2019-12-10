@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "View options",
+  "demoOptionsFeatureDescription": "Tap here to view available options for this demo.",
   "demoCodeViewerCopyAll": "SAO CHÉP TOÀN BỘ",
   "shrineScreenReaderRemoveProductButton": "Xóa {product}",
   "shrineScreenReaderProductAddToCart": "Thêm vào giỏ hàng",

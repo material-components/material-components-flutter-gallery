@@ -446,6 +446,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("ប្លង់​បញ្ជី​រំកិល"),
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("បញ្ជី"),
         "demoOneLineListsTitle": MessageLookupByLibrary.simpleMessage("មួយជួរ"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "សូមចុច​ត្រង់នេះ ដើម្បីមើល​ជម្រើសដែលមាន​សម្រាប់​ការសាកល្បង​នេះ។"),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("មើល​ជម្រើស"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("ជម្រើស"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "ប៊ូតុង​មានបន្ទាត់ជុំវិញ​ប្រែជា​ស្រអាប់ និង​ផុសឡើង​នៅពេលចុច។ ជាញឹកញាប់ ប៊ូតុងទាំងនេះត្រូវបានដាក់ជាគូជាមួយប៊ូតុងផុសឡើង ដើម្បីរំលេចសកម្មភាពបន្ទាប់បន្សំផ្សេង។"),

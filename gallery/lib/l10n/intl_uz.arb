@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Variantlarni koʻrish",
+  "demoOptionsFeatureDescription": "Mavjud variantlarni koʻrish uchun bu yerga bosing.",
   "demoCodeViewerCopyAll": "HAMMASINI NUSXALASH",
   "shrineScreenReaderRemoveProductButton": "Olib tashlash: {product}",
   "shrineScreenReaderProductAddToCart": "Savatga joylash",

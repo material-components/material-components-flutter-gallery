@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Žr. parinktis",
+  "demoOptionsFeatureDescription": "Palieskite čia, kad peržiūrėtumėte pasiekiamas šios demonstracinės versijos parinktis.",
   "demoCodeViewerCopyAll": "KOPIJUOTI VISKĄ",
   "shrineScreenReaderRemoveProductButton": "Pašalinti produktą: {product}",
   "shrineScreenReaderProductAddToCart": "Pridėti į krepšelį",

@@ -447,6 +447,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Elenchi"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Una riga"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Tocca qui per visualizzare le opzioni disponibili per questa demo."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Visualizza opzioni"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opzioni"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "I pulsanti con contorni diventano opachi e sollevati quando vengono premuti. Sono spesso associati a pulsanti in rilievo per indicare alternative, azioni secondarie."),

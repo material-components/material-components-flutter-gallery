@@ -424,6 +424,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("רשימות"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("שורה אחת"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "יש להקיש כאן כדי להציג אפשרויות זמינות להדגמה זו."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("הצגת אפשרויות"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("אפשרויות"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "לחצני קווי מתאר הופכים לאטומים ובולטים כשלוחצים עליהם. בדרך כלל, מבוצעת להם התאמה עם לחצנים בולטים כדי לציין פעולה חלופית משנית."),

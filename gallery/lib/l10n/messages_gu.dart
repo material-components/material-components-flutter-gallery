@@ -434,6 +434,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("સૂચિઓ"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("એક લાઇન"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "આ ડેમો માટે ઉપલબ્ધ વિકલ્પો જોવા માટે અહીં ટૅપ કરો."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("વિકલ્પો જુઓ"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("વિકલ્પો"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "આઉટલાઇન બટન દબાવવા પર અપારદર્શી બને છે અને તે ઉપસી આવે છે. વૈકલ્પિક, ગૌણ ક્રિયા બતાવવા માટે અવારનવાર ઉપસેલા બટન સાથે તેઓનું જોડાણ બનાવવામાં આવે છે."),

@@ -444,6 +444,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("ලැයිස්තු"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("පේළි එකයි"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "මෙම ආදර්ශනය සඳහා ලබා ගත හැකි විකල්ප බැලීමට මෙහි තට්ටු කරන්න."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("විකල්ප බලන්න"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("විකල්ප"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "වැටිසන බොත්තම් එබූ විට අපැහැදිලි වන අතර ඉස්සේ. ඒවා නිතර විකල්ප, ද්විතීයික ක්‍රියාවක් දැක්වීමට එසවූ බොත්තම් සමග යුගළ වේ."),

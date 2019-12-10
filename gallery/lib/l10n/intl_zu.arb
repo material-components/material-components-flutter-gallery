@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Buka izinketho",
+  "demoOptionsFeatureDescription": "Thepha lapha ukuze ubuke izinketho ezitholakalayo zale demo.",
   "demoCodeViewerCopyAll": "KOPISHA KONKE",
   "shrineScreenReaderRemoveProductButton": "Susa i-{product}",
   "shrineScreenReaderProductAddToCart": "Engeza kukalishi",

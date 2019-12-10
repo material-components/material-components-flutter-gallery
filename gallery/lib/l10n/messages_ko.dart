@@ -388,6 +388,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("스크롤 목록 레이아웃"),
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("목록"),
         "demoOneLineListsTitle": MessageLookupByLibrary.simpleMessage("한 줄"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Tap here to view available options for this demo."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("View options"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("옵션"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "윤곽 버튼은 누르면 불투명해지면서 올라옵니다. 돌출 버튼과 함께 사용하여 대체 작업이나 보조 작업을 나타내는 경우가 많습니다."),

@@ -452,6 +452,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("జాబితాలు"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("ఒక పంక్తి"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "ఈ డెమో కోసం అందుబాటులో ఉన్న ఎంపికలను చూడటానికి ఇక్కడ నొక్కండి."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("ఎంపికలను చూడండి"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("ఎంపికలు"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "అవుట్‌లైన్ బటన్‌లు అపారదర్శకంగా మారతాయి, నొక్కినప్పుడు ప్రకాశవంతం అవుతాయి. ప్రత్యామ్నాయ, ద్వితీయ చర్యను సూచించడానికి అవి తరచుగా ముందుకు వచ్చిన బటన్‌లతో జత చేయబడతాయి."),

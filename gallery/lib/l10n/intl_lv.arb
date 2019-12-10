@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Skatīšanas opcijas",
+  "demoOptionsFeatureDescription": "Pieskarieties šeit, lai skatītu šai demonstrācijai pieejamās opcijas.",
   "demoCodeViewerCopyAll": "KOPĒT VISU",
   "shrineScreenReaderRemoveProductButton": "Noņemt produktu: {product}",
   "shrineScreenReaderProductAddToCart": "Pievienot grozam",

@@ -441,6 +441,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("তালিকা"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("প্রতি সারিতে একটি লাইন"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "এই ডেমোর জন্য উপলভ্য বিকল্প দেখতে এখানে ট্যাপ করুন।"),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("বিকল্প দেখুন"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("বিকল্প"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "আউটলাইন বোতাম প্রেস করলে অস্বচ্ছ হয়ে বড় হয়ে যায়। সেটি প্রায়ই একটি বিকল্প সেকেন্ডারি অ্যাকশন নির্দেশ করতে বড় হওয়া বোতামের সাথে ব্যবহার হয়।"),

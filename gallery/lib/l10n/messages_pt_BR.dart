@@ -446,6 +446,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Listas"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Uma linha"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Toque aqui para ver as opções disponíveis para esta demonstração."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Ver opções"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opções"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Botões circunscritos ficam opacos e elevados quando pressionados. Geralmente, são combinados com botões em relevo para indicar uma ação secundária e alternativa."),

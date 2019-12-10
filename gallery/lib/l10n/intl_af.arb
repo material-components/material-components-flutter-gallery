@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Sien opsies",
+  "demoOptionsFeatureDescription": "Tik hier om beskikbare opsies vir hierdie demonstrasie te bekyk.",
   "demoCodeViewerCopyAll": "KOPIEER ALLES",
   "shrineScreenReaderRemoveProductButton": "Verwyder {product}",
   "shrineScreenReaderProductAddToCart": "Voeg by mandjie",

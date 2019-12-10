@@ -450,6 +450,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Listy"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Jeden wiersz"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Kliknij tutaj, by zobaczyć opcje dostępne w tej wersji demonstracyjnej."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Wyświetl opcje"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opcje"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Przyciski z konturem stają się nieprzezroczyste i podnoszą się po naciśnięciu. Często występują w parze z przyciskami podniesionymi, by wskazać działanie alternatywne."),

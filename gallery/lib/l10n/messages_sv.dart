@@ -423,6 +423,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Layouter med rullista"),
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Listor"),
         "demoOneLineListsTitle": MessageLookupByLibrary.simpleMessage("En rad"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Tryck här om du vill visa tillgängliga alternativ för demon."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Alternativ för vy"),
         "demoOptionsTooltip":
             MessageLookupByLibrary.simpleMessage("Alternativ"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(

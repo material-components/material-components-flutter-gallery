@@ -446,6 +446,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Liste"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Jedan red"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Dodirnite ovdje da pogledate opcije dostupne za ovu demonstraciju."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Pogledajte opcije"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opcije"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Ocrtana dugmad postaje neprozirna i podiže se kada se pritisne. Obično se uparuje s izdignutom dugmadi kako bi se ukazalo na alternativnu, sekundarnu radnju."),

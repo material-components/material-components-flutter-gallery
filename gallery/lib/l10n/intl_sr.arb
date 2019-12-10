@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Прегледајте опције",
+  "demoOptionsFeatureDescription": "Додирните овде да бисте видели доступне опције за ову демонстрацију.",
   "demoCodeViewerCopyAll": "КОПИРАЈ СВЕ",
   "shrineScreenReaderRemoveProductButton": "Уклони производ {product}",
   "shrineScreenReaderProductAddToCart": "Додај у корпу",

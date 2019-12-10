@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Valikute kuvamine",
+  "demoOptionsFeatureDescription": "Puudutage siin, et vaadata selles demos saadaolevaid valikuid.",
   "demoCodeViewerCopyAll": "KOPEERI KÕIK",
   "shrineScreenReaderRemoveProductButton": "Eemalda {product}",
   "shrineScreenReaderProductAddToCart": "Lisa ostukorvi",

@@ -457,6 +457,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("ലിസ്റ്റുകൾ"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("ഒറ്റ വരി"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "ഈ ഡെമോയ്ക്ക് ലഭ്യമായ ഓപ്ഷനുകൾ കാണുന്നതിന് ഇവിടെ ടാപ്പ് ചെയ്യുക."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("ഓപ്ഷനുകൾ കാണുക"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("ഓപ്‌ഷനുകൾ"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "ഔട്ട്ലൈൻ ബട്ടണുകൾ അതാര്യമാവുകയും അമർത്തുമ്പോൾ ഉയരുകയും ചെയ്യും. ഒരു ഇതര, ദ്വിതീയ പ്രവർത്തനം സൂചിപ്പിക്കുന്നതിന് അവ പലപ്പോഴും റെയ്‌സ്‌ഡ് ബട്ടണുകളുമായി ജോടിയാക്കുന്നു."),

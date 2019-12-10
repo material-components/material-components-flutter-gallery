@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "አማራጮችን ይመልከቱ",
+  "demoOptionsFeatureDescription": "ለዚህ ተግባራዊ ማሳያ ሊገኙ የሚችሉ አማራጮችን ለማየት እዚህ ላይ መታ ያድርጉ።",
   "demoCodeViewerCopyAll": "ሁሉንም ቅዳ",
   "shrineScreenReaderRemoveProductButton": "{product} አስወግድ",
   "shrineScreenReaderProductAddToCart": "ወደ ጋሪ አክል",

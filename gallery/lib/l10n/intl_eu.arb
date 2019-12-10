@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Ikusi aukerak",
+  "demoOptionsFeatureDescription": "Sakatu hau demoaren aukerak ikusteko.",
   "demoCodeViewerCopyAll": "KOPIATU DENA",
   "shrineScreenReaderRemoveProductButton": "Kendu {product}",
   "shrineScreenReaderProductAddToCart": "Gehitu saskian",

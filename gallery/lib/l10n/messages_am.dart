@@ -398,6 +398,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("ዝርዝሮች"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("አንድ መስመር"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "ለዚህ ተግባራዊ ማሳያ ሊገኙ የሚችሉ አማራጮችን ለማየት እዚህ ላይ መታ ያድርጉ።"),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("አማራጮችን ይመልከቱ"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("አማራጮች"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "የቢጋር አዝራሮች የማይታዩ ይሆኑና በሚጫኑበት ጊዜ ከፍ ይላሉ። አማራጭን፣ ሁለተኛ እርምጃን ለመጠቆም ብዙውን ጊዜ ከፍ ካሉ አዝራሮች ጋር ይጣመራሉ።"),

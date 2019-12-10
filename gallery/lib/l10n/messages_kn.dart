@@ -453,6 +453,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("ಪಟ್ಟಿಗಳು"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("ಒಂದು ಸಾಲು"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "ಈ ಡೆಮೋಗಾಗಿ ಲಭ್ಯವಿರುವ ಆಯ್ಕೆಗಳನ್ನು ವೀಕ್ಷಿಸಲು, ಇಲ್ಲಿ ಟ್ಯಾಪ್ ಮಾಡಿ."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("ಆಯ್ಕೆಗಳನ್ನು ವೀಕ್ಷಿಸಿ"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("ಆಯ್ಕೆಗಳು"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "ಔಟ್‌ಲೈನ್ ಬಟನ್‌ಗಳು ಅಪಾರದರ್ಶಕವಾಗಿರುತ್ತವೆ ಮತ್ತು ಒತ್ತಿದಾಗ ಏರಿಕೆಯಾಗುತ್ತವೆ. ಪರ್ಯಾಯ ಮತ್ತು ದ್ವಿತೀಯ ಕಾರ್ಯವನ್ನು ಸೂಚಿಸಲು ಅವುಗಳನ್ನು ಹೆಚ್ಚಾಗಿ ಉಬ್ಬುವ ಬಟನ್‌ಗಳ ಜೊತೆಗೆ ಜೋಡಿಸಲಾಗುತ್ತದೆ."),

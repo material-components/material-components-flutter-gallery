@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Lehetőségek megtekintése",
+  "demoOptionsFeatureDescription": "Koppintson ide a bemutatóhoz tartozó, rendelkezésre álló lehetőségek megtekintéséhez.",
   "demoCodeViewerCopyAll": "ÖSSZES MÁSOLÁSA",
   "shrineScreenReaderRemoveProductButton": "{product} eltávolítása",
   "shrineScreenReaderProductAddToCart": "Hozzáadás a kosárhoz",

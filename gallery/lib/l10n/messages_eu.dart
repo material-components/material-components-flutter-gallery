@@ -443,6 +443,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Zerrendak"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Lerro bat"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Sakatu hau demoaren aukerak ikusteko."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Ikusi aukerak"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Aukerak"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Botoi ingeradadunak opaku bihurtu eta goratu egiten dira sakatzean. Botoi goratuekin batera agertu ohi dira, ekintza alternatibo edo sekundario bat dagoela adierazteko."),

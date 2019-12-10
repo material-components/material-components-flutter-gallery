@@ -448,6 +448,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Listes"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Une ligne"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Appuyez ici pour afficher les options disponibles pour cette démo."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Afficher les options"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Options"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Les boutons avec contours deviennent opaques et se relèvent lorsqu\'on appuie dessus. Ils sont souvent associés à des boutons en relief pour indiquer une action secondaire alternative."),

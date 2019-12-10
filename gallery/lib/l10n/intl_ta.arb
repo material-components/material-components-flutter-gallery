@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "View options",
+  "demoOptionsFeatureDescription": "Tap here to view available options for this demo.",
   "demoCodeViewerCopyAll": "அனைத்தையும் நகலெடு",
   "shrineScreenReaderRemoveProductButton": "{product} ஐ அகற்றும்",
   "shrineScreenReaderProductAddToCart": "கார்ட்டில் சேர்",

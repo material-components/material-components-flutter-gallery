@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "हेराइसम्बन्धी विकल्पहरू",
+  "demoOptionsFeatureDescription": "यो डेमोका उपलब्ध विकल्पहरू हेर्न यहाँ ट्याप गर्नुहोस्।",
   "demoCodeViewerCopyAll": "सबै प्रतिलिपि गर्नुहोस्",
   "shrineScreenReaderRemoveProductButton": "हटाउनुहोस् {product}",
   "shrineScreenReaderProductAddToCart": "किनमेल गर्ने कार्टमा राख्नुहोस्",

@@ -434,6 +434,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Списъци"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Един ред"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Докоснете тук, за да видите наличните опции за тази демонстрация."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Преглед на опциите"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Опции"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "При натискане бутоните с контури стават плътни и се повдигат. Често са в двойка с повдигащ се бутон, за да посочат алтернативно вторично действие."),

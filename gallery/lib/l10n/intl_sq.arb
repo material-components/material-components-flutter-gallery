@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "Shiko opsionet",
+  "demoOptionsFeatureDescription": "Trokit këtu për të parë opsionet që ofrohen për këtë demonstrim.",
   "demoCodeViewerCopyAll": "KOPJO TË GJITHA",
   "shrineScreenReaderRemoveProductButton": "Hiq {product}",
   "shrineScreenReaderProductAddToCart": "Shto në karrocë",

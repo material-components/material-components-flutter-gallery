@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "ເບິ່ງຕົວເລືອກ",
+  "demoOptionsFeatureDescription": "ແຕະບ່ອນນີ້ເພື່ອເບິ່ງຕົວເລືອກທີ່ສາມາດໃຊ້ໄດ້ສຳລັບການສາທິດນີ້.",
   "demoCodeViewerCopyAll": "ສຳເນົາທັງໝົດ",
   "shrineScreenReaderRemoveProductButton": "ລຶບ {product} ອອກ",
   "shrineScreenReaderProductAddToCart": "ເພີ່ມໃສ່​ກະຕ່າ",

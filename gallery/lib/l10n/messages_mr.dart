@@ -435,6 +435,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("सूची स्क्रोल करण्याचा लेआउट"),
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("सूची"),
         "demoOneLineListsTitle": MessageLookupByLibrary.simpleMessage("एक ओळ"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "या डेमोसाठी उपलब्ध असलेले पर्याय पाहण्यासाठी येथे टॅप करा."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("पर्याय पाहा"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("पर्याय"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "आउटलाइन बटणे दाबल्यानंतर अपारदर्शक होतात आणि वर येतात. एखादी पर्यायी, दुसरी क्रिया दाखवण्यासाठी ते सहसा उंच बटणांसोबत जोडली जातात."),

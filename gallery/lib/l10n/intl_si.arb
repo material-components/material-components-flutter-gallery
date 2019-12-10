@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "විකල්ප බලන්න",
+  "demoOptionsFeatureDescription": "මෙම ආදර්ශනය සඳහා ලබා ගත හැකි විකල්ප බැලීමට මෙහි තට්ටු කරන්න.",
   "demoCodeViewerCopyAll": "සියල්ල පිටපත් කරන්න",
   "shrineScreenReaderRemoveProductButton": "ඉවත් කරන්න {product}",
   "shrineScreenReaderProductAddToCart": "කරත්තයට එක් කරන්න",

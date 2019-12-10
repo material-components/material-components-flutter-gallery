@@ -440,6 +440,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Loendid"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Üks rida"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Puudutage siin, et vaadata selles demos saadaolevaid valikuid."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Valikute kuvamine"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Valikud"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Mitmetasandilised nupud muutuvad vajutamisel läbipaistvaks ja tõusevad ülespoole. Need seotakse sageli tõstetud nuppudega, et pakkuda alternatiivset (teisest) toimingut."),

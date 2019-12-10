@@ -1,4 +1,6 @@
 {
+  "demoOptionsFeatureTitle": "ఎంపికలను చూడండి",
+  "demoOptionsFeatureDescription": "ఈ డెమో కోసం అందుబాటులో ఉన్న ఎంపికలను చూడటానికి ఇక్కడ నొక్కండి.",
   "demoCodeViewerCopyAll": "మొత్తం వచనాన్ని కాపీ చేయి",
   "shrineScreenReaderRemoveProductButton": "{product}ను తీసివేయండి",
   "shrineScreenReaderProductAddToCart": "కార్ట్‌కు జోడించండి",

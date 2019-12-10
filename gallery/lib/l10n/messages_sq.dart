@@ -444,6 +444,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "demoListsTitle": MessageLookupByLibrary.simpleMessage("Listat"),
         "demoOneLineListsTitle":
             MessageLookupByLibrary.simpleMessage("Një rresht"),
+        "demoOptionsFeatureDescription": MessageLookupByLibrary.simpleMessage(
+            "Trokit këtu për të parë opsionet që ofrohen për këtë demonstrim."),
+        "demoOptionsFeatureTitle":
+            MessageLookupByLibrary.simpleMessage("Shiko opsionet"),
         "demoOptionsTooltip": MessageLookupByLibrary.simpleMessage("Opsionet"),
         "demoOutlineButtonDescription": MessageLookupByLibrary.simpleMessage(
             "Butonat me kontur bëhen gjysmë të tejdukshëm dhe ngrihen kur shtypen. Shpesh ata çiftohen me butonat e ngritur për të treguar një veprim alternativ dytësor."),
