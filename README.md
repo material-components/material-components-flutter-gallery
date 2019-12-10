@@ -12,49 +12,14 @@ The Flutter Gallery application has been built to support multiple platforms. Th
 
 * Android
 * iOS
-* macOS
 * web
+* macOS
+* Linux
+* Windows
 
-That being said, the application can be made to run on Linux and Windows as well. This is done by [enabling and building for those platforms](https://github.com/flutter/flutter/wiki/Desktop-shells). However, keep in mind that these platforms were untested for the Flutter Gallery.
+That being said, extra steps must be taken to [enable Desktop support](https://github.com/flutter/flutter/wiki/Desktop-shells#tooling).
 
 Additionally, the UI adapts between mobile and desktop layouts regardless of the platform it runs on. This is determined based on window size as outlined in [adaptive.dart](https://github.com/material-components/material-components-flutter-gallery/blob/master/gallery/lib/layout/adaptive.dart).
-
-## To deploy the web application
-
-### Prerequisites
-
-1. Install the firebase CLI with either npm or brew.
-
-With npm:
-```
-npm install -g firebase-tools
-```
-
-With brew:
-```
-brew install firebase-cli
-```
-
-2. Login to firebase.
-
-```
-firebase login
-```
-
-### Deploying
-
-1. Checkout master and pull the master branch.
-
-```
-git checkout master
-git pull origin master
-```
-
-2. Build the app and deploy the app. Run the following from within the `gallery` directory.
-
-```
-make deploy
-```
 
 ## To include a new splash animation
 
