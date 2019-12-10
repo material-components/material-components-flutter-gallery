@@ -29,6 +29,9 @@ make l10n
 
 For more details on what `make l10n` runs, you can read below under Generate GalleryLocalizations.
 
+The current supported locales list is sorted alphabetically. So after running the script, update
+`gallery_localizations.dart` to move the `en_US` locale to the top of the list.
+
 ## Generate GalleryLocalizations
 To generate GalleryLocalizations, from `gallery/` run:
 
