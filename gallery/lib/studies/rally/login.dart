@@ -10,7 +10,7 @@ import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/layout/text_scale.dart';
 import 'package:gallery/pages/home.dart';
 import 'package:gallery/studies/rally/colors.dart';
-import 'package:gallery/studies/rally/focus_traversal_policy.dart';
+import 'package:gallery/layout/focus_traversal_policy.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -25,12 +25,15 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     final backButtonFocusNode =
         InheritedFocusNodes.of(context).backButtonFocusNode;
+    final focusTraversalDescendants =
+        FocusScope.of(context).traversalDescendants.toList();
 
     return DefaultFocusTraversal(
       policy: EdgeChildrenFocusTraversalPolicy(
         firstFocusNodeOutsideScope: backButtonFocusNode,
         lastFocusNodeOutsideScope: backButtonFocusNode,
-        focusScopeNode: FocusScope.of(context),
+        firstFocusNodeInsideScope: focusTraversalDescendants.first,
+        lastFocusNodeInsideScope: focusTraversalDescendants.last,
       ),
       child: ApplyTextOptions(
         child: Scaffold(
