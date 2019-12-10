@@ -23,6 +23,7 @@ import 'package:gallery/demos/material/text_field_demo.dart';
 import 'package:gallery/demos/reference/colors_demo.dart';
 import 'package:gallery/demos/reference/typography_demo.dart';
 import 'package:gallery/l10n/gallery_localizations.dart';
+import 'package:gallery/pages/demo.dart';
 import 'package:gallery/themes/material_demo_theme_data.dart';
 
 class GalleryDemo {
@@ -494,6 +495,7 @@ class DemoWrapper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool hasCycled = true;
     return MaterialApp(
       theme: MaterialDemoThemeData.themeData.copyWith(
         platform: GalleryOptions.of(context).platform,
@@ -508,10 +510,19 @@ class DemoWrapper extends StatelessWidget {
         context: context,
         removeTop: true,
         removeBottom: true,
-        child: ApplyTextOptions(
-          child: CupertinoTheme(
-            data: CupertinoThemeData().copyWith(brightness: Brightness.light),
-            child: child,
+        child: Focus(
+          onFocusChange: (hasFocus) {
+            if (hasFocus && hasCycled) {
+              hasCycled = !hasCycled;
+              FocusScope.of(context).requestFocus(
+                  InheritedDemoFocusNodes.of(context).backButtonFocusNode);
+            }
+          },
+          child: ApplyTextOptions(
+            child: CupertinoTheme(
+              data: CupertinoThemeData().copyWith(brightness: Brightness.light),
+              child: child,
+            ),
           ),
         ),
       ),

@@ -8,9 +8,6 @@ import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:url_launcher/url_launcher.dart';
-
 import 'package:gallery/codeviewer/code_displayer.dart';
 import 'package:gallery/codeviewer/code_style.dart';
 import 'package:gallery/constants.dart';
@@ -21,6 +18,8 @@ import 'package:gallery/l10n/gallery_localizations.dart';
 import 'package:gallery/layout/adaptive.dart';
 import 'package:gallery/pages/splash.dart';
 import 'package:gallery/themes/gallery_theme_data.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 const _demoViewedCountKey = 'demoViewedCountKey';
 
@@ -52,6 +51,7 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
   int _demoViewedCount;
 
   AnimationController _codeBackgroundColorController;
+  FocusNode backButonFocusNode;
 
   GalleryDemoConfiguration get _currentConfig {
     return widget.demo.configurations[_configIndex];
@@ -85,11 +85,13 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
         preferences.setInt(_demoViewedCountKey, _demoViewedCount + 1);
       });
     });
+    backButonFocusNode = FocusNode();
   }
 
   @override
   void dispose() {
     _codeBackgroundColorController.dispose();
+    backButonFocusNode.dispose();
     super.dispose();
   }
 
@@ -183,6 +185,14 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
 
     final appBar = AppBar(
       backgroundColor: Colors.transparent,
+      leading: IconButton(
+        icon: const BackButtonIcon(),
+        tooltip: MaterialLocalizations.of(context).backButtonTooltip,
+        onPressed: () {
+          Navigator.maybePop(context);
+        },
+        focusNode: backButonFocusNode,
+      ),
       actions: [
         if (_hasOptions)
           IconButton(
@@ -477,7 +487,10 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
       );
     }
 
-    return FeatureDiscoveryController(page);
+    return InheritedDemoFocusNodes(
+      backButtonFocusNode: backButonFocusNode,
+      child: FeatureDiscoveryController(page),
+    );
   }
 }
 
@@ -767,4 +780,20 @@ class CodeDisplayPage extends StatelessWidget {
       ],
     );
   }
+}
+
+class InheritedDemoFocusNodes extends InheritedWidget {
+  InheritedDemoFocusNodes({
+    @required Widget child,
+    @required this.backButtonFocusNode,
+  })  : assert(child != null),
+        super(child: child);
+
+  final FocusNode backButtonFocusNode;
+
+  static InheritedDemoFocusNodes of(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType();
+
+  @override
+  bool updateShouldNotify(InheritedWidget oldWidget) => true;
 }
