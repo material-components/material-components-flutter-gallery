@@ -1,7 +1,7 @@
 # DEPRECATED
 
 This repository is now deprecated and only used for issue tracking of the
-Flutter Gallery. Please visit [flutter/samples](https://github.com/flutter/samples/blob/master/gallery/)
+Flutter Gallery. Please visit [flutter/gallery](https://github.com/flutter/gallery/)
 for the current source.
 
 # Flutter Gallery
