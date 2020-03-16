@@ -1,0 +1,5 @@
+name: A Dartpad exercise with repositories
+mode: flutter
+files:
+  - name: main.dart
+  - name: test.dart
